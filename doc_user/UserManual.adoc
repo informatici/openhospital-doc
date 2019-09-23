@@ -814,7 +814,7 @@ Then you have to select a patient. To do it, press the *find [.underline]##P##at
 
 Once you have selected the patient you can start to enter bill entries of the bill.
 
-_*[.underline]#NB#*: If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
+_*[.underline]#NB#*: A patient can have severals pending bills if only if the the parameter ALLOWMULTIPLEOPENEDBILL is enabled (see the administrator manual). Else If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
 
 There are several types of Bill entry. They are identified by the button on the *Buttons panel* on the right of the window; you have the following choices:
 
@@ -961,6 +961,7 @@ For each report, except Today (Closure), you will be asked to choose among two o
 
 * *Short Report (only BadDebts bills)*: report that show a statement with only the unpaid bills and the total for the others
 * *Full Report (all bills)*: report that show a statement with all paid and unpaid bills
+
 
 image:extracted-media/media/image64.png[Accounting_report_options.PNG,width=291,height=129]
 
