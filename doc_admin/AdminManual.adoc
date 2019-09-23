@@ -1609,3 +1609,15 @@ Specifing:
 * OpenHospital version used and version you need
 * Country and language used
 * The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[OpenHospital Assessment online-form] filled.
+
+=== 8.3 Traceability feature
+
+_*NB*: All persistent entity implements an Auditable abstract class which automatically injects audit fields like:_
+
+[arabic]
+. XXX_CREATE_DATE timestamp ON CREATE SET NOW()
+. XXX_UPDATE_DATE timestamp ON UPDATE SET NOW()
+. XXX_US_ID_A VARCHAR(50) //current logged user
+. XXX_ACTIVE //1 = YES, 0 = NO
+
+
