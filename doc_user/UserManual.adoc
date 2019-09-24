@@ -961,7 +961,7 @@ For each report, except Today (Closure), you will be asked to choose among two o
 
 * *Short Report (only BadDebts bills)*: report that show a statement with only the unpaid bills and the total for the others
 * *Full Report (all bills)*: report that show a statement with all paid and unpaid bills
-
+* * OH23A1-open bills list*: report that show the list of opened bills(pending bills)
 
 image:extracted-media/media/image64.png[Accounting_report_options.PNG,width=291,height=129]
 
@@ -1732,6 +1732,8 @@ OpenHospital 1.8.4 comes with this set of reports:
 * MOH 717 - Monthly Workload Report for Hospitals (Page2)
 * MOH 705A - Over 5 - Daily Outpatient Morbidity Summary Sheet
 * MOH 705A - Under 5 - Daily Outpatient Morbidity Summary Sheet
+* OH23A1 - open bills list: report that show the list of opened bills(pending bills) per period
+* OH23B1 - Revenues, Incomes & Receivables: gives the list of incomes per period
 
 === 11.2 Report Launcher (Launch Report)
 
