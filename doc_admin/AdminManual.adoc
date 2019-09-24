@@ -1034,7 +1034,7 @@ The following table shows the default value and the allowed ones:
 |DEBUG |no |yes, no
 |===
 
-OpenHospital, since version 1.9, allows a patient to have multiple opened bills(invoices). If this option is enanled, when creating a new bill for a patient, if that patient already has an opened bill
+OpenHospital, since version 1.9, allows a patient to have multiple opened bills(invoices). If this option is enabled, when creating a new bill for a patient, if that patient already has an opened bill
 it would be asked to confirm the creation of another one.
 
 By default, ALLOWMULTIPLEOPENEDBILL is set to no.
@@ -1049,7 +1049,7 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |key |default value |allowed values
-|DEBUG |no |yes, no
+|DEBUG |OH023_BillsReportMonth |OH023_BillsReportMonth
 |===
 
 OpenHospital, since version 1.9, allows a to print the list of opened bills. That parameter contains the jasper report file name to print 
