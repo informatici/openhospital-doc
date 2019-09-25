@@ -1612,7 +1612,7 @@ Specifing:
 
 === 8.3 Traceability feature
 
-_*NB*: All persistent entity implements an Auditable abstract class which automatically injects audit fields like:_
+_All persistent entity implements an Auditable abstract class which automatically injects audit fields like:_
 
 [arabic]
 . XXX_CREATE_DATE timestamp ON CREATE SET NOW()
