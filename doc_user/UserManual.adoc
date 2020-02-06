@@ -113,7 +113,7 @@ Queries about Ambulatory Patient Visits can be done using the search criteria av
 Doing the selection, data about patients can be selected by choosing specific fields among the following ones:
 
 * *Disease type.* You can select one or all disease types
-* *Disease.* You can select one or all the diseases
+* *Disease.* You can select one or all the diseases or search by typing some letters in the search field
 * **Date. “**DATE From” and “DATE To” allow the selection of all the visits performed over the requested period
 * **Age. “**Age From” and “Age To” allow the selection of all the patients by age
 * *Sex.* Allow the selection of all the patients by sex: All / Male / Female
