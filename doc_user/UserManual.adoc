@@ -1342,17 +1342,20 @@ The window is divided into two areas: The panel where you enter information at t
 Then enter following information:
 
 * *Date*: Date of the examination
-* *Height*: Patient height
-* *Weight*: Patient weight
-* *Arterial pressure*: Patient arterial pressure
-* *Heart rate*: Patient heart rate
-* *Temperature*: Patient temperature
-* *Saturation*: Patient saturation
+* *Height*: Patient height (in cm)
+* *Weight*: Patient weight (in Kg)
+* *Arterial pressure*: Patient arterial pressure (in mmHg)
+* *Heart rate*: Patient heart rate (in bpm)
+* *Temperature*: Patient temperature (in °C)
+* *Saturation*: Patient saturation (%)
 * *Complain*: Any additional note concerning the examination
 
 After typing data, OpenHospital automatically calculate the BMI and display the result on the human figure at the left.
 
 Where everything is correct, click *[.underline]##S##ave* to save the examination.
+
+Select one or more records in the table and click *[.underline]##D##elete* to delete it/them.
+
 
 ====  10.5.3 Insert/modify Surgery data
 
