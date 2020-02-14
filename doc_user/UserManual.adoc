@@ -1348,6 +1348,9 @@ Then enter following information:
 * *Heart rate*: Patient heart rate (in bpm)
 * *Temperature*: Patient temperature (in °C)
 * *Saturation*: Patient saturation (%)
+* *HGT*: Hemo Glucose Test (in mg/dl)
+* *Diuresis*: Daily Urine Volume (in ml) and description
+* *Bowel*: description of bowel function
 * *Complain*: Any additional note concerning the examination
 
 After typing data, OpenHospital automatically calculate the BMI and display the result on the human figure at the left.
