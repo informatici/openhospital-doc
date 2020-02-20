@@ -1,5 +1,4 @@
-
-= Administrator’s Guide 1.9
+= Administrator’s Guide 1.9.1
 :icons: font
 :stem:
 :toc: left
