@@ -1362,7 +1362,7 @@ You can also insert/modify operations data directly when you are inserting or mo
 
 Operations data that you can manage are:
 
-* *Operation date:* the operation date
+* *Operation date:* the operation date (must be at least older than, or equal to the admission date and at most, more recent than, or equal to the discharge date)
 * *Operation type:* the operation type
 * *Operation result:* the result of the operation
 * *Transfusion Units:* (not mandatory): how many units of blood have been used
