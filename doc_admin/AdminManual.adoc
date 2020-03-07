@@ -10,6 +10,12 @@
 
 image:extracted-media/media/image1.jpeg[image,width=390,height=298]
 
+image:extracted-media/media/by-sa.png[by-sa,width=88,height=31]
+
+.This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Admin’s Guide
+
 == Open Hospital
 
 == 1 .Abstract
@@ -64,6 +70,14 @@ The Administrator/Installer tasks are hereby listed:
 For Java Runtime Environment installation refer to next chapter link:#3-1-1-java-runtime-environment[Java Runtime Environment] and to online documentation.
 
 For MySQL installation and DB creation refer to chapter link:#3-1-2-mysql-server-and-openhospital-db[MySQL Server and OH DB] and to online documentation.
+
+<<<
+== 9 License
+
+image:extracted-media/media/by-sa.png[by-sa,width=88,height=31]
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
 
 For OpenHospital installation on every client, as told, is enough to copy and extract the zip file.
 
@@ -1655,3 +1669,10 @@ Specifing:
 * OpenHospital version used and version you need
 * Country and language used
 * The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[OpenHospital Assessment online-form] filled.
+
+<<<
+== 9 License
+
+image:extracted-media/media/by-sa.png[by-sa,width=88,height=31]
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.

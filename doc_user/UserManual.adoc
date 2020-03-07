@@ -8,6 +8,10 @@
 
 image:extracted-media/media/image1.jpeg[image,width=390,height=298]
 
+image:extracted-media/media/by-sa.png[by-sa,width=88,height=31]
+
+.This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
 User’s Guide
 
 == OpenHospital
@@ -2579,3 +2583,14 @@ ____
 In editing mode, you cannot change the type (group) and the name but only the password, that is in visible in this window.
 
 Each user is so identified by a name, a description and a *password* that can be modified in any moment by the Administrator.
+
+<<<
+== 16 License
+
+image:extracted-media/media/by-sa.png[by-sa,width=88,height=31]
+
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+
+
+
