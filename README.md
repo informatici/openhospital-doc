@@ -5,7 +5,7 @@ Documentation in Asciidoc of project https://github.com/informatici/openhospital
 
 * Install the right plugin in order to obtain pdf files:
 
-        gem install ascidoctor-pdf --pre
+        gem install asciidoctor-pdf --pre
  
 * Convert file from .adoc to .pdf using this command:
 
