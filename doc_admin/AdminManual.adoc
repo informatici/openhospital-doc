@@ -5,9 +5,15 @@
 :toclevels: 4
 :url-docs: https://asciidoctor.org/docs
 :url-gem: https://rubygems.org/gems/asciidoctor
+:xlmnsBySa: http://purl.org/dc/terms/
+:docTitleBySa: dct:title
 
 
 image:extracted-media/media/image1.jpeg[image,width=390,height=298]
+
+image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
 
@@ -1643,3 +1649,11 @@ Specifing:
 * OpenHospital version used and version you need
 * Country and language used
 * The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[OpenHospital Assessment online-form] filled.
+
+<<<
+== 9 License
+
+
+image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#

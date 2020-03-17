@@ -8,7 +8,9 @@
 
 image:extracted-media/media/image1.jpeg[image,width=390,height=298]
 
-User’s Guide
+image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+pass:[<br>][.small]#User's Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == OpenHospital
 
@@ -2579,3 +2581,13 @@ ____
 In editing mode, you cannot change the type (group) and the name but only the password, that is in visible in this window.
 
 Each user is so identified by a name, a description and a *password* that can be modified in any moment by the Administrator.
+
+<<<
+== 16 License
+
+image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+pass:[<br>][.small]#User's Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
+
+
+
