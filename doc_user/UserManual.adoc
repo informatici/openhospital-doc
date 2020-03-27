@@ -1550,11 +1550,13 @@ image:extracted-media/media/image106b.png[Dicom open multi-frame.PNG,width=517,h
 
 You will be asked for the following data to be used for the DICOM (or the multi-frame DICOM serie):
 
-* Date: the system will propose the current date or other dates provided by the DICOM file itself
-* Category (not mandatory): you will be asked for a Dicom category (see link:#14-2-14-dicom-types-dicom-type[Dicom Type]):
-* Description: the description to be used
+* *Date*: the system will propose the current date or other dates provided by the DICOM file itself
+* *Category (not mandatory)*: you will be asked for a Dicom category (see link:#14-2-14-dicom-types-dicom-type[Dicom Type]):
+* *Description*: the description to be used
 
 image:extracted-media/media/image243.png[Dicom info.PNG,width=517,height=366]
+
+*[.underline]#N.B.#* There's no *Edit DICOM*, so if you make a mistake, please *Delete DICOM* and re-*Load DICOM* again.
 
 Find the DICOM file on your computer and click *Open DICOM* button to load the file in the *_DICOM viewer_*.
 
