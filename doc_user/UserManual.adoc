@@ -1568,6 +1568,8 @@ You can use *Zoom* slider to Zoom in or out the image.
 
 You can load more than one DICOM file to a patient folder. You can also delete a DICOM file from the patient folder. You just have to select the file in left view and click *Delete DICOM* button.
 
+Since OpenHospital version 1.10 you can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask to your Administrator how to do it or read the _Administrator’s Guide_.
+
 === 10.10 Therapy management ([.underline]##T##herapy)
 
 First of all, to manage the therapy of a patient you have to highlight the patient in the *_Patients browser_* window. Once you’ve done this, press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient will appear. The window has no name, we call it *_Therapy_* window.

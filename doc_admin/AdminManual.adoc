@@ -995,6 +995,24 @@ _*[.underline]#NB#*: An application restart is required in order to see the modi
 
 
 
+==== 5.1.29.1 DICOMTHUMBNAILS
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|key |default value |allowed values
+|DICOMTHUMBNAILS |yes |yes, no
+|===
+
+OpenHospital, since version 1.10, allows to enable or disable thumbnails in the Dicom Viewer.
+
+By default, DICOMTHUMBNAILS is set to yes.
+
+_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+
+
+
 ==== 5.1.30 DEBUG
 
 The following table shows the default value and the allowed ones:
