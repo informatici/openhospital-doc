@@ -1544,6 +1544,18 @@ This module allows you to attach DICOM files to the patient’s folder. In order
 
 image:extracted-media/media/image106.png[Dicom open.PNG,width=517,height=366]
 
+In case of multi-frame DICOM you can select a whole folder
+
+image:extracted-media/media/image106b.png[Dicom open multi-frame.PNG,width=517,height=366]
+
+You will be asked for the following data to be used for the DICOM (or the multi-frame DICOM serie):
+
+* Date: the system will propose the current date or other dates provided by the DICOM file itself
+* Category (not mandatory): you will be asked for a Dicom category (see link:#14-2-14-dicom-types-dicom-type[Dicom Type]):
+* Description: the description to be used
+
+image:extracted-media/media/image243.png[Dicom info.PNG,width=517,height=366]
+
 Find the DICOM file on your computer and click *Open DICOM* button to load the file in the *_DICOM viewer_*.
 
 image:extracted-media/media/image107.png[Dicom file.PNG,width=642,height=362]
@@ -1938,6 +1950,9 @@ _i.e. Admission Fee, Food, POP, etc..._
 _i.e. Newborn, Childhood, Adult, Elderly, etc..._
 * *[.underline]##V##accine Type*: the way you need to group similar vaccines +
 _i.e. Child, Adult, Pregnant, etc..._
+* *Dicom Type*: the way you need to group similar dicom +
+_i.e. X-Ray, CT-Scan, NMR, etc..._
+
 
 ====  14.2.1 Admission Types ([.underline]##A##dmission Type)
 
@@ -2185,6 +2200,21 @@ The functions available from this window (but similarly to other windows in *_Ty
 * *[.underline]##C##lose*: to close the window
 
 The Vaccine Types defined in this functionality will be reflected in the Vaccine function (see link:#9-vaccines-patient-vaccines[Vaccines] in this document).
+
+==== 14.2.14 Dicom Types (Dicom Type)
+
+Once you’ve pressed on *Dicom Type* button from the *_Types_* menu you access the *_Dicom Type Browsing_* window as showed below:
+
+image:extracted-media/media/image242.png[Discharge Types.PNG,width=432,height=194]
+
+The functions available from this window (but similarly to other windows in *_Types_* menu) are:
+
+* *[.underline]##N##ew*: to enter a new type (cannot be used an already used code)
+* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
+* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##C##lose*: to close the window
+
+The Dicom Types defined in this functionality will be reflected in the Dicom Load function (see link:#10-9-1-dicom-dicom-viewer[Dicom Viewer] in this document).
 
 === 14.3 Hospital ([.underline]##H##ospital)
 
