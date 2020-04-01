@@ -1249,6 +1249,8 @@ image:extracted-media/media/image86.png[New Patient Extended_age.PNG,width=187,h
  +
 In any case it will be converted to an age in years in the *_Patients browser_* window.
 * *BloodType*: it can be 0+, A+, B+, AB+, 0-, A-, B-
+* *Marital Status*: it can be single, married, divorced, widowed. If left untouched, the default is unknown
+* *Profession*: it can be other, farming, construction, medicine, food/hospitality, homemaker, mechanic, business, janitorial, mining, engineering. If left untouched, the default is unknown
 * *Father*: you can specify the father name and if is still alive
 * *Mother*: you can specify the mother name and if is still alive
 * *Parents Together*: you can specify if the parents are still together
