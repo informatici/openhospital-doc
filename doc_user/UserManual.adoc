@@ -1243,12 +1243,14 @@ image:extracted-media/media/image85.png[image,width=642,height=427]
 To record a new patient, enter the following fields:
 
 * *Tax Number ID*: is the national ID or other ID you may use to identify univocally the patient
-* *Age / BirthDate / Description*: the age can be specified in three different ways: +
- +
+* *Age / BirthDate / Description*: the age can be specified in three different ways:
+
 image:extracted-media/media/image86.png[New Patient Extended_age.PNG,width=187,height=74]image:extracted-media/media/image87.png[New Patient Extended_birthdate.PNG,width=188,height=73]image:extracted-media/media/image88.png[New Patient Extended_description.PNG,width=183,height=74] +
- +
+
 In any case it will be converted to an age in years in the *_Patients browser_* window.
 * *BloodType*: it can be 0+, A+, B+, AB+, 0-, A-, B-
+* *Marital Status*: it can be single, married, divorced, widowed. If left untouched, the default is unknown
+* *Profession*: it can be other, farming, construction, medicine, food/hospitality, homemaker, mechanic, business, janitorial, mining, engineering. If left untouched, the default is unknown
 * *Father*: you can specify the father name and if is still alive
 * *Mother*: you can specify the mother name and if is still alive
 * *Parents Together*: you can specify if the parents are still together
