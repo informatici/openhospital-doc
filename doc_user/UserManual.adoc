@@ -1335,7 +1335,7 @@ image:extracted-media/media/image93.png[Admission Patient_admitted.PNG,width=642
 
 ====  10.5.2 Patient examination
 
-Since OpenHospital 1.8, you can register patient general parameters such as weight, height, arterial pressure, heart rate, Temperature and saturation. Open hospital also calculates automatically the patient BMI.
+Since OpenHospital 1.8, you can register patient general parameters such as weight, height, arterial pressure, heart rate, Temperature, saturation, respiratory rate, and auscultation. Open hospital also calculates automatically the patient BMI.
 
 You have two ways to access the module. In the *_Patient browser_* window, highlight the patient and click *[.underline]##E##xamination.* Or in the *_Admission_* window, click the *[.underline]##E##xamination* button bellow. The following window will appear.
 
@@ -1352,6 +1352,8 @@ Then enter following information:
 * *Heart rate*: Patient heart rate
 * *Temperature*: Patient temperature
 * *Saturation*: Patient saturation
+* *Respiratory Rate*: Patient respiratory rate in breaths per minute
+* *Auscultation*: Patient auscultation. This will default to unknown if not specified. Options currently include: Unknown, Normal, Wheezes, Rhonchi, Crackles, Stridor, Bronchial.
 * *Complain*: Any additional note concerning the examination
 
 After typing data, OpenHospital automatically calculate the BMI and display the result on the human figure at the left.
