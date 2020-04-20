@@ -97,7 +97,7 @@ image:extracted-media/media/image8.png[../../Screen%20Shot%202019-07-26%20at%201
 
 All functions available under *[.underline]##O##PD* are accessible from the window *_OPD Out Patient Department_* showed below.
 
-image:extracted-media/media/image9.png[image,width=642,height=256]
+image:extracted-media/media/image9.png[image,width=800,height=319]
 
 The following functions are available from the *Buttons Panel* of the window *_OPD Out Patient Department_:*
 
@@ -115,7 +115,7 @@ Queries about Ambulatory Patient Visits can be done using the search criteria av
 Doing the selection, data about patients can be selected by choosing specific fields among the following ones:
 
 * *Disease type.* You can select one or all disease types
-* *Disease.* You can select one or all the diseases
+* *Disease.* You can select one or all the diseases or search by typing some letters in the search field
 * **Date. “**DATE From” and “DATE To” allow the selection of all the visits performed over the requested period
 * **Age. “**Age From” and “Age To” allow the selection of all the patients by age
 * *Sex.* Allow the selection of all the patients by sex: All / Male / Female
@@ -126,7 +126,7 @@ After having chosen press *[.underline]##S##earch* button. The system will show 
 
 In the example hereinafter all the visits of patients with Asthma disease admitted in the period from 2006-11-01 until 2006-11-15 of all the ages, all sex, all patient types are showed.
 
-image:extracted-media/media/image10.png[image,width=642,height=337]
+image:extracted-media/media/image10.png[image,width=810,height=337]
 
 ==== 5.2.2 Create a new patient visit ([.underline]##N##ew)
 
@@ -1346,19 +1346,25 @@ The window is divided into two areas: The panel where you enter information at t
 Then enter following information:
 
 * *Date*: Date of the examination
-* *Height*: Patient height
-* *Weight*: Patient weight
-* *Arterial pressure*: Patient arterial pressure
-* *Heart rate*: Patient heart rate
-* *Temperature*: Patient temperature
-* *Saturation*: Patient saturation
-* *Respiratory Rate*: Patient respiratory rate in breaths per minute
+* *Height*: Patient height (in cm)
+* *Weight*: Patient weight (in Kg)
+* *Arterial pressure*: Patient arterial pressure (in mmHg)
+* *Heart rate*: Patient heart rate (in bpm)
+* *Temperature*: Patient temperature (in °C)
+* *Saturation*: Patient saturation (%)
+* *HGT*: Hemo Glucose Test (in mg/dl)
+* *Respiratory Rate*: Patient respiratory rate (in bpm)
+* *Diuresis*: Daily Urine Volume (in ml) and description
+* *Bowel*: description of bowel function
 * *Auscultation*: Patient auscultation. This will default to unknown if not specified. Options currently include: Unknown, Normal, Wheezes, Rhonchi, Crackles, Stridor, Bronchial.
 * *Complain*: Any additional note concerning the examination
 
 After typing data, OpenHospital automatically calculate the BMI and display the result on the human figure at the left.
 
 Where everything is correct, click *[.underline]##S##ave* to save the examination.
+
+Select one or more records in the table and click *[.underline]##D##elete* to delete it/them.
+
 
 ====  10.5.3 Insert/modify Surgery data
 
@@ -1550,6 +1556,20 @@ This module allows you to attach DICOM files to the patient’s folder. In order
 
 image:extracted-media/media/image106.png[Dicom open.PNG,width=517,height=366]
 
+In case of multi-frame DICOM you can select a whole folder
+
+image:extracted-media/media/image106b.png[Dicom open multi-frame.PNG,width=517,height=366]
+
+You will be asked for the following data to be used for the DICOM (or the multi-frame DICOM serie):
+
+* *Date*: the system will propose the current date or other dates provided by the DICOM file itself
+* *Category (not mandatory)*: you will be asked for a Dicom category (see link:#14-2-14-dicom-types-dicom-type[Dicom Type]):
+* *Description*: the description to be used
+
+image:extracted-media/media/image243.png[Dicom info.PNG,width=282,height=200]
+
+*[.underline]#N.B.#* There's no *Edit DICOM*, so if you make a mistake, you have to *Delete DICOM* and re-*Load DICOM* again.
+
 Find the DICOM file on your computer and click *Open DICOM* button to load the file in the *_DICOM viewer_*.
 
 image:extracted-media/media/image107.png[Dicom file.PNG,width=642,height=362]
@@ -1561,6 +1581,8 @@ image:extracted-media/media/image108.png[DICOM file view.PNG,width=642,height=36
 You can use *Zoom* slider to Zoom in or out the image.
 
 You can load more than one DICOM file to a patient folder. You can also delete a DICOM file from the patient folder. You just have to select the file in left view and click *Delete DICOM* button.
+
+Since OpenHospital version 1.10 you can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask to your Administrator how to do it or read the _Administrator’s Guide_.
 
 === 10.10 Therapy management ([.underline]##T##herapy)
 
@@ -1944,6 +1966,9 @@ _i.e. Admission Fee, Food, POP, etc..._
 _i.e. Newborn, Childhood, Adult, Elderly, etc..._
 * *[.underline]##V##accine Type*: the way you need to group similar vaccines +
 _i.e. Child, Adult, Pregnant, etc..._
+* *Dicom Type*: the way you need to group similar dicom +
+_i.e. X-Ray, CT-Scan, NMR, etc..._
+
 
 ====  14.2.1 Admission Types ([.underline]##A##dmission Type)
 
@@ -2191,6 +2216,21 @@ The functions available from this window (but similarly to other windows in *_Ty
 * *[.underline]##C##lose*: to close the window
 
 The Vaccine Types defined in this functionality will be reflected in the Vaccine function (see link:#9-vaccines-patient-vaccines[Vaccines] in this document).
+
+==== 14.2.14 Dicom Types (Dicom Type)
+
+Once you’ve pressed on *Dicom Type* button from the *_Types_* menu you access the *_Dicom Type Browsing_* window as showed below:
+
+image:extracted-media/media/image242.png[Discharge Types.PNG,width=432,height=194]
+
+The functions available from this window (but similarly to other windows in *_Types_* menu) are:
+
+* *[.underline]##N##ew*: to enter a new type (cannot be used an already used code)
+* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
+* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##C##lose*: to close the window
+
+The Dicom Types defined in this functionality will be reflected in the Dicom Load function (see link:#10-9-1-dicom-dicom-viewer[Dicom Viewer] in this document).
 
 === 14.3 Hospital ([.underline]##H##ospital)
 
