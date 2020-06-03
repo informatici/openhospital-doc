@@ -999,6 +999,24 @@ _*[.underline]#NB#*: An application restart is required in order to see the modi
 
 
 
+==== 5.1.29.1 DICOMTHUMBNAILS
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|key |default value |allowed values
+|DICOMTHUMBNAILS |yes |yes, no
+|===
+
+OpenHospital, since version 1.10, allows to enable or disable thumbnails in the Dicom Viewer.
+
+By default, DICOMTHUMBNAILS is set to yes.
+
+_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+
+
+
 ==== 5.1.30 DEBUG
 
 The following table shows the default value and the allowed ones:
@@ -1108,10 +1126,11 @@ OpenHospital 1.8 and above comes with the dicom.properties file set as follow by
 
 image:extracted-media/media/image28.png[image,width=646,height=65]
 
-* *dicom.manager.impl*: the java class that implement org.isf.dicom.manager.DicomManagerIntf and that will manage the DICOM persistence operation. This property can take two values
-* org.isf.dicom.HybernateDicomManager : The dicom File is stored in the database
-* org.isf.dicom.FileSystemDicomManager : The dicom file is stored in the file system
+* *dicom.manager.impl*: the java class that implement org.isf.dicom.manager.DicomManagerIntf and that will manage the DICOM persistence operation. This property can take two values:
+** org.isf.dicom.SqlDicomManager : The dicom File is stored in the database
+** org.isf.dicom.FileSystemDicomManager : The dicom file is stored in the file system
 * *dicom.storage.filesystem:* is the value of the first parameter is org.isf.dicom.FileSystemDicomManager, this property tell OpenHospital about the path where the DICOM files will be stored.
+* *dicom.max.size:* is the max allowed size for a dicom/jpg image (the mysql server setting max_allowed_packet should be set with the same or a greater value). If missing default value is "4M"
 
 === 5.4 examination.properties
 
@@ -1120,31 +1139,27 @@ OpenHospital 1.8 comes with the examination.properties file used in the examinat
 image:extracted-media/media/image29.png[image,width=646,height=423]
 
 * *LIST_SIZE*: the maximum number of examinations that can be view in the history. Must be less than or equal to 10.
-* *HEIGHT_UNIT:* the Height unit
-* *HEIGHT_MIN:* the height minimum value, use to initialize the height slider in the *_Examination_* window.
-* *HEIGHT_MAX:* the height maximum value, use to initialize the height slider in the *_Examination_* window.
-* *HEIGHT_INIT:* the height initial value.
-* *HEIGHT_STEP:* the step used when moving the height slider
-* *WEIGHT_UNIT:* the Weight unit
-* *WEIGHT_MIN:* the Weight minimum value, use to initialize the Weight slider in the *_Examination_* window.
-* *WEIGHT_MAX:* the Weight maximum value, use to initialize the Weight slider in the *_Examination_* window.
-* *WEIGHT_INIT:* the Weight initial value.
-* *AP_UNIT:* the Arterial pressure unit
-* *AP_MIN:* the Arterial pressure minimum value
-* *AP_MAX:* the Arterial pressure maximum value
-* *HR_UNIT:* the Heart rate unit
-* *HR_MIN:* the Heart rate minimum value
-* *HR_MAX:* the Heart rate maximum value
-* *HR_INIT:* the Heart rate initial value
-* *TEMP_UNIT:* the temperature unit
-* *TEMP_INIT:* the temperature initial value
-* *TEMP_MIN:* the temperature minimum value
-* *TEMP_MAX:* the temperature maximum value
-* *TEMP_STEP:* the temperature step used when moving the slider
-* *SAT_INIT:* the saturation initial value
-* *SAT_MIN:* the saturation minimum value
-* *SAT_MAX:* the saturation maximum value
-* *SAT_STEP:* the saturation step used when moving the slider
+* *HEIGHT_MIN:* the height minimum value (in cm), use to initialize the height slider in the *_Examination_* window.
+* *HEIGHT_MAX:* the height maximum value (in cm), use to initialize the height slider in the *_Examination_* window.
+* *HEIGHT_INIT:* the height default value (in cm).
+* *WEIGHT _MIN:* the Weight minimum value (in Kg), use to initialize the Weight slider in the *_Examination_* window.
+* *WEIGHT _MAX:* the Weight maximum value (in Kg), use to initialize the Weight slider in the *_Examination_* window.
+* *WEIGHT _INIT:* the Weight default value (in Kg).
+* *WEIGHT _STEP:* the step (in Kg) used when moving the weight slider
+* *AP _MIN:* the Arterial pressure minimum value (in mmHg)
+* *AP _MAX:* the Arterial pressure maximum value (in mmHg)
+* *HR _MIN:* the Heart rate minimum value (in bmp)
+* *HR _MAX:* the Heart rate maximum value (in bmp)
+* *HR _INIT:* the Heart rate default value (in bmp)
+* *TEMP _INIT:* the temperature default value (in °C)
+* *TEMP _MIN:* the temperature minimum value (in °C)
+* *TEMP _MAX:* the temperature maximum value (in °C)
+* *TEMP _STEP:* the temperature step  (in °C) used when moving the slider
+* *SAT _INIT:* the saturation default value (%)
+* *SAT _MIN:* the saturation minimum value (%)
+* *SAT _STEP:* the saturation step (%) used when moving the slider
+* *HGT_INIT:* = the Hemo Glucose Test default value (in mg/dl)
+* *DIURESIS_INIT:* = the Daily Urine Volume default value (in ml)
 * [#_log4j.properties_1 .anchor]##
 
 === 5.5 [line-through]#h8.properties# (removed)
