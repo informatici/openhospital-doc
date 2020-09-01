@@ -1320,25 +1320,16 @@ Bundles are the language (or translation) files provided with OpenHospital. As t
 
 where XY is an international country code.
 
-Since they are property files, every language file is made by hundreds of key = value couple too.
+They are property files (basically text file), made by hundreds of *key = value* couples.
 
-Special characters are coded in the UNICODE coding system with 4 bytes, like:
-
-U+00E1 = \u00E1 = á
-
-U+00E8 = \u00E8 = è
-
-U+00F6 = \u00F6 = ö
-
-…
+All files must be encoded in *UTF-8* in order to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...) 
 
 ==== 5.10.1 New Translations
 
 In order to create a new translation or to fix some labels in the OpenHospital is enough to create a copy of the English one, rename it with the new country code in place of the “XY” in the filename, and start translating with a simple text editor.
 
-For instance, if you want to create an Arab translation, you may create a new bundle from the English one:
+For instance, if you want to create an Arab translation, you may create a new bundle from the English one, by copying _language_en.properties_ into a *new file* _language_ar.properties_.
 
-*language_en.propertieslanguage_ar.properties*
 
 Then you can edit the Arab file and set the LANGUAGE parameter to *ar* to start testing your translation.[#_Users_and_Groups .anchor]##
 
