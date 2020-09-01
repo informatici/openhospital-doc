@@ -61,7 +61,10 @@ image:extracted-media/media/image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* Install the Java Runtime Environment 1.6 or higher (1.6 is recommended for fully compliance, and it’s the only one that supports high dpi monitors)
+*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
+
+
+* [line-through]#Install the Java Runtime Environment 1.6 or higher (1.6 is recommended for fully compliance, and it’s the only one that supports high dpi monitors)#
 * Install the MySQL server on a computer that will act as the OH “server” part
 * Copy the OpenHospital application on every client (it may be used on the server too)
 * Configure each OpenHospital copy to point the server (using the hostname or the IP address)
@@ -80,7 +83,9 @@ Depending on the operating system you have, there are different ways to install 
 
 For instance, on a Microsoft Windows® system you have to download and execute a setup file, while in Linux based systems you have to type only one command in a terminal.
 
-*_NB:_* _OpenHospital requires a JRE 1.6 or higher to work properly. Anyway, at the time of writing this document, *only JRE 1.6 32bit* has been tested and it is fully compliant with all OpenHospital features, especially the ones hardware related (such as Webcam and SMS)._
+*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
+
+*_NB:_* _OpenHospital v1.10 or lesser, require a JRE 1.6 or higher to work properly. Anyway, at the time of writing this document, *only JRE 1.6 32bit* has been tested and it is fully compliant with all OpenHospital features, especially the ones hardware related (such as Webcam and SMS)._
 
 ==== 3.1.2 MySQL Server and OpenHospital DB
 
@@ -256,10 +261,12 @@ Since OpenHospital is a Java software, is portable by definition. With the term 
 
 Since JRE and MySQL are not platform-independent but comes with several version depending on the platform, we have so:
 
-* *Portable OpenHospital for Linux* platforms (embedding Java1.6 and MySQL5 for Linux)
-* *Portable OpenHospital for Windows* platforms (embedding Java1.6 and MySQL5 for Windows)
+*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
 
-Once downloaded the needed version you may start it by launching the related script inside the package:
+* *Portable OpenHospital for Linux* platforms (embedding Java1.8 and MySQL5 for Linux, 32 or 64bit)
+* *Portable OpenHospital for Windows* platforms (embedding Java1.8 and MySQL5 for Windows)
+
+Once downloaded the needed version, you may start it by launching the related script inside the package:
 
 * *oh.sh* in the Linux version
 * *autorun.bat* in the Windows version
@@ -352,7 +359,7 @@ In Portable OpenHospital for Linux you will find the following folder tree struc
 * *poh-linux-_<arch>_-0.0.5-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
-** jre1.6.0_45/ - Java Virtual Machine
+** zulu8.46.0.19-ca-jre8.0.252-linux_i686/ or jdk8u252-b09-jre/ - Java Virtual Machine
 ** mysql-5.0.51a-linux-i686/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subdolder structure*
 ** tmp/ - working folder
@@ -371,7 +378,7 @@ In Portable OpenHospital for Windows you will find the following folder tree str
 
 * *poh-win32-0.0.5-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
-** jre6/ - Java Virtual Machine
+** jdk8u252-b09-jre/ - Java Virtual Machine
 ** modified/ - working folder
 ** mysql/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subdolder structure*
@@ -414,7 +421,7 @@ In following chapters, we will see all these properties files and all their feat
 
 === 5.1 generalData.properties
 
-OpenHospital 1.7 comes with the generalData.properties file set as follow by default:
+OpenHospital 1.7 and greater versions, come with the generalData.properties file set as follow by default:
 
 image:extracted-media/media/image23.png[image,width=645,height=486]
 
@@ -1118,7 +1125,7 @@ The full address for the db will then result as:
 jdbc:mysql://localhost/oh
 
 _*[.underline]#NB#*: An application restart is required in order to see the modification applied. +
-NB: Same settings have to be applied in log4.properties (since OpenHospital 1.7.0); see link:#5-6-log4j-properties[log4j.properties] in this manual._
+NB: Same settings have to be applied in log4.properties (since OpenHospital 1.7); see link:#5-6-log4j-properties[log4j.properties] in this manual._
 
 === 5.3 dicom.properties
 
@@ -1168,7 +1175,7 @@ Removed since version (1.9.1)
 
 === 5.6 log4j.properties
 
-OpenHospital 1.7 and and greater versions, come with the log4j.properties file set as follow by default:
+OpenHospital 1.7 and greater versions, come with the log4j.properties file set as follow by default:
 
 image:extracted-media/media/image32.png[image,width=646,height=626]
 
@@ -1359,139 +1366,57 @@ iReport® - http://community.jaspersoft.com/project/ireport-designer
 
 iReport® 3.0.0 (Classic) - http://sourceforge.net/projects/ireport/files/iReport%20(classic)/
 
-== 7 Installing OpenHospital 1.8 in Eclipse EE
+== 7 Installing OpenHospital 1.11.0 in Eclipse EE
 
-image:extracted-media/media/image45.png[image,width=645,height=88]
+*_Warning_*: _Since version 1.9.1, the code is available on GitHub at these links:_
 
-Assuming Eclipse EE, MySQL and the Java Virtual Machine (JVM) have already been installed on the computer, this chapter will focus on the installation of the 1.8 version on Eclipse J2EE (or Eclipse EE) environment (for never versions procedures are the same). +
-The Eclipse version used in this chapter is the Luna EE 4.4.2, downloadable from http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunasr2.
+* https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc]
 
-The installation of OH comprises of three main steps:
+_Please use EGit (Eclipse Plugin for Git) in order to clone the code into your Eclipse)_
 
-[arabic]
-. Checkout the project from CVS
-. Add libraries to the project
-. Run project
+Assuming Eclipse EE, MySQL 5.0.x and the Java Virtual Machine 1.8 or higher (Java8 or greater) have already been installed on the computer, this chapter will focus on cloning the version 1.11 on Eclipse J2EE (or Eclipse EE) environment.
 
-=== 7.1 Create a Project
+Please follow these link https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[EGit User Guide - Working with remote Repositories]
 
-image:extracted-media/media/image45.png[image,width=645,height=88]
-
-==== 7.1.1 Create a project from a new CVS repository
-
-[upperalpha]
-. Select File -> New -> Other from Eclipse’s menu. Select CVS -> CVS Repository Location from the “New” window. Click on “Next” button to show the “Add CVS repository” window. +
- +
-image:extracted-media/media/image46.png[image,width=606,height=379]
-
-[upperalpha, start=2]
-. Fill the “Host” field with http://openhospital.cvs.sourceforge.net[[.underline]#openhospital.cvs.sourceforge.net#] and the “Repository path” field with ”/cvsroot/openhospital”. Select “pserver” as connection type and “anonymous” as user, then click on “Next” button. +
- +
-image:extracted-media/media/image47.png[image,width=604,height=377]
-
-[upperalpha, start=3]
-. A “Confirm Open Perspective” window is shown. Click “Yes” to confirm “CVS Repository Exploring” as CVS’s perspective. +
- +
-image:extracted-media/media/image48.jpeg[image,width=250,height=x604]
-. As this window shows, the CVS has been installed. Click “Window” on the Eclipse menu, then choose Show View -> Other, then select CVS -> CVS Repositories from the “Show View” window to see the CVSs installed on Eclipse. Chapter 7.1.2 explains how to complete project creation. +
- +
-image:extracted-media/media/image49.png[image,width=604,height=377]
-
-==== 7.1.2 Create a project from existing CVS repository
-
-[upperalpha]
-. Select File -> New -> Other from Eclipse’s menu. Select CVS -> Projects CVS from the “New” window, then click on “Next” button. +
- +
-image:extracted-media/media/image50.png[image,width=604,height=377]
-. Select “Use existing repository location”, choose “/cvsroot/openhospital” and click “Next”. +
- +
-image:extracted-media/media/image51.png[image,width=604,height=377]
-. Choose “Use an existing module…”. Select “angal” from the list below, then click “Next”. +
- +
-image:extracted-media/media/image52.png[image,width=604,height=377]
-. A “Check Out As” window is shown. Select radio button “Check out as a project in the workspace” and fill the “Project Name” field with the project’s name. Eclipse allows the user to assign the name of the projects. Any project can be checked out more than once, assigning each time a different name. On this example, the project is named “angal”. Check the “Checkout subfolders” button and then click “Next”. +
- +
-image:extracted-media/media/image53.png[image,width=604,height=377]
-. Eclipse shows the default workspace folder. To work on a different folder, uncheck “Use default workspace location”, and choose the desired path, either typing it on the “Location” field or clicking “Browse” to select the folder. Once the workspace has been chosen, click “Next”. +
- +
-image:extracted-media/media/image54.jpeg[image,width=299,height=339]
-. Click on “Refresh Tags” to update “Branch” and “Version” tags. Click on the triangle near “Version” to expand the tag, choose the oh_1_8_0 version and close the window by clicking on “Finish”. This will checkout (download) the related version. +
- +
-image:extracted-media/media/image55.png[image,width=604,height=377]
-. Now the project files will be synced with the CVS. A slider shows the progression, and once the synchronization is complete, the files will be loaded in the “angal” project. To visualize projects on Eclipse, select Window -> Show View -> Project Explorer from the main menu. +
- +
-image:extracted-media/media/image56.jpeg[image,width=604,height=273]
-
-=== 7.2 Add Libraries to the Project
-
-[upperalpha]
-. A red “X” is shown on “angal” project because the JVM has not already been linked to the project. Right-click on project’s name and select “Properties” from the pop-up menu.image:extracted-media/media/image57.png[image,width=642,height=401]
-
-[upperalpha, start=2]
-. The “Properties for angal” window is shown. Select “Java build path” from the list on the left side. Four tabs - “Source”, “Projects”, “Libraries”, “Order and Export” - are shown on the top of the window. Select “Libraries” tab, then click “Add Library”.
-
-[upperalpha, start=3]
-. A new “Add Library” window opens. Select “JRE System Library” and click “Next”. +
- +
-image:extracted-media/media/image58.png[image,width=604,height=377]
-
-[upperalpha, start=4]
-. If JRE 1.6 or higher is already installed on the computer, “Workspace default JRE” can be selected, otherwise choose either “Execution environment” or “Alternate JRE” and select the JRE version from the drop-down menu. Click “Finish” to close the window. The library is added to the .jar files and the class folders in the build path. +
- +
-image:extracted-media/media/image59.png[image,width=604,height=377]
-
-[upperalpha, start=5]
-. Click “OK” on the “Properties” window to close it. The “X” disappears from the project as the JVM has been linked to. It may be replaced with a yellow warning triangle with an exclamation mark on it. Warnings won’t influence on current project execution.
-. In order to launch the project, you need also to add as “Class Folder” the folder “bundle” and “rpt” that will be requested at runtime
-
-Before running the project, an update with the existing CVS might be required. Right click on project’s name, then select Team -> Synchronize with Repository. +
- +
-_*NB:* Since version 1.8.3, the code is available on GIT over the SourceForge website at this link:_
-
-https://sourceforge.net/p/openhospital/openhospital/ci/master/tree/[_https://sourceforge.net/p/openhospital/openhospital/ci/master/tree/]
-
-_Please use EGit (Eclipse Plugin for Git) in order to clone the code on your Eclipse)_
-
-
-
-[upperalpha, start=7]
-. image:extracted-media/media/image60.png[image,width=604,height=377]
-. Click “Yes” on the “Confirm Open Perspective” window to allow the perspective sync the project. +
- +
-image:extracted-media/media/image61.png[image,width=604,height=245]
-
-=== 7. 3 Run the Project
+=== 7.1 Run the Project
 
 [.underline]#Before to run the project, the DB must be created as explained in chapter 3.1.2# [.underline]####MySQL Server and OpenHospital DB
 
-[upperalpha]
-. OH’s advanced features require “native” libraries, with the same language of the computer’s operative system. Right-click on project’s name, then select Run As -> Run Configurations. +
- +
+In order to run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is ok, the splash screen will appear. Have a look to the Eclipse console for any error or warning.
+
+image:extracted-media/media/image1.jpeg[image,width=390,height=298]
+
+OH’s advanced features require “native” libraries, with the same language of the computer’s operative system. Right-click on project’s name, then select _Run As -> Run Configurations_
+
 image:extracted-media/media/image62.PNG[image,width=604,height=377]
 
-[upperalpha, start=2]
-. A “Run Configurations” window opens. Choose Java Application -> <application’s name> - Menu (1) on this example. Select the “Main” tab, write “angal” on the “Project” field and check if the “Main class” is org.isf.menu.gui.Menu.
-. Select the “Arguments” tab and fill the “VM arguments” path typing: +
--Dsun.java2d.dpiaware=false -Djava.library.path=lib\native\<OS name> +
- +
-OS name can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows) according with the folders schema you find in the related folder “native”. Click on “Run” to close the window and run the application. +
+A “Run Configurations” window opens. Choose Java Application -> <application’s name> - Menu (1) on this example. Select the “Main” tab, write “angal” on the “Project” field and check if the “Main class” is org.isf.menu.gui.Menu.
+
+Select the “Arguments” tab and fill the “VM arguments” path typing: -Dsun.java2d.dpiaware=false -Djava.library.path=lib\native\<OS name>
+
+<OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows) according with the folders schema you find in the related folder “native”. Click on “Run” to close the window and run the application.
+
 image:extracted-media/media/image63.png[image,width=604,height=337]
 
-[upperalpha, start=6]
-. Now that the run configuration settings have been selected, OH can be launched by just clicking on the “Run” button (shown below by an arrow). +
- +
+Now that the run configuration settings have been selected, OH can be launched by just clicking on the “Run” button (shown below by an arrow).
+
 image:extracted-media/media/image64.png[image,width=604,height=377] +
 image:extracted-media/media/image65.png[image,width=604,height=377]
-. Because of default settings, OH’s first run will not show the login window. The system is set in “single user” mode as default. Proof is the “SINGLEUSER=yes” string on the third row of the generalData.properties file. This is way different in the real world, where OH must be accessible to the administrator and logged users only. Click on the triangle near to the project’s name, do the same on the “rsc” subfolder and then double-click on the generalData.properties file. +
- +
+
+Because of default settings, OH’s first run will not show the login window. The system is set in “single user” mode as default. Proof is the “SINGLEUSER=yes” string on the third row of the generalData.properties file. This is way different in the real world, where OH must be accessible to the administrator and logged users only. Click on the triangle near to the project’s name, do the same on the “rsc” subfolder and then double-click on the generalData.properties file.
+
 image:extracted-media/media/image66.png[image,width=604,height=273]
-. Replace “yes” with “no” on the “SINGLEUSER” row. Press CTRL+S (or Command+S on Mac) to save the change.
-. After the splash window, a “login” window opens. Click on the drop-down menu to choose the role. To access as administrator, select “admin” and type the password. Default is “admin”. The administrator has the right to register users as guests. Guests have to choose “guest” from the drop-down menu and then type their password. +
- +
+
+Replace “yes” with “no” on the “SINGLEUSER” row. Press CTRL+S (or Command+S on Mac) to save the change.
+After the splash window, a “login” window opens. Click on the drop-down menu to choose the role. To access as administrator, select “admin” and type the password. Default is “admin”. The administrator has the right to register users as guests. Guests have to choose “guest” from the drop-down menu and then type their password.
+
 image:extracted-media/media/image67.png[image,width=604,height=377] +
- +
+
 If the password is not correct, an error message is shown, asking the user to try again.
-. In order to better understand the processes underneath the software you may also enable the “Standard Output” in log4j.properties as explained in chapter link:#5-6-log4j-properties[log4j.properties].
+
+In order to better understand the processes underneath the software you may also enable the “Standard Output” in log4j.properties as explained in chapter link:#5-6-log4j-properties[log4j.properties].
 
 == 8 Update OpenHospital
 
