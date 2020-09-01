@@ -1095,7 +1095,7 @@ _*[.underline]#NB#*: An application restart is required in order to see the modi
 
 === 5.2 database.properties
 
-OpenHospital 1.7 and above comes with the database.properties file set as follow by default:
+OpenHospital 1.7 and greater comes with the database.properties file set as follow by default:
 
 image:extracted-media/media/image27.PNG[image,width=646,height=124]
 
@@ -1122,7 +1122,7 @@ NB: Same settings have to be applied in log4.properties (since OpenHospital 1.7.
 
 === 5.3 dicom.properties
 
-OpenHospital 1.8 and above comes with the dicom.properties file set as follow by default:
+OpenHospital 1.8 and greater versions, come with the dicom.properties file set as follow by default:
 
 image:extracted-media/media/image28.png[image,width=646,height=65]
 
@@ -1134,7 +1134,7 @@ image:extracted-media/media/image28.png[image,width=646,height=65]
 
 === 5.4 examination.properties
 
-OpenHospital 1.8 comes with the examination.properties file used in the examination module. The file is set as follow by default:
+OpenHospital 1.8 and greater versions, comes with the examination.properties file used in the examination module. The file is set as follow by default:
 
 image:extracted-media/media/image29.png[image,width=646,height=423]
 
@@ -1168,7 +1168,7 @@ Removed since version (1.9.1)
 
 === 5.6 log4j.properties
 
-OpenHospital 1.7 and above comes with the log4j.properties file set as follow by default:
+OpenHospital 1.7 and and greater versions, come with the log4j.properties file set as follow by default:
 
 image:extracted-media/media/image32.png[image,width=646,height=626]
 
@@ -1198,7 +1198,7 @@ _*[.underline]#NB#*: An application restart is required in order to see the modi
 
 === 5.7 sms.properties
 
-OpenHospital 1.8 comes with the sms.properties file set as follow by default:
+OpenHospital 1.8 and greater versions, come with the sms.properties file set as follow by default:
 
 image:extracted-media/media/image38.png[image,width=629,height=193]
 
@@ -1212,7 +1212,7 @@ image:extracted-media/media/image38.png[image,width=629,height=193]
 
 ==== 5.7.1 GSM.properties
 
-OpenHospital 1.8 comes with the GSM.properties file set as follow by default:
+OpenHospital 1.8 and greater versions, come with the GSM.properties file set as follow by default:
 
 image:extracted-media/media/image39.png[image,width=629,height=161]
 
@@ -1222,7 +1222,7 @@ Only the PORT property needs to be modified.
 
 ==== 5.7.2 Skebby.properties
 
-OpenHospital 1.8 comes with the Skebby.properties file set as follow by default:
+OpenHospital 1.8 and greater versions, come with the Skebby.properties file set as follow by default:
 
 image:extracted-media/media/image40.png[image,width=629,height=112]
 
@@ -1237,7 +1237,7 @@ This serve for the implementation of the Skebby HTTP API for sending SMS.
 
 ===  5.8 txtPrinter.properties
 
-OpenHospital 1.7 and above comes with the txtPrinter.properties file set as follow by default:
+OpenHospital 1.7 and greater versions, come with the txtPrinter.properties file set as follow by default:
 
 image:extracted-media/media/image41.png[image,width=645,height=153]
 
@@ -1275,7 +1275,7 @@ _*[.underline]#NB#*: An application restart is required in order to see the modi
 
 === 5.9 xmpp.properties
 
-OpenHospital 1.7 and above comes with the xmpp.properties file set as follow by default:
+OpenHospital 1.7 and greater versions, come with the xmpp.properties file set as follow by default:
 
 image:extracted-media/media/image44.png[image,width=646,height=48]
 
@@ -1314,7 +1314,7 @@ Please follow these settings:
 
 === 5.10 Bundles
 
-Bundles are the language (or translation) files provided with OpenHospital. As told in link:#5-1-1-language[LANGUAGE] chapter, OpenHospital 1.7 comes with different available languages in folder bundles/ within the package file:
+Bundles are the language (or translation) files provided with OpenHospital. As told in link:#5-1-1-language[LANGUAGE] chapter, OpenHospital 1.7 and greater versions, come with different available languages in folder bundles/ within the package file:
 
 *language_XY.properties*
 
