@@ -1544,6 +1544,13 @@ In the *Buttons Panel* you have the following choices:
 
 _*NB:* You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
+By pressing the *#L#aunch report* button from the Clinical Sheet window, a new window will show up:
+
+image:extracted-media/media/image244.png[image,width=400,height=456]
+
+The application will be automatically set to get the whole history of the patient, but you can change the produced report by querying a different dates range and specific set of information.
+
+
 ====  10.9.1 DICOM ([.underline]#DICOM viewer#)
 
 You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask to your Administrator how to do it or read the Administrator’s Guide.
