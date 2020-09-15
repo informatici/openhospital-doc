@@ -449,7 +449,7 @@ Then click *Ok* to insert the medical line in the grid.
 
 Click *Save* button to save the charge movement.
 
-_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICALOT_ _in configuration file, so every new charging movement will automatically create a new lot; anyway, the Expiring Date must always be provided._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT\_IN_ in configuration file, so every new charging movement will automatically create a new lot; anyway, the Expiring Date must always be provided._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 _*[.underline]#NB#*: You can avoid managing medicals cost by setting the LOTWITHCOST to no. Ask your Administrator how to do it or read the Administrator’s guide._
 
@@ -484,7 +484,7 @@ You select the existing lot and click *Yes*. Then click *Ok* to insert the medic
 
 Click *Save* button to save the discharge movement.
 
-_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICALOT_ _in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date. If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date. If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 === 6.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
 
@@ -527,12 +527,15 @@ Since OpenHospital 1.8, it is possible to rectify the quantity lying in stock in
 image:extracted-media/media/image36.png[Rectify.PNG,width=576,height=224]
 
 * Select the medical. Once done, the quantity lying in stock is displayed.
+* if lots are existing for the drug, click *Choose Lot*, otherwise click on *New Lot* (you are detecting a new lot)
 * Modify the *actual quantity*
 * Enter the reason of the rectification
 
-Click *Ok* to save the rectification or Cancel to abort.
+_*[.underline]#NB#*: Since v1.11.0 lot management is compulsory when rectifying quantities in wards._
 
 image:extracted-media/media/image37.png[Rectify filled.PNG,width=574,height=224]
+
+Click *Ok* to save the rectification or Cancel to abort.
 
 ===== 6.3.2.2 Search Ward Pharmacy movements ([.underline]##F##ilter)
 
@@ -573,6 +576,10 @@ As told before, only discharging movements are allowed in this functionality. So
 * *Medicals*: by pressing *[.underline]##M##edical* button you will be asked for the drug to give to that patient; a first window will appear to let you select the drug (the only ones you may have in the ward as a result of a previous discharging movement in the *_Pharmaceutical Stock Browser_*) and a second one to let you specify the quantity; multiply of half-piece are allowed.
 
 image:extracted-media/media/image40.png[WardPharmacy_medical.PNG,width=273,height=129]image:extracted-media/media/image41.png[WardPharmacy_quantity.PNG,width=231,height=139]
+
+If _AUTOMATICLOTWARD_TOWARD_ has been enabled the user will be requested to select a lot (similarly to link:#6223-insert-stock-discharging-movement-discharge[6.2.2.3 Insert Stock Discharging Movement])
+
+_*[.underline]#NB#*: The Lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date (FEFO). If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated if  the quantity laying in other lots can suite the request._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 Before to press the *[.underline]##O##K* button, you may insert as many Medicals you need, it will show a correspondent number of movements in the *Outcomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window. These movements will also be visible in the *Incomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
