@@ -493,16 +493,24 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |key |default value |allowed values
-|AUTOMATICLOT |no |yes, no
+|AUTOMATICLOT_IN |no |yes, no
+|AUTOMATICLOT_OUT |no |yes, no
+|AUTOMATICLOTWARD_TOWARD |no |yes, no
 |===
 
 OpenHospital, since its first version, allow an automatic management of lots in the main pharmacy. It means that is possible to work in the pharmacy without taking care about lot definitions in loading the store and just specify preparation and expiring date for each charging movement (see *6.2.2.2Insert stock movement* in the _User’s Guide_).
 
-For discharging movement, the lot is automatically calculated according to the nearest expiring date of lots. If the quantity to discharge is higher than the quantity of the first selected lot, more than one discharging operation can be generated.
+For discharging movement, the lot is automatically calculated according to the nearest expiring date of lots (FEFO - First Expiring First Out). If the quantity to discharge is higher than the quantity of the first selected lot, more than one discharging operation can be generated.
 
-By default, AUTOMATICLOT is set to NO. Anyway, is possible to set it anytime to YES to enable it.
+Since version *v1.11.0*, the _AUTOMATIC LOTS MANAGEMENT_ has been splitted into two different settings for charging and discharging the main pharmacy and to manage lots also in the wards. In this way we offer more control to the user that may want to provide all the lots details in _charging operations_ but ask the application to automatically _discharge_ the nearest expiring ones (FEFO). Similarly, in wards (See ch. link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-3-pharmaceuticals-stock-ward-pharmaceuticals-stock-ward[6.3 Pharmaceuticals Stock Ward] in User's Manual) the user may decide to manage lots manually or to ask the application to do it automatically.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+With *AUTOMATICLOT_IN = YES* we ask the application to generate a lot number automatically and only ask for an expiration date (compulsory). By default, AUTOMATICLOT_IN is set to NO. It is possible to change the value at any time.
+
+With *AUTOMATICLOT_OUT = YES* we ask the application to discharge automatically the nearest expiring lot when required. By default, AUTOMATICLOT_OUT is set to NO. It is possible to change the value at any time.
+
+With *AUTOMATICLOTWARD_TOWARD = YES*, we ask the application to discharge from Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time. For discharges to Patients (drugs giving) the lot is *never* asked.
+
+_*[.underline]#NB#*: An application restart is required in order to see the modification applied for all above settings._
 
 ==== 5.1.4 LOTWITHCOST
 
