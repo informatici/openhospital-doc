@@ -735,8 +735,8 @@ To record the visit, enter the following fields:
 * *Data*: date of the exam, the application propose the current date
 * *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button
 * *OPD/IPD*: the window automatically will check if the patient is admitted or not in the hospital; anyway, is possible to change it if needed
-* *[.underline]##E##xam*: choose the exam; a first window will ask you the material, then a second one the exam, finally a third one will ask you the result is the exam allow only a single result, otherwise the list of multiple results will be showed on the right, together with the chosen material.
-* *Note*: free description for each exam
+* *[.underline]##E##xam*: choose the exam; a first window will ask you the material, then a second one the exam, finally a third one will ask you the result if the exam allows only a single result, otherwise the list of multiple results will be showed in the right panel, together with the chosen material.
+* *Note*: exam reporting (different for each exam)
 
 _*[.underline]#NB#*: At any time, before to press OK, you can modify every exam by clicking it on the list and changing material, results and note in the relative panels._
 
