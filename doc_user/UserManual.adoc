@@ -618,6 +618,7 @@ To access the other functions of laboratory in the *Buttons Panel* you have the 
 * *[.underline]##D##elete*, to delete an existing laboratory exam
 * *[.underline]##C##lose* to close the window and return to the Menu
 * *[.underline]##P##rint table* to print the list of laboratory exams showed in the table
+* *[.underline]##P##rint label* to print the samples lables for laboratory exams
 
 Furthermore, a search function (*[.underline]##S##earch)* is available using the Selection panel on the left of the window.
 
@@ -625,9 +626,9 @@ Furthermore, a search function (*[.underline]##S##earch)* is available using the
 
 Search function allows you to select and show laboratory exams on the *Data table* of the *_Laboratory browsing_* window.
 
-In the example hereinafter, all types of exams executed from 10.11.2006 until 17.11.2006 are showed in *Data table*.
+In the example hereinafter, all types of exams executed in date 02.11.2006 are showed in *Data table*.
 
-image:extracted-media/media/image43.png[image,width=528,height=339]
+image:extracted-media/media/image43b.png[image,width=528,height=339]
 
 Data about exams can be selected by choosing specific fields among the following:
 
@@ -639,7 +640,7 @@ ALL, exams of all types are showed
 Single exam, only the exams of the selected type are showed
 ____
 
-* **Date: “**DATE From” and “DATE To” allow the selection of all the exam executed in the requested period
+* **Date: “**Date From” and “Date To” allow the selection of all the exam executed in the requested period
 
 After the selection press *[.underline]##S##earch* button; the system will show on the table results of the search applying the criteria requested.
 
@@ -677,6 +678,7 @@ When you finish entering data in the *Buttons Panel* you have the following choi
 
 * *[.underline]##O##k* to confirm and record data
 * *[.underline]##C##ancel* to close the window and return to the Menu without record data
+* *[.underline]##P##rint* to print the result
 
 ==== 7.2.3 Modify a laboratory exam ([.underline]##E##dit)
 
@@ -694,13 +696,13 @@ image:extracted-media/media/image48.png[image,width=240,height=174]
 
 Since OpenHospital version 1.3.1 you can extend the _New Laboratory_ functionality by change the _LABEXTENDED_ flag in the configuration file. Ask to your Administrator how to do it.
 
-==== 7.3.1 New Laboratory Browsing (v 1.1.)
+==== 7.3.1 New Laboratory Browsing (v 1.1)
 
 The new window will appear like the following:
 
 image:extracted-media/media/image49.png[image,width=642,height=309]
 
-The only difference is the new column about the name of the patient for a fast research.
+The only difference is the new column about the name of the patient because it is compulsory in this modality.
 
 ==== 7.3.2 New Laboratory Exam (v. 2.0)
 
@@ -712,7 +714,7 @@ A search field can be used to fast search the patient by typing part of his/her 
 
 The New Laboratory Exam window (thus the Edit one) will appear like the following:
 
-image:extracted-media/media/image50.png[image,width=531,height=623]
+image:extracted-media/media/image50.png[image,width=531,height=530]
 
 The *Patient’s data panel* cannot be modified except *Note Field* and only shows the information related to the selected Patient.
 
@@ -737,9 +739,6 @@ To record the visit, enter the following fields:
 * *Note*: free description for each exam
 
 _*[.underline]#NB#*: At any time, before to press OK, you can modify every exam by clicking it on the list and changing material, results and note in the relative panels._
-
-_ +
-_
 
 == 8 Accounting (A[.underline]##c##counting)
 
