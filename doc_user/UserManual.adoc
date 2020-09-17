@@ -667,10 +667,11 @@ To record the visit, enter the following fields:
 
 In OpenHospital you have basically two kind of possible results for each exam:
 
-* *Single Result*: where you can select only one result among a list
-* *Multiple Results*: where you may specify many results among a list of positive/negative values
+* *Single Result*: where you can select only one result among a list (Procedure 1)
+* *Multiple Results*: where you may specify many results among a list of positive/negative values (Procedure 2)
+* Since version *v1.11* you can also manually input the precise result (Procedure 3)
 
-image:extracted-media/media/image45.png[Laboratory_new_proc1.PNG,width=309,height=340]image:extracted-media/media/image46.png[Laboratory_new_proc2.PNG,width=309,height=341]
+image:extracted-media/media/image45.png[Laboratory_new_proc1.PNG,width=309,height=340]image:extracted-media/media/image46.png[Laboratory_new_proc2.PNG,width=309,height=340]image:extracted-media/media/image46b.png[Laboratory_new_proc3.PNG,width=309,height=340]
 
 _*[.underline]#NB#*: Exams, Exam Types and Results as well, can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
@@ -2357,12 +2358,18 @@ In OpenHospital 1.7 you can define two kind of set of results, called “Procedu
 
 * *Procedure 1*: a set of values as description; only one will be selectable as exam *Single Result*
 * *Procedure 2*: a set of Positive/Negative values; all of them will figure as exam *Multiple Results*
+* *Procedure 3*: a specific value to be input manually; it will show an *input field* at the time of the exam registration
 
-The difference between *Procedure1* and *Procedure2* will be seen in the Laboratory module (see link:#7-2-2-create-a-new-laboratory-exam-new[Create a new laboratory exam] and link:#7-3-3-laboratory-multiple-insert[Laboratory Multiple Insert] in this document)
+The difference between *Procedures (1, 2, 3)* will be seen in the Laboratory module (see link:#7-2-2-create-a-new-laboratory-exam-new[Create a new laboratory exam] and link:#7-3-3-laboratory-multiple-insert[Laboratory Multiple Insert] in this document)
 
-So, the two possibilities are showed below:
+Since for [.underline]#Procedure 3# the exact value is not known, so the *[.underline]#R#esult* button is disable in this case:
 
-image:extracted-media/media/image171.png[image,width=642,height=198]
+image:extracted-media/media/image170b.png[image,width=600,height=178]
+
+So, the two remaining possibilities are showed below:
+
+image:extracted-media/media/image171.png[image,width=321,height=181]image:extracted-media/media/image171b.png[image,width=321,height=181]
+
 
 The functions available from both windows are:
 
