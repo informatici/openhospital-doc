@@ -60,7 +60,7 @@ In this document will be used following conventions:
 
 * Each button has always one letter with an underscore. You can select the functionality offered by the button pressing the “Alt” key and at the same time the “underscored” key (in the example of *[.underline]##P##harmacy* you have to press “Alt” and “P”)*.* This behaviour is common all over the application and allows the user to operate (almost) without the use of the mouse. In the entire document “Alt” key and the “P” key will be indicated as “Alt + P”.
 
-.Click with the mouse on the button or press "Alt+P" to enter the *Pharmacy*
+.Click with the mouse on the button or press "Alt + P" to enter the *Pharmacy*
 [#3-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
@@ -148,19 +148,23 @@ image:extracted-media/media/image11.png[image,width=391,height=435]
 
 To record a visit, enter the following fields:
 
-* *Type of attendance.* This field is not meant to distinguish whether an individual is new or not in the ambulatory (absolutely first time he/she enters the ambulatory). The NEW ATTENDANCE is devoted to cases when Patient (at his first or n-th time in the ambulatory it does not care here) comes to the Ambulatory to report a new health issue / new disease for which no care has already been addressed and recorded. The re-attendance is – on the contrary – the case of records created when a Patient comes back to the Ambulatory in order to follow-up a past new attendance when he/she received cares and previous instructions to recover. _ +
+* *Type of attendance.* This field is not meant to distinguish whether an individual is new or not in the ambulatory (absolutely first time he/she enters the ambulatory). The NEW ATTENDANCE is devoted to cases when Patient (at his first or n-th time in the ambulatory it does not care here) comes to the Ambulatory to report a new health issue / new disease for which no care has already been addressed and recorded. The re-attendance is – on the contrary – the case of records created when a Patient comes back to the Ambulatory in order to follow-up a past new attendance when he/she received cares and previous instructions to recover.
  +
-Example: a Patient comes to the ambulatory because he/she reports a cut ==> this event is recorded as NEW ATTENDANCE and Doctor sutures the wound and invites Patient to come back ten days later; then same patient comes back after ten days to have his/her stitches removed: a new OPD record is then created but with no NEW ATTENDANCE flag set. +
-_
+ +
+_Example: a Patient comes to the ambulatory because he/she reports a cut ==> this event is recorded as NEW ATTENDANCE and Doctor sutures the wound and invites Patient to come back ten days later; then same patient comes back after ten days to have his/her stitches removed: a new OPD record is then created but with no NEW ATTENDANCE flag set._
+ +
 * *Date of the visit*. Date in which Patient is met for recorded activity.
-* *Disease Type:* By selecting a _DiseaseType_ the first diagnosis list will contain only its related diseases. Second and third list will still contain all diseases. +
+* *Disease Type:* By selecting a _DiseaseType_ the first diagnosis list will contain only its related diseases. Second and third list will still contain all diseases.
  +
-_*[.underline]#NB#*: Disease Types can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document. +
-_
+ +
+_Example: Disease Types can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+ +
 * *Diagnosis.* Maximum three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” it does not care in this context). Normally patient reports at least one visit reason but it may happen that during same visit the Doctor finds other concurrent pathologies thus here possibility is given to record till maximum three (the first being the only one mandatory). +
-It is possible to filter in order to find diseases more easily. To do so, you will need to enter a text fragment in the search field that is part of the disease name. The closer the search text comes to the name of the disease being searched, the more precise the search is. +
+It is possible to filter in order to find diseases more easily. To do so, you will need to enter a text fragment in the search field that is part of the disease name. The closer the search text comes to the name of the disease being searched, the more precise the search is. 
  +
-_*[.underline]#NB#*: in the *OPD Out Patient Department* window only first diagnosis and its type will be show, anyway all data are stored and processed in reports and searching._
+ +
+_Example: in the *OPD Out Patient Department* window only first diagnosis and its type will be show, anyway all data are stored and processed in reports and searching._
+ +
 * *Patient age*. Validity range is 0-200.
 * *Patient sex*. Male/female
 
@@ -229,7 +233,7 @@ By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharma
 |===
 
 
-_*[.underline]#NB#:* Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file**.** Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file**.** Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 === 6.1 Pharmaceuticals ([.underline]##P##harmaceuticals)
 
@@ -242,7 +246,7 @@ Pharmaceutical functions allow you to insert, to modify and to delete pharmaceut
 * if the pharmaceutical is out of stock
 * the expiring drugs within today or a period
 
-Note: in OpenHospital to identify pharmaceuticals sometimes is used the word “pharmaceutical” and in others the synonymous “Medical”.
+NOTE: _in OpenHospital to identify pharmaceuticals sometimes is used the word “pharmaceutical” and in others the synonymous “Medical”._
 
 ==== 6.1.2 Functions of pharmaceuticals
 
@@ -280,13 +284,12 @@ Press *[.underline]##N##ew* button in the *_Pharmaceutical browsing_* window to 
 To insert a new pharmaceutical, enter the following fields:
 
 * *Type* (for instance, Drugs or Chemical) +
- +
-_*[.underline]#NB#*: Types can be defined by the Administrator._ _Ask to your Administrator how to do it see link:#14-general-data-general-data[General Data] in this document +
-_
 * *Code*: code that identify univocally your pharmaceutical for fast searching
 * *Description*: the description of the pharmaceutical
 * *PcsXPck*: Pieces per packet (if more than 1)
 * *Critical level*: the minimum quantity required in stock
+
+NOTE: _Types can be defined by the Administrator. Ask to your Administrator how to do it see link:#14-general-data-general-data[General Data] in this document._
 
 image:extracted-media/media/image18.png[image,width=350,height=263]
 
@@ -470,9 +473,9 @@ Then click *Ok* to insert the medical line in the grid.
 
 Click *Save* button to save the charge movement.
 
-_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT\_IN_ in configuration file, so every new charging movement will automatically create a new lot; anyway, the Expiring Date must always be provided._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_IN in configuration file, so every new charging movement will automatically create a new lot; anyway, the Expiring Date must always be provided. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
-_*[.underline]#NB#*: You can avoid managing medicals cost by setting the LOTWITHCOST to no. Ask your Administrator how to do it or read the Administrator’s guide._
+NOTE: _You can avoid managing medicals cost by setting the LOTWITHCOST to no. Ask your Administrator how to do it or read the Administrator’s guide._
 
 ===== 6.2.2.3 Insert stock discharging movement ([.underline]##D##ischarge)
 
@@ -505,7 +508,7 @@ You select the existing lot and click *Yes*. Then click *Ok* to insert the medic
 
 Click *Save* button to save the discharge movement.
 
-_*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date. If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date. If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 <<<
 
@@ -554,7 +557,7 @@ image:extracted-media/media/image36.png[Rectify.PNG,width=576,height=224]
 * Modify the *actual quantity*
 * Enter the reason of the rectification
 
-_*[.underline]#NB#*: Since v1.11.0 lot management is compulsory when rectifying quantities in wards._
+NOTE: _Since v1.11.0 lot management is compulsory when rectifying quantities in wards._
 
 image:extracted-media/media/image37.png[Rectify filled.PNG,width=574,height=224]
 
@@ -602,7 +605,7 @@ image:extracted-media/media/image40.png[WardPharmacy_medical.PNG,width=273,heigh
 
 If _AUTOMATICLOTWARD_TOWARD_ has been enabled the user will be requested to select a lot (similarly to link:#6223-insert-stock-discharging-movement-discharge[6.2.2.3 Insert Stock Discharging Movement])
 
-_*[.underline]#NB#*: The Lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date (FEFO). If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated if  the quantity laying in other lots can suite the request._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _The Lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date (FEFO). If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated if  the quantity laying in other lots can suite the request. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 Before to press the *[.underline]##O##K* button, you may insert as many Medicals you need, it will show a correspondent number of movements in the *Outcomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window. These movements will also be visible in the *Incomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
@@ -701,7 +704,7 @@ In OpenHospital you have basically two kind of possible results for each exam:
 
 image:extracted-media/media/image45.png[Laboratory_new_proc1.PNG,width=309,height=340]image:extracted-media/media/image46.png[Laboratory_new_proc2.PNG,width=309,height=340]image:extracted-media/media/image46b.png[Laboratory_new_proc3.PNG,width=309,height=340]
 
-_*[.underline]#NB#*: Exams, Exam Types and Results as well, can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _Exams, Exam Types and Results as well, can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 When you finish entering data in the *Buttons Panel* you have the following choices:
 
@@ -767,7 +770,7 @@ To record the visit, enter the following fields:
 * *[.underline]##E##xam*: choose the exam; a first window will ask you the material, then a second one the exam, finally a third one will ask you the result if the exam allows only a single result, otherwise the list of multiple results will be showed in the right panel, together with the chosen material.
 * *Note*: exam reporting (different for each exam)
 
-_*[.underline]#NB#*: At any time, before to press OK, you can modify every exam by clicking it on the list and changing material, results and note in the relative panels._
+NOTE: _At any time, before to press OK, you can modify every exam by clicking it on the list and changing material, results and note in the relative panels._
 
 <<<
 
@@ -839,14 +842,14 @@ Data showed on the *Bill Panel* area are:
 * *Patient*: it is the patient associated with the bill
 * *List*: it is the PriceList that will be used for this bill +
  +
-_*[.underline]#NB#*: PriceLists can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _PriceLists can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 Data showed on the *Item Panel* area are:
 
 * *Item, Qty, Amount*: they are the description of the bill entry, the selected quantity and the amount; the amount is calculated as the unitary cost of the item multiplied by the quantity;
 * *TOTAL*: it is the total amount of the bill +
  +
-_*[.underline]#NB#*: Prices, or unitary costs, can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _Prices, or unitary costs, can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 Data showed on *The Payments* area are:
 
@@ -862,17 +865,18 @@ Then you have to select a patient. To do it, press the *find [.underline]##P##at
 
 Once you have selected the patient you can start to enter bill entries of the bill.
 
-_*[.underline]#NB#*: A patient can have severals pending bills if only if the the parameter ALLOWMULTIPLEOPENEDBILL is enabled (see the administrator manual). Else If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
+NOTE: _A patient can have severals pending bills if only if the the parameter ALLOWMULTIPLEOPENEDBILL is enabled (see the administrator manual). Else If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
 
 There are several types of Bill entry. They are identified by the button on the *Buttons panel* on the right of the window; you have the following choices:
 
 * *[.underline]##M##edical* to enter bill entries of pharmaceuticals
 * *[.underline]##O##peration* to enter bill entries of operations
 * *[.underline]##E##xam* to enter bill entries of exams
-* *[.underline]##O##ther* to enter other prices defined in the PriceList +
-** +
-_[.underline]#NB#_**__: Types can be defined by the Administrator. Ask to your Administrator how to do it or read the see link:#14-general-data-general-data[General Data] in this document.__
+* *[.underline]##O##ther* to enter other prices defined in the PriceList
 * *[.underline]##C##ustom* to enter custom items defined on the fly
+
+NOTE: _Types can be defined by the Administrator. Ask to your Administrator how to do it or read the see link:#14-general-data-general-data[General Data] in this document._
+
 
 ===== 8.2.1.1 Insert a bill entry related to Medicals, Operations or Exams ([.underline]##M##edical, [.underline]##O##peration, [.underline]##E##xam) 
 
@@ -979,7 +983,7 @@ image:extracted-media/media/image61.png[image,width=278,height=130]
 
 First of all, to modify an existing bill you have to highlight it in the *_Patients Bills Management_* window. Once you’ve done this, press the *[.underline]##E##dit Bill* button. The *_New Patient Bill_* window will appear.
 
-_*[.underline]#NB#*: Only bills with status “O” (Open) can be modified, otherwise an A4 report will be shown._
+NOTE: _Only bills with status “O” (Open) can be modified, otherwise an A4 report will be shown._
 
 ==== 8.2.3 Delete a bill ([.underline]##D##elete Bill)
 
@@ -987,7 +991,7 @@ First of all, to delete an existing bill you have to highlight it in the *_Patie
 
 image:extracted-media/media/image62.png[Accounting_delete.PNG,width=328,height=118]
 
-_*[.underline]#NB#*: Generally, this is not allowed to regular users and should be performed only by the Administrator._
+NOTE: _Generally, this is not allowed to regular users and should be performed only by the Administrator._
 
 ==== 8.2.4 Receipt (Receipt)
 
@@ -1017,11 +1021,11 @@ Once the choice has been done, after some instants the JasperViewer® will show 
 
 image:extracted-media/media/image65.png[Accounting_report_pdf.PNG,width=642,height=470]
 
-_*[.underline]#NB#*: By default, an internal PDF viewer is used. You can use an external PDF reader by modifying the INTERNALVIEWER flag in the configuration file._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _By default, an internal PDF viewer is used. You can use an external PDF reader by modifying the INTERNALVIEWER flag in the configuration file. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 You can save the report as PDF by clicking on save button (image:extracted-media/media/image66.png[Report_save.PNG,width=21,height=19]) or printing it by clicking on print button (image:extracted-media/media/image67.png[Report_print.PNG,width=21,height=18]).
 
-_*[.underline]#NB#*: A PDF copy of every report is always saved within the folders of OpenHospital._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _A PDF copy of every report is always saved within the folders of OpenHospital. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 === 8.3 Functions of Accounting in multi-user mode
 
@@ -1047,7 +1051,7 @@ image:extracted-media/media/image69.png[../../Screen%20Shot%202019-07-26%20at%20
 
 Vaccines functionality allows managing vaccines for all the patients registered. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
 
-.Click with the mouse on the button or press "Alt+V" to enter the *Patient Vaccines browsing* window
+.Click with the mouse on the button or press "Alt + V" to enter the *Patient Vaccines browsing* window
 [#9-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
@@ -1077,11 +1081,11 @@ Doing the selection, data about vaccinations can be selected by choosing specifi
 
 * *Vaccine type:* by selecting a Vaccine Type you will filter the Vaccine list
 * *Vaccine.* You can select one vaccine or the value “All vaccines” +
- +
-_*[.underline]#NB#*: VaccineTypes and Vaccines can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 * **Date. “**DATE From” and “DATE To” allow the selection of all the vaccinations over the requested period
 * **Age. “**Age From” and “Age To” allow the selection of all the patients subject to vaccinations by age
 * *Sex.* All / Male / Female
+
+NOTE: _VaccineTypes and Vaccines can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 After the selection press *[.underline]##S##earch* button; the system will show on *Data table* results of the search applying the criteria requested.
 
@@ -1103,9 +1107,9 @@ To record a new patient vaccination enters the following fields:
 * *Progressive:* the progressive number in the year (set automatically by the system)
 * *Patient:* You can select the patient entering the *Patient code* or in alternative selecting a patient.
 * *Vaccine type:* the Vaccine Type
-* *Vaccine:* the Vaccine +
- +
-_*[.underline]#NB#*: VaccineTypes and Vaccines can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+* *Vaccine:* the Vaccine
+
+NOTE: _VaccineTypes and Vaccines can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 When you finish entering data in the *Buttons Panel* you have the following choices:
 
@@ -1151,13 +1155,13 @@ The only difference is the new column about the name of the patient for a fast r
 
 Admission/Patient functionality allows registering a new patient, to modify his/her personal details, to browse his/her history, and to admit him/her in a hospital ward.
 
-.Click with the mouse on the button or press "Alt+A" to enter the *Patient Browser* window
+.Click with the mouse on the button or press "Alt + A" to enter the *Patient Browser* window
 [#10-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 
-_*[.underline]#NB#*: you can also start an OPD registration from here if the OPDEXTENDED flag is set to YES. Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _You can also start an OPD registration from here if the OPDEXTENDED flag is set to YES. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 === 10.2 Functions of Admission/Patients
 
@@ -1167,7 +1171,7 @@ By default, the window shows in *Data table* all the patients currently present 
 
 image:extracted-media/media/image78.png[image,width=584,height=235]
 
-_*[.underline]#NB#*: If the patients list become huge it is possible to experience a slowdown of the system depending on the network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in configuration file._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _If the patients list become huge it is possible to experience a slowdown of the system depending on the network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in configuration file. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 The following data are shown in the *_Patients browser_* window:
 
@@ -1192,7 +1196,7 @@ The following functions are accessible from the *Buttons Panel* of the window *_
 * *[.underline]##T##herapy* to manage the therapy of a patient
 * *[.underline]##C##lose* to exit from the function Admission/Patients and return to the main menu
 
-_*[.underline]#NB#*: It is possible to have a *[.underline]##M##erge* function that might help in case of double patient registration, by changing the flag MERGEFUNCTION in configuration file._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _It is possible to have a *[.underline]##M##erge* function that might help in case of double patient registration, by changing the flag MERGEFUNCTION in configuration file. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 Furthermore, a search function is available using the *Selection panel* on the left of the window.
 
@@ -1207,16 +1211,14 @@ Doing the selection, data about patients can be selected by choosing specific fi
 * *ALL* (all patients are included in the selection)
 * *Admitted* (only patients admitted are included in the selection)
 * *Not admitted* (only patients not admitted are included in the selection)
-
-* *Ward.* You can select one or more wards between Maternity, Nursery, Surgery, Internal medicine +
- +
-_*[.underline]#NB#*: Wards can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document. +
-_
+* *Ward.* You can select one or more wards between Maternity, Nursery, Surgery, Internal medicine
 * *Age.* You can filter the patients list by age range
 * *Sex.* You can filter the patients list by gender
 * *Search criteria.* You can digit the complete name of a patient or only same characters: the system will show all the patients that have the entered characters (Examples are: if you enter “solo wa” all patients that have “solo [.underline]#wa#” in the name will be selected, “Solomon Wakunga” but also “Kamwa Solonik” will be showed).
 
 image:extracted-media/media/image79.png[image,width=408,height=336]
+
+NOTE: _Wards can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 ====  10.2.2 Search patient Enhanced
 
@@ -1235,7 +1237,7 @@ Moreover, further search criterions are added in this modality:
 * *Admission date.* To search all patients admitted in between the specified date, regardless if still admitted or not
 * *Discharge date.* To search all patients discharged in between the specified date, regardless if admitted again later on
 
-_*[.underline]#NB#*: to show the full patient list again, is enough to press the search button with an empty criterion_
+NOTE: _to show the full patient list again, is enough to press the search button with an empty criterion_
 
 === 10.3 Insert a new Patient ([.underline]##N##ew Patient)
 
@@ -1298,9 +1300,9 @@ To record a new patient, enter the following fields:
 
 * *Tax Number ID*: is the national ID or other ID you may use to identify univocally the patient
 * *Age / BirthDate / Description*: the age can be specified in three different ways:
-
-image:extracted-media/media/image86.png[New Patient Extended_age.PNG,width=187,height=74]image:extracted-media/media/image87.png[New Patient Extended_birthdate.PNG,width=188,height=73]image:extracted-media/media/image88.png[New Patient Extended_description.PNG,width=183,height=74] +
-
+ +
+image:extracted-media/media/image86.png[New Patient Extended_age.PNG,width=187,height=74]image:extracted-media/media/image87.png[New Patient Extended_birthdate.PNG,width=188,height=73]image:extracted-media/media/image88.png[New Patient Extended_description.PNG,width=183,height=74]
+ +
 In any case it will be converted to an age in years in the *_Patients browser_* window.
 * *BloodType*: it can be 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: it can be single, married, divorced, widowed. If left untouched, the default is unknown
@@ -1311,7 +1313,7 @@ In any case it will be converted to an age in years in the *_Patients browser_* 
 * *Has Insurance*: you may specify if the patient has a health financial protection
 * *Load File*: could be used to load a patient picture (will be cropped squared)
 
-_*[.underline]#NB#*: AgeTypes (Descriptions) can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _AgeTypes (Descriptions) can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 ====  10.4.2 Height and Weight functionality (Height and Weight)
 
@@ -1341,7 +1343,7 @@ Once the camera is activated and you can see the “eye-view” of the camera, y
 
 OpenHospital will try automatically to set the best quality for any webcam connected to the computer and will remember the last settings used.
 
-_*[.underline]#NB#*: If the camera refuse to work is possible to check the problem deeper changing the flag DEBUG in configuration file._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _If the camera refuse to work is possible to check the problem deeper changing the flag DEBUG in configuration file. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 ===  10.5 Admission functions ([.underline]##A##dmission)
 
@@ -1373,9 +1375,9 @@ To start an admission, you have to enter the following fields (on the right side
 
 TIP: It is possible to filter in order to find diseases more easily. To do this, you will need to enter a text fragment in the search fields that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
 
-_*[.underline]#NB#*: Wards, AdmissionType and Diagnosis can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _Wards, AdmissionType and Diagnosis can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
-_*[.underline]#NB#*: The "Progressive in year" field is automatically populated by the program; in case of maternity the counter can starts from first January or from first June as far as the current normative ask to the health facilities; to change this behaviour please ask to your Administrator to set the MATERNITYRESTARTINJUNE [.underline]# # flag in the configuration file or read the Administrator’s Guide._
+NOTE: _The "Progressive in year" field is automatically populated by the program; in case of maternity the counter can starts from first January or from first June as far as the current normative ask to the health facilities; to change this behaviour please ask to your Administrator to set the MATERNITYRESTARTINJUNE [.underline]# # flag in the configuration file or read the Administrator’s Guide._
 
 When you finish entering data in the *Buttons Panel* you have the following choices:
 
@@ -1444,7 +1446,7 @@ WARNING: Clicking on the button *_Save_* just adds the operation to the table; i
 
 To delete a line from the table, select the line to delete by clicking on it (it automatically highlights), then click on the button *_Delete_*. When you are finished, click on the button *Save* below the table to save your changes.
 
-_*[.underline]#NB#*: OperationType and Operations can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _OperationType and Operations can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 ====  10.5.4 Insert/modify Delivery data
 
@@ -1463,7 +1465,7 @@ In the window extension you will be able to specify much information about the M
 
 image:extracted-media/media/image96.png[Admission_delivery.PNG,width=642,height=339]
 
-_*[.underline]#NB#*: TreatmentType, DeliveryType and DeliveryResultType can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _TreatmentType, DeliveryType and DeliveryResultType can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 ====  10.5.5 Discharge of a patient ([.underline]##A##dmission)
 
@@ -1479,7 +1481,7 @@ TIP: As in the case of *_Diagnosis IN_*, it is possible to filter to find diseas
 
 image:extracted-media/media/image97.png[Admission_discharge.PNG,width=642,height=337]
 
-_*[.underline]#NB#*: DischargeTypes and Diseases can be defined by the Administrator._ _Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
+NOTE: _DischargeTypes and Diseases can be defined by the Administrator. Ask to your Administrator how to do it or see link:#14-general-data-general-data[General Data] in this document._
 
 When you finish entering data in the *Buttons Panel* you have the following choices:
 
@@ -1596,7 +1598,7 @@ In the *Buttons Panel* you have the following choices:
 * *[.underline]#DICOM#* to launch DICOM viewer
 * *[.underline]##C##lose* to close the window and to return to the *_Patient browser_* window without applying any changes
 
-_*NB:* You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 By pressing the *#L#aunch report* button from the Clinical Sheet window, a new window will show up:
 
@@ -1667,7 +1669,7 @@ You can add more than one therapy for the same patient. The set of therapies def
 
 image:extracted-media/media/image110.png[../../Screen%20Shot%202019-07-26%20at%2015.46.22.png,width=642,height=313]
 
-*_[.underline]#NB#_*: To better explain how the function *Add a therapy* works, the *_Therapy_* window below (next page) shows the results of the therapy defined in the *_Therapy entry form_* window above.
+NOTE: _To better explain how the function *Add a therapy* works, the *Therapy* window below (next page) shows the results of the therapy defined in the *Therapy entry form* window above._
 
 To add a therapy, you have to enter the following fields:
 
@@ -1710,7 +1712,7 @@ This window provides you only information that the therapy is not available and 
 
 After the check, on the *button panel* of the *_Therapy_* window you see in red colour the text “NOT AVAILABLE” if at least one of the involved drugs starting from today are not available or the test “AVAILABLE” otherwise.
 
-Note: check can also be done therapy by therapy and not only at the end of the input of all the therapies.
+NOTE: _check can also be done therapy by therapy and not only at the end of the input of all the therapies._
 
 Check function is not mandatory, you can save the therapy plan also without checking the presence of the pharmaceuticals in the hospital (see link:#8_2_1_9_save_function_save[Save function] below).
 
@@ -1805,7 +1807,7 @@ image:extracted-media/media/image122.png[Admission Patient_merge_sex.PNG,width=2
 
 This functionality is the most important in order to extract data registered in previous ones.
 
-.Click with the mouse on the button or press "Alt+T" to enter the *Statistics Report Launcher*
+.Click with the mouse on the button or press "Alt + T" to enter the *Statistics Report Launcher*
 [#11-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
@@ -1859,11 +1861,11 @@ After some instants the JasperViewer® will show the generated report as follow:
 
 image:extracted-media/media/image125.png[Report.PNG,width=591,height=420]
 
-_*[.underline]#NB#*: By default, an internal PDF viewer is used. You can use an external PDF reader by modifying the INTERNALVIEWER flag in the configuration file._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _By default, an internal PDF viewer is used. You can use an external PDF reader by modifying the INTERNALVIEWER flag in the configuration file. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 You can save the report as PDF by clicking on save button (image:extracted-media/media/image66.png[Report_save.PNG,width=21,height=19]) or printing it by clicking on print button (image:extracted-media/media/image67.png[Report_print.PNG,width=21,height=18]).
 
-_*[.underline]#NB#*: A PDF copy of every report is always saved within the folders of OpenHospital._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
+NOTE: _A PDF copy of every report is always saved within the folders of OpenHospital. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 <<<
 
@@ -1873,7 +1875,7 @@ _*[.underline]#NB#*: A PDF copy of every report is always saved within the folde
 
 This functionality is meant for print some information about the hospital like letterhead, list of exams, diseases, etc...
 
-.Click with the mouse on the button or press "Alt+R" to enter the *Printings Submenu*
+.Click with the mouse on the button or press "Alt + R" to enter the *Printings Submenu*
 [#12-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
@@ -1905,7 +1907,7 @@ This report will produce a report about the list of diseases, divided by types, 
 
 Since OpenHospital version 1.7 you can use the Communication module by changing the _XMPPMODULEENABLED_ flag in the configuration file. Ask to your Administrator how to do it or read the _Administrator’s Guide_.
 
-.Click with the mouse on the button or press "Alt+M" to enter the *Communication* window.
+.Click with the mouse on the button or press "Alt + M" to enter the *Communication* window.
 [#13-default-main-menu]
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
@@ -2028,9 +2030,6 @@ Once you’ve pressed on *[.underline]##T##ypes* button from the *_General Data_
 |image:extracted-media/media/image0_DefaultGeneralDataMenu.png[General Data Sub-Menu,width=185,height=527]|image:extracted-media/media/image0_DefaultGeneralDataTypesMenu.png[General Data Types Menu,width=235,height=707]
 |===
 
-
-
-
 From the *_Types_* menu you have the following functions available:
 
 * *[.underline]##A##dmission Type*: the way the patient is admitted in the hospital +
@@ -2106,7 +2105,7 @@ The functions available from this window (but similarly to other windows in *_Ty
 * *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Delivery Types defined in this functionality will be reflected in the Admission function (see link:#10_5_4_insertmodify_delivery_data in this document).
+The Delivery Types defined in this functionality will be reflected in the Admission function (see link:#10_5_4_insertmodify_delivery_data[Insert or Modify Delivery Data] in this document).
 
 ====  14.2.4 Delivery Result Types (Delive[.underline]##r##y Result Type)
 
@@ -2365,7 +2364,7 @@ In order to insert a new Ward, you must provide following compulsive inputs:
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
 
-_*[.underline]#NB#*: trough this function we may define some wards with 0 - zero beds but with pharmacy, in order to have “logic” departments (rather than physical) to manage pharmacy movements_
+NOTE: _through this function we may define some wards with 0 - zero beds but with pharmacy, in order to have “logic” departments (rather than physical) to manage pharmacy movements_
 
 The Wards defined in this functionality will be reflected in the entire application, like in Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see link:#10-admissionpatient-admissionpatient[Admission/Patient], link:#6-2-pharmaceutical-stock-pharmaceutical-stock[Pharmaceutical Stock] and link:#6-3-pharmaceuticals-stock-ward-pharmaceuticals-stock-ward[Pharmaceuticals Stock Ward] in this document).
 
@@ -2385,9 +2384,7 @@ The functions available from this window (but similarly to other windows in *_Ty
 
 By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window will appear as shown below:
 
-____
 image:extracted-media/media/image167.PNG[image,width=267,height=139]
-____
 
 In editing mode, you cannot change type and code but only modify the Description and specify if the disease should appear in OPD, Admissions or both.
 
@@ -2522,9 +2519,9 @@ The *_Prices Browser_* window shows the list of all prices in the selected price
 
 In order to modify a price just double-click on it and type the new price.
 
-_*[.underline]#NB#*: if a price has been defined as “undefined” (see link:#14-2-11-other-prices-other-prices[Other Prices]) it will look as 0 – zero and cannot be modified._
+NOTE: _If a price has been defined as “undefined” (see link:#14-2-11-other-prices-other-prices[Other Prices]) it will look as 0 – zero and cannot be modified._
 
-_*NB*: Exams, Operations and Medicals prices are automatically created as OPD, IPD, not “daily”, not “undefined”, not “discharge”; see link:#14-2-11-other-prices-other-prices[Other Prices] for more information._
+NOTE: _Exams, Operations and Medicals prices are automatically created as OPD, IPD, not “daily”, not “undefined”, not “discharge”; see link:#14-2-11-other-prices-other-prices[Other Prices] for more information._
 
 When all modifications have been made, you can store them permanently in the system by pressing *[.underline]##S##AVE* button. After some instants a confirmation message will inform you about the success of the operation:
 
@@ -2641,7 +2638,7 @@ In order to insert a new SMS, you must input the following data:
 
 Then click *[.underline]##O##K* to save the new SMS. If the scheduled data and time is now, the SMS is immediately sent.
 
-_*NB:* Sending SMS in OpenHospital require that the Gateway is well configured. You can use a GSM gateway or a WebApi Gateway. Ask your administrator how to do it or read the Administrator’s Guide._
+NOTE: _Sending SMS in OpenHospital require that the Gateway is well configured. You can use a GSM gateway or a WebApi Gateway. Ask your administrator how to do it or read the Administrator’s Guide._
 
 In order to delete a SMS, highlights it and click the *[.underline]##D##elete* button to delete the SMS.
 
