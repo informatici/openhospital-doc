@@ -32,6 +32,7 @@ This application software consists of the following parts:
 * Patient billing support
 * Therapy management
 * Internal communication
+* Appointments management
 * Statistics and printing
 
 This document describes how all the above-mentioned items work and gives you some suggestions on the correct use of the program.
@@ -59,7 +60,10 @@ In this document will be used following conventions:
 
 * Each button has always one letter with an underscore. You can select the functionality offered by the button pressing the “Alt” key and at the same time the “underscored” key (in the example of *[.underline]##P##harmacy* you have to press “Alt” and “P”)*.* This behaviour is common all over the application and allows the user to operate (almost) without the use of the mouse. In the entire document “Alt” key and the “P” key will be indicated as “Alt + P”.
 
-image:extracted-media/media/image2.png[../../Screen%20Shot%202019-07-26%20at%2015.14.49.png,width=599,height=434]
+.Click with the mouse on the button or press "Alt+P" to enter the *Pharmacy*
+[#3-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 * Each screen of the application is called “window”. Most complex windows of the application are composed by more than one area. Areas can be *Selection panel*, *Data table* and *Buttons panel* (see *_Laboratory browsing_* window below)
 
@@ -73,7 +77,10 @@ image:extracted-media/media/image4.png[../../Screen%20Shot%202019-07-26%20at%201
 
 After double-clicking the program icon on your desktop, you will see an information image (splash image) for a few seconds and then the main _menu_ of the OpenHospital application will appear.
 
-image:extracted-media/media/image5.png[image,width=192,height=390]
+.The default Main Menu when the application starts.
+[#4-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 From a menu you can get to another menu of deeper level, as in the example below. From the main *_menu_* you get the *_General data_* menu, or you can directly go in a function of the application (see the following example with the browser *_OPD Out Patient Department_*.
 
@@ -91,7 +98,10 @@ Out Patient Department functionalities allow to record Ambulatory Patient visits
 
 Click on *[.underline]##O##PD* button or press “Alt + O” in the main *_menu_* to access OPD function.
 
-image:extracted-media/media/image8.png[../../Screen%20Shot%202019-07-26%20at%2015.21.09.png,width=492,height=429]
+.Press *[.underline]##O##PD* button or “Alt + O”.
+[#5-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 === 5.2 Functions of Out Patient Department
 
@@ -206,7 +216,14 @@ The OPD Extended module affords the following improvements:
 
 By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharmacy menu. From this menu you have the following functions available: *[.underline]##P##harmaceuticals* and *[.underline]##P##harmaceuticals Stock*, *[.underline]##P##harmaceuticals Stock Ward.*
 
-image:extracted-media/media/image16.png[../../Screen%20Shot%202019-07-26%20at%2015.23.44.png,width=641,height=433]
+.Press *[.underline]##P##harmacy* button or “Alt + P” to open the Pharmacy Sub-Menu
+[frame=none]
+[grid=none]
+[caption="Sub Menu: "]
+|===
+|image:extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]|image:extracted-media/media/image16.png[Sub-Menu,width=256,height=212]
+|===
+
 
 _*[.underline]#NB#:* Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file**.** Ask to your Administrator how to do it or read the Administrator’s Guide._
 
@@ -589,7 +606,10 @@ Before to press the *[.underline]##O##K* button, you may insert as many Medicals
 
 With Laboratory’s features the user can manage the laboratory exams.
 
-image:extracted-media/media/image42.png[../../Screen%20Shot%202019-07-26%20at%2015.29.06.png,width=583,height=422]
+.Press *[.underline]##L##aboratory* button or “Alt + L”.
+[#7-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 It is possible to create, modify or delete exams.
 
@@ -749,7 +769,13 @@ Accounting is the function that you have to use to manage the billing process. Y
 
 Accounting function furthermore allows to manage the payment of bills (total or partial) and to produce reports.
 
-image:extracted-media/media/image52.png[../../Screen%20Shot%202019-07-26%20at%2015.31.03.png,width=641,height=464]
+.Press *A[.underline]##c##counting* button or “Alt + C” to open the Accounting Sub-Menu
+[frame=none]
+[grid=none]
+[caption="Sub Menu: "]
+|===
+|image:extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]|image:extracted-media/media/image52.png[Accounting Sub-Menu,width=185,height=167]
+|===
 
 === 8.2 Functions of Accounting
 
@@ -1009,7 +1035,10 @@ image:extracted-media/media/image69.png[../../Screen%20Shot%202019-07-26%20at%20
 
 Vaccines functionality allows managing vaccines for all the patients registered. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
 
-image:extracted-media/media/image70.png[../../Screen%20Shot%202019-07-26%20at%2015.36.39.png,width=642,height=548]
+.Click with the mouse on the button or press "Alt+V" to enter the *Patient Vaccines browsing* window
+[#9-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 === 9.2 Functions of Admission/Patients
 
@@ -1108,7 +1137,11 @@ The only difference is the new column about the name of the patient for a fast r
 
 Admission/Patient functionality allows registering a new patient, to modify his/her personal details, to browse his/her history, and to admit him/her in a hospital ward.
 
-image:extracted-media/media/image77.png[../../Screen%20Shot%202019-07-26%20at%2015.40.33.png,width=642,height=455]
+.Click with the mouse on the button or press "Alt+A" to enter the *Patient Browser* window
+[#10-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
+
 
 _*[.underline]#NB#*: you can also start an OPD registration from here if the OPDEXTENDED flag is set to YES. Ask to your Administrator how to do it or read the Administrator’s Guide._
 
@@ -1756,7 +1789,10 @@ image:extracted-media/media/image122.png[Admission Patient_merge_sex.PNG,width=2
 
 This functionality is the most important in order to extract data registered in previous ones.
 
-image:extracted-media/media/image123.png[../../Screen%20Shot%202019-07-26%20at%2015.49.23.png,width=642,height=520]
+.Click with the mouse on the button or press "Alt+T" to enter the *Statistics Report Launcher*
+[#11-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 OpenHospital comes with a set of reports made for the Ugandan Ministry of Health (HMIS) and for Kenyan Ministry of Health (MOH) as well as national independent reports (OH). Anyway, all these reports can be useful for any organization and can be added or removed as explained in the Admin Manual chapter “6 – Reports”.
 
@@ -1819,9 +1855,12 @@ _*[.underline]#NB#*: A PDF copy of every report is always saved within the folde
 
 This functionality is meant for print some information about the hospital like letterhead, list of exams, diseases, etc...
 
-image:extracted-media/media/image126.png[../../Screen%20Shot%202019-07-26%20at%2015.50.13.png,width=642,height=387]
+.Click with the mouse on the button or press "Alt+R" to enter the *Printings Submenu*
+[#12-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-OpenHospital 1.7.0 comes at moment only with this couple of printings:
+OpenHospital comes, at moment, with only this couple of printings:
 
 * Exams List
 * Diseases List
@@ -1846,7 +1885,10 @@ This report will produce a report about the list of diseases, divided by types, 
 
 Since OpenHospital version 1.7 you can use the Communication module by changing the _XMPPMODULEENABLED_ flag in the configuration file. Ask to your Administrator how to do it or read the _Administrator’s Guide_.
 
-image:extracted-media/media/image128.png[../../Screen%20Shot%202019-07-26%20at%2015.54.29.png,width=642,height=378]
+.Click with the mouse on the button or press "Alt+M" to enter the *Communication* window.
+[#13-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 With this functionality you can chat and share information with other users logged in the system, if in turn the application has been set in [.underline]#multi-user# mode and an [.underline]#XMPP Server# is active and running (Ask to your Administrator how to do it or read the _Administrator’s Guide)._
 
@@ -1931,7 +1973,13 @@ image:extracted-media/media/image137.png[Communication_reports_allan.PNG,width=3
 
 One of the Administration task is the setup of OpenHospital through the *[.underline]##G##eneral Data* functionality. It allows defining all “types” and “data” that are going to be used in OpenHospital.
 
-image:extracted-media/media/image138.png[../../Screen%20Shot%202019-07-26%20at%2016.00.18.png,width=642,height=418]
+.Press *[.underline]##G##eneral Data* button or “Alt + G” to open the General Data Sub-Menu
+[frame=none]
+[grid=none]
+[caption="Sub Menu: "]
+|===
+|image:extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]|image:extracted-media/media/image0_DefaultGeneralDataMenu.png[Sub-Menu,width=185,height=527]
+|===
 
 Once you’ve pressed on *[.underline]##G##eneral Data* button from the main menu you access the *_General Data_* menu. From this menu you have the following functions available:
 
@@ -1950,7 +1998,16 @@ Once you’ve pressed on *[.underline]##G##eneral Data* button from the main men
 
 Once you’ve pressed on *[.underline]##T##ypes* button from the *_General Data_* menu you access the *_Types_* menu:
 
-image:extracted-media/media/image139.png[../../Screen%20Shot%202019-07-26%20at%2016.00.55.png,width=642,height=412]
+.Press *[.underline]##T##ypes* button or “Alt + T” to open the Types Menu
+[frame=none]
+[grid=none]
+[caption="General Data Menu: "]
+|===
+|image:extracted-media/media/image0_DefaultGeneralDataMenu.png[General Data Sub-Menu,width=185,height=527]|image:extracted-media/media/image0_DefaultGeneralDataTypesMenu.png[General Data Types Menu,width=235,height=707]
+|===
+
+
+
 
 From the *_Types_* menu you have the following functions available:
 
