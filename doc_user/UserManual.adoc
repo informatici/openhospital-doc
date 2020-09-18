@@ -1748,7 +1748,7 @@ Press *[.underline]##O##K* to finish.
 
 Close function allows you to exit from the *_Therapy window._* Press the *Close* button to access the Close function. The *_Select an option_* *_window_* showed below appears. On the *Button panels* you have the following choices:
 
-* *[.underline]##S##i:* this function is the same as the *Save function ([.underline]##S##AVE)* described above
+* *[.underline]##Y##es:* this function is the same as the *Save function ([.underline]##S##AVE)* described above
 * *[.underline]##N##o* to return to the *_Therapy window_* without saving the therapy plan
 * *[.underline]#Cancel#:* to stop the function and return to the *_Therapy window_* without apply any change
 
@@ -1756,10 +1756,33 @@ image:extracted-media/media/image117.png[image,width=379,height=128]
 
 ==== 10.10.7 Notify & SMS 
 
-image:extracted-media/media/image118.png[image,width=170,height=131]With these two checkboxes you can set the therapies plan for this patient as important (not implemented yet) and notifiable via SMS. Briefly:
+image:extracted-media/media/image118.png[image,width=170,height=131]
+
+With these two checkboxes you can set the therapies plan for this patient as important (not implemented yet) and notifiable via SMS. Briefly:
 
 * therapies: will be notified to the patient with an SMS at 8:00am, with text “REMINDER: “ + therapy details
-* visits: will be notified to the patient with an SMS 24 hours before the scheduled date and time, with the text “REMINDER VISIT: “ + visit details
+* visits: will be notified to the patient with an SMS 24 hours before the scheduled date and time, with the text “REMINDER VISIT: “ + visit details (see <<_14_11_sms_manager_sms_manager>>)
+
+==== 10.10.8 Visits
+
+ 
+By clicking on *Add [.underline]#V#isit* button, the following window will appear
+
+image:extracted-media/media/image118b.png[image,width=300,height=150]
+
+The patient is already selected, while other fields need to be set:
+
+* *Ward:* to specify the ward where the patient has to be received (it will be shown in the Worksheet, see <<_16_worksheet_worksheet>>)
+* *Service:* a brief description of the service that will be provided to the patient (optional)
+* *Duration (Min):* the estimated duration of the service that will be provided (optional)
+* *Date and Time:* the date and the time for the appointment
+
+Press *[.underline]##O##K* to save the appointment and it will be shown in the calendar, along with the therapies.
+
+image:extracted-media/media/image118c.png[image,width=600,height=302]
+
+TIP: _If you like, you could first consult the actual worksheet by pressing the *Worksheet* button, then the instructions are the same as in <<_16_worksheet_worksheet>>, with the only difference that the patient is already selected and fixed (cannot be changed in this operation)_
+
 
 === 10.11 Merge function ([.underline]##M##erge)
 
@@ -2613,6 +2636,10 @@ In order to delete a Supplier, in the *_Supplier browser_* highlights the Suppli
 
 === 14.11 SMS Manager ([.underline]#SMS Manager#)
 
+WARNING: _SMS pricing depend by the SMS Provider (GSM or HTTP) and are not related to this software!_
+
+NOTE: _Sending SMS in OpenHospital require that the Gateway is well configured. You can use a GSM gateway or a WebApi Gateway. Ask your administrator how to do it or read the Administrator’s Guide._
+
 Once you’ve pressed on *SMS Manager* button from the *_General Data_* menu you access the *_SMS Manager_* window as showed below:
 
 image:extracted-media/media/image184.png[Prices Browser.PNG,width=438,height=327]
@@ -2637,8 +2664,6 @@ In order to insert a new SMS, you must input the following data:
 * *SMS*: type the SMS in the white space bellow
 
 Then click *[.underline]##O##K* to save the new SMS. If the scheduled data and time is now, the SMS is immediately sent.
-
-NOTE: _Sending SMS in OpenHospital require that the Gateway is well configured. You can use a GSM gateway or a WebApi Gateway. Ask your administrator how to do it or read the Administrator’s Guide._
 
 In order to delete a SMS, highlights it and click the *[.underline]##D##elete* button to delete the SMS.
 
@@ -2719,7 +2744,40 @@ In editing mode, you cannot change the type (group) and the name but only the pa
 Each user is so identified by a name, a description and a *password* that can be modified in any moment by the Administrator.
 
 <<<
-== 16 License
+
+== 16 Worksheet ([.underline]##W##orksheet)
+
+Since OpenHospital *v1.11* a new feature called *Worksheet* allows to manage and print the list of appointments scheduled to date.
+
+.Click with the mouse on the button or press "Alt + W" to enter the *Worksheet* page
+[#16-default-main-menu]
+[caption="Main Menu: "]
+image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
+
+The _Worksheet_ module works by Ward (Department) so you will be asket to select one first
+
+image:extracted-media/media/image245.png[image,width=600,height=265]
+
+Once selected the ward (it is possible to switch to another ward at anytime), a two-sides agenda will be shown with the appointments/services scheduled for today (on the left) and for tomorrow (on the right)
+
+image:extracted-media/media/image246.png[image,width=600,height=265]
+
+It is possible to select another date with the *Go to date* field, and reset back to today with the button *Today*. 
+In any case, the window will _[.underline]#always#_ show a choosen date on the left and its following day on the right.
+
+The functions available from this window are:
+
+* *Add visit*: to schedule a new visit for a specific date (on the left or on the right) 
+* *Print this day's visits*: to print the specific date scheduled visits
+* *[.underline]##N##ext->*: to see one day after
+* *<-[.underline]##P##rev*: to browse one day before
+* *[.underline]##C##lose*: to close the window
+
+TIP: _To schedule a visit can be done also from *Therapy Management* module, see <<_10_10_therapy_management_therapy>>
+
+<<<
+
+== 17 License
 
 image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#User's Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
