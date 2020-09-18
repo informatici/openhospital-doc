@@ -90,6 +90,8 @@ or you can directly go in a function of the application, as following example:
 
 image:extracted-media/media/image7.png[../../Screen%20Shot%202019-07-26%20at%2015.20.05.png,width=649,height=374]
 
+<<<
+
 == 5 Outpatient Department Management ([.underline]##O##PD)
 
 === 5.1 Main Characteristics
@@ -211,6 +213,8 @@ The OPD Extended module affords the following improvements:
 * in case the selected patient needs to update his/her personal data, you can do it by clicking on the Edit icon image:extracted-media/media/image15.png[edit_button.png,width=26,height=26] near his/her name; a new window will appear with the patient personal information to let you change them;
 * in case the patient is not yet registered, the *_<new patient>_* entry can be selected to let you register the new patient; after registration you will be direct back to the OPD window and the new patient will be selected.
 * If the user is enabled by the admin (see *_15._* *_Users & Groups_* ([.underline]#File# -> _[.underline]#Users#_)), you will see also the “Examination” button function (see *_10.5.2_* *Patient examination*)
+
+<<<
 
 == 6 Pharmacy ([.underline]##P##harmacy)
 
@@ -503,6 +507,8 @@ Click *Save* button to save the discharge movement.
 
 _*[.underline]#NB#*: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date. If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
+<<<
+
 === 6.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
 
 ==== 6.3.1 Main Characteristics
@@ -599,6 +605,8 @@ If _AUTOMATICLOTWARD_TOWARD_ has been enabled the user will be requested to sele
 _*[.underline]#NB#*: The Lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD_ in configuration file, so every new discharging movement will automatically select a suitable lot for the operation according to the expiring date (FEFO). If the first selected lot is does not contain enough quantity to serve the discharging movement, several discharging movements may be generated if  the quantity laying in other lots can suite the request._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
 Before to press the *[.underline]##O##K* button, you may insert as many Medicals you need, it will show a correspondent number of movements in the *Outcomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window. These movements will also be visible in the *Incomes* tab of the *Movement Panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
+
+<<<
 
 == 7 Laboratory ([.underline]##L##aboratory)
 
@@ -760,6 +768,8 @@ To record the visit, enter the following fields:
 * *Note*: exam reporting (different for each exam)
 
 _*[.underline]#NB#*: At any time, before to press OK, you can modify every exam by clicking it on the list and changing material, results and note in the relative panels._
+
+<<<
 
 == 8 Accounting (A[.underline]##c##counting)
 
@@ -1029,6 +1039,8 @@ While the admin user will be able to filter all incomes among all users that hav
 
 image:extracted-media/media/image69.png[../../Screen%20Shot%202019-07-26%20at%2015.35.27.png,width=521,height=334]
 
+<<<
+
 == 9 Vaccines (Patient [.underline]##V##accines)
 
 === 9.1 Main Characteristics
@@ -1130,6 +1142,8 @@ The new window will appear like the following:
 image:extracted-media/media/image76.png[Patient Vaccine Browser Extended.PNG,width=642,height=254]
 
 The only difference is the new column about the name of the patient for a fast research.
+
+<<<
 
 == 10 Admission/Patient ([.underline]##A##dmission/Patient)
 
@@ -1783,6 +1797,8 @@ In case you try to merge two patients with different sex you will be notice that
 
 image:extracted-media/media/image122.png[Admission Patient_merge_sex.PNG,width=277,height=118]
 
+<<<
+
 == 11 Statistics (S[.underline]##t##atistics)
 
 === 11.1 Main Characteristics
@@ -1849,6 +1865,8 @@ You can save the report as PDF by clicking on save button (image:extracted-media
 
 _*[.underline]#NB#*: A PDF copy of every report is always saved within the folders of OpenHospital._ _Ask to your Administrator how to do it or read the Administrator’s Guide._
 
+<<<
+
 == 12 Printing (P[.underline]##r##inting)
 
 === 12.1 Main Characteristics
@@ -1878,6 +1896,8 @@ This report will produce a report about the list of exams, divided by types, as 
 ====  12.2.2 Disease List ([.underline]##D##isease List)
 
 This report will produce a report about the list of diseases, divided by types, as defined in the application by the Administrator.
+
+<<<
 
 == 13 Communication (Co[.underline]##m##munication)
 
@@ -1966,6 +1986,8 @@ We can decide to produce and share the selected report with another user logged 
 If we choose to share the report with user Allan, when we press the *Launch Report* button, he will see in his *_Communication_* window a message like “*** admin wants to share with you this report:” followed by the report name and a clickable icon that will link Allan to the related report. An example of this message is shown below:
 
 image:extracted-media/media/image137.png[Communication_reports_allan.PNG,width=377,height=284]
+
+<<<
 
 == 14 General Data ([.underline]##G##eneral Data)
 
