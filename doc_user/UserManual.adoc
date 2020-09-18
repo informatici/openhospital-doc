@@ -2679,9 +2679,7 @@ The functions available from this window are:
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window will appear as shown below:
 
-____
 image:extracted-media/media/image190.png[image,width=280,height=350]
-____
 
 The window shows the full set of function of OpenHospital in a tree format:
 
@@ -2717,9 +2715,7 @@ The functions available from this window are:
 
 By pressing the *[.underline]##E##dit* button, the *_Editing user record_* window will appear as shown below:
 
-____
 image:extracted-media/media/image198.png[image,width=305,height=309]
-____
 
 In editing mode, you cannot change the type (group) and the name but only the password, that is in visible in this window.
 
