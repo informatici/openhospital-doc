@@ -865,7 +865,7 @@ Then you have to select a patient. To do it, press the *find [.underline]##P##at
 
 Once you have selected the patient you can start to enter bill entries of the bill.
 
-NOTE: _A patient can have severals pending bills if only if the the parameter ALLOWMULTIPLEOPENEDBILL is enabled (see the administrator manual). Else If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
+NOTE: _A patient can have several pending bills if only if the parameter ALLOWMULTIPLEOPENEDBILL is enabled (see the administrator manual). Else If the patient has a pending bill associated it will be recalled to edit it. You cannot start a new bill for a patient before to close the previous one._
 
 There are several types of Bill entry. They are identified by the button on the *Buttons panel* on the right of the window; you have the following choices:
 
@@ -1232,7 +1232,7 @@ Initially the list looks empty. In order to show some patient, you must enter a 
 
 image:extracted-media/media/image82.png[image,width=628,height=319]
 
-Moreover, further search criterions are added in this modality:
+Moreover, further search criteria are added in this modality:
 
 * *Admission date.* To search all patients admitted in between the specified date, regardless if still admitted or not
 * *Discharge date.* To search all patients discharged in between the specified date, regardless if admitted again later on
@@ -1623,7 +1623,7 @@ In case of multi-frame DICOM you can select a whole folder
 
 image:extracted-media/media/image106b.png[Dicom open multi-frame.PNG,width=517,height=366]
 
-You will be asked for the following data to be used for the DICOM (or the multi-frame DICOM serie):
+You will be asked for the following data to be used for the DICOM (or the multi-frame DICOM series):
 
 * *Date*: the system will propose the current date or other dates provided by the DICOM file itself
 * *Category (not mandatory)*: you will be asked for a Dicom category (see link:#14-2-14-dicom-types-dicom-type[Dicom Type]):
@@ -2754,7 +2754,7 @@ Since OpenHospital *v1.11* a new feature called *Worksheet* allows to manage and
 [caption="Main Menu: "]
 image::extracted-media/media/image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-The _Worksheet_ module works by Ward (Department) so you will be asket to select one first
+The _Worksheet_ module works by Ward (Department) so you will be asked to select one first
 
 image:extracted-media/media/image245.png[image,width=600,height=265]
 
@@ -2763,7 +2763,7 @@ Once selected the ward (it is possible to switch to another ward at anytime), a 
 image:extracted-media/media/image246.png[image,width=600,height=265]
 
 It is possible to select another date with the *Go to date* field, and reset back to today with the button *Today*. 
-In any case, the window will _[.underline]#always#_ show a choosen date on the left and its following day on the right.
+In any case, the window will _[.underline]#always#_ show a chosen date on the left and its following day on the right.
 
 The functions available from this window are:
 
