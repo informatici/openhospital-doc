@@ -1,16 +1,25 @@
-# openhospital-doc
-Documentation in Asciidoc of project https://github.com/informatici/openhospital
+# Open Hospital - Doc
 
-## to generate PDF from adoc files (you need Ruby 2.3 or greater) 
+This project contains the administrator and user documentation of the [Open Hospital][openhospital] project in Asciidoc format.
 
-* Install the right plugin in order to obtain pdf files:
+## How to build
 
-        gem install asciidoctor-pdf --pre
- 
-* Convert file from .adoc to .pdf using this command:
+To build the documentation you'll need Ruby 2.3+, `asciidoctor` and `asciidoctor-pdf`, which you can install through `gem` with `gem install asciidoctor-pdf --pre`.  
 
-        asciidoctor-pdf nomeFile.adoc [-o path/to/nomeFile.pdf]
+To create PDF documentation issue:
 
-* Convert file from .adoc to .html using this command: 
+    asciidoctor-pdf nomeFile.adoc [-o path/to/nomeFile.pdf]
+    
+To create HTML documentation issue:
 
-        asciidoctor nomeFile.adoc
+    asciidoctor nomeFile.adoc
+
+## How to contribute
+
+You can find the contribution guidelines in the [Open Hospital wiki][contribution-guide].  
+A list of open issues is available on [Jira][jira].
+
+ [openhospital]: https://www.open-hospital.org/
+ [contribution-guide]: https://openhospital.atlassian.net/wiki/display/OH/Contribution+Guidelines
+ [jira]: https://openhospital.atlassian.net/issues/
+ [database.prop]: https://github.com/informatici/openhospital-core/blob/develop/src/test/resources/database.properties
