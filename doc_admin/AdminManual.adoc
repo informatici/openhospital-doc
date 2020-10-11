@@ -1345,7 +1345,6 @@ In order to create a new translation or to fix some labels in the OpenHospital i
 
 For instance, if you want to create an Arab translation, you may create a new bundle from the English one, by copying _language_en.properties_ into a *new file* _language_ar.properties_.
 
-
 Then you can edit the Arab file and set the LANGUAGE parameter to *ar* to start testing your translation.[#_Users_and_Groups .anchor]##
 
 == 6 Reports
@@ -1362,17 +1361,21 @@ The Jasper editor to create and modify Jasper reports is iReport®, a free and o
 
 With iReport® is possible to edit OpenHospital reports and re-compile them in order to be used in OpenHospital application.
 
-=== 6.1 Compatibility: iReport® 3.0.0
+=== 6.1 Compatibility: JasperStudio 6.14.0 and iReport® 3.0.0
 
-In order to have compliant and fully-working reports for OpenHospital we suggest to use iReport® version 3.0.0 (Classic).
+_*Warning*_: since version v1.11, OpenHospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or greater.
+
+For previous OpenHospital's versions, in order to have compliant and fully-working reports for OpenHospital you must use iReport® version 3.0.0 (Classic) to edit and compile them.
 
 === 6.2 Links
 
-JasperReports® - http://www.jaspersoft.com/
+TIBCO JasperReports® - http://www.jaspersoft.com/
 
-iReport® - http://community.jaspersoft.com/project/ireport-designer
+JasperStudio - https://sourceforge.net/projects/jasperstudio/
 
-iReport® 3.0.0 (Classic) - http://sourceforge.net/projects/ireport/files/iReport%20(classic)/
+iReport® 5.6.0 - https://sourceforge.net/projects/ireport/files/iReport/
+
+iReport® 3.0.0 (Classic) - https://sourceforge.net/projects/ireport/files/iReport%20%28classic%29/[http://sourceforge.net/projects/ireport/files/iReport (classic)/]
 
 == 7 Installing OpenHospital 1.11.0 in Eclipse EE
 
