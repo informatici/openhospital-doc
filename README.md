@@ -1,21 +1,21 @@
-# Open Hospital - Doc
+# Open Hospital - Documentation
 
-This project contains the administrator and user documentation of the [Open Hospital][openhospital] project in Asciidoc format.
+This project contains the administrator and user documentation of the [Open Hospital][openhospital] project in [AsciiDoc][asciidoc] format.
 
 - [Admin Manual][adminmanual] (`doc_admin/AdminManual.adoc`)
 - [User Manual][usermanual] (`doc_user/UserManual.adoc`)
 
 ## How to build
 
-To build the documentation you'll need Ruby 2.3+, `asciidoctor` and `asciidoctor-pdf`, which you can install through `gem` with `gem install asciidoctor-pdf --pre`.  
+To build the documentation you will need [Ruby][ruby] 2.3+, `asciidoctor` and `asciidoctor-pdf`, which you can install through `gem` with `gem install asciidoctor-pdf --pre`.  
 
-To create PDF documentation issue:
+To create PDF documentation issue the command:
 
-    asciidoctor-pdf nomeFile.adoc [-o path/to/nomeFile.pdf]
+    asciidoctor-pdf fileName.adoc [-o path/to/fileName.pdf]
     
-To create HTML documentation issue:
+To create HTML documentation issue the command
 
-    asciidoctor nomeFile.adoc
+    asciidoctor fileName.adoc
 
 ## How to contribute
 
@@ -27,3 +27,5 @@ A list of open issues is available on [Jira][jira].
  [usermanual]: https://github.com/informatici/openhospital-doc/tree/develop/doc_user
  [contribution-guide]: https://openhospital.atlassian.net/wiki/display/OH/Contribution+Guidelines
  [jira]: https://openhospital.atlassian.net/issues/
+ [asciidoc]: https://asciidoc.org/
+ [ruby]: https://www.ruby-lang.org/en/
