@@ -7,21 +7,23 @@
 :url-gem: https://rubygems.org/gems/asciidoctor
 :xlmnsBySa: http://purl.org/dc/terms/
 :docTitleBySa: dct:title
+:imagesdir: extracted-media/media/
 
+<<<
 
-image:extracted-media/media/image1.jpeg[image,width=390,height=298]
+image:image1.jpeg[image,width=390,height=298]
 
-image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
 
-== 1 .Abstract
+== 1 Abstract
 
-This application is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the management and the activities of the St. Luke Hospital in Angal (Uganda). After that mission, the St. Luke Hospital has become only the first one of a long list of hospitals that found this software useful.
+This application is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the management and the activities of the St. Luke Hospital in Angal (Uganda). After that initial mission, the St. Luke Hospital has become the first one of a long list of hospitals that have found this software useful.
 
-All the work was realized as an open-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] project using only open-source development software.
+All the work on this software is done as an open-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] project using only open-source development software.
 
 This application software consists of the following parts:
 
@@ -37,74 +39,84 @@ This application software consists of the following parts:
 * Internal communication
 * Statistics and printing
 
-This document describes how to install the application and how to configure it in your environment, enabling and disabling functionalities as well as manage users.
+This document describes how to install the application and how to configure it in your environment.  This includes enabling and disabling functionality as well as managing users.
 
-The reader will not find in this manual the information he needs for the use of the application software; to have such information you should consult our _User’s Guide_, supplied with the application software.
+The reader of this manual will not find the information one needs to use the application software; that information is found in our _User’s Guide_, supplied with the application software.
 
-== 2. Introduction
+<<<
 
-The aim of this program is to manage, in the simplest manner, the hospital administrative operations like registering patients and laboratory analysis, and to produce statistics for the health ministry. In the following chapters the users will find all the information they need in order to use properly the program.
+== 2 Introduction
 
-== 3. Installation
+The aim of this program is to manage, in the simplest manner, the hospital administrative operations like registering patients and laboratory analysis, and to produce statistics for the health ministry. In the following chapters one will find all the information needed to use the software properly.
 
-=== 3.1 OpenHospital
+<<<
 
-OpenHospital is a stand-alone Java software that does not require installation. The .zip file can be copied and moved everywhere in your system, whether it is Windows or Linux.
+== 3 Installation
 
-It acts like a client application. The server part is carried out by the DBMS (Database Management System) that is, from its first version, the free and open-source MySQL.
+=== 3.1 Open Hospital
 
-The real part of the installation it concerns the JRE installation, the MySQL Server and the creation of the DB, which is done through the execution of a script in the folder mysql/ within the .zip file folders.
+Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of Oracle and/or its affiliates.] software program that does not require installation and is often known as a portable installation. The .zip file can be copied and moved everywhere in your system, whether it is Windows or Linux.
+
+The software acts like a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
+
+The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB).  This installation is accomplished through the execution of a script in the folder mysql/ within the .zip file folders.
 
 The classic installation schema in a regular wired LAN network is shown in the follow figure:
 
-image:extracted-media/media/image3.png[image,width=642,height=243]
+image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
+WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
 
+TIP: If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
-* [line-through]#Install the Java Runtime Environment 1.6 or higher (1.6 is recommended for fully compliance, and it’s the only one that supports high dpi monitors)#
-* Install the MySQL server on a computer that will act as the OH “server” part
-* Copy the OpenHospital application on every client (it may be used on the server too)
-* Configure each OpenHospital copy to point the server (using the hostname or the IP address)
+* Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for fully compliance)
+* Install the MySQL server on a computer that will act as the OH “server”
+* Copy the Open Hospital application on every client (it may be used on the server too)
+* Configure each Open Hospital copy to point the server (using the hostname or the IP address)
 
-For Java Runtime Environment installation refer to next chapter link:#3-1-1-java-runtime-environment[Java Runtime Environment] and to online documentation.
+For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
+and to online documentation.
 
-For MySQL installation and DB creation refer to chapter link:#3-1-2-mysql-server-and-openhospital-db[MySQL Server and OH DB] and to online documentation.
+For the MySQL installation and DB creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and to online documentation.
 
-For OpenHospital installation on every client, as told, is enough to copy and extract the zip file.
+For the Open Hospital installation on every client, it is enough to copy and extract the zip file on the machine.
 
-For OpenHospital configuration refer to chapter link:#5-configuration-files[Configuration files].
+For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
+[#jre]
 ==== 3.1.1 Java Runtime Environment
 
-Depending on the operating system you have, there are different ways to install a Java Virtual Machine and the Java Runtime Environment.
+Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment.
 
-For instance, on a Microsoft Windows® system you have to download and execute a setup file, while in Linux based systems you have to type only one command in a terminal.
+For instance, on a Microsoft Windows® system you have to download and execute a setup file, while on Linux based systems you have to type only one command in a terminal.
 
-*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
+WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
 
-*_NB:_* _OpenHospital v1.10 or lesser, require a JRE 1.6 or higher to work properly. Anyway, at the time of writing this document, *only JRE 1.6 32bit* has been tested and it is fully compliant with all OpenHospital features, especially the ones hardware related (such as Webcam and SMS)._
+TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
-==== 3.1.2 MySQL Server and OpenHospital DB
+NOTE: Open Hospital v1.10 or earlier versions require a JRE 1.6 to work properly. At the time of the writing of this document, *only JRE 1.6 32bit* has been tested and it is fully compliant with all Open Hospital features, especially the hardware related features (such as Webcam and SMS).
 
-Depending on the operating system you have, there are several software to download to install and manage a MySQL server. In most cases it will consist to download a standard installation file of the software, with some aspects to pay attention during the installation process.
+[#mysql-server]
+==== 3.1.2 MySQL Server and Open Hospital DB
 
-For instance, on a Microsoft Windows® system you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks or still MySQL Workbench on new distros.
+Depending on the operating system you have, there are several pieces of software to download to install and manage a MySQL server. In most cases one downloads a standard installation file of the software, paying attention to configuration options during the installation process.
 
-Anyway, the best approach for installation is to use the command-line mysql client which come up with essentially the same commands and syntax for every platform.
+For instance, on a Microsoft Windows® system you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks.  Some of the newer distributions (distros) have MySQL Workbench.
 
-image:extracted-media/media/image8.png[image,width=645,height=40]
+The best approach for installation is to use the command-line mysql client which uses essentially the same commands and syntax for every platform.
+
+NOTE: The DB creation and the software itself are  only tested with MySQL Server 5.0.x.  Any other version may have problems during the DB creation process.
 
 ===== 3.1.2.1 MySQL Server installation
 
-For the download and installation of a MySQL Server on your server machine we invite you to refer to latest online documentation at the moment of reading this document.
+Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://www.mysql.com/downloads/] and installationfootnote:[https://dev.mysql.com/doc/] information as you continue reading this document.
 
-Anyway, the main aspects the Administrator have to pay attention are:
+Generally, the main aspects the Administrator has to pay attention to are:
 
-* *on a Linux machine*: during the installation it will asked for a “root” password; very important to choose it carefully and to keep it safely in an installation document. If the password is not asked during installation an empty password will be automatically set for the root user.
-* *on a Windows machine*: during the installation it will asked for several configuration options; the best configuration will be (it could differ a bit):
+* *on a Linux machine*: during the installation it will ask for a “root” password; it is very important to choose it carefully and to keep it safely in an installation document. If the password is not prompted for during installation an empty password will be automatically set for the root user.
+* *on a Windows machine*: during the installation it will ask for several configuration options; the best configuration is (it options could differ a bit):
 
 * *Custom Installation*
 * Install all components except Developer ones
@@ -118,7 +130,7 @@ Anyway, the main aspects the Administrator have to pay attention are:
 * Select *Include Bin Directory In Windows PATH*
 * Select *Modify Security Settings*, choose the *root password* and write it down in an installation document
 
-Once the installation has been completed, we are ready for the OpenHospital DB creation. To check if the server is active and running, we can open a terminal window (command prompt) and type the following command:
+Once the installation has been completed, the next stop is the Open Hospital DB creation. To check if the server is active and running,  open a terminal window (command prompt) and type the following command:
 
 *# mysql –u root -p*
 
@@ -128,164 +140,220 @@ The terminal should reply with the MySQL client command line prompt:
 
 *mysql>*
 
-that means that we successfully connected to MySQL Server just installed with the root user and it is waiting for our commands.
+The prompt means there is a successful connection to the MySQL Server instance that was just installed as evidenced by it waiting for commands to execute.
 
-image:extracted-media/media/image9.png[image,width=645,height=113]
+NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command.  If this is the case you can add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
 ====== 3.1.2.1.1 Networking
 
-_On Linux systems, MySQL server must be configured to be enabled in networking; this can be achieved by changing its config file “my.cnf” and commenting out this parameter:_
+On Linux systems, MySQL server must be configured to enable networking; this can be achieved by changing MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
 
-image:extracted-media/media/image10.png[image,width=646,height=62]
+Change:
+[source,properties]
+----
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+bind-address               = 127.0.0.1
+----
 
-_to_
-
-image:extracted-media/media/image11.png[image,width=646,height=62]
+To:
+[source,properties]
+----
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+#bind-address               = 127.0.0.1
+----
 
 ====== 3.1.2.1.2 Performances
 
-_More performance in production environment can be achieved by changing following parameters in MySQL config file “my.cnf”:_
+Improved performance in a production environment can be achieved by changing following parameters in the MySQL config file, “my.cnf”:
 
-image:extracted-media/media/image12.png[image,width=646,height=85]
+Change:
+[source,properties]
+----
+#
+# Query Cache Configuration
+#
+query-cache_limit = 1M
+query-cache_size = 16M
+----
 
-_to_
+To:
+[source,properties]
+----
+#
+# Query Cache Configuration
+#
+query-cache_limit = 11M
+query-cache_size = 256M
+----
 
-image:extracted-media/media/image13.png[image,width=646,height=85]
+====== 3.1.2.1.3 Table name cases ([.underline]#before creating the DB#)
 
-====== 3.1.2.1.3 Table name cases ([.underline]#before to create the DB#)
+MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
 
-_In the time the software has been developed by the community concerning less the underlying OS used by each developer. MySQL is case-sensitive on Unix platforms and case-insensitive on Microsoft ones, so some scripts working on Windows may not work on Linux._
+For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in http://dev.mysql.com/doc/refman/5.0/en/identifier-case-sensitivity.html_
 
-_For this reason, if the DB have to be shared between different systems it could be advisable to change following parameter in MySQL config file “my.cnf” of each system, as in http://dev.mysql.com/doc/refman/5.0/en/identifier-case-sensitivity.html_
+===== 3.1.2.2 Create Open Hospital DB
 
-===== 3.1.2.2 Create OpenHospital DB
+In order to create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder mysql/.
 
-In order to create the OpenHospital database everything we need is the set of SQL script files contained in the OpenHospital ([.underline]#non-portable#) zip file in the folder mysql/.
-
-If we specified to *Include Bin Directory In Windows PATH* during the installation process (in Linux is always true) we can run the MySQL client everywhere in our system, otherwise go back to that chapter and read the *_NB_* note in the box.
+If the *Include Bin Directory In Windows PATH* is selected during the installation process (in Linux is always true) we can run the MySQL client everywhere in our system, otherwise go back to that chapter and read the *NOTE* note in the box.
 
 Open a terminal in the folder mysql/ (e.g.):
 
-*C:\WINDOWS\system32> cd D:\OpenHospital_1_8_3\mysql*
+[source,shell]
+----
+C:\WINDOWS\system32> cd D:\OpenHospital_1_8_3\mysql
 
-*D:\OpenHospital_1_8_3\mysql>*
+D:\OpenHospital_1_8_3\mysql>
+----
 
-and run the following commands (e.g.):
+and run the following command (e.g.):
 
-*D:\OpenHospital_1_8_3\mysql> mysql –u root -p*
-
-*Enter password: *****
+[source,shell]
+----
+D:\OpenHospital_1_8_3\mysql> mysql –u root -p
+Enter password: *****
+----
 
 Using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
 
-*mysql>*
+[source,shell]
+----
+mysql>
+----
 
-We launch the main script “create_all_en.sql” with the command:
+Next launch the main script “create_all_en.sql” with the command:
 
-*mysql> source create_all_en.sql*
+[source,shell]
+----
+mysql> source create_all_en.sql
+----
 
-image:extracted-media/media/image15.png[image,width=645,height=40]
+NOTE: Since version 1.8.0 you may install with different language data sets by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
 
-image:extracted-media/media/image16.png[image,width=645,height=70]
+NOTE: If the error "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
+client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
 
-The server starts to process the scripts and after some instants it will be ready again for new prompt. The DB has been created and we can check it with command:
+The server processes the create script and after some time it is ready again for new prompt. At this point the DB has been
+created and we can check it with command:
 
-`mysql> show databases;`
-`+--------------------+`
-`| Database           |`
-`+--------------------+`
-`| information_schema |`
-`| mysql              |`
-`| oh                 |`
-`| performance_schema |`
-`+--------------------+`
+[source, shell]
+----
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| oh                 |
+| performance_schema |
++--------------------+
+----
 
-The script has created the structure of the DB, populated with some default data and created the “isf” user with password “isf123”.
+The script created the the DB, populated it with some default data and created the “isf” user with password “isf123”.
 
-The ‘isf’ user, different from the ‘root’ one, is the user that the OpenHospital software will use to connect to the DB and its password can be changed at any time with the command:
+The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password can be changed at any time with the command:
 
-*mysql>SET PASSWORD FOR isf'@'%' = PASSWORD('new-password-here');*
+[source, shell]
+----
+mysql>SET PASSWORD FOR isf'@'%' = PASSWORD('new-password-here');
 
-*Query OK, 1 row affected (0.00 sec)*
+Query OK, 1 row affected (0.00 sec)
 
-*Rows matched: 1 Changed: 1 Warnings: 0*
+Rows matched: 1 Changed: 1 Warnings: 0
+----
 
 And then:
 
-*mysql>FLUSH PRIVILEGES;*
+[source, shell]
+----
+mysql>FLUSH PRIVILEGES;
 
-*Query OK, 0 rows affected (0.00 sec)*
+Query OK, 0 rows affected (0.00 sec)
+----
 
 When we are through, we exit the MySQL client command line with the command:
 
-*mysql>quit;*
+[source, shell]
+----
+mysql>quit;
+----
 
-==== 3.1.3 Configure OpenHospital
+==== 3.1.3 Configure Open Hospital
 
-OpenHospital comes with several configuration files called “properties files”. The one we need to modify in order to let OpenHospital to find its database is the _database.properties and _log4j.properties_ files, located in the “resource” folder rsc/.
+Open Hospital comes with several configuration files called “properties files”. The one we need to modify in order to let Open Hospital find its database is the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
 We have to specify:
 
-* the *IP address* of the machine where the MySQL Server has been installed and containing the OpenHospital database. Replace “localhost” with the IP address (e.g. 192.168.1.100)
+* the *IP address* of the machine where the MySQL Server has been installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g. 192.168.1.100)
 * the “isf” user *password*, if changed from “isf123”
 * the MySQL Server *Port Number*, if changed from “3306”
 
-_*[.underline]#NB#*: These settings have to be put on every OpenHospital copy, it’s to say, on every client._
+NOTE: These settings are required for every Open Hospital copy, that is to say, on every client.
 
-More information in chapter link:#5-2-database-properties[database.properties] and link:#5-3-log4j-properties[log4j.properties].
+More information on these files can be found in the sections <<database-properties,database.properties>> and
+<<log4j-properties,log4j.properties>>.
 
-==== 3.1.4 Run OpenHospital
+==== 3.1.4 Run Open Hospital
 
-We are ready now to run the OpenHospital software by executing the proper launcher:
+We are ready now to run the Open Hospital software by executing the proper launcher:
 
 * *on a Linux machine*: startup.sh
 * *on a Windows machine*: startup.cmd
 
-If everything is ok you should see the OpenHospital main splash screen:
+If everything is ok you should see the Open Hospital main splash screen:
 
-image:extracted-media/media/image17.jpeg[Splash.jpg,width=316,height=237]
+image:image17.jpeg[Splash.jpg,width=316,height=237]
 
 And then the main Menu:
 
-image:extracted-media/media/image18.png[MainMenu.PNG,width=135,height=306]
+image:image18.png[MainMenu.PNG,width=135,height=306]
 
 You may create a shortcut (link) to the executable script on the Desktop, the Programs Menu or wherever you need by using the provided icon “oh.ico” that you find in the package.
 
-image:extracted-media/media/image100.png[oh.ico,width=32,height=32]
+image:image100.png[oh.ico,width=32,height=32]
 
-=== 3.2 Portable OpenHospital
+=== 3.2 Portable Open Hospital
 
-OpenHospital, since version 1.2.0, has been distributed in a portable format.
+Open Hospital, since version 1.2.0, has been distributed in a portable format.
 
-Since OpenHospital is a Java software, is portable by definition. With the term “portable” here we refer to the possibility to have a copy self-contained of the software that includes Java, MySQL Server and the DB, that can also be copied and run everywhere, carrying together all the inserted data.
+Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server and the DB.  This package can be copied and run everywhere, carrying together all the inserted data.
 
-Since JRE and MySQL are not platform-independent but comes with several version depending on the platform, we have so:
+Since the JRE and MySQL are not platform-independent and come in several different versions depending on the platform, we have:
 
-*_Warning_*: _Since OpenHospital v1.11 Java6 (Java 1.6) is no longer supported!!! Minimum requirement is Java8 or greater (1.8 or greater). If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors._
+WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
+If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
-* *Portable OpenHospital for Linux* platforms (embedding Java1.8 and MySQL5 for Linux, 32 or 64bit)
-* *Portable OpenHospital for Windows* platforms (embedding Java1.8 and MySQL5 for Windows)
+* *Portable Open Hospital for Linux* platforms (embedding Java1.8 and MySQL5 for Linux, 32 or 64bit)
+* *Portable Open Hospital for Windows* platforms (embedding Java1.8 and MySQL5 for Windows)
 
-Once downloaded the needed version, you may start it by launching the related script inside the package:
+Once the required version is downloaded, you may start it by launching the related script inside the package:
 
 * *oh.sh* in the Linux version
 * *autorun.bat* in the Windows version
 
-No others configurations are needed.
+No other configuration is needed.
 
-image:extracted-media/media/image20.png[image,width=645,height=57]
+NOTE: If you want to use a Portable Open Hospital for Linux from a USB key you need to make sure that the file permissions in the
+archive remain unchanged once extracted, otherwise you will not be able to start the launcher or use the application in an
+appropriate manner.
 
-image:extracted-media/media/image21.png[image,width=645,height=57]
+NOTE: It is important to understand that the portable version is meant to be a trial, that is, to have a look at the software
+or used in a very small facility (like dispensary) with only one computer.  If the facility is large and needs a networked
+architecture, the full installation version is recommended.
 
+[#backup-restore]
 === 3.3 Backup & Restore
 
+[#backup-data]
 ==== 3.3.1 Backup of data (Database)
 
-There are several ways to Backup & Restore *data* with MySQL. We suggest to use a common MySQL client such as MySQL Workbench® (e.g.):
+There are several ways to Backup & Restore *data* with MySQL. We suggest the use of the common MySQL client such as MySQL Workbench® (e.g.):
 
 From https://stackoverflow.com/a/18379189:
 
-[arabic]
 . Click on Management tab at left side in Navigator Panel
 . Click on Data Export Option
 . Select Schema
@@ -296,8 +364,9 @@ From https://stackoverflow.com/a/18379189:
 . Select Complete insert checkbox in Inserts Panel
 . Start Export
 
-image:extracted-media/media/image22.png[image,width=642,height=461]
+image:image22.png[image,width=642,height=461]
 
+[#restore-data]
 ==== 3.3.2 Restore of data (Database)
 
 In order to restore data with MySQL Workbench® (e.g.):
@@ -312,29 +381,33 @@ In order to restore data with MySQL Workbench® (e.g.):
 
 ==== 3.3.3 Backup of code and settings (Software)
 
-Backup of the software *code and settings* is needed only if you change it from the “official versions” in order to correctly perform any future Update process (see. Update OpenHospital)
+Backup of the software *code and settings* is needed only if you change it from the “official versions” in order to
+correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
+<<<
+
+[#folders]
 == 4 Folders
 
-OpenHospital has an internal folder tree hereby briefly explained:
+Open Hospital has a folder tree hierarchy which consists of:
 
 * *bin* – contains the Java *binaries* (compiled software)
 * *bundle* – contains the *language* files
 * *doc* – contains *documents* like version changelogs and manuals
 * *lib* – contains the Java *libraries* needed to run the software
 * *mysql* – contains the scripts and configurations for MySQL DB
-* *rpt* – contains the JasperReports® *reports* used in OpenHospital
-* *rpt/PDF* – contains the reports generated by OpenHospital in PDF format
-* *rsc* – contains the *resources* of OpenHospital, like configuration files and other stuff
-* *rsc/icons* – contains the *icons* used in OpenHospital for windows and buttons
-* *rsc/images* – contains the *images* used in OpenHospital
+* *rpt* – contains the JasperReports® *reports* used in Open Hospital
+* *rpt/PDF* – contains the reports generated by Open Hospital in PDF format
+* *rsc* – contains the *resources* of Open Hospital, like configuration files and other stuff
+* *rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
+* *rsc/images* – contains the *images* used in Open Hospital
 * *logs* – contains the log files useful for debugging (after first run)
 
-These folders are organized differently depending on the version.
+These folders may be organized differently depending on the version of the software.
 
-=== 4.1 Folder tree in OpenHospital
+=== 4.1 Folder tree in Open Hospital
 
-In OpenHospital zip file you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current OpenHospital version:
+In the Open Hospital zip file you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
 * *OpenHospital-_<version>_*/
 ** *bin*
@@ -352,55 +425,57 @@ In OpenHospital zip file you will find the following folder tree structure in th
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** CHANGELOG - Last version brief changelog
 
-=== 4.2 Folder tree in Portable OpenHospital for Linux (32 and 64bit)
+=== 4.2 Folder tree in Portable Open Hospital for Linux (32 and 64bit)
 
-In Portable OpenHospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current OpenHospital version and *_<arch>_* with the OS architecture (x32 or x64):
+In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
 * *poh-linux-_<arch>_-0.0.5-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
 ** zulu8.46.0.19-ca-jre8.0.252-linux_i686/ or jdk8u252-b09-jre/ - Java Virtual Machine
 ** mysql-5.0.51a-linux-i686/ - MySQL Server and MySQL DB
-** *oh/ the OpenHospital subdolder structure*
+** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
 ** var/ - working folder
 ** CHANGELOG - Last version brief changelog
-** database.sql (DB inizialization script, automatically removed after first run)
+** database.sql (DB initialization script, automatically removed after first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
 ** *oh.sh Launcher for Portable-Linux*
 ** POH-linux-changelog.md (changelog portable-linux)
 ** POH-README.md (README portable-linux)
 
-=== 4.3 Folder tree in Portable OpenHospital for Windows (32bit)
+=== 4.3 Folder tree in Portable Open Hospital for Windows (32bit)
 
-In Portable OpenHospital for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current OpenHospital version:
+In Portable Open Hospital for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
 * *poh-win32-0.0.5-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** jdk8u252-b09-jre/ - Java Virtual Machine
 ** modified/ - working folder
 ** mysql/ - MySQL Server and MySQL DB
-** *oh/ the OpenHospital subdolder structure*
+** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
 ** CHANGELOG - Last version brief changelog
-** database.sql (DB inizialization script, automatically removed after first run)
+** database.sql (DB initialization script, automatically removed after first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** *oh.bat Launcher for Windows*
 ** oh.ico - icon image for launcher
 ** POH-README.md (README portable-windows)
 ** POH-win-changelog.md (changelog portable-windows)
 
+<<<
 
+[#config-files]
 == 5 Configuration Files
 
-Some behaviors of OpenHospital depend by settings set in some text files called “properties files”. OpenHospital 1.8 comes with 6 main properties files:
+Customization of Open Hospital depends on settings set in text files called “properties files”. Open Hospital 1.8 comes with 6 main properties files:
 
 * *oh/rsc/*
-** *database.properties* – for OpenHospital database connection
+** *database.properties* – for Open Hospital database connection
 ** *dicom.properties* – for the DICOM viewer module
 ** *examination.properties* – contains the settings for the ‘examination’ module
-** *generalData.properties* – for OpenHospital configuration options
+** *generalData.properties* – for Open Hospital configuration options
 ** *log4j.properties* – for the logging system
 ** *sms.properties* – for SMS Manager module
 ** *txtPrinter.properties*– for the text printing system
@@ -408,34 +483,76 @@ Some behaviors of OpenHospital depend by settings set in some text files called 
 
 Furthermore, there are other configurations files that are not meant to be modified by the user:
 
-* *resolutions.xml* – for store locally the information about webcams
-* *version.properties* – that contains the current OpenHospital version
+* *resolutions.xml* –  stores locally the information about webcams
+* *version.properties* – contains the current Open Hospital version
 
-Every configuration file works only [.underline]#locally# and is meant to pilot [.underline]#only a single instance# of OpenHospital application.
+Every configuration file works only [.underline]#locally# and is meant to manage  [.underline]#only a single instance# of Open Hospital application.
 
-This means that if we have many clients running OpenHospital they may run differently according to their own configuration files.
+This means that if there are many clients running Open Hospital they may run differently according to their own configuration files.
 
-_*[.underline]#NB#*: every change to these files need an application restart in order to see the modifications applied_
+NOTE: Any change to these files requires an application restart in order to see the modifications applied.
 
-In following chapters, we will see all these properties files and all their feature in details.
+In following chapters will describe these properties files and their features in detail.
 
+[#generaldata-properties]
 === 5.1 generalData.properties
 
-OpenHospital 1.7 and greater versions, come with the generalData.properties file set as follow by default:
+Starting with version 1.7 Open Hospital comes with a generalData.properties file with the following defaults:
 
-image:extracted-media/media/image23.png[image,width=645,height=486]
+[source, properties]
+----
+# This file contains OpenHospital settings
+LANGUAGE=en
+SINGLEUSER=yes
+AUTOMATICLOT=no
+LOTWITHCOST=yes
+PATIENTSHEET=patient_clinical_sheet_ver2
+OPDCHART=patient_opd_chart
+ADMCHART=patient_adm_chart
+DISCHART=patient_dis_chart
+PATIENTBILL=PatientBill
+BILLSREPORT=BillsReport
+BILLSREPORTPENDING=BillsReportPending
+BILLSREPORTMONTHLY=BillsReportMonthly
+PHARMACEUTICALORDER=PharmaceuticalOrder
+PHARMACEUTICALSTOCK=PharmaceuticalStock_ver4
+PHARMACEUTICALAMC=PharmaceuticalAMC
+PATIENTEXTENDED=yes
+OPDEXTENDED=yes
+MATERNITYRESTARTINJUNE=no
+LABEXTENDED=yes
+LABMULTIPLEINSERT=yes
+INTERNALPHARMACIES=yes
+MERGEFUNCTION=yes
+SMSENABLED=no
+INTERNALVIEWER=yes
+MAINMENUALWAYSONTOP=no
+RECEIPTPRINTER=yes
+VIDEOMODULEENABLED=yes
+PATIENTVACCINEEXTENDED=yes
+ENHANCEDSEARCH=no
+XMPPMODULEENABLED=no
+DICOMMODULEENABLED=yes
+DICOMTHUMBNAILS=yes
+ALLOWPRINTOPENEDBILL=yes
+ALLOWMULTIPLEOPENEDBILL=yes
+PATIENTBILLGROUPED=PatientBillGrouped
+PATIENTBILLSTATEMENT=PatientBillStatement
+DEBUG=no
+----
 
-Every line is composed by key (capitalized) and a value (in blue) as follow:
+Every line is composed of a key (capitalized) and a value of the form:
 
-key = value
+key=value
 
 Furthermore, values can be:
 
 * *Boolean*: yes | no or true | false
 * *String*: usually a filename or a country code (ISO 3166-1)
 
-In following chapters, we will see the meaning of each of them.
+In following chapters, we will see the meaning of each of the key/value pairs.
 
+[#language]
 ==== 5.1.1 LANGUAGE
 
 The following table shows the default value and the allowed ones:
@@ -446,19 +563,20 @@ The following table shows the default value and the allowed ones:
 |LANGUAGE |en |ar, en, it, fr, es, de, sw
 |===
 
-OpenHospital 1.8 comes with seven translations, identified by the international country code:
+Open Hospital 1.8 comes with seven translations, identified by the international country code:
 
 * en – English
 * it – Italian
 * fr – French
 * es – Spanish
-* de–German
-* sw– Swahili
-* ar– Arabic
+* de – German
+* sw – Swahili
+* ar – Arabic
 
-You can change the language used in the application simply by editing *_generalData.properties_* and setting this key. If a not allowed value is set, the local computer language will be applied.
+You can change the language used in the application simply by editing *_generalData.properties_* and setting this key.
+If an unknown value is set, the local computer language is applied.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 ==== 5.1.2 SINGLEUSER
 
@@ -470,21 +588,24 @@ The following table shows the default value and the allowed ones:
 |SINGLEUSER |yes |yes, no
 |===
 
-OpenHospital, since its first version, allow a multi-user usage. It means that is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
+Open Hospital, since its first version, allows for multi-user usage. It means that is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
 
-OpenHospital has a predefined user called “admin” that have all rights to access all functionality in the application. When SINGLEUSER is set to YES (default) the program start with this user and all the functionalities are available.
+Open Hospital has a predefined user called “admin” that has all rights to access all the functionality of the application.
+When SINGLEUSER is set to YES (default) the program starts with this user and all the program functionality is available.
 
-If SINGLEUSER is set to NO the following login window will appear when start the program:
+If SINGLEUSER is set to NO the following login window appears when the program is started:
 
-image:extracted-media/media/image24.PNG[Login.PNG,width=305,height=148]
+image:image24.PNG[Login.PNG,width=305,height=148]
 
-The default password for “admin” user is “admin”. By typing his password in the white field and by pressing *[.underline]##S##ubmit*, you will see the main *_Menu_* with all functionalities enabled.
+The default password for “admin” user is “admin”. After typing this password in the white field and pressing *[.underline]##S##ubmit*, you will see the main *_Menu_* with all functionalities enabled.
 
-Once you’re logged in as “admin” user you can define users and group (see link:#_Users_and_Groups[Users and Groups (Users)]), or just stay with only that as a simple form of data protection.
+Once logged in as the “admin” user you can define users and groups (see the
+link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#15-users-groups-file-users[Users & Groups] chapter in the User's Guide), or just continue with a simple form of data protection.
 
-_*[.underline]#NB#*: despite this setting works only locally the users and groups defined will work for every client connected to the server; anyway, is possible to avoid login simply by acting on this parameter._
+NOTE: The setting is client-side specific, this means that one can disable the login on a specific client, but logons will still
+be required on other clients, with the same defined user and groups. (This behavior may change in newer versions of the product.)
 
-*[.underline]#Disclaimer#*: [.underline]#data security must never be left solely to application but it must be ensured by a proper network architecture and by a rigid configuration of the clients.#
+WARNING: Data security must never be left solely to application but it must include proper network architecture and a rigid configuration of the clients.
 
 ==== 5.1.3 AUTOMATICLOT
 
@@ -498,19 +619,26 @@ The following table shows the default value and the allowed ones:
 |AUTOMATICLOTWARD_TOWARD |no |yes, no
 |===
 
-OpenHospital, since its first version, allow an automatic management of lots in the main pharmacy. It means that is possible to work in the pharmacy without taking care about lot definitions in loading the store and just specify preparation and expiring date for each charging movement (see *6.2.2.2Insert stock movement* in the _User’s Guide_).
+Open Hospital, since its first version, allows for  an automatic management of lots in the main pharmacy.
+It means that is possible to work in the pharmacy without taking care about lot definitions in loading the store and
+just specify preparation and expiring date for each charging movement
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-2-2-2-insert-stock-charging-movement-charge[6.2.2.2 Insert stock charging movement] in the User's Guide).
 
 For discharging movement, the lot is automatically calculated according to the nearest expiring date of lots (FEFO - First Expiring First Out). If the quantity to discharge is higher than the quantity of the first selected lot, more than one discharging operation can be generated.
 
-Since version *v1.11.0*, the _AUTOMATIC LOTS MANAGEMENT_ has been splitted into two different settings for charging and discharging the main pharmacy and to manage lots also in the wards. In this way we offer more control to the user that may want to provide all the lots details in _charging operations_ but ask the application to automatically _discharge_ the nearest expiring ones (FEFO). Similarly, in wards (See ch. link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-3-pharmaceuticals-stock-ward-pharmaceuticals-stock-ward[6.3 Pharmaceuticals Stock Ward] in User's Manual) the user may decide to manage lots manually or to ask the application to do it automatically.
+Since version *v1.11.0*, the _AUTOMATIC LOTS MANAGEMENT_ has been split into two different settings for charging and discharging the main pharmacy and to manage lots also in the wards.
+In this way more control is given to the user that may want to provide all the lots details in _charging operations_ but ask the application to automatically _discharge_ the nearest expiring ones (FEFO).
+Similarly, in wards (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-3-pharmaceuticals-stock-ward-pharmaceuticals-stock-ward[6.3 Pharmaceuticals Stock Ward] in the User's Guide)
+the user may decide to manage lots manually or to ask the application to do it automatically.
 
-With *AUTOMATICLOT_IN = YES* we ask the application to generate a lot number automatically and only ask for an expiration date (compulsory). By default, AUTOMATICLOT_IN is set to NO. It is possible to change the value at any time.
+With *AUTOMATICLOT_IN = YES* the application generates a lot number automatically and only asks for an expiration date (compulsory). By default, AUTOMATICLOT_IN is set to NO. It is possible to change the value at any time.
 
-With *AUTOMATICLOT_OUT = YES* we ask the application to discharge automatically the nearest expiring lot when required. By default, AUTOMATICLOT_OUT is set to NO. It is possible to change the value at any time.
+With *AUTOMATICLOT_OUT = YES* the application discharges automatically the nearest expiring lot when required. By default, AUTOMATICLOT_OUT is set to NO. It is possible to change the value at any time.
 
-With *AUTOMATICLOTWARD_TOWARD = YES*, we ask the application to discharge from Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time. For discharges to Patients (drugs giving) the lot is *never* asked.
+With *AUTOMATICLOTWARD_TOWARD = YES*, the application to discharges from Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time.
+For discharges to Patients (drug giving) the lot is *never* asked.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied for all above settings._
+NOTE: An application restart is required in order to see the modification applied for all above settings.
 
 ==== 5.1.4 LOTWITHCOST
 
@@ -522,9 +650,10 @@ The following table shows the default value and the allowed ones:
 |LOTWITHCOST |yes |yes, no
 |===
 
-OpenHospital, since version 1.8, allows managing the cost of medicals in the main pharmacy. (see *6.2.2.2 Insert stock charging movement* in the _User’s Guide_).
+Open Hospital, since version 1.8, allows managing the cost of medicals in the main pharmacy
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-2-2-2-insert-stock-charging-movement-charge[6.2.2.2 Insert stock charging movement] in the User's Guide).
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 ==== 5.1.5 PATIENTSHEET
 
@@ -536,12 +665,13 @@ The following table shows the default value and the allowed ones:
 |PATIENTSHEET |patient_clinical_sheet |any kind of .jasper file name
 |===
 
-OpenHospital, since its first version, allows to produce a report about the clinical history of a patient (see *10.9 Clinical Sheet* in the _User’s Guide_).
+Open Hospital, since its first version, can produce a report about the clinical history of a patient
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
-By default, PATIENTSHEET is set to patient_clinical_sheet that is the filename of the related report to use for the Clinical Sheet functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, PATIENTSHEET is set to patient_clinical_sheet, that is, the filename of the related report to use for the Clinical Sheet functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
-
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.6 OPDCHART
@@ -554,11 +684,13 @@ The following table shows the default value and the allowed ones:
 |OPDCHART |patient_opd_chart |any kind of .jasper file name
 |===
 
-OpenHospital, since its version 1.8, allows to produce a report about the OPD chart of a patient (see *10.9 Clinical Sheet* in the _User’s Guide_).
+Open Hospital, since its version 1.8, can produce a report about the OPD chart of a patient
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
-By default, OPDCHART is set to patient_opd_chart that is the filename of the related report to use for the Clinical Sheet functionality *OPD Chart*. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, OPDCHART is set to patient_opd_chart that is the filename of the related report to use for the Clinical Sheet functionality *OPD Chart*.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -572,11 +704,13 @@ The following table shows the default value and the allowed ones:
 |ADMCHART |patient_adm_chart |any kind of .jasper file name
 |===
 
-OpenHospital, since its version 1.8, allows to produce a report about the Admission of a patient (see *10.9 Clinical Sheet* in the _User’s Guide_).
+Open Hospital, since its version 1.8, can produce a report about the Admission of a patient
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
-By default, ADMCHART is set to patient_adm_chart that is the filename of the related report to use for the Clinical Sheet functionality *Admission Chart*. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, ADMCHART is set to patient_adm_chart, that is, the filename of the related report to use for the Clinical Sheet functionality *Admission Chart*.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.8 DISCHART
@@ -589,11 +723,13 @@ The following table shows the default value and the allowed ones:
 |DISCHART |patient_dis_chart |any kind of .jasper file name
 |===
 
-OpenHospital, since its version 1.8, allows to produce a report about the Discharge of a patient (see *10.9 Clinical Sheet* in the _User’s Guide_).
+Open Hospital, since its version 1.8, can to produce a report about the Discharge of a patient
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
-By default, DISCHART is set to patient_dis_chart that is the filename of the related report to use for the Clinical Sheet functionality *Discharge Chart*. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, DISCHART is set to patient_dis_chart that is the filename of the related report to use for the Clinical Sheet functionality *Discharge Chart*.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -607,11 +743,13 @@ The following table shows the default value and the allowed ones:
 |PATIENTBILL |PatientBill |any kind of .jasper file name
 |===
 
-OpenHospital, since version 1.6.0, allows to manage patient bills and to produce an A4 format breakdown with his/her items and payments (see *8.2 Functions of Accounting* in the _User’s Guide_)
+Open Hospital, since version 1.6.0, can manage patient bills and produce an A4 format breakdown with his/her items and payments
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-2-functions-of-accounting[8.2 Functions of Accounting] in the User’s Guide).
 
-By default, PATIENTBILL is set to PatientBill that is the filename of the related report to use for the bill printing functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, PATIENTBILL is set to PatientBill, that is, the filename of the related report to use for the bill printing functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -625,11 +763,12 @@ The following table shows the default value and the allowed ones:
 |BILLSREPORT |BillsReport |any kind of .jasper file name
 |===
 
-OpenHospital, since version 1.6.0, allows to manage patient bills and to produce a report about all bills paid (or not paid) within a span of time (see *8.2 Functions of Accounting* in the _User’s Guide_)
+Open Hospital, since version 1.6.0, can manage patient bills and to produce a report about all bills paid (or not paid) within a span of time (see *8.2 Functions of Accounting* in the _User’s Guide_).
 
-By default, BILLSREPORT is set to BillsReport that is the filename of the related report to use for the account printing functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, BILLSREPORT is set to BillsReport, that is, the filename of the related report to use for the account printing functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -643,11 +782,13 @@ The following table shows the default value and the allowed ones:
 |BILLSREPORTMONTH |BillsReportMonth |any kind of .jasper file name
 |===
 
-OpenHospital, since version 1.6.0, allows to manage patient bills and to produce a report about all bills paid (or not paid) monthly (see**8.2 Functions of Accounting** in the _User’s Guide_).
+Open Hospital, since version 1.6.0, can manage patient bills and to produce a report about all bills paid (or not paid) monthly
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-2-functions-of-accounting[8.2 Functions of Accounting] in the User’s Guide).
 
-By default, BILLSREPORTMONTH is set to BillsReportMonth that is the filename of the related report to use for the account printing functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, BILLSREPORTMONTH is set to BillsReportMonth, that is, the filename of the related report to use for the account printing functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -661,11 +802,13 @@ The following table shows the default value and the allowed ones:
 |PHARMACEUTICALORDER |PharmaceuticalOrder |any kind of .jasper file name
 |===
 
-OpenHospital, since version 1.7.0, allows to produce a report for the Pharmacy Stock critical levels, that help to know which pharmaceuticals are going to end and which ones need to be ordered (see *6.1 Pharmaceuticals* in the _User’s Guide_).
+Open Hospital, since version 1.7.0, can produce a report for the Pharmacy Stock critical levels which helps to identify which pharmaceuticals are running low and which ones need to be ordered
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-1-pharmaceuticals-pharmaceuticals[6.1 Pharmaceuticals] in the User’s Guide).
 
-By default, PHARMACEUTICALORDER is set to PharmaceuticalOrder that is the filename of the related report to use for the pharmacy printing functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, PHARMACEUTICALORDER is set to PharmaceuticalOrder, that is, the filename of the related report to use for the pharmacy printing functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -679,11 +822,12 @@ The following table shows the default value and the allowed ones:
 |PHARMACEUTICALSTOCK |PharmaceuticalStock |any kind of .jasper file name
 |===
 
-OpenHospital, since version 1.7.0, allows to produce a report for the Pharmacy Stock Status, that help to know which pharmaceuticals are currently stored (see *6.1 Pharmaceuticals* in the _User’s Guide_).
+Open Hospital, since version 1.7.0, can produce a report for the Pharmacy Stock Status which identifies which pharmaceuticals are currently available (see *6.1 Pharmaceuticals* in the _User’s Guide_).
 
-By default, PHARMACEUTICALSTOCK is set to PharmaceuticalStock that is the filename of the related report to use for the pharmacy printing functionality. Anyway, is possible to use a different report by installing it in the report folder (see link:#6-Reports[Reports]) and by changing this parameter.
+By default, PHARMACEUTICALSTOCK is set to PharmaceuticalStock that is the filename of the related report to use for the pharmacy printing functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -697,11 +841,13 @@ The following table shows the default value and the allowed ones:
 |PATIENTEXTENDED |yes |yes, no
 |===
 
-OpenHospital, since version 1.3.1, allows register patient with a big set of information. This set of information are meant to “extend” the ones collected since version 1.2.1 (see *10.4Insert a new Patient Extended* in the _User’s Guide_).
+Open Hospital, since version 1.3.1, allows registration of a patient with extended or more detailed information.
+This set of information “extends” the information collected since version 1.2.1
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-insert-a-new-patient-extended-new-patient[10.4 Insert a new Patient Extended] in the User’s Guide).
 
-By default, PATIENTEXTENDED is set to yes. Anyway, is possible to set it to no in order to reduce the amount of data to be collected and so reduce the workload for the staff involved in data entry.
+By default, PATIENTEXTENDED is set to yes. It is possible to set it to no in order to reduce the amount of data collected and so reduce the workload for the staff involved in data entry.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -716,11 +862,13 @@ The following table shows the default value and the allowed ones:
 |OPDEXTENDED |yes |yes, no
 |===
 
-OpenHospital, since version 1.3.1, allows to link every OPD visit to a registered patient in order to have a comprehensive clinical history. For each visit the user will be asked to select a registered patient or to register a new one, so from that moment the visit will be attached to his/her history (see *5.3 OPD Extended* and *10.9 Clinical Sheet* in the _User’s Guide_).
+Open Hospital, since version 1.3.1, can link every OPD visit to a registered patient in order to generate a comprehensive clinical history.
+For each visit, the user will be asked to select a registered patient or to register a new one, so each visit is attached to the patient's history (see *5.3 OPD Extended* and *10.9 Clinical Sheet* in the _User’s Guide_).
 
-By default, OPDEXTENDED is set to yes. Anyway, is possible to set it to no in order to reduce the amount of data to be collected (only age and sex, no patient registration) and so reduce the workload for the staff involved in data entry.
+By default, OPDEXTENDED is set to yes.
+It is possible to set it to no in order to reduce the amount of data to be collected (only age and sex, no patient registration) and so reduce the workload for the staff involved in data entry.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -734,11 +882,12 @@ The following table shows the default value and the allowed ones:
 |MATERNITYRESTARTINJUNE |no |yes, no
 |===
 
-OpenHospital, since version 1.3.1, allows to change the way the admissions in Maternity ward are counted within the year; in OpenHospital the first admission of the year for every ward has progressive number 1 (one) and it increments itself automatically up to the end of the year; in some facilities this is partially true and the progressive numbering starts from June only for the Maternity ward. With this option we obtain exactly this behavior.
+Open Hospital, since version 1.3.1, allows to change the way the admissions in Maternity ward are counted within the year; in Open Hospital the first admission of the year for every ward has progressive number 1 (one) and it increments itself automatically up to the end of the year; in some facilities this is partially true and the progressive numbering starts from June only for the Maternity ward.
+This option controls which behavior is followed.
 
 By default, MATERNITYRESTARTINJUNE is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -752,11 +901,12 @@ The following table shows the default value and the allowed ones:
 |LABEXTENDED |yes |yes, no
 |===
 
-OpenHospital, since version 1.4.1, allows to force every laboratory exam to be linked to a registered patient, in order to have a comprehensive clinical history. For each exam the user will be asked to select a registered patient so from that moment the exam will be attached to his/her history (see *7.3.2 New Laboratory Exam* in the _User’s Guide_).
+Open Hospital, since version 1.4.1, can force every laboratory exam to be linked to a registered patient, in order to have a comprehensive clinical history. For each exam the user will be asked to select a registered patient so from that moment the exam will be attached to the patient's history
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#7-3-2-new-laboratory-exam-v-2-0[7.3.2 New Laboratory Exam] in the User’s Guide).
 
 By default, LABEXTENDED is set to yes. Anyway, is possible to set it to no in order to reduce the amount of data to be collected (only name, age and sex, no patient registration) and so reduce the workload for the staff involved in data entry.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.18 LABMULTIPLEINSERT
@@ -769,11 +919,12 @@ The following table shows the default value and the allowed ones:
 |LABMULTIPLEINSERT |yes |yes, no
 |===
 
-OpenHospital, since version 1.4.1, allows to insert multiple laboratory tests per patient at a time in order to avoid the repetitive operation of selecting a patient or writing his/her name; the LABEXTENDED option must be set to yes too (see *7.3.3 Laboratory Multiple Insert* in the _User’s Guide_).
+Open Hospital, since version 1.4.1, can insert multiple laboratory tests per patient at a time in order to avoid the repetitive operation of selecting a patient or writing his/her name; the LABEXTENDED option must be set to yes too
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#7-3-3-laboratory-multiple-insert[7.3.3 Laboratory Multiple Insert] in the User’s Guide).
 
 By default, LABMULTIPLEINSERT is set to yes, but if LABEXTENDED is set to no it will be just ignored.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -787,12 +938,12 @@ The following table shows the default value and the allowed ones:
 |INTERNALPHARMACIES |yes |yes, no
 |===
 
-OpenHospital, since version 1.4.1, allows to register all giving to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application (see *6.3 Pharmaceuticals Stock Ward* in the _User’s Guide_)
+Open Hospital, since version 1.4.1, can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-11-merge-function-merge[Merge function] in the User's Guide).
 
 By default, INTERNALPHARMACIES is set to yes.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
-
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.20 MERGEFUNCTION
@@ -805,11 +956,13 @@ The following table shows the default value and the allowed ones:
 |MERGEFUNCTION |no |yes, no
 |===
 
-OpenHospital, since version 1.4.1, allows to merge two patient’s history in only one. This is particularly useful in case of double registration that have collected different information during the time. Activating this option, the Merge functionality will be available in the Admission/Patient module (see *10.11 Merge function* in the _User’s Guide_).
+Open Hospital, since version 1.4.1, can merge two patient’s history into one.
+This is particularly useful in case of double registration where different information was collected over time. Activating this option, the Merge functionality will be available in the Admission/Patient module
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-11-merge-function-merge[Merge function] in the User's Guide).
 
 By default, MERGEFUNCTION is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -822,28 +975,35 @@ The following table shows the default value and the allowed ones:
 |key |default value |allowed values
 |INTERNALVIEWER |yes a|
 yes,
-
 any executable filename in the path or with absolute path
 
 |===
 
-OpenHospital, since version 1.4.1, allows to use a different PDF reader for generated reports. If this parameter is set to yes, the Jasper PDF Viewer will be used (see *11.2 Report Launcher* in the _User’s Guide_). If we want to use an external PDF viewer, we may put its executable filename but we must be sure that it is available in the desktop environment.
+Open Hospital, since version 1.4.1, can use a different PDF reader for generated reports.
+If this parameter is set to yes, the Jasper PDF Viewer is used
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-2-report-launcher-launch-report[Report Launcher] in the User's Guide).
+If another PDF viewer is required, specify the executable's filename.
+One must ensure that the executable is available in the desktop environment.
 
 *Example in Windows:*
 
+[source, properties]
+----
 INTERNALVIEWER=AcroRd32.exe
 
 INTERNALVIEWER= C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\AcroRd32.exe
-
-_*[.underline]#NB#*: Please note the double file & folder separator “_\\_”._
+----
+NOTE: Please note the double file & folder separator “_\\_”.
 
 *Example in Linux:*
 
+[source, properties]
+----
 INTERNALVIEWER=evince
-
+----
 By default, INTERNALVIEWER is set to yes.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -857,29 +1017,34 @@ The following table shows the default value and the allowed ones:
 |SMSENABLED |no |yes, no
 |===
 
-OpenHospital, since version 1.5, allows to set this parameter that will be used to set some information ready for SMS notification to the patients. Enabling or disabling this option will only affect the possibility to set or not a therapy as notifiable (see *10.10.7 Notify & SMS* in the _User’s Guide_)
+Open Hospital, since version 1.5, can indicate whether information can be sent to patients via SMS notifications.
+Enabling or disabling this option only affects the possibility to set, or not set, a therapy as notifiable
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-10-7-notify-sms[10.10.7 Notify & SMS] in the User’s Guide).
 
 By default, SMSENABLED is set to no.
 
 ===== 5.1.22.1 Configuration
 
-In order to setup a GSM device, you must set as GSM mode in the related sms.properties file (see link:#5-7-sms-properties[sms.properties]) and then set up the related GSM.properties file (see link:#5-7-1-gsm-properties[GSM.properties]).
+In order to set up a GSM device, one must set the GSM mode in the related sms.properties file (see <<sms-properties,sms.properties>>) and then set up the related
+GSM.properties file (see <<gsm-properties,GSM.properties>>).
 
-The settings in the GSM.properties file should work with the majority of GSM devices (like phones, smartphones, usb modems, etc…) and only the PORT parameter should be changed accordingly with the SERIAL port used by your system to address the device once plugged in the system.
+The default settings in the GSM.properties file should work with the majority of GSM devices (like phones, smartphones, usb modems, etc…).
+The exception is the PORT parameter which must be changed to match the SERIAL port used by your system to address the device once plugged in the system.
 
-If you’re sure the PORT is correct but still OpenHospital is not communicating with the device (we suggest to switch to DEBUG log level – or lower - during this setup – see link:#5-6-log4j-properties[log4j.properties]) you might use the SetupGSM utility in your OpenHospital root folder (see link:#folders[Folders])
+If you are sure the PORT is correct but still Open Hospital is not communicating with the device (we suggest to switch to DEBUG log level – or lower - during this setup –
+see <<log4j-properties,log4j.properties>>) you might use the SetupGSM utility in your Open Hospital root folder
+(see <<folders,Folders>>).
 
 ===== 5.1.22.2 SetupGSM
 
 In order to use the SetupGSM utility just follow these instructions:
 
-[arabic]
-. plug your device in your system and be sure the system recognizes it, load a proper driver for it and assign a serial port (COM)
+. Plug your device in your system and be sure the system recognizes it, load a proper driver for it and assign a serial port (COM)
 . Launch the utility: the utility will scan all plugged devices and will try to recognize the modem (or phone) within them
-. If the device is recognized as modem you will be prompted for a confirm message as the follow  
+. If the device is recognized as modem you will be prompted for a confirm message as the follow
 
-image:extracted-media/media/image25.png[image,width=293,height=120]
-
+image:image25.png[image,width=293,height=120]
+[start=4]
 . If the name of the device is the one meant to be used with the system then just click “yes”, otherwise click “no” and the scan will continue
 . Once you click “yes” the GSM.properties file will be automatically modified by the utility
 
@@ -895,14 +1060,14 @@ The following table shows the default value and the allowed ones:
 |MAINMENUALWAYSONTOP |no |yes, no
 |===
 
-OpenHospital, since version 1.5, allows to keep the main menu always on top so it cannot be overlapped by other windows.
+Open Hospital, since version 1.5, can keep the main menu always on top so it cannot be overlapped or hidden by other windows.
 
 By default, MAINMENUALWAYSONTOP is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
-
+[#receiptprinter]
 ==== 5.1.24 RECEIPTPRINTER
 
 The following table shows the default value and the allowed ones:
@@ -913,15 +1078,16 @@ The following table shows the default value and the allowed ones:
 |RECEIPTPRINTER |no |yes, no
 |===
 
-OpenHospital, since version 1.5, allows to drive text or ZPL printers with aim of printing simple receipts in Accounting module (see *8.2.1.10 Print receipt* function in _User’s Guide_). Once this option has been activated, some parameters have to be set in *txtPrinter.properties file* in order to adjust the output with the printer connected to the system (see link:#5-8-txtprinter-properties[txtPrinter.properties] in this document).
+Open Hospital, since version 1.5, can manage text or ZPL printers with aim of printing simple receipts in Accounting module
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-1-2-11-print-receipt-function[8.2.1.11 Print receipt] function in User’s Guide).
+Once this option is activated, additional parameters are needed in the *txtPrinter.properties file* in order to adjust the output with the printer connected to the system
+(see <<txtprinter-properties,txtPrinter.properties>> in this document).
 
 By default, RECEIPTPRINTER is set to no.
 
-_*[.underline]#NB#*: The text printer must be set as default printer._
+NOTE: The text printer must be set as default printer.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
-
-
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.25 VIDEOMODULEENABLED
@@ -934,11 +1100,13 @@ The following table shows the default value and the allowed ones:
 |VIDEOMODULEENABLED |no |yes, no
 |===
 
-OpenHospital, since version 1.5, allows to drive any webcam with the aim of shooting patients’ passports in Admission/Patient module (see *10.4.3 Patient Photo* function in _User’s Guide_). Once this option has been activated the related button *New Photo* in *New Patient Extended* window will be available to start and use the webcam.
+Open Hospital, since version 1.5, can drive any webcam with the aim of shooting patient's passports in the Admission/Patient module
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide).
+Once this option is activated the related button, *New Photo* in the *New Patient Extended* window, is available to start and use the webcam.
 
 By default, VIDEOMODULEENABLED is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -952,11 +1120,13 @@ The following table shows the default value and the allowed ones:
 |PATIENTVACCINEEXTENDED |yes |yes, no
 |===
 
-OpenHospital, since version 1.6, allows to register vaccines given to patients (see *9 Vaccines* in the User’s Guide). This option allows to toggle the patient’s full name in the *_Patient vaccines browsing_* window.
+Open Hospital, since version 1.6, can register vaccines given to patients
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#9-vaccines-patient-vaccines[9 Vaccines] in the User’s Guide).
+This option allows toggling the patient’s full name in the *_Patient vaccines browsing_* window.
 
 By default, PATIENTVACCINEEXTENDED is set to yes.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -970,14 +1140,17 @@ The following table shows the default value and the allowed ones:
 |ENHANCEDSEARCH |no |yes, no
 |===
 
-OpenHospital, since version 1.6, allows to optimize memory usage when the number of registered patients becomes huge (see *10.2.2 Search patient Enhanced* in the User’s Guide). With the enhanced search only, the patient matching a search criterion will be loaded in the memory, otherwise all patients registered in the system will be loaded in the *_Patients browser_* window.
+Open Hospital, since version 1.6, can optimize memory usage when the number of registered patients becomes large
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-2-2-search-patient-enhanced[10.2.2 Search patient Enhanced] in the User’s Guide).
+With the enhanced search only, the patient matching a search criterion will be loaded in the memory, otherwise all patients registered in the system will be loaded in the *_Patients browser_* window.
 
-By default, ENHANCEDSEARCH is set to no. Anyway, is possible to toggle this option anytime to reduce the amount of memory needed by the computer or the server.
+By default, ENHANCEDSEARCH is set to no.
+It is possible to toggle this option anytime to reduce the amount of memory needed by the computer or the server.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
-
+[#xmppmoduleenabled]
 ==== 5.1.28 XMPPMODULEENABLED
 
 The following table shows the default value and the allowed ones:
@@ -988,11 +1161,14 @@ The following table shows the default value and the allowed ones:
 |XMPPMODULEENABLED |no |yes, no
 |===
 
-OpenHospital, since version 1.7, embeds a new technology that allow users logged in the application to chat and share information related to the hospital activities (see *13 Communication* in the User’s Guide); the SINGLEUSER option must be set to no too. If this option is active, OpenHospital will look for an XMPP Server at startup time. The *xmpp.properties* will be used to point the server that must be installed on the computer or on the OH Server by the System Administrator (see link:#5-9-xmpp-properties[xmpp.properties] in this document).
+Open Hospital, since version 1.7, embeds a new technology that allows users logged in the application to chat and share information related to the hospital activities
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#13-communication-communication[13 Communication] in the User’s Guide);
+the SINGLEUSER option must be set to no too. If this option is active, Open Hospital will look for an XMPP Server at startup time. The *xmpp.properties* will be used to point the server that must be installed on the computer or on the OH Server by the System Administrator
+(see <<xmpp-properties,xmpp.properties>> in this document).
 
-By default, XMPPMODULEENABLED is set to no, but if SINGLEUSER is set to yes it will be just ignored.
+By default, XMPPMODULEENABLED is set to no, but if SINGLEUSER is set to yes XMPPMODULEENABLED is ignored.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -1006,11 +1182,12 @@ The following table shows the default value and the allowed ones:
 |DICOMMODULEENABLED |no |yes, no
 |===
 
-OpenHospital, since version 1.8, embeds a new feature that allows to attach DICOM files to patient’s clinical sheet. When this option is enabled, a button *DICOM* appears in the patient Clinical sheet module.
+Open Hospital, since version 1.8, embeds a new feature that allows to attach DICOM files to patient’s clinical sheet.
+When this option is enabled, a button, *DICOM*, appears in the patient Clinical sheet module.
 
 By default, DICOMMODULEENABLED is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -1024,11 +1201,11 @@ The following table shows the default value and the allowed ones:
 |DICOMTHUMBNAILS |yes |yes, no
 |===
 
-OpenHospital, since version 1.10, allows to enable or disable thumbnails in the Dicom Viewer.
+Open Hospital, since version 1.10, can enable or disable thumbnails in the Dicom Viewer.
 
 By default, DICOMTHUMBNAILS is set to yes.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 
@@ -1042,17 +1219,21 @@ The following table shows the default value and the allowed ones:
 |DEBUG |no |yes, no
 |===
 
-OpenHospital, since version 1.7, allows to run itself in debug mode that could be useful to understand what is happening behind the user graphical interface. At the moment this option will affect only the video module, that means that in place of the normal *New Patient Extended* window (see *10.4.3 Patient Photo* function in _User’s Guide_), it will open the new special window showed below:
+Open Hospital, since version 1.7, can run in debug mode that could be useful to understand what is happening behind the user graphical interface.
+Currently this option affects only the video module, that means that in place of the normal *New Patient Extended* window
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide),
+the program opens the new special window shown below:
 
-image:extracted-media/media/image26.png[New Patient Extended_photo_debug.PNG,width=645,height=535]
+image:image26.png[New Patient Extended_photo_debug.PNG,width=645,height=535]
 
-From this window is possible to have more information about webcams connected to the system and try different resolutions in order to find the best one or more information about a problem.
+From this window is possible to have more information about webcams connected to the system.
+One can try different resolutions in order to find the best one or learn more information about a problem.
 
-Once produced a photo, OpenHospital will remember the last setting used in the future.
+Once a photo is produced, Open Hospital remembers the settings and uses them in the future.
 
 By default, DEBUG is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.31 ALLOWMULTIPLEOPENEDBILL
@@ -1065,12 +1246,13 @@ The following table shows the default value and the allowed ones:
 |ALLOWMULTIPLEOPENEDBILL |no |yes, no
 |===
 
-OpenHospital, since version 1.9, allows a patient to have multiple opened bills(invoices). If this option is enabled, when creating a new bill for a patient, if that patient already has an opened bill
-it would be asked to confirm the creation of another one.
+Open Hospital, since version 1.9, allows a patient to have multiple open bills(invoices).
+If this option is enabled, when creating a new bill for a patient, if that patient already has an open bill
+the user is asked to confirm the creation of another one.
 
 By default, ALLOWMULTIPLEOPENEDBILL is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 
 ==== 5.1.32 OPENEDBILLSREPORT
@@ -1083,12 +1265,12 @@ The following table shows the default value and the allowed ones:
 |OPENEDBILLSREPORT |OH023_BillsReportMonth |OH023_BillsReportMonth
 |===
 
-OpenHospital, since version 1.9, allows a to print the list of opened bills. That parameter contains the jasper report file name to print 
-the list of opened bills. 
+Open Hospital, since version 1.9, can print the list of open bills.
+The parameter contains the jasper report file name to print the list of open bills.
 
-By default, OPENEDBILLSREPORT is set to OH023_BillsReportMonth. 
+By default, OPENEDBILLSREPORT is set to OH023_BillsReportMonth.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 ==== 5.1.33 ALLOWPRINTOPENEDBILL
 
@@ -1100,66 +1282,128 @@ The following table shows the default value and the allowed ones:
 |ALLOWPRINTOPENEDBILL |no |yes, no
 |===
 
-OpenHospital, since version 1.9, allows a to print the receipt of single opened invoice. when that parameter is enabled, in Accounting module
-under pending tab one can selected an opened bill and get the receipt by clicking in Receipt button in buttons panel.
+Open Hospital, since version 1.9, can print the receipt of single open invoice.
+When the parameter is enabled, in Accounting module under the pending tab one can selected an open bill and get the receipt by clicking in Receipt button in buttons panel.
 
-By default, ALLOWPRINTOPENEDBILL is set to no. 
+By default, ALLOWPRINTOPENEDBILL is set to no.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
-
+[#database-properties]
 === 5.2 database.properties
 
-OpenHospital 1.7 and greater comes with the database.properties file set as follow by default:
+Open Hospital 1.7 and later versions comes with a database.properties file with the following defaults:
 
-image:extracted-media/media/image27.PNG[image,width=646,height=124]
+[source, properties]
+----
+jdbc.drivers=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql:
+jdbc.server=localhost
+jdbc.db=oh
+jdbc.username=isf
+jdbc.password=isf123
+#jdbc.port=3306
+----
 
-First two parameters are not meant to be modified by the User, neither by the Administrator:
+The first two parameters are not meant to be modified by the User nor by the Administrator.
+The remaining five parameters may need modification according to your network settings.
 
-* *jdbc.drivers*: the java library used to connect to a MySQL Server
-* *jdbc.url*: the address to point a MySQL Server
-* Then we have five parameters which may need to be set according to your network settings instead:
-* *jdbc.server*: the IP address of the server where the MySQL Server is installed; localhost means the same computer where this file is located; others values can be: +
+* *jdbc.drivers*: the Java library used to connect to a MySQL Server
+* *jdbc.url*: the address to point to the MySQL Server
+* *jdbc.server*: the IP address of the server (where the MySQL Server is installed);
+localhost means the same computer where this file is located; others values can be: +
 _127.0.0.1_ – loopback network +
 _192.168.0.100_ – an example of private IP address (LAN) +
 _217.147.110.117_ – an example of public IP address (WAN)
-* *jdbc.db*: the name of the OpenHospital database
+* *jdbc.db*: the name of the Open Hospital database
 * *jdbc.username*: the MySQL user allowed to connect and operate on the database
 * *jdbc.password*: the user password
-* *jdbc.port*: the TCP port where the MySQL Server is listening; by default, this port is 3306 but can be changed if needed; anyway, must reflect the MySQL Server settings
+* *jdbc.port*: the TCP port where the MySQL Server is listening; by default, this port is 3306 but can be changed if needed to match the installation
 
-The full address for the db will then result as:
+The full address for the database using the defaults then is:
 
 jdbc:mysql://localhost/oh
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied. +
-NB: Same settings have to be applied in log4.properties (since OpenHospital 1.7); see link:#5-6-log4j-properties[log4j.properties] in this manual._
+NOTE: An application restart is required in order to see the modification applied. +
+
+NOTE: The same settings must be applied in log4.properties (since Open Hospital 1.7); see
+<<log4j-properties,log4j.properties>> in this manual.
 
 === 5.3 dicom.properties
 
-OpenHospital 1.8 and greater versions, come with the dicom.properties file set as follow by default:
+Open Hospital 1.8 and later versions, comes with a dicom.properties file set as follows by default:
 
-image:extracted-media/media/image28.png[image,width=646,height=65]
+[source, properties]
+----
+#dicom.manager.impl=org.isf.dicom.manager.FileSystemDicomManager       	for filesystem
+#dicom.manager.impl=org.isf.dicom.manager.SqlDicomManager       	   	for database
+#dicom.max.size=1024B, 2048B, 1M, 16M, 256M, 512M, 1024M, 1G			size examples
+dicom.manager.impl=org.isf.dicom.manager.SqlDicomManager
+dicom.storage.filesystem=E:\\ISF\\DICOM\\OH_storage
+dicom.max.size=4M
+----
 
-* *dicom.manager.impl*: the java class that implement org.isf.dicom.manager.DicomManagerIntf and that will manage the DICOM persistence operation. This property can take two values:
-** org.isf.dicom.SqlDicomManager : The dicom File is stored in the database
+* *dicom.manager.impl*: the Java class that implements org.isf.dicom.manager.DicomManagerIntf and that will manage the DICOM persistence operation. This property can take two values:
+** org.isf.dicom.SqlDicomManager : The dicom file is stored in the database
 ** org.isf.dicom.FileSystemDicomManager : The dicom file is stored in the file system
-* *dicom.storage.filesystem:* is the value of the first parameter is org.isf.dicom.FileSystemDicomManager, this property tell OpenHospital about the path where the DICOM files will be stored.
-* *dicom.max.size:* is the max allowed size for a dicom/jpg image (the mysql server setting max_allowed_packet should be set with the same or a greater value). If missing default value is "4M"
+* *dicom.storage.filesystem:* if the value of the first parameter is org.isf.dicom.FileSystemDicomManager,
+this property specifies the path where the DICOM files is stored
+* *dicom.max.size:* is the maximum allowed size for a dicom/jpg image (the MySQL server setting max_allowed_packet should be set with the same or a larger value).
+If not specified the default value of "4M" is used
 
 === 5.4 examination.properties
 
-OpenHospital 1.8 and greater versions, comes with the examination.properties file used in the examination module. The file is set as follow by default:
+Open Hospital 1.8 and later versions, comes with the examination.properties file used in the examination module.
+The file is set as follow by default:
 
-image:extracted-media/media/image29.png[image,width=646,height=423]
+[source, properties]
+----
+# This file contains PatientExamination module settings
+LIST_SIZE = 10
+HEIGHT_MIN = 0
+HEIGHT_MAX = 250
+HEIGHT_INIT = 0
+#HEIGHT_STEP = 1
+#WEIGHT_UNIT = kg
+WEIGHT_MIN = 0
+WEIGHT_MAX = 200
+WEIGHT_INIT = 0
+WEIGHT_STEP = 0.1
+#AP_UNIT = mmHg
+AP_MIN_INIT = 80
+AP_MAX_INIT = 120
+#HR_UNIT = bpm
+HR_MIN = 0
+HR_MAX = 240
+HR_INIT = 60
+#TEMP_UNIT = *C
+TEMP_INIT = 36
+TEMP_MIN = 30
+TEMP_MAX = 50
+TEMP_STEP = 0.1
+#SAT_UNIT = %
+SAT_INIT = 98
+SAT_MIN = 50
+#SAT_MAX = 100
+SAT_STEP = 0.1
+HGT_MIN = 30
+HGT_MAX = 600
+HGT_INIT = 80
+DIURESIS_MIN = 0
+DIURESIS_MAX = 2500
+DIURESIS_INIT = 100
+RR_INIT = 20
+RR_MIN = 0
+RR_MAX = 100
+----
 
-* *LIST_SIZE*: the maximum number of examinations that can be view in the history. Must be less than or equal to 10.
-* *HEIGHT_MIN:* the height minimum value (in cm), use to initialize the height slider in the *_Examination_* window.
-* *HEIGHT_MAX:* the height maximum value (in cm), use to initialize the height slider in the *_Examination_* window.
-* *HEIGHT_INIT:* the height default value (in cm).
-* *WEIGHT _MIN:* the Weight minimum value (in Kg), use to initialize the Weight slider in the *_Examination_* window.
-* *WEIGHT _MAX:* the Weight maximum value (in Kg), use to initialize the Weight slider in the *_Examination_* window.
-* *WEIGHT _INIT:* the Weight default value (in Kg).
+* *LIST_SIZE*: the maximum number of examinations that can be viewed in the history. Must be less than or equal to 10
+* *HEIGHT_MIN:* the height minimum value (in cm), used to initialize the height slider in the *_Examination_* window
+* *HEIGHT_MAX:* the height maximum value (in cm), used to initialize the height slider in the *_Examination_* window
+* *HEIGHT_INIT:* the height default value (in cm)
+* *WEIGHT _MIN:* the weight minimum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
+* *WEIGHT _MAX:* the weight maximum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
+* *WEIGHT _INIT:* the weight default value (in Kg)
 * *WEIGHT _STEP:* the step (in Kg) used when moving the weight slider
 * *AP _MIN:* the Arterial pressure minimum value (in mmHg)
 * *AP _MAX:* the Arterial pressure maximum value (in mmHg)
@@ -1169,157 +1413,262 @@ image:extracted-media/media/image29.png[image,width=646,height=423]
 * *TEMP _INIT:* the temperature default value (in °C)
 * *TEMP _MIN:* the temperature minimum value (in °C)
 * *TEMP _MAX:* the temperature maximum value (in °C)
-* *TEMP _STEP:* the temperature step  (in °C) used when moving the slider
+* *TEMP _STEP:* the temperature step (in °C) used when moving the slider
 * *SAT _INIT:* the saturation default value (%)
 * *SAT _MIN:* the saturation minimum value (%)
 * *SAT _STEP:* the saturation step (%) used when moving the slider
 * *HGT_INIT:* = the Hemo Glucose Test default value (in mg/dl)
 * *DIURESIS_INIT:* = the Daily Urine Volume default value (in ml)
-* [#_log4j.properties_1 .anchor]##
 
 === 5.5 [line-through]#h8.properties# (removed)
 
-Removed since version (1.9.1)
+No longer available starting with version 1.9.1.
 
+[#log4j-properties]
 === 5.6 log4j.properties
 
-OpenHospital 1.7 and greater versions, come with the log4j.properties file set as follow by default:
+Starting with Open Hospital version 1.7 the log4j.properties file is set by default to:
 
-image:extracted-media/media/image32.png[image,width=646,height=626]
+[source, properties]
+----
+# logging di default su file, livello FINEST (debug++)
+log4j.rootCategory=FINEST, null
 
-This file is not meant to be modified by the User.
+# Null appender (off)
+log4j.appender.null=org.apache.log4j.varia.NullAppender
 
-Once the system is up and running, the log level can be reduced from "DEBUG" to "INFO", so the size of the log files and the tables are significantly reduced:
+# StdOut Appender (with classes) (not used)
+log4j.appender.StdOut = org.apache.log4j.ConsoleAppender
+log4j.appender.StdOut.layout=org.apache.log4j.PatternLayout
+log4j.appender.StdOut.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m%n
 
-image:extracted-media/media/image33.png[image,width=645,height=17]
+# File Appender (with classes), daily rotation
+log4j.appender.RollingFile = org.apache.log4j.DailyRollingFileAppender
+log4j.appender.RollingFile.DatePattern='.'yyyy-MM-dd
+log4j.appender.RollingFile.File=logs/openhospital.log
+log4j.appender.RollingFile.layout=org.apache.log4j.PatternLayout
+log4j.appender.RollingFile.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m (%l)%n
 
-On the contrary, in case of malfunctions of the application, the log level can be increased to "TRACE", in this way will be shown more details on the operation of the application:
+# DB Appender (table columns)
+log4j.appender.DB=org.apache.log4j.jdbc.JDBCAppender
+log4j.appender.DB.URL=jdbc:mysql://localhost:3306/oh?autoReconnect=true
+log4j.appender.DB.user=isf
+log4j.appender.DB.password=isf123
+log4j.appender.DB.sql=INSERT INTO LOG (LOG_TYPE, LOG_CLASS, LOG_METHOD, LOG_TIME, LOG_MESS, LOG_USER) VALUES (1, '%C', '%M', '%d{yyyy-MM-dd HH:mm:ss}', LEFT('%m', 1024), '%X{OHUser}')
+log4j.appender.DB.layout=org.apache.log4j.PatternLayout
 
-image:extracted-media/media/image34.png[image,width=645,height=17]
+# Assigning appenders to packages
+log4j.category.org.isf=DEBUG,RollingFile,StdOut
+log4j.additivity.org.isf = false
 
-You can even enable the log DB, by adding the respective *appender* if needed:
+# Assigning appenders to Hibernate packages
+# - SQL query will be logged
+# - parameters will be logged with prefix "binding parameter [?]"
+log4j.logger.org.hibernate=INFO,RollingFile,StdOut
+log4j.logger.org.hibernate.SQL=INFO,RollingFile,StdOut
+log4j.logger.org.hibernate.type=INFO,RollingFile,StdOut
+----
 
-image:extracted-media/media/image35.png[image,width=645,height=17]
+This file is not meant to be modified by the user.
+
+Once the system is up and running, the log level can be reduced from "DEBUG" to "INFO", so the log files are
+are significantly reduced in size:
+
+[source, properties]
+----
+log4j.category.org.isf=INFO,RollingFile
+----
+
+Alternatively, in case of malfunctions of the application, the log level can be increased to "TRACE" so more detail on the operation of the application can be recorded:
+
+[source, properties]
+----
+log4j.category.org.isf=TRACE,RollingFile
+----
+
+Logging can be routed to the database (DB) by adding the respective *appender*:
+
+[source, properties]
+----
+log4j.category.org.isf=INFO,RollingFile,DB
+----
+
 
 You can also decide to log only in the standard output (the console window) with:
 
-image:extracted-media/media/image36.png[image,width=645,height=17]
+[source, properties]
+----
+log4j.category.org.isf=INFO,RollingFile,StdOut
+----
 
-The DB appender configuration must be set properly, according with database.properties (see link:#5-2-database-properties[database.properties]), by editing the following lines (in *red* the most important parameters):
+If the DB appender is specified then the configuration must be set to match the those in the database.properties file
+(see <<database-properties,database.properties>>). The most important properties are those highlighted in *red* below:
 
-image:extracted-media/media/image37.png[image,width=645,height=84]
+image:image37.png[image,width=645,height=84]
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the effect of any applied parameter modification.
 
+[#sms-properties]
 === 5.7 sms.properties
 
-OpenHospital 1.8 and greater versions, come with the sms.properties file set as follow by default:
+Starting with Open Hospital version 1.8 a default sms.properties file is included:
 
-image:extracted-media/media/image38.png[image,width=629,height=193]
+[source, properties]
+----
+# Configuration file for SMS Sender
+# MODE = GSM (COM PORT) or HTTP (PROVIDER)
+# GATEWAY = Skebby or empty
+# TIMEOUT = Timeout for the HTTP request
+# LOOP = loop time in seconds
+# ICC = International Calling Code
+MODE = GSM
+GATEWAY = Skebby
+TIMEOUT = 3000
+LOOP = 15
+ICC = +39
+----
 
 * *MODE*: the SMS sender mode. Can take two values:
-** *GSM*: need a GSM modem connected to a COM port. The administrator should configure the SMSGateway/GSM.properties file to set the suitable PORT
-** *HTTP*: need a HTTP API provider.
-* *GATEWAY:* HTTP gateway to use. Required when the MODE is set to GSM.
-* *TIMEOUT:* timeout for the HTTP request. Required when MODE is set to HTTP.
-* *LOOP:* Delay used by the sender to fetch new SMS operations to proceed. The value is in second.
-* *ICC:* the International Country Code that need to be added to the phone numbers that require it.
+** *GSM*: requires a GSM modem connected to a COM port. The administrator should configure the SMSGateway/GSM.properties file to set the suitable PORT.
+** *HTTP*: requires a HTTP API provider.
+* *GATEWAY:* the HTTP gateway to use. Required when the MODE is set to GSM.
+* *TIMEOUT:* the timeout for the HTTP request. Required when MODE is set to HTTP.
+* *LOOP:* the delay used by the sender to fetch new SMS operations. The value is in seconds.
+* *ICC:* the International Country Code that needs to be added to the phone numbers (if required).
 
+[#gsm-properties]
 ==== 5.7.1 GSM.properties
 
-OpenHospital 1.8 and greater versions, come with the GSM.properties file set as follow by default:
+Starting with Open Hospital version 1.8 a default GSM.properties file is included:
 
-image:extracted-media/media/image39.png[image,width=629,height=161]
+[source, properties]
+----
+# Configuration file for SMS Sender GSM
+# PORT = COMx (Windows) or /dev/ttyUSBx (Linux)
+#Mon Dec 01 02:38:30 CET 2014
+CMGS=AT+CMGS\="
+GMM=AT+GMM\r\n
+CMGF=AT+CMGF\=1\r
+CSMP=AT+CSMP\=17,167,0,0\r
+PORT=COM6
+DRIVERNAME=com.sun.comm.Win32Driver
+----
 
-Only the PORT property needs to be modified.
+Typically only the PORT property needs to be modified.
 
-* *PORT:* COM port where the modem is connected.
+* *PORT:* the COM port where the modem is connected
 
 ==== 5.7.2 Skebby.properties
 
-OpenHospital 1.8 and greater versions, come with the Skebby.properties file set as follow by default:
+Starting with Open Hospital 1.8 a default Skebby.properties file is included:
 
-image:extracted-media/media/image40.png[image,width=629,height=112]
+[source, properties]
+----
+# Configuration file for Skebby Provider
+URL = http://gateway.skebby.it/api/send/smseasy/advanced/http.php
+USR =
+PWD =
+TYPE = send_sms_classic
+SENDER_NUMBER =
+SENDER_STRING =
+----
 
-This serve for the implementation of the Skebby HTTP API for sending SMS.
+This file defines the parameters for sending SMS using the Skebby HTTP API.
 
-* *URL:* Url of the Skebby http API.
-* *USR:* the username needs for the authentication on the Skebby server
-* *PWD:* password for the authentication on the Skebby server
-* *TYPE:* SMS type, require by Skebby. You can just leave the default value.
-* *SENDER_NUMBER:* Sender number.
-* *SENDER_STRING:* Sender string, that will replace the sender number in the phone of the recipient.
+* *URL:* The url of the Skebby HTTP API.
+* *USR:* The username for authenticating to the Skebby server.
+* *PWD:* The password for authenticating to the Skebby server.
+* *TYPE:* The SMS type required by Skebby. Typically the default value is used.
+* *SENDER_NUMBER:* The sender number.
+* *SENDER_STRING:* The sender string which will replace the sender number in the phone of the recipient.
 
+[#txtprinter-properties]
 ===  5.8 txtPrinter.properties
 
-OpenHospital 1.7 and greater versions, come with the txtPrinter.properties file set as follow by default:
+Starting with Open Hospital version 1.7 a default txtPrinter.properties file is included:
 
-image:extracted-media/media/image41.png[image,width=645,height=153]
+[source, properties]
+----
+# This file contains text printing informations
+# MODE = TXT, PDF or ZPL
+USE_DEFAULT_PRINTER=yes
+PRINT_AS_PAID=no
+PRINT_WITHOUT_ASK=no
+MODE=PDF
+#TXT_CHAR_HEIGHT=10
+#TXT_CHAR_WIDTH=10
+ZPL_FONT_TYPE=0
+ZPL_ROW_HEIGHT=25
+----
 
-This file will be used only if the RECEIPTPRINTER flag is enabled (see link:#5-1-24receiptprinter[RECEIPTPRINTER] in this document)
+This file will be used only if the RECEIPTPRINTER flag is enabled (see <<receiptprinter,RECEIPTPRINTER>> in this document).
 
-This file has seven parameters, hereby explained:
+The file has seven parameters:
 
-* *USE_DEFAULT_PRINTER*: if it is set to yes OpenHospital will use the default printer, otherwise it will show the system printing dialog so it’s possible to change printer at every print attempt:
+* *USE_DEFAULT_PRINTER*: If it is set to _yes_, Open Hospital will use the default printer, otherwise it will show the system
+printing dialog allowing a change to the printer at every print attempt:
 
+image:image42.png[image,width=291,height=245]
 
-image:extracted-media/media/image42.png[image,width=291,height=245]
+* *PRINT_AS_PAID*: This changes the behavior when a Bill is set to PAID in the Accounting module
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-1-2-11-print-receipt-function[8.2.1.11 Print receipt] function in User’s Guide). +
+ ** If it is set to _yes_, Open Hospital will try to print a receipt just after a Bill is set to PAID +
+ *** A confirmation window will appear (see below), otherwise you must do it after, by press *[.underline]##E##dit Bill* button on the already closed (“C”) bill
 
+image:image43.png[Accountin_print_as_paid.PNG,width=268,height=118]
 
-* *PRINT_AS_PAID*: it will affect the behavior when a Bill is set to PAID in the Accounting module (see *8.2.1.10 Print receipt* function in _User’s Guide_). +
- +
-If it is set to yes OpenHospital will try to print a receipt just after a Bill is set as PAID +
-** +
-**A confirmation window will appear:
-
-image:extracted-media/media/image43.png[Accountin_print_as_paid.PNG,width=268,height=118]
-
-Otherwise you must do it after, by press *[.underline]##E##dit Bill* button on the already closed (“C”) bill
-
-* *PRINT_WITHOUT_ASK*: if set to yes OpenHospital will try to print the receipt without confirmation window
+* *PRINT_WITHOUT_ASK*: if set to yes Open Hospital will try to print the receipt without the confirmation window
 * *MODE*: the MODE can take three values:
-** *TXT*: we are specifying that the bill will be printed as pure text (no graphics)
-** *PDF*: we are specifying that the bill will be printed as PDF
-** *ZPL*: we are specifying that the text printer connected to the system works with ZPL language (an EPL evolution for Zebra Label Printer)
-* *ZPL_FONT_TYPE*: a 0 (zero) value stands for standard character; you may change this value with “A”, “B”, “C”, etc... according with the device datasheet, in order to obtain a better look
+** *TXT*: the bill is printed as pure text (no graphics)
+** *PDF*: the bill will be printed as a PDF
+** *ZPL*: the text printer connected to the system works with ZPL language (an EPL evolution for Zebra Label Printer)
+* *ZPL_FONT_TYPE*: a 0 (zero) value stands for standard character; you may change this value with “A”, “B”, “C”, etc. according with the device datasheet, in order to obtain a better look
 * *ZPL_FONT_SIZE*: an integer value to adjust the character size in order to obtain a better look
 
-The best way to set these parameters according with your device is to set them one by one and check the different results until you reach the best fit.
+The best way to set these parameters for your device is to set them one by one and check the different results until you reach the best fit.
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
+[#xmpp-properties]
 === 5.9 xmpp.properties
 
-OpenHospital 1.7 and greater versions, come with the xmpp.properties file set as follow by default:
+Open Hospital 1.7 and greater versions, come with the xmpp.properties file set as follow by default:
 
-image:extracted-media/media/image44.png[image,width=646,height=48]
+[source, properties]
+----
+# This file contains Xmpp Server informations
+DOMAIN=127.0.0.1
+PORT=5222
+----
 
-This file will be used only if the XMPPMODULEENABLED flag is enabled (see link:#5-1-28-xmppmoduleenabled[XMPPMODULEENABLED] in this document)
+This file will be used only if the XMPPMODULEENABLED flag is enabled (see <<xmppmoduleenabled,XMPPMODULEENABLED>> in this document).
 
-In order to use the Communication module (see *13 Communication* in the _User’s Guide_) you must install an XMPP Server separately on the OH Server, let’s say side by side with MySQL Server.
+In order to use the Communication module
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#13-communication-communication[13 Communication] in the User’s Guide) you must install an
+XMPP Server separately on the OH Server, typically on the same location as the MySQL Server.
 
 The most common XMPP Server is the free and open-source project Ignite Openfire® (http://www.igniterealtime.org/projects/openfire/) available for Linux, Windows and Mac.
 
-Once the XMPP Server is installed, active and running we may set the two parameters in the xmpp.properties file as follow:
+Once the XMPP Server is installed, active and running set the two parameters in the xmpp.properties file as follows:
 
 * *DOMAIN* – the IP address of the XMPP server (it could be the same of MySQL Server)
 * *PORT* – 5222 or another if set differently
 
-_*[.underline]#NB#*: An application restart is required in order to see the modification applied._
+NOTE: An application restart is required in order to see the modification applied.
 
 ==== 5.9.1 OpenFire Settings
 
 The XMPP module needs some knowledge about XMPP protocol and how an XMPP server works.
 
-Every time you log in OH, it will create an OpenFire user with same username&password (even if passwords are saved differently in OH and OpenFire DB). For this reason, OH "admin" user will be in conflict with OpenFire one, so you will not be able to log in as admin and to chat.
+Every time you log in OH, it will create an OpenFire user with same username and password (even if passwords are saved differently in OH and OpenFire DB). For this reason, OH "admin" user will be in conflict with OpenFire one, so you will not be able to log in as admin and to chat.
 
-_*[.underline]#NB#*: If you need admin user to chat with other users you may consider to create another "superuser" in OH under the "admin" group._
+NOTE: If you need admin user to chat with other users you may consider to create another "superuser" in OH
+under the "admin" group.
 
-In order to allow users to see each other and communicate via XMPP protocol, they must belong to the same OpenFire "group" and have the other users in their own "_roster_" (you can find "group" and "roster" deep explanation in online docs).
+In order to allow users to see each other and communicate via XMPP protocol, they must belong to the same OpenFire "group" and have the other users in their own "_roster_" (you can find "group" and "roster" deep explanation in online documentation).
 
 Please follow these settings:
 
-[arabic]
 . Install OpenFire server (better if from zip file) on a writable path in your OS
 . Set in both OpenFire and xmpp.properties an IP address rather than the FQDN (e.g. 127.0.0.1)
 . Set OpenFire to use Embedded DB
@@ -1329,43 +1678,50 @@ Please follow these settings:
 
 === 5.10 Bundles
 
-Bundles are the language (or translation) files provided with OpenHospital. As told in link:#5-1-1-language[LANGUAGE] chapter, OpenHospital 1.7 and greater versions, come with different available languages in folder bundles/ within the package file:
+Bundles are the language (or translation) files provided with Open Hospital. As described in the
+<<language,LANGUAGE>> chapter, Open Hospital 1.7 and later versions, come with different available languages in folder *bundles/* within the package file:
 
 *language_XY.properties*
 
 where XY is an international country code.
 
-They are property files (basically text file), made by hundreds of *key = value* couples.
+They are property files (a text file), made by hundreds of *key = value* pairs.
 
-All files must be encoded in *UTF-8* in order to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...) 
+All files must be encoded in *UTF-8* in order to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
 ==== 5.10.1 New Translations
 
-In order to create a new translation or to fix some labels in the OpenHospital is enough to create a copy of the English one, rename it with the new country code in place of the “XY” in the filename, and start translating with a simple text editor.
+In order to create a new translation one can simply copy the English file, rename it with the new country code in
+place of the “XY” in the filename, and start translating with a simple text editor.   A text editor can also be used to modify
+existing translations that are incorrect.
 
-For instance, if you want to create an Arab translation, you may create a new bundle from the English one, by copying _language_en.properties_ into a *new file* _language_ar.properties_.
+For instance, if you want to create an Arab translation, you copy a new bundle from the English one by copying _language_en.properties_ into a *new file* _language_ar.properties_.
 
-Then you can edit the Arab file and set the LANGUAGE parameter to *ar* to start testing your translation.[#_Users_and_Groups .anchor]##
 
+Then you can edit the Arab file and set the LANGUAGE parameter to *ar* to start testing your translation.
+
+<<<
+
+[#reports]
 == 6 Reports
 
-Reports in OpenHospital are produced with JasperReports® technology that allow to design a report in a WYSIWYG (What You See Is What You Get) way, connect it to a datasource (DB), test it, modify it and then compile it to use it in the application software.
+Reports in Open Hospital are produced with JasperReports® technology that allows one  to design a report in a WYSIWYG (What You See Is What You Get) way, connect it to a datasource (DB), test it, modify it and then compile it to use it in the application software.
 
-OpenHospital reports are all contained in reports rpt/ folder (see link:#folders[Folders] in this document). Each report consists of two files:
+Open Hospital reports are all contained in reports rpt/ folder (see <<folders,Folders>> in this document). Each report consists of two files:
 
 * a .*jrxml* file: JasperReport XML file, that can be modified with a proper editor
-* a .*jasper* file: Jasper file, that is the compiled version that can be run in OpenHospital; this file is produced on the jrxml base
+* a .*jasper* file: Jasper file, that is the compiled version that can be run in Open Hospital; this file is produced on the jrxml base
 * some reports could have also one or more *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English)
 
 The Jasper editor to create and modify Jasper reports is iReport®, a free and open-source software.
 
-With iReport® is possible to edit OpenHospital reports and re-compile them in order to be used in OpenHospital application.
+With iReport® it is possible to edit Open Hospital reports and re-compile them in order to be used in Open Hospital application.
 
 === 6.1 Compatibility: JasperStudio 6.14.0 and iReport® 3.0.0
 
-_*Warning*_: since version v1.11, OpenHospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or greater.
+WARNING: Since version v1.11, Open Hospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or later.
 
-For previous OpenHospital's versions, in order to have compliant and fully-working reports for OpenHospital you must use iReport® version 3.0.0 (Classic) to edit and compile them.
+WARNING: For previous Open Hospital's versions, in order to have compliant and fully-working reports for Open Hospital you must use iReport® version 3.0.0 (Classic) to edit and compile them.
 
 === 6.2 Links
 
@@ -1377,86 +1733,110 @@ iReport® 5.6.0 - https://sourceforge.net/projects/ireport/files/iReport/
 
 iReport® 3.0.0 (Classic) - https://sourceforge.net/projects/ireport/files/iReport%20%28classic%29/[http://sourceforge.net/projects/ireport/files/iReport (classic)/]
 
-== 7 Installing OpenHospital 1.11.0 in Eclipse EE
+<<<
 
-*_Warning_*: _Since version 1.9.1, the code is available on GitHub at these links:_
+== 7 Installing Open Hospital 1.11.0 in Eclipse EE
 
-* https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc]
+WARNING: Since version 1.9.1, the code is available on GitHub at these links:
+https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
+https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui], and
+https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
-_Please use EGit (Eclipse Plugin for Git) in order to clone the code into your Eclipse)_
+_Please use EGit (Eclipse Plugin for Git) in order to clone the code into your Eclipse instance._
 
-Assuming Eclipse EE, MySQL 5.0.x and the Java Virtual Machine 1.8 or higher (Java8 or greater) have already been installed on the computer, this chapter will focus on cloning the version 1.11 on Eclipse J2EE (or Eclipse EE) environment.
+Assuming Eclipse EE, MySQL 5.0.x and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+are already installed on the computer, this chapter will focus on cloning the version 1.11 on Eclipse J2EE (or Eclipse EE)
+environment.
 
-Please follow these link https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[EGit User Guide - Working with remote Repositories]
+Please follow these
+link:https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[EGit User Guide - Working with remote Repositories].
 
 === 7.1 Run the Project
 
-[.underline]#Before to run the project, the DB must be created as explained in chapter 3.1.2# [.underline]####MySQL Server and OpenHospital DB
+NOTE: Before running the project, the DB must be created as explained in
+chapter <<mysql-server,MySQL Server and Open Hospital DB>>.
 
-In order to run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is ok, the splash screen will appear. Have a look to the Eclipse console for any error or warning.
+In order to run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is OK, the splash screen will appear. If not, look in the Eclipse console for any error or warning messages.
 
-image:extracted-media/media/image1.jpeg[image,width=390,height=298]
+image:image1.jpeg[image,width=390,height=298]
 
-OH’s advanced features require “native” libraries, with the same language of the computer’s operative system. Right-click on project’s name, then select _Run As -> Run Configurations_
+Open Hospitals’s advanced features require “native” libraries generated to match the computer’s operating system. Right-click on project’s name, then select _Run As -> Run Configurations_:
 
-image:extracted-media/media/image62.PNG[image,width=604,height=377]
+image:image62.PNG[image,width=604,height=377]
 
 A “Run Configurations” window opens. Choose Java Application -> <application’s name> - Menu (1) on this example. Select the “Main” tab, write “angal” on the “Project” field and check if the “Main class” is org.isf.menu.gui.Menu.
 
-Select the “Arguments” tab and fill the “VM arguments” path typing: -Dsun.java2d.dpiaware=false -Djava.library.path=lib\native\<OS name>
+Select the “Arguments” tab and fill the “VM arguments” path typing (on a single line):
+[source]
+----
+-Dsun.java2d.dpiaware=false -Djava.library.path=lib\native\<OS name>
+----
 
-<OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows) according with the folders schema you find in the related folder “native”. Click on “Run” to close the window and run the application.
+<OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows)
+according with the folders schema you find in the related folder “native”.
+Click on “Run” to close the window and run the application.
 
-image:extracted-media/media/image63.png[image,width=604,height=337]
+image:image63.png[image,width=604,height=337]
 
 Now that the run configuration settings have been selected, OH can be launched by just clicking on the “Run” button (shown below by an arrow).
 
-image:extracted-media/media/image64.png[image,width=604,height=377] +
-image:extracted-media/media/image65.png[image,width=604,height=377]
+image:image64.png[image,width=604,height=377] +
+image:image65.png[image,width=604,height=377]
 
-Because of default settings, OH’s first run will not show the login window. The system is set in “single user” mode as default. Proof is the “SINGLEUSER=yes” string on the third row of the generalData.properties file. This is way different in the real world, where OH must be accessible to the administrator and logged users only. Click on the triangle near to the project’s name, do the same on the “rsc” subfolder and then double-click on the generalData.properties file.
+Because of the default settings, Open Hospital’s first run does not show the login window. The system defaults to “single user” mode
+as default. This can be verified by the “SINGLEUSER=yes” string on the third row of the <<generaldata-properties,generalData.properties>> file.
+In production use this is unacceptable as Open Hospital must be accessible only to the administrator and logged users.
+Click on the triangle near to the project’s name, do the same on the “rsc” subfolder and then double-click on the <<generaldata-properties,generalData.properties>> file.
 
-image:extracted-media/media/image66.png[image,width=604,height=273]
+image:image66.png[image,width=604,height=273]
 
 Replace “yes” with “no” on the “SINGLEUSER” row. Press CTRL+S (or Command+S on Mac) to save the change.
-After the splash window, a “login” window opens. Click on the drop-down menu to choose the role. To access as administrator, select “admin” and type the password. Default is “admin”. The administrator has the right to register users as guests. Guests have to choose “guest” from the drop-down menu and then type their password.
+Now rerun the application and after the splash window, a “login” window opens.
+Click on the drop-down menu to choose the role. To access as the administrator, select “admin” and type the password.
+The default is “admin”. The administrator has the right to register users as guests.
+Guests have to choose “guest” from the drop-down menu and then type their password.
 
-image:extracted-media/media/image67.png[image,width=604,height=377] +
+image:image67.png[image,width=604,height=377] +
 
 If the password is not correct, an error message is shown, asking the user to try again.
 
-In order to better understand the processes underneath the software you may also enable the “Standard Output” in log4j.properties as explained in chapter link:#5-6-log4j-properties[log4j.properties].
+In order to better understand the processes underneath the software you may also enable the “Standard Output” in
+log4j.properties as explained in the chapter <<log4j-properties,log4j.properties>>.
 
-== 8 Update OpenHospital
+<<<
 
-=== 8.1 Update OpenHospital (non-portable)
+[#update-open-hospital]
+== 8 Update Open Hospital
 
-_*[.underline]#NB#*: Following instructions only applies between “official releases” downloaded from SourceForge website._
+=== 8.1 Update Open Hospital (non-portable)
 
-New releases, as well as this Manual and User Manual, are regularly released on SourceForge platform at the link: +
+NOTE: Following instructions only applies between “official releases” downloaded from the SourceForge website.
+
+New releases, as well as this Manual and the User Manual, are regularly released on SourceForge platform at the link: +
 https://sourceforge.net/projects/openhospital/files/
 
 There are two type of releases:
 
-[arabic]
 . Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
 . Minor Releases: only the third number changes (e.g. **1.8.**1 -> **1.8.**2)
 
 *Minor Releases*:
 
-Changes are in the CHANGELOG file
+Changes are found in the CHANGELOG file.
 
-Minor Releases (if not otherwise specified) don’t need changes to the DB, so you can replace you working copy on each client with the new one and connect it to the same DB (see database.properties, link:#5-6-log4j-properties[log4j.properties]).
+Minor Releases (if not otherwise specified) do not need changes to the DB, so you can replace you working copy on each client with the new one and connect it to the same DB
+(see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
-Only pay attention to keep files that have been changed, especially configuration settings (see Configuration Files). The most common way is to backup your working copy and re-apply those settings in the new one (see Backup of code and settings (Software)).
+Remember to keep files that have been changed, especially configuration settings (see <<config-files,Configuration Files>>).
+The most common way is to backup your working copy and re-apply those settings in the new installation
+(see the <<backup-restore,Backup & Restore>> chapter).
 
 *Major Releases*:
 
-Changes are in the CHANGELOG file
+Changes are found in the CHANGELOG file.
 
-Major Releases includes always changes to the DB, and these changes are given by the different scripts included in the mysql folder (e.g.):
+Major Releases always have changes to the DB, and these changes are implemented via different scripts included in the
+mysql folder (e.g.):
 
 [cols=",",options="header",]
 |===
@@ -1528,74 +1908,86 @@ step_33_grants_on_patientfolder.sql
 
 |===
 
-So, the update process will be as follow:
+Thus the update process is as follows:
 
-[arabic]
-. Close the program if still running
-. Backup you current DB for safety (see Backup & Restore)
+. Close the program if it is still running
+. Backup you current DB for safety (see <<backup-restore,Backup & Restore>>)
 . Open a terminal in the folder mysql/ (e.g.):
-+
-*C:\WINDOWS\system32> cd D:\OpenHospital_1_8_0\mysql*
-+
-*D:\OpenHospital_1_8_0\mysql> +
-*
-. and run the following commands (e.g.):
-+
-*D:\OpenHospital_1_8_3\mysql> mysql –u root -p*
-+
-*Enter password: **** +
-*
+
+[source,shell]
+----
+C:\WINDOWS\system32> cd D:\OpenHospital_1_8_0\mysql
+
+D:\OpenHospital_1_8_0\mysql>
+----
+
+[start=4]
+. Run the following commands (e.g.):
+[source,shell]
+----
+D:\OpenHospital_1_8_3\mysql> mysql –u root -p
+
+Enter password: ****
+----
+[start=5]
 . Using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
-+
-*mysql> +
-*
-. We launch one by one all the scripts which differs from previous version command:
-+
-*mysql> source step_34_slim_opd_table.sql*
-+
-*mysql> source step_35_doctors_log.sql*
-+
-*mysql> source step_36_patientexamination_and_rollback_step23.sql*
-+
-*mysql> source step_37_suppliers_table.sql*
-+
-*mysql> source step_38_dicom.sql*
-+
-*mysql> source step_39_patientfolder_submenu.sql*
-+
-*... +
-*
-. Take notes if any error message occurs and report to: +
+[source,shell]
+----
+mysql>
+----
+[start=6]
+. We launch all the scripts one by one that differ from previous version; for example:
+[source,shell]
+----
+mysql> source step_34_slim_opd_table.sql
+
+mysql> source step_35_doctors_log.sql
+
+mysql> source step_36_patientexamination_and_rollback_step23.sql
+
+mysql> source step_37_suppliers_table.sql
+
+mysql> source step_38_dicom.sql
+
+mysql> source step_39_patientfolder_submenu.sql
+
+...
+----
+[start=7]
+. Take notes if any error message occurs and report them to: +
 https://sourceforge.net/p/openhospital/support-requests/
-. If everything is done OK, replace you working copy on each client with the new one and connect it to the same DB (see database.properties, log4j.properties). Only pay attention to keep files that have been changed, especially configuration settings (see Configuration Files). The most common way is to backup your working copy and re-apply those settings in the new one (see Backup of code and settings (Software)).
-. Start the program and check from log files (OpenHospita_1_8_0/logs) the new version running and no error messages.
+. If everything is successful, replace your working copy on each client with the new one and connect it to the same DB
+(see <<database-properties,database.properties>> and <log4j-properties,log4j.properties>>).
+Remember to keep files that have been changed, especially any changes to the configuration settings
+(see <<config-files,Configuration Files>>). The most common way is to backup your working copy and re-apply those
+settings in the new one (see <<backup-restore,Backup & Restore>>).
+. Start the program and check from log files (OpenHospital_1_8_0/logs) to ensure the new version running and has no error messages.
 
-=== 8.2 Update OpenHospital “portable”
+=== 8.2 Update Open Hospital “portable”
 
-_*NB*: OpenHospital portable is not meant to be used in production environment so, if you want to update a portable version in order to keep the previous data, we strongly suggest to switch to a fully installation as follow:_
+NOTE: Open Hospital portable is not meant to be used in production environment so, if you want to update a portable version in order to keep the previous data, we strongly suggest to switch to a full installation as follows:
 
 [arabic]
 . MySQL Server installation
-. Start OpenHospital portable and while running (port 3307):
+. Start Open Hospital portable and while running (port 3307):
 [loweralpha]
-.. Backup of data (Database)
-. Close OpenHospital portable
-. Restore of data (Database)
-. Change settings to point to the new database (see database.properties and log4j.properties)
+.. <<backup-data,Backup of data (Database)>>
+. Close Open Hospital portable
+. <<restore-data,Restore of data (Database)>>
+. Change settings to point to the new database (see <<database-properties,database.properties>> and <log4j-properties,log4j.properties>>)
 
-In order to update the OpenHospital “portable” version without perform a full installation, please contact us at: info@informaticisenzafrontiere.org
+In order to update the Open Hospital “portable” version without performing a full installation, please contact us at:
+info@informaticisenzafrontiere.org and specify:
 
-Specifing:
-
-* Brief history of your installation and use of OpenHospital
-* OpenHospital version used and version you need
+* Brief history of your installation and use of Open Hospital
+* Open Hospital version used and version you need
 * Country and language used
-* The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[OpenHospital Assessment online-form] filled.
+* The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] filled.
 
 <<<
+
 == 9 License
 
-
-image:extracted-media/media/by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
