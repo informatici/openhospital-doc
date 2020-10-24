@@ -332,7 +332,7 @@ If you see the application small-scaled, probably you are using an high-dpi disp
 Once the required version is downloaded, you may start it by launching the related script inside the package:
 
 * *oh.sh* in the Linux version
-* *autorun.bat* in the Windows version
+* *oh.bat* in the Windows version
 
 No other configuration is needed.
 
