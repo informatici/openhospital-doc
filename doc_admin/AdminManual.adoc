@@ -429,11 +429,11 @@ In the Open Hospital zip file you will find the following folder tree structure 
 
 In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
-* *poh-linux-_<arch>_-0.0.5-core-_<version>_*/
+* *poh-linux-_<arch>_-0.0.6-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
 ** jdk-11.0.8+10/ or jdk8u252-b09-jre/ - Java Virtual Machine
-** mysql-5.7.30-linux-glibc2.12-x86_64/ - MySQL Server and MySQL DB
+** mysql-5.7.30-linux-glibc2.12-<arch>/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
 ** var/ - working folder
