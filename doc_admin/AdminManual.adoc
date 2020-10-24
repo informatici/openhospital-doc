@@ -107,7 +107,7 @@ For instance, on a Microsoft Windows® system you will have MySQL Workbench® as
 
 The best approach for installation is to use the command-line mysql client which uses essentially the same commands and syntax for every platform.
 
-NOTE: The DB creation and the software itself are  only tested with MySQL Server 5.0.x.  Any other version may have problems during the DB creation process.
+NOTE: The DB creation and the software itself are  only tested with MySQL Server 5.7.x.  Any other version may have problems during the DB creation process.
 
 ===== 3.1.2.1 MySQL Server installation
 
@@ -429,16 +429,16 @@ In the Open Hospital zip file you will find the following folder tree structure 
 
 In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
-* *poh-linux-_<arch>_-0.0.5-core-_<version>_*/
+* *poh-linux-_<arch>_-0.0.6-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
-** zulu8.46.0.19-ca-jre8.0.252-linux_i686/ or jdk8u252-b09-jre/ - Java Virtual Machine
-** mysql-5.0.51a-linux-i686/ - MySQL Server and MySQL DB
+** jdk-11.0.8+10/ or jdk8u252-b09-jre/ - Java Virtual Machine
+** mysql-5.7.30-linux-glibc2.12-x86_64/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
 ** var/ - working folder
 ** CHANGELOG - Last version brief changelog
-** database.sql (DB initialization script, automatically removed after first run)
+** database.sql (DB initialization script, automatically renamed to database.sql.imported after first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
 ** *oh.sh Launcher for Portable-Linux*
