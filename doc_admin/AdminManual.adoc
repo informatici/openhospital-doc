@@ -317,7 +317,7 @@ image:image100.png[oh.ico,width=32,height=32]
 
 === 3.2 Portable Open Hospital
 
-Open Hospital, since version 1.2.0, has been distributed in a portable format.
+Open Hospital, since version 1.2.0, has also been distributed in a portable format.
 
 Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server and the DB.  This package can be copied and run everywhere, carrying together all the inserted data.
 
