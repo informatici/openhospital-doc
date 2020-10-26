@@ -192,7 +192,7 @@ query-cache_size = 256M
 
 MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
 
-For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in http://dev.mysql.com/doc/refman/5.0/en/identifier-case-sensitivity.html_
+For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html
 
 ===== 3.1.2.2 Create Open Hospital DB
 
@@ -1744,7 +1744,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
 _Please use EGit (Eclipse Plugin for Git) in order to clone the code into your Eclipse instance._
 
-Assuming Eclipse EE, MySQL 5.0.x and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+Assuming Eclipse EE, MySQL 5.7.x and the Java Virtual Machine 1.8 or higher (Java8 or greater)
 are already installed on the computer, this chapter will focus on cloning the version 1.11 on Eclipse J2EE (or Eclipse EE)
 environment.
 
