@@ -323,8 +323,8 @@ Since Open Hospital is a Java software program, it is portable by definition. Th
 
 Since the JRE and MySQL are not platform-independent and come in several different versions depending on the platform, we have:
 
-* *Portable Open Hospital for Linux* platforms (embedding Java JDK and MySQL for Linux, 32 or 64bit)
-* *Portable Open Hospital for Windows* platforms (embedding Java JDK and MySQL for Windows)
+* *Portable Open Hospital for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
+* *Portable Open Hospital for Windows* platforms (embedding Java JRE and MySQL for Windows)
 
 WARNING: Beginning with Open Hospital v1.11, Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
 If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
