@@ -107,7 +107,7 @@ For instance, on a Microsoft Windows® system you will have MySQL Workbench® as
 
 The best approach for installation is to use the command-line mysql client which uses essentially the same commands and syntax for every platform.
 
-NOTE: The DB creation and the software itself are  only tested with MySQL Server 5.0.x.  Any other version may have problems during the DB creation process.
+NOTE: The DB creation and the software itself are only tested with MySQL Server 5.7.x.  Any other version may have problems during the DB creation process.
 
 ===== 3.1.2.1 MySQL Server installation
 
@@ -192,7 +192,7 @@ query-cache_size = 256M
 
 MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
 
-For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in http://dev.mysql.com/doc/refman/5.0/en/identifier-case-sensitivity.html_
+For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html
 
 ===== 3.1.2.2 Create Open Hospital DB
 
@@ -317,24 +317,24 @@ image:image100.png[oh.ico,width=32,height=32]
 
 === 3.2 Portable Open Hospital
 
-Open Hospital, since version 1.2.0, has been distributed in a portable format.
+Open Hospital, since version 1.2.0, has also been distributed in a portable format.
 
 Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server and the DB.  This package can be copied and run everywhere, carrying together all the inserted data.
 
 Since the JRE and MySQL are not platform-independent and come in several different versions depending on the platform, we have:
 
-WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
-If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
+* *Portable Open Hospital for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
+* *Portable Open Hospital for Windows* platforms (embedding Java JRE and MySQL for Windows)
 
-* *Portable Open Hospital for Linux* platforms (embedding Java1.8 and MySQL5 for Linux, 32 or 64bit)
-* *Portable Open Hospital for Windows* platforms (embedding Java1.8 and MySQL5 for Windows)
+WARNING: Beginning with Open Hospital v1.11, Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
+If you see the application small-scaled, probably you are using an high-dpi display, in such case there are some solutions https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
 Once the required version is downloaded, you may start it by launching the related script inside the package:
 
 * *oh.sh* in the Linux version
-* *autorun.bat* in the Windows version
+* *oh.bat* in the Windows version
 
-No other configuration is needed.
+No other configuration is needed. On Linux, additional options can be shown by executing *oh.sh -h*.
 
 NOTE: If you want to use a Portable Open Hospital for Linux from a USB key you need to make sure that the file permissions in the
 archive remain unchanged once extracted, otherwise you will not be able to start the launcher or use the application in an
@@ -429,16 +429,16 @@ In the Open Hospital zip file you will find the following folder tree structure 
 
 In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
-* *poh-linux-_<arch>_-0.0.5-core-_<version>_*/
+* *poh-linux-_<arch>_-0.0.6-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
-** zulu8.46.0.19-ca-jre8.0.252-linux_i686/ or jdk8u252-b09-jre/ - Java Virtual Machine
-** mysql-5.0.51a-linux-i686/ - MySQL Server and MySQL DB
+** jdk-11.0.8+10/ or jdk8u252-b09-jre/ - Java Virtual Machine
+** mysql-5.7.30-linux-glibc2.12-<arch>/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
 ** var/ - working folder
 ** CHANGELOG - Last version brief changelog
-** database.sql (DB initialization script, automatically removed after first run)
+** database.sql (DB initialization script, automatically renamed to database.sql.imported after first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
 ** *oh.sh Launcher for Portable-Linux*
@@ -1744,7 +1744,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
 _Please use EGit (Eclipse Plugin for Git) in order to clone the code into your Eclipse instance._
 
-Assuming Eclipse EE, MySQL 5.0.x and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+Assuming Eclipse EE, MySQL 5.7.x and the Java Virtual Machine 1.8 or higher (Java8 or greater)
 are already installed on the computer, this chapter will focus on cloning the version 1.11 on Eclipse J2EE (or Eclipse EE)
 environment.
 
