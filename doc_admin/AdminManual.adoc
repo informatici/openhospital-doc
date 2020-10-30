@@ -451,7 +451,7 @@ In Portable Open Hospital for Windows you will find the following folder tree st
 
 * *poh-win32-0.0.5-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
-** jdk8u252-b09-jre/ - Java Virtual Machine
+** jdk-11.0.9+11-jre/ or jdk8u252-b09-jre/ - Java Virtual Machine
 ** modified/ - working folder
 ** mysql/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
