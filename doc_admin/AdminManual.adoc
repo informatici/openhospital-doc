@@ -432,7 +432,7 @@ In Portable Open Hospital for Linux you will find the following folder tree stru
 * *poh-linux-_<arch>_-0.0.6-core-_<version>_*/
 ** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
-** jdk-11.0.8+10/ or jdk8u252-b09-jre/ - Java Virtual Machine
+** jdk-11.0.9+11-jre/ (64bit) or zulu11.43.21-ca-jre11.0.9-linux_i686/ (32bit) - Java Virtual Machine
 ** mysql-5.7.30-linux-glibc2.12-<arch>/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
 ** tmp/ - working folder
