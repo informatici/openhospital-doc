@@ -26,6 +26,6 @@ A list of open issues is available on [Jira][jira].
  [adminmanual]: https://github.com/informatici/openhospital-doc/blob/develop/doc_admin/AdminManual.adoc
  [usermanual]: https://github.com/informatici/openhospital-doc/tree/develop/doc_user
  [contribution-guide]: https://openhospital.atlassian.net/wiki/display/OH/Contribution+Guidelines
- [jira]: https://openhospital.atlassian.net/issues/
+ [jira]: https://openhospital.atlassian.net/jira/software/c/projects/OP/issues/
  [asciidoc]: https://asciidoc.org/
  [ruby]: https://www.ruby-lang.org/en/
