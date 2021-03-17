@@ -71,10 +71,10 @@ WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer suppor
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
-* Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for fully compliance)
+* Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for full compliance)
 * Install the MySQL server on a computer that will act as the OH “server”
-* Copy the Open Hospital application on every client (it may be used on the server too)
-* Configure each Open Hospital copy to point to the server (using the hostname or the IP address)
+* Copy the Open Hospital application on every client (it may be installed on the server also)
+* Configure each Open Hospital copy to point to the MySQL server (using the hostname or the IP address)
 
 For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
@@ -231,13 +231,13 @@ Next launch the main script “create_all_en.sql” with the command:
 mysql> source create_all_en.sql
 ----
 
-NOTE: Since version 1.8.0 you may install with different language data sets by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
+NOTE: Since version 1.8.0 you can install the data with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
 
-NOTE: If the error "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
+NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
 client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
 
 The server processes the create script and after some time it is ready again for a new prompt. At this point, the DB has been
-created and we can check it with the command:
+created and it can be checked with the command:
 
 [source, shell]
 ----
@@ -287,13 +287,13 @@ Open Hospital comes with several configuration files called “properties files�
 
 We have to specify:
 
-* the *IP address* of the machine where the MySQL Server has been installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g. 192.168.1.100)
+* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g. 192.168.1.100)
 * the “isf” user *password*, if changed from “isf123”
 * the MySQL Server *Port Number*, if changed from “3306”
 
 NOTE: These settings are required for every Open Hospital copy, that is to say, on every client.
 
-More information on these files can be found in the sections' <<database-properties,database.properties>> and
+More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
 ==== 3.1.4 Run Open Hospital
@@ -350,7 +350,7 @@ architecture, the full installation version is recommended.
 [#backup-data]
 ==== 3.3.1 Backup of data (Database)
 
-There are several ways to backup and restore *data* with MySQL. We suggest the use of the common MySQL client such as MySQL Workbench® (e.g.):
+There are several ways to back up and restore *data* with MySQL. We suggest the use of the common MySQL client such as MySQL Workbench® (e.g.):
 
 From https://stackoverflow.com/a/18379189:
 
@@ -1051,7 +1051,7 @@ To use the SetupGSM utility just follow these instructions:
 
 image:image25.png[image,width=293,height=120]
 [start=4]
-. If the name of the device is the one meant to be used with the system then just click “yes”, otherwise click “no” and the scan will continue
+. If the name of the device is the one meant to be used with the system then just click “yes”, otherwise click “no”, and the scan will continue
 . Once you click “yes” the GSM.properties file will be automatically modified by the utility
 
 
@@ -1350,13 +1350,13 @@ dicom.storage.filesystem=E:\\ISF\\DICOM\\OH_storage
 dicom.max.size=4M
 ----
 
-* *dicom.manager.impl*: the Java class that implements org.isf.dicom.manager.DicomManagerIntf and that will manage the DICOM persistence operation. This property can take two values:
-** org.isf.dicom.SqlDicomManager : The dicom file is stored in the database
-** org.isf.dicom.FileSystemDicomManager : The dicom file is stored in the file system
+* *dicom.manager.impl*: the Java class that implements org.isf.dicom.manager.DicomManagerInterface and that manages the DICOM persistence operation. This property accepts on of the following:
+** org.isf.dicom.SqlDicomManager: The dicom file is stored in the database
+** org.isf.dicom.FileSystemDicomManager: The dicom file is stored in the file system
 * *dicom.storage.filesystem:* if the value of the first parameter is org.isf.dicom.FileSystemDicomManager,
-this property specifies the path where the DICOM files are stored
+this property specifies the path where the DICOM files are stored.
 * *dicom.max.size:* is the maximum allowed size for a dicom/jpg image (the MySQL server setting max_allowed_packet should be set with the same or a larger value).
-If not specified the default value of "4M" is used
+If not specified the default value of "4M" is used.
 
 === 5.4 examination.properties
 
@@ -1607,7 +1607,7 @@ ZPL_FONT_TYPE=0
 ZPL_ROW_HEIGHT=25
 ----
 
-This file will be used only if the RECEIPTPRINTER flag is enabled (see <<receiptprinter,RECEIPTPRINTER>> in this document).
+This file is used only if the RECEIPTPRINTER flag is enabled (see <<receiptprinter,RECEIPTPRINTER>> in this document).
 
 The file has seven parameters:
 
@@ -1647,7 +1647,7 @@ DOMAIN=127.0.0.1
 PORT=5222
 ----
 
-This file will be used only if the XMPPMODULEENABLED flag is enabled (see <<xmppmoduleenabled,XMPPMODULEENABLED>> in this document).
+This file is used only if the XMPPMODULEENABLED flag is enabled (see <<xmppmoduleenabled,XMPPMODULEENABLED>> in this document).
 
 To use the Communication module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#13-communication-communication[13 Communication] in the User’s Guide), you must install an
@@ -1666,7 +1666,7 @@ NOTE: An application restart is required to see the modification applied.
 
 The XMPP module needs some knowledge about XMPP protocol and how an XMPP server works.
 
-Every time you log in Open Hosptial, it will create an OpenFire user with the same username and password (even if passwords are saved
+Every time you log into Open Hospital, it will create an OpenFire user with the same username and password (even if passwords are saved
 differently in OH and OpenFire DB). For this reason, OH "admin" user conflict with OpenFire one, so you will not be able to
 log in as admin and to chat.
 
@@ -1687,13 +1687,13 @@ Please follow these settings:
 === 5.10 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
-<<language,LANGUAGE>> chapter, Open Hospital 1.7 and later versions, come with different available languages in folder *bundles/* within the package file:
+<<language,LANGUAGE>> chapter, Open Hospital 1.7 and later versions, comes with different available languages in the folder *bundles/* within the package file:
 
 *language_XY.properties*
 
 where XY is an international country code.
 
-They are property files (a text file), made by hundreds of *key = value* pairs.
+These files are property files (a text file), which contains multiple *key = value* pairs containing localized text for the language specified.
 
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
@@ -1781,7 +1781,7 @@ Select the “Arguments” tab and fill the “VM arguments” path typing (on a
 ----
 
 <OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows)
-according to the folders schema you find in the related folder “native”.
+according to the folder's schema you find in the related folder “native”.
 Click on “Run” to close the window and run the application.
 
 image:image63.png[image,width=604,height=337]
@@ -1987,10 +1987,10 @@ NOTE: Open Hospital portable is not meant to be used in a production environment
 To update the Open Hospital “portable” version without performing a full installation, please contact us at:
 info@informaticisenzafrontiere.org and specify:
 
-* A brief history of your installation and use of Open Hospital
-* Open Hospital version used and version you need
-* Country and language used
-* The https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] filled.
+* A brief history of your installation and your use of Open Hospital
+* The current Open Hospital version and the version you want to move to
+* Your country and the language used
+* Complete the https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] form
 
 <<<
 
