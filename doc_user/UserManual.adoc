@@ -73,7 +73,7 @@ or an area of the window (for example, *Data table*).
 
 * Each button always has a single letter with an underscore. You can select the functionality offered by the button by
 pressing the “Alt” key and at the same time the “underlined” key (in the example of *[.underline]##P##harmacy* you
-press “Alt” and “P”)*.* This behavior is common thoughout the application and allows the user to operate (almost)
+press “Alt” and “P”)*.* This behavior is common throughout the application and allows the user to operate (almost)
 without the use of the mouse. In this document the “Alt” key and the “P” key will be indicated as “Alt + P”.
 
 .Click with the mouse on the button or press "Alt + P" to enter the *Pharmacy*
@@ -87,7 +87,7 @@ area. Areas can be a *Selection panel*, a *Data table*, or a *Buttons panel* (se
 image:image3.png[Window areas,width=642,height=464]
 
 * To highlight an entry (for example, a single line in a *Data table*) you click the mouse on the entry.
-The entry (the entire line) is then highlighted in blue. This behavior is valid thoughout the application (see example below):
+The entry (the entire line) is then highlighted in blue. This behavior is valid throughout the application (see example below):
 
 image:image4.png[Highlight Line,width=509,height=296]
 
@@ -803,7 +803,7 @@ image:image48.png[image,width=240,height=174]
 
 === 7.3 Laboratory Extended
 
-The Lab functionality cam be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask your Administrator how to do it.
+The Lab functionality can be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask your Administrator how to do it.
 
 ==== 7.3.1 New Laboratory Browsing
 
@@ -1327,7 +1327,7 @@ NOTE: Wards can be defined by the Administrator. Ask your Administrator how to d
 
 ====  10.2.2 Search Patient Enhanced
 
-One cah optimize memory usage when the number of registered patients becomes huge, by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+One can optimize memory usage when the number of registered patients becomes huge, by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
 Once the enhanced search has been enabled the new *_Patients browser_* window looks like following:
 
