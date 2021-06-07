@@ -154,7 +154,7 @@ The following fields are available to select or narrow the resulting matches:
 * **Date. “**DATE From” and “DATE To” allows for the selection of all visits performed during the specified period
 * **Age. “**Age From” and “Age To” allows for the selection of the patients by age
 * *Sex.* Allows for the selection of all the patients by sex: All / Male / Female
-* *Type of patient.* Allows for the selection of all the visits by type of attendance: All / New / Readmittance
+* *Type of patient.* Allows for the selection of all the visits by type of attendance: All / New / Re-Attendance
 
 After providing the selection criteria, press the *[.underline]##S##earch* button.
 The counter at the bottom of the window indicates how many visits match the specified criteria
@@ -195,7 +195,7 @@ The second and third list still contains all diseases.
 _Example: Disease Types can be defined by the Administrator. Ask your Administrator how to do it or see
 <<settings,Settings>> in this document._
  +
-* *Diagnosis.* A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “readmittance”
+* *Diagnosis.* A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance”
 it does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
 during the same visit the Doctor finds other concurrent pathologies thus here possibility is given to record
 until a maximum of three (the first being the only one mandatory). +
@@ -256,7 +256,7 @@ The OPD Extended module affords the following improvements:
 * Calendar to choose the visit date (1);
 * OPD number now is visible (2): it is the progressive number per year automatically set by the system, one can change the value needed. The OPD number MUST be unique for each year;
 * Registered Patient (3): before choosing a disease, you MUST first select a patient from the drop-down list; you can even fast search the patient with the search field nearby by typing part of its name or code; this will improve reliability for reports and statistics, and thus service to the patients by knowing his/her history.
-* Once the patient is selected and a previous OPD visit is found, special fields will be populated with the most recent visit of the patient (4), thus his/her personal data (5), the readmittance checkbox will be selected automatically (6);
+* Once the patient is selected and a previous OPD visit is found, special fields will be populated with the most recent visit of the patient (4), thus his/her personal data (5), the re-attendance checkbox will be selected automatically (6);
 * You can now set the next appointment date (7). This will automatically schedule a visit, visible in *_Therapy management_*. 
 * In the case you want to insert a new attendance for this patient you can check the "new attendance" check box on and proceed normally;
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "new-attendance" check box;
