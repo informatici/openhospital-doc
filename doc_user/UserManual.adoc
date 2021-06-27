@@ -315,8 +315,8 @@ If the pharmaceutical quantity is zero it will be shown in GRAY and the square i
 The following functions are accessible from the *Buttons panel* of the *_Pharmaceutical Browser_* window:
 
 * *[.underline]##N##ew* to register a new pharmaceutical
-* *[.underline]##E##dit* to modify an already registered pharmaceutical.
-* *[.underline]##D##elete* to delete a pharmaceutical.
+* *[.underline]##E##dit* to modify a registered pharmaceutical
+* *[.underline]##D##elete* to delete a pharmaceutical
 * *[.underline]##E##xport* to export the pharmaceuticals to a CSV file (Excel)
 * *[.underline]##S##tock* to show the report of stock quantities
 * *Stoc[.underline]##k##Card* to show the movements history for a certain pharmaceutical (you must select it in the list first)
@@ -665,7 +665,7 @@ image:image39.png[WardPharmacy_new.PNG,width=456,height=424]
 
 As mentioned previously, only discharging movements are allowed in this functionality. So, the sole information required is the following:
 
-* *Patient* or *Internal Use* or *Another ward*: you may select an already registered patient by clicking on *[.underline]##P##ick Patient* button so the movement is associated with his/her ID or select *Internal Use* and type a description to specify that the movement is not related to a patient. You may also select *Another ward* and choose the destination ward from the list provided.
+* *Patient* or *Internal Use* or *Another ward*: you may select a registered patient by clicking on *[.underline]##P##ick Patient* button so the movement is associated with his/her ID or select *Internal Use* and type a description to specify that the movement is not related to a patient. You may also select *Another ward* and choose the destination ward from the list provided.
 * *Medicals*: by pressing the *[.underline]##M##edical* button you will be asked for the drug to give to that patient; first a window will appear to let you select the drug (the only ones you may have in the ward as a result of a previous discharging movement in the *_Pharmaceutical Stock Browser_*) and then a second window to specify the quantity; multiply of half-piece are allowed.
 
 image:image40.png[WardPharmacy_medical.PNG,width=273,height=129]image:image41.png[WardPharmacy_quantity.PNG,width=231,height=139]
@@ -893,8 +893,8 @@ The following functions are accessible from the *Buttons panel* of the *_Patient
 
 * *[.underline]##T##oday* (button on top of the window) to show on *Data table* only the bills of the current day
 * *[.underline]##N##ew Bill* to insert a new bill
-* *[.underline]##E##dit Bill* to modify an already stored bill if its status is “O” (Open)
-* *[.underline]##D##elete Bill* to delete an already stored bill
+* *[.underline]##E##dit Bill* to modify a stored bill if its status is “O” (Open)
+* *[.underline]##D##elete Bill* to delete a stored bill
 * *[.underline]##R##eceipt* to print the bill receipt
 * *Report* to print a variety of reports
 * *[.underline]##C##lose* to exit from the function *_Patients Bills Management_* and return to the *Accounting* menu
@@ -922,9 +922,9 @@ Data shown on the *Bill Panel* area are:
 
 * *Date*: it is the date and time of the bill
 * *Patient*: it is the patient associated with the bill
-* *List*: it is the PriceList that will be used for this bill +
+* *List*: it is the Price List that will be used for this bill +
  +
-NOTE: PriceLists can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Price Lists can be defined by the Administrator. Ask your Administrator how to do it or see
 <<settings,Settings>> in this document.
 
 Data shown on the *Item Panel* area are:
@@ -958,7 +958,7 @@ There are several types of Bill entries. They are identified by the button on th
 * *[.underline]##M##edical* to enter bill entries of pharmaceuticals
 * *[.underline]##O##peration* to enter bill entries of operations
 * *[.underline]##E##xam* to enter bill entries of exams
-* *[.underline]##O##ther* to enter other prices defined in the PriceList
+* *[.underline]##O##ther* to enter other prices defined in the Price List
 * *[.underline]##C##ustom* to enter custom items defined on the fly
 
 NOTE: Types can be defined by the Administrator. Ask your Administrator how to do it or see
@@ -1163,8 +1163,8 @@ image:image71.png[image,width=594,height=263]
 The following functions are accessible from the *Buttons panel* of the window *_Patient Vaccine Browser_* window**:**
 
 * *[.underline]##N##ew* to insert a new vaccination
-* *[.underline]##E##dit* to modify an already stored vaccination
-* *[.underline]##D##elete* to delete an already stored vaccination
+* *[.underline]##E##dit* to modify a stored vaccination
+* *[.underline]##D##elete* to delete a stored vaccination
 * *[.underline]##C##lose* to exit from the function Patient Vaccines and return to the main menu
 
 Furthermore, a search function is available using the *Selection panel* on the left of the window.
@@ -1288,8 +1288,8 @@ The following data are shown in the *_Patient Browser_* window:
 The following functions are accessible from the *Buttons panel* of the window *_Patient Browser_* window**:**
 
 * *[.underline]##N##ew Patient* to insert a new patient
-* *[.underline]##E##dit Patient* to modify an already stored patient
-* *Dele[.underline]##t##e Patient* to delete an already stored patient
+* *[.underline]##E##dit Patient* to modify an existing patient
+* *Dele[.underline]##t##e Patient* to delete an existing patient
 * *[.underline]##A##dmission* to manage the admission of the patient in the hospital
 * *[.underline]##E##xamination* to manage the patient examination
 * *[.underline]##O##PD* to start an OPD visit on the selected patient
@@ -1665,7 +1665,7 @@ The *Data table* shows a summary of all the outpatients (OPD) visits and all the
 The following functions are accessible from the *Buttons panel* of the window *_Patient Data_*:
 
 * *[.underline]##E##DIT*: to modify data of an admission or an outpatient visit
-* *[.underline]##D##ELETE*: to delete an already stored admission
+* *[.underline]##D##ELETE*: to delete an existing admission
 * *[.underline]##M##alnutrition Control*: to create, modify or delete malnutrition control data of a patient
 * *[.underline]##C##lose*: to exit from the function *_Patient Data_* and return to the *_Patient Browser_* window
 
@@ -2239,7 +2239,7 @@ One of the Administration tasks is the setup of Open Hospital through the *[.und
 
 Once you have pressed the *[.underline]##S##ettings* button from the main menu you access the *_Settings_* menu. From this menu you have the following functions available:
 
-* *[.underline]##T##ypes*: will bring to the Types menu
+* *[.underline]##T##ypes*: to define and manage the various _types_ listed in the menu
 * *[.underline]##H##ospital*: to set some Hospital information (name, address, telephone, email, etc.)
 * *[.underline]##W##ard*: to define which departments are in the hospital
 * *[.underline]##D##isease*: to define which diseases are diagnosed in the hospital
@@ -2253,7 +2253,7 @@ Once you have pressed the *[.underline]##S##ettings* button from the main menu y
 
 ===  14.2 Types ([.underline]##T##ypes)
 
-Once you have pressed the *[.underline]##T##ypes* button on the *_Settings_* menu you access the *_Types_* menu:
+Once you have pressed the *[.underline]##T##ypes* button on the *_Settings_* menu the *_Types_* menu is presented:
 
 .Press the *[.underline]##T##ypes* button or “Alt + T” to open the Types Menu
 [frame=none]
@@ -2263,7 +2263,7 @@ Once you have pressed the *[.underline]##T##ypes* button on the *_Settings_* men
 |image:image0_DefaultGeneralDataMenu.png[Settings Sub-Menu,width=185,height=527]|image:image0_DefaultGeneralDataTypesMenu.png[Settings Types Menu,width=235,height=707]
 |===
 
-From the *_Types_* menu you have the following functions available:
+From the *_Types_* menu one can define and manage the following types or functions:
 
 * *[.underline]##A##dmission Type*: the way the patient is admitted to the hospital +
 _i.e. Ambulance, Self, Referral, etc._
@@ -2271,155 +2271,149 @@ _i.e. Ambulance, Self, Referral, etc._
 _i.e. Healed, Unchanged, Dead, etc._
 * *De[.underline]##l##ivery Type*: the ways the mothers are assisted in childbirth +
 _i.e. Normal Delivery, Caesarean Section, etc._
-* *Delive[.underline]##r##y Result Type*: the result you are interested to track in reporting +
+* *Delive[.underline]##r##y Result Type*: the various childbirth results for reporting +
 _i.e. Live Birth, Newborn Death, Fresh Still Birth, etc._
-* *Disease [.underline]##T##ype*: the way you need to group similar diseases +
+* *Disease [.underline]##T##ype*: the way similar diseases are grouped +
 _i.e. Epidemic, Maternal, etc._
-* *[.underline]##E##xam Type*: the way you need to group similar laboratory exams +
+* *[.underline]##E##xam Type*: the way similar laboratory exams are grouped+
 _i.e. Haematology, Parasitology, Serology, etc._
-* *Medical[.underline]##s## Stock Mov Type*: the kind of movements, meant as charge or discharge, you may perform in the Medical Store +
+* *Medical[.underline]##s## Stock Mov Type*: the kind of movements, meant as charge or discharge, that are performed in the Medical Store +
 _i.e. Charge, Discharge, Donation, Correction, etc._
-* *[.underline]##M##edicals Type*: the way you need to group similar pharmaceuticals +
+* *[.underline]##M##edicals Type*: the way similar pharmaceuticals are grouped +
 _i.e. Drugs, Chemical, Laboratory, etc._
-* *[.underline]##O##peration Type*: the way you need to group similar surgical operations +
+* *[.underline]##O##peration Type*: the way similar surgical operations are grouped +
 _i.e. Abdominal, Obstetrical, Orthopaedic, etc._
-* *[.underline]##P##regnant Treatment*: the treatments the hospital can provide to mothers +
+* *[.underline]##P##regnant Treatment*: the treatments provided to expectant mothers +
 _i.e. First dose with SP, Second dose with SP, etc._
-* *Ot[.underline]##h##er Prices*: extra services the hospital can provide (it will be reflected in Prices lists) +
+* *Ot[.underline]##h##er Prices*: extra services the hospital provides (it will be reflected in Prices lists) +
 _i.e. Admission Fee, Food, POP, etc._
-* *A[.underline]##g##e Type*: the age classifications you use in the hospital +
+* *A[.underline]##g##e Type*: the age classifications used by the hospital +
 _i.e. Newborn, Childhood, Adult, Elderly, etc._
-* *[.underline]##V##accine Type*: the way you need to group similar vaccines +
+* *[.underline]##V##accine Type*: the way similar vaccines are grouped +
 _i.e. Child, Adult, Pregnant, etc._
-* *Dicom Type*: the way you need to group similar Dicom +
+* *DICOM Type*: the way similar DICOM types are grouped +
 _i.e. X-Ray, CT-Scan, NMR, etc._
 
 
 ====  14.2.1 Admission Types ([.underline]##A##dmission Type)
 
-Once you have pressed the *[.underline]##A##dmission Type* button from the *_Types_* menu you access the *_Disease Type Browser_* window as shown below:
+Once the *[.underline]##A##dmission Type* button from the *_Types_* menu is pressed, the *_Admission Type Browser_* window shown below appears:
 
-image:image140.png[Admission Types.PNG,width=453,height=203]
+image:image140.png[Admission Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if it is still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Admission Types defined in this functionality will be reflected in the Admission function (see
+The Admission Types defined in this functionality are used in the Admission function (see
 <<start-the-admission-of-a-patient,Start the admission of a patient>> and
 <<discharge-of-a-patient,Discharge of a patient>> in this document).
 
 ====  14.2.2 Discharge Types ([.underline]##D##ischarge Type)
 
-Once you have pressed the *[.underline]##D##ischarge Type* button from the *_Types_* menu you access the *_Discharge Type Browser_* window as shown below:
+Once the *[.underline]##D##ischarge Type* button from the *_Types_* menu is pressed, the *_Discharge Type Browser_* window shown below appears:
 
-image:image141.png[Discharge Types.PNG,width=453,height=194]
+image:image141.png[Discharge Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Discharge Types defined in this functionality will be reflected in the Admission function (see
+The Discharge Types defined in this functionality are used in the Admission function (see
 <<start-the-admission-of-a-patient,Start the admission of a patient>> and
 <<discharge-of-a-patient,Discharge of a patient>> in this document).
 
 ====  14.2.3 Delivery Types (De[.underline]##l##ivery Type)
 
-Once you have pressed on *De[.underline]##l##ivery Type* button from the *_Types_* menu you access the *_Delivery Type Browser_* window as shown below:
+Once the *De[.underline]##l##ivery Type* button from the *_Types_* menu is pressed, the *_Delivery Type Browser_* window shown below appears:
 
-image:image142.PNG[Discharge Types.PNG,width=432,height=194]
+image:image142.PNG[Discharge Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Delivery Types defined in this functionality will be reflected in the Admission function (see
+The Delivery Types defined in this functionality are used in the Admission function (see
 <<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
 
 ====  14.2.4 Delivery Result Types (Delive[.underline]##r##y Result Type)
 
-Once you have pressed the *Delive[.underline]##r##y Result Type* button from the *_Types_* menu you access the *_Delivery Result Type Browser_* window as shown below:
+Once the *Delive[.underline]##r##y Result Type* button from the *_Types_* is pressed, the *_Delivery Result Type Browser_* window shown below appears:
 
-image:image143.png[Discharge Types.PNG,width=432,height=194]
+image:image143.png[Discharge Result Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Delivery Result Types defined in this functionality will be reflected in the Admission function (see
+The Delivery Result Types defined in this functionality are used in the Admission function (see
 <<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
 
 ====  14.2.5 Disease Types (Disease [.underline]##T##ype)
 
-Once you have pressed the *Disease [.underline]##T##ype* button from the *_Types_* menu you access the *_Disease Type Browser_* window as shown below:
+Once the *Disease [.underline]##T##ype* button from the *_Types_* menu is pressed, the *_Disease Type Browser_* window shown below appears:
 
-____
-image:image144.PNG[image,width=408,height=183]
-____
+image:image144.PNG[Disease Type,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Disease Types defined in this functionality will be reflected in the entire application, like in Disease definition or in OPD (see
+The Disease Types defined in this functionality are used throughout the application.  For example, in definition of Diseases or in OPD (see
 <<disease,Disease>> and <<create-a-new-patient-visit,Create a new patient visit>> in this document).
 
 [#exam-types]
 ====  14.2.6 Exam Types ([.underline]##E##xam Type)
 
-Once you have pressed the *[.underline]##E##xam Type* button from the *_Types_* menu you access the *_Exam Types Browser_* window as shown below:
+Once the *[.underline]##E##xam Type* button from the *_Types_* menu is pressed, the *_Exam Type Browser_* window shown below appears:
 
-____
-image:image145.png[image,width=407,height=183]
-____
+image:image145.png[Exam Type,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Exam Types defined in this functionality will be reflected in the Laboratory function (see
+The Exam Types defined in this functionality are used in the Laboratory function (see
 <<laboratory,Laboratory>> in this document).
 
 ====  14.2.7 Medicals Stock Movement Types (Medical[.underline]##s## Stock Mov Type)
 
-Once you have pressed the *Medical[.underline]##s## Stock Mov Type* button from the *_Types_* menu you access the *_Medicals Stock Movement Types Browser_* window as shown below:
+Once the *Medical[.underline]##s## Stock Mov Type* button from the *_Types_* menu is pressed, the *_Medicals Stock Movement Types Browser_* window shown below appears:
 
-____
-image:image146.png[image,width=407,height=183]
-____
+image:image146.png[Medicals Stock Movement Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *[.underline]##N##ew* button, you access the *_New Medical Stock Movement Type_* window as shown below:
 
-image:image147.png[New Medical Stock Movement.PNG,width=250,height=227]
+image:image147.png[New Medical Stock Movement,width=250,height=227]
 
-The allowed types are “+” and “-“ and this means that any kind of movements can be simplified as a charging (+) or a discharging (-) of the stock.
+The allowed types are “+” and “-“ and this means that any kind of movements are either a charging (+) or a discharging (-) of the stock.
 
-Examples could be:
+Examples are:
 
 * Positive correction (+)
 * Negative correction (-)
@@ -2427,185 +2421,184 @@ Examples could be:
 * Lost (-)
 * ...
 
-The Medical Stock Movement Types defined in this functionality will be reflected in the Pharmaceutical Stock function (see
+The Medical Stock Movement Types defined in this functionality are used in the Pharmaceutical Stock function (see
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
 
-====  14.2.8 Medical Types ([.underline]##M##edical Type)
+====  14.2.8 Medical Types ([.underline]##M##edicals Type)
 
-Once you have pressed the *[.underline]##M##edical Type* button from the *_Types_* menu you access the *_Medical Type Browser_* window as shown below:
+Once the *[.underline]##M##edicals Type* button from the *_Types_* menu is pressed, the *_Medical Type Browser_* window shown below appears:
 
-____
-image:image148.png[image,width=407,height=183]
-____
+image:image148.png[Medical Type,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Medical Types defined in this functionality will be reflected in the entire application, like in the Pharmacy function and Pharmaceutical Stock Ward (see
+The Medical Types defined in this functionality are used throughout the application. For example,
+in the Pharmacy function and Pharmaceutical Stock Ward (see
 <<insert-a-new-pharmaceutical,Insert a new pharmaceutical>> and
 <<search-ward-pharmacy-movements,Search Ward Pharmacy movements>> in this document).
 
 ====  14.2.9 Operation Types ([.underline]##O##peration Type)
 
-Once you have pressed the *[.underline]##O##peration Type* button from the *_Types_* menu you access the *_Operation Type Browser_* window as shown below:
+Once the *[.underline]##O##peration Type* button from the *_Types_* menu is pressed, the *_Operation Type Browser_* window shown below appears:
 
-image:image149.png[Discharge Types.PNG,width=432,height=194]
+image:image149.png[Operation Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Operation Types defined in this functionality will be reflected in the Admission function (see
-<<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>  in this document).
+The Operation Types defined in this functionality are used in the Admission function (see
+<<insert-or-modify-surgery-data,Insert or Modify Surgery Data>> in this document).
 
 ==== 14.2.10 Pregnant Treatment Types ([.underline]##P##regnant Treatment Type)
 
-Once you have pressed the *[.underline]##P##regnant Treatment Type* button from the *_Types_* menu you access the *_Pregnant Treatment Type Browser_* window as shown below:
+Once the *[.underline]##P##regnant Treatment Type* button from the *_Types_* menu is pressed, the *_Pregnant Treatment Type Browser_* window shown below appears:
 
-image:image150.png[Discharge Types.PNG,width=432,height=194]
+image:image150.png[Pregnant Treatment Types,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Pregnant Treatment Types defined in this functionality will be reflected in the Admission function (see
+The Pregnant Treatment Types defined in this functionality are used in the Admission function (see
 <<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
 
 [#other-prices]
 ==== 14.2.11 Other Prices (Ot[.underline]##h##er Prices)
 
-Once you have pressed the *Ot[.underline]##h##er Prices* button in the *_Types_* menu you access the *_Other Prices Browser_* window as shown below:
+Once the *Ot[.underline]##h##er Prices* button in the *_Types_* menu is pressed, the *_Other Prices Browser_* window shown below appears:
 
-image:image151.png[Discharge Types.PNG,width=377,height=194]
+image:image151.png[Other Prices,width=377,height=194]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new price (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing price (the code can be changed)
-* *[.underline]##D##elete*: to delete an already existing price (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new price (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing price (the code can be changed)
+* *[.underline]##D##elete*: to delete an existing price (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-By pressing the *[.underline]##N##ew* button, you access the *_New Medical Stock Movement Type_* window as shown below:
+To create a new Price, press the *[.underline]##N##ew* button, and the *_New Price_* window  shown below appears:
 
-image:image152.png[New Prices.PNG,width=400,height=180]
+image:image152.png[New Price,width=400,height=180]
 
-To insert a New Price, you must input the following data:
+To insert a new Price, you must input the following data:
 
-* *Code*: is the price code and should be unique; there are no restrictions on this field since the application will use an internal code to uniquely identify the item
+* *Code*: is the price code and it should be unique; there are no restrictions on this field since the application will use an internal code to uniquely identify the item
 * *Description*: the price description that may include the code for a faster search
 * *OPD*: if the price is applicable with OPD (not yet implemented)
 * *IPD*: if the price is applicable with IPD (not yet implemented)
-* *Daily*: if the price should be applied for every bed-day (not yet implemented) or just once; if checked, you will be asked  “How many days?” when using this item; see the following *_Days_* window:
+* *Daily*: if the price should be applied for every bed-day (not yet implemented) or just once; if checked, you will be asked  “How many days?” when using this item while managing a patient's bill; see the following *_Days_* window:
 
-image:image153.png[New Prices_daily.PNG,width=297,height=124]
+image:image153.png[New Prices_daily,width=297,height=124]
 
 * *Discharge*: if the item has to be treated as a negative value so it will act as a discharge in the billing statement (i.e., Charge-Off, Free-of-charge, etc.).
-* *Undefined*: if the item has no value in the PriceList and the amount was set as “on the fly” while editing a bill; if checked, you will be asked for “How much is it?” in the following *_Undefined_* window:
+* *Undefined*: if the item has no value in the Price List and the amount was set as “on the fly” while editing a bill; if checked, you will be asked for “How much is it?” in the following *_Undefined_* window:
 
-image:image154.png[New Prices_undefined.PNG,width=297,height=124]
+image:image154.png[New Prices_undefined,width=297,height=124]
 
-The Other Prices defined in this functionality will be reflected in the Accounting and PriceLists functions (see
+The Other Prices defined in this functionality are used in the Accounting and Price List functions (see
 <<insert-a-new-bill,Insert a new bill>> and <<prices,Prices>> in this document).
 
 ==== 14.2.12 Age Types (A[.underline]##g##e Type)
 
-Once you have pressed the *A[.underline]##g##e Type* button in the *_Types_* menu you access the *_Age Type Browser_* window as shown below:
+Once the *A[.underline]##g##e Type* button in the *_Types_* menu is pressed, the *_Age Type Browser_* window shown below appears:
 
-image:image155.png[Age Types.PNG,width=456,height=170]
+image:image155.png[Age Types,width=456,height=170]
 
-Note that age ranges are fixed and the Administrator can only change their values to best fit the health normative in the country.
+Note that age ranges are fixed and only the Administrator can change their values to best fit the health normative in the country.
 
-By pressing the *[.underline]##E##dit* button, the table allows you to modify only the age values and the button becomes a *[.underline]##S##ave* button now:
+By pressing the *[.underline]##E##dit* button, the table allows you to modify only the age values and the button changes to *[.underline]##S##ave*.
 
-image:image156.png[Age Types_edit.PNG,width=456,height=170]
+image:image156.png[Age Types_edit,width=456,height=170]
 
-By double-clicking on each value, you can change it by typing the new value. Then by pressing the *[.underline]##S##ave* button, the new information is stored in the system.
+By double-clicking on each value, you can change it by typing a new value. Then by pressing the *[.underline]##S##ave* button, the new information is stored in the system.
 
-Only integer values are allowed and every range must be *contiguous* and not *overlap* any previous or following value.
+Only integer values are allowed and every range must be *contiguous* and may not *overlap* any previous or following value.
 
-For instance, in the following case, ranges Late Childhood and Adolescent are not *contiguous* and ages 14 and 15 are not defined in any range:
+For example, in the following case, ranges _Late Childhood_ and _Adolescent_ are not *contiguous* and ages 14 and 15 are not defined in any range:
 
-image:image157.png[image,width=642,height=313]
+image:image157.png[Not Contiguous,width=642,height=313]
 
-In following example, the ranges Late Childhood and Adolescent are *overlapped* since both start with age 6:
+In following example, the ranges _Late Childhood_ and _Adolescent_ *overlap* since both start with age 6:
 
-image:image159.png[image,width=642,height=313]
+image:image159.png[Overlapped,width=642,height=313]
 
-The Age Types defined in this functionality will be reflected in the Patient Extended functionality (see
+The Age Types defined in this functionality are used in the Patient Extended functionality (see
 <<insert-a-new-patient-extended,Insert a new Patient Extended>> in this document).
 
 ==== 14.2.13 Vaccine Types ([.underline]##V##accine Type)
 
-Once you have pressed the *[.underline]##V##accine Type* button in the *_Types_* menu you access the *_Vaccine Type Browser_* window as shown below:
+Once the *[.underline]##V##accine Type* button in the *_Types_* menu is pressed, the *_Vaccine Type Browser_* window shown below appears:
 
-image:image161.png[Discharge Types.PNG,width=432,height=194]
+image:image161.png[Vacine Type,width=453,height=203]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Vaccine Types defined in this functionality will be reflected in the Vaccine function (see
+The Vaccine Types defined in this functionality are used in the Vaccine function (see
 <<vaccines,Vaccines>> in this document).
 
 [#dicom-types]
-==== 14.2.14 Dicom Types (Dicom Type)
+==== 14.2.14 DICOM Types (DICOM Type)
 
-Once you have pressed the *Dicom Type* button in the *_Types_* menu you access the *_DICOM Type Browser_* window as shown below:
+Once the *DICOM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window shown below appears:
 
-image:image242.png[Discharge Types.PNG,width=432,height=194]
+image:image242.png[DICOM Types,width=432,height=194]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
-* *[.underline]##N##ew*: to enter a new type (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing type (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Dicom Types defined in this functionality will be reflected in the Dicom Load function (see
-<dicom-viewer,Dicom Viewer>> in this document).
+The DICOM Types defined in this functionality are used in the DICOM Load function (see
+<<dicom-viewer,DICOM Viewer>> in this document).
 
 === 14.3 Hospital ([.underline]##H##ospital)
 
-Once you have pressed the *[.underline]##H##ospital* button in the *_Settings_* menu you can access the *_Hospital Information_* window as shown below:
+Once the *[.underline]##H##ospital* button in the *_Settings_* menu is pressed, the *_Hospital Information_* window shown below appears:
 
-image:image162.png[Hospital.PNG,width=282,height=254]
+image:image162.png[Hospital,width=282,height=274]
 
-By pressing the *[.underline]##E##dit* button, you can the values that set the facility information where you are installing the software:
+By pressing the *[.underline]##E##dit* button, you can edit the values to match those of where the software is installed.
 
-image:image163.png[Hospital_edit.PNG,width=282,height=254]
+image:image163.png[Hospital_edit,width=282,height=274]
 
-By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected in the entire application, like in the reports heading (see
+By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected throughout the entire application; for example, in the reports heading (see
 <<statistics,Statistics>> in this document).
 
 === 14.4 Ward ([.underline]##W##ard)
 
-Once you press the *[.underline]##W##ard* button in the *_Settings_* menu you can access the *_Ward Browser_* window as shown below:
+Once the *[.underline]##W##ard* button in the *_Settings_* menu is pressed, the *_Ward Browser_* window shown below appears:
 
-image:image164.png[Ward Browser.PNG,width=640,height=269]
+image:image164.png[Ward Browser,width=640,height=269]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *[.underline]##N##ew*: to enter a new ward (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing ward (the code must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing ward (cannot be deleted if still used somewhere in the application)
+* *[.underline]##N##ew*: to enter a new ward (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing ward (the code cannot be changed)
+* *[.underline]##D##elete*: to delete an existing ward (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *[.underline]##N##ew* button, you access the *_New Ward_* window as shown below:
 
-image:image165.png[Ward Browser_new.PNG,width=336,height=355]
+image:image165.png[Ward Browser_new,width=336,height=355]
 
 To insert a new Ward, you must provide the following required inputs:
 
@@ -2621,32 +2614,32 @@ To insert a new Ward, you must provide the following required inputs:
 NOTE: Using this function one can define wards with 0 (zero) beds but with a pharmacy.
 This allows for "logical” departments (rather than physical) to manage pharmacy movements.
 
-The Wards defined in this functionality will be reflected in the entire application, like in Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
+The Wards defined in this functionality are used throughout the entire application.  See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
 <<admission-patient,Admission/Patient>>, <<pharmaceutical-stock,Pharmaceutical Stock>> and
 <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
 [#disease]
 === 14.5 Disease ([.underline]##D##isease)
 
-Once you press the *[.underline]##G##eneral Data* button in the *_Settings_* menu you access the *_Diseases Browser_* window as shown below:
+Once the *[.underline]##D##isease* button in the *_Settings_* menu is pressed, the *_Diseases Browser_* window shown below appears:
 
-image:image166.png[image,width=467,height=345]
+image:image166.png[Diseases,width=467,height=345]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *Selected Type*: you may filter the list by selecting only one DiseaseType
-* *[.underline]##N##ew*: to enter a new disease (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing disease (the code and type must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing disease (it is set as not present in OPD or in IPD)
+* *Selected Type*: you may filter the list by selecting only one Disease Type
+* *[.underline]##N##ew*: to enter a new disease (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing disease (the code and type cannot be changed)
+* *[.underline]##D##elete*: to delete an existing disease (it is set as not present in OPD or in IPD)
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window appears as shown below:
 
 image:image167.PNG[image,width=267,height=139]
 
-In editing mode, you cannot change the type and code but only modify the Description and specify if the disease should appear in only in OPD, or  Admissions, or in both.
+In editing mode, you cannot change the type and code but only modify the Description and specify if the disease should appear in only in OPD, or Admissions, or in both.
 
-By removing the check from all checkboxes (OPD, IPD IN, and IPD out) you are performing a *[.underline]##D##elete* action, that is disabling the disease from appearing in the application. This action can be undone by editing the disease again.
+By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) you are performing a *[.underline]##D##elete* action, that is disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
 The Diseases defined in this functionality are reflected throughout the entire application, like in the Admission module and the OPD module (see
 <<admission-patient,Admission/Patient>> and
@@ -2655,29 +2648,29 @@ The Diseases defined in this functionality are reflected throughout the entire a
 [#exam]
 === 14.6 Exam ([.underline]##E##xams)
 
-Once you press the *[.underline]##E##xams* button in the *_Settings_* menu you access the *_Exam Browser_* window as shown below:
+Once the *[.underline]##E##xams* button in the *_Settings_* menu is pressed, the *_Exam Browser_* window shown below appears:
 
-image:image168.png[image,width=633,height=190]
+image:image168.png[Exam,width=633,height=190]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *Find*: you may filter the list by typing a keyword.
-* *Selected Type*: you may filter the list by selecting only one ExamType
-* *[.underline]##N##ew*: to enter a new exam (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing exam (the code and type must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing exam (it is set as not present in OPD or in IPD)
+* *Search*: you may filter the list by typing a keyword.
+* *Selected Type*: you may filter the list by selecting only one Exam Type
+* *[.underline]##N##ew*: to enter a new exam (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing exam (the code and type cannot be changed)
+* *[.underline]##D##elete*: to delete an existing exam (it is set as not present in OPD or in IPD)
 * *Re[.underline]##s##ults*: to define possible results for the selected exam
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *[.underline]##E##dit* button, the *_Edit Exam_* window appears as shown below:
 
-image:image169.png[Exam Browsing_edit.PNG,width=373,height=240]
+image:image169.png[Exam Browsing_edit,width=373,height=240]
 
 In editing mode, you cannot change type, code and procedure but only modify the Description and the default value.
 
 By pressing the *[.underline]##N##ew* button, the *_New Exam_* window appears as shown below:
 
-image:image170.png[Exam Browsing_edit.PNG,width=373,height=240]
+image:image170.png[Exam Browsing_new,width=373,height=240]
 
 To insert a new Exam, you must input the following data:
 
@@ -2690,101 +2683,100 @@ To insert a new Exam, you must input the following data:
 [#results]
 ====  14.6.1 Results (Re[.underline]##s##ults)
 
-Once you have inserted a new exam you may define the set of results it can have by first selecting the exam in the *_Exam Browser_* window and then by pressing the *Re[.underline]##s##ults* button.
+Once an exam is defined, the next step is the definition of the set of results the 
+exam can have.  First select the exam in the *_Exam Browser_* window and then press the *Re[.underline]##s##ults* button.
 
-In Open Hospital 1.7 you can define three kinds of results, called “Procedure”:
+In Open Hospital you can define three kinds of results, called “Procedure”:
 
 * *Procedure 1*: a set of values as description; only one will be selectable as exam *Single Result*
 * *Procedure 2*: a set of Positive/Negative values; all of them will figure as exam *Multiple Results*
 * *Procedure 3*: a specific value to be input manually; it will show an *input field* at the time of the exam registration
 
-The difference between *Procedures (1, 2, 3)* will be seen in the Laboratory module (see
+The difference between *Procedures (1, 2, 3)* can be seen in the Laboratory module (see
 <<create-a-new-laboratory-exam,Create a new laboratory exam>> and
 <<laboratory-multiple-insert,Laboratory Multiple Insert>> in this document).
 
 Because for [.underline]#Procedure 3# the exact value is not known, the *[.underline]##R##esult* button is disabled in this case:
 
-image:image170b.png[image,width=600,height=178]
+image:image170b.png[Procedure 3,width=600,height=178]
 
-So, the two remaining possibilities are shown below:
+The two remaining possibilities are shown below:
 
-image:image171.png[image,width=321,height=181]image:image171b.png[image,width=321,height=181]
+image:image171.png[Proc 1,width=321,height=181]image:image171b.png[Proc 2,width=321,height=181]
 
 
-The functions available from both windows are:
+The functions available in both windows are:
 
 * *[.underline]##N##ew*: to enter a new result
-* *[.underline]##D##elete*: to delete an already inserted result
+* *[.underline]##D##elete*: to delete a defined result
 * *[.underline]##C##lose*: to close the window
 
 [#operations]
-[.line-through]##=== ##14.7 Operations ([.underline]##O##peration)
+=== 14.7 Operations ([.underline]##O##peration)
 
-Once you press the *[.underline]##O##peration* button in the *_Settings_* menu you access the *_Operation Browser_* window as shown below:
+Once the *[.underline]##O##peration* button in the *_Settings_* menu is pressed, the *_Operations Browser_* window shown below appears:
 
-image:image173.png[image,width=600,height=337]
+image:image173.png[Operations,width=600,height=337]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *Selected Type*: you may filter the list by selecting only one OperationType
-* *[.underline]##N##ew*: to enter a new operation (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing operation (the code and type must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing operation (it is set as not present in OPD or in IPD)
+* *Selected type*: you may filter the list by selecting only one Operation Type
+* *[.underline]##N##ew*: to enter a new operation (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing operation (the code and type cannot be changed)
+* *[.underline]##D##elete*: to delete an existing operation (it is set as not present in OPD or in IPD)
 * *[.underline]##C##lose*: to close the window
 
-By pressing the *[.underline]##E##dit* button, the *_Editing operation record_* window will appear as shown below:
+By pressing the *[.underline]##E##dit* button, the *_Edit Operation_* window appears as shown below:
 
-image:image174.png[image,width=475,height=218]
+image:image174.png[Edit Operation,width=475,height=218]
 
-In editing mode, you cannot change type and code but only modify the Description and specify if the operation concerns Major or Minor surgery for statistical purposes (not yet implemented).
+In editing mode, you cannot change the type or the code but only modify the Description and specify if the operation concerns Major or Minor surgery for statistical purposes (not yet implemented).
 
-You can change instead at anytime the operation's context: _OPD / ADMISSION_, _ADMISSION_ (only), _OPD_ (only).
+You can also change the operation's context: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
 
-The Operations defined in this functionality are reflected throughout the entire application, like in the Admission module (see
+The Operations defined in this functionality are used throughout the entire application, like in the Admission module (see
 <<insert-or-modify-surgery-data,Insert or Modify Surgery data>> in this document).
 
 === 14.8 Vaccine ([.underline]##V##accine)
 
-Once you press the *[.underline]##V##accine* button in the *_Settings_* menu you access the *_Vaccine Browser_* window as shown below:
+Once the *[.underline]##V##accine* button in the *_Settings_* menu is pressed, the *_Vaccine Browser_* window as shown below:
 
-image:image175.png[image,width=597,height=168]
+image:image175.png[Vaccine,width=597,height=168]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *Selected Type*: you may filter the list by selecting only one VaccineType
-* *[.underline]##N##ew*: to enter a new vaccine (cannot use an already existing code)
-* *[.underline]##E##dit*: to edit an already existing vaccine (the code and type must be unchanged)
-* *[.underline]##D##elete*: to delete an already existing vaccine (it is set as not present in OPD or in IPD)
+* *Selected type*: you may filter the list by selecting only one Vaccine Type
+* *[.underline]##N##ew*: to enter a new vaccine (cannot use an existing code)
+* *[.underline]##E##dit*: to edit an existing vaccine (the code and type cannot be changed)
+* *[.underline]##D##elete*: to delete an existing vaccine (it is set as not present in OPD or in IPD)
 * *[.underline]##C##lose*: to close the window
 
-By pressing the *[.underline]##E##dit* button, the *_Edit vaccine record_* window will appear as shown below:
+By pressing the *[.underline]##E##dit* button, the *_Edit Vaccine_* window appears as shown below:
 
-____
-image:image176.png[image,width=286,height=204]
-____
+image:image176.png[Edit Vaccine,width=286,height=204]
 
 In editing mode, you cannot change the type and code but only modify the Description.
 
-The Vaccines defined in this functionality are reflected throughout the entire application, like in the Vaccine module (see
+The vaccines defined in this functionality are used throughout the entire application, like in the Vaccine module (see
 <<vaccines,Vaccines>> in this document).
 
 [#prices]
 === 14.9 Prices ([.underline]##P##rice Lists)
 
-Once you press the *[.underline]##P##rice Lists* button in the *_Settings_* menu you access the *_Prices Browser_* window as shown below:
+Once the *[.underline]##P##rice Lists* button in the *_Settings_* menu is pressed, the *_Price Browser_* window shown below appears:
 
-image:image177.png[Prices Browser.PNG,width=550,height=373]
+image:image177.png[Price Browser,width=550,height=373]
 
-The functions available from this window are:
+The functions available in this window are:
 
-* *[.underline]##S##AVE*: to save any modification made to the pricelist
-* *[.underline]#Printing#*: to print the current Price List
+* *[.underline]##S##ave*: to save any modifications made to the price list
+* *[.underline]#Printing#*: to print the current price list
 * *[.underline]##C##ancel*: to close the window
-* Switch pricelist: you can focus on a different pricelist by selecting it on the upper-left corner of the window
-* *Manage Lists*: you can define how many and which pricelist will be available in the application (see
-<<pricelists,Pricelists>> in this document)
+* Switch price list: you can focus on a different price list by selecting it on the upper-left corner of the window
+* *Manage Lists*: you can define how many and which price list will be available in the application (see
+<<pricelists,Price Lists>> in this document)
 
-The *_Prices Browser_* window shows the list of all prices in the selected pricelists;
+The *_Price Browser_* window shows the list of all prices in the selected price lists;
 the system automatically creates a price for every Exam (see <<exam,Exam>>),
 Operation (see <<operations,Operations>>) and Medical (see <<pharmaceuticals,Pharmaceuticals>>) defined in
 the system, plus other prices defined in Other Prices module (see <<other-prices,Other Prices>>).
@@ -2796,64 +2788,63 @@ NOTE: If a price has been defined as “undefined” (see <<other-prices,Other P
 NOTE: Exams, Operations and Medicals prices are automatically created as OPD, IPD, not “daily”,
 not “undefined”, and not “discharge”; see <<other-prices,Other Prices>> for more information.
 
-When all the modifications are made, you can store them permanently in the system by pressing the *[.underline]##S##AVE* button. After some time a confirmation message informs you about the success of the operation:
+When all the modifications are made, you can store them permanently in the system by pressing the *[.underline]##S##ave* button. A confirmation message reports the success of the operation:
 
-image:image178.png[Prices Browser_saved.PNG,width=268,height=118]
+image:image178.png[Price Browser_saved,width=268,height=118]
 
 [#pricelists]
-====  14.9.1 Pricelists (_Manage Lists_)
+====  14.9.1 Price Lists ([.underline]##M##anage Lists)
 
-Once you have pressed on *_Manage Lists_* button from the *_Prices Browser_* window you access the *_List Browser_* window as shown below:
+Once the *_[.underline]##M##anage Lists_* button from the *_Price Browser_* window is pressed,
+the *_List Browser_* window shown below appears:
 
-image:image179.png[List Browser.PNG,width=500,height=274]
+image:image179.png[List Browser,width=500,height=274]
 
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
+The functions available in this window are:
 
-* *[.underline]##N##ew*: to enter a new pricelist
-* *Co[.underline]##p##y*: to create a new pricelist as a copy of another one
-* *[.underline]##E##dit*: to edit an already existing pricelist
-* *[.underline]##D##elete*: to delete an already existing pricelist
+* *[.underline]##N##ew*: to enter a new price list
+* *Co[.underline]##p##y*: to create a new price list as a copy of another one
+* *[.underline]##E##dit*: to edit an existing price list
+* *[.underline]##D##elete*: to delete an existing price list
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *Co[.underline]##p##y* button, the application guides you step by step by asking:
 
 [arabic]
-. a *Name* of the new pricelist
-. a *Multiplier* for all prices in the selected pricelist
-. a *Rounding factor* for all prices in the new pricelist
+. a *Name* of the new price list
+. a *Multiplier* for all prices in the selected price list
+. a *Rounding Factor* for all prices in the new price list
 
-Depending on the size of the selected pricelist, after some time a confirmation message informs you about the success of the operation:
+A confirmation message reports the success of the operation:
 
-image:image180.png[List Browser_copy.PNG,width=317,height=118]
+image:image180.png[List Browser_copy,width=317,height=118]
 
 By default, the new list is created with the following information:
 
 *ID*: “aCode”
 
-*Name*: the name you provided in the step by step copying procedure
+*NAME*: the name you provided in the step by step copying procedure
 
-*Description*: “aDescription”
+*DESCRIPTION*: “aDescription”
 
-*Currency*: the currency of the selected pricelist
+*CURRENCY*: the currency of the selected price list
 
-Once the copy has been created you can change the information by editing the pricelist just created.
+Once the copy has been created the information can be changed by editing the price list just created.
 
 By pressing the *[.underline]##E##dit* button, the *_Edit List_* window appears as shown below:
 
-____
-image:image181.png[image,width=224,height=204]
-____
+image:image181.png[Edit List,width=224,height=204]
 
-In editing mode, you can change all the data related to the list.
+In editing mode, any of the data related to the list can be changed.
 
-The Lists defined in this functionality are reflected in the Accounting module (see
+The lists defined in this functionality are used in the Accounting module (see
 <<insert-a-new-bill,Insert a new bill>> in this document).
 
 === 14.10 Supplier ([.underline]#Supplier#)
 
-Once you press the *S[.underline]##upplier##* button in the *_Settings_* menu you access the *_Supplier Browser_* window as shown below:
+Once the *S[.underline]##upplier##* button in the *_Settings_* menu is pressed, the *_Supplier Browser_* window shown below appears:
 
-image:image182.png[Prices Browser.PNG,width=550,height=231]
+image:image182.png[Supplier Browser,width=550,height=231]
 
 The functions available in this window are:
 
@@ -2862,68 +2853,67 @@ The functions available in this window are:
 * *[.underline]##D##elete*: to delete a supplier
 * *[.underline]##C##lose*: to close the window
 
-The *_Supplier Browser_* window shows the list of all suppliers in the system.
+The *_Supplier Browser_* window shows the list of all the suppliers in the system.
 
-To add a supplier, click the *[.underline]##N##ew* button to access the *_New supplier_* window as shown below:
+To add a supplier, click the *[.underline]##N##ew* button to access the *_New Supplier_* window as shown below:
 
-image:image183.png[new Supplier.PNG,width=423,height=434]
+image:image183.png[New Supplier,width=423,height=434]
 
-To insert a new Supplier, you must input the following data:
+The information associated with a new Supplier is:
 
-* *Name*: is the Supplier name (it is the only required field)
-* *Address*: is the Supplier address
-* *Tax Number ID*: is the Supplier tax number
-* *Telephone*: is the Supplier phone number
-* *Fax number*: is the Supplier fax number
-* *E-mail*: is the Supplier email address
-* *Note*: Additional note concerning the supplier
-* *Deleted*: Check this checkbox to mark the Supplier as deleted.
+* *Name*: is the Supplier's name (it is the only required field)
+* *Address*: is the Supplier's address
+* *Tax Number ID*: is the Supplier's tax number
+* *Telephone*: is the Supplier's phone number
+* *Fax number*: is the Supplier's FAX number
+* *E-mail*: is the Supplier's email address
+* *Note*: Additional notes about the supplier
 
-Then click the *[.underline]##O##K* button to save the new Supplier.
+When the data is entered, click the *[.underline]##O##K* button to save the new Supplier.
 
-To edit the Supplier information, in the *_Supplier Browser_* highlight the Supplier and
+To edit the Supplier's information, in the *_Supplier Browser_* highlight the Supplier and
 click on the *[.underline]##E##dit* button to open the *_Edit Supplier_* window.
 After performing the necessary modifications, click the *[.underline]##O##K* button to save the changes.
 
 To delete a Supplier, in the *_Supplier Browser_* highlight the Supplier and
-click on the *D[.underline]##elete##* button to delete the selected Supplier.
+click on the *[.underline]##D##elete* button to remove the selected Supplier.
 
 [#sms-manager]
-=== 14.11 SMS Manager ([.underline]#SMS Manager#)
+=== 14.11 SMS Manager (S[.underline]##M##S Manager)
 
 WARNING: SMS pricing is set and collected by the SMS Provider (GSM or HTTP) and is related to or controlled by this software.
 
 NOTE: Sending SMS in Open Hospital requires that the Gateway is well configured. You can use a GSM gateway or a WebApi Gateway. Ask your administrator how to do it or read the _Administrator’s Guide_.
 
-Once you have pressed the *SMS Manager* button in the *_Settings_* menu you access the *_SMS Manager_* window as shown below:
+Once the *SMS Manager* button in the *_Settings_* menu is pressed, the *_SMS Manager_* window shown below appears:
 
-image:image184.png[Prices Browser.PNG,width=438,height=327]
+image:image184.png[SMS Manager,width=438,height=327]
 
-The functions available from this window are:
+The functions available in this window are:
 
-* *N[.underline]##ew##*: to send a new SMS
-* *Delete*: to delete an SMS
-* *[.underline]#Close#*: to close the window
+* *[.underline]##N##ew*: to send a new SMS
+* *[.underline]##D##elete*: to delete an SMS
+* *[.underline]##C##lose*: to close the window
 
 You can also filter the SMS list by date range.
 
 To send a new SMS, click the *[.underline]##N##ew* button to access the *_New SMS_* window.
 
-image:image185.png[new Supplier.PNG,width=423,height=284]
+image:image185.png[New SMS,width=423,height=284]
 
-In order to insert a new SMS, you must input the following data:
+In order to insert a new SMS, the following data is required:
 
 * *Scheduled Date*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
 * *Scheduled Time*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
 * *Number*: the recipient of the SMS. You can select a patient by clicking the button image:image186.png[button.PNG,width=43,height=23]. The phone number of the selected patient is automatically inserted.
-* *SMS*: type the SMS in the white space below
+* *SMS*: type the text of the SMS in the white space (maximum of 160 characters)
 
 Then click *[.underline]##O##K* to save the new SMS. If the scheduled date and time is now, the SMS is sent immediately.
 
 To delete an SMS, highlight the SMS and click the *[.underline]##D##elete* button to delete the SMS.
 
 [#users-groups]
-== 15 Users & Groups ([.underline]##F##ile -> _[.underline]##U##sers_)
+=== 14.12  Users & Groups ([.underline]##U##sers & Groups)
 
 The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
@@ -2933,31 +2923,31 @@ image:image187.png[Login,width=305,height=148]
 
 Once successfully logged into the system, if you have been enabled by the administrator you will find the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu.
 
-Once you press the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu you can access the *_Users & Groups_* submenu as shown below:
+Once the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is pressed, the *_Users & Groups_* submenu shown below appears:
 
 image:image188.png[Users & Groups,width=153,height=136]
 
 Open Hospital allows the management of users organized into groups; each group is characterized by different permissions assigned by the Administrator.
 
-Before registering a new user in the system, you should ensure there is a group with related permissions to which the user would belong.
+Before registering a new user in the system, ensure that there is a group defined with the related permissions to which the user should have access.
 
-=== 15.1 Groups ([.underline]##G##roups)
+==== 14.12.1 Groups ([.underline]##G##roups)
 
-Once you press the *[.underline]##G##roups* button in the *_Users_* submenu you can access the *_Groups Browser_* window as shown below:
+Once the *[.underline]##G##roups* button in the *_Users_* submenu is pressed, the *_Groups Browser_* window shown below appears:
 
 image:image189.png[Groups Browser.PNG,width=642,height=180]
 
-The functions available from this window are:
+The functions available in this window are:
 
-* *[.underline]##E##dit*: to edit an already existing group (only the description can be changed)
+* *[.underline]##E##dit*: to edit an existing group (only the description can be changed)
 * *[.underline]##N##ew*: to enter a new group
-* *Group[.underline]##M##enu*: to define rights and permission on a selected group
-* *[.underline]##D##elete*: to delete an already existing group
+* *Group[.underline]##M##enu*: to define rights and permission for a selected group
+* *[.underline]##D##elete*: to delete an existing group
 * *[.underline]##C##lose*: to close the window
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window appears as shown below:
 
-image:image190.png[image,width=280,height=350]
+image:image190.png[GroupMenu,width=280,height=350]
 
 The window shows the full set of functions available in Open Hospital in a tree format:
 
@@ -2965,43 +2955,43 @@ The window shows the full set of functions available in Open Hospital in a tree 
 * *Blue* nodes are the “branches”: menus and windows
 * *Black* nodes are the “leaves”: buttons and functions
 
-By double-clicking on each branch or leaf we can enable or disable that function or set of functions for the selected group.
+Double-clicking on each branch or leaf enables or disables that function or set of functions for the selected group.
 
 For instance, the group “Registration Office” and the group “Cashiers” may have the following group permission configurations:
 
-image:image191.png[../../Screen%20Shot%202019-07-26%20at%2016.07.17.png,width=641,height=708]
+image:image191.png[MenuItem,width=641,height=708]
 
-So, the Registration Office group can only use the Admission/Patient module to insert and edit patients, while the Cashiers group can only use the Accounting module to produce bills. Both can run HELP (this guide) and the Communication module.
+So, the Registration Office group can only use the Admission/Patient module to insert and edit patients, while the Cashiers group can only use the Accounting module to produce bills.
 
 So, the “main menu” for each user registered in the Registration Office group and for each one in the Cashiers group appears as follows:
 
-image:image194.png[../../Screen%20Shot%202019-07-26%20at%2016.08.01.png,width=641,height=386]
+image:image194.png[Main Menu,width=641,height=386]
 
-=== 15.2 Users ([.underline]##U##sers)
+==== 14.12.2 Users ([.underline]##U##sers)
 
-Once you press the *[.underline]##U##sers* button in the *_Users & Groups_* submenu you access the *_User Browser_* window as shown below:
+Once the *[.underline]##U##sers* button in the *_Users & Groups_* submenu is pressed, the *_User Browser_* window appears as shown below:
 
 image:image195.png[image,width=621,height=305]
 
 The functions available in this window are:
 
 * *Selected group*: you may filter the list by selecting only one Group
-* *[.underline]##E##dit*: to edit an already existing user (the group must be unchanged)
-* *[.underline]##N##ew*: to enter a new user (cannot be used an already used name)
-* *[.underline]##D##elete*: to delete an already existing user
+* *[.underline]##N##ew*: to enter a new user (cannot use the same name)
+* *[.underline]##E##dit*: to edit an existing user (the group cannot be hanged)
+* *[.underline]##R##eset Password*: to change the password for an existing user
+* *[.underline]##D##elete*: to delete an existing user
 * *[.underline]##C##lose*: to close the window
 
-By pressing the *[.underline]##E##dit* button, the *_Editing user record_* window appears as shown below:
+By pressing the *[.underline]##E##dit* button, the *_Edit User_* window appears as shown below:
 
 image:image198.png[image,width=305,height=309]
 
-In editing mode, you cannot change the type (group) and the username (the fields are protected in the window).  Only the description and
-the *password* that can be modified by the Administrator.
+In editing mode, you cannot change the type (group) and the username (the fields are protected in the window).  Only the description can be modified by the Administrator.
 
 <<<
 
 [#worksheet]
-== 16 Worksheet ([.underline]##W##orksheet)
+== 15 Worksheet ([.underline]##W##orksheet)
 
 The *Worksheet* function allows one to manage and print the list of appointments scheduled.
 
@@ -3022,7 +3012,7 @@ image:image246.png[image,width=600,height=265]
 One can select another date with the *Go to date* field or reset the schedule back to today with the button *Today*.
 In all cases the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
 
-The functions available from this window are:
+The functions available in this window are:
 
 * *Add visit*: to schedule a new visit for a specific date (on the left or on the right) 
 * *Print this day's visits*: to print the specific date scheduled visits
@@ -3034,7 +3024,7 @@ TIP: To schedule a visit can also be done in the *Therapy Management* module, se
 
 <<<
 
-== 17 License
+== 16 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#User's Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
