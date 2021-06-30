@@ -101,7 +101,7 @@ then the main _menu_ of the Open Hospital application.
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-From a menu, you can get to other menus or functional areas.  In the example below, from the main *_menu_*
+From a menu, you can get to other menus or functional areas. In the example below, from the main *_menu_*
 selecting the *_Settings_* menu leads to another menu of various settings or code types:
 
 image:image6.png[Setting Submenu,width=602,height=370]
@@ -119,7 +119,7 @@ image:image7.png[Click OPD in main menu,width=649,height=374]
 === 5.1 Main Characteristics
 
 The function of the Out Patient Department allows for recording Ambulatory Patient visits, searching, reviewing, editing, and
-eventually deleting visits.  In addition queries necessary for statistical purposes are available.
+eventually deleting visits. In addition queries necessary for statistical purposes are available.
 
 Click on the *[.underline]##O##PD* button or press “Alt + O” in the main *_menu_* to access the OPD function.
 
@@ -177,8 +177,8 @@ To record a visit, enter the following fields:
 * *Type of attendance.* This field is not meant to distinguish whether an individual is new or not in the ambulatory
 (that is, whether this is the absolute first time he/she enters the ambulatory). The NEW ATTENDANCE selection
 indicates whether the Patient comes to the ambulatory to report a new
-health issue or new disease for which no care has been previously addressed or recorded.  This could be their initial
-visit or their n-th time in the ambulatory, it does not matter with regards to this field.  If this visit is for an
+health issue or new disease for which no care has been previously addressed or recorded. This could be their initial
+visit or their n-th time in the ambulatory, it does not matter with regards to this field. If this visit is for an
 issue or disease previously addressed the field is not selected and records are created for the patient
 with regards to the follow-up care and instructions for recovery.
  +
@@ -1046,7 +1046,7 @@ To remove a payment you have to highlight it in the *_New Patient Bill_* window.
 
 ===== 8.2.1.8 Give Change… (Give change…)
 
-Sometimes it could be useful to calculate the balance to give to a patient when he/she is paying his/her bill. By pressing the *Give change...* button you are asked the cash amount the patient is paying and the program calculates the difference between the payment and the current bill balance.   This is the amount of change to give to the patient.
+Sometimes it could be useful to calculate the balance to give to a patient when he/she is paying his/her bill. By pressing the *Give change...* button you are asked the cash amount the patient is paying and the program calculates the difference between the payment and the current bill balance. This is the amount of change to give to the patient.
 
 [#save-function-accounting]
 ===== 8.2.1.9 Save Function ([.underline]##S##AVE)
@@ -1502,7 +1502,7 @@ TIP: It is possible to filter to find diseases more easily. To do this, you need
 NOTE: Wards, Admission Types and Diagnosis can be defined by the Administrator. Ask your Administrator how to do it or see <<settings,Settings>> in this document.
 
 NOTE: The "Progressive in Year" field is automatically populated by the program; in case of maternity, the
-counter starts from the first of January or from the first of June based on the current norm for the health facility.  To change the behavior please ask your Administrator to set the
+counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask your Administrator to set the
 [.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or read the _Administrator’s Guide_.
 
 When you finish entering data in the *Buttons panel* you have the following choices:
@@ -2374,7 +2374,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: to delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: to close the window
 
-The Disease Types defined in this functionality are used throughout the application.  For example, in definition of Diseases or in OPD (see
+The Disease Types defined in this functionality are used throughout the application. For example, in definition of Diseases or in OPD (see
 <<disease,Disease>> and <<create-a-new-patient-visit,Create a new patient visit>> in this document).
 
 [#exam-types]
@@ -2614,7 +2614,7 @@ To insert a new Ward, you must provide the following required inputs:
 NOTE: Using this function one can define wards with 0 (zero) beds but with a pharmacy.
 This allows for "logical” departments (rather than physical) to manage pharmacy movements.
 
-The Wards defined in this functionality are used throughout the entire application.  See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
+The Wards defined in this functionality are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
 <<admission-patient,Admission/Patient>>, <<pharmaceutical-stock,Pharmaceutical Stock>> and
 <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
@@ -2684,7 +2684,7 @@ To insert a new Exam, you must input the following data:
 ====  14.6.1 Results (Re[.underline]##s##ults)
 
 Once an exam is defined, the next step is the definition of the set of results the 
-exam can have.  First select the exam in the *_Exam Browser_* window and then press the *Re[.underline]##s##ults* button.
+exam can have. First select the exam in the *_Exam Browser_* window and then press the *Re[.underline]##s##ults* button.
 
 In Open Hospital you can define three kinds of results, called “Procedure”:
 
@@ -2986,7 +2986,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window appears 
 
 image:image198.png[image,width=305,height=309]
 
-In editing mode, you cannot change the type (group) and the username (the fields are protected in the window).  Only the description can be modified by the Administrator.
+In editing mode, you cannot change the type (group) and the username (the fields are protected in the window). Only the description can be modified by the Administrator.
 
 <<<
 
