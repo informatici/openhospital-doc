@@ -55,7 +55,7 @@ The aim of this program is to manage, in the simplest manner, the hospital admin
 
 === 3.1 Open Hospital
 
-Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of Oracle and/or its affiliates.] software program that does not require installation and is often known as a portable installation. The .zip file can be copied and moved everywhere in your system, whether it is Windows or Linux.
+Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of Oracle and/or its affiliates.] software program that does not require installation and is often known as a portable installation. The .zip file can be copied and moved everywhere in your system, whether the operating system is Windows or Linux.
 
 The software acts as a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software, the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
 
@@ -67,7 +67,7 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
+NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
@@ -81,7 +81,7 @@ and the online documentation.
 
 For the MySQL installation and DB creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
 
-For the Open Hospital installation on every client, it is enough to copy and extract the zip file on the machine.
+For the Open Hospital installation on every client, it is sufficient to copy and extract the zip file on the machine.
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
@@ -92,11 +92,9 @@ Depending on the operating system, there are different ways to install a Java Vi
 
 For instance, on a Microsoft Windows® system, you have to download and execute a setup file, while on Linux based systems you have to type only one command in a terminal.
 
-WARNING: Beginning with Open Hospital v1.11 Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
+NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
-
-NOTE: Open Hospital v1.10 or earlier versions require a JRE 1.6 to work properly. At the time of the writing of this document, *only JRE 1.6 32bit* has been tested and it is full compliant with all Open Hospital features, especially the hardware related features (such as Webcam and SMS).
 
 [#mysql-server]
 ==== 3.1.2 MySQL Server and Open Hospital DB
@@ -164,7 +162,7 @@ To:
 #bind-address               = 127.0.0.1
 ----
 
-====== 3.1.2.1.2 Performances
+====== 3.1.2.1.2 Performance
 
 Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
 
@@ -204,16 +202,16 @@ Open a terminal in the folder mysql/ (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_8_3\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
 
-D:\OpenHospital_1_8_3\mysql>
+D:\OpenHospital_1_11_0\mysql>
 ----
 
 and run the following command (e.g.):
 
 [source,shell]
 ----
-D:\OpenHospital_1_8_3\mysql> mysql –u root -p
+D:\OpenHospital_1_11_0\mysq> mysql –u root -p
 Enter password: *****
 ----
 
@@ -231,7 +229,7 @@ Next launch the main script “create_all_en.sql” with the command:
 mysql> source create_all_en.sql
 ----
 
-NOTE: Since version 1.8.0 you can install the data with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
+NOTE: You can install the data with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
 
 NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
 client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
@@ -287,7 +285,7 @@ Open Hospital comes with several configuration files called “properties files�
 
 We have to specify:
 
-* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g. 192.168.1.100)
+* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g., 192.168.1.100)
 * the “isf” user *password*, if changed from “isf123”
 * the MySQL Server *Port Number*, if changed from “3306”
 
@@ -326,8 +324,9 @@ Since the JRE and MySQL are not platform-independent and come in different versi
 * *Portable Open Hospital for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
 * *Portable Open Hospital for Windows* platforms (embedding Java JRE and MySQL for Windows)
 
-WARNING: Beginning with Open Hospital v1.11, Java6 (Java 1.6) is no longer supported. The minimum requirement is Java8 or greater (1.8 or greater).
-If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
+NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
+
+TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
 Once the required version is downloaded, you may start it by launching the related script inside the package:
 
@@ -350,7 +349,7 @@ architecture, the full installation version is recommended.
 [#backup-data]
 ==== 3.3.1 Backup of data (Database)
 
-There are several ways to back up and restore *data* with MySQL. We suggest the use of the common MySQL client such as MySQL Workbench® (e.g.):
+There are several ways to back up and restore *data* with MySQL. We suggest the use of the common MySQL client such as MySQL Workbench®:
 
 From https://stackoverflow.com/a/18379189:
 
@@ -369,7 +368,7 @@ image:image22.png[image,width=642,height=461]
 [#restore-data]
 ==== 3.3.2 Restore of data (Database)
 
-To restore data with MySQL Workbench® (e.g.):
+To restore data with MySQL Workbench®:
 
 [arabic]
 . Under *Server Administration* on the Home window select the server instance you want to restore the database to (Create *New Server Instance* if doing it the first time).
@@ -475,9 +474,9 @@ Customization of Open Hospital depends on settings set in text files called “p
 ** *database.properties* – for Open Hospital database connection
 ** *dicom.properties* – for the DICOM viewer module
 ** *examination.properties* – contains the settings for the ‘examination’ module
-** *generalData.properties* – for Open Hospital configuration options
 ** *log4j.properties* – for the logging system
-** *sms.properties* – for SMS Manager module
+** *settings.properties* – for configuring Open Hospital options
+** *sms.properties* – for the SMS Manager module
 ** *txtPrinter.properties*– for the text printing system
 ** *xmpp.properties* – for the Xmpp Server
 
@@ -488,25 +487,29 @@ Furthermore, other configurations files that are not meant to be modified by the
 
 Every configuration file works only [.underline]#locally# and is meant to manage  [.underline]#only a single instance# of Open Hospital application.
 
-This means that if many clients running Open Hospital they may run differently according to their own configuration files.
+This means that if there are many clients running Open Hospital they may run differently according to their own configuration files.
 
 NOTE: Any change to these files requires an application restart to see the modifications applied.
 
 The following chapters will describe these properties files and their features in detail.
 
 [#generaldata-properties]
-=== 5.1 generalData.properties
+=== 5.1 settings.properties
 
 Starting with version 1.7 Open Hospital comes with a generalData.properties file with the following defaults:
 
 [source, properties]
 ----
-# This file contains OpenHospital settings
+# This file contains Open Hospital settings
 LANGUAGE=en
 SINGLEUSER=yes
-AUTOMATICLOT=no
+AUTOMATICLOT_IN=no
+AUTOMATICLOT_OUT=no
+AUTOMATICLOTWARD_TOWARD=no
 LOTWITHCOST=yes
-PATIENTSHEET=patient_clinical_sheet_ver2
+VISITSHEET=WardVisits
+PATIENTSHEET=patient_clinical_sheet_ver3
+EXAMINATIONCHART=patient_examination
 OPDCHART=patient_opd_chart
 ADMCHART=patient_adm_chart
 DISCHART=patient_dis_chart
@@ -516,6 +519,7 @@ BILLSREPORTPENDING=BillsReportPending
 BILLSREPORTMONTHLY=BillsReportMonthly
 PHARMACEUTICALORDER=PharmaceuticalOrder
 PHARMACEUTICALSTOCK=PharmaceuticalStock_ver4
+PHARMACEUTICALSTOCKLOT=PharmaceuticalStock_ver5
 PHARMACEUTICALAMC=PharmaceuticalAMC
 PATIENTEXTENDED=yes
 OPDEXTENDED=yes
@@ -550,7 +554,7 @@ Furthermore, values can be:
 * *Boolean*: yes | no or true | false
 * *String*: usually a filename or a country code (ISO 3166-1)
 
-In following chapters, we will see the meaning of each of the key/value pairs.
+In following chapters will describe the meaning of each of the key/value pairs.
 
 [#language]
 ==== 5.1.1 LANGUAGE
@@ -559,11 +563,11 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value | Allowed Values
 |LANGUAGE |en |ar, en, it, fr, es, de, sw
 |===
 
-Open Hospital 1.8 comes with seven translations, identified by the international country code:
+Open Hospital ships with nine translations, identified by the international country code:
 
 * en – English
 * it – Italian
@@ -572,8 +576,10 @@ Open Hospital 1.8 comes with seven translations, identified by the international
 * de – German
 * sw – Swahili
 * ar – Arabic
+* de - German
+* zh_CN - simplified Chinese
 
-You can change the language used in the application simply by editing *_generalData.properties_* and setting this key.
+You can change the language used in the application simply by editing *_settings.properties_* and setting this key.
 If an unknown value is set, the local computer language is applied.
 
 NOTE: An application restart is required to see the modification applied.
@@ -584,11 +590,11 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value | Allowed Values
 |SINGLEUSER |yes |yes, no
 |===
 
-Open Hospital, since its first version, allows for multi-user usage. It means that is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
+Open Hospital is designed to support multi-user usage. This means that is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
 
 Open Hospital has a predefined user called “admin” that has all rights to access all the functionality of the application.
 When SINGLEUSER is set to YES (default) the program starts with this user and all the program functionality is available.
@@ -609,33 +615,33 @@ WARNING: Data security must never be left solely to the application but it must 
 
 ==== 5.1.3 AUTOMATICLOT
 
-The following table shows the default value and the allowed ones:
+The following table shows the default value and the alternatives for lot management:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |AUTOMATICLOT_IN |no |yes, no
 |AUTOMATICLOT_OUT |no |yes, no
 |AUTOMATICLOTWARD_TOWARD |no |yes, no
 |===
 
-Open Hospital, since its first version, allows for automatic management of lots in the main pharmacy.
-It means that is possible to work in the pharmacy without taking care of lot definitions in loading the store and
+Open Hospital allows for automatic management of lots in the main pharmacy.
+This means that is possible to work in the pharmacy without taking care of lot definitions in loading the store and
 just specify preparation and expiring date for each charging movement
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-2-2-2-insert-stock-charging-movement-charge[6.2.2.2 Insert stock charging movement] in the User's Guide).
 
-For discharging movement, the lot is automatically calculated according to the nearest expiring date of lots (FEFO - First Expiring First Out). If the quantity to discharge is higher than the quantity of the first selected lot, more than one discharging operation can be generated.
+For discharging movement, the lot is automatically calculated according to the nearest expiring date of lots (FEFO - First Expiring First Out). If the quantity to discharge is larger than the quantity of the first selected lot, more than one discharging operation can be generated.
 
-Since version *v1.11.0*, the _AUTOMATIC LOTS MANAGEMENT_ has been split into two different settings for charging and discharging the main pharmacy and to manage lots also in the wards.
+_AUTOMATIC LOTS MANAGEMENT_ is split into two different settings for charging and discharging the main pharmacy and to manage lots also in the wards.
 In this way, more control is given to the user that may want to provide all the lots' details in _charging operations_ but ask the application to automatically _discharge_ the nearest expiring ones (FEFO).
 Similarly, in wards (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-3-pharmaceuticals-stock-ward-pharmaceuticals-stock-ward[6.3 Pharmaceuticals Stock Ward] in the User's Guide)
 the user may decide to manage lots manually or to ask the application to do it automatically.
 
-With *AUTOMATICLOT_IN = YES* the application generates a lot number automatically and only asks for an expiration date (compulsory). By default, AUTOMATICLOT_IN is set to NO. It is possible to change the value at any time.
+With *AUTOMATICLOT_IN = YES* the application generates a lot number automatically and only asks for an expiration date (mandatory). By default, AUTOMATICLOT_IN is set to NO. It is possible to change the value at any time.
 
 With *AUTOMATICLOT_OUT = YES* the application discharges automatically the nearest expiring lot when required. By default, AUTOMATICLOT_OUT is set to NO. It is possible to change the value at any time.
 
-With *AUTOMATICLOTWARD_TOWARD = YES*, the application to discharges from Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time.
+With *AUTOMATICLOTWARD_TOWARD = YES*, the application discharges from a Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time.
 For discharges to Patients (drug giving) the lot is *never* asked.
 
 NOTE: An application restart is required to see the modification applied for all the above settings.
@@ -646,11 +652,11 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |LOTWITHCOST |yes |yes, no
 |===
 
-Open Hospital, since version 1.8, allows managing the cost of medicals in the main pharmacy
+Open Hospital allows for managing the cost of medicals in the main pharmacy
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-2-2-2-insert-stock-charging-movement-charge[6.2.2.2 Insert stock charging movement] in the User's Guide).
 
 NOTE: An application restart is required to see the modification applied.
@@ -661,11 +667,11 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PATIENTSHEET |patient_clinical_sheet |any kind of .jasper file name
 |===
 
-Open Hospital, since its first version, can produce a report about the clinical history of a patient
+Open Hospital can produce a report about the clinical history of a patient
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
 By default, PATIENTSHEET is set to patient_clinical_sheet, that is, the filename of the related report to use for the Clinical Sheet functionality.
@@ -680,11 +686,11 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |OPDCHART |patient_opd_chart |any kind of .jasper file name
 |===
 
-Open Hospital, since its version 1.8, can produce a report about the OPD chart of a patient
+Open Hospital can produce a report about the OPD chart of a patient
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
 By default, OPDCHART is set to patient_opd_chart which is the filename of the related report to use for the Clinical Sheet functionality *OPD Chart*.
@@ -700,7 +706,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |ADMCHART |patient_adm_chart |any kind of .jasper file name
 |===
 
@@ -719,7 +725,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |DISCHART |patient_dis_chart |any kind of .jasper file name
 |===
 
@@ -739,7 +745,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PATIENTBILL |PatientBill |any kind of .jasper file name
 |===
 
@@ -759,7 +765,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |BILLSREPORT |BillsReport |any kind of .jasper file name
 |===
 
@@ -778,7 +784,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |BILLSREPORTMONTH |BillsReportMonth |any kind of .jasper file name
 |===
 
@@ -798,7 +804,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PHARMACEUTICALORDER |PharmaceuticalOrder |any kind of .jasper file name
 |===
 
@@ -818,7 +824,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PHARMACEUTICALSTOCK |PharmaceuticalStock |any kind of .jasper file name
 |===
 
@@ -837,7 +843,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PATIENTEXTENDED |yes |yes, no
 |===
 
@@ -858,7 +864,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |OPDEXTENDED |yes |yes, no
 |===
 
@@ -878,7 +884,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |MATERNITYRESTARTINJUNE |no |yes, no
 |===
 
@@ -898,7 +904,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |LABEXTENDED |yes |yes, no
 |===
 
@@ -919,7 +925,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |LABMULTIPLEINSERT |yes |yes, no
 |===
 
@@ -939,7 +945,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |INTERNALPHARMACIES |yes |yes, no
 |===
 
@@ -957,7 +963,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |MERGEFUNCTION |no |yes, no
 |===
 
@@ -978,7 +984,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |INTERNALVIEWER |yes a|
 yes,
 any executable filename in the path or with an absolute path
@@ -1019,7 +1025,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |SMSENABLED |no |yes, no
 |===
 
@@ -1062,7 +1068,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |MAINMENUALWAYSONTOP |no |yes, no
 |===
 
@@ -1080,7 +1086,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |RECEIPTPRINTER |no |yes, no
 |===
 
@@ -1102,7 +1108,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |VIDEOMODULEENABLED |no |yes, no
 |===
 
@@ -1122,7 +1128,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |PATIENTVACCINEEXTENDED |yes |yes, no
 |===
 
@@ -1142,7 +1148,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |ENHANCEDSEARCH |no |yes, no
 |===
 
@@ -1163,7 +1169,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |XMPPMODULEENABLED |no |yes, no
 |===
 
@@ -1184,7 +1190,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |DICOMMODULEENABLED |no |yes, no
 |===
 
@@ -1203,7 +1209,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |DICOMTHUMBNAILS |yes |yes, no
 |===
 
@@ -1221,7 +1227,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |DEBUG |no |yes, no
 |===
 
@@ -1248,7 +1254,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |ALLOWMULTIPLEOPENEDBILL |no |yes, no
 |===
 
@@ -1267,7 +1273,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |OPENEDBILLSREPORT |OH023_BillsReportMonth |OH023_BillsReportMonth
 |===
 
@@ -1284,7 +1290,7 @@ The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
 |===
-|key |default value |allowed values
+|Key |Default Value |Valid Values
 |ALLOWPRINTOPENEDBILL |no |yes, no
 |===
 
