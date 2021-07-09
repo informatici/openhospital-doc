@@ -337,10 +337,10 @@ Press the *[.underline]##N##ew* button in the *_Pharmaceutical Browser_* window 
 
 To insert a new pharmaceutical, enter the following fields:
 
-* *Type* (for instance, Drugs or Chemical) +
+* *Type* for instance, Drugs or Chemical +
 * *Code*: code that uniquely identifies the pharmaceutical for fast searching
 * *Description*: the description of the pharmaceutical
-* *PcsXPck*: Piece per packet (if more than 1)
+* *PcsXPck*: pieces per packet (if more than 1)
 * *Critical level*: the minimum quantity required in stock
 
 NOTE: Types can be defined by the Administrator. See <<settings,Settings>> in this document for more information.
@@ -945,7 +945,7 @@ Data shown on the *Item Panel* area are:
 * *TOTAL*: it is the total amount of the bill +
  +
 NOTE: Prices, or unitary costs, can be defined by the Administrator. Ask your Administrator how to do it or see
-<<settings,Settings>> in this document._
+<<settings,Settings>> in this document.
 
 Data shown on *The Payments* area are:
 
