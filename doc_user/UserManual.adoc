@@ -256,7 +256,7 @@ The OPD Extended module affords the following additional features:
 * Calendar to choose the visit date (1);
 * OPD number now is visible (2): it is the progressive number per year automatically set by the system, one can change the value needed. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, you *MUST* first select a patient from the drop-down list; you can also search for the patient with the search field nearby by typing part of its name or code; this will improve reliability for reports and statistics, and thus service to the patient by knowing his/her history.
-* Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically (6);
+* Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
 * You can now set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
 * In the case you want to insert a new attendance for this patient you can check the "new attendance" check box on and proceed normally.
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendance" check box.
