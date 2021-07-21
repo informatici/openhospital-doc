@@ -562,7 +562,7 @@ The panel contains the following fields:
 * *Destination*: the ward where the discharged medical will be affected
 * *Reference No.*: the reference number of the operation
 
-The grid should be a filled in with pharmaceuticals involved in the discharging movement. To fill the grid, you have to use the field above the grid to select a pharmaceutical. Enter into the field the description of the pharmaceutical, and
+The grid should be filled in with pharmaceuticals involved in the discharging movement. To fill the grid, you have to use the field above the grid to select a pharmaceutical. Enter into the field the description of the pharmaceutical, and
 press *ENTER.* This will open the *_Choose a Medical_* window.
 
 image:image26.png[Medical Selection,width=423,height=409]
