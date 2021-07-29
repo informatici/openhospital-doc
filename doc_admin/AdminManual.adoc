@@ -496,7 +496,7 @@ The following chapters will describe these properties files and their features i
 [#generaldata-properties]
 === 5.1 settings.properties
 
-Starting with version 1.7 Open Hospital comes with a generalData.properties file with the following defaults:
+The default generalData.properties file is:
 
 [source, properties]
 ----
@@ -1439,7 +1439,7 @@ No longer available starting with version 1.9.1.
 [#log4j-properties]
 === 5.6 log4j.properties
 
-Starting with Open Hospital version 1.7 the log4j.properties file is set by default to:
+The default log4j.properties file is:
 
 [source, properties]
 ----
@@ -1522,7 +1522,7 @@ NOTE: An application restart is required to see the effect of any applied parame
 [#sms-properties]
 === 5.7 sms.properties
 
-Starting with Open Hospital version 1.11 a default sms.properties file is included:
+The default sms.properties file is:
 
 [source, properties]
 ----
@@ -1548,7 +1548,7 @@ sms.gateway.thread.icc=+39
 
 ==== 5.7.1 skebby-gateway-service
 
-Starting with Open Hospital 1.11 a default skebby-gateway-service section is included:
+The default skebby-gateway-service section is:
 
 [source, properties]
 ----
@@ -1573,7 +1573,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 
 ==== 5.7.2 textbelt-gateway-service
 
-Starting with Open Hospital 1.11 a default textbelt-gateway-service section is included:
+The default textbelt-gateway-service section is:
 
 [source, properties]
 ----
@@ -1596,7 +1596,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 [#txtprinter-properties]
 ===  5.8 txtPrinter.properties
 
-Starting with Open Hospital version 1.7 a default txtPrinter.properties file is included:
+The default txtPrinter.properties file is:
 
 [source, properties]
 ----
