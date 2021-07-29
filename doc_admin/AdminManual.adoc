@@ -997,7 +997,7 @@ If this parameter is set to yes, the Jasper PDF Viewer is used
 If another PDF viewer is required, specify the executable's filename.
 One must ensure that the executable is available in the desktop environment.
 
-*Example in Windows:*
+*Example in Windows*:
 
 [source, properties]
 ----
@@ -1007,7 +1007,7 @@ INTERNALVIEWER= C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\AcroRd32.ex
 ----
 NOTE: Please note the double file & folder separator “_\\_”.
 
-*Example in Linux:*
+*Example in Linux*:
 
 [source, properties]
 ----
@@ -1037,10 +1037,9 @@ By default, SMSENABLED is set to no.
 
 ===== 5.1.22.1 Configuration
 
-To set up a GSM device, one must set the GSM mode in the related sms.properties file (see <<sms-properties,sms.properties>>) and then set up the related
-GSM.properties file (see <<gsm-properties,GSM.properties>>).
+To set up a GSM device, one must set the GSM mode in the related sms.properties file (see <<sms-properties,sms.properties>>).
 
-The default settings in the GSM.properties file should work with the majority of GSM devices (like phones, smartphones, USB modems, etc…).
+The default settings for a GSM modem should work with the majority of GSM devices (like phones, smartphones, USB modems, etc…).
 The exception is the PORT parameter which must be changed to match the SERIAL port used by your system to address the device once plugged in the system.
 
 If you are sure the PORT is correct but still Open Hospital is not communicating with the device (we suggest switching to DEBUG log level – or lower - during this setup –
@@ -1058,7 +1057,7 @@ To use the SetupGSM utility just follow these instructions:
 image:image25.png[image,width=293,height=120]
 [start=4]
 . If the name of the device is the one meant to be used with the system then just click “yes”, otherwise click “no”, and the scan will continue
-. Once you click “yes” the GSM.properties file will be automatically modified by the utility
+. Once you click “yes” the sms.properties file will be automatically modified by the utility
 
 
 
@@ -1359,9 +1358,9 @@ dicom.max.size=4M
 * *dicom.manager.impl*: the Java class that implements org.isf.dicom.manager.DicomManagerInterface and that manages the DICOM persistence operation. This property accepts on of the following:
 ** org.isf.dicom.SqlDicomManager: The dicom file is stored in the database
 ** org.isf.dicom.FileSystemDicomManager: The dicom file is stored in the file system
-* *dicom.storage.filesystem:* if the value of the first parameter is org.isf.dicom.FileSystemDicomManager,
+* *dicom.storage.filesystem*: if the value of the first parameter is org.isf.dicom.FileSystemDicomManager,
 this property specifies the path where the DICOM files are stored.
-* *dicom.max.size:* is the maximum allowed size for a dicom/jpg image (the MySQL server setting max_allowed_packet should be set with the same or a larger value).
+* *dicom.max.size*: is the maximum allowed size for a dicom/jpg image (the MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
 === 5.4 examination.properties
@@ -1411,27 +1410,27 @@ RR_MAX = 100
 ----
 
 * *LIST_SIZE*: the maximum number of examinations that can be viewed in the history. Must be less than or equal to 10
-* *HEIGHT_MIN:* the height minimum value (in cm), used to initialize the height slider in the *_Examination_* window
-* *HEIGHT_MAX:* the height maximum value (in cm), used to initialize the height slider in the *_Examination_* window
-* *HEIGHT_INIT:* the height default value (in cm)
-* *WEIGHT _MIN:* the weight minimum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
-* *WEIGHT _MAX:* the weight maximum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
-* *WEIGHT _INIT:* the weight default value (in Kg)
-* *WEIGHT _STEP:* the step (in Kg) used when moving the weight slider
-* *AP _MIN:* the Arterial pressure minimum value (in mmHg)
-* *AP _MAX:* the Arterial pressure maximum value (in mmHg)
-* *HR _MIN:* the Heart rate minimum value (in bmp)
-* *HR _MAX:* the Heart rate maximum value (in bmp)
-* *HR _INIT:* the Heart rate default value (in bmp)
-* *TEMP _INIT:* the temperature default value (in °C)
-* *TEMP _MIN:* the temperature minimum value (in °C)
-* *TEMP _MAX:* the temperature maximum value (in °C)
-* *TEMP _STEP:* the temperature step (in °C) used when moving the slider
-* *SAT _INIT:* the saturation default value (%)
-* *SAT _MIN:* the saturation minimum value (%)
-* *SAT _STEP:* the saturation step (%) used when moving the slider
-* *HGT_INIT:* = the Hemo Glucose Test default value (in mg/dl)
-* *DIURESIS_INIT:* = the Daily Urine Volume default value (in ml)
+* *HEIGHT_MIN*: the height minimum value (in cm), used to initialize the height slider in the *_Examination_* window
+* *HEIGHT_MAX*: the height maximum value (in cm), used to initialize the height slider in the *_Examination_* window
+* *HEIGHT_INIT*: the height default value (in cm)
+* *WEIGHT _MIN*: the weight minimum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
+* *WEIGHT _MAX*: the weight maximum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
+* *WEIGHT _INIT*: the weight default value (in Kg)
+* *WEIGHT _STEP*: the step (in Kg) used when moving the weight slider
+* *AP _MIN*: the Arterial pressure minimum value (in mmHg)
+* *AP _MAX*: the Arterial pressure maximum value (in mmHg)
+* *HR _MIN*: the Heart rate minimum value (in bmp)
+* *HR _MAX*: the Heart rate maximum value (in bmp)
+* *HR _INIT*: the Heart rate default value (in bmp)
+* *TEMP _INIT*: the temperature default value (in °C)
+* *TEMP _MIN*: the temperature minimum value (in °C)
+* *TEMP _MAX*: the temperature maximum value (in °C)
+* *TEMP _STEP*: the temperature step (in °C) used when moving the slider
+* *SAT _INIT*: the saturation default value (%)
+* *SAT _MIN*: the saturation minimum value (%)
+* *SAT _STEP*: the saturation step (%) used when moving the slider
+* *HGT_INIT*: = the Hemo Glucose Test default value (in mg/dl)
+* *DIURESIS_INIT*: = the Daily Urine Volume default value (in ml)
 
 === 5.5 [line-through]#h8.properties# (removed)
 
@@ -1523,76 +1522,76 @@ NOTE: An application restart is required to see the effect of any applied parame
 [#sms-properties]
 === 5.7 sms.properties
 
-Starting with Open Hospital version 1.8 a default sms.properties file is included:
+Starting with Open Hospital version 1.11 a default sms.properties file is included:
 
 [source, properties]
 ----
-# Configuration file for SMS Sender
-# MODE = GSM (COM PORT) or HTTP (PROVIDER)
-# GATEWAY = Skebby or empty
-# TIMEOUT = Timeout for the HTTP request
-# LOOP = loop time in seconds
-# ICC = International Calling Code
-MODE = GSM
-GATEWAY = Skebby
-TIMEOUT = 3000
-LOOP = 15
-ICC = +39
+##################################################################
+# Global configuration
+##################################################################
+# use: gsm-gateway-service || skebby-gateway-service || textbelt-gateway-service
+sms.gateway=textbelt-gateway-service
+sms.gateway.thread.timeout=3000
+sms.gateway.thread.loop=15
+sms.gateway.thread.icc=+39
+
+... other sections
 ----
 
-* *MODE*: the SMS sender mode. Can take two values:
-** *GSM*: requires a GSM modem connected to a COM port. The administrator should configure the SMSGateway/GSM.properties file to set the suitable PORT.
-** *HTTP*: requires an HTTP API provider.
-* *GATEWAY:* the HTTP gateway to use. Required when the MODE is set to GSM.
-* *TIMEOUT:* the timeout for the HTTP request. Required when MODE is set to HTTP.
-* *LOOP:* the delay used by the sender to fetch new SMS operations. The value is in seconds.
-* *ICC:* the International Country Code that needs to be added to the phone numbers (if required).
+* *sms.gateway*: the SMS sender mode. Can take three values:
+** *gsm-gateway-service*: requires a GSM modem connected to a COM port. The administrator should configure the SMSGateway/GSM.properties file to set the suitable PORT.
+** *skebby-gateway-service*: requires an Skebby provider account.
+** *textbelt-gateway-service*: requires an Textbelt provider account.
+* *TIMEOUT*: the timeout for the HTTP request. Required when sms.gateway is set to skebby-gateway-service or textbelt-gateway-service.
+* *LOOP*: the delay used by the sender to fetch new SMS operations. The value is in seconds.
+* *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
 
-[#gsm-properties]
-==== 5.7.1 GSM.properties
+==== 5.7.1 skebby-gateway-service
 
-Starting with Open Hospital version 1.8 a default GSM.properties file is included:
+Starting with Open Hospital 1.11 a default skebby-gateway-service section is included:
 
 [source, properties]
 ----
-# Configuration file for SMS Sender GSM
-# PORT = COMx (Windows) or /dev/ttyUSBx (Linux)
-#Mon Dec 01 02:38:30 CET 2014
-CMGS=AT+CMGS\="
-GMM=AT+GMM\r\n
-CMGF=AT+CMGF\=1\r
-CSMP=AT+CSMP\=17,167,0,0\r
-PORT=COM6
-DRIVERNAME=com.sun.comm.Win32Driver
-----
-
-Typically only the PORT property needs to be modified.
-
-* *PORT:* the COM port where the modem is connected
-
-==== 5.7.2 Skebby.properties
-
-Starting with Open Hospital 1.8 a default Skebby.properties file is included:
-
-[source, properties]
-----
-# Configuration file for Skebby Provider
-URL = http://gateway.skebby.it/api/send/smseasy/advanced/http.php
-USR =
-PWD =
-TYPE = send_sms_classic
-SENDER_NUMBER =
-SENDER_STRING =
+##################################################################
+# Skebby configuration
+##################################################################
+skebby-gateway-service.username=
+skebby-gateway-service.password=
+skebby-gateway-service.ribbon.base-url=https://api.skebby.it:443
+# USER_KEY and ACCESS_TOKEN avoids the login call every time we need to send sms
+skebby-gateway-service.accessToken=
+skebby-gateway-service.userKey=
 ----
 
 This file defines the parameters for sending SMS using the Skebby HTTP API.
 
-* *URL:* The URL of the Skebby HTTP API.
-* *USR:* The username for authenticating to the Skebby server.
-* *PWD:* The password for authenticating to the Skebby server.
-* *TYPE:* The SMS type required by Skebby. Typically the default value is used.
-* *SENDER_NUMBER:* The sender number.
-* *SENDER_STRING:* The sender string which will replace the sender number in the phone of the recipient.
+* *username*: the username for authenticating to the Skebby server.
+* *password*: the password for authenticating to the Skebby server.
+* *ribbon.base-url*: the URL of the Skebby HTTP API.
+* *accessToken*: the token generated by the Skebby provider upon user request (it replaces username)
+* *userKey*: the key generated by the Skebby provider upon user request (it replaces password)
+
+==== 5.7.2 textbelt-gateway-service
+
+Starting with Open Hospital 1.11 a default textbelt-gateway-service section is included:
+
+[source, properties]
+----
+##################################################################
+# Textbelt configuration
+##################################################################
+# enables/disables server testing mode (so that textbelt will do fake actions)
+textbelt-gateway-service.enable-testing-mode=false
+# use: textbelt (in order to send 1 free sms per day) or your api key (if you purchased sms)
+textbelt-gateway-service.key=textbelt
+textbelt-gateway-service.ribbon.base-url=https://textbelt.com:443
+----
+
+This file defines the parameters for sending SMS using the Skebby HTTP API.
+
+* *enable-testing-mode*: if set to "true", textbelt will do fake actions upon user/application requests.
+* *key*: your api key (if you purchased sms) from Textbelt provider (one can use "textbelt" to send 1 free sms per day)
+* *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
 [#txtprinter-properties]
 ===  5.8 txtPrinter.properties
