@@ -315,7 +315,7 @@ image:image100.png[oh.ico,width=32,height=32]
 
 === 3.2 Portable Open Hospital
 
-Open Hospital, since version 1.2.0, has also been distributed in a portable format.
+Open Hospital is also distributed in a portable format.
 
 Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the DB.  This package can be copied and run everywhere, carrying together all the inserted data.
 
@@ -468,7 +468,7 @@ In Portable Open Hospital for Windows you will find the following folder tree st
 [#config-files]
 == 5 Configuration Files
 
-Customization of Open Hospital depends on settings set in text files called “properties files”. Open Hospital 1.8 comes with 6 main properties files:
+Customization of Open Hospital depends on settings set in text files called “properties files”. Open Hospital comes with 6 main properties files:
 
 * *oh/rsc/*
 ** *database.properties* – for Open Hospital database connection
@@ -710,7 +710,7 @@ The following table shows the default value and the allowed ones:
 |ADMCHART |patient_adm_chart |any kind of .jasper file name
 |===
 
-Open Hospital, since its version 1.8, can produce a report about the Admission of a patient
+Open Hospital can produce a report about the Admission of a patient
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
 By default, ADMCHART is set to patient_adm_chart, that is, the filename of the related report to use for the Clinical Sheet functionality *Admission Chart*.
@@ -729,7 +729,7 @@ The following table shows the default value and the allowed ones:
 |DISCHART |patient_dis_chart |any kind of .jasper file name
 |===
 
-Open Hospital, since its version 1.8, can produce a report about the Discharge of a patient
+Open Hospital can produce a report about the Discharge of a patient
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-9-clinical-sheet-clinical-sheet[10.9 Clinical Sheet] in the User’s Guide).
 
 By default, DISCHART is set to patient_dis_chart which is the filename of the related report to use for the Clinical Sheet functionality *Discharge Chart*.
@@ -749,7 +749,7 @@ The following table shows the default value and the allowed ones:
 |PATIENTBILL |PatientBill |any kind of .jasper file name
 |===
 
-Open Hospital, since version 1.6.0, can manage patient bills and produce an A4 format breakdown with his/her items and payments
+Open Hospital can manage patient bills and produce an A4 format breakdown with his/her items and payments
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-2-functions-of-accounting[8.2 Functions of Accounting] in the User’s Guide).
 
 By default, PATIENTBILL is set to PatientBill, that is, the filename of the related report to use for the bill printing functionality.
@@ -769,7 +769,7 @@ The following table shows the default value and the allowed ones:
 |BILLSREPORT |BillsReport |any kind of .jasper file name
 |===
 
-Open Hospital, since version 1.6.0, can manage patient bills and produce a report about all bills paid (or not paid) within a span of time (see *8.2 Functions of Accounting* in the _User’s Guide_).
+Open Hospital can manage patient bills and produce a report about all bills paid (or not paid) within a span of time (see *8.2 Functions of Accounting* in the _User’s Guide_).
 
 By default, BILLSREPORT is set to BillsReport, that is, the filename of the related report to use for the account printing functionality.
 It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
@@ -788,7 +788,7 @@ The following table shows the default value and the allowed ones:
 |BILLSREPORTMONTH |BillsReportMonth |any kind of .jasper file name
 |===
 
-Open Hospital, since version 1.6.0, can manage patient bills and produce a report about all bills paid (or not paid) monthly
+Open Hospital can manage patient bills and produce a report about all bills paid (or not paid) monthly
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-2-functions-of-accounting[8.2 Functions of Accounting] in the User’s Guide).
 
 By default, BILLSREPORTMONTH is set to BillsReportMonth, that is, the filename of the related report to use for the account printing functionality.
@@ -808,7 +808,7 @@ The following table shows the default value and the allowed ones:
 |PHARMACEUTICALORDER |PharmaceuticalOrder |any kind of .jasper file name
 |===
 
-Open Hospital, since version 1.7.0, can produce a report for the Pharmacy Stock critical levels which helps to identify which pharmaceuticals are running low and which ones need to be ordered
+Open Hospital can produce a report for the Pharmacy Stock critical levels which helps to identify which pharmaceuticals are running low and which ones need to be ordered
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-1-pharmaceuticals-pharmaceuticals[6.1 Pharmaceuticals] in the User’s Guide).
 
 By default, PHARMACEUTICALORDER is set to PharmaceuticalOrder, that is, the filename of the related report to use for the pharmacy printing functionality.
@@ -828,7 +828,7 @@ The following table shows the default value and the allowed ones:
 |PHARMACEUTICALSTOCK |PharmaceuticalStock |any kind of .jasper file name
 |===
 
-Open Hospital, since version 1.7.0, can produce a report for the Pharmacy Stock Status which identifies which pharmaceuticals are currently available (see *6.1 Pharmaceuticals* in the _User’s Guide_).
+Open Hospital can produce a report for the Pharmacy Stock Status which identifies which pharmaceuticals are currently available (see *6.1 Pharmaceuticals* in the _User’s Guide_).
 
 By default, PHARMACEUTICALSTOCK is set to PharmaceuticalStock that is the filename of the related report to use for the pharmacy printing functionality.
 It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
@@ -847,9 +847,7 @@ The following table shows the default value and the allowed ones:
 |PATIENTEXTENDED |yes |yes, no
 |===
 
-Open Hospital, since version 1.3.1, allows registration of a patient with extended or more detailed information.
-This set of information “extends” the information collected since version 1.2.1
-(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-insert-a-new-patient-extended-new-patient[10.4 Insert a new Patient Extended] in the User’s Guide).
+Open Hospital allows for the registration of a patient with extended or more detailed information (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-insert-a-new-patient-extended-new-patient[10.4 Insert a new Patient Extended] in the User’s Guide).
 
 By default, PATIENTEXTENDED is set to yes. It is possible to set it to no to reduce the amount of data collected and so reduce the workload for the staff involved in data entry.
 
@@ -868,7 +866,7 @@ The following table shows the default value and the allowed ones:
 |OPDEXTENDED |yes |yes, no
 |===
 
-Open Hospital, since version 1.3.1, can link every OPD visit to a registered patient to generate a comprehensive clinical history.
+Open Hospital can link every OPD visit to a registered patient to generate a comprehensive clinical history.
 For each visit, the user will be asked to select a registered patient or to register a new one, so each visit is attached to the patient's history (see *5.3 OPD Extended* and *10.9 Clinical Sheet* in the _User’s Guide_).
 
 By default, OPDEXTENDED is set to yes.
@@ -888,7 +886,7 @@ The following table shows the default value and the allowed ones:
 |MATERNITYRESTARTINJUNE |no |yes, no
 |===
 
-Open Hospital, since version 1.3.1, allows to change the way the admissions in Maternity ward are counted within the year; in Open Hospital the first admission of the year for every ward has progressive number 1 (one) and it increments itself automatically up to the end of the year; 
+Open Hospital allows changing the way the admissions in Maternity ward are counted within the year; in Open Hospital the first admission of the year for every ward has progressive number 1 (one) and it increments itself automatically up to the end of the year;
 in some facilities, this is partially true and the progressive numbering starts from June only for the Maternity ward.
 This option controls which behavior is followed.
 
@@ -908,7 +906,7 @@ The following table shows the default value and the allowed ones:
 |LABEXTENDED |yes |yes, no
 |===
 
-Open Hospital, since version 1.4.1, can force every laboratory exam to be linked to a registered patient, 
+Open Hospital can force every laboratory exam to be linked to a registered patient,
 to have a comprehensive clinical history. For each exam, the user will be asked to select a registered patient so from that moment the 
 exam will be attached to the patient's history
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#7-3-2-new-laboratory-exam-v-2-0[7.3.2 New Laboratory Exam] in the User’s Guide).
@@ -929,7 +927,7 @@ The following table shows the default value and the allowed ones:
 |LABMULTIPLEINSERT |yes |yes, no
 |===
 
-Open Hospital, since version 1.4.1, can insert multiple laboratory tests per patient at one time to avoid the repetitive operation of selecting a patient or writing his/her name;
+Open Hospital can insert multiple laboratory tests per patient at one time to avoid the repetitive operation of selecting a patient or writing his/her name;
 note that the LABEXTENDED option must also be set to yes
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#7-3-3-laboratory-multiple-insert[7.3.3 Laboratory Multiple Insert] in the User’s Guide).
 
@@ -949,7 +947,7 @@ The following table shows the default value and the allowed ones:
 |INTERNALPHARMACIES |yes |yes, no
 |===
 
-Open Hospital, since version 1.4.1, can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application
+Open Hospital can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-11-merge-function-merge[Merge function] in the User's Guide).
 
 By default, INTERNALPHARMACIES is set to yes.
@@ -967,7 +965,7 @@ The following table shows the default value and the allowed ones:
 |MERGEFUNCTION |no |yes, no
 |===
 
-Open Hospital, since version 1.4.1, can merge two patient’s histories into one.
+Open Hospital can merge two patient’s histories into one.
 This is particularly useful in the case of double registration where different information was collected over time. 
 Activating this option, the Merge functionality will be available in the Admission/Patient module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-11-merge-function-merge[Merge function] in the User's Guide).
@@ -991,7 +989,7 @@ any executable filename in the path or with an absolute path
 
 |===
 
-Open Hospital, since version 1.4.1, can use a different PDF reader for generated reports.
+Open Hospital can use a different PDF reader for generated reports.
 If this parameter is set to yes, the Jasper PDF Viewer is used
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-2-report-launcher-launch-report[Report Launcher] in the User's Guide).
 If another PDF viewer is required, specify the executable's filename.
@@ -1029,7 +1027,7 @@ The following table shows the default value and the allowed ones:
 |SMSENABLED |no |yes, no
 |===
 
-Open Hospital, since version 1.5, can indicate whether information can be sent to patients via SMS notifications.
+Open Hospital can indicate whether information can be sent to patients via SMS notifications.
 Enabling or disabling this option only affects the possibility to set, or not set, a therapy as notifiable
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-10-7-notify-sms[10.10.7 Notify & SMS] in the User’s Guide).
 
@@ -1071,7 +1069,7 @@ The following table shows the default value and the allowed ones:
 |MAINMENUALWAYSONTOP |no |yes, no
 |===
 
-Open Hospital, since version 1.5, can keep the main menu always on top so it cannot be overlapped or hidden by other windows.
+Open Hospital can keep the main menu always on top so it cannot be overlapped or hidden by other windows.
 
 By default, MAINMENUALWAYSONTOP is set to no.
 
@@ -1089,7 +1087,7 @@ The following table shows the default value and the allowed ones:
 |RECEIPTPRINTER |no |yes, no
 |===
 
-Open Hospital, since version 1.5, can manage text or ZPL printers with aim of printing simple receipts in the Accounting module
+Open Hospital can manage text or ZPL printers with aim of printing simple receipts in the Accounting module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-1-2-11-print-receipt-function[8.2.1.11 Print receipt] function in User’s Guide).
 Once this option is activated, additional parameters are needed in the *txtPrinter.properties file* to adjust the output with the printer connected to the system
 (see <<txtprinter-properties,txtPrinter.properties>> in this document).
@@ -1111,7 +1109,7 @@ The following table shows the default value and the allowed ones:
 |VIDEOMODULEENABLED |no |yes, no
 |===
 
-Open Hospital, since version 1.5, can drive any webcam with the aim of shooting patient's passports in the Admission/Patient module
+Open Hospital can drive any webcam with the aim of shooting patient's images in the Admission/Patient module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide).
 Once this option is activated the related button, *New Photo* in the *New Patient Extended* window is available to start and use the webcam.
 
@@ -1131,7 +1129,7 @@ The following table shows the default value and the allowed ones:
 |PATIENTVACCINEEXTENDED |yes |yes, no
 |===
 
-Open Hospital, since version 1.6, can register vaccines given to patients
+Open Hospital can register vaccines given to patients
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#9-vaccines-patient-vaccines[9 Vaccines] in the User’s Guide).
 This option allows toggling the patient’s full name in the *_Patient vaccines browsing_* window.
 
@@ -1151,7 +1149,7 @@ The following table shows the default value and the allowed ones:
 |ENHANCEDSEARCH |no |yes, no
 |===
 
-Open Hospital, since version 1.6, can optimize memory usage when the number of registered patients becomes large
+Open Hospital can optimize memory usage when the number of registered patients becomes large
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-2-2-search-patient-enhanced[10.2.2 Search patient Enhanced] in the User’s Guide).
 With the enhanced search only, the patient matching a search criterion will be loaded in the memory, otherwise, all patients registered in the system will be loaded in the *_Patients browser_* window.
 
@@ -1172,7 +1170,7 @@ The following table shows the default value and the allowed ones:
 |XMPPMODULEENABLED |no |yes, no
 |===
 
-Open Hospital, since version 1.7, embeds a new technology that allows users logged in the application to chat and share information related to the hospital activities
+Open Hospital embeds a technology that allows users logged into the application to chat and share information related to the hospital activities
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#13-communication-communication[13 Communication] in the User’s Guide);
 the SINGLEUSER option must be set to no too. If this option is active, Open Hospital will look for an XMPP Server at startup time. The *xmpp.properties* will be used to point to the server that must be installed on the computer or on the OH Server by the System Administrator
 (see <<xmpp-properties,xmpp.properties>> in this document).
@@ -1193,7 +1191,7 @@ The following table shows the default value and the allowed ones:
 |DICOMMODULEENABLED |no |yes, no
 |===
 
-Open Hospital, since version 1.8, includes a new feature that allows attaching DICOM files to a patient’s clinical sheet.
+Open Hospital includes a feature that allows attaching DICOM files to a patient’s clinical sheet.
 When this option is enabled, a button, *DICOM*, appears in the patient Clinical sheet module.
 
 By default, DICOMMODULEENABLED is set to no.
@@ -1212,7 +1210,7 @@ The following table shows the default value and the allowed ones:
 |DICOMTHUMBNAILS |yes |yes, no
 |===
 
-Open Hospital, since version 1.10, can enable or disable thumbnails in the Dicom Viewer.
+Open Hospital can enable or disable thumbnails in the Dicom Viewer.
 
 By default, DICOMTHUMBNAILS is set to yes.
 
@@ -1230,7 +1228,7 @@ The following table shows the default value and the allowed ones:
 |DEBUG |no |yes, no
 |===
 
-Open Hospital, since version 1.7, can run in debug mode that could be useful to understand what is happening behind the user graphical interface.
+Open Hospital can run in debug mode when it would be useful to understand what is happening behind the user graphical interface.
 Currently, this option affects only the video module, which means that in place of the normal *New Patient Extended* window
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide),
 the program opens the new special window shown below:
@@ -1257,7 +1255,7 @@ The following table shows the default value and the allowed ones:
 |ALLOWMULTIPLEOPENEDBILL |no |yes, no
 |===
 
-Open Hospital, since version 1.9, allows a patient to have multiple open bills(invoices).
+Open Hospital allows a patient to have multiple open bills (invoices).
 If this option is enabled, when creating a new bill for a patient, if that patient already has an open bill
 the user is asked to confirm the creation of another one.
 
@@ -1276,7 +1274,7 @@ The following table shows the default value and the allowed ones:
 |OPENEDBILLSREPORT |OH023_BillsReportMonth |OH023_BillsReportMonth
 |===
 
-Open Hospital, since version 1.9, can print the list of open bills.
+Open Hospital can print the list of open bills.
 The parameter contains the jasper report file name to print the list of open bills.
 
 By default, OPENEDBILLSREPORT is set to OH023_BillsReportMonth.
@@ -1293,7 +1291,7 @@ The following table shows the default value and the allowed ones:
 |ALLOWPRINTOPENEDBILL |no |yes, no
 |===
 
-Open Hospital, since version 1.9, can print the receipt of a single open invoice.
+Open Hospital can print the receipt of a single open invoice.
 When the parameter is enabled, in the Accounting module under the pending tab one can select an open bill and
 get the receipt by clicking the Receipt button in the buttons panel.
 
@@ -1338,12 +1336,12 @@ jdbc:mysql://localhost/oh
 
 NOTE: An application restart is required to see the modification applied. +
 
-NOTE: The same settings must be applied in log4.properties (since Open Hospital 1.7); see
+NOTE: The same settings must be applied in log4.properties, see
 <<log4j-properties,log4j.properties>> in this manual.
 
 === 5.3 dicom.properties
 
-Open Hospital 1.8 and later versions, comes with a dicom.properties file set as follows by default:
+Open Hospital comes with a dicom.properties file set as follows by default:
 
 [source, properties]
 ----
@@ -1365,7 +1363,7 @@ If not specified the default value of "4M" is used.
 
 === 5.4 examination.properties
 
-Open Hospital 1.8 and later versions, come with the examination.properties file used in the examination module.
+Open Hospital comes with the examination.properties file used in the examination module.
 The file is set as follow by default:
 
 [source, properties]
@@ -1732,9 +1730,7 @@ With iReport® it is possible to edit Open Hospital reports and re-compile them 
 
 === 6.1 Compatibility: JasperStudio 6.14.0 and iReport® 3.0.0
 
-WARNING: Since version v1.11, Open Hospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or later.
-
-WARNING: For previous Open Hospital's versions, to have compliant and fully-working reports for Open Hospital, you must use iReport® version 3.0.0 (Classic) to edit and compile them.
+WARNING: Open Hospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or later.
 
 === 6.2 Links
 
@@ -1750,7 +1746,7 @@ iReport® 3.0.0 (Classic) - https://sourceforge.net/projects/ireport/files/iRepo
 
 == 7 Installing Open Hospital 1.11.0 in Eclipse EE
 
-WARNING: Since version 1.9.1, the code is available on GitHub at these links:
+WARNING: The code is available on GitHub at these links:
 https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
 https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui], and
 https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
@@ -1929,16 +1925,16 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_8_0\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
 
-D:\OpenHospital_1_8_0\mysql>
+D:\OpenHospital_1_11_0\mysql>
 ----
 
 [start=4]
 . Run the following commands (e.g.):
 [source,shell]
 ----
-D:\OpenHospital_1_8_3\mysql> mysql –u root -p
+D:\OpenHospital_1_11_0\mysql> mysql –u root -p
 
 Enter password: ****
 ----
