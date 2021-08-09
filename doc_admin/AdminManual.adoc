@@ -500,7 +500,7 @@ The default settings.properties file is:
 ----
 # This file contains Open Hospital settings
 LANGUAGE=en
-SINGLEUSER=yes
+SINGLEUSER=no
 AUTOMATICLOT_IN=no
 AUTOMATICLOT_OUT=no
 AUTOMATICLOTWARD_TOWARD=no
@@ -567,14 +567,14 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital ships with nine translations, identified by the international country code:
 
-* en – English
-* it – Italian
-* fr – French
-* es – Spanish
-* de – German
-* sw – Swahili
 * ar – Arabic
 * de - German
+* en – English
+* es – Spanish
+* fr – French
+* it – Italian
+* pt – Portuguese
+* sw – Swahili
 * zh_CN - simplified Chinese
 
 You can change the language used in the application simply by editing *_settings.properties_* and setting this key.
