@@ -347,7 +347,7 @@ NOTE: It is important to understand that the portable version is meant to be a t
 or used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
 architecture, the full installation version is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/131d0aeb3f913b755d589e489a93b467ed44d636/POH-README.md[]
+include::https://raw.githubusercontent.com/informatici/openhospital/29ff21268e9857535e3d77bac34e8d6e1b4ef0d1/POH-README.md[]
 
 [#backup-restore]
 === 3.3 Backup & Restore
