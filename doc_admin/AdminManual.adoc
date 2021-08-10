@@ -1932,20 +1932,25 @@ D:\OpenHospital_1_11_0\mysql>
 
 [start=4]
 . Run the following commands (e.g.):
+
 [source,shell]
 ----
 D:\OpenHospital_1_11_0\mysql> mysql –u root -p
 
 Enter password: ****
 ----
+
 [start=5]
 . Using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
+
 [source,shell]
 ----
 mysql>
 ----
+
 [start=6]
 . We launch all scripts in order that that differ from the previous version; for example:
+
 [source,shell]
 ----
 mysql> source step_34_slim_opd_table.sql
@@ -1962,6 +1967,7 @@ mysql> source step_39_patientfolder_submenu.sql
 
 ...
 ----
+
 [start=7]
 . Take notes if any error message occurs and report them to: +
 https://sourceforge.net/p/openhospital/support-requests/
