@@ -167,6 +167,7 @@ To:
 Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
 
 Change:
+
 [source,properties]
 ----
 #
@@ -177,6 +178,7 @@ query-cache_size = 16M
 ----
 
 To:
+
 [source,properties]
 ----
 #
