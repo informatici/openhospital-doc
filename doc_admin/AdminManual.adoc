@@ -2004,3 +2004,6 @@ info@informaticisenzafrontiere.org and specify:
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
+
+include::https://raw.githubusercontent.com/mizzioisf/openhospital-client/main/README.md[]
+
