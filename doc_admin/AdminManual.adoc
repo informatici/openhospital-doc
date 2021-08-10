@@ -39,7 +39,7 @@ This application software consists of the following parts:
 * Internal communication
 * Statistics and printing
 
-This document describes how to install the application and how to configure it in your environment.  This includes enabling and disabling functionality as well as managing users.
+This document describes how to install the application and how to configure it in your environment. This includes enabling and disabling functionality as well as managing users.
 
 The reader of this manual will not find the information one needs to use the application software; that information is found in our _User’s Guide_, supplied with the application software.
 
@@ -59,7 +59,7 @@ Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of O
 
 The software acts as a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software, the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
 
-The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB).  This installation is accomplished through the execution of a script in the folder mysql/ within the .zip file folders.
+The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder mysql/ within the .zip file folders.
 
 The classic installation schema in a regular wired LAN network is shown in the following figure:
 
@@ -101,11 +101,11 @@ TIP: If you see the application small-scaled, probably you are using a high-dpi 
 
 Depending on the operating system you have, there are several pieces of software to download to install and manage a MySQL server. In most cases one downloads a standard installation file of the software, paying attention to configuration options during the installation process.
 
-For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks.  Some newer distributions (distros) include MySQL Workbench.
+For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
 The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
 
-NOTE: The DB creation and the software itself are only tested with MySQL Server 5.7.x.  Any other version may have problems during the DB creation process.
+NOTE: The DB creation and the software itself are only tested with MySQL Server 5.7.x. Any other version may have problems during the DB creation process.
 
 ===== 3.1.2.1 MySQL Server installation
 
@@ -140,7 +140,7 @@ The terminal should reply with the MySQL client command line prompt:
 
 The prompt means there is a successful connection to the MySQL Server instance that was just installed as evidenced by it waiting for commands to execute.
 
-NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command.  If this is the case you can add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
+NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case you can add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
 ====== 3.1.2.1.1 Networking
 
@@ -256,7 +256,7 @@ mysql> show databases;
 
 The script created the DB populated it with some default data, and created the “isf” user with password “isf123”.
 
-The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password must be changed immediately with the command:
+The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password can be changed at any time with the command:
 
 [source,shell]
 ----
@@ -321,7 +321,7 @@ image:image100.png[oh.ico,width=32,height=32]
 
 Open Hospital is also distributed in a portable format.
 
-Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the DB.  This package can be copied and run everywhere, carrying together all the inserted data.
+Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the DB. This package can be copied and run everywhere, carrying together all the inserted data.
 
 Since the JRE and MySQL are not platform-independent and come in different versions depending on the platform, we have:
 
@@ -344,8 +344,10 @@ archive remain unchanged once extracted, otherwise you will not be able to start
 appropriate manner.
 
 NOTE: It is important to understand that the portable version is meant to be a trial, that is, to have a look at the software
-or used in a very small facility (like a dispensary) with only one computer.  If the facility is large and needs a networked
+or used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
 architecture, the full installation version is recommended.
+
+include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=36..314]
 
 [#backup-restore]
 === 3.3 Backup & Restore
@@ -398,50 +400,50 @@ Open Hospital has a folder tree hierarchy which consists of:
 * *bundle* – contains the *language* files
 * *doc* – contains *documents* like version changelogs and manuals
 * *lib* – contains the Java *libraries* needed to run the software
-* *logs* – contains the log files useful for debugging (after the first run)
+* *mysql* – contains the scripts and configurations for MySQL DB
 * *rpt* – contains the JasperReports® *reports* used in Open Hospital
 * *rpt/PDF* – contains the reports generated by Open Hospital in PDF format
 * *rsc* – contains the *resources* of Open Hospital, like configuration files and other stuff
 * *rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *rsc/images* – contains the *images* used in Open Hospital
-* *sql* – contains the scripts and configurations for MySQL DB
+* *logs* – contains the log files useful for debugging (after the first run)
 
 These folders may be organized differently depending on the version of the software.
 
-=== 4.1 Folder tree in Open Hospital client (multiarch)
+=== 4.1 Folder tree in Open Hospital
 
 In the Open Hospital zip file you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
-* *OpenHospital-_<version>_-multiarch-client*/
+* *OpenHospital-_<version>_*/
 ** *bin*
 ** *bundle*
 ** *doc*
 ** *lib*
-** *logs* (after first startup)
+** *mysql*
 ** *rpt*
 ** *rsc*
-** *sql*
-** CHANGELOG - Last version brief changelog
-** LICENSE - GNU GENERAL PUBLIC LICENSE V3
-** oh.ico - icon image for launcher
-** README.md
-** SetupGSM.cmd *Utility for Windows*
-** SetupGSM.sh *Utility for Linux*
 ** startup.cmd *Launcher for Windows*
 ** startup.sh *Launcher for Linux*
+** SetupGSM.cmd *Utility for Windows*
+** SetupGSM.sh *Utility for Linux*
+** oh.ico - icon image for launcher
+** LICENSE - GNU GENERAL PUBLIC LICENSE V3
+** CHANGELOG - Last version brief changelog
 
 === 4.2 Folder tree in Portable Open Hospital for Linux (32 and 64bit)
 
 In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
-* *OpenHospital-_<version>_-linux_i686-portable*/ or *OpenHospital-_<version>_-linux_x86_64-portable*/
-** data/ - folder for DB, DICOM files and logs
+* *poh-linux-_<arch>_-0.0.6-core-_<version>_*/
+** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
 ** etc/ - working folder
-** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
-** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
+** jdk-11.0.9+11-jre/ (64bit) or zulu11.43.21-ca-jre11.0.9-linux_i686/ (32bit) - Java Virtual Machine
+** mysql-5.7.30-linux-glibc2.12-<arch>/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
-** sql/ - working folder
+** tmp/ - working folder
+** var/ - working folder
 ** CHANGELOG - Last version brief changelog
+** database.sql (DB initialization script, automatically renamed to database.sql.imported after the first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
 ** *oh.sh Launcher for Portable-Linux*
@@ -452,16 +454,18 @@ In Portable Open Hospital for Linux you will find the following folder tree stru
 
 In Portable Open Hospital for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
-* *OpenHospital-_<version>_-win32-portable*/
-** data/ - folder for DB, DICOM files and logs
-** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
-** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
+* *poh-win32-0.0.5-core-_<version>_*/
+** dicom_storage/ - folder for DICOM files when added to the patient clinical sheet
+** jdk-11.0.9+11-jre/ or jdk8u252-b09-jre/ - Java Virtual Machine - Java Virtual Machine
+** modified/ - working folder
+** mysql/ - MySQL Server and MySQL DB
 ** *oh/ the OpenHospital subfolder structure*
+** tmp/ - working folder
 ** CHANGELOG - Last version brief changelog
+** database.sql (DB initialization script, automatically removed after the first run)
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
-** *oh.bat - Launcher for Windows*
+** *oh.bat Launcher for Windows*
 ** oh.ico - icon image for the launcher
-** oh.ps1 - Launcher PowerShell for Windows
 ** POH-README.md (README portable-windows)
 ** POH-win-changelog.md (changelog portable-windows)
 
@@ -495,16 +499,16 @@ NOTE: Any change to these files requires an application restart to see the modif
 
 The following chapters will describe these properties files and their features in detail.
 
-[#settings-properties]
+[#generaldata-properties]
 === 5.1 settings.properties
 
-The default settings.properties file is:
+The default generalData.properties file is:
 
 [source,properties]
 ----
 # This file contains Open Hospital settings
 LANGUAGE=en
-SINGLEUSER=no
+SINGLEUSER=yes
 AUTOMATICLOT_IN=no
 AUTOMATICLOT_OUT=no
 AUTOMATICLOTWARD_TOWARD=no
@@ -571,14 +575,14 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital ships with nine translations, identified by the international country code:
 
+* en – English
+* it – Italian
+* fr – French
+* es – Spanish
+* de – German
+* sw – Swahili
 * ar – Arabic
 * de - German
-* en – English
-* es – Spanish
-* fr – French
-* it – Italian
-* pt – Portuguese
-* sw – Swahili
 * zh_CN - simplified Chinese
 
 You can change the language used in the application simply by editing *_settings.properties_* and setting this key.
@@ -1705,7 +1709,7 @@ All files must be encoded in *UTF-8* to accept any language-specific characters 
 ==== 5.10.1 New Translations
 
 To create a new translation, one can simply copy the English file, rename it with the new country code in
-place of the “XY” in the filename, and start translating with a simple text editor.   A text editor can also be used to modify
+place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
 existing translations that are incorrect.
 
 For instance, if you want to create an Arab translation, you copy a new bundle from the English one by copying _language_en.properties_ into a *new file* _language_ar.properties_.
