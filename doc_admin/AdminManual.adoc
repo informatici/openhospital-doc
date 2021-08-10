@@ -353,7 +353,7 @@ NOTE: Folder Structure and Known Issues at
 https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 [#backup-restore]
-=== 3.3 Backup & Restore
+=== 3.3 Backup & Restore (alternative with MySQL Workbench®)
 
 [#backup-data]
 ==== 3.3.1 Backup of data (Database)
