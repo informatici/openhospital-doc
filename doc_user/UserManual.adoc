@@ -2545,7 +2545,7 @@ image:image157.png[Not Contiguous Ages]
 
 In following example, the ranges _Late Childhood_ and _Adolescent_ *overlap* since both start with age 6:
 
-image:image159.png[Overlapped,width=642,height=313]
+image:image159.png[Overlapped]
 
 The Age Types defined are used in the Patient Extended functionality (see
 <<insert-a-new-patient-extended,Insert a new Patient Extended>> in this document).
