@@ -835,7 +835,7 @@ The *_New Laboratory Exam_* window appears like the following:
 
 image:image50.png[New Laboratory Exam,width=531,height=530]
 
-The *Patient’s Data* panel cannot be modified except for the  *Note* field and only shows the information related to the selected Patient.
+The *Patient’s Data* panel cannot be modified except for the *Note* field and only shows the information related to the selected Patient.
 
 [#laboratory-multiple-insert]
 ==== 7.3.3 Laboratory Multiple Insert
@@ -2312,7 +2312,7 @@ _i.e. X-Ray, CT-Scan, NMR, etc._
 
 Once the *[.underline]##A##dmission Type* button from the *_Types_* menu is pressed, the *_Admission Type Browser_* window shown below appears:
 
-image:image140.png[Admission Types,width=453,height=203]
+image:image140.png[Admission Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2321,15 +2321,15 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if it is still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Admission Types defined in this functionality are used in the Admission function (see
+The Admission Types defined are used in the Admission function (see
 <<start-the-admission-of-a-patient,Start the admission of a patient>> and
 <<discharge-of-a-patient,Discharge of a patient>> in this document).
 
-==== 14.2.2 Discharge Types ([.underline]##D##ischarge Type)
+==== 14.2.2 Discharge Types (Discha[.underline]##r##ge Type)
 
-Once the *[.underline]##D##ischarge Type* button from the *_Types_* menu is pressed, the *_Discharge Type Browser_* window shown below appears:
+Once the *Discha[.underline]##r##ge Type* button from the *_Types_* menu is pressed, the *_Discharge Type Browser_* window shown below appears:
 
-image:image141.png[Discharge Types,width=453,height=203]
+image:image141.png[Discharge Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2338,31 +2338,15 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Discharge Types defined in this functionality are used in the Admission function (see
+The Discharge Types defined are used in the Admission function (see
 <<start-the-admission-of-a-patient,Start the admission of a patient>> and
 <<discharge-of-a-patient,Discharge of a patient>> in this document).
 
-==== 14.2.3 Delivery Types (De[.underline]##l##ivery Type)
-
-Once the *De[.underline]##l##ivery Type* button from the *_Types_* menu is pressed, the *_Delivery Type Browser_* window shown below appears:
-
-image:image142.PNG[Discharge Types,width=453,height=203]
-
-The functions available in this window (similar to other windows in the *_Types_* menu) are:
-
-* *[.underline]##N##ew*: enter a new type (cannot use an existing code)
-* *[.underline]##E##dit*: edit an existing type (the code cannot be changed)
-* *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
-* *[.underline]##C##lose*: close the window
-
-The Delivery Types defined in this functionality are used in the Admission function (see
-<<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
-
-==== 14.2.4 Delivery Result Types (Delive[.underline]##r##y Result Type)
+==== 14.2.3 Delivery Result Types (Delive[.underline]##r##y Result Type)
 
 Once the *Delive[.underline]##r##y Result Type* button from the *_Types_* is pressed, the *_Delivery Result Type Browser_* window shown below appears:
 
-image:image143.png[Discharge Result Types,width=453,height=203]
+image:image143.png[Discharge Result Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2371,14 +2355,14 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Delivery Result Types defined in this functionality are used in the Admission function (see
+The Delivery Result Types defined are used in the Admission function (see
 <<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
 
-==== 14.2.5 Disease Types (Disease [.underline]##T##ype)
+==== 14.2.4 Delivery Types (De[.underline]##l##ivery Type)
 
-Once the *Disease [.underline]##T##ype* button from the *_Types_* menu is pressed, the *_Disease Type Browser_* window shown below appears:
+Once the *De[.underline]##l##ivery Type* button from the *_Types_* menu is pressed, the *_Delivery Type Browser_* window shown below appears:
 
-image:image144.PNG[Disease Type,width=453,height=203]
+image:image142.PNG[Discharge Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2387,7 +2371,23 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Disease Types defined in this functionality are used throughout the application. For example, in definition of Diseases or in OPD (see
+The Delivery Types defined are used in the Admission function (see
+<<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
+
+==== 14.2.5 Disease Types ([.underline]##D##isease Type)
+
+Once the *[.underline]##D##isease Type* button from the *_Types_* menu is pressed, the *_Disease Type Browser_* window shown below appears:
+
+image:image144.PNG[Disease Type]
+
+The functions available in this window (similar to other windows in the *_Types_* menu) are:
+
+* *[.underline]##N##ew*: enter a new type (cannot use an existing code)
+* *[.underline]##E##dit*: edit an existing type (the code cannot be changed)
+* *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
+* *[.underline]##C##lose*: close the window
+
+The Disease Types defined are used throughout the application. For example, in definition of Diseases or in OPD (see
 <<disease,Disease>> and <<create-a-new-patient-visit,Create a new patient visit>> in this document).
 
 [#exam-types]
@@ -2395,7 +2395,7 @@ The Disease Types defined in this functionality are used throughout the applicat
 
 Once the *[.underline]##E##xam Type* button from the *_Types_* menu is pressed, the *_Exam Type Browser_* window shown below appears:
 
-image:image145.png[Exam Type,width=453,height=203]
+image:image145.png[Exam Type]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2404,14 +2404,14 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Exam Types defined in this functionality are used in the Laboratory function (see
+The Exam Types defined are used in the Laboratory function (see
 <<laboratory,Laboratory>> in this document).
 
 ==== 14.2.7 Medicals Stock Movement Types (Medical[.underline]##s## Stock Mov Type)
 
 Once the *Medical[.underline]##s## Stock Mov Type* button from the *_Types_* menu is pressed, the *_Medicals Stock Movement Types Browser_* window shown below appears:
 
-image:image146.png[Medicals Stock Movement Types,width=453,height=203]
+image:image146.png[Medicals Stock Movement Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2422,7 +2422,7 @@ The functions available in this window (similar to other windows in the *_Types_
 
 By pressing the *[.underline]##N##ew* button, you access the *_New Medical Stock Movement Type_* window as shown below:
 
-image:image147.png[New Medical Stock Movement,width=250,height=227]
+image:image147.png[New Medical Stock Movement]
 
 The allowed types are “+” and “-“ and this means that any kind of movements are either a charging (+) or a discharging (-) of the stock.
 
@@ -2434,14 +2434,14 @@ Examples are:
 * Lost (-)
 * ...
 
-The Medical Stock Movement Types defined in this functionality are used in the Pharmaceutical Stock function (see
+The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
 
 ==== 14.2.8 Medical Types ([.underline]##M##edicals Type)
 
 Once the *[.underline]##M##edicals Type* button from the *_Types_* menu is pressed, the *_Medical Type Browser_* window shown below appears:
 
-image:image148.png[Medical Type,width=453,height=203]
+image:image148.png[Medical Type]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2450,7 +2450,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Medical Types defined in this functionality are used throughout the application. For example,
+The Medical Types defined are used throughout the application. For example,
 in the Pharmacy function and Pharmaceutical Stock Ward (see
 <<insert-a-new-pharmaceutical,Insert a new pharmaceutical>> and
 <<search-ward-pharmacy-movements,Search Ward Pharmacy movements>> in this document).
@@ -2459,7 +2459,7 @@ in the Pharmacy function and Pharmaceutical Stock Ward (see
 
 Once the *[.underline]##O##peration Type* button from the *_Types_* menu is pressed, the *_Operation Type Browser_* window shown below appears:
 
-image:image149.png[Operation Types,width=453,height=203]
+image:image149.png[Operation Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2468,14 +2468,14 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Operation Types defined in this functionality are used in the Admission function (see
+The Operation Types defined are used in the Admission function (see
 <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>> in this document).
 
 ==== 14.2.10 Pregnant Treatment Types ([.underline]##P##regnant Treatment Type)
 
 Once the *[.underline]##P##regnant Treatment Type* button from the *_Types_* menu is pressed, the *_Pregnant Treatment Type Browser_* window shown below appears:
 
-image:image150.png[Pregnant Treatment Types,width=453,height=203]
+image:image150.png[Pregnant Treatment Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2484,7 +2484,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Pregnant Treatment Types defined in this functionality are used in the Admission function (see
+The Pregnant Treatment Types defined are used in the Admission function (see
 <<insert-or-modify-delivery-data,Insert or Modify Delivery data>> in this document).
 
 [#other-prices]
@@ -2492,7 +2492,7 @@ The Pregnant Treatment Types defined in this functionality are used in the Admis
 
 Once the *Ot[.underline]##h##er Prices* button in the *_Types_* menu is pressed, the *_Other Prices Browser_* window shown below appears:
 
-image:image151.png[Other Prices,width=377,height=194]
+image:image151.png[Other Prices]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2503,7 +2503,7 @@ The functions available in this window (similar to other windows in the *_Types_
 
 To create a new Price, press the *[.underline]##N##ew* button, and the *_New Price_* window shown below appears:
 
-image:image152.png[New Price,width=400,height=180]
+image:image152.png[New Price]
 
 To insert a new Price, you must input the following data:
 
@@ -2520,20 +2520,20 @@ image:image153.png[New Prices_daily,width=297,height=124]
 
 image:image154.png[New Prices_undefined,width=297,height=124]
 
-The Other Prices defined in this functionality are used in the Accounting and Price List functions (see
+The Other Prices defined are used in the Accounting and Price List functions (see
 <<insert-a-new-bill,Insert a new bill>> and <<prices,Prices>> in this document).
 
 ==== 14.2.12 Age Types (A[.underline]##g##e Type)
 
 Once the *A[.underline]##g##e Type* button in the *_Types_* menu is pressed, the *_Age Type Browser_* window shown below appears:
 
-image:image155.png[Age Types,width=456,height=170]
+image:image155.png[Age Types]
 
 Note that age ranges are fixed and only the Administrator can change their values to best fit the health normative in the country.
 
 By pressing the *[.underline]##E##dit* button, the table allows you to modify only the age values and the button changes to *[.underline]##S##ave*.
 
-image:image156.png[Age Types_edit,width=456,height=170]
+image:image156.png[Age Types Edit]
 
 By double-clicking on each value, you can change it by typing a new value. Then by pressing the *[.underline]##S##ave* button, the new information is stored in the system.
 
@@ -2541,20 +2541,20 @@ Only integer values are allowed and every range must be *contiguous* and may not
 
 For example, in the following case, ranges _Late Childhood_ and _Adolescent_ are not *contiguous* and ages 14 and 15 are not defined in any range:
 
-image:image157.png[Not Contiguous,width=642,height=313]
+image:image157.png[Not Contiguous Ages]
 
 In following example, the ranges _Late Childhood_ and _Adolescent_ *overlap* since both start with age 6:
 
-image:image159.png[Overlapped,width=642,height=313]
+image:image159.png[Overlapped]
 
-The Age Types defined in this functionality are used in the Patient Extended functionality (see
+The Age Types defined are used in the Patient Extended functionality (see
 <<insert-a-new-patient-extended,Insert a new Patient Extended>> in this document).
 
 ==== 14.2.13 Vaccine Types ([.underline]##V##accine Type)
 
 Once the *[.underline]##V##accine Type* button in the *_Types_* menu is pressed, the *_Vaccine Type Browser_* window shown below appears:
 
-image:image161.png[Vacine Type,width=453,height=203]
+image:image161.png[Vacine Type]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2563,7 +2563,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The Vaccine Types defined in this functionality are used in the Vaccine function (see
+The Vaccine Types defined are used in the Vaccine function (see
 <<vaccines,Vaccines>> in this document).
 
 [#dicom-types]
@@ -2571,7 +2571,7 @@ The Vaccine Types defined in this functionality are used in the Vaccine function
 
 Once the *DICOM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window shown below appears:
 
-image:image242.png[DICOM Types,width=432,height=194]
+image:image242.png[DICOM Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2580,14 +2580,14 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application)
 * *[.underline]##C##lose*: close the window
 
-The DICOM Types defined in this functionality are used in the DICOM Load function (see
+The DICOM Types defined are used in the DICOM Load function (see
 <<dicom-viewer,DICOM Viewer>> in this document).
 
 === 14.3 Hospital ([.underline]##H##ospital)
 
 Once the *[.underline]##H##ospital* button in the *_Settings_* menu is pressed, the *_Hospital Information_* window shown below appears:
 
-image:image162.png[Hospital,width=282,height=274]
+image:image162.png[Hospital]
 
 By pressing the *[.underline]##E##dit* button, you can edit the values to match those of where the software is installed.
 
@@ -2627,7 +2627,7 @@ To insert a new Ward, you must provide the following required inputs:
 NOTE: Using this function one can define wards with 0 (zero) beds but with a pharmacy.
 This allows for "logical” departments (rather than physical) to manage pharmacy movements.
 
-The Wards defined in this functionality are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
+The Wards defined are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
 <<admission-patient,Admission/Patient>>, <<pharmaceutical-stock,Pharmaceutical Stock>> and
 <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
@@ -2654,7 +2654,7 @@ In editing mode, you cannot change the type and code but only modify the Descrip
 
 By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) you are performing a *[.underline]##D##elete* action, that is disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
-The Diseases defined in this functionality are reflected throughout the entire application, like in the Admission module and the OPD module (see
+The Diseases defined are reflected throughout the entire application, like in the Admission module and the OPD module (see
 <<admission-patient,Admission/Patient>> and
 <<outpatient-department-management,Outpatient Department Management>> in this document).
 
@@ -2747,7 +2747,7 @@ In editing mode, you cannot change the type or the code but only modify the Desc
 
 You can also change the operation's context: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
 
-The Operations defined in this functionality are used throughout the entire application, like in the Admission module (see
+The Operations defined are used throughout the entire application, like in the Admission module (see
 <<insert-or-modify-surgery-data,Insert or Modify Surgery data>> in this document).
 
 === 14.8 Vaccine ([.underline]##V##accine)
@@ -2770,7 +2770,7 @@ image:image176.png[Edit Vaccine,width=286,height=204]
 
 In editing mode, you cannot change the type and code but only modify the Description.
 
-The vaccines defined in this functionality are used throughout the entire application, like in the Vaccine module (see
+The vaccines defined are used throughout the entire application, like in the Vaccine module (see
 <<vaccines,Vaccines>> in this document).
 
 [#prices]
@@ -2850,7 +2850,7 @@ image:image181.png[Edit List,width=224,height=204]
 
 In editing mode, any of the data related to the list can be changed.
 
-The lists defined in this functionality are used in the Accounting module (see
+The lists defined are used in the Accounting module (see
 <<insert-a-new-bill,Insert a new bill>> in this document).
 
 === 14.10 Supplier ([.underline]#Supplier#)
