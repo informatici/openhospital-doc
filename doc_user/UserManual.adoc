@@ -39,40 +39,40 @@ This application software consists of the following parts:
 * Appointments management
 * Statistics and printing
 
-This document describes how all the above-mentioned items work and gives you some suggestions as to the correct use of the program.
+This document describes how all the above-mentioned items work and provides guidance as to the correct use of the program.
 
 The reader will not find in this manual the information one needs for the installation of the application software or 
-for administrative purposes; that information is provided in the _Administrator’s Guide_ supplied with the application software.
+for administrative purposes; that information is provided in the _Administrator’s Guide_ supplied with the software.
 
 == 2 Introduction
 
 The program aims to manage, in the simplest manner, the hospital administrative operations like registering patients
-and laboratory analysis, and to produce statistics for the health ministry. In the following chapters, users will find all
-the information they need to use the program properly.
+and laboratory analysis, and to produce statistics for the health ministry. This document will describe the all
+the information that one needs to use the program properly.
 
 == 3 Useful Information Before Reading This User Manual
 
 === 3.1 Help
 
-* The *[.underline]##H##elp* function available on the bottom of the main MENU of Open Hospital allows you to access
+* The *[.underline]##H##elp* function available on the bottom of the main MENU of Open Hospital provides access
 this document [.underline]#offline#.
 
 === 3.2 Legend
 
 In this document the following conventions are used:
 
-* When in the text of this document you find a word written in bold and highlighted in grey *–*
+* When in the text of this document a word written in bold and highlighted in grey *–*
 like *[.underline]##P##harmacy* or *[.underline]##N##ew –* it indicates a function of the application and it is also
 called a “button”. *[.underline]##P##harmacy* is a button.
 
-* When you find text written in bold Italic (as an example, *_Laboratory Browser)_* it indicates the screen with the name
+* When text written in bold Italic (as an example, *_Laboratory Browser)_* it indicates the screen with the name
 “Laboratory Browser” (see example below). Each screen of the application is called a window. *_Laboratory Browser_* is a window.
 
-* When you find a text written in bold as - *Search patient visits –* it indicates a function of the application,
+* When text written in bold as - *Search patient visits –* it indicates a function of the application,
 or an area of the window (for example, *Data table*).
 
-* Each button always has a single letter with an underscore. You can select the functionality offered by the button by
-pressing the “Alt” key and at the same time the “underlined” key (in the example of *[.underline]##P##harmacy* you
+* Each button always has a single letter with an underscore. The functionality offered by the button is made available by
+pressing the “Alt” key and at the same time the “underlined” key (in the example of *[.underline]##P##harmacy*,
 press “Alt” and “P”)*.* This behavior is common throughout the application and allows the user to operate (almost)
 without the use of the mouse. In this document the “Alt” key and the “P” key will be indicated as “Alt + P”.
 
@@ -86,14 +86,14 @@ area. Areas can be a *Selection panel*, a *Data table*, or a *Buttons panel* (se
 
 image:image3.png[Window areas,width=642,height=464]
 
-* To highlight an entry (for example, a single line in a *Data table*) you click the mouse on the entry.
+* To highlight an entry (for example, a single line in a *Data table*) click the mouse on the entry.
 The entry (the entire line) is then highlighted in blue. This behavior is valid throughout the application (see example below):
 
 image:image4.png[Highlight Line,width=509,height=296]
 
-== 4 Run the application
+== 4 Run the Application
 
-After double-clicking the program icon on your desktop, you will see an information image (splash image) for a few seconds and
+After double-clicking the program icon on the desktop, an information image (splash image) appears for a few seconds and
 then the main _menu_ of the Open Hospital application.
 
 .The default Main Menu when the application starts.
@@ -101,7 +101,7 @@ then the main _menu_ of the Open Hospital application.
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-From a menu, you can get to other menus or functional areas. In the example below, from the main *_menu_*
+From a menu one can access other menus or functional areas. In the example below, from the main *_menu_*
 selecting the *_Settings_* menu leads to another menu of various settings or code types:
 
 image:image6.png[Setting Submenu,width=602,height=370]
@@ -118,7 +118,7 @@ image:image7.png[Click OPD in main menu,width=649,height=374]
 
 === 5.1 Main Characteristics
 
-The function of the Out Patient Department allows for recording ambulatory patient visits, searching, reviewing, editing, and
+The function of the Out Patient Department (OPD) allows for recording ambulatory patient visits, searching, reviewing, editing, and
 eventually deleting visits. In addition queries necessary for statistical purposes are available.
 
 Click on the *[.underline]##O##PD* button or press “Alt + O” in the main *_menu_* to access the OPD function.
@@ -139,7 +139,7 @@ The following functions are available from the *Buttons panel* of the window *_O
 * *[.underline]##N##ew*: create a new patient visit
 * *[.underline]##E##dit*: modify an existing patient visit
 * *[.underline]##D##elete*: delete a patient visit
-* *[.underline]##C##lose*: exit from the function *_OPD Out Patient Department_*
+* *[.underline]##C##lose*: exit from the *_OPD Out Patient Department_* function
 
 Furthermore, a search function (*[.underline]##S##earch*) is available using the *Selection panel* on the left of the window.
 
@@ -210,26 +210,26 @@ but all the corresponding data is stored and available in reports and for search
 * *Age*: The patient's age; the valid age range is 0-200.
 * *Sex*: The patient's sex; either male or female.
 
-When you finish entering data the *Buttons panel* has the following choices:
+When finished entering data, the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm and record the patient's visit.
 * *[.underline]##C##ancel*: close the window and to return to the *_OPD Out Patient Department_* window.
 
 ==== 5.2.3 Modify a Recorded Patient Visit ([.underline]##E##dit)
 
-In order to modify a visit you have to highlight it in the *_OPD Out Patient Department_* window. Once a visit is highlighted,
+In order to modify a visit first highlight it in the *_OPD Out Patient Department_* window. Once a visit is highlighted,
 press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window shown below appears, the record is available for changes. All data can be changed.
 
 image:image12.png[Edit Patient Visit,width=373,height=414]
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When finished entering data, the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and to return to the *_OPD Out Patient Department_* window without applying any changes.
 
 ==== 5.2.4 Delete a Recorded Patient Visit ([.underline]##D##elete)
 
-In order to delete a visit you have to highlight it in the *_OPD Out Patient Department_* window.
+In order to delete a visit first highlight it in the *_OPD Out Patient Department_* window.
 Once a visit is highlighted, press the *[.underline]##D##elete* button. The highlighted record will be shown in the
 confirmation dialog shown. Now the record can be deleted. Deleted records are no longer available.
 
@@ -254,15 +254,15 @@ image:image14.png[OPD Edit Extended,width=1024,height=771]
 The OPD Extended module affords the following additional features:
 
 * Calendar to choose the visit date (1);
-* OPD number now is visible (2): it is the progressive number per year automatically set by the system, one can change the value needed. The OPD number *MUST* be unique for each year.
-* Registered Patient (3): before choosing a disease, you *MUST* first select a patient from the drop-down list; you can also search for the patient with the search field nearby by typing part of its name or code; this will improve reliability for reports and statistics, and thus service to the patient by knowing his/her history.
+* the OPD number now is visible (2): it is the progressive number per year automatically set by the system, one can change the value as needed. The OPD number *MUST* be unique for each year.
+* Registered Patient (3): before choosing a disease, one *MUST* first select a patient from the drop-down list; to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and thus is a service to the patient by knowing his/her history.
 * Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
-* You can now set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
-* In the case you want to insert a new attendance for this patient you can check the "new attendance" check box on and proceed normally.
-* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendance" check box.
-* In the case the selected patient needs updates to his/her personal data, you can do it by clicking on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window appears with the patient personal information available for modification.
-* In case the patient is not yet registered, the *_<new patient>_* entry can be selected to let you register a new patient; after registration you are returned to the OPD window and the new patient will be selected.
-* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) you will see:
+* It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
+* if a new attendance for this patient is required check the "New Admittance" check box on and proceed normally.
+* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Admittance" check box.
+* In the case the selected patient needs updates to their personal data, this can be done by clicking on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window appears with the patient personal information available for modification.
+* In case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration one is returned to the OPD window and the new patient is selected.
+* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) one sees:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
 ** the *Operation* tab after the patient's one (5) to record small surgeries and other interventions (see
 <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
@@ -271,7 +271,7 @@ The OPD Extended module affords the following additional features:
 
 == 6 Pharmacy ([.underline]##P##harmacy)
 
-By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharmacy menu. From this menu, the following functions are available: *[.underline]##P##harmaceuticals* and *[.underline]##P##harmaceuticals Stock*, *[.underline]##P##harmaceuticals Stock Ward.*
+By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharmacy menu. From this menu, the following functions are available: *[.underline]##P##harmaceuticals* and *Pharmaceuticals [.underline]##S##tock*, *Pharmaceuticals Stock [.underline]##W##ard.*
 
 .Press the *[.underline]##P##harmacy* button or “Alt + P” to open the Pharmacy submenu
 [frame=none]
@@ -616,7 +616,7 @@ The available functions are:
 * *[.underline]##R##ectify*: rectify the quantity lying in stock (6.3.2.1 Rectify)
 * *Re[.underline]##p##ort*: print the ward medical inventory report
 * *[.underline]##E##xcel*: export the data to Excel
-* *Stoc[.underline]##k## Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested)
+* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested)
 * *Stock [.underline]##L##edger*: show the movements history for all pharmaceuticals within a selected date range
 * *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window
 
@@ -883,7 +883,7 @@ The accounting function furthermore allows to manage the payment of bills (total
 === 8.2 Functions of Accounting
 
 All functions available under *A[.underline]##c##counting* are accessible from the *_Patients Bills Management_* window shown below. To access the *_Patient Bills Management_* window
-press *[.underline]##B##ills Manager* on the *_Accounting_* menu.
+press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
 
@@ -921,7 +921,7 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 You can use the *New Patient Bill* function to register a new bill of a patient.
 Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
 
-The bill is not saved until you do not confirm it with the *[.underline]##S##AVE* function (see description below).
+The bill is not saved until you do not confirm it with the *[.underline]##S##ave* function (see description below).
 
 Before entering the description of the function we provide you the description of the contents of the window *_New Patient Bill._*
 
@@ -969,8 +969,8 @@ There are several types of Bill entries. They are identified by the button on th
 * *[.underline]##M##edical*: enter bill entries of pharmaceuticals
 * *[.underline]##O##peration*: enter bill entries of operations
 * *[.underline]##E##xam*: enter bill entries of exams
-* *[.underline]##O##ther*: enter other prices defined in the Price List
-* *[.underline]##C##ustom*: enter custom items defined on the fly
+* *O[.underline]##t##her*: enter other prices defined in the Price List
+* *C[.underline]##us##tom*: enter custom items defined on the fly
 
 NOTE: Types can be defined by the Administrator. Ask your Administrator how to do it or see
 <<settings,Settings>> in this document.
@@ -1055,9 +1055,9 @@ Click the *Payme[.underline]##n##t Receipt* button.
 
 To remove a payment you have to highlight it in the *_New Patient Bill_* window. Once you have done this pressing the *Remo[.underline]##v##e Payment* button the payment is removed.
 
-===== 8.2.1.8 Give Change ([.underline]##G##ive change)
+===== 8.2.1.8 Give Change ([.underline]##G##ive Change)
 
-Sometimes it could be useful to calculate the balance to give to a patient when he/she is paying his/her bill. By pressing the *[.underline]##G##ive change* button you are asked the cash amount the patient is paying and the program calculates the difference between the payment and the current bill balance. This is the amount of change to give to the patient.
+Sometimes it could be useful to calculate the balance to give to a patient when he/she is paying his/her bill. By pressing the *[.underline]##G##ive Change* button you are asked the cash amount the patient is paying and the program calculates the difference between the payment and the current bill balance. This is the amount of change to give to the patient.
 
 [#save-function-accounting]
 ===== 8.2.1.9 Save Function ([.underline]##S##ave)
@@ -1521,7 +1521,7 @@ counter starts from the first of January or from the first of June based on the 
 When you finish entering data in the *Buttons panel* you have the following choices:
 
 * *[.underline]##S##ave*: confirm and persist the current values
-* *[.underline]##E##xamination*: open the *_Examination_* window (See
+* *E[.underline]##x##amination*: open the *_Examination_* window (See
 <<patient-examination,Patient examination>>).
 * *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes
 
@@ -1535,8 +1535,8 @@ image:image93.png[Patient admitted,width=642,height=167]
 During a patient examination one can register patient general parameters such as weight, height, arterial pressure, heart rate, temperature, saturation, respiratory rate, and auscultation. Open Hospital calculates the patient BMI automatically.
 
 You have two ways to access the module. In the *_Patient Browser_* window, highlight the patient
-and click *[.underline]##E##xamination.* Or in the *_New Admission_* or *_Edit Admission Record_* window,
-click the *[.underline]##E##xamination* button. The following window will appear.
+and click *E[.underline]##x##amination.* Or in the *_New Admission_* or *_Edit Admission Record_* window,
+click the *E[.underline]##x##amination* button. The following window will appear.
 
 image:image94.png[Patioent examination,width=642,height=310]
 
@@ -1758,7 +1758,7 @@ To record a new control, enter the following fields:
 * *Weight*: the weight of the patient; you may use any kind of measure with decimal notation
 * *Height*: the height of the patient; you may use any kind of measure with decimal notation
 
-=== 10.9 Clinical Sheet ([.underline]##C##linical Sheet)
+=== 10.9 Clinical Sheet (Clinical [.underline]##S##heet)
 
 The Clinical Sheet functionality is very similar to the *[.underline]##D##ata* functionality (see *_Patient Browser_* window).
 
@@ -1788,18 +1788,18 @@ In the *Buttons panel* you have the following choices:
 
 NOTE: You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
-By pressing the *[.underline]##L##aunch Report* button from the *_Patient Data_* window, a new window appears:
+By pressing the *Launch [.underline]##R##eport* button from the *_Patient Data_* window, a new window appears:
 
 image:image244.png[Report ,width=300,height=356]
 
 The application is set to get the whole history of the patient, but you can change the report produced by querying a different date ranges and a specific set of information.
 
 [#dicom-viewer]
-==== 10.9.1 DICOM ([.underline]#DICOM Viewer#)
+==== 10.9.1 DICOM ([.underline]##D##ICOM Viewer)
 
 You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
-In the *_Patient Data_* window, click the *DICOM* button to access the *_DICOM Viewer_* window as shown below.
+In the *_Patient Data_* window, click the [.underline]##D##ICOM button to access the *_DICOM Viewer_* window as shown below.
 
 image:image105.png[DICOM Viewer,width=642,height=361]
 
@@ -1898,7 +1898,7 @@ removed. Therapies can be removed before or after the final saving (see
 <<save-function-therapy,Save function>>).
 
 [#check-availability-of-the-pharmaceuticals]
-==== 10.10.4 Check Availability of the Pharmaceuticals ([.underline]##C##heck availability)
+==== 10.10.4 Check Availability of the Pharmaceuticals (C[.underline]##h##eck Availability)
 
 When you have entered the therapy plan (all the therapies of a patient) you can check the availability of the related pharmaceuticals in the hospital. If the pharmaceutical/s checked is/are present in the quantity requested by the therapy plan on the *Buttons panel* on the right side of the *_Therapy_* window you see in green color the text ”OK”:
 
@@ -1919,7 +1919,7 @@ The Check function is not mandatory, you can save the therapy plan without check
 <<save-function-therapy,Save function>> below).
 
 [#save-function-therapy]
-==== 10.10.5 Save Function ([.underline]##S##AVE)
+==== 10.10.5 Save Function ([.underline]##S##ave)
 
 When you have completed the input of the therapy plan press the *[.underline]##S##ave* button in the *Buttons panel* of the *_Therapy_* window. Be aware that the therapy plan is saved when the *_Message_* window appears with the message, “Therapies plan saved”.
 
@@ -1974,8 +1974,7 @@ With these two checkboxes you can set the therapies plan for this patient as imp
 
 ==== 10.10.8 Visits
 
- 
-By clicking on the *Add [.underline]##V##isit* button, the following window will appear:
+By clicking on the *A[.underline]##d##d Visit* button, the following window will appear:
 
 image:image118b.png[Add Visit,width=300,height=150]
 
@@ -2280,13 +2279,13 @@ From the *_Types_* menu one can define and manage the following types or functio
 
 * *[.underline]##A##dmission Type*: the way the patient is admitted to the hospital +
 _i.e. Ambulance, Self, Referral, etc._
-* *[.underline]##D##ischarge Type*: the way the patient is discharged from the hospital +
+* *Disc[.underline]##h##arge Type*: the way the patient is discharged from the hospital +
 _i.e. Healed, Unchanged, Dead, etc._
-* *De[.underline]##l##ivery Type*: the ways the mothers are assisted in childbirth +
-_i.e. Normal Delivery, Caesarean Section, etc._
 * *Delive[.underline]##r##y Result Type*: the various childbirth results for reporting +
 _i.e. Live Birth, Newborn Death, Fresh Still Birth, etc._
-* *Disease [.underline]##T##ype*: the way similar diseases are grouped +
+* *De[.underline]##l##ivery Type*: the ways the mothers are assisted in childbirth +
+_i.e. Normal Delivery, Caesarean Section, etc._
+* *[.underline]##D##isease Type*: the way similar diseases are grouped +
 _i.e. Epidemic, Maternal, etc._
 * *[.underline]##E##xam Type*: the way similar laboratory exams are grouped+
 _i.e. Haematology, Parasitology, Serology, etc._
@@ -2304,7 +2303,7 @@ _i.e. Admission Fee, Food, POP, etc._
 _i.e. Newborn, Childhood, Adult, Elderly, etc._
 * *[.underline]##V##accine Type*: the way similar vaccines are grouped +
 _i.e. Child, Adult, Pregnant, etc._
-* *DICOM Type*: the way similar DICOM types are grouped +
+* *D[.underline]##I##COM Type*: the way similar DICOM types are grouped +
 _i.e. X-Ray, CT-Scan, NMR, etc._
 
 
@@ -2325,9 +2324,9 @@ The Admission Types defined are used in the Admission function (see
 <<start-the-admission-of-a-patient,Start the admission of a patient>> and
 <<discharge-of-a-patient,Discharge of a patient>> in this document).
 
-==== 14.2.2 Discharge Types (Discha[.underline]##r##ge Type)
+==== 14.2.2 Discharge Types (Disc[.underline]##h##arge Type)
 
-Once the *Discha[.underline]##r##ge Type* button from the *_Types_* menu is pressed, the *_Discharge Type Browser_* window shown below appears:
+Once the *Disc[.underline]##h##arge Type* button from the *_Types_* menu is pressed, the *_Discharge Type Browser_* window shown below appears:
 
 image:image141.png[Discharge Types]
 
@@ -2437,7 +2436,7 @@ Examples are:
 The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
 
-==== 14.2.8 Medical Types ([.underline]##M##edicals Type)
+==== 14.2.8 Medicals Types ([.underline]##M##edicals Type)
 
 Once the *[.underline]##M##edicals Type* button from the *_Types_* menu is pressed, the *_Medical Type Browser_* window shown below appears:
 
@@ -2473,7 +2472,7 @@ The Operation Types defined are used in the Admission function (see
 
 ==== 14.2.10 Pregnant Treatment Types ([.underline]##P##regnant Treatment Type)
 
-Once the *[.underline]##P##regnant Treatment Type* button from the *_Types_* menu is pressed, the *_Pregnant Treatment Type Browser_* window shown below appears:
+Once the *[.underline]##P##regnant Treatment* button from the *_Types_* menu is pressed, the *_Pregnant Treatment Type Browser_* window shown below appears:
 
 image:image150.png[Pregnant Treatment Types]
 
@@ -2567,9 +2566,9 @@ The Vaccine Types defined are used in the Vaccine function (see
 <<vaccines,Vaccines>> in this document).
 
 [#dicom-types]
-==== 14.2.14 DICOM Types (DICOM Type)
+==== 14.2.14 DICOM Types (D[.underline]##I##COM Type)
 
-Once the *DICOM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window shown below appears:
+Once the *D[.underline]##I##COM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window shown below appears:
 
 image:image242.png[DICOM Types]
 
@@ -2694,10 +2693,10 @@ To insert a new Exam, you must input the following data:
 * *Default*: a default value among the results we are going to define (see <<results,Results>> in this document)
 
 [#results]
-==== 14.6.1 Results (Re[.underline]##s##ults)
+==== 14.6.1 Results ([.underline]##R##esults)
 
 Once an exam is defined, the next step is the definition of the set of results the 
-exam can have. First select the exam in the *_Exam Browser_* window and then press the *Re[.underline]##s##ults* button.
+exam can have. First select the exam in the *_Exam Browser_* window and then press the *[.underline]##Re##sults* button.
 
 In Open Hospital you can define three kinds of results, called “Procedure”:
 
@@ -2783,7 +2782,7 @@ image:image177.png[Price Browser,width=550,height=373]
 The functions available in this window are:
 
 * *[.underline]##S##ave*: save any modifications made to the price list
-* *[.underline]#Printing#*: print the current price list
+* *[.underline]##Pr##inting*: print the current price list
 * *[.underline]##C##ancel*: close the window
 * Switch price list: you can focus on a different price list by selecting it on the upper-left corner of the window
 * *[.underline]##M##anage Lists*: you can define how many and which price list will be available in the application (see
@@ -2853,9 +2852,9 @@ In editing mode, any of the data related to the list can be changed.
 The lists defined are used in the Accounting module (see
 <<insert-a-new-bill,Insert a new bill>> in this document).
 
-=== 14.10 Supplier ([.underline]#Supplier#)
+=== 14.10 Supplier ([.underline]##S##upplier)
 
-Once the *S[.underline]##upplier##* button in the *_Settings_* menu is pressed, the *_Supplier Browser_* window shown below appears:
+Once the *[.underline]##S##upplier* button in the *_Settings_* menu is pressed, the *_Supplier Browser_* window shown below appears:
 
 image:image182.png[Supplier Browser,width=550,height=231]
 
