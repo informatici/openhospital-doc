@@ -1154,20 +1154,20 @@ image:image69.png[Filter Patient Bills Management,width=521,height=334]
 <<<
 
 [#vaccines]
-== 9 Vaccines (Patient [.underline]##V##accines)
+== 9 Vaccines ([.underline]##V##accines)
 
 === 9.1 Main Characteristics
 
-Vaccines functionality allows managing vaccines for all the patients registered. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
+Vaccines is used to manage vaccines for all the patients registered. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
 
 .Click with the mouse on the button or press "Alt + V" to enter the *_Patient Vaccine Browser_* window
 [#default-main-menu-9]
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-=== 9.2 Functions of Patient Vaccines
+=== 9.2 Functions of Vaccines
 
-All functions available under *Patient [.underline]##V##accines* are accessible from the window *_Patient Vaccine Browser_* window shown below.
+All functions available under *[.underline]##V##accines* are accessible from the window *_Patient Vaccine Browser_* window shown below.
 
 By default, the window shows in the *Data table* all the vaccinations addded to the system in the last week.
 
