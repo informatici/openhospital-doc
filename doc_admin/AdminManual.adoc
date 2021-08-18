@@ -349,7 +349,7 @@ architecture, the full installation version is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
 
-NOTE: Folder Structure and Known Issues at 
+NOTE: Folder structure and known issues are found at:
 https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 [#backup-restore]
