@@ -1998,9 +1998,9 @@ info@informaticisenzafrontiere.org and specify:
 
 [width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",]
 |===
-7+|*Open Hospital compatibility matrix*
-.2+|OH version .2+|O.S.  .2+|Architecture .2+|JAVA (OpenJDK) 3+|Feature
-|DICOM |SMS |Webcam
+7+^|*Open Hospital compatibility matrix*
+.2+^|OH version .2+^|O.S.  .2+^|Architecture .2+^|JAVA (OpenJDK) 3+^|Feature
+^|DICOM ^|SMS ^|Webcam
 .5+|*1.11.0* |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
 |Windows 7/10 |x64 |64bit |x |*v* |*v*
 |Windows 7/10 |x64 |32bit |*v* |*v* |*v*
