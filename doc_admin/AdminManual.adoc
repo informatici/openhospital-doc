@@ -1994,7 +1994,38 @@ info@informaticisenzafrontiere.org and specify:
 
 <<<
 
-== 9 License
+== 9 Compatibility checks
+
+[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+|===
+7+|*Open Hospital compatibility matrix*
+.2+|OH version .2+|O.S.  .2+|Architecture .2+|JAVA (OpenJDK) 3+|Feature
+|DICOM |SMS |Webcam
+.5+|*1.11.0* |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
+|Windows 7/10 |x64 |64bit |x |*v* |*v*
+|Windows 7/10 |x64 |32bit |*v* |*v* |*v*
+|Windows 7/10 |i386 |32bit |*v* |*v* |*v*
+|buntu 18.04 |i386 |32bit |*v* |*?* |*?*
+.4+|*1.10.0* |Ubuntu 20.04 |x64 | |n/a | |
+|Windows 7/10 |x64 | | | |
+| | | | | |
+| | | | | |
+.4+|*1.9.1* | | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+|===
+
+[width="60%",cols="^30%,^70%",]
+|===
+|*v* |_working_ 
+|*x* |_not working_ 
+|*?* |_not tested_ 
+|n/a |_not applicable_ 
+|_last update_ |_2020.12.14_
+|===
+
+== 10 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
