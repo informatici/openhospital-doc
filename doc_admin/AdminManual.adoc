@@ -1731,23 +1731,9 @@ Open Hospital reports are all contained in reports rpt/ folder (see <<folders,Fo
 * a .*jasper* file: Jasper file, that is the compiled version that can be run in Open Hospital; this file is produced on the jrxml base
 * some reports could have also one or more *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English)
 
-The Jasper editor to create and modify Jasper reports is iReport®, a free and open-source software.
+The editor to create and modify JasperReports® is https://sourceforge.net/projects/jasperstudio/[TIBCO Jaspersoft® Studio] version 6.14.0 or later, a free and open-source software.
 
-With iReport® it is possible to edit Open Hospital reports and re-compile them to be used in the Open Hospital application.
-
-=== 6.1 Compatibility: JasperStudio 6.14.0 and iReport® 3.0.0
-
-WARNING: Open Hospital Jasper reports are produced with TIBCO Jaspersoft Studio 6.14.0 or later.
-
-=== 6.2 Links
-
-TIBCO JasperReports® - http://www.jaspersoft.com/
-
-JasperStudio - https://sourceforge.net/projects/jasperstudio/
-
-iReport® 5.6.0 - https://sourceforge.net/projects/ireport/files/iReport/
-
-iReport® 3.0.0 (Classic) - https://sourceforge.net/projects/ireport/files/iReport%20%28classic%29/[http://sourceforge.net/projects/ireport/files/iReport (classic)/]
+With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-compile them in the same location to be found and used by the Open Hospital application.
 
 <<<
 
