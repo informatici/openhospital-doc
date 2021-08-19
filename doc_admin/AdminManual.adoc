@@ -1800,9 +1800,9 @@ image:image64.png[image,width=604,height=377] +
 image:image65.png[image,width=604,height=377]
 
 Because of the default settings, Open Hospital’s first run does not show the login window. The system defaults to “single user” mode
-as default. This can be verified by the “SINGLEUSER=yes” string on the third row of the <<generaldata-properties,generalData.properties>> file.
+as default. This can be verified by the “SINGLEUSER=yes” string on the third row of the <<settings-properties,settings.properties>> file.
 In production use this is unacceptable as Open Hospital must be accessible only to the administrator and logged users.
-Click on the triangle near the project’s name, do the same on the “rsc” subfolder and then double-click on the <<generaldata-properties,generalData.properties>> file.
+Click on the triangle near the project’s name, do the same on the “rsc” subfolder and then double-click on the <<settings-properties,settings.properties>> file.
 
 image:image66.png[image,width=604,height=273]
 
