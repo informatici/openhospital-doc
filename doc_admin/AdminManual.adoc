@@ -8,7 +8,6 @@
 :xlmnsBySa: http://purl.org/dc/terms/
 :docTitleBySa: dct:title
 :imagesdir: extracted-media/media/
-:stylesheet: italian-pop.css
 
 <<<
 
@@ -1997,7 +1996,7 @@ info@informaticisenzafrontiere.org and specify:
 
 == 9 Compatibility checks
 
-[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%"]
+[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",stripes=none]
 |===
 7+|*Open Hospital compatibility matrix*
 .2+|OH version .2+|O.S. .2+|Architecture .2+|JAVA (OpenJDK) 3+^|Special Features
