@@ -8,6 +8,7 @@
 :xlmnsBySa: http://purl.org/dc/terms/
 :docTitleBySa: dct:title
 :imagesdir: extracted-media/media/
+:stylesheet: adoc-github.css
 
 <<<
 
