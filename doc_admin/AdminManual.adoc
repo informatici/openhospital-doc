@@ -1996,16 +1996,16 @@ info@informaticisenzafrontiere.org and specify:
 
 == 9 Compatibility checks
 
-[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",]
+[width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%"]
 |===
-7+^|*Open Hospital compatibility matrix*
-.2+^|OH version .2+^|O.S.  .2+^|Architecture .2+^|JAVA (OpenJDK) 3+^|Feature
+7+|*Open Hospital compatibility matrix*
+.2+|OH version .2+|O.S. .2+|Architecture .2+|JAVA (OpenJDK) 3+^|Feature
 ^|DICOM ^|SMS ^|Webcam
 .5+|*1.11.0* |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
 |Windows 7/10 |x64 |64bit |x |*v* |*v*
 |Windows 7/10 |x64 |32bit |*v* |*v* |*v*
 |Windows 7/10 |i386 |32bit |*v* |*v* |*v*
-|buntu 18.04 |i386 |32bit |*v* |*?* |*?*
+|Ubuntu 18.04 |i386 |32bit |*v* |*?* |*?*
 .4+|*1.10.0* |Ubuntu 20.04 |x64 | |n/a | |
 |Windows 7/10 |x64 | | | |
 | | | | | |
