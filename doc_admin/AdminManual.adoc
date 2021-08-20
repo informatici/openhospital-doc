@@ -1994,7 +1994,7 @@ info@informaticisenzafrontiere.org and specify:
 
 <<<
 
-== 9 Compatibility checks
+== 9 Compatibility and previous versions
 
 [width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%"]
 |===
