@@ -1,4 +1,4 @@
-= Administrator’s Guide 1.11
+= Administrator’s Guide 1.11.0
 :icons: font
 :stem:
 :toc: left
@@ -1761,7 +1761,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 _Please use EGit (Eclipse Plugin for Git) to clone the code into your Eclipse instance._
 
 Assuming Eclipse EE, MySQL 5.7.x, and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.11.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these

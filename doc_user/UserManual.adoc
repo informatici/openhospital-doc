@@ -1,4 +1,4 @@
-= Users’s Guide 1.11
+= Users’s Guide 1.11.0
 :icons: font
 :stem:
 :toc: left
