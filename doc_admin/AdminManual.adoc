@@ -119,7 +119,7 @@ Generally, the main aspects the Administrator has to pay attention to are:
 * Select *Detailed Configuration*
 * Select *Server Machine*
 * Select *Multifunctional Database*
-* Set a minimum of concurrent connection as twice the number of expected clients
+* Set the number of concurrent connections to twice the number of expected clients
 * Select *Enable TCP/IP Networking* and write down the *Port Number* in an installation document
 * Select UTF8 as the default charset for *Best Support For Multilingualism*
 * Select *Install As Window Service*
