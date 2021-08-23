@@ -10,16 +10,16 @@
 |Windows 7/10 |x64 |32bit |*v* |*v* |*v*
 |Windows 7/10 |i386 |32bit |*v* |*v* |*v*
 |Ubuntu 18.04 |i386 |32bit |*v* |*?* |*?*
-.7+|*1.10.0* .7+|1|Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
-|Windows 7/10 |5.1.x|x64 |64bit |x |*v* |*v*
-|Windows 7/10 |5.1.x|x64 |32bit |*v* |*v* |*v*
-|Windows 7/10 |5.1.x|i386 |32bit |*v* |*v* |*v*
-|Ubuntu 18.04 |5.1.x|i386 |32bit |*v* |*?* |*?*
-.7+|*1.9.1* .7+|1|Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
-|Windows 7/10 |5.0.x|x64 |64bit |x |*v* |*v*
-|Windows 7/10 |5.0.x|x64 |32bit |*v* |*v* |*v*
-|Windows 7/10 |5.0.x|i386 |32bit |*v* |*v* |*v*
-|Ubuntu 18.04 |5.0.x|i386 |32bit |*v* |*?* |*?*
+.7+|*1.10.0* .7+|5.1.x .7+|8||Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
+|Windows 7/10 |x64 |64bit |x |*v* |*v*
+|Windows 7/10 |x64 |32bit |*v* |*v* |*v*
+|Windows 7/10 |i386 |32bit |*v* |*v* |*v*
+|Ubuntu 18.04 |i386 |32bit |*v* |*?* |*?*
+.7+|*1.9.1* .7+|5.0.x .7+|6||Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
+|Windows 7/10 |x64 |64bit |x |*v* |*v*
+|Windows 7/10 |x64 |32bit |*v* |*v* |*v*
+|Windows 7/10 |i386 |32bit |*v* |*v* |*v*
+|Ubuntu 18.04 |i386 |32bit |*v* |*?* |*?*
 |===
 
 [width="60%",cols="30%,70%",]
