@@ -5,7 +5,7 @@
 .2+|*OH version* .2+|MariaDB / MySQL version .2+|Java version .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM |SMS |Webcam
 
-.7+|*1.11.0* |10.2.40/5.7.35 |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
+.7+|*1.11.0* .7+|10.2.40/5.7.35 |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
 |Windows 7/10 |10.2.40 |x64 |64bit |x |*v* |*v*
 |Windows 7/10 |10.2.40 |x64 |32bit |*v* |*v* |*v*
 |Windows 7/10 |10.2.40/5.7.35|i386 |32bit |*v* |*v* |*v*
