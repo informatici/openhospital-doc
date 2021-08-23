@@ -221,7 +221,7 @@ To create the Open Hospital database everything required is found in a set of SQ
 
 If the *Include Bin Directory In Windows PATH* is selected during the installation process (in Linux is always true) we can run the MySQL client everywhere in our system, otherwise, go back to that chapter and read the *NOTE* in the box.
 
-Open a terminal in the folder sql/ (e.g.):
+Open a terminal and navigate to the sql/ folder e.g.):
 
 [source,shell]
 ----
@@ -230,7 +230,7 @@ C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
 D:\OpenHospital_1_11_0\sql>
 ----
 
-and run the following command (e.g.):
+and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
@@ -238,14 +238,14 @@ D:\OpenHospital_1_11_0\mysq> mysql –u root -p
 Enter password: *****
 ----
 
-Using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
+using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
 
 [source,shell]
 ----
 mysql>
 ----
 
-Next create the database user with password, the main OH database and grant the necessary permissions:
+Create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
@@ -270,7 +270,7 @@ mysql> show databases;
 | performance_schema |
 +--------------------+
 ----
-Next launch the main script “create_all_en.sql” with the command:
+You are now ready to launch the main SQL script “create_all_en.sql” with the command:
 
 [source,shell]
 ----
