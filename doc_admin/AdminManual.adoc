@@ -191,17 +191,17 @@ For this reason, if the DB is shared between different operating systems it is r
 
 ===== 3.1.2.2 Create Open Hospital DB
 
-To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder mysql/.
+To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
 
 If the *Include Bin Directory In Windows PATH* is selected during the installation process (in Linux is always true) we can run the MySQL client everywhere in our system, otherwise, go back to that chapter and read the *NOTE* in the box.
 
-Open a terminal in the folder mysql/ (e.g.):
+Open a terminal in the folder sql/ (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
 
-D:\OpenHospital_1_11_0\mysql>
+D:\OpenHospital_1_11_0\sql>
 ----
 
 and run the following command (e.g.):
@@ -321,7 +321,7 @@ You may create a shortcut (link) to the executable script on the Desktop, the Pr
 
 image:image100.png[oh.ico,width=32,height=32]
 
-=== 3.2 Portable Open Hospital
+=== 3.2 Open Hospital - portable
 
 Open Hospital is also distributed in a portable format.
 
@@ -329,8 +329,8 @@ Since Open Hospital is a Java software program, it is portable by definition. Th
 
 Since the JRE and MySQL are not platform-independent and come in different versions depending on the platform, we have:
 
-* *Portable Open Hospital for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
-* *Portable Open Hospital for Windows* platforms (embedding Java JRE and MySQL for Windows)
+* *Open Hospital portable for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
+* *Open Hospital portable for Windows* platforms (embedding Java JRE and MySQL for Windows)
 
 NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 
@@ -343,12 +343,12 @@ Once the required version is downloaded, you may start it by launching the relat
 
 No other configuration is needed. On Linux, additional options can be shown by executing *oh.sh -h*.
 
-NOTE: If you want to use a Portable Open Hospital for Linux from a USB key you need to make sure that the file permissions in the
+NOTE: If you want to use a Open Hospital portable for Linux from a USB key you need to make sure that the file permissions in the
 archive remain unchanged once extracted, otherwise you will not be able to start the launcher or use the application in an
 appropriate manner.
 
-NOTE: It is important to understand that the portable version is meant to be a trial, that is, to have a look at the software
-or used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
+NOTE: It is important to understand that the portable version is meant to be a trial, that is, to try or test the software
+or to be used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
 architecture, the full installation version is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
@@ -439,9 +439,9 @@ In the Open Hospital zip file you will find the following folder tree structure 
 ** startup.cmd *Launcher for Windows*
 ** startup.sh *Launcher for Linux*
 
-=== 4.2 Folder tree in Portable Open Hospital for Linux (32 and 64bit)
+=== 4.2 Folder tree in Open Hospital portable for Linux (32 and 64bit)
 
-In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
+In Open Hospital portable for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
 * *OpenHospital-_<version>_-linux_i686-portable*/ or *OpenHospital-_<version>_-linux_x86_64-portable*/
 ** data/ - folder for DB, DICOM files and logs
@@ -453,13 +453,13 @@ In Portable Open Hospital for Linux you will find the following folder tree stru
 ** CHANGELOG - Last version brief changelog
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
-** *oh.sh Launcher for Portable-Linux*
+** *oh.sh Launcher for OH-Linux*
 ** POH-linux-changelog.md (changelog portable-linux)
 ** POH-README.md (README portable-linux)
 
-=== 4.3 Folder tree in Portable Open Hospital for Windows (32bit)
+=== 4.3 Folder tree in Open Hospital portable for Windows (32bit)
 
-In Portable Open Hospital for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
+In Open Hospital portable for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
 * *OpenHospital-_<version>_-win32-portable*/
 ** data/ - folder for DB, DICOM files and logs
@@ -1989,7 +1989,7 @@ Remember to keep files that have been changed, especially any changes to the con
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 . Start the program and check from log files (OpenHospital_1_8_0/logs) to ensure the new version running and has no error messages.
 
-=== 8.2 Update Open Hospital “portable”
+=== 8.2 Update Open Hospital - portable
 
 NOTE: Open Hospital portable is not meant to be used in a production environment so, if you want to update a portable version to keep the previous data, we strongly suggest switching to a full installation as follows:
 
