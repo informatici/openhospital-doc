@@ -101,7 +101,7 @@ NOTE: See Software Compatibility Matrix in order to identify the correct JAVA ve
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
 [#mysql-server]
-==== 3.1.3 MySQL Server and Open Hospital DB
+==== 3.1.3 Database server configuration
 
 Depending on the operating system you have, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
@@ -113,7 +113,7 @@ NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB
 
 NOTE: Starting with Open Hospital 1.11, MariaDB is the default choice.
 
-===== 3.1.3.1 MySQL Server installation
+===== 3.1.3.1 MySQL server installation
 
 Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://www.mysql.com/downloads/] and installationfootnote:[https://dev.mysql.com/doc/] information as you continue reading this document.
 
@@ -170,14 +170,16 @@ To:
 #bind-address               = 127.0.0.1
 ----
 
-===== 3.1.3.3 MySQL Configuration - Performance
+===== 3.1.3.3 MySQL Configuration
 
-Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
+Please use the following configuration values for MySQL server in my.cnf config file:
 
 ----
 #
-# Performance optimization
+# Configuration
 #
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+max_allowed_packet = DICOM_SIZE
 skip-external-locking
 key_buffer_size = 16M
 thread_cache_size = 64
@@ -189,13 +191,26 @@ read_rnd_buffer_size = 512K
 join_buffer_size = 2M
 sort_buffer_size = 2M
 myisam_sort_buffer_size = 8M
+
+[mysqldump]
+quick
+max_allowed_packet = 16M
+
+[mysql]
+no-auto-rehash
+
+[isamchk]
+key_buffer = 16M
+sort_buffer_size = 16M
+read_buffer = 2M
+write_buffer = 2M
+
+[myisamchk]
+key_buffer = 16M
+sort_buffer_size = 16M
+read_buffer = 2M
+write_buffer = 2M
 ----
-
-===== 3.1.3.4 Table name case ([.underline]#before creating the DB#)
-
-MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
-
-For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html
 
 ===== 3.1.4 Open Hospital Database creation
 
