@@ -88,7 +88,7 @@ For the Open Hospital configuration refer to the chapter <<config-files,Configur
 ==== 3.1.1 Prerequisites - Compatibility list
 
 In the following table the compatibility list for Open Hospital is presented:
-`compatibility_matrix.adoc`
+( `compatibility_matrix.adoc` )
 
 
 [#jre]
