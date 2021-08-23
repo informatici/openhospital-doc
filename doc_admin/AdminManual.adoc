@@ -347,7 +347,7 @@ Once the required version is downloaded, you may start it by launching the relat
 * *oh.sh* in the Linux version
 * *oh.bat* in the Windows version
 
-No other configuration is needed. Additional options can be shown by executingi:
+No other configuration is needed. Additional options can be shown by executing:
 
 * on Linux: *oh.sh -h*
 * on Windows: *oh.bat --help*
