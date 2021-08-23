@@ -11,7 +11,7 @@ To build the documentation you will need [Ruby][ruby] 2.3+, `asciidoctor` and `a
 
 To create PDF documentation issue the command:
 
-    asciidoctor-pdf fileName.adoc [-o path/to/fileName.pdf]
+    asciidoctor-pdf fileName.adoc -a allow-uri-read [-o path/to/fileName.pdf]
     
 To create HTML documentation issue the command
 
