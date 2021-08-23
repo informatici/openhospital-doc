@@ -2,14 +2,14 @@
 |===
 8+|*Open Hospital compatibility matrix*
 
-.2+|*OH version* .2+|MariaDB / MySQL version .2+|Java version| .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
+.2+|*OH version* .2+|MariaDB / MySQL version .2+|Java version .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM |SMS |Webcam
 
 .5+|*1.11.0* |10.2.40/5.7.35 |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
 |Windows 7/10 |10.2.40 |x64 |64bit |x |*v* |*v*
-|Windows 7/10 |10.2.40|x64 |32bit |*v* |*v* |*v*
-|Windows 7/10 |10.20.40 / 5.7.35|i386 |32bit |*v* |*v* |*v*
-|Ubuntu 18.04 |1|i386 |32bit |*v* |*?* |*?*
+|Windows 7/10 |10.2.40 |x64 |32bit |*v* |*v* |*v*
+|Windows 7/10 |10.2.40/5.7.35|i386 |32bit |*v* |*v* |*v*
+|Ubuntu 18.04 |10.2.40/5.7.35 |i386 |32bit |*v* |*?* |*?*
 .5+|*1.10.0* |1|Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
 |Windows 7/10 |1|x64 |64bit |x |*v* |*v*
 |Windows 7/10 |1|x64 |32bit |*v* |*v* |*v*
