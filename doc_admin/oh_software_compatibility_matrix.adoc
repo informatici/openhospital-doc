@@ -2,20 +2,20 @@
 |===
 9+|*Open Hospital compatibility matrix*
 
-.2+|*OH version* .2+|MariaDB / MySQL version .2+|Java version .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
+.2+|*OH version* .2+|MariaDB / MySQL community version .2+|Java JRE version (OpenJDK).2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM |SMS |Webcam
 
-.5+|*1.11.0* .5+| 10.2.40/5.7.35 .5+|11.0.11|Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
+.5+|*1.11.0* .5+| *10.2.40*/5.7.35 .5+|*11.0.11*|Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |*?* |*?*
-.5+|*1.10.0* .5+| 5.1.x .5+| 8 | Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
+.5+|*1.10.0* .5+| 5.1.x .5+| 1.8 | Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |*?* |*?*
-.7+|*1.9.1* .5+| 5.0.x .5+| 6 | Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
+.7+|*1.9.1* .5+| 5.0.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
