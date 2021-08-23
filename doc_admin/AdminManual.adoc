@@ -67,8 +67,6 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
-
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
 * Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for full compliance)
@@ -98,7 +96,7 @@ Depending on the operating system, there are different ways to install a Java Vi
 
 For instance, on a Microsoft Windows® system, you have to download and execute a setup file, while on Linux based systems you have to type only one command in a terminal.
 
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
+NOTE: See Software Compatibility Matrix in order to identify the correct JAVA version.
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
@@ -110,6 +108,9 @@ Depending on the operating system you have, there are several software tools to 
 For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
 The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
+
+NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB / MySQL version.
+NOTE: Starting with Open Hospital 1.11, MariaDB is the default choice.
 
 ===== 3.1.3.1 MySQL Server installation
 
@@ -337,8 +338,6 @@ Since the JRE and MySQL are not platform-independent and come in different versi
 
 * *Open Hospital portable for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
 * *Open Hospital portable for Windows* platforms (embedding Java JRE and MySQL for Windows)
-
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
