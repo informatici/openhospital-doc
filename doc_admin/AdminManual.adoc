@@ -85,8 +85,12 @@ For the Open Hospital installation on every client, it is sufficient to copy and
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
+==== 3.1.1 Prerequisites - Compatibility list
+
+In the following table the compatibility list for Open Hospital is presented:
+
 [#jre]
-==== 3.1.1 Java Runtime Environment
+==== 3.1.2 Java Runtime Environment
 
 Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment.
 
@@ -97,7 +101,7 @@ NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
 [#mysql-server]
-==== 3.1.2 MySQL Server and Open Hospital DB
+==== 3.1.3 MySQL Server and Open Hospital DB
 
 Depending on the operating system you have, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
@@ -105,7 +109,7 @@ For instance, on a Microsoft Windows® system, you will have MySQL Workbench® a
 
 The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
 
-===== 3.1.2.1 MySQL Server installation
+===== 3.1.3.1 MySQL Server installation
 
 Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://www.mysql.com/downloads/] and installationfootnote:[https://dev.mysql.com/doc/] information as you continue reading this document.
 
@@ -140,7 +144,7 @@ The prompt means there is a successful connection to the MySQL Server instance t
 
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case you can add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
-====== 3.1.2.1.1 Networking
+====== 3.1.3.2 MySQL Configuration - networking
 
 On Linux systems, MySQL server must be configured to enable networking; this can be achieved by changing MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
 
@@ -162,7 +166,7 @@ To:
 #bind-address               = 127.0.0.1
 ----
 
-====== 3.1.2.1.2 Performance
+====== 3.1.3.3 MySQL Configuration - Performance
 
 Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
 
@@ -183,13 +187,13 @@ sort_buffer_size = 2M
 myisam_sort_buffer_size = 8M
 ----
 
-====== 3.1.2.1.3 Table name cases ([.underline]#before creating the DB#)
+====== 3.1.3.4 Table name cases ([.underline]#before creating the DB#)
 
 MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
 
 For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html
 
-===== 3.1.2.2 Create Open Hospital DB
+===== 3.1.4 Open Hospital Database creation
 
 To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
 
@@ -287,14 +291,14 @@ When we are through, we exit the MySQL client command line with the command:
 mysql>quit;
 ----
 
-==== 3.1.3 Configure Open Hospital
+==== 3.1.5 Open Hospital Configuration
 
-Open Hospital comes with several configuration files called “properties files”. The one we need to modify to let Open Hospital find its database is the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
+Open Hospital comes with several configuration files called “properties files”. In order to let Open Hospital find its database, we have to modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
 We have to specify:
 
-* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g., 192.168.1.100)
-* the “isf” user *password*, if changed from “isf123”
+* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
+* the “isf” user *password*
 * the MySQL Server *Port Number*, if changed from “3306”
 
 NOTE: These settings are required for every Open Hospital copy, that is to say, on every client.
@@ -302,12 +306,12 @@ NOTE: These settings are required for every Open Hospital copy, that is to say, 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-==== 3.1.4 Run Open Hospital
+==== 3.1.6 Open Hospital - startup and run
 
 We are ready now to run the Open Hospital software by executing the proper launcher:
 
-* *on a Linux machine*: startup.sh
-* *on a Windows machine*: startup.cmd
+* *on a Linux machine*: oh.sh -C (Client mode)
+* *on a Windows machine*: oh.bat (Select Client mode)
 
 If everything is ok you should see the Open Hospital main splash screen:
 
