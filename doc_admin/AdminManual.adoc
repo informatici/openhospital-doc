@@ -85,7 +85,7 @@ For the Open Hospital configuration refer to the chapter <<config-files,Configur
 
 ==== 3.1.1 Prerequisites - Software Compatibility matrix
 
-Before starting, checke the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and Operating System.
+Before starting, checke the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
 include::./oh_software_compatibility_matrix.adoc[]
 
 
@@ -191,7 +191,7 @@ sort_buffer_size = 2M
 myisam_sort_buffer_size = 8M
 ----
 
-====== 3.1.3.4 Table name cases ([.underline]#before creating the DB#)
+====== 3.1.3.4 Table name case ([.underline]#before creating the DB#)
 
 MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
 
