@@ -344,7 +344,7 @@ Once the required version is downloaded, you may start it by launching the relat
 No other configuration is needed. Additional options can be shown by executingi:
 
 * on Linux: *oh.sh -h*
-* on Windows: *oh.ps1 -h*
+* on Windows: *oh.bat --help*
 
 NOTE: If you want to use a Open Hospital portable for Linux from a USB key you need to make sure that the file permissions in the
 archive remain unchanged once extracted, otherwise you will not be able to start the launcher or use the application in an
