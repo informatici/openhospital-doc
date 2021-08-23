@@ -99,7 +99,7 @@ TIP: If you see the application small-scaled, probably you are using a high-dpi 
 [#mysql-server]
 ==== 3.1.2 MySQL Server and Open Hospital DB
 
-Depending on the operating system you have, there are several software tools to download to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
+Depending on the operating system you have, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
 For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
@@ -219,7 +219,7 @@ Using the ‘root’ password you have chosen during the installation process. T
 mysql>
 ----
 
-Next create the database user with password and grant the necessary permissions:
+Next create the database user with password, the main OH database and grant the necessary permissions:
 
 [source,shell]
 ----
