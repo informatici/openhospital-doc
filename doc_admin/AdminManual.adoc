@@ -59,7 +59,7 @@ Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of O
 
 The software acts as a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software, the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
 
-The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder mysql/ within the .zip file folders.
+The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder sql/ within the .zip file folders.
 
 The classic installation schema in a regular wired LAN network is shown in the following figure:
 
@@ -99,13 +99,11 @@ TIP: If you see the application small-scaled, probably you are using a high-dpi 
 [#mysql-server]
 ==== 3.1.2 MySQL Server and Open Hospital DB
 
-Depending on the operating system you have, there are several pieces of software to download to install and manage a MySQL server. In most cases one downloads a standard installation file of the software, paying attention to configuration options during the installation process.
+Depending on the operating system you have, there are several software tools to download to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
 For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
 The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
-
-NOTE: The DB creation and the software itself are only tested with MySQL Server 5.7.x. Any other version may have problems during the DB creation process.
 
 ===== 3.1.2.1 MySQL Server installation
 
@@ -121,12 +119,12 @@ Generally, the main aspects the Administrator has to pay attention to are:
 * Select *Detailed Configuration*
 * Select *Server Machine*
 * Select *Multifunctional Database*
-* Set a minimum of concurrent connection as the number of clients multiplied by two
+* Set a minimum of concurrent connection as twice the number of expected clients
 * Select *Enable TCP/IP Networking* and write down the *Port Number* in an installation document
 * Select UTF8 as the default charset for *Best Support For Multilingualism*
 * Select *Install As Window Service*
 * Select *Include Bin Directory In Windows PATH*
-* Select *Modify Security Settings*, choose the *root password*, and write it down in an installation document
+* Select *Modify Security Settings*, choose the *root password*, and keep it safe
 
 Once the installation has been completed, the next stop is the Open Hospital DB creation. To check if the server is active and running,  open a terminal window (command prompt) and type the following command:
 
@@ -168,26 +166,21 @@ To:
 
 Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
 
-Change:
-
-[source,properties]
 ----
 #
-# Query Cache Configuration
+# Optimization
 #
-query-cache_limit = 1M
-query-cache_size = 16M
-----
-
-To:
-
-[source,properties]
-----
-#
-# Query Cache Configuration
-#
-query-cache_limit = 11M
-query-cache_size = 256M
+skip-external-locking
+key_buffer_size = 16M
+thread_cache_size = 64
+lower_case_table_names = 1
+table_open_cache = 64
+tmp_table_size = 16M
+read_buffer_size = 256K
+read_rnd_buffer_size = 512K
+join_buffer_size = 2M
+sort_buffer_size = 2M
+myisam_sort_buffer_size = 8M
 ----
 
 ====== 3.1.2.1.3 Table name cases ([.underline]#before creating the DB#)
@@ -224,6 +217,17 @@ Using the ‘root’ password you have chosen during the installation process. T
 [source,shell]
 ----
 mysql>
+----
+
+Next create the database user with password and grant the necessary permissions:
+
+[source,shell]
+----
+mysql>  CREATE DATABASE isf; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123'; 
+        CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123'; GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'localhost'; \
+        GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'%';
+mysql>  FLUSH PRIVILEGES;
+
 ----
 
 Next launch the main script “create_all_en.sql” with the command:
@@ -1760,7 +1764,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into your Eclipse instance._
 
-Assuming Eclipse EE, MySQL 5.7.x, and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+Assuming Eclipse EE, MySQL/MariaDB  and the Java Virtual Machine 1.8 or higher (Java8 or greater)
 are already installed on the computer, this chapter will focus on cloning version 1.11.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
@@ -1928,13 +1932,13 @@ Thus the update process is as follows:
 
 . Close the program if it is still running
 . Backup your current DB for safety (see <<backup-restore,Backup & Restore>>)
-. Open a terminal in the folder mysql/ (e.g.):
+. Open a terminal in the folder sql/ (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
 
-D:\OpenHospital_1_11_0\mysql>
+D:\OpenHospital_1_11_0\sql>
 ----
 
 [start=4]
@@ -1942,7 +1946,7 @@ D:\OpenHospital_1_11_0\mysql>
 
 [source,shell]
 ----
-D:\OpenHospital_1_11_0\mysql> mysql –u root -p
+D:\OpenHospital_1_11_0\sql> mysql –u root -p
 
 Enter password: ****
 ----
