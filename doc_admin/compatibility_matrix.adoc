@@ -2,7 +2,7 @@
 |===
 7+|*Open Hospital compatibility matrix*
 
-.2+|OH version .2+|O.S. .2+|Architecture .2+|JAVA (OpenJDK) 3+|Special Features
+.2+|OH version .2+|MySQL / MariaDB .3+|O.S. .3+|O.S. Arch .3+|JAVA/JRE arch 4+|Special Features
 |DICOM |SMS |Webcam
 
 .5+|*1.11.0* |Ubuntu 20.04 |x64 |64bit |*v* |*?* |*v*
