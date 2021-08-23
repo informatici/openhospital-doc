@@ -215,7 +215,7 @@ To:
 
 In this way the database server will be listening on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
 
-==== 3.1.4 Open Hospital database creation
+==== 3.1.4 Open Hospital - Database creation
 
 To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
 
