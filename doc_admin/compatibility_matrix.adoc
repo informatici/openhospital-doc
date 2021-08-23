@@ -1,6 +1,6 @@
 [width="99%",cols="^16%,^14%,^14%,^14%,^14%,^14%,^14%",options="header"]
 |===
-7+|*Open Hospital compatibility matrix*
+8+|*Open Hospital compatibility matrix*
 
 .2+|OH version .2+|MySQL MariaDB .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM |SMS |Webcam
