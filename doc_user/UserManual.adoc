@@ -47,7 +47,7 @@ for administrative purposes; that information is provided in the _Administrator�
 == 2 Introduction
 
 The program aims to manage, in the simplest manner, the hospital administrative operations like registering patients
-and laboratory analysis, and to produce statistics for the health ministry. This document will describe the all
+and laboratory analysis, and to produce statistics for the health ministry. This document describes the all
 the information that one needs to use the program properly.
 
 == 3 Useful Information Before Reading This User Manual
@@ -136,10 +136,10 @@ image:image9.png[OPD,width=800,height=319]
 
 The following functions are available from the *Buttons panel* of the window *_OPD Out Patient Department_*:
 
-* *[.underline]##N##ew*: create a new patient visit
-* *[.underline]##E##dit*: modify an existing patient visit
-* *[.underline]##D##elete*: delete a patient visit
-* *[.underline]##C##lose*: exit from the *_OPD Out Patient Department_* function
+* *[.underline]##N##ew*: create a new patient visit.
+* *[.underline]##E##dit*: modify an existing patient visit.
+* *[.underline]##D##elete*: delete a patient visit.
+* *[.underline]##C##lose*: exit from the *_OPD Out Patient Department_* function.
 
 Furthermore, a search function (*[.underline]##S##earch*) is available using the *Selection panel* on the left of the window.
 
@@ -151,12 +151,12 @@ The following fields are available to select or narrow the resulting matches:
 
 * *Disease type*: Allows for the selection by a specific disease type or all disease types
 * *Disease*: Allows for the selection of a specific disease, or all diseases, or searching for partial matches by typing some letters in the search field
-* *Date*: “DATE From” and “DATE To” allows for the selection of all visits performed during the specified period
+* *Date*: “Date From” and “Date To” allows for the selection of all visits occurring during the specified period
 * *Age*: “Age From” and “Age To” allows for the selection of the patients by age
-* *Sex*: Allows for the selection of all the patients by sex: All / Male / Female
-* *Type of patient*: Allows for the selection of all the visits by type of attendance: All / New / Re-Attendance
+* *Sex*: Allows for the selection of patients by sex: All / Male / Female
+* *Type of patient*: Allows for the selection of visits by type of attendance: All / New / Re-Attendance
 
-After providing the selection criteria, press the *[.underline]##S##earch* button.
+After specifying the selection criteria, press the *[.underline]##S##earch* button.
 The counter at the bottom of the window indicates how many visits match the specified criteria
 and the individual visit data appears in the *Data table* area.
 
@@ -192,7 +192,7 @@ after ten days to have his/her stitches removed, a new OPD record is then create
 The second and third list continues to contain all diseases.
  +
 
-NOTE: Disease Types are defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Disease Types are defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document._
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance”
@@ -229,8 +229,8 @@ When finished entering data, the *Buttons panel* has the following choices:
 
 ==== 5.2.4 Delete a Recorded Patient Visit ([.underline]##D##elete)
 
-In order to delete a visit first highlight it in the *_OPD Out Patient Department_* window.
-Once a visit is highlighted, press the *[.underline]##D##elete* button. The highlighted record will be shown in the
+In order to delete a visit, first highlight it in the *_OPD Out Patient Department_* window.
+Once a visit is highlighted, press the *[.underline]##D##elete* button. The highlighted record appears in a
 confirmation dialog shown. Now the record can be deleted. Deleted records are no longer available.
 
 image:image13.png[Delete Patient Visit,width=278,height=206]
@@ -242,7 +242,7 @@ In the *Buttons panel* has the the following choices:
 
 === 5.3 OPD Extended
 
-One can extend the OPD functionality by changing the _OPDEXTENDED_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+One can extend the OPD functionality by changing the _OPDEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 ==== 5.3.1 Additional Features
 
@@ -271,7 +271,7 @@ The OPD Extended module affords the following additional features:
 
 == 6 Pharmacy ([.underline]##P##harmacy)
 
-By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharmacy menu. From this menu, the following functions are available: *[.underline]##P##harmaceuticals* and *Pharmaceuticals [.underline]##S##tock*, *Pharmaceuticals Stock [.underline]##W##ard.*
+Pressing *[.underline]##P##harmacy* from the main menu provides access to the Pharmacy menu. From the Pharmacy menu, the following functions are available: *[.underline]##P##harmaceuticals* and *Pharmaceuticals [.underline]##S##tock*, *Pharmaceuticals Stock [.underline]##W##ard.*
 
 .Press the *[.underline]##P##harmacy* button or “Alt + P” to open the Pharmacy submenu
 [frame=none]
@@ -282,19 +282,19 @@ By pressing *[.underline]##P##harmacy* from the main menu, you access the Pharma
 |===
 
 
-NOTE: Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file**.** Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 [#pharmaceuticals]
 === 6.1 Pharmaceuticals ([.underline]##P##harmaceuticals)
 
 ==== 6.1.1 Main Characteristics
 
-Pharmaceutical functions allow you to insert, modify, and delete pharmaceuticals. Moreover, it provides important information about pharmaceuticals:
+Pharmaceutical functions allows for the insertion, modification, and deletion of pharmaceuticals. Moreover, it provides important information about pharmaceuticals:
 
 * the current quantity lying in the stock
 * the limit quantity that defines when a pharmaceutical is going out of stock
 * if the pharmaceutical is out of stock
-* the expiring drugs today or a withing a time period
+* the expiring drugs today or a within a specified time period
 
 NOTE: In Open Hospital to identify pharmaceuticals sometimes the word, “pharmaceutical” is used and
 sometimes the synonym “medical” is used.
@@ -314,16 +314,16 @@ If the pharmaceutical quantity is zero it is shown in GRAY and the square in the
 
 The following functions are accessible from the *Buttons panel* of the *_Pharmaceutical Browser_* window:
 
-* *[.underline]##N##ew*: register a new pharmaceutical
-* *[.underline]##E##dit*: modify a registered pharmaceutical
-* *[.underline]##D##elete*: delete a pharmaceutical
-* *E[.underline]##x##port*: export the pharmaceuticals to a CSV file (Excel)
-* *[.underline]##S##tock*: show the report of stock quantities
-* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (you must select it in the list first)
-* *[.underline]##O##rder*: show the list of pharmaceuticals that have to be ordered
-* *Ex[.underline]##p##iring*: show the list of pharmaceuticals that are going to expire (today, next month, within two months, within three months, or within another month to be specified)
-* *A[.underline]##M##C*: show the AMC (average monthly consumption) of pharmaceuticals
-* *[.underline]##C##lose*: exit from the *Pharmaceuticals Browser*
+* *[.underline]##N##ew*: register a new pharmaceutical.
+* *[.underline]##E##dit*: modify a registered pharmaceutical.
+* *[.underline]##D##elete*: delete a pharmaceutical.
+* *E[.underline]##x##port*: export the pharmaceuticals to a CSV file (Excel).
+* *[.underline]##S##tock*: show the report of stock quantities.
+* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (must be selected in the list first).
+* *[.underline]##O##rder*: show the list of pharmaceuticals that have to be ordered.
+* *Ex[.underline]##p##iring*: show the list of pharmaceuticals that are going to expire (today, next month, within two months, within three months, or within another month to be specified).
+* *A[.underline]##M##C*: show the AMC (average monthly consumption) of pharmaceuticals.
+* *[.underline]##C##lose*: exit from the *Pharmaceuticals Browser*.
 
 At the bottom left of the window there is a "Select type" combo box. Based on the value selected, the table either displays a pharmaceutical of a specific type
 or all pharmaceuticals if the default value of ALL is used. Just to the right of the combo box is an field that is used to search for a specific pharmaceutical by description by typing a keyword into the field.
@@ -337,31 +337,31 @@ Press the *[.underline]##N##ew* button in the *_Pharmaceutical Browser_* window 
 
 To insert a new pharmaceutical, enter the following fields:
 
-* *Type*: for instance, Drugs or Chemical +
-* *Code*: code that uniquely identifies the pharmaceutical for fast searching
-* *Description*: the description of the pharmaceutical
-* *Pieces per Packet*: number of pieces per packet (if more than 1)
-* *Critical level*: the minimum quantity required in stock
+* *Type*: for example, Drugs or Chemical +
+* *Code*: code that uniquely identifies the pharmaceutical for fast searching.
+* *Description*: the description of the pharmaceutical.
+* *Pieces per Packet*: number of pieces per packet (if more than 1).
+* *Critical level*: the minimum quantity required in stock.
 
 NOTE: Types can be defined by the Administrator. See <<settings,Settings>> in this document for more information.
 
-image:image18.png[New Medical,width=350,height=263]
+image:image18.png[New Medical]
 
-When you finish entering the data, the *Buttons panel* has the following choices:
+When all the data is entered, the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm and save the data
-* *[.underline]##C##ancel*: close the window and return to the *_Pharmaceutical Browser_* window
+* *[.underline]##O##K*: confirm and save the data.
+* *[.underline]##C##ancel*: close the window and return to the *_Pharmaceutical Browser_* window.
 
 ===== 6.1.2.2 Modify an Existing Pharmaceutical ([.underline]##E##dit)
 
-Press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. You can modify all data except for the “Type” value.
+After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. You can modify all data except for the “Type” value.
 
-image:image19.png[Edit Medical,width=350,height=280]
+image:image19.png[Edit Medical]
 
-When you finish entering data, the *Buttons panel* has the following choices:
+When all the data is entered, the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm and save the data
-* *[.underline]##C##ancel*: close the window and return to the *_Pharmaceutical Browser_* window
+* *[.underline]##O##K*: confirm and save the data.
+* *[.underline]##C##ancel*: close the window and return to the *_Pharmaceutical Browser_* window.
 
 ===== 6.1.2.3 Delete a Pharmaceutical ([.underline]##D##elete)
 
@@ -369,24 +369,24 @@ To delete a pharmaceutical, highlight it in the Browser window as before. Next, 
 
 image:image20.png[Delete Medical,width=308,height=128]
 
-In the *Buttons panel* you have the following choices:
+The *Buttons panel* has the following choices:
 
 * *[.underline]##Y##es*: confirm the deletion of the pharmaceutical.
 * *[.underline]##N##o*: close the window and return to to the *_Pharmaceutical Browser_* window.
 
 ===== 6.1.2.4 Export the List of Pharmaceuticals (E[.underline]##x##port)
 
-Use this function to export the list of pharmaceuticals shown in the *_Pharmaceutical Browser_* window that can be imported into Excel.
+Use this function to export the list of pharmaceuticals shown in the *_Pharmaceutical Browser_* window that then can be imported into Excel.
 
-Press the *E[.underline]##x##port* button in the *_Pharmaceutical Browser_* window to access the *_Save_* window shown below. It will be in the language of your computer, regardless of the language used in Open Hospital.
+Press the *E[.underline]##x##port* button in the *_Pharmaceutical Browser_* window to access the *_Save_* window shown below. The window uses the language of the computer, regardless of the language used in Open Hospital.
 
-Then you can start the export of the list of pharmaceuticals.
+This begins the exporting of the list of pharmaceuticals.
 
-In the *_Save_* window you have to:
+In the *_Save_* window:
 
-* select the directory of your file system where you want to store the file
+* select the directory of the file system where the data is to be stored
 
-* input the name you want to give to the file (Filename)
+* input the name for the file (Filename)
 
 image:image21.png[Export Save,width=452,height=319]
 
@@ -397,7 +397,8 @@ Press the *[.underline]##S##tock* button in the *_Pharmaceutical Browser_* windo
 ===== 6.1.2.6 Stoc[.underline]##k##Card (Stoc[.underline]##k##Card)
 
 Press the *Stoc[.underline]##k##Card* button in the *_Pharmaceutical Browser_* window to
-show the movements history for a selected pharmaceutical for a specific time range.
+show the movements history for a selected pharmaceutical for a specific time range.  The data
+can either be in report format or exported to a CSV file.
 
 ===== 6.1.2.7 Order of Pharmaceuticals ([.underline]##O##rder)
 
@@ -417,20 +418,20 @@ report showing the average monthly consumption of pharmaceuticals.
 
 ==== 6.2.1 Main Characteristics
 
-The Pharmaceutical Stock feature helps you store and trace every stock movement that has been made. Every movement is identified by the following data:
+The Pharmaceutical Stock feature is used to store and trace every stock movement that has been made. Every movement is identified by the following data:
 
 * date of the movement
 * type of the movement, that is, if it is a charging or discharging one
 * the ward that the movement refers to. This characteristic is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used, otherwise, this field is empty
 * the quantity
 * the pharmaceutical (which in turn relates to different categories: Laboratory, Surgery, Drugs or Chemical)
-* the lot which the movement is referred to. Some pharmaceuticals may not have a lot related (for example ‘Gloves’), so you can omit this field. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
+* the lot which the movement is referred to. Some pharmaceuticals may not have a lot related (for example ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
 ** a name (that can be its code)
 ** a preparation date
 ** a due date
 +
-In this way, you can find which movement refers to the pharmaceuticals that are expiring, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
-* the supplier of the pharmaceutical. This characteristic is needed for charging movements only. This field is empty in other cases
+In this way, one can find which movement refers to the pharmaceuticals that are expiring, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
+* the supplier of the pharmaceutical. This characteristic is needed for charging movements only. This field is empty in other cases.
 
 ==== 6.2.2 Functions of Pharmaceuticals Stock 
 
@@ -444,14 +445,14 @@ image:image23.png[Stock Movement Browser,width=598,height=327]
 
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
-* *C[.underline]##h##arge*: record a new charge movement
-* *[.underline]##D##ischarge*: record a new discharge movement
-* *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements
-* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested)
-* *Stock [.underline]##L##edger*: show the movements history for all pharmaceuticals within a selected date range
-* *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window
+* *C[.underline]##h##arge*: record a new charge movement.
+* *[.underline]##D##ischarge*: record a new discharge movement.
+* *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements.
+* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
+* *Stock [.underline]##L##edger*: show the movements history for all pharmaceuticals within a selected date range.
+* *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-As you can see, there is no “Delete” button as you are not allowed to delete a movement; but if a mistake occurs - for example, you inserted the wrong quantity of a pharmaceutical in charge – you must just insert the new movement to correct the mistake – a discharge movement in this example.
+NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake.  In this example use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -459,48 +460,48 @@ Furthermore, a search function (*[.underline]##F##ilter)* is available using the
 
 image:image24.png[Stock Movements Filter,width=169,height=507]
 
-Using the *_Stock Movement Browser_* search function, you can filter and show on the window useful information such as:
+Using the *_Stock Movement Browser_* search function, one can filter and show on the window useful information such as:
 
 * how many boxes of pharmaceutical remains in the stock
 * which movements have been made on a specific day
 * in which ward a specific pharmaceutical has been discharged
 * if there are any pharmaceutical expired
 
-Queries about movements of pharmaceuticals can be done using the search criteria available on the *Selection panel* area of the *_Stock Movement Browser_* window (left side of the browser). Results of your search are shown in the *Data table* area.
+Queries about movements of pharmaceuticals can be done using the search criteria available on the *Selection panel* area of the *_Stock Movement Browser_* window (left side of the browser). The search results are shown in the *Data table* area.
 
-The *Selection panel* is used to select a group of movements according to specific filters. You set a filter using the tools contained in the *Selection panel*.
+The *Selection panel* is used to select a group of movements according to specific filters. The filter is set using the tools contained in the *Selection panel*.
 
 Filters refer to three different objects: the *Pharmaceutical*, the *Movement*, and the *Lot Preparation and Lot Due Date*.
 
-As far as a *Pharmaceutical* is concerned, user can choose its:
+As far as a *Pharmaceutical* is concerned, one can choose its:
 
-* description, that is its name
-* type: Laboratory, Surgery, Chemical and Drugs
+* *_Description_*, the parmaceutical's name
+* *_Type_*: Laboratory, Surgery, Chemical and Drugs, etc.
 
-To avoid conflicts, you can change one of these options only. So, when the description combo box is active, the other one is not, and vice versa.
+To avoid conflicting filters, only one of the options is available at any one time. So, when the description combo box is active, the other one is not, and vice versa.
 
-To quickly find a medical you are looking for simply type a keyword that is a part of its name into the text field at the top of the pharmaceuticals products combo box and
+To quickly find a medical simply type a keyword that is a part of the medical's name into the text field at the top of the pharmaceuticals products combo box and
 press the search button (image:image81.png[Search icon,width=15,height=15]) that follows this text field.
 
-As far as *Movement* is concerned, a user can choose its:
+As far as *Movement* is concerned, one can choose its:
 
-* *_Type_*: specifies if it is a charge or a discharge type. If you select the discharge option, then the ward combo box gets enabled. The ward combo box allows you to find any discharging movements that refer to a specific ward.
-* *_Date_*: you can choose a time frame between ‘Date From’ and ‘Data To’. The date tools consist of three blank areas, which (from left to right) refer to day, month and year. As you insert a value into a blank area, one can move to the next area by typing the “Tab” key on the keyboard. When first displayed the window is set to specify the previous week by default.
+* *_Type_*: specifies if it is a charge or a discharge type. If the discharge option is selected, then the ward combo box is enabled. The ward combo box allows finding any discharging movements that refer to a specific ward.
+* *_Date_*: specified the data range for the search; between the ‘Date From’ and ‘Date To’ values. The date tools consist of three blank areas, which (from left to right) refer to day, month and year. As a value is inserted into a blank area, moving to the next area is accomplished by using the “Tab” key on the keyboard. When the window first appears the date range is set to the previous week by default.
 
-Finally, as far as *Lot Preparation Date* and *Lot Due Date* you can search movements that refer to specific lots by inserting:
+Finally, as far as *Lot Preparation Date* and *Lot Due Date* one can search movements that refer to specific lots by inserting:
 
-* the lot preparation date: you have to choose a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
+* the lot preparation date: choose a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
 * the due date; it behaves like the lot preparation tool and the movement date tool.
 
-Each filter can be combined with another, allowing you to obtain many possibilities.
+Each filter can be combined with another, allowing for many possibilities.
 
-After have chosen, press the *[.underline]##F##ilter* button. The system will show in the *Data table* area the results of the search using the specified criteria.
+After the filtering criteria is chosen, press the *[.underline]##F##ilter* button and the matching data is shown in the *Data table* area.
 
 ===== 6.2.2.2 Insert Stock Charging Movement ([.underline]##C##harge)
 
-To insert charging movements, press *[.underline]##C##harge* in the *_Stock Movement Browser_* window. The *_Stock Movement_* window shown below appears. You can enter charge movements.
+To insert charging movements, press *[.underline]##C##harge* in the *_Stock Movement Browser_* window. The *_Stock Movement_* window shown below appears.
 
-image:image25.png[Stock Movement Charging,width=512,height=384]
+image:image25.png[Stock Movement Charging]
 
 It is possible to perform more than one charging movement at a time. The window is composed of two areas: a *Panel* and a *Grid*.
 
@@ -511,47 +512,47 @@ The *Panel* contains the following fields:
 * *Supplier*: the origin of the pharmaceutical
 * *Reference No.*: the reference of the operation
 
-The *Grid* is filled with the pharmaceuticals involved in the charging movement. To fill the grid, use the field above the grid to select pharmaceutical. Enter into field the code or the description of the pharmaceutical to move, and
+The *Grid* is filled with the pharmaceuticals involved in the charging movement. To fill the grid, use the field above the grid to select a pharmaceutical. Enter into the field the code or the description of the pharmaceutical to move, and
 press *ENTER.* This will open the *_Choose a Medical_* window.
 
-image:image26.png[Medical Selection,width=355,height=343]
+image:image26.png[Medical Selection]
 
-Select the desired medical and click *[.underline]##Y##es*. This will open a window where you will enter the quantity of the medical:
+Select the desired medical and click *[.underline]##Y##es*. This will open a new window where the quantity of the medical is specified:
 
 image:image27.png[Input Quantity,width=310,height=135]
 
 Then press *[.underline]##O##K*. If there is an existing lot in the system, the *_Existing Lot_* window will appear.
 
-image:image28.png[Existing Lots,width=325,height=323]
+image:image28.png[Existing Lots]
 
-If you want to use an existing Lot, you select the existing lot and click *Yes*. Else you click *No* and the *_Lot Information_* window will appear with the following fields:
+If this existing Lot is the one to use, select the existing lot and click *Selected Lot*. Otherwise, click *New Lot* and the *_Lot Information_* window appears with the following fields:
 
 * *Lot No.*: The lot code
 * *Lot preparation*: The lot preparation date
 * *Expiring*: The lot expiring date
 
-image:image29.png[Lot Information,width=422,height=158]
+image:image29.png[Lot Information]
 
-Enter the appropriate values and then press the *[.underline]##O##K* button. The *_Input_* window appears and you next fill in the unit cost.
+Enter the appropriate values and then press the *[.underline]##O##K* button. The *_Input_* window appears where the unit cost is specified:
 
-image:image30.png[UnitCost Input,width=310,height=137]
+image:image30.png[UnitCost Input]
 
 Then click *[.underline]##O##K* to insert the medical information as a line in the grid.
 
 Finally click the *[.underline]##S##ave* button to save the charge movement.
 
 NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_IN in the configuration
-file, so every new charging movement will automatically create a new lot. Regardless of the setting,
-the Expiring Date must always be provided. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+file, so every new charging movement automatically creates a new lot. Regardless of the setting,
+the Expiring Date must always be provided. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
-NOTE: You can avoid managing the cost of medicals by setting the LOTWITHCOST to no. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: One can avoid managing the cost of medicals by setting the LOTWITHCOST to _no_. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
 ===== 6.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
 
-To insert discharging movements, you have to press *[.underline]##D##ischarge* in the *_Stock Movement Browser_* window. The *_Stock Movement_* window shown below appears. You can enter discharging movements.
+To insert discharging movements, press the *[.underline]##D##ischarge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window shown below appears.
 
-image:image31.png[Stock Movement Discharging,width=463,height=347]
+image:image31.png[Stock Movement Discharging]
 
 It is possible to perform more than one discharging movement at a time. The window is composed of two areas: a *Panel* and a *Grid.*
 
@@ -562,18 +563,18 @@ The *Panel* contains the following fields:
 * *Destination*: the ward where the discharged medical will be affected
 * *Reference No.*: the reference number of the operation
 
-The *Grid* is filled in with pharmaceuticals involved in the discharging movement. To fill the grid, you have to use the field above the grid to select a pharmaceutical. Enter into the field the description of the pharmaceutical, and
-press *ENTER.* This will open the *_Choose a Medical_* window.
+The *Grid* is filled in with pharmaceuticals involved in the discharging movement. To fill the grid, enter into the field above the grid the description of the pharmaceutical to discharge, and
+press *ENTER.* This opens the *_Choose a Medical_* window.
 
-image:image26.png[Medical Selection,width=423,height=409]
+image:image26.png[Medical Selection]
 
-Select the desired medical and click *[.underline]##Y##es*. This will open the *_Quantity_* window showing the existing stock for the medical. You will enter the quantity of the medical to discharge.
+Select the desired medical and click *[.underline]##Y##es*. This then opens the *_Quantity_* window showing the existing stock for the medical. In the input field enter the quantity of the medical to discharge.
 
-image:image32.png[Quantity Input,width=268,height=135]
+image:image32.png[Quantity Input]
 
 Then press *[.underline]##O##K*. The *_Lot Information_* window will appear.
 
-image:image33.png[Existing Lot,width=379,height=378]
+image:image33.png[Existing Lot]
 
 Select the existing lot and click *[.underline]##O##K* to insert the medical discharge into the grid.
 
@@ -582,7 +583,7 @@ Click the *[.underline]##S##ave* button to save the discharge movement.
 NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT in the configuration
 file, so every new discharging movement will automatically select a suitable lot for the operation according
 to the expiring date. If the first selected lot does not contain enough quantity to serve the discharging
-movement, several discharging movements may be generated. Ask your Administrator or read the _Administrator’s Guide_
+movement, several discharging movements may be generated. Ask the Administrator or read the _Administrator’s Guide_
 for more information.
 
 <<<
@@ -594,7 +595,7 @@ for more information.
 
 The Pharmaceutical Stock Ward feature allows the management of the pharmacy at the ward level.
 
-*Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask your Administrator how to do it or read the _Administrator’s Guide_.
+*Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 ==== 6.3.2 Functions of Pharmaceuticals Stock Ward 
 
@@ -604,21 +605,21 @@ image:image22.png[Phamacy Menu,width=220,height=182]
 
 The window *_Ward Pharmacy_* shown below will be opened. All functions available under Pharmaceutical Stock are accessible from the *_Ward Pharmacy_* window selecting one *WARD* on the top left of the window.
 
-image:image34.png[Ward Pharmacy,width=616,height=347]
+image:image34.png[Ward Pharmacy]
 
-After the selection of the ward (FEMALE WARD in this example), the *_Ward Pharmacy_* window appears as shown below and you can start the management of the ward pharmacy of the FEMALE WARD.
+After the selection of the ward (FEMALE WARD in this example), the *_Ward Pharmacy_* window appears as shown below allowing for the management of the ward pharmacy of the FEMALE WARD.
 
-image:image35.png[Ward Pharmacy,width=614,height=346]
+image:image35.png[Ward Pharmacy]
 
 The available functions are:
 
-* *[.underline]##N##ew*: create a new discharging movement for the patient
-* *[.underline]##R##ectify*: rectify the quantity lying in stock (6.3.2.1 Rectify)
-* *Re[.underline]##p##ort*: print the ward medical inventory report
-* *[.underline]##E##xcel*: export the data to Excel
-* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested)
-* *Stock [.underline]##L##edger*: show the movements history for all pharmaceuticals within a selected date range
-* *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window
+* *[.underline]##N##ew*: create a new discharging movement for the patient.
+* *[.underline]##R##ectify*: rectify the quantity lying in stock (see 6.3.2.1 Rectify).
+* *Re[.underline]##p##ort*: print the ward medical inventory report.
+* *[.underline]##E##xcel*: export the data in a format to import into Excel.
+* *Stoc[.underline]##k##Card*: show the movements history for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
+* *Stock [.underline]##L##edger*: show the movements history for all pharmaceuticals within a selected date range.
+* *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window.
 
 Different than the *Pharmaceuticals [.underline]##S##tock* functionality, the *Pharmaceutical Stock [.underline]##W##ard* allows only discharging movement to patients since it is an internal management of pharmaceuticals held in the ward after they have been “charged” by the main pharmacy. It is also possible that the discharging movement from ward to ward can be accomplished.
 
@@ -629,54 +630,54 @@ The *_Ward Pharmacy_* window shows a *Filter panel* on the left, a *Movements pa
 It is possible to rectify the quantity held in stock in the Ward Pharmacy. This may be necessary when a drug is damaged or stolen. To do this,
 click the *[.underline]##R##ectify* button to open the *_Rectify_* window.
 
-image:image36.png[Rectify,width=576,height=224]
+image:image36.png[Rectify]
 
 * Select the medical. Once done, the quantity currently in stock is displayed.
-* If lots exist for the drug, click *Choose a Lot*, otherwise, click on *New Lot* (you are detecting a new lot)
-* Modify the *Actual Quantity*
-* Enter the reason for the rectification
+* If lots exist for the drug, click *Choose a [.underline]##L##ot*, otherwise, click on *[.underline]##N##ew Lot* (new lot creation).
+* Modify the *Actual Quantity*.
+* Enter the reason for the rectification.
 
-image:image37.png[Rectify filled,width=574,height=224]
+image:image37.png[Rectify filled]
 
 Click *[.underline]##O##K* to save the rectification or *[.underline]##C##ancel* to abort the change.
 
 [#search-ward-pharmacy-movements]
 ===== 6.3.2.2 Search Ward Pharmacy Movements ([.underline]##F##ilter)
 
-image:image38.png[WardPharmacy Filter,width=173,height=259]
+image:image38.png[WardPharmacy Filter]
 
-The *Filter panel* allows you to filter registered movements by:
+The *Filter panel* allows the filtering of registered movements by:
 
 * Medical
 * Age
 * Sex
 * Weight
 
-The counter at the bottom will automatically display the number of movements that match the filtering criteria after clicking the *[.underline]##F##ilter* button.
+The counter at the bottom automatically displays the number of movements that match the filtering criteria after clicking the *[.underline]##F##ilter* button.
 
-The *Re[.underline]##s##et* button reset all the values in the *Filter panel* back to their default values as shown in the figure above.
+The *Re[.underline]##s##et* button resets all the values in the *Filter panel* back to their default values as shown in the figure above.
 
 ===== 6.3.2.3 The Movements Panel
 
 The *Movements panel* is made up of three tabs:
 
 * *Outcomes*: shows all the movements registered between the dates in the *From* and *To* fields at the top of the window. By default, *From* and *To* dates are set to the current date. Every movement is identified by the following fields:
-** *Date*: the date of the movement
-** *Patient*: the patient the movement is related to, with his/her age, sex, and weight (ND if the weight has not been defined at the registration moment)
-** *Medical*: the drug subject of the movement
-** *Quantity*: the quantity subject of the movement
-* *Incomings*: shows all incomings from the main pharmacy, it is to say, all discharging movements registered in *_Pharmaceutical Stock_* window related to the selected ward
-* *Drugs*: the number of drugs remaining in the selected ward as a result of all incoming minus all the outgoings
+** *Date*: the date of the movement.
+** *Patient*: the patient the movement is related to, with his/her age, sex, and weight (ND if the weight has not been defined at the registration moment).
+** *Medical*: the drug subject of the movement.
+** *Quantity*: the quantity subject of the movement.
+* *Incomings*: shows all incomings from the main pharmacy, it is to say, all discharging movements registered in *_Pharmaceutical Stock_* window related to the selected ward.
+* *Drugs*: the number of drugs remaining in the selected ward as a result of all incoming minus all the outgoings.
 
 ===== 6.3.2.4 Inserting a New Ward Pharmacy Movement ([.underline]##N##ew)
 
-To insert ward pharmacy movements, you have to press [.underline]##N##ew in the *_Ward Pharmacy_* window. The *_New / Edit_* window shown below appears.
+To insert ward pharmacy movements, press the [.underline]##N##ew button in the *_Ward Pharmacy_* window. The *_New / Edit_* window shown below appears.
 
-image:image39.png[WardPharmacy New,width=456,height=424]
+image:image39.png[WardPharmacy New]
 
 As mentioned previously, only discharging movements are allowed in this functionality. So, the information required is the following:
 
-* *Patient* or *Internal Use* or *Another ward*: you may select a registered patient by clicking on *[.underline]##P##ick Patient* button so the movement is associated with his/her ID or select *Internal use* and type a description to specify that the movement is not related to a patient. You may also select *Another Ward* and choose the destination ward from the list provided.
+* *Patient* or *Internal use* or *Another Ward*: a registered patient can be selected by clicking on the *[.underline]##P##ick Patient* button so the movement is associated with his/her ID or select *Internal use* and type a description to specify that the movement is not related to a patient. Selecting *Another Ward* allows for choosing the destination ward from the list provided.
 * *Medical*: first select the drug to give to that patient (the only ones that are in the ward as a result of a previous discharging movement in the *_Pharmaceutical Stock Browser_*) from the dropdown list and then press the *[.underline]##M##edical* button. A window appears to
 specify the quantity; multiple and half-piece are allowed.
 
@@ -689,9 +690,9 @@ NOTE: The lot selection can be enabled or disabled (set as automatic) by changin
 the configuration file, so every new discharging movement will automatically select a suitable lot for the
 operation according to the expiring date (FEFO). If the first selected lot does not contain enough quantity
 to serve the discharging movement, several discharging movements may be generated if the quantity laying in
-other lots can satisfy the request. Ask your Administrator or read the _Administrator’s Guide_ for more information.
+other lots can satisfy the request. Ask the Administrator or read the _Administrator’s Guide_ for more information.
 
-Before pressing the *[.underline]##O##K* button, you may insert as many Medicals as you need, it will show a correspondent number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements will also be visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
+Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed, it will show a correspondent number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
 <<<
 
@@ -719,7 +720,7 @@ It is possible to create, modify or delete exams.
 
 All functions available under *[.underline]##L##aboratory* are accessible from the *_Laboratory Browser_* window shown below. By default, the system shows all the laboratory exams record in the last week.
 
-image:image43.png[Laboratory Browser,width=528,height=339]
+image:image43.png[Laboratory Browser]
 
 Data that identify laboratory exams are the following:
 
@@ -1158,7 +1159,7 @@ image:image69.png[Filter Patient Bills Management,width=521,height=334]
 
 === 9.1 Main Characteristics
 
-Vaccines is used to manage vaccines for all the patients registered. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
+Vaccines is used to manage vaccines for all the registered patients. It is possible to register vaccinations, modify or delete them. A specific search function is also available.
 
 .Click with the mouse on the button or press "Alt + V" to enter the *_Patient Vaccine Browser_* window
 [#default-main-menu-9]
@@ -1169,7 +1170,7 @@ image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 All functions available under *[.underline]##V##accines* are accessible from the window *_Patient Vaccine Browser_* window shown below.
 
-By default, the window shows in the *Data table* all the vaccinations addded to the system in the last week.
+By default, the window shows in the *Data table* all the vaccinations added to the system in the last week.
 
 image:image71.png[Patient Vaccine Browser,width=594,height=263]
 
@@ -1190,16 +1191,16 @@ Doing the selection, data about vaccinations can be selected by choosing specifi
 
 * *Vaccine type*: selection of a Vaccine Type to filter the vaccines list
 * *Vaccine*: select a specific vaccine or all vaccines with "All vaccines”
-* *Date*: “**DATE From**” and “**DATE To**” subsets the vaccinations to a specific time period
+* *Date*: “**Date From**” and “**Date To**” subsets the vaccinations to a specific time period
 * *Age*: “**Age From**” and “**Age To**” subsets the patients subject to vaccinations by an age range
 * *Sex*: All / Male / Female
 
 NOTE: VaccineTypes and Vaccines can be defined by the Administrator. Ask your Administrator how to do it or see
 <<settings,Settings>> in this document.
 
-After the selection press the *[.underline]##S##earch* button; the system will show in the *Data table* results of the search applying the criteria requested.
+After the selection press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
 
-The function shows in the field “Count:” the number of vaccinations that are shown in the *Data table* (in the example they are 3).
+The function also shows in the field “Count:” the number of vaccinations that are shown in the *Data table* (in the example there are 26).
 
 image:image72.png[Search Vaccines,width=619,height=245]
 
@@ -1248,7 +1249,7 @@ press the *[.underline]##D##elete* button. The confirmation window shown below a
 
 image:image75.png[Delete a patient vaccinaton,width=278,height=187]
 
-=== 9.3 Vaccines Extended (Patient [.underline]##V##accines)
+=== 9.3 Vaccines Extended ([.underline]##V##accines)
 
 One can extend the vaccine functionality by changing the _PATIENTVACCINEEXTENDED_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
@@ -2039,7 +2040,7 @@ image:image122.png[Patient merge sex,width=277,height=118]
 
 === 11.1 Main Characteristics
 
-This functionality is the way to extract data registered in application and present it in a useful fashion.
+The purpose of this function is to extract data registered in application and present it in a useful fashion.
 
 .Click with the mouse on the button or press "Alt + T" to enter the *Statistics Report Launcher*
 [#default-main-menu-11]
@@ -2051,11 +2052,11 @@ Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
 All of these reports may be useful for any organization and can be added or removed as explained in
 the Administrator Manual's chapter “6 – Reports”.
 
-Open Hospital 1.8.4 comes with the following set of reports:
+Open Hospital ships with the following set of reports:
 
 * OH001 - Registered Patients
+* OH002 - Registered patients by origin
 * OH003 - Registered patients by Age and Sex
-* OH002 - Patients registered by origin
 * OH004 - All incomes by price codes
 * OH005 - Count outpatient
 * OH006 - Count outpatient diagnosis
@@ -2063,6 +2064,9 @@ Open Hospital 1.8.4 comes with the following set of reports:
 * OH008 - Lab summary for OPD
 * OH009 – InPatient Report
 * OH010 – OutPatient Report
+* OH011A - Revenues, Incomes & Receivables (All)
+* OH011B - Revenues, Incomes & Receivables (Pending)
+* OH011C - Revenues, Incomes & Receivables (Month)
 * HMIS 108 - page 1 - 1. census info
 * HMIS 108 - page 1 - 2. referrals
 * HMIS 108 - page 1 - 3. operations
@@ -2077,9 +2081,9 @@ Open Hospital 1.8.4 comes with the following set of reports:
 * HMIS 33b - Weekly epidem. surveil. under 5 y.o.
 * MOH 717 - Monthly Workload Report for Hospitals (Page1)
 * MOH 717 - Monthly Workload Report for Hospitals (Page2)
-* MOH 705A - Over 5 - Daily Outpatient Morbidity Summary Sheet
 * MOH 705A - Under 5 - Daily Outpatient Morbidity Summary Sheet
-* OH23A1 - open bills list: report that shows the list of opened bills (pending bills) per period
+* MOH 705A - Over 5 - Daily Outpatient Morbidity Summary Sheet
+* OH23A1 - Open bills list: report that shows the list of opened bills (pending bills) per period
 * OH23B1 - Revenues, Incomes & Receivables: gives the list of incomes per period
 
 === 11.2 Report Launcher (Launch Report)
@@ -2088,13 +2092,13 @@ With this function you can produce all reports listed in the previous paragraph.
 
 image:image124.png[Report Launcher,width=642,height=121]
 
-To produce one report, you must operate as follow:
+To produce one report, you must:
 
 * Select a report from the list
 * Specify the period (it could be _month-year_ or _from date-to date_ depending on the report)
-* Press the *Launch Report* button for PDF or *Excel* for CSV (Comma Separated Values) format
+* Press the *Launch [.underline]##R##eport* button for PDF or *[.underline]##E##xcel* for CSV (Comma Separated Values) format
 
-After some instants the JasperViewer® will show the generated report as follow:
+After some time passes the JasperViewer® will show the generated report as follows:
 
 image:image125.png[Report,width=591,height=420]
 
@@ -2111,7 +2115,7 @@ NOTE: A PDF copy of every report is always saved within the folders of Open Hosp
 
 === 12.1 Main Characteristics
 
-This functionality is used to generate reports about the hospital like a list of exams, diseases, etc.
+This function is used to generate reports about the hospital like a list of exams, diseases, etc.
 
 .Click with the mouse on the button or press "Alt + R" to enter the *Reports* submenu
 [#default-main-menu-12]
@@ -2125,17 +2129,17 @@ Open Hospital currently only has these two reports:
 
 === 12.2 Reports
 
-By pressing *[underline]##R##eports* from the main menu, you access the *_Reports_* menu. From this menu you have the following printings available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
+By pressing *[underline]##R##eports* from the main menu, one accesses the *_Reports_* menu. From this menu the following typese of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
 
 image:image127.png[Reports submenu,width=642,height=323]
 
 ==== 12.2.1 Exams List ([.underline]##E##xams List)
 
-This report will produce a report about the list of exams, divided by types, as defined in the application by the Administrator.
+This report is a list of exams, divided by types, as defined by the Administrator.
 
 ==== 12.2.2 Disease List ([.underline]##D##isease List)
 
-This report will produce a report about the list of diseases, divided by types, as defined in the application by the Administrator.
+This report is a list of diseases, divided by types, as defined by the Administrator.
 
 <<<
 
@@ -2220,7 +2224,7 @@ image:image135.png[Communication Stock alert for Allan,width=377,height=287]
 
 === 13.5 Report Sharing
 
-As told before, with the communication module we can share some events with other users.
+As mentioned previously, with the communication module one can share events with other users.
 
 In the *_Report Launcher_* window, we will see a new box at the bottom, as shown below:
 
@@ -3032,7 +3036,7 @@ The functions available in this window are:
 * *<-[.underline]##P##rev.*: see the schedule for the previous day
 * *[.underline]##C##lose*: close the window
 
-TIP: To schedule a visit can also be done in the *Therapy Management* module, see <<therapy-management,Therapy management>>
+TIP: To schedule a visit can also be done in the *Therapy Management* module, see <<therapy-management,Therapy Management>>
 
 <<<
 
