@@ -304,7 +304,7 @@ mysql>FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ----
 
-NOTE: Remember to set the updated database password also in the openhospital configuration files.
+NOTE: Remember to set the updated database password also in the Open Hospital configuration files.
 
 [source,shell]
 ----
