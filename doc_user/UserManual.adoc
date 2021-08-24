@@ -535,7 +535,7 @@ image:image29.png[Lot Information]
 
 Enter the appropriate values and then press the *[.underline]##O##K* button. The *_Input_* window appears where the unit cost is specified:
 
-image:image30.png[UnitCost Input7]
+image:image30.png[UnitCost Input]
 
 Then click *[.underline]##O##K* to insert the medical information as a line in the grid.
 
