@@ -85,7 +85,7 @@ For the Open Hospital configuration refer to the chapter <<config-files,Configur
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
-Before starting, checke the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
+Before starting, check the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
 include::./oh_software_compatibility_matrix.adoc[]
 
 
@@ -96,7 +96,7 @@ Depending on the operating system, there are different ways to install a Java Vi
 
 For instance, on a Microsoft Windows® system, you have to download and execute a setup file, while on Linux based systems you have to type only one command in a terminal.
 
-NOTE: See Software Compatibility Matrix in order to identify the correct JAVA version.
+NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
@@ -282,7 +282,7 @@ NOTE: You can install the data with different languages by using the related "cr
 NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
 client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
 
-The script creates the OH databasea structure and populates it with default data.
+The script creates the OH database structure and populates it with default data.
 
 The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password must be changed immediately with the command:
 
@@ -1039,7 +1039,7 @@ INTERNALVIEWER=AcroRd32.exe
 
 INTERNALVIEWER= C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\AcroRd32.exe
 ----
-NOTE: Please note the double file & folder separator “_\\_”.
+NOTE: Please note the double file and folder separator “_\\_”.
 
 *Example in Linux*:
 
@@ -1338,7 +1338,7 @@ NOTE: An application restart is required to see the modification applied.
 [#database-properties]
 === 5.2 database.properties
 
-Open Hospital 1.7 and later versions comes with a database.properties file with the following defaults:
+Open Hospital comes with a database.properties file with the following defaults:
 
 [source,properties]
 ----
@@ -1466,19 +1466,15 @@ RR_MAX = 100
 * *HGT_INIT*: = the Hemo Glucose Test default value (in mg/dl)
 * *DIURESIS_INIT*: = the Daily Urine Volume default value (in ml)
 
-=== 5.5 [line-through]#h8.properties# (removed)
-
-No longer available starting with version 1.9.1.
-
 [#log4j-properties]
-=== 5.6 log4j.properties
+=== 5.5 log4j.properties
 
 The default log4j.properties file is:
 
 [source,properties]
 ----
-# logging di default su file, livello FINEST (debug++)
-log4j.rootCategory=FINEST, null
+# global logging to RollingFile (logs/ folder), available levels INFO, DEBUG, FINEST (debug++)
+log4j.rootCategory=INFO,RollingFile
 
 # Null appender (off)
 log4j.appender.null=org.apache.log4j.varia.NullAppender
@@ -1503,13 +1499,13 @@ log4j.appender.DB.password=isf123
 log4j.appender.DB.sql=INSERT INTO LOG (LOG_TYPE, LOG_CLASS, LOG_METHOD, LOG_TIME, LOG_MESS, LOG_USER) VALUES (1, '%C', '%M', '%d{yyyy-MM-dd HH:mm:ss}', LEFT('%m', 1024), '%X{OHUser}')
 log4j.appender.DB.layout=org.apache.log4j.PatternLayout
 
-# Assigning appenders to packages
+# Assigning appenders to packages (application loggers)
 log4j.category.org.isf=DEBUG,RollingFile,StdOut
 log4j.additivity.org.isf = false
 
-# Assigning appenders to Hibernate packages
-# - SQL query will be logged
-# - parameters will be logged with the prefix "binding parameter [?]"
+# Assigning appenders to Hibernate packages (DB loggers)
+# - hibernate.SQL to DEBUG for SQL queries to be logged
+# - hibernate.type to TRACE for queries parameters to be logged with "binding parameter [?]"
 log4j.logger.org.hibernate=INFO,RollingFile,StdOut
 log4j.logger.org.hibernate.SQL=INFO,RollingFile,StdOut
 log4j.logger.org.hibernate.type=INFO,RollingFile,StdOut
@@ -1554,7 +1550,7 @@ image:image37.png[image,width=645,height=84]
 NOTE: An application restart is required to see the effect of any applied parameter modification.
 
 [#sms-properties]
-=== 5.7 sms.properties
+=== 5.6 sms.properties
 
 The default sms.properties file is:
 
@@ -1580,7 +1576,7 @@ sms.gateway.thread.icc=+39
 * *LOOP*: the delay used by the sender to fetch new SMS operations. The value is in seconds.
 * *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
 
-==== 5.7.1 skebby-gateway-service
+==== 5.6.1 skebby-gateway-service
 
 The default skebby-gateway-service section is:
 
@@ -1605,7 +1601,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *accessToken*: the token generated by the Skebby provider upon user request (it replaces username)
 * *userKey*: the key generated by the Skebby provider upon user request (it replaces password)
 
-==== 5.7.2 textbelt-gateway-service
+==== 5.6.2 textbelt-gateway-service
 
 The default textbelt-gateway-service section is:
 
@@ -1628,7 +1624,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
 [#txtprinter-properties]
-===  5.8 txtPrinter.properties
+===  5.7 txtPrinter.properties
 
 The default txtPrinter.properties file is:
 
@@ -1675,7 +1671,7 @@ The best way to set these parameters for your device is to set them one by one a
 NOTE: An application restart is required to see the modification applied.
 
 [#xmpp-properties]
-=== 5.9 xmpp.properties
+=== 5.8 xmpp.properties
 
 Open Hospital 1.7 and greater versions, come with the xmpp.properties file set as follows by default:
 
@@ -1701,7 +1697,7 @@ Once the XMPP Server is installed, active and running set the two parameters in 
 
 NOTE: An application restart is required to see the modification applied.
 
-==== 5.9.1 OpenFire Settings
+==== 5.8.1 OpenFire Settings
 
 The XMPP module needs some knowledge about XMPP protocol and how an XMPP server works.
 
@@ -1723,10 +1719,10 @@ Please follow these settings:
 . Add new users automatically created from OH to the "OH" group
 . You may consider using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
-=== 5.10 Bundles
+=== 5.9 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
-<<language,LANGUAGE>> chapter, Open Hospital 1.7 and later versions, comes with different available languages in the folder *bundles/* within the package file:
+<<language,LANGUAGE>> chapter, Open Hospital comes with different available languages in the folder *bundles/* within the package file:
 
 *language_XY.properties*
 
@@ -1736,7 +1732,7 @@ These files are property files (a text file), which contains multiple *key = val
 
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
-==== 5.10.1 New Translations
+==== 5.9.1 New Translations
 
 To create a new translation, one can simply copy the English file, rename it with the new country code in
 place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
