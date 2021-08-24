@@ -59,15 +59,13 @@ Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of O
 
 The software acts as a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software, the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
 
-The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder mysql/ within the .zip file folders.
+The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder sql/ within the .zip file folders.
 
 The classic installation schema in a regular wired LAN network is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
-
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
@@ -85,35 +83,43 @@ For the Open Hospital installation on every client, it is sufficient to copy and
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
+==== 3.1.1 Prerequisites - Software compatibility matrix
+
+Before starting, checke the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
+include::./oh_software_compatibility_matrix.adoc[]
+
+
 [#jre]
-==== 3.1.1 Java Runtime Environment
+==== 3.1.2 Java Runtime Environment
 
 Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment.
 
 For instance, on a Microsoft Windows® system, you have to download and execute a setup file, while on Linux based systems you have to type only one command in a terminal.
 
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
+NOTE: See Software Compatibility Matrix in order to identify the correct JAVA version.
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitor.
 
 [#mysql-server]
-==== 3.1.2 MySQL Server and Open Hospital DB
+==== 3.1.3 Database server configuration
 
-Depending on the operating system you have, there are several pieces of software to download to install and manage a MySQL server. In most cases one downloads a standard installation file of the software, paying attention to configuration options during the installation process.
+Depending on the operating system you have, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
 For instance, on a Microsoft Windows® system, you will have MySQL Workbench® as a client, while in Linux based systems you may have MySQL Administrator and MySQL Query Browser to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
 The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
 
-NOTE: The DB creation and the software itself are only tested with MySQL Server 5.7.x. Any other version may have problems during the DB creation process.
+NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB / MySQL version.
 
-===== 3.1.2.1 MySQL Server installation
+NOTE: Starting with Open Hospital 1.11, MariaDB is the default choice.
+
+===== 3.1.3.1 MySQL - Server installation
 
 Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://www.mysql.com/downloads/] and installationfootnote:[https://dev.mysql.com/doc/] information as you continue reading this document.
 
 Generally, the main aspects the Administrator has to pay attention to are:
 
-* *on a Linux machine*: during the installation it will ask for a “root” password; it is very important to choose it carefully and to keep it safely in an installation document. If the password is not prompted for during installation an empty password will be automatically set for the root user.
+* *on a Linux machine*: during the installation it will ask for a “root” password; it is very important to choose it carefully and to keep it safe. If the password is not prompted for during installation an empty password will be automatically set for the root user.
 * *on a Windows machine*: during the installation it will ask for several configuration options; the best configuration is (it options could differ a bit):
 
 * *Custom Installation*
@@ -121,12 +127,12 @@ Generally, the main aspects the Administrator has to pay attention to are:
 * Select *Detailed Configuration*
 * Select *Server Machine*
 * Select *Multifunctional Database*
-* Set a minimum of concurrent connection as the number of clients multiplied by two
+* Set the number of concurrent connections to twice the number of expected clients
 * Select *Enable TCP/IP Networking* and write down the *Port Number* in an installation document
 * Select UTF8 as the default charset for *Best Support For Multilingualism*
 * Select *Install As Window Service*
 * Select *Include Bin Directory In Windows PATH*
-* Select *Modify Security Settings*, choose the *root password*, and write it down in an installation document
+* Select *Modify Security Settings*, choose the *root password*, and keep it safe
 
 Once the installation has been completed, the next stop is the Open Hospital DB creation. To check if the server is active and running,  open a terminal window (command prompt) and type the following command:
 
@@ -142,9 +148,52 @@ The prompt means there is a successful connection to the MySQL Server instance t
 
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case you can add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
-====== 3.1.2.1.1 Networking
 
-On Linux systems, MySQL server must be configured to enable networking; this can be achieved by changing MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
+===== 3.1.3.2 MySQL - Configuration
+
+Please use the following configuration values for MySQL server in my.cnf config file. Values can be adjusted and adapted to the hardware resources available.
+
+----
+#
+# Configuration
+#
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+max_allowed_packet = DICOM_SIZE
+skip-external-locking
+key_buffer_size = 16M
+thread_cache_size = 64
+lower_case_table_names = 1
+table_open_cache = 64
+tmp_table_size = 16M
+read_buffer_size = 256K
+read_rnd_buffer_size = 512K
+join_buffer_size = 2M
+sort_buffer_size = 2M
+myisam_sort_buffer_size = 8M
+
+[mysqldump]
+quick
+max_allowed_packet = 16M
+
+[mysql]
+no-auto-rehash
+
+[isamchk]
+key_buffer = 16M
+sort_buffer_size = 16M
+read_buffer = 2M
+write_buffer = 2M
+
+[myisamchk]
+key_buffer = 16M
+sort_buffer_size = 16M
+read_buffer = 2M
+write_buffer = 2M
+----
+
+===== 3.1.3.3 MySQL - Networking
+
+If deployed in a client-server, networked configuration, MySQL server must be configured to listen on the network interface connected to the local LAN; this can be achieved by changing MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
 
 Change:
 
@@ -164,54 +213,24 @@ To:
 #bind-address               = 127.0.0.1
 ----
 
-====== 3.1.2.1.2 Performance
+In this way the database server will be listening on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
 
-Improved performance in a production environment can be achieved by changing the following parameters in the MySQL config file, “my.cnf”:
+==== 3.1.4 Open Hospital - Database creation
 
-Change:
-
-[source,properties]
-----
-#
-# Query Cache Configuration
-#
-query-cache_limit = 1M
-query-cache_size = 16M
-----
-
-To:
-
-[source,properties]
-----
-#
-# Query Cache Configuration
-#
-query-cache_limit = 11M
-query-cache_size = 256M
-----
-
-====== 3.1.2.1.3 Table name cases ([.underline]#before creating the DB#)
-
-MySQL is case-sensitive on Unix and case-insensitive on Microsoft systems, so scripts that work on Windows may not work on Linux depending on how carefully they were coded.
-
-For this reason, if the DB is shared between different operating systems it is recommended to change the following parameter in the MySQL config file “my.cnf” of each system, as in https://dev.mysql.com/doc/refman/5.7/en/identifier-case-sensitivity.html
-
-===== 3.1.2.2 Create Open Hospital DB
-
-To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder mysql/.
+To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
 
 If the *Include Bin Directory In Windows PATH* is selected during the installation process (in Linux is always true) we can run the MySQL client everywhere in our system, otherwise, go back to that chapter and read the *NOTE* in the box.
 
-Open a terminal in the folder mysql/ (e.g.):
+Open a terminal and navigate to the sql/ folder e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
 
-D:\OpenHospital_1_11_0\mysql>
+D:\OpenHospital_1_11_0\sql>
 ----
 
-and run the following command (e.g.):
+and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
@@ -219,27 +238,25 @@ D:\OpenHospital_1_11_0\mysq> mysql –u root -p
 Enter password: *****
 ----
 
-Using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
+using the ‘root’ password you have chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
 
 [source,shell]
 ----
 mysql>
 ----
 
-Next launch the main script “create_all_en.sql” with the command:
+Create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
-mysql> source create_all_en.sql
+mysql>  CREATE DATABASE isf; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123'; 
+        CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123'; GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'localhost'; \
+        GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'%';
+mysql>  FLUSH PRIVILEGES;
+
 ----
 
-NOTE: You can install the data with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
-
-NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
-client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
-
-The server processes the create script and after some time it is ready again for a new prompt. At this point, the DB has been
-created and it can be checked with the command:
+In order to check if the database has been correctly created, you can use the command:
 
 [source,shell]
 ----
@@ -253,8 +270,19 @@ mysql> show databases;
 | performance_schema |
 +--------------------+
 ----
+You are now ready to launch the main SQL script “create_all_en.sql” with the command:
 
-The script created the DB populated it with some default data, and created the “isf” user with password “isf123”.
+[source,shell]
+----
+mysql> source create_all_en.sql
+----
+
+NOTE: You can install the data with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
+
+NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears you need to enable the "local infile" command on the
+client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
+
+The script creates the OH databasea structure and populates it with default data.
 
 The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password must be changed immediately with the command:
 
@@ -276,21 +304,21 @@ mysql>FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ----
 
-When we are through, we exit the MySQL client command line with the command:
+NOTE: Remember to set the updated database password also in the Open Hospital configuration files.
 
 [source,shell]
 ----
 mysql>quit;
 ----
 
-==== 3.1.3 Configure Open Hospital
+==== 3.1.5 Open Hospital - Configuration
 
-Open Hospital comes with several configuration files called “properties files”. The one we need to modify to let Open Hospital find its database is the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
+Open Hospital comes with several configuration files called “properties files”. In order to let Open Hospital find its database, we have to modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
 We have to specify:
 
-* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the IP address (e.g., 192.168.1.100)
-* the “isf” user *password*, if changed from “isf123”
+* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
+* the “isf” user *password*
 * the MySQL Server *Port Number*, if changed from “3306”
 
 NOTE: These settings are required for every Open Hospital copy, that is to say, on every client.
@@ -298,12 +326,12 @@ NOTE: These settings are required for every Open Hospital copy, that is to say, 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-==== 3.1.4 Run Open Hospital
+==== 3.1.6 Open Hospital - Startup and run
 
 We are ready now to run the Open Hospital software by executing the proper launcher:
 
-* *on a Linux machine*: startup.sh
-* *on a Windows machine*: startup.cmd
+* *on a Linux machine*: oh.sh -C (Client mode)
+* *on a Windows machine*: oh.bat (Select Client mode)
 
 If everything is ok you should see the Open Hospital main splash screen:
 
@@ -317,7 +345,7 @@ You may create a shortcut (link) to the executable script on the Desktop, the Pr
 
 image:image100.png[oh.ico,width=32,height=32]
 
-=== 3.2 Portable Open Hospital
+=== 3.2 Open Hospital - Portable
 
 Open Hospital is also distributed in a portable format.
 
@@ -325,10 +353,8 @@ Since Open Hospital is a Java software program, it is portable by definition. Th
 
 Since the JRE and MySQL are not platform-independent and come in different versions depending on the platform, we have:
 
-* *Portable Open Hospital for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
-* *Portable Open Hospital for Windows* platforms (embedding Java JRE and MySQL for Windows)
-
-NOTE: The minimum Java requirement is Java8 or greater (1.8 or greater).
+* *Open Hospital portable for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
+* *Open Hospital portable for Windows* platforms (embedding Java JRE and MySQL for Windows)
 
 TIP: If you see the application small-scaled, probably you are using a high-dpi display, in such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this kind of monitors.
 
@@ -337,14 +363,17 @@ Once the required version is downloaded, you may start it by launching the relat
 * *oh.sh* in the Linux version
 * *oh.bat* in the Windows version
 
-No other configuration is needed. On Linux, additional options can be shown by executing *oh.sh -h*.
+No other configuration is needed. Additional options can be shown by executing:
 
-NOTE: If you want to use a Portable Open Hospital for Linux from a USB key you need to make sure that the file permissions in the
+* on Linux: *oh.sh -h*
+* on Windows: *oh.bat -h*
+
+NOTE: If you want to use a Open Hospital portable for Linux from a USB key you need to make sure that the file permissions in the
 archive remain unchanged once extracted, otherwise you will not be able to start the launcher or use the application in an
 appropriate manner.
 
-NOTE: It is important to understand that the portable version is meant to be a trial, that is, to have a look at the software
-or used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
+NOTE: It is important to understand that the portable version is meant to be a trial, that is, to try or test the software
+or to be used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
 architecture, the full installation version is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
@@ -435,9 +464,9 @@ In the Open Hospital zip file you will find the following folder tree structure 
 ** startup.cmd *Launcher for Windows*
 ** startup.sh *Launcher for Linux*
 
-=== 4.2 Folder tree in Portable Open Hospital for Linux (32 and 64bit)
+=== 4.2 Folder tree in Open Hospital portable for Linux (32 and 64bit)
 
-In Portable Open Hospital for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
+In Open Hospital portable for Linux you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
 * *OpenHospital-_<version>_-linux_i686-portable*/ or *OpenHospital-_<version>_-linux_x86_64-portable*/
 ** data/ - folder for DB, DICOM files and logs
@@ -449,13 +478,13 @@ In Portable Open Hospital for Linux you will find the following folder tree stru
 ** CHANGELOG - Last version brief changelog
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
-** *oh.sh Launcher for Portable-Linux*
+** *oh.sh Launcher for OH-Linux*
 ** POH-linux-changelog.md (changelog portable-linux)
 ** POH-README.md (README portable-linux)
 
-=== 4.3 Folder tree in Portable Open Hospital for Windows (32bit)
+=== 4.3 Folder tree in Open Hospital portable for Windows (32bit)
 
-In Portable Open Hospital for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
+In Open Hospital portable for Windows you will find the following folder tree structure in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
 * *OpenHospital-_<version>_-win32-portable*/
 ** data/ - folder for DB, DICOM files and logs
@@ -1760,7 +1789,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into your Eclipse instance._
 
-Assuming Eclipse EE, MySQL 5.7.x, and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+Assuming Eclipse EE, MySQL/MariaDB  and the Java Virtual Machine 1.8 or higher (Java8 or greater)
 are already installed on the computer, this chapter will focus on cloning version 1.11.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
@@ -1928,13 +1957,13 @@ Thus the update process is as follows:
 
 . Close the program if it is still running
 . Backup your current DB for safety (see <<backup-restore,Backup & Restore>>)
-. Open a terminal in the folder mysql/ (e.g.):
+. Open a terminal in the folder sql/ (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\mysql
+C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
 
-D:\OpenHospital_1_11_0\mysql>
+D:\OpenHospital_1_11_0\sql>
 ----
 
 [start=4]
@@ -1942,7 +1971,7 @@ D:\OpenHospital_1_11_0\mysql>
 
 [source,shell]
 ----
-D:\OpenHospital_1_11_0\mysql> mysql –u root -p
+D:\OpenHospital_1_11_0\sql> mysql –u root -p
 
 Enter password: ****
 ----
@@ -1985,7 +2014,7 @@ Remember to keep files that have been changed, especially any changes to the con
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 . Start the program and check from log files (OpenHospital_1_8_0/logs) to ensure the new version running and has no error messages.
 
-=== 8.2 Update Open Hospital “portable”
+=== 8.2 Update Open Hospital - portable
 
 NOTE: Open Hospital portable is not meant to be used in a production environment so, if you want to update a portable version to keep the previous data, we strongly suggest switching to a full installation as follows:
 
