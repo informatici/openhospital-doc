@@ -354,7 +354,7 @@ When all the data is entered, the *Buttons panel* has the following choices:
 
 ===== 6.1.2.2 Modify an Existing Pharmaceutical ([.underline]##E##dit)
 
-After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. You can modify all data except for the “Type” value.
+After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. One can modify all the data except for the “Type” value.
 
 image:image19.png[Edit Medical]
 
@@ -728,14 +728,14 @@ Data that identify laboratory exams are the following:
 * *Exam*: the description of the exam
 * *Result*: the result of the exam
 
-To access the other functions of the laboratory in the *Buttons panel* you have the following choices:
+To access the other functions of the laboratory in the *Buttons panel* the following choices are available:
 
-* *[.underline]##N##ew*: enter a new laboratory exam
-* *[.underline]##E##dit*: modify an existing laboratory exam
-* *[.underline]##D##elete*: delete an existing laboratory exam
-* *[.underline]##P##rint Table*: print the list of laboratory exams shown in the table
-* *Print [.underline]##L##abel*: print the labels of the samples for laboratory exams
-* *[.underline]##C##lose*: close the window and return to the Menu
+* *[.underline]##N##ew*: enter a new laboratory exam.
+* *[.underline]##E##dit*: modify an existing laboratory exam.
+* *[.underline]##D##elete*: delete an existing laboratory exam.
+* *[.underline]##P##rint Table*: print the list of laboratory exams shown in the table.
+* *Print [.underline]##L##abel*: print the labels of the samples for laboratory exams.
+* *[.underline]##C##lose*: close the window and return to the main menu.
 
 Furthermore, a search function (*[.underline]##S##earch)* is available using the *Selection panel* on the left of the window.
 
@@ -749,119 +749,116 @@ image:image43b.png[Laboratory Browser after search,width=528,height=339]
 
 Data about exams can be selected by choosing specific fields among the following:
 
-* *Select an exam*: Values admitted are:
+* *Select an exam*: Valid values are:
 
-** ALL, exams of all types are shown
-** Single exam, only the exams of the selected type are shown
+** _All_: exams of all types are shown
+** Pick a single exam form the list; only exams of the selected type are shown
 
+* *Date*: “Date From” and “Date To” only shows the exams executed within the requested time period
 
-* *Date*: “Date From” and “Date To” allow the selection of all the exams executed in the requested period
-
-After the selection press, the *[.underline]##S##earch* button; the system will show on the table results of the search applying the criteria requested.
+After the selection press, the *[.underline]##S##earch* button; the system shows in the table results of the search applying the criteria requested.
 
 [#create-a-new-laboratory-exam]
 ==== 7.2.2 Create a New Laboratory Exam ([.underline]##N##ew)
 
 Press the *[.underline]##N##ew* button in the *_Laboratory Browser_* window: The *_New Laboratory Exam_* window shown below appears:
 
-image:image44.png[New Laboratory Exam,width=395,height=433]
+image:image44.png[New Laboratory Exam]
 
 To record the visit, enter the following fields:
 
-* *Data*: date of the exam, the application defaults to the current date
-* *Material*: choose from the available values the material used in the exam
-* *Exam*: choose the exam
+* *Date*: the date of the exam, the application defaults to the current date.
+* *Material*: choose from the available values the material used in the exam.
+* *Exam*: choose the exam.
 * *Patient In*: it activates itself if the selected patient is currently admitted, it is possible to change it if needed.
-* *Select a patient*: select the patient that is examined. The field is not mandatory and therefore you can input an exam by typing the patient’s information in the following fields.
-* *Name*: first and last name of the patient _(automatically filled if a patient is selected)_
-* *Age*: age of the patient (range 0-200) _(automatically filled if a patient is selected)_
-* *Sex*: value M for male, value F for female _(automatically filled if a patient is selected)_
-* *Note*: are for free from notes and/or description
-* *Result*: according to the chosen exam you will see in this panel a range of available results to select
+* *Select a patient*: select the patient that is examined. The field is not mandatory as the patient's data be input into in the following fields.
+* *Name*: the first and last name of the patient _(automatically filled if a patient is selected)_.
+* *Age*: the age of the patient (range 0-200) _(automatically filled if a patient is selected)_.
+* *Sex*: the value _M_ for male or the value _F_ for female _(automatically filled if a patient is selected)_.
+* *Note*: a free form area for notes and/or description.
+* *Result*: based on the exam chosen the panel is populated with all available results for selection.
 
 ===== 7.2.2.1 Results
 
 In Open Hospital there are two kinds of possible results for each exam:
 
-* *Single Result*: where you can select only one result among a list (Procedure 1)
-* *Multiple Results*: where you may specify many results among a list of positive/negative values (Procedure 2)
+* *Single Result*: selection of a single result from a list (Procedure 1)
+* *Multiple Results*: selection of many results from a list of positive/negative values (Procedure 2)
 * One can also manually input the precise result (Procedure 3)
 
 image:image45.png[New Laboratory Exam Procedure 1,width=309,height=340]image:image46.png[New Laboratory Exam Procedure 2,width=309,height=340]image:image46b.png[New Laboratory Exam Procedure 3,width=309,height=340]
 
-NOTE: Exams, Exam Type, and Results as well, can be defined by the Administrator. Ask your Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Exams, Exam Type, and Results can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When the data is specified, the *Buttons panel* provides the following choices:
 
-* *[.underline]##O##K*: confirm and record the data
-* *[.underline]##P##rint*: print the result
-* *[.underline]##C##ancel*: close the window and return to the *_Laboratory Browser_* window
+* *[.underline]##O##K*: confirm and record the data.
+* *[.underline]##P##rint*: print the result.
+* *[.underline]##C##ancel*: close the window and return to the *_Laboratory Browser_* window.
 
 ==== 7.2.3 Modify a Laboratory Exam ([.underline]##E##dit)
 
-To modify an exam, you have to highlight it first in the *_Laboratory Browser_* window. Once highlighted,
-press the *[.underline]##E##dit* button to enter the *_Edit Laboratory Exam_* window shown below. Now the record is available for changes. With this function you can modify all data of the exam and you can input the result of the exam too.
+To modify an exam, highlight the exam in the *_Laboratory Browser_* window. Once highlighted,
+press the *[.underline]##E##dit* button to enter the *_Edit Laboratory Exam_* window shown below. Now the record is available for changes. This function allows for editing all the data for the exam including setting the result of the exam.
 
-image:image47.png[Edit Laboratory Exam,width=394,height=432]
+image:image47.png[Edit Laboratory Exam]
 
 ==== 7.2.4 Delete Laboratory Exam ([.underline]##D##elete)
 
-To delete an exam, you have to highlight it first in the *_Laboratory Browser_* window. Once highlighted,
-press the *[.underline]##D##elete* button to see the confirmation window shown below.
+To delete an exam, highlight the exam in the *_Laboratory Browser_* window. Once highlighted,
+press the *[.underline]##D##elete* button and a confirmation window similar to the one shown below appears:
 
-image:image48.png[Delete Laboratory Exam,width=240,height=174]
+image:image48.png[Delete Laboratory Exam]
 
 === 7.3 Laboratory Extended
 
-The Lab functionality can be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask your Administrator how to do it.
+The Laboratory functionality can be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask the Administrator how to do it.
 
 ==== 7.3.1 Extended Laboratory Browsing
 
-The new window will appear like the following:
+With the extended functionality enabled the new window appears like the following:
 
 image:image49.png[Laboratory Browser,width=642,height=309]
 
-The only difference is the new column about the name of the patient because it is compulsory in this mode.
+The only difference is the new column containing the name of the patient because it is required in this mode.
 
-==== 7.3.2 New Laboratory Exam
+==== 7.3.2 New Laboratory Exam ([.underline]##N##ew)
 
 The *_New Laboratory Exam_* window is now strictly related to the patient, that is to say that the exam must be assigned to a patient previously registered in the system.
 
-Before closing the window with the exam result you must have selected a patient from the list; the fields below will give you a slight patient details summary.
+Before closing the window with the exam result one must select a patient from the list; the fields in the *Patient's Data* panel provide some simple patient details.
 
-A search field can be used to fast search the patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
+A search field can be used to search for a patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
 
 The *_New Laboratory Exam_* window appears like the following:
 
-image:image50.png[New Laboratory Exam,width=531,height=530]
+image:image50.png[New Patient Exam]
 
-The *Patient’s Data* panel cannot be modified except for the *Note* field and only shows the information related to the selected Patient.
+The *Patient’s Data* panel cannot be modified except for the *Note* field and only shows the information related to the selected patient.
 
 [#laboratory-multiple-insert]
 ==== 7.3.3 Laboratory Multiple Insert
 
-One can extend the _New Laboratory_ functionality by changing the _LABMULTIPLEINSERT_ flag in the configuration file. The flag _LABEXTENDED_ has to be enabled too. Ask your Administrator how to do it.
+One can extend the _New Laboratory_ functionality by changing the _LABMULTIPLEINSERT_ flag in the configuration file. The flag _LABEXTENDED_ has to be enabled too. Ask the Administrator how to do it.
 
 The New Laboratory Multiple allows multiple exam insertion for each patient, avoiding repeating the new laboratory exam procedure (*[.underline]##N##ew*) for every exam for the same patient.
 
 ===== 7.3.3.1 New Patient Exams ([.underline]##N##ew)
 
-Press the *[.underline]##N##ew* button in the *_Laboratory Browser_* window: The *_New Patient Exams_* window shown below appears.
+Press the *[.underline]##N##ew* button in the *_Laboratory Browser_* window: The *_New Patient Exams_* window shown below appears (including sample exam data):
 
-image:image51.png[New Patient Exams,width=437,height=414]
+image:image51.png[New Patient Exams]
 
 To record the visit, enter the following fields:
 
-* *Date*: date of the exam, the application defaults to the current date
-* *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button
-* *OPD/IPD*: the window automatically will check if the patient is admitted or not in the hospital; anyway, is possible to change it if needed
-* *[.underline]##E##xam*: choose the exam; a first window will ask you the material, then a second one the exam, finally a third one will ask you the result if the exam allows only a single result, otherwise the list of multiple results will be shown in the right panel, together with the chosen material.
-* *[.underline]##R##emove*: remove a selected exam
-* *Note*: exam reporting (different for each exam)
+* *Date*: the date of the exam, the application defaults to the current date.
+* *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button.
+* *OPD/IPD*: the window automatically checks if the patient is admitted or not in the hospital; the value can be changed if needed.
+* *[.underline]##E##xam*: choose the exam; a first window will asks for the material, then a second one the exam, finally a third one asks for the result if the exam allows only a single result, otherwise the list of multiple results are shown in the right panel, together with the chosen material.
+* *[.underline]##R##emove*: remove a selected exam.
+* *Note*: additional exam reporting (different for each exam).
 
-NOTE: At any time, before pressing *[.underline]##O##K*, you can modify every exam by clicking it on the list and changing material,
-results and notes in the relative panels.
+NOTE: At any time, before pressing *[.underline]##O##K*, modifications can be made to every exam by clicking on it in the list and changing material, results or notes in the related panels.
 
 <<<
 
@@ -869,9 +866,9 @@ results and notes in the relative panels.
 
 === 8.1 Main Characteristics
 
-Accounting is the function that you have to use to manage the billing process. You can enter the bill of pharmaceuticals, operations, exams or other costs of a patient. For the time being the billing process is not linked with other functions of *Open Hospital* and therefore the application does not propose the billing item based on the therapy followed by the patient: [.underline]#the user has to input all the items.#
+Accounting is the function that is used to manage the billing process. One can enter a bill for pharmaceuticals, operations, exams, and other costs of a patient. Currently the billing process is not linked with other functions of *Open Hospital* and therefore the application does not generate the accompanying billing information based on the therapy followed by the patient: [.underline]#the billing information must be input for all items manually.#
 
-The accounting function furthermore allows to manage the payment of bills (total or partial) and to produce reports.
+In addition, the accounting function supports the management of bill payments (total or partial) and the generation of reports.
 
 .Press the *A[.underline]##c##counting* button or “Alt + C” to open the Accounting submenu
 [frame=none]
@@ -892,88 +889,88 @@ image:image241.png[Patient Bills Management,width=641,height=442]
 
 For each bill the following data are shown in the *Data table*:
 
-* *ID*: the number of the bill (created automatically by the application)
-* *Date*: the date and time of the bill creation
-* *Pat ID*: the patient ID (created automatically by the application at the registration time)
-* *Patient*: the patient name
-* *Amount*: the total amount of the bill
-* *Last payment*: the date and time of the last payment
-* *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid
-* *Balance*: the bill amount not yet paid
+* *ID*: the number of the bill (created automatically by the application).
+* *Date*: the date and time of the bill creation.
+* *Pat ID*: the patient ID (created automatically by the application at the registration time).
+* *Patient*: the patient name.
+* *Amount*: the total amount of the bill.
+* *Last payment*: the date and time of the last payment.
+* *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
+* *Balance*: the bill amount not yet paid.
 
 The following functions are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
 
-* *[.underline]##T##oday*: (button on top of the window) shows in the *Data table* only the bills for the current day
-* *[.underline]##N##ew Bill*: insert a new bill
-* *[.underline]##E##dit Bill*: modify a stored bill if its status is “O” (Open)
-* *[.underline]##D##elete Bill*: delete a stored bill (does not remove the bill but changes the status to “D”)
-* *Recei[.underline]##p##t*: print a bill receipt
-* *[.underline]##R##eport*: print a variety of reports
+* *[.underline]##T##oday*: (button on top of the window) shows in the *Data table* only the bills for the current day.
+* *[.underline]##N##ew Bill*: insert a new bill.
+* *[.underline]##E##dit Bill*: modify a stored bill if its status is “O” (Open).
+* *[.underline]##D##elete Bill*: delete a stored bill (does not remove the bill but changes the status to “D”).
+* *Recei[.underline]##p##t*: print a bill receipt.
+* *[.underline]##R##eport*: print a variety of reports.
 * *[.underline]##C##lose*: exit from *_Patients Bills Management_* and return to the main menu
 
 Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* with following information:
 
-* *First Row*: the *PAID* and *UNPAID* for *Today*
-* *Second Row*: the *PAID* and *UNPAID* for the visualized *Period*
+* *First Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for *Today*
+* *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
 
 [#insert-a-new-bill]
 ==== 8.2.1 Insert a New Bill ([.underline]##N##ew Bill)
 
-You can use the *New Patient Bill* function to register a new bill of a patient.
+One can use the *New Bill* function to generated a new bill for a patient.
 Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
 
-The bill is not saved until you do not confirm it with the *[.underline]##S##ave* function (see description below).
+To record a new bill it must be saved with the *[.underline]##S##ave* function (see description below).
 
-Before entering the description of the function we provide you the description of the contents of the window *_New Patient Bill._*
+Before describing the function of the *_New Patient Bill_* window the components of the window are described.
 
-The *_New Patient Bill_* window is composed of three areas: the *Bill panel* at the top, the *Item panel* in the center, the *Payments panel* at the bottom, and the *Buttons panel* on the right.
+The *_New Patient Bill_* window is composed of four areas: the *Bill panel* at the top, the *Item panel* in the center, the *Payments panel* at the bottom, and the *Buttons panel* on the right.
 
-Bills are composed of items. A billing item is a cost related to either a pharmaceutical or an operation or an exam or other/custom costs.
+Bills are composed of items. A billing item is a cost related to either a pharmaceutical, an operation, an exam, or other/custom costs.
 
 Data shown in the *Bill panel* area are:
 
-* *Date*: it is the date and time of the bill
-* *Patient*: it is the patient associated with the bill
-* *List*: it is the Price List that will be used for this bill +
+* *Date*: the date and time of the bill.
+* *Patient*: the patient associated with the bill.
+* *List*: the Price List that will be used for this bill +
  +
-NOTE: Price Lists can be defined by the Administrator. Ask your Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Price Lists can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
 Data shown in the *Item Panel* area are:
 
-* *Item, Qty, Amount*: they are the description of the bill entry, the selected quantity and the amount; the amount is calculated as the unitary cost of the item multiplied by the quantity;
-* *TOTAL*: it is the total amount of the bill +
+* *ITEM, QTY, AMOUNT*: the descriptions of the bill entry, the selected quantity and the amount; the amount is calculated as the unit cost of the item multiplied by the quantity;
+* *TOTAL*: the total amount of the bill +
  +
-NOTE: Prices, or unitary costs, can be defined by the Administrator. Ask your Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Prices, or unit costs, can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
 Data shown in the *Payments panel* area are:
 
-* *Date*: it is the date and time of the payment
-* *Amount*: it is the amount of the payment
-* *BALANCE*: it is the not yet paid amount of the bill (the difference between the Total (*) and the sum of the payments)
+* *Date*: the date and time of the payment.
+* *Amount*: the amount of the payment.
+* *BALANCE*: the remaining amount to be paid (the difference between the Total (*) and the sum of the payments).
 
-image:image54.png[New Patient Bil,width=484,height=418]
+image:image54.png[New Patient Bill]
 
 To insert a new bill one has to supply the *Date field*. The application defaults to the current date and time but the values can be modified.
 
-Then you have to select a patient. To do it, press the *Find [.underline]##P##atient* button on top of the screen. The *_Patient Selection_* window shown below appears.
+In addition a patient must be selected. To do that, press the *Find [.underline]##P##atient* button on top of the screen. The *_Patient Selection_* window shown below appears.
 
-Once you have selected the patient you can start to enter bill entries of the bill.
+image:image54a.png[Patient Selection]
+
+Once the patient is selected one can start entering bill entries for the bill.
 
 NOTE: A patient can have several pending bills only if the parameter ALLOWMULTIPLEOPENEDBILL is enabled
 (see the Administrator Manual). Otherwise, if the patient has a pending bill, the bill will be recalled to
-edit it. You cannot start a new bill for a patient before closing the previous one.
+edit it. One cannot start a new bill for a patient before closing the previous one.
 
-There are several types of Bill entries. They are identified by the button on the *Buttons panel* on the right of the window; you have the following choices:
+There are several types of Bill entries identified by the buttons in the *Buttons panel* on the right of the window:
 
-* *[.underline]##M##edical*: enter bill entries of pharmaceuticals
-* *[.underline]##O##peration*: enter bill entries of operations
-* *[.underline]##E##xam*: enter bill entries of exams
-* *O[.underline]##t##her*: enter other prices defined in the Price List
-* *C[.underline]##us##tom*: enter custom items defined on the fly
+* *[.underline]##M##edical*: enter bill entries for pharmaceuticals.
+* *[.underline]##O##peration*: enter bill entries for operations.
+* *[.underline]##E##xam*: enter bill entries for exams.
+* *O[.underline]##t##her*: enter other prices defined in the Price List.
+* *C[.underline]##us##tom*: enter custom items defined on the fly.
 
-NOTE: Types can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Types can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
 
 
@@ -981,11 +978,11 @@ NOTE: Types can be defined by the Administrator. Ask your Administrator how to d
 
 We show here how to insert a bill entry for pharmaceutical (*[.underline]##M##edical*); the function to insert a bill entry for operation (*[.underline]##O##peration)* and exam (*[.underline]##E##xam)* is the same with the only difference that for the last two is not required the quantity (the quantity is always 1).
 
-image:image55.png[New Patient Bill,width=543,height=563]
+image:image55.png[New Patient Bill]
 
 To insert a bill entry, press the *[.underline]##M##edical* button. The *_Medical_* window shown below appears.
 
-image:image56.png[Medical,width=410,height=297]
+image:image56.png[Medical]
 
 Using the mouse, you have to highlight the required pharmaceutical (medical).
 
@@ -996,7 +993,7 @@ On the *Buttons panel* of the *_Medical_* window you have the following choices:
 
 If you choose *[.underline]##O##K* the *_c_* window shown below appears and you can select the quantity of pharmaceutical used by the patient.
 
-image:image57.png[Quantity,width=307,height=134]
+image:image57.png[Quantity]
 
 On the *Buttons panel* of the *_Quantity_* window you have the following choices:
 
@@ -1007,7 +1004,7 @@ On the *Buttons panel* of the *_Quantity_* window you have the following choices
 
 To insert a custom bill entry, you have to press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
 
-image:image58.png[Custom Item,width=307,height=134]
+image:image58.png[Custom Item]
 
 In this window you have to enter a description (in the example below is “Number of days of hospitalization”) and then:
 
@@ -1016,7 +1013,7 @@ On the *Buttons panel* of the *_Custom Item_* window you have the following choi
 * *[.underline]##O##K*: go to another *_Custom Item_* window (to enter the quantity, see below)
 * *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any bill entry
 
-image:image59.png[Custom Item Cost,width=307,height=134]
+image:image59.png[Custom Item Cost]
 
 In the *_Custom Item_* window, you have to enter the amount related to the bill entry (in the example above the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
 
@@ -1034,7 +1031,7 @@ To remove a bill entry you have to highlight it in the *_New Patient Bill_* wind
 
 To insert a payment, you have to press the *Pa[.underline]##y##ment* button. The application will show the *_Quantity_* window shown below.
 
-image:image60.png[Payment,width=307,height=134]
+image:image60.png[Payment]
 
 You have to insert the amount of the payment (in the example above is “12” in the local currency, i.e. it is US dollars if the country is the USA).
 
