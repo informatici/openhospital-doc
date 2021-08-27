@@ -41,14 +41,14 @@ This application software consists of the following parts:
 
 This document describes how all the above-mentioned items work and provides guidance as to the correct use of the program.
 
-The reader will not find in this manual the information one needs for the installation of the application software or 
+The reader will not find in this manual the information needed for the installation of the application software or
 for administrative purposes; that information is provided in the _Administrator’s Guide_ supplied with the software.
 
 == 2 Introduction
 
 The program aims to manage, in the simplest manner, the hospital administrative operations like registering patients
 and laboratory analysis, and to produce statistics for the health ministry. This document describes the all
-the information that one needs to use the program properly.
+the information that needed to use the program properly.
 
 == 3 Useful Information Before Reading This User Manual
 
@@ -101,7 +101,7 @@ then the main _menu_ of the Open Hospital application.
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-From a menu one can access other menus or functional areas. In the example below, from the main *_menu_*
+From a menu access to other menus or functional areas is possible. In the example below, from the main *_menu_*
 selecting the *_Settings_* menu leads to another menu of various settings or code types:
 
 image:image6.png[Setting Submenu,width=602,height=370]
@@ -200,7 +200,7 @@ it does not matter in this context). Normally the patient reports at least one v
 during the same visit the Doctor finds other concurrent pathologies thus here possibility is given to record
 until a maximum of three (the first being the only one mandatory). +
 It is possible use filters to find diseases more easily.
-To do so, one needs to enter a text fragment in the search field that is part of the disease name.
+To do so, enter a text fragment in the search field that is part of the disease name.
 The closer the search text comes to the name of the disease being searched, the more precise the search is.
  +
  +
@@ -254,17 +254,17 @@ image:image14.png[OPD Edit Extended,width=1024,height=771]
 The OPD Extended module affords the following additional features:
 
 * Calendar to choose the visit date (1);
-* the OPD number now is visible (2): it is the progressive number per year automatically set by the system, one can change the value as needed. The OPD number *MUST* be unique for each year.
-* Registered Patient (3): before choosing a disease, one *MUST* first select a patient from the drop-down list; to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and thus is a service to the patient by knowing his/her history.
+* the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made as needed. The OPD number *MUST* be unique for each year.
+* Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and thus is a service to the patient by knowing his/her history.
 * Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
 * if a new attendance for this patient is required check the "New Admittance" check box on and proceed normally.
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Admittance" check box.
 * In the case the selected patient needs updates to their personal data, this can be done by clicking on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window appears with the patient personal information available for modification.
-* In case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration one is returned to the OPD window and the new patient is selected.
-* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) one sees:
+* In case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration the program returns to the OPD window and the new patient is selected.
+* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
-** the *Operation* tab after the patient's one (5) to record small surgeries and other interventions (see
+** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see
 <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
 
 <<<
@@ -354,7 +354,7 @@ When all the data is entered, the *Buttons panel* has the following choices:
 
 ===== 6.1.2.2 Modify an Existing Pharmaceutical ([.underline]##E##dit)
 
-After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. One can modify all the data except for the “Type” value.
+After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. All the data except for the “Type” value can be modified or changed.
 
 image:image19.png[Edit Medical]
 
@@ -430,7 +430,7 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 ** a preparation date
 ** a due date
 +
-In this way, one can find which movement refers to the pharmaceuticals that are expiring, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
+In this way, which movement that refers to the pharmaceuticals expiring can be found, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
 * the supplier of the pharmaceutical. This characteristic is needed for charging movements only. This field is empty in other cases.
 
 ==== 6.2.2 Functions of Pharmaceuticals Stock 
@@ -460,7 +460,7 @@ Furthermore, a search function (*[.underline]##F##ilter)* is available using the
 
 image:image24.png[Stock Movements Filter,width=169,height=507]
 
-Using the *_Stock Movement Browser_* search function, one can filter and show on the window useful information such as:
+Using the *_Stock Movement Browser_* search function, the information in the window can be filtered to show:
 
 * how many boxes of pharmaceutical remains in the stock
 * which movements have been made on a specific day
@@ -473,9 +473,9 @@ The *Selection panel* is used to select a group of movements according to specif
 
 Filters refer to three different objects: the *Pharmaceutical*, the *Movement*, and the *Lot Preparation and Lot Due Date*.
 
-As far as a *Pharmaceutical* is concerned, one can choose its:
+For a *Pharmaceutical*, choose either its:
 
-* *_Description_*, the parmaceutical's name
+* *_Description_*, the pharmaceutical's name
 * *_Type_*: Laboratory, Surgery, Chemical and Drugs, etc.
 
 To avoid conflicting filters, only one of the options is available at any one time. So, when the description combo box is active, the other one is not, and vice versa.
@@ -483,15 +483,15 @@ To avoid conflicting filters, only one of the options is available at any one ti
 To quickly find a medical simply type a keyword that is a part of the medical's name into the text field at the top of the pharmaceuticals products combo box and
 press the search button (image:image81.png[Search icon,width=15,height=15]) that follows this text field.
 
-As far as *Movement* is concerned, one can choose its:
+For a *Movement*, choose either its:
 
 * *_Type_*: specifies if it is a charge or a discharge type. If the discharge option is selected, then the ward combo box is enabled. The ward combo box allows finding any discharging movements that refer to a specific ward.
 * *_Date_*: specified the data range for the search; between the ‘Date From’ and ‘Date To’ values. The date tools consist of three blank areas, which (from left to right) refer to day, month and year. As a value is inserted into a blank area, moving to the next area is accomplished by using the “Tab” key on the keyboard. When the window first appears the date range is set to the previous week by default.
 
-Finally, as far as *Lot Preparation Date* and *Lot Due Date* one can search movements that refer to specific lots by inserting:
+Finally, for *Lot Preparation Date* and *Lot Due Date* movements that refer to specific lots can be found by inserting:
 
-* the lot preparation date: choose a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
-* the due date; it behaves like the lot preparation tool and the movement date tool.
+* the _lot preparation date_: a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
+* the _due date_; behaves similar to the lot preparation tool and the movement date tool
 
 Each filter can be combined with another, allowing for many possibilities.
 
@@ -541,11 +541,11 @@ Then click *[.underline]##O##K* to insert the medical information as a line in t
 
 Finally click the *[.underline]##S##ave* button to save the charge movement.
 
-NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_IN in the configuration
+NOTE: The Lot definition can be set as automatic by changing the AUTOMATICLOT_IN flag in the configuration
 file, so every new charging movement automatically creates a new lot. Regardless of the setting,
 the Expiring Date must always be provided. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
-NOTE: One can avoid managing the cost of medicals by setting the LOTWITHCOST to _no_. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: In order to avoid managing the cost of medicals set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
 ===== 6.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
@@ -701,7 +701,7 @@ Before pressing the *[.underline]##O##K* button, insert as many Medicals as need
 
 === 7.1 Main Characteristics 
 
-With the Laboratory’s features one can manage the laboratory exams.
+The Laboratory features is used to manage the laboratory exams.
 
 .Press the *[.underline]##L##aboratory* button or “Alt + L”.
 [#default-main-menu-7]
@@ -784,7 +784,7 @@ In Open Hospital there are two kinds of possible results for each exam:
 
 * *Single Result*: selection of a single result from a list (Procedure 1)
 * *Multiple Results*: selection of many results from a list of positive/negative values (Procedure 2)
-* One can also manually input the precise result (Procedure 3)
+* Or manually inputting the precise result (Procedure 3)
 
 image:image45.png[New Laboratory Exam Procedure 1,width=309,height=340]image:image46.png[New Laboratory Exam Procedure 2,width=309,height=340]image:image46b.png[New Laboratory Exam Procedure 3,width=309,height=340]
 
@@ -826,7 +826,7 @@ The only difference is the new column containing the name of the patient because
 
 The *_New Laboratory Exam_* window is now strictly related to the patient, that is to say that the exam must be assigned to a patient previously registered in the system.
 
-Before closing the window with the exam result one must select a patient from the list; the fields in the *Patient's Data* panel provide some simple patient details.
+Before closing the window with the exam result a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
 
 A search field can be used to search for a patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
 
@@ -854,7 +854,7 @@ To record the visit, enter the following fields:
 * *Date*: the date of the exam, the application defaults to the current date.
 * *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button.
 * *OPD/IPD*: the window automatically checks if the patient is admitted or not in the hospital; the value can be changed if needed.
-* *[.underline]##E##xam*: choose the exam; a first window will asks for the material, then a second one the exam, finally a third one asks for the result if the exam allows only a single result, otherwise the list of multiple results are shown in the right panel, together with the chosen material.
+* *[.underline]##E##xam*: choose the exam; a first window will asks for the material, then a second window asks for the exam, finally a third window asks for the result if the exam allows only a single result, otherwise the list of multiple results are shown in the right panel, together with the chosen material.
 * *[.underline]##R##emove*: remove a selected exam.
 * *Note*: additional exam reporting (different for each exam).
 
@@ -866,7 +866,7 @@ NOTE: At any time, before pressing *[.underline]##O##K*, modifications can be ma
 
 === 8.1 Main Characteristics
 
-Accounting is the function that is used to manage the billing process. One can enter a bill for pharmaceuticals, operations, exams, and other costs of a patient. Currently the billing process is not linked with other functions of *Open Hospital* and therefore the application does not generate the accompanying billing information based on the therapy followed by the patient: [.underline]#the billing information must be input for all items manually.#
+Accounting is the function that is used to manage the billing process where bills for pharmaceuticals, operations, exams, and other costs of a patient are created and managed. Currently the billing process is not linked with other functions of *Open Hospital* and therefore the application does not generate the accompanying billing information based on the therapy followed by the patient: [.underline]#the billing information must be input for all items manually.#
 
 In addition, the accounting function supports the management of bill payments (total or partial) and the generation of reports.
 
@@ -950,19 +950,19 @@ Data shown in the *Payments panel* area are:
 
 image:image54.png[New Patient Bill]
 
-To insert a new bill one has to supply the *Date field*. The application defaults to the current date and time but the values can be modified.
+To insert a new bill *Date field* value is required. The application defaults to the current date and time but the values can be modified.
 
 In addition a patient must be selected. To do that, press the *Find [.underline]##P##atient* button on top of the screen. The *_Patient Selection_* window shown below appears.
 
 image:image54a.png[Patient Selection]
 
-Once the patient is selected one can start entering bill entries for the bill.
+Once the patient is selected start entering the data related the bill.
 
 NOTE: A patient can have several pending bills only if the parameter ALLOWMULTIPLEOPENEDBILL is enabled
 (see the Administrator Manual). Otherwise, if the patient has a pending bill, the bill will be recalled to
-edit it. One cannot start a new bill for a patient before closing the previous one.
+edit it. A new bill cannot be started for a patient before closing the previous bill.
 
-There are several types of Bill entries identified by the buttons in the *Buttons panel* on the right of the window:
+There are several types of bill categories (or types) identified by the buttons in the *Buttons panel* on the right of the window:
 
 * *[.underline]##M##edical*: enter bill entries for pharmaceuticals.
 * *[.underline]##O##peration*: enter bill entries for operations.
@@ -1327,7 +1327,7 @@ Doing the selection, data about patients can be selected by choosing specific fi
 ** *Admitted*: only patients admitted are included in the selection
 ** *Not Admitted*: only patients not admitted are included in the selection
 
-* *Ward.* You can select one or more wards:
+* *Ward.* Select one or more wards:
 ** *Children Ward*
 ** *Female Ward*
 ** *Male Ward*
@@ -1530,7 +1530,7 @@ image:image93.png[Patient admitted,width=642,height=167]
 [#patient-examination]
 ==== 10.5.2 Patient Examination
 
-During a patient examination one can register patient general parameters such as weight, height, arterial pressure, heart rate, temperature, saturation, respiratory rate, and auscultation. Open Hospital calculates the patient BMI automatically.
+During a patient examination patient general parameters such as weight, height, arterial pressure, heart rate, temperature, saturation, respiratory rate, and auscultation can be recorded. Open Hospital calculates the patient BMI automatically.
 
 You have two ways to access the module. In the *_Patient Browser_* window, highlight the patient
 and click *E[.underline]##x##amination.* Or in the *_New Admission_* or *_Edit Admission Record_* window,
@@ -1651,7 +1651,7 @@ If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask your Admi
 
 === 10.7 Bill ([.underline]##B##ill)
 
-The button *[.underline]##B##ill* in the *_Patient Browser_* window allows one to start a bill by selecting the related patient first (see
+The button *[.underline]##B##ill* in the *_Patient Browser_* window is used to start a bill for a selected patient (see
 <<insert-a-new-bill,Insert a new bill>> for more information).
 
 === 10.8 Manage Patient Historical Data ([.underline]##D##ata)
@@ -2126,7 +2126,7 @@ Open Hospital currently only has these two reports:
 
 === 12.2 Reports
 
-By pressing *[underline]##R##eports* from the main menu, one accesses the *_Reports_* menu. From this menu the following typese of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
+By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu the following typese of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
 
 image:image127.png[Reports submenu,width=642,height=323]
 
@@ -2221,7 +2221,7 @@ image:image135.png[Communication Stock alert for Allan,width=377,height=287]
 
 === 13.5 Report Sharing
 
-As mentioned previously, with the communication module one can share events with other users.
+As mentioned previously, with the communication module it is possible to share events with other users.
 
 In the *_Report Launcher_* window, we will see a new box at the bottom, as shown below:
 
@@ -2276,7 +2276,7 @@ Once you have pressed the *[.underline]##T##ypes* button on the *_Settings_* men
 |image:image0_DefaultGeneralDataMenu.png[Settings SubMenu,width=185,height=527]|image:image0_DefaultGeneralDataTypesMenu.png[Settings Types Menu,width=235,height=707]
 |===
 
-From the *_Types_* menu one can define and manage the following types or functions:
+From the *_Types_* menu the definition and management of the following types or functions is possible:
 
 * *[.underline]##A##dmission Type*: the way the patient is admitted to the hospital +
 _i.e. Ambulance, Self, Referral, etc._
@@ -2624,7 +2624,7 @@ To insert a new Ward, you must provide the following required inputs:
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
 
-NOTE: Using this function one can define wards with 0 (zero) beds but with a pharmacy.
+NOTE: Using this function the definition of wards with 0 (zero) beds but with a pharmacy is possible.
 This allows for "logical” departments (rather than physical) to manage pharmacy movements.
 
 The Wards defined are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
@@ -3006,7 +3006,7 @@ In editing mode, you cannot change the type (group) and the username (the fields
 [#worksheet]
 == 15 Worksheet ([.underline]##W##orksheet)
 
-The *Worksheet* function allows one to manage and print the list of appointments scheduled.
+The *Worksheet* function allows the management and printing of the list of appointments scheduled.
 
 .Click the mouse on the button or press "Alt + W" to enter the *Worksheet* page:
 
