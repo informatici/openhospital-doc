@@ -984,61 +984,61 @@ To insert a bill entry, press the *[.underline]##M##edical* button. The *_Medica
 
 image:image56.png[Medical]
 
-Using the mouse, you have to highlight the required pharmaceutical (medical).
+Using the mouse, highlight the required pharmaceutical (medical).
 
-On the *Buttons panel* of the *_Medical_* window you have the following choices:
+The *Buttons panel* of the *_Medical_* window has the following choices:
 
 * *[.underline]##O##K*: select the highlighted pharmaceutical
 * *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without selecting any pharmaceutical
 
-If you choose *[.underline]##O##K* the *_c_* window shown below appears and you can select the quantity of pharmaceutical used by the patient.
+If *[.underline]##O##K* is selected the *_Quantity_* window shown below appears where the quantity of the pharmaceutical used by the patient is entered.
 
 image:image57.png[Quantity]
 
-On the *Buttons panel* of the *_Quantity_* window you have the following choices:
+The *Buttons panel* of the *_Quantity_* window has the following choices:
 
-* *[.underline]##O##K*: select the highlighted pharmaceutical and return to the *_New Patient Bill_* window
-* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without selecting any pharmaceutical
+* *[.underline]##O##K*: select the highlighted pharmaceutical and return to the *_New Patient Bill_* window.
+* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without selecting any pharmaceutical.
 
 ===== 8.2.1.2 Insert a Bill Entry Related to Various Custom Reasons (C[.underline]##u##stom)
 
-To insert a custom bill entry, you have to press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
+To insert a custom bill entry press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
 
 image:image58.png[Custom Item]
 
-In this window you have to enter a description (in the example below is “Number of days of hospitalization”) and then:
+In this window enter a description for the custom item (in the example below is “Number of days of hospitalization”).
 
-On the *Buttons panel* of the *_Custom Item_* window you have the following choices:
+The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
-* *[.underline]##O##K*: go to another *_Custom Item_* window (to enter the quantity, see below)
-* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any bill entry
+* *[.underline]##O##K*: go to another *_Custom Item_* window (to enter the quantity, see below).
+* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any custom bill entry.
 
 image:image59.png[Custom Item Cost]
 
-In the *_Custom Item_* window, you have to enter the amount related to the bill entry (in the example above the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
+In the *_Custom Item_* window enter the amount related to the bill entry (in the example above the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
 
-On the *Buttons panel* of the *_Custom Item_* window you have the following choices:
+The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
-* *[.underline]##O##K*: confirm the bill entry and return to the *_New Patient Bill_* window
-* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any bill entry
+* *[.underline]##O##K*: confirm the bill entry and return to the *_New Patient Bill_* window.
+* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any bill entry.
 
 ===== 8.2.1.3 Remove a Bill Entry of a Bill (Remove Item)
 
-To remove a bill entry you have to highlight it in the *_New Patient Bill_* window and then pressing the *Remove Item* button the bill entry is removed. Bill entries can be removed before or after the final saving (see
+To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button.  The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
 <<save-function-accounting,Save function>> described below).
 
 ===== 8.2.1.4 Insert a Payment (Pa[.underline]##y##ment)
 
-To insert a payment, you have to press the *Pa[.underline]##y##ment* button. The application will show the *_Quantity_* window shown below.
+To insert a payment press the *Pa[.underline]##y##ment* button. The application shows the *_Quantity_* window shown below.
 
 image:image60.png[Payment]
 
-You have to insert the amount of the payment (in the example above is “12” in the local currency, i.e. it is US dollars if the country is the USA).
+Provide the amount of the payment (in the example above is “12” in the local currency, i.e. it is US dollars if the country is the USA) in the text field.
 
-On the *Buttons panel* of the *_Quantity_* window you have the following choices:
+The *Buttons panel* of the *_Quantity_* window has the following choices:
 
-* *[.underline]##O##K*: confirm the payment and return to the *_New Patient Bill_* window
-* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any payment
+* *[.underline]##O##K*: confirm the payment and return to the *_New Patient Bill_* window.
+* *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without inserting any payment.
 
 ===== 8.2.1.5 Insert a Refund ([.underline]##R##efund)
 
@@ -1046,43 +1046,42 @@ Sometimes the cashier has to process a refund for the patient; in this case, pre
 
 ===== 8.2.1.6 Payment Receipt (Payme[.underline]##n##t Receipt)
 
-One can print the Payment receipt at any time, once a payment is made.
+A Payment receipt can be printed at any time given that at least one payment is made.
 Click the *Payme[.underline]##n##t Receipt* button.
 
 ===== 8.2.1.7 Remove a Payment (Remo[.underline]##v##e Payment)
 
-To remove a payment you have to highlight it in the *_New Patient Bill_* window. Once you have done this pressing the *Remo[.underline]##v##e Payment* button the payment is removed.
+A payment can be removed by selected the payment in the *_New Patient Bill_* window and then pressing the *Remo[.underline]##v##e Payment* button.
 
 ===== 8.2.1.8 Give Change ([.underline]##G##ive Change)
 
-Sometimes it could be useful to calculate the balance to give to a patient when he/she is paying his/her bill. By pressing the *[.underline]##G##ive Change* button you are asked the cash amount the patient is paying and the program calculates the difference between the payment and the current bill balance. This is the amount of change to give to the patient.
+Sometimes it could be useful to calculate the difference between the bill balance and the payment amount the patient is making when paying their bill. By pressing the *[.underline]##G##ive Change* button the amount amount the patient is paying must be specified and the program calculates the difference between the payment and the current bill balance. If the amount being paid is greater than the bill balance (i.e., they are over paying) the amount of change to give to the patient is displayed.
 
 [#save-function-accounting]
 ===== 8.2.1.9 Save Function ([.underline]##S##ave)
 
-When you have completed the input of data (bill or payments) press the *[.underline]##S##ave* button in the *Buttons panel* of the *_New Patient Bill_*.
+When all the data input for a bill is completed (bill or payments) press the *[.underline]##S##ave* button in the *Buttons panel* of the *_New Patient Bill_* window.
 
-The application saves the bill and returns to the *_Patient Bills Management_* window; the status of the bill is “O” (Open) until you set it as PAID (*P[.underline]##a##id*).
+The application saves the bill and returns to the *_Patient Bills Management_* window; the status of the bill is “O” (Open) until it is PAID (*P[.underline]##a##id*).
 
 ===== 8.2.1.10 Paid Function (P[.underline]##a##id)
 
-If the patient is going to pay the complete amount of his/her bill press the *P[underline]##a##id* button; if the balance is not equal to zero it will automatically add a payment in the payments list and set this bill as “C” (Closed).
+If the patient is going to pay the complete amount of the bill press the *P[underline]##a##id* button. If the balance is not equal to zero the system automatically adds a payment in the payments list equal to the balance and sets the bill as “C” (Closed).
 
 ===== 8.1.2.11 Print Receipt Function
 
-One can print receipt at any time when pressing the *P[.underline]##a##id* button__. To enable this feature, you must enable the RECEIPTPRINTER__ flag in the configuration file and a proper printer device must be connected to the system. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+A receipt can be printed at any time by pressing the *P[.underline]##a##id* button__. To enable this feature, the RECEIPTPRINTER__ flag in the configuration file must be set and a proper printer device must be connected to the system. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 ===== 8.2.1.12 Close Function ([.underline]##C##lose)
 
-The close function allows you to optionally exit from the *_New Patient Bill_* window without saving changes.
-Press the *[.underline]##C##lose* button to access the Close function. The confirmation window shown below appears:
+The close function allows for optionally exiting from the *_New Patient Bill_* window without saving changes.
+Press the *[.underline]##C##lose* button to access the close function. The confirmation window shown below appears:
 
-image:image61.png[Confirmation,width=450,height=100]
+image:image61.png[Confirmation]
 
 ==== 8.2.2 Edit an Existing Bill ([.underline]##E##dit Bill)
 
-To modify an existing bill you have to highlight it in the *_Patient Bills Management_* window. Once you have done this,
-press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window will appear.
+To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window will appear.
 
 image:image61a.png[Edit Patient Bill,width=543,height=563]
 
@@ -1090,21 +1089,20 @@ NOTE: Only bills with status “O” (Open) can be modified, otherwise, an A4 re
 
 ==== 8.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
-To delete an existing bill you have to highlight it in the *_Patient Bills Management_* window. Once you have done this,
-press the *[.underline]##D##elete Bill* button. The *_Delete_* window will appear.
+To delete an existing bill select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window will appear.
 
-image:image62.png[Delete bill,width=300,height=100]
+image:image62.png[Delete Bill]
 
 NOTE: Generally this functionality is not allowed for regular users and should be performed only by the Administrator.
 
 ==== 8.2.4 Receipt (Recei[.underline]##p##t)
 
-One can also print the bill receipt directly from the *_Patient Bills Management_* window. Highlight the bill
+A bill receipt can be printed directly from the *_Patient Bills Management_* window. Highlight the bill
 and click the *Recei[.underline]##p##t* button. A proper printer device must be connected to the system.
 
 ==== 8.2.5 Reports ([.underline]##R##eport)
 
-Open Hospital Accounting module comes with a set of reports hereby listed:
+The Open Hospital accounting module comes with a set of reports hereby listed:
 
 * *Today (Closure)*: report that shows the current user incomes
 * *Today*: report that shows a statement with all paid and unpaid bills within today
@@ -1112,26 +1110,26 @@ Open Hospital Accounting module comes with a set of reports hereby listed:
 * *This month*: report that shows a statement with all paid and unpaid bill within the current month
 * *Other month*: report that shows a statement with all paid and unpaid bill within a specified month
 
-image:image63.png[Report selection,width=268,height=129]
+image:image63.png[Report Selection]
 
-For each report, except Today (Closure), you will be asked to choose an option:
+For each report, except Today (Closure), one of the following options must be chosen:
 
 * *Short Report (only BadDebts bills)*: report that shows a statement with only the unpaid bills and the total for the others
 * *Full Report (all bills)*: report that shows a statement with all paid and unpaid bills
 * *OH23A1-open bills list*: report that shows the list of opened bills (pending bills)
 
-image:image64.png[Report options,width=291,height=129]
+image:image64.png[Report Options]
 
 Once the choice has been made, after some time the JasperViewer® will show the generated report as follows:
 
 image:image65.png[Report output,width=642,height=470]
 
-NOTE: By default, an internal PDF viewer is used. You can use an external PDF reader by modifying the INTERNALVIEWER flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
-You can save the report as a PDF by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]) or print it by clicking
+The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]).  The report can also be printed by clicking
 on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
-NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 === 8.3 Functions of Accounting in Multi-user Mode
 
@@ -1141,11 +1139,11 @@ image:image68.png[Patient Bills Management,width=641,height=468]
 
 So, the *Incomes Table* will show following information:
 
-* *First Row*: the *PAID* and *UNPAID* within *Today*
-* *Second Row*: the *PAID* and *UNPAID* within the visualized *Period*
-* *Third Row*: the *PAID* and *UNPAID* for the current *user* within *Today*
+* *First Row*: the *PAID* and *UNPAID* for *Today*
+* *Second Row*: the *PAID* and *UNPAID* for the specified *Period*
+* *Third Row*: the *PAID* and *UNPAID* for the current *user* for *Today*
 
-While the Administrator user will be able to filter all incomes among all users that have been involved in some payments:
+The Administrator user can filter all incomes for all users have some payment amount:
 
 image:image69.png[Filter Patient Bills Management,width=521,height=334]
 
@@ -1161,7 +1159,7 @@ Vaccines is used to manage vaccines for all the registered patients. It is possi
 .Click with the mouse on the button or press "Alt + V" to enter the *_Patient Vaccine Browser_* window
 [#default-main-menu-9]
 [caption="Main Menu: "]
-image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
+image:image0_DefaultMainMenu.png[Default Main Menu]
 
 === 9.2 Functions of Vaccines
 
@@ -1173,26 +1171,26 @@ image:image71.png[Patient Vaccine Browser,width=594,height=263]
 
 The following functions are accessible from the *Buttons panel* of the window *_Patient Vaccine Browser_* window:
 
-* *[.underline]##N##ew*: insert a new vaccination
-* *[.underline]##E##dit*: modify a stored vaccination
-* *[.underline]##D##elete*: delete a stored vaccination
-* *[.underline]##C##lose*: exit from the *_Patient Vaccine Browser_* window and return to the main menu
+* *[.underline]##N##ew*: insert a new vaccination.
+* *[.underline]##E##dit*: modify a stored vaccination.
+* *[.underline]##D##elete*: delete a stored vaccination.
+* *[.underline]##C##lose*: exit from the *_Patient Vaccine Browser_* window and return to the main menu.
 
 Furthermore, there is a search function available in the *Selection panel* on the left of the window.
 
 ==== 9.2.1 Search Vaccinations
 
-Queries about vaccinations can be done using the search criteria available on the *Selection panel* area of the window (left side of the window). Results of your search are shown in the *Data table* area.
+Queries about vaccinations can be done using the search criteria available in the *Selection panel* area of the window (left side of the window). The results of the search are shown in the *Data table* area.
 
-Doing the selection, data about vaccinations can be selected by choosing specific fields among the following ones:
+Vaccinations can be selected by choosing specific field values from the following list:
 
-* *Vaccine type*: selection of a Vaccine Type to filter the vaccines list
+* *Vaccine type*: selection of a vaccine type to filter the vaccines list
 * *Vaccine*: select a specific vaccine or all vaccines with "All vaccines”
-* *Date*: “**Date From**” and “**Date To**” subsets the vaccinations to a specific time period
+* *Date*: “**Date: From**” and “**Date: To**” subsets the vaccinations to a specific time period
 * *Age*: “**Age From**” and “**Age To**” subsets the patients subject to vaccinations by an age range
 * *Sex*: All / Male / Female
 
-NOTE: VaccineTypes and Vaccines can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
 
 After the selection press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
@@ -1203,11 +1201,11 @@ image:image72.png[Search Vaccines,width=619,height=245]
 
 ==== 9.2.2 Insert a New Patient Vaccination ([.underline]##N##ew)
 
-You can use this function to register a new patient vaccination.
+This function is used to register a new patient vaccination.
 
 Press the *[.underline]##N##ew* button in the *_Patient Vaccine Browser_* window to access the *_New Patient Vaccine_* window shown below.
 
-image:image73.png[Enter a new patient vaccintation,width=430,height=260]
+image:image73.png[Enter a new patient vaccintation]
 
 To record a new patient vaccination enters the following fields:
 
@@ -1217,38 +1215,37 @@ To record a new patient vaccination enters the following fields:
 * *Vaccine Type*: the Vaccine Type
 * *Vaccine*: the vaccine
 
-NOTE: VaccineTypes and Vaccines can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When all the required information is entered the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm data and record the patient vaccination
-* *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without recording the patient vaccination
+* *[.underline]##O##K*: confirm the data and record the patient vaccination.
+* *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without recording the patient vaccination,
 
 ==== 9.2.3 Modify Data of a Recorded Patient Vaccination ([.underline]##E##dit)
 
-To modify data of a Patient vaccination you have to highlight it in the *_Patient Vaccine Browser_* window. Once you have done this,
-press the *[.underline]##E##dit* button. When the *_Edit Patient Vaccine_* window shown below appears, the record is available for changes. Date, vaccine type, and vaccine can be changed.
+To modify data of a patient vaccination select the vaccination in the *_Patient Vaccine Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient Vaccine_* window shown below appears, the record is available for changes. Date, vaccine type, and vaccine can be changed.
 
-image:image74.png[Edit a patient vaccination,width=430,height=260]
+image:image74.png[Edit a patient vaccination]
 
-You may change all data except the patient associated with this vaccination.
+All the data for the vaccination can be changed except for the patient associated with the vaccination.
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+Once all the changes are made the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm new values (all the previous values will be lost)
-* *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without changing any values
+* *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
+* *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without changing any values.
 
 ==== 9.2.4 Delete a Patient Vaccination ([.underline]##D##elete)
 
-To delete a stored Patient vaccination you have to highlight it in the *_Patient Vaccine Browser_* window. Next,
+To delete a stored patient vaccination select the vaccination in the table in the *_Patient Vaccine Browser_* window. Next,
 press the *[.underline]##D##elete* button. The confirmation window shown below appears. The vaccination can then be deleted. Deleted vaccinations are no longer available.
 
-image:image75.png[Delete a patient vaccinaton,width=278,height=187]
+image:image75.png[Delete a patient vaccinaton]
 
 === 9.3 Vaccines Extended ([.underline]##V##accines)
 
-One can extend the vaccine functionality by changing the _PATIENTVACCINEEXTENDED_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+One can extend the vaccine functionality by changing the _PATIENTVACCINEEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 ==== 9.3.1 Extended Vaccine Browsing
 
@@ -1265,27 +1262,26 @@ The only difference is that there is a new column containing the name of the pat
 
 === 10.1 Main Characteristics
 
-Admission/Patient functionality allows registering a new patient, modifying his/her personal details, browsing his/her history, and admitting him/her to a hospital ward.
+THe Admission/Patient functionality allows registering a new patient, modifying their personal details, browsing their history, and admitting them to a hospital ward.
 
 .Click with the mouse on the button or press "Alt + A" to enter the *_Patient Browser_* window
 [#default-main-menu-10]
 [caption="Main Menu: "]
-image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
+image:image0_DefaultMainMenu.png[Default Main Menu]
 
-
-NOTE: You can also start an OPD registration from here if the OPDEXTENDED flag is set to YES. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: An OPD registration can be stared from here if the OPDEXTENDED flag is set to YES. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 === 10.2 Functions of Admission/Patients
 
-All functions available under *[.underline]##A##dmission/Patient* are accessible from the *_Patient Browser_* window shown below.
+All the functions available under *[.underline]##A##dmission/Patient* are accessible from the *_Patient Browser_* window shown below.
 
-By default, the window shows in a *Data table* all the patients currently present in the system.
+By default, the window shows a *Data table* all the patients currently present in the system.
 
 image:image78.png[Patient Browser,width=584,height=235]
 
-NOTE: If the list of patients becomes huge it is likely to result in a slowdown of the system depending on the
+NOTE: If the list of patients becomes very large it is likely to result in a slowdown of the system depending on the
 network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in the
-configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 The following data are shown in the *_Patient Browser_* window:
 
@@ -1298,28 +1294,28 @@ The following data are shown in the *_Patient Browser_* window:
 
 The following functions are accessible from the *Buttons panel* of the window *_Patient Browser_* window:
 
-* *[.underline]##N##ew Patient*: insert a new patient
-* *[.underline]##E##dit Patient*: modify an existing patient
-* *Dele[.underline]##t##e Patient*: delete an existing patient
-* *[.underline]##A##dmission*: manage the admission of the patient in the hospital
-* *E[.underline]##x##amination*: manage the patient examination
-* *[.underline]##O##PD*: start an OPD visit on the selected patient
-* *[.underline]##B##ill*: start a Bill on the selected patient
-* *[.underline]##D##ata*: modify data of a patient and to modify the history of his admissions/out of patient visits as well as his/her malnutrition data
-* *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it
-* *[.underline]##T##herapy*: manage the therapy of a patient
-* *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu
+* *[.underline]##N##ew Patient*: insert a new patient.
+* *[.underline]##E##dit Patient*: modify an existing patient.
+* *Dele[.underline]##t##e Patient*: delete an existing patient.
+* *[.underline]##A##dmission*: manage the admission of the patient in the hospital.
+* *E[.underline]##x##amination*: manage the patient examination.
+* *[.underline]##O##PD*: start an OPD visit on the selected patient.
+* *[.underline]##B##ill*: start a bill on the selected patient.
+* *[.underline]##D##ata*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
+* *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it.
+* *[.underline]##T##herapy*: manage the therapy of a patient.
+* *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
 
-NOTE: It is possible to have a *[.underline]##M##erge* function that might help in case of double patient
-registration, by changing the flag MERGEFUNCTION in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
+registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 Furthermore, a search function is available using the *Selection panel* on the left of the window.
 
 ==== 10.2.1 Search Patient
 
-Queries about patients can be done using the search criteria available in the *Selection panel* area of the window (left side of the window). Results of your search are shown in the *Data table* area.
+Queries about patients can be done using the search criteria available in the *Selection panel* area of the window (left side of the window). The results of the search are shown in the *Data table* area.
 
-Doing the selection, data about patients can be selected by choosing specific fields among the following ones:
+Patient selection can be accomplished by specifying specific value for the fields in the following list:
 
 * *Admission Status.* The choices are:
 
@@ -1327,34 +1323,35 @@ Doing the selection, data about patients can be selected by choosing specific fi
 ** *Admitted*: only patients admitted are included in the selection
 ** *Not Admitted*: only patients not admitted are included in the selection
 
-* *Ward.* Select one or more wards:
+* *Ward* Select one or more wards:
 ** *Children Ward*
 ** *Female Ward*
 ** *Male Ward*
 ** *Maternity Ward*
 
-* *Age.* You can filter the patients by age range
-* *Sex.* You can filter the patients by gender:
+* *Age.* specify the patient's age range
+* *Sex.* specify the patient's gender:
 ** *All*
 ** *Male*
 ** *Female*
 
-* *Search Key* Any character string entered will be matched again the patient's name and address. You can supply the complete string or only some characters: the system will show all the patients that have the entered characters. For example, if you enter “isabe” all patients that have “isabe” in their name are displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
+* *Search Key* Any character string entered is matched against the patient's name and address.
+A complete string or only some characters can be entered and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients that have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
 
 image:image79.png[Patient Browser Search,width=508,height=436]
 
-NOTE: Wards can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Wards can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
 
 ==== 10.2.2 Search Patient Enhanced
 
-One can optimize memory usage when the number of registered patients becomes huge, by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 Once the enhanced search has been enabled the new *_Patient Browser_* window looks like following:
 
 image:image80.png[Patient Browser Enhanced Search,width=600,height=300]
 
-Initially the list is empty. To show some patients, you must enter a search criterion in the
+Initially the list is empty. To show some patients, enter a search criterion in the
 *Search Key* field and then press the search (image:image81.png[Search icon,width=15,height=15]) button and the window will show only patients matching the specified criteria.
 
 image:image82.png[Patient Browser Enhanced Search results,width=600height=300]
@@ -1368,11 +1365,11 @@ NOTE: To show the full patient list again just press the search button with an e
 
 === 10.3 Insert a New Patient ([.underline]##N##ew Patient)
 
-You can use this function to register a new Patient when she/he is admitted to the Hospital.
+This function is used to register a new patient into the hospital.
 
 Press the *[.underline]##N##ew Patient* button in the *_Patient Browser_* window to access the *_New Patient_* window shown below.
 
-image:image83.png[New Patient,width=416,height=386]
+image:image83.png[New Patient]
 
 To record a new patient, enter the following fields:
 
@@ -1386,39 +1383,38 @@ To record a new patient, enter the following fields:
 * *Telephone*: the patient's telephone number
 * *Note*: A free text for adding notes about the patient
 
-When you finish entering the data, in the *Buttons panel* you have two choices:
+When finished entering the data the *Buttons panel* has two choices:
 
-* *[.underline]##O##K*: confirm data and add the patient's record
-* *[.underline]##C##ancel*: close the window and to return to the *_Patient Browser_* window without adding the patient
+* *[.underline]##O##K*: confirm the data and add the patient's record.
+* *[.underline]##C##ancel*: close the window and to return to the *_Patient Browser_* window without adding the patient.
 
 ==== 10.3.1 Modify Data of a Patient ([.underline]##E##dit Patient)
 
-To modify the data of a patient you have to highlight the patient in the *_Patient Browser_* window. Once you have done this,
-press the *[.underline]##E##dit Patient* button. When the *_New Patient_* window shown below appears, the record is available for changes. All data can be changed.
+To modify the data of a patient select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit Patient* button. When the *_New Patient_* window shown below appears, the record is available for changes. All the data can be changed.
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
-When you finish modifying the data, in the *Buttons panel* you have the two choices:
+When finished modifying the data in the *Buttons panel* there are two choices:
 
-* *[.underline]##O##K*: confirm the new values (all the previous values will be lost)
-* *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data
+* *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
+* *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data.
 
 ==== 10.3.2 Delete a Patient (Dele[.underline]##t##e Patient)
 
-To delete a stored patient you have to highlight the patient in the *_Patient Browser_* window.
-Next press the *Dele[.underline]##t##e Patient* button. The name of the patient is shown in the *_Question_* window below. The patient's data can then be deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system and you can ask the Administrator to restore the data at any time._
+To delete a stored patient select the patient in the *_Patient Browser_* window.
+Next press the *Dele[.underline]##t##e Patient* button. The name of the patient is shown in the *_Question_* window below. The patient's data can then be deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system as the Administrator to restore the data at any time._
 
-image:image84.png[Delete a Patient,width=278,height=128]
+image:image84.png[Delete a Patient]
 
-In the *Buttons panel* you have the following choices:
+In the *Buttons panel* the choices are:
 
-* *[.underline]##Y##es*: confirm the deletion of the patient
-* *[.underline]##N##o*: close the window and return to the previous window
+* *[.underline]##Y##es*: confirm the deletion of the patient.
+* *[.underline]##N##o*: close the window and return to the previous window.
 
 [#insert-a-new-patient-extended]
 === 10.4 Insert a new Patient Extended ([.underline]##N##ew Patient)
 
-One can extend the New Patient functionality by changing the _PATIENTEXTENDED_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+The New Patient functionality can be extended by changing the _PATIENTEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 ==== 10.4.1 New Features
 
@@ -1437,13 +1433,13 @@ Regardless of the way it is entered the age is converted to an age in years in t
 * *BloodType*: valid values are 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: valid values are Single, Married, Divorced, and Widowed. If left empty, the default is Unknown
 * *Profession*: valid values are Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering. If left empty, the default is Unknown
-* *Father's Name*: you can specify the name of the patient's father and if he is still alive
-* *Mother's Name*: you can specify the name of the patient's mother and if she is still alive
-* *Parents Together*: you can specify if the parents are still together
-* *Has Insurance*: you may specify if the patient has a health financial protection plan (insurance)
+* *Father's Name*: specify the name of the patient's father and if he is still alive
+* *Mother's Name*: specify the name of the patient's mother and if she is still alive
+* *Parents Together*: specify if the parents are still together
+* *Has Insurance*: specify if the patient has a health financial protection plan (insurance)
 * *Load File*: a button used to load a patient's picture (it will be cropped and squared)
 
-NOTE: AgeTypes (Descriptions) can be defined by the Administrator. Ask your Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
 ==== 10.4.2 Height and Weight Functionality (Height and Weight)
 
@@ -1451,31 +1447,31 @@ The height and weight of the patient are not required when registering a new pat
 
 ==== 10.4.3 Patient Photo (New Photo)
 
-You can extend the New Patient functionality by changing the
-__[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+The New Patient functionality can be extended by changing the
+__[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 Once the video module has been enabled the *_New Patient_* window looks as follows:
 
 image:image88p.png[New Patient Extended photo,width=587,height=339]
 
-By clicking on the *New Photo* button, the webcam should be activated (check any light on the device) and in the template you should see the “eye-view” of the camera.
+By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device).  The *Patient Photo* window should show what the camera is pointing at.
 
 image:image89.png[Webcam photo,width=591,height=392]
 
-image:image90.png[Attach photo,width=156,height=119]
+image:image90.png[Attach photo,width=591,height=392]
 
-By clicking again on the *New Photo* button, a picture is taken ready to be attached to the patient information.
+By clicking again on the [.underline]##N##ew Photo* button, a picture is taken ready to be attached to the patient information.
 
 ===== 10.4.3.1 Camera Settings (image:image91.png[camera icon,width=22,height=12])
 
-If nothing happens when you press the *New Photo* button you can press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if more than one; if only one camera is connected to the computer it is useful to reset the camera settings and restart it.
+If nothing happens when pressing the *[.underline]##N##ew Photo* button, press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if there is more than one; if only one camera is connected to the computer it is useful to reset the camera settings and restart it.
 
-Once the camera is activated and you can see the “eye-view” of the camera, you may press on “+” or “-“ to increase or reduce the image quality.
+Once the camera is activated and the “eye-view” of the camera is visible, press on “+” or “-“ to increase or reduce the image quality.
 
-Open Hospital will try automatically to set the best quality for any webcam connected to the computer and will remember the last settings used.
+Open Hospital attempts to automatically set the best quality for any webcam connected to the computer and remembers the last settings used.
 
 NOTE: If the camera does not function then change the flag to DEBUG in configuration file to generate additional
-diagnostic information. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+diagnostic information. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 === 10.5 Admission Functions ([.underline]##A##dmission)
 
