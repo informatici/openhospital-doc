@@ -339,7 +339,7 @@ image:image17.jpeg[Splash.jpg,width=316,height=237]
 
 And then the main Menu:
 
-image:image18.png[MainMenu.PNG,width=135,height=306]
+image:image18.png[MainMenu.PNG,width=235,height=456]
 
 You may create a shortcut (link) to the executable script on the Desktop, the Programs Menu or wherever you need by using the provided icon “oh.ico” that you find in the package.
 
