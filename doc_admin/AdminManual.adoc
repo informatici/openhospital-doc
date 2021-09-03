@@ -1994,7 +1994,7 @@ https://sourceforge.net/p/openhospital/support-requests/
 Remember to keep files that have been changed, especially any changes to the configuration settings
 (see <<config-files,Configuration Files>>). The most common way is to backup your working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
-. Start the program and check from log files (OpenHospital_1_8_0/logs) to ensure the new version running and has no error messages.
+. Start the program and check from log files (OpenHospital_1_11_0/logs) to ensure the new version running and has no error messages.
 
 === 8.2 Update Open Hospital - portable
 
