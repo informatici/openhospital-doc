@@ -175,7 +175,7 @@ image:image11.png[New Patient Visit,width=391,height=435]
 To record a visit, enter data into the following fields:
 
 * *Type of attendance*: This field is not meant to distinguish whether an individual is new or not in the ambulatory
-(that is, whether this is the absolute first time he/she enters the ambulatory). The NEW ATTENDANCE selection
+(that is, whether this is the absolute first time they have entered the ambulatory). The NEW ATTENDANCE selection
 indicates whether the patient comes to the ambulatory to report a new
 health issue or new disease for which no care has been previously addressed or recorded. This could be their initial
 visit or their n-th time in the ambulatory, it does not matter with regards to this field. If this visit is for an
@@ -183,7 +183,7 @@ issue or disease previously addressed the field is not selected and records are 
 with regards to the follow-up care and instructions for recovery.
  +
  +
-_Example: A patient comes to the ambulatory because he/she reports a cut; this event is recorded as
+_Example: A patient comes to the ambulatory because they report a cut; this event is recorded as
 NEW ATTENDANCE and Doctor sutures the wound and invites patient to come back ten days later; when the same patient comes back
 after ten days to have his/her stitches removed, a new OPD record is then created but without the NEW ATTENDANCE flag set._
  +
@@ -521,7 +521,7 @@ Select the desired medical and click *[.underline]##Y##es*. This will open a new
 
 image:image27.png[Input Quantity,width=310,height=135]
 
-Then press *[.underline]##O##K*. If there is an existing lot in the system, the *_Existing Lot_* window will appear.
+Then press *[.underline]##O##K*. If there is an existing lot in the system, the *_Existing Lot_* window appears:
 
 image:image28.png[Existing Lots]
 
@@ -572,7 +572,7 @@ Select the desired medical and click *[.underline]##Y##es*. This then opens the 
 
 image:image32.png[Quantity Input]
 
-Then press *[.underline]##O##K*. The *_Lot Information_* window will appear.
+Then press *[.underline]##O##K*. The *_Lot Information_* window appears:
 
 image:image33.png[Existing Lot]
 
@@ -1081,7 +1081,7 @@ image:image61.png[Confirmation]
 
 ==== 8.2.2 Edit an Existing Bill ([.underline]##E##dit Bill)
 
-To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window will appear.
+To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window appears:
 
 image:image61a.png[Edit Patient Bill,width=543,height=563]
 
@@ -1089,7 +1089,7 @@ NOTE: Only bills with status “O” (Open) can be modified, otherwise, an A4 re
 
 ==== 8.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
-To delete an existing bill select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window will appear.
+To delete an existing bill select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window appears:
 
 image:image62.png[Delete Bill]
 
@@ -1133,7 +1133,7 @@ NOTE: A PDF copy of every report is always saved within the folders of Open Hosp
 
 === 8.3 Functions of Accounting in Multi-user Mode
 
-If in multi-user mode, the Incomes Table will show the only Incomes for the logged user, so the window will appear like following:
+If in multi-user mode, the Incomes Table will show the only Incomes for the logged user, so the window appears like the following:
 
 image:image68.png[Patient Bills Management,width=641,height=468]
 
@@ -1487,39 +1487,39 @@ If the patient is already admitted then the *_Edit Admission Record_* window app
 [#start-the-admission-of-a-patient]
 ==== 10.5.1 Start the Admission of a Patient ([.underline]##A##dmission)
 
-Once a patient is registered, he/she can be admitted to a hospital ward.
+Once a patient is registered, they can be admitted to a hospital ward.
 
-First, to insert the admission of a patient you have to highlight the patient in the *_Patient Browser_* window. Once you have done this,
+First, to insert the admission of a patient highlight the patient in the *_Patient Browser_* window. Once this is done,
 press the *[.underline]##A##dmission* button. The *_New Admission_* window shown below appears (if the patient is already admitted the *_Edit Admission Record_* window appears).
 
 image:image92.png[New Admission,width=637,height=334]
 
-To start an admission, you have to enter the following fields (on the right side of the window):
+To start an admission, enter the appropriate date into the following fields (on the right side of the window):
 
 * *Ward*: the ward where the patient is admitted
-* *From Health Unit*: (not mandatory) in case of referral you may type the facility where the patient comes from
-* *Progressive in Year*: is the progressive number per year and per ward automatically set by the system; you may change it if needed
+* *From Health Unit*: (not mandatory) in case of referral optionally enter the name of the facility where the patient came from
+* *Progressive in Year*: is the progressive number per year and per ward automatically set by the system; the value can be changed as needed
 * *Admission Date*: the date of the admission, automatically set to today
 * *Admission Type*: the type of admission (i.e. Ambulance, Self, Referral, etc.)
-* *Malnutrition*: (not mandatory) in case of malnutrition you may check this box so you will manage the malnutrition control from the *_Patient Data_* window (see the Malnutrition control function).
-* *Diagnosis IN*: it is the diagnosis the patient has been admitted with
+* *Malnutrition*: (not mandatory) in case of malnutrition optionally check this box so management of the malnutrition control can be done in the *_Patient Data_* window (see the Malnutrition control function).
+* *Diagnosis IN*: the diagnosis the patient was admitted with
 
-TIP: It is possible to filter to find diseases more easily. To do this, you need to enter a text fragment in the search fields that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
+TIP: It is possible to filter to find diseases more easily. To do this, enter a text fragment in the search fields that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
 
-NOTE: Wards, Admission Types and Diagnosis can be defined by the Administrator. Ask your Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Wards, Admission Types and Diagnosis can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
 NOTE: The "Progressive in Year" field is automatically populated by the program; in case of maternity, the
-counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask your Administrator to set the
+counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
 [.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or read the _Administrator’s Guide_.
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When done entering data the *Buttons panel* has the following choices:
 
-* *[.underline]##S##ave*: confirm and persist the current values
-* *E[.underline]##x##amination*: open the *_Examination_* window (See
+* *[.underline]##S##ave*: confirm and persist the current values.
+* *E[.underline]##x##amination*: open the *_Examination_* window (see
 <<patient-examination,Patient examination>>).
-* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes
+* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes.
 
-Once you press the Save button the *_New Admission_* window closes and you see the status changed in the *_Patient Browser_* window shown in the following figure:
+Once the *[.underline]##S##ave* button is pressed the *_New Admission_* window closes and the patient's status is changed in the *_Patient Browser_* window as shown in the following figure:
 
 image:image93.png[Patient admitted,width=642,height=167]
 
@@ -1528,15 +1528,15 @@ image:image93.png[Patient admitted,width=642,height=167]
 
 During a patient examination patient general parameters such as weight, height, arterial pressure, heart rate, temperature, saturation, respiratory rate, and auscultation can be recorded. Open Hospital calculates the patient BMI automatically.
 
-You have two ways to access the module. In the *_Patient Browser_* window, highlight the patient
+There are two ways to access the module. In the *_Patient Browser_* window, highlight the patient
 and click *E[.underline]##x##amination.* Or in the *_New Admission_* or *_Edit Admission Record_* window,
-click the *E[.underline]##x##amination* button. The following window will appear.
+click the *E[.underline]##x##amination* button. The following window appears:
 
 image:image94.png[Patioent examination,width=642,height=310]
 
-The window is divided into two areas: The panel where you enter information at the left and the area where the examination history is displayed at the right.
+The window is divided into two areas: The panel on the left is where new information is entered and the area where the examination history is displayed is on the right.
 
-Then enter the following information:
+Enter the following information:
 
 * *Date*: date of the examination; by default it is set to the current data and time
 * *Height*: patient's height (in cm)
@@ -1545,7 +1545,7 @@ Then enter the following information:
 * *Heart rate*: patient's heart rate (in bpm)
 * *Temperature*: patient's temperature (in °C)
 * *Saturation*: patient's saturation (%)
-* *HGT*: result of Hemo Glucose test (in mg/dl)
+* *HGT*: result of the Hemo Glucose test (in mg/dl)
 * *Respiratory Rate*: patient's respiratory rate (in bpm)
 * *Diuresis Vol 24H*: patient's daily urine volume (in ml)
 * *Diuresis*: Diuresis description
@@ -1557,17 +1557,17 @@ After entering the data, Open Hospital automatically calculates the BMI and disp
 
 Where everything is correct, click *[.underline]##S##ave* to save the examination.
 
-To remove an examination, select one or more records in the lower table and click *[.underline]##D##elete* to delete it/them.
+To remove an examination, select one or more records in the lower table and click *[.underline]##D##elete* to delete them.
 
 [#insert-or-modify-surgery-data]
 ==== 10.5.3 Insert or Modify Surgery Data
 
-To insert/modify operations data of a patient admission you have to highlight the patient in the *_Patient Browser_* window. Once you have done this,
+To insert/modify operations data of a patient admission first highlight the patient in the *_Patient Browser_* window and then
 press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window shown above appears.
 
-You can also insert/modify operations data directly when you are inserting or modifying an admission by selecting the *Operation* tab at the top of the window.
+Operation related data can be inserted or modified directly by selecting the *Operation* tab at the top of the window during the admission or modification process of the admission.
 
-Operations data that you can manage are:
+Operations data that can be managed are:
 
 * *Operation*: the operation type
 * *Date*: the operation date (must be at least older than, or equal to the admission date and at most, more recent than, or equal to the discharge date)
@@ -1577,16 +1577,16 @@ Operations data that you can manage are:
 
 image:image95.png[Patient's operation,width=642,height=345]
 
-It is possible to record several operations at once. The buttons *[.underline]##N##ew*, *[.underline]##S##ave* and *[.underline]##D##elete* at the top right of the table allow you to manipulate the items of the table.
+It is possible to record several operations at once. The buttons *[.underline]##N##ew*, *[.underline]##S##ave* and *[.underline]##D##elete* at the top right of the table allow the manipulation of the items of the table.
 
 To add a new operation, click on the button *[.underline]##N##ew* and enter the data as mentioned above and then click on *[.underline]##S##ave*.
 
 WARNING: Clicking on the button *[.underline]##S##ave* just adds the operation to the table; it is not yet permanently recorded.
 
 To delete a line from the table, select the line to delete by clicking on it (it automatically highlights), 
-then click on the button *[.underline]##D##elete*. When you are finished, click on the button *[.underline]##S##ave* below the table to save your changes.
+then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
 
-NOTE: OperationType and Operations can be defined by the Administrator. Ask your Administrator how to do it or see
+NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
 
 [#insert-or-modify-delivery-data]
@@ -1594,7 +1594,7 @@ NOTE: OperationType and Operations can be defined by the Administrator. Ask your
 
 If a female patient is admitted, the Maternity ward will be present in the ward list and, by selecting it, the *_Edit Admission Record_* window will change as shown below:
 
-In the window extension you can specify information about the Maternity Case, including:
+In the Delivery tab, information about the Maternity case can be specified including:
 
 * *Visit Date*: the date of a visit before the delivery, if any
 * *Weight*: the weight of the mother before the delivery, if measured
@@ -1607,42 +1607,41 @@ In the window extension you can specify information about the Maternity Case, in
 
 image:image96.png[Admission Delivery,width=642,height=339]
 
-NOTE: TreatmentType, DeliveryType, and DeliveryResultType can be defined by the Administrator. Ask your Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
 [#discharge-of-a-patient]
 ==== 10.5.5 Discharge of a Patient ([.underline]##A##dmission)
 
-To discharge a patient from the hospital you have to highlight the patient in the *_Patient Browser_* window. Once you have done this,
-press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window shown above appears.
+To discharge a patient from the hospital highlight the patient in the *_Patient Browser_* window and then press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window shown above appears.
 
-You have to enter the following data:
+To complete the discharge of the patient enter the following data:
 
 * *Discharge Date*: the date of the discharge
 * *Bed Days*: the number of days admitted; computed by the system by finding the difference between admission date and discharge date
 * *Discharge Type*: the type of the discharge
-* *Diagnosis OUT*: it is the diagnosis the patient was discharged with
+* *Diagnosis OUT*: the diagnosis the patient was discharged with
 
 TIP: As in the case of *_Diagnosis IN_*, it is possible to filter to find diseases more easily.
 
 image:image97.png[AdmissionDischarge,width=642,height=337]
 
-NOTE: DischargeTypes and Diseases can be defined by the Administrator. Ask your Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When all the data has been entered the *Buttons panel* has the following choices:
 
-* *[.underline]##S##ave*: confirm the values on the window
+* *[.underline]##S##ave*: confirm the values on the window.
 * *E[.underline]##x##amination*: to open the *_Examination_* window (See
 <<patient-examination,Patient examination>>).
-* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes
+* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes.
 
-Once you press the Save button the *_Edit Admission Record_* window closes and you see the status changed in the *_Patient Browser_* window
+Once *[.underline]##S##ave* button is pressed the *_Edit Admission Record_* window closes and the patient's status is changed in the *_Patient Browser_* window as
 shown in the following figure:
 
 image:image98.png[Discharged,width=642,height=337]
 
 === 10.6 OPD ([.underline]##O##PD)
 
-If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask your Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window will allow you to start an OPD by selecting the related patient first (see
+If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting  an OPD by selecting the related patient first (see
 <<create-a-new-patient-visit,Create a new patient visit>> for more information).
 
 === 10.7 Bill ([.underline]##B##ill)
@@ -1655,7 +1654,7 @@ The button *[.underline]##B##ill* in the *_Patient Browser_* window is used to s
 This function allows modifying data about a patient and modify or delete the history of admissions and discharges of a patient. Malnutrition can also be managed with this function.
 
 To access the patient historical data function, first, highlight the patient in the *_Patient Browser_* window.
-Next, press the *[.underline]##D##ata* button. The *_Patient Data_* window shown below will appear.
+Next, press the *[.underline]##D##ata* button. The *_Patient Data_* window shown below appears:
 
 image:image99.png[Patient Data,width=575,height=423]
 
@@ -1671,97 +1670,97 @@ The *Data table* shows a summary of all the outpatients (OPD) visits and all the
 
 The following functions are accessible from the *Buttons panel* of the window *_Patient Data_*:
 
-* *[.underline]##E##dit*: modify the data of an admission or an outpatient visit
-* *[.underline]##D##elete*: delete an existing admission
-* *[.underline]##M##alnutrition Control*: create, modify or delete malnutrition control data of a patient
-* *[.underline]##C##lose*: exit from the function *_Patient Data_* and return to the *_Patient Browser_* window
+* *[.underline]##E##dit*: modify the data of an admission or an outpatient visit.
+* *[.underline]##D##elete*: delete an existing admission.
+* *[.underline]##M##alnutrition Control*: create, modify or delete malnutrition control data of a patient.
+* *[.underline]##C##lose*: exit from the function *_Patient Data_* and return to the *_Patient Browser_* window.
 
 ==== 10.8.1 Modify Data of an Admission ([.underline]##E##dit)
 
-To modify the data of an admission select the admission in the *Data table* of the *_Patient Data_* window. Once you have done this, press the *[.underline]##E##dit* button. When the *_Edit Admission Record_* window shown below appears, the record is available for changes. All data can be changed.
+To modify the data of an admission select the admission in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit Admission Record_* window shown below appears, the record is available for changes. All data can be changed.
 
 image:image100.png[Edit Admission Record,width=642,height=333]
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When the changes are complete the *Buttons panel* has the following choices:
 
-* *[.underline]##S##ave*: confirm new values (all the previous values are lost)
+* *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
-<<patient-examination,Patient examination>>)
-* *[.underline]##C##lose*: close the window and to return to the *_Patient Data_* window without applying any changes
+<<patient-examination,Patient examination>>).
+* *[.underline]##C##lose*: close the window and to return to the *_Patient Data_* window without applying any changes.
 
 ==== 10.8.2 Modify Data of an Outpatient Visit ([.underline]##E##dit)
 
-To modify the data of an outpatient visit you have to highlight it in the *Data table* of the *_Patient Data_* window. Once you have done this, press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window shown below appears, the record is available for changes. All data can be changed.
+To modify the data of an outpatient visit select the OPD in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window shown below appears, the record is available for changes. All data can be changed.
 
 image:image100o.png[Edit OPD Registration,width=642,height=333]
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+When the changes are complete the *Buttons panel* has the following choices:
 
-* *[.underline]##S##ave*: confirm new values (all the previous values are lost)
+* *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
-<<patient-examination,Patient examination>>)
-* *[.underline]##C##ancel*: close the window and to return to the *_Patient Data_* window without applying any changes
+<<patient-examination,Patient examination>>).
+* *[.underline]##C##ancel*: close the window and to return to the *_Patient Data_* window without applying any changes.
 
 ==== 10.8.3 Delete an Admission ([.underline]##D##elete)
 
-To delete a stored admission you have to highlight it in the *_Patient Data_* window.
-Next, press the *[.underline]##D#elete* button. A confirmation window will appear and it is shown below. Now the admission can be deleted. Deleted admissions are no longer available.
+To delete a stored admission select the admission in the *_Patient Data_* window.
+Next, press the *[.underline]##D#elete* button. A confirmation window appears and it is shown below. Now the admission can be deleted. Deleted admissions are no longer available.
 
-image:image101.png[Delete confirmation,width=278,height=128]
+image:image101.png[Delete confirmation]
 
-In the *Buttons panel* you have the following choices:
+The *Buttons panel* has the following choices:
 
-* *[.underline]##Y##es*: confirm the deletion
-* *[.underline]##N##o*: close the window and return to the previous window
+* *[.underline]##Y##es*: confirm the deletion.
+* *[.underline]##N##o*: close the window and return to the previous window.
 
 ==== 10.8.4 Delete an Outpatient Visit ([.underline]##D##elete)
 
-To delete a stored outpatient visit (OPD) you have to highlight it in the *_Patient Data_* window.
-Next, press the *[.underline]##D##elete* button. A confirmation window will appear and it is shown below. Now the OPD can be deleted. Deleted outpatient visits are no longer available.
+To delete a stored outpatient visit (OPD) highlight it in the *_Patient Data_* window.
+Next, press the *[.underline]##D##elete* button. A confirmation window appears and it is shown below. Now the OPD can be deleted. Deleted outpatient visits are no longer available.
 
-image:image101o.png[Deletion confirmation,width=278,height=128]
+image:image101o.png[Deletion confirmation]
 
-In the *Buttons panel* you have the following choices:
+The *Buttons panel* has the following choices:
 
-* *[.underline]##Y##es*: confirm the deletion
-* *[.underline]##N##o*: close the window and return to the previous window
+* *[.underline]##Y##es*: confirm the deletion.
+* *[.underline]##N##o*: close the window and return to the previous window.
 
 ==== 10.8.5 Manage Malnutrition Control of a Patient ([.underline]##M##alnutrition Control)
 
 The malnutrition control function is available only for the admissions that have concerns about malnutrition (malnutrition field activated in *_New Admission_* window, see the next page).
 
-The Malnutrition control function allows you to register specified visits for those patients who need to control his/her weight/height index.
+The Malnutrition control function allows the registration of  specified visits for those patients who need to control their weight/height index.
 
 To access the Malnutrition control function, highlight the appropriate admission in the *_Patient Data_* window.
-Next, press the *[.underline]##M##alnutrition Control* button. The *_Malnutrition Browser_* window shown below will appear.
+Next, press the *[.underline]##M##alnutrition Control* button. The *_Malnutrition Browser_* window shown below appears:
 
 image:image102.png[Malnutrition Browser,width=642,height=288]
 
-From this function you can insert (*New*) a new malnutrition control, modify (*Edit*) or *Delete* an existing malnutrition control.
+This function supports the insertion (*New*) of a new malnutrition control, the modification  (*Edit*) or deletion (*Delete*) of an existing malnutrition control.
 
 ===== 10.8.5.1 Insert a New Control ([.underline]##N##ew)
 
-By pressing the *[.underline]##N##ew* button in the *_Malnutrition Browser_* window, you can access the *_New Malnutrition_* window below:
+By pressing the *[.underline]##N##ew* button in the *_Malnutrition Browser_* window, the *_New Malnutrition_* window shown below is available:
 
-image:image103.png[New Malnutrition,width=308,height=176]
+image:image103.png[New Malnutrition]
 
 To record a new control, enter the following fields:
 
 * *Date of this control*: the system automatically sets the date to today
 * *Date of next control*: the date of the next planned control
-* *Weight*: the weight of the patient; you may use any kind of measure with decimal notation
-* *Height*: the height of the patient; you may use any kind of measure with decimal notation
+* *Weight*: the weight of the patient; use any kind of measure with decimal notation
+* *Height*: the height of the patient; use any kind of measure with decimal notation
 
 === 10.9 Clinical Sheet (Clinical [.underline]##S##heet)
 
 The Clinical Sheet functionality is very similar to the *[.underline]##D##ata* functionality (see *_Patient Browser_* window).
 
 To access the Clinical sheet function, highlight the patient in the *_Patient Browser_* window.
-Next, press the *Clinical [.underline]##S##heet* button. The *_Patient Data_* window shown below will appear.
+Next, press the *Clinical [.underline]##S##heet* button. The *_Patient Data_* window shown below appears:
 
 image:image104.png[Patient Data,width=624,height=368]
 
-The window does not allow you to change data but, for the selected patient, it shows you all the outpatient (OPD) visits, the Admissions, his/her Laboratory exams and the various surgeries he/she underwent;
+The window does not allow changing the data but, for the selected patient, it shows all the outpatient (OPD) visits, the Admissions, his/her Laboratory exams and the various surgeries they underwent;
 by clicking on a row in the *Data table* at the top of the window, the related laboratory exams will be shown as follows:
 
 * selected row is an Admission: all the exams done between the admission date and the discharge date are shown in *Data table*, in the *_Exams_* tab
@@ -1771,52 +1770,52 @@ The tab *_Operations_* shows the various operations recorded for the selected pa
 
 The tab *_Drugs_* shows the drugs recorded for the selected patient
 
-In the *Buttons panel* you have the following choices:
+The *Buttons panel* has the following choices:
 
-* *[.underline]##O##PD Chart*: print the OPD chart if the selected row in the grid on top is an OPD visit
-* *[.underline]##A##dmission Chart*: print the Admission chart if the selected row in the grid on top is an Admission
+* *[.underline]##O##PD Chart*: print the OPD chart if the selected row in the grid on top is an OPD visit.
+* *[.underline]##A##dmission Chart*: print the Admission chart if the selected row in the grid on top is an Admission.
 * *Di[.underline]##s##charge Chart*: print the Discharge chart if the selected row in the grid on top is an Admission and the patient is already discharged.
-* *Launch [.underline]##R##eport*: print the clinical sheet of a patient
-* *[.underline]##D##ICOM*: launch DICOM viewer
-* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes
+* *Launch [.underline]##R##eport*: print the clinical sheet of a patient.
+* *[.underline]##D##ICOM*: launch the DICOM viewer.
+* *[.underline]##C##lose*: close the window and to return to the *_Patient Browser_* window without applying any changes.
 
-NOTE: You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 By pressing the *Launch [.underline]##R##eport* button from the *_Patient Data_* window, a new window appears:
 
-image:image244.png[Report ,width=300,height=356]
+image:image244.png[Report,width=300,height=356]
 
-The application is set to get the whole history of the patient, but you can change the report produced by querying a different date ranges and a specific set of information.
+The application is set to get the entire history of the patient, but this can be changed by querying a different date ranges and a specific set of information.
 
 [#dicom-viewer]
 ==== 10.9.1 DICOM ([.underline]##D##ICOM Viewer)
 
-You need to change the DICOM flag in the configuration file to activate the DICOM functionality. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 In the *_Patient Data_* window, click the [.underline]##D##ICOM button to access the *_DICOM Viewer_* window as shown below.
 
 image:image105.png[DICOM Viewer,width=642,height=361]
 
-This module allows you to attach DICOM files to the patient’s folder. To do this,
-click the *[.underline]##L##oad DICOM* button. The following window will appear.
+This module allows attaching DICOM files to the patient’s folder. To do this,
+click the *[.underline]##L##oad DICOM* button. The following window appears:
 
 image:image106.png[DICOM Open,width=517,height=366]
 
-In the case of multi-frame DICOM you can select a whole folder:
+In the case of multi-frame DICOM the whole folder can be selected:
 
 image:image106b.png[Dicom open multi-frame,width=517,height=366]
 
-You are then asked for the following data to be used for the DICOM (or the multi-frame DICOM series):
+Next the following data to be used for the DICOM is prompted for (or the multi-frame DICOM series):
 
 * *Date*: the system will propose the current date or other dates provided by the DICOM file itself
-* *Category (not mandatory)*: you will be asked for a Dicom category (see <<dicom-types,Dicom Types>>):
+* *Category*: optionally select a Dicom category (see <<dicom-types,Dicom Types>>):
 * *Description*: the description to be used
 
 image:image243.png[Dicom information,width=282,height=200]
 
-*[.underline]#N.B.#* There is no *Edit DICOM*, so if you make a mistake, you have to *Delete DICOM* and re-*Load DICOM* it again.
+*[.underline]#N.B.#* There is no *Edit DICOM*, so if a mistake is made, *Delete DICOM* and re-*Load DICOM* it again.
 
-Find the DICOM file on your computer and click the *Open DICOM* button to load the file into the *_DICOM viewer_*.
+Find the DICOM file and click the *Open DICOM* button to load the file into the *_DICOM viewer_*.
 
 image:image107.png[Dicom file,width=642,height=362]
 
@@ -1824,22 +1823,21 @@ To view the file in the main window, double-click on it.
 
 image:image108.png[DICOM file view,width=642,height=360]
 
-You can use the *Zoom* slider to Zoom in or out of the image.
+The *Zoom* slider can be used to Zoom in or out of the image.
 
-You can load more than one DICOM file to a patient folder. You can also delete a DICOM file from the patient's folder. You just have to select the file in the left view and
-click the *Delete DICOM* button.
+More than one DICOM file can be loaded into a patient folder. It is possible to delete a DICOM file from the patient's folder. First select the file in the left view and then click the *Delete DICOM* button.
 
-One can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask your Administrator how to do it or read the _Administrator’s Guide_.
+One can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 [#therapy-management]
 === 10.10 Therapy Management ([.underline]##T##herapy)
 
-To manage the therapy of a patient you have to highlight the patient in the *_Patient Browser_* window. Next,
-press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient will appear. The window has no name, we call it the *_Therapy_* window.
+To manage the therapy of a patient highlight the patient in the *_Patient Browser_* window. Next,
+press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient appears. The window has no name, we call it the *_Therapy_* window.
 
-From the *_Therapy_* window you can insert, modify or remove a therapy.
+In the *_Therapy_* window insertion, modification, or removal of a therapy is possible.
 
-From the *_Therapy_* window you can insert or remove a scheduled visit.
+In addition from the *_Therapy_* window insertion or removal scheduled visits is accomplished.
 
 The window is complex, see the comments below to understand the structure.
 
@@ -1848,29 +1846,29 @@ image:image109.png[Therapy window,width=642,height=375]
 [#add-a-therapy]
 ==== 10.10.1 Add a Therapy ([.underline]##A##dd Therapy)
 
-To add a new therapy for the patient, press the *[.underline]##A##dd Therapy* button on the right of the window. The *_New Therapy Entry Form_* window shown below will appear.
+To add a new therapy for the patient, press the *[.underline]##A##dd Therapy* button on the right of the window. The *_New Therapy Entry Form_* window shown below appears.
 
 A therapy defines for every pharmaceutical the quantity, frequency and period of use.
 
-You can add more than one therapy for the same patient. The set of therapies defined for a patient is called a “Therapy plan”.
+More than one therapy for the same patient can be added. The set of therapies defined for a patient is called a “Therapy plan”.
 
 image:image110.png[Therapy Entry Form,width=642,height=313]
 
 NOTE: To better explain how the function *Add a therapy* works, the *Therapy* window below (next page) shows the results of the therapy defined in the *_New Therapy Entry Form_* shown above.
 
-To add a therapy, you have to enter the following fields:
+To add a therapy the following information is required:
 
-* *Pharmaceutical*: pharmaceutical of the therapy*: in the example above _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
-* *Quantity*: set the quantity; you can define it by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
+* *Pharmaceutical*: the pharmaceutical of the therapy; in the example above _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
+* *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
 * *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above “One” means once per day
 * *Frequency within period*: set the periodicity of the therapy; in the example above every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
 * *Period*: set how long is the therapy, to do it select days, weeks and months; in the example above the therapy is 11 days long (4 days and 1 week)
 * *Starts – Ends*: set start and end dates of the therapy; in the example the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: optional area for free text for notes
 
-When you finish entering data in the *Buttons panel* you have the following choices:
+Once the data is entered the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until you do confirm it with the *[.underline]##S##ave* button in the *_Therapy_* window (see
+* *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
 <<save-function-therapy,Save function>> described below).
 * *[.underline]##C##ancel*: close the window and return to the *_Therapy_* window.
 
@@ -1878,16 +1876,16 @@ image:image111.png[Therapy window,width=642,height=372]
 
 ==== 10.10.2 Modify a Therapy ([.underline]##E##dit Therapy)
 
-To modify a therapy you have to highlight one occurrence of the therapy (see box above)
-in the *_Therapy_* window. Once you have done this, press the **[.underline]##E##dit Therapy** button.
-The *_Edit Therapy Entry Form_* window will appear. You can modify any of the data as in the *Add a therapy* function.
+To modify a therapy highlight one occurrence of the therapy (see box above)
+in the *_Therapy_* window and then press the **[.underline]##E##dit Therapy** button.
+The *_Edit Therapy Entry Form_* window will appear. Any of the data can be modified as in the *Add a therapy* function.
 
 See <<add-a-therapy,Add a therapy>> function for a detailed description.
 
 ==== 10.10.3 Remove a Therapy (Remove Therapy)
 
-To remove a therapy you have to highlight one occurrence of the therapy (see box above) in the
-*_Therapy_* window. Next, press the **[.underline]##R##emove Therapy** button and the therapy is
+To remove a therapy highlight one occurrence of the therapy (see box above) in the
+*_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
 removed. Therapies can be removed before or after the final saving (see
 <<save-function-therapy,Save function>>).
 
@@ -1968,7 +1966,7 @@ With these two checkboxes you can set the therapies plan for this patient as imp
 
 ==== 10.10.8 Visits
 
-By clicking on the *A[.underline]##d##d Visit* button, the following window will appear:
+By clicking on the *A[.underline]##d##d Visit* button, the following window appears:
 
 image:image118b.png[Add Visit,width=300,height=150]
 
@@ -2081,7 +2079,7 @@ Open Hospital ships with the following set of reports:
 
 === 11.2 Report Launcher (Launch Report)
 
-With this function you can produce all reports listed in the previous paragraph. Once you press the *S[.underline]##t##atistics* button on the main menu the *_Report Launcher_* window shown below will appear:
+With this function you can produce all reports listed in the previous paragraph. Once you press the *S[.underline]##t##atistics* button on the main menu the *_Report Launcher_* window shown below appears:
 
 image:image124.png[Report Launcher,width=642,height=121]
 
@@ -2158,7 +2156,7 @@ The functionality, up to Open Hospital 1.7.0, allows the following tasks:
 
 === 13.2 Chat
 
-By pressing the *Co[.underline]##m##munication* the *_Communication_* window shown below will appear:
+By pressing the *Co[.underline]##m##munication* the *_Communication_* window shown below appears:
 
 image:image129.png[Communication window,width=367,height=275]
 
@@ -2926,7 +2924,7 @@ To delete an SMS, highlight the SMS and click the *[.underline]##D##elete* butto
 
 The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask your Administrator how to do it or read the _Administrator’s Guide_.
 
-If _SINGLEUSER_ is set to NO the following login window will appear when the program starts:
+If _SINGLEUSER_ is set to NO the following login window appears when the program starts:
 
 image:image187.png[Login,width=305,height=148]
 
