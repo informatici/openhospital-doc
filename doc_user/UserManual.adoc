@@ -1832,12 +1832,13 @@ One can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag i
 [#therapy-management]
 === 10.10 Therapy Management ([.underline]##T##herapy)
 
-To manage the therapy of a patient highlight the patient in the *_Patient Browser_* window. Next,
+To manage the therapy of a patient, select the patient in the *_Patient Browser_* window. Next,
 press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient appears. The window has no name but it is typically referred to as the *_Therapy_* window.
+The name of the selected patient is shown at the top.
 
 In the *_Therapy_* window insertion, modification, or removal of a therapy is possible.
 
-In addition from the *_Therapy_* window insertion or removal scheduled visits is accomplished.
+In addition, from the *_Therapy_* window insertion or removal scheduled visits is accomplished.
 
 The window is complex, see the comments below to understand the structure.
 
@@ -1848,13 +1849,13 @@ image:image109.png[Therapy window,width=642,height=375]
 
 To add a new therapy for the patient, press the *[.underline]##A##dd Therapy* button on the right of the window. The *_New Therapy Entry Form_* window shown below appears.
 
-A therapy defines for every pharmaceutical the quantity, frequency and period of use.
+A therapy defines for every pharmaceutical: the quantity, frequency and period of use.
 
 More than one therapy for the same patient can be added. The set of therapies defined for a patient is called a “Therapy plan”.
 
 image:image110.png[Therapy Entry Form,width=642,height=313]
 
-NOTE: To better explain how the function *Add a therapy* works, the *Therapy* window below (next page) shows the results of the therapy defined in the *_New Therapy Entry Form_* shown above.
+NOTE: To better explain how the function *Add a therapy* works, the *Therapy* window below shows the results of the therapy defined in the *_New Therapy Entry Form_* shown above.
 
 To add a therapy the following information is required:
 
@@ -1868,8 +1869,7 @@ To add a therapy the following information is required:
 
 Once the data is entered the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
-<<save-function-therapy,Save function>> described below).
+* *[.underline]##O##K*: confirm the data of the therapy. The therapy is automatically saved.
 * *[.underline]##C##ancel*: close the window and return to the *_Therapy_* window.
 
 image:image111.png[Therapy window,width=642,height=372]
@@ -1886,8 +1886,8 @@ See <<add-a-therapy,Add a therapy>> function for a detailed description.
 
 To remove a therapy highlight one occurrence of the therapy (see box above) in the
 *_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
-removed. Therapies can be removed before or after the final saving (see
-<<save-function-therapy,Save function>>).
+removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled). 
+The removing of a therapy is not effective until it is confirmed with *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
 
 [#check-availability-of-the-pharmaceuticals]
 ==== 10.10.4 Check Availability of the Pharmaceuticals (C[.underline]##h##eck Availability)
@@ -1913,11 +1913,11 @@ The check function is not mandatory, the therapy plan can be saved without check
 [#save-function-therapy]
 ==== 10.10.5 Save Function ([.underline]##S##ave)
 
-When the input of the therapy plan is complete press the *[.underline]##S##ave* button in the *Buttons panel* of the *_Therapy_* window. Be aware that the therapy plan is saved when the *_Message_* window below appears:
+When the input of the therapy plan is completed, press the *[.underline]##S##ave* button in the *Buttons panel* of the *_Therapy_* window. Be aware that the therapy plan is saved when the *_Message_* window below appears:
 
 image:image116.png[Therapy plan saved]
 
-If the availability check was not executed (see
+If the availability check has not been executed yet (see
 <<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>) the *_Not checked_* window shown below appears:
 
 image:image114.png[Therapy not checked]
@@ -1928,8 +1928,7 @@ The *Buttons panel* has the following choices:
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
 If the availability check is done (see
-<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>) but the pharmaceuticals requested by the therapy plan do
-not exist in the hospital, the *_Not Available_* window shown below appears.
+<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>) but the drugs requested by the therapy plan are not available in the hospital, the *_Not Available_* window shown below appears.
 
 image:image115.png[Therapy not available]
 
@@ -1946,19 +1945,24 @@ Press *[.underline]##O##K* to finish.
 
 ==== 10.10.6 Close Function (Close)
 
-The close function exits from the *_Therapy window._* Press the *Close* button to access the Close function. The *_Select an option_* *_window_* shown below appears. The *Buttons panel* has the following choices:
+The close function exits from the *_Therapy window._* Press the *Close* button to access the Close function. The *_Select an option_* *_window_* shown below appears. 
+
+The *Buttons panel* has the following choices:
+
+image:image117.png[Therapy save and close,width=379,height=128]
 
 * *[.underline]##Y##es*: this function is the same as the *Save function ([.underline]##S##ave)* described above.
 * *[.underline]##N##o*: return to the *_Therapy_* window without saving the therapy plan.
 * *[.underline]##C##ancel*: exit the function and return to the *_Therapy_* window without applying any changes.
 
-image:image117.png[Therapy save and close,width=379,height=128]
 
 ==== 10.10.7 Notify & SMS 
 
 image:image118.png[Notify & SMS,width=170,height=131]
 
-Use these two checkboxes to set the therapies plan for this patient as important (not implemented yet) and notifiable via SMS. Briefly:
+Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS. 
+
+Briefly, the SMS notification will work in the following way:
 
 * therapies: will be notified to the patient with an SMS at 8:00 am, with text “REMINDER: “ + therapy details
 * visits: will be notified to the patient with an SMS 24 hours before the scheduled date and time, with the text “REMINDER VISIT: “ + visit details (see
@@ -1975,15 +1979,14 @@ The patient is already selected, while other fields need to be set:
 * *Ward*: to specify the ward where the patient has to be received (it will be shown in the Worksheet, see
 <<worksheet,Worksheet>>)
 * *Service*: a brief description of the service that will be provided to the patient (optional)
-* *Duration (Min)*: the estimated duration of the service that will be provided (optional)
+* *Duration (Min)*: the estimated duration of the service that will be provided (optional, default is 30min)
 * *Date*: the date and the time for the appointment
 
-Press *[.underline]##O##K* to save the appointment and it will be shown in the calendar, along with the therapies.
+Rhe appointment is automatically saved and it will be shown in the calendar, along with the therapies.
 
 image:image118c.png[Therapy,width=600,height=302]
 
-TIP: By pressing the *Worksheet* button a visit can be added. The instructions are the same as in
-described here with the only difference being the patient is already selected and cannot be changed.
+TIP: By pressing the *Worksheet* button a visit can be added also there after checking the actual workload for a specific date.
 
 
 === 10.11 Merge Function ([.underline]##M##erge)
