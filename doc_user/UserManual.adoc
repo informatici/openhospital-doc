@@ -1982,7 +1982,7 @@ The patient is already selected, while other fields need to be set:
 * *Duration (Min)*: the estimated duration of the service that will be provided (optional, default is 30min)
 * *Date*: the date and the time for the appointment
 
-Rhe appointment is automatically saved and it will be shown in the calendar, along with the therapies.
+The appointment is automatically saved and it will be shown in the calendar, along with the therapies.
 
 image:image118c.png[Therapy,width=600,height=302]
 
