@@ -1836,9 +1836,9 @@ To manage the therapy of a patient, select the patient in the *_Patient Browser_
 press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient appears. The window has no name but it is typically referred to as the *_Therapy_* window.
 The name of the selected patient is shown at the top.
 
-In the *_Therapy_* window insertion, modification, or removal of a therapy is possible.
+In the *_Therapy_* window, it is possible to insert, modify or remove a therapy for the selected patient.
 
-In addition, from the *_Therapy_* window insertion or removal scheduled visits is accomplished.
+In addition, from the *_Therapy_* window, it is possible to insert or remove (no modify) scheduled visits for the selected patient.
 
 The window is complex, see the comments below to understand the structure.
 
