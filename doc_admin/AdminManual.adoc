@@ -245,11 +245,11 @@ using the ‘root’ password you have chosen during the installation process. T
 mysql>
 ----
 
-Create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
+Create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands (you can adjust database name, user and password according to your specific setup):
 
 [source,shell]
 ----
-mysql>  CREATE DATABASE isf; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123'; 
+mysql>  CREATE DATABASE oh; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123'; 
         CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123'; GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'localhost'; \
         GRANT ALL PRIVILEGES ON isf.* TO 'isf'@'%';
 mysql>  FLUSH PRIVILEGES;
