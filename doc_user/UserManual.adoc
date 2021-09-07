@@ -1838,7 +1838,7 @@ The name of the selected patient is shown at the top.
 
 In the *_Therapy_* window, it is possible to insert, modify or remove a therapy for the selected patient.
 
-In addition, from the *_Therapy_* window, it is possible to insert or remove (no modify) scheduled visits for the selected patient.
+In addition, from the *_Therapy_* window, it is possible to insert or remove (not modify) scheduled visits for the selected patient.
 
 The window is complex, see the comments below to understand the structure.
 
