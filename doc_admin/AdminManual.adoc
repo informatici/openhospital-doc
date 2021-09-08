@@ -21,7 +21,7 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 
 == 1 Abstract
 
-[Open Hospital][openhospital] (OH) is a free and pen-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] Electronic Health Record (EHR) application.
+[Open Hospital][openhospital] (OH) is a free and open-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] Electronic Health Record (EHR) application.
 Open Hospital is deployed as desktop application that can be used in a standalone (portable), single user mode
 or in a client-server network configuration, where multiple clients and users can connect to the same database server.
 Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the information management and the activities of hospitals and health centers.
@@ -51,7 +51,7 @@ The reader of this manual will not find the information needed to use the applic
 
 == 2 Introduction
 
-The aim of this program is to manage, in the simplest manner, the hospital administrative operations like registering patients and laboratory analysis, and to produce statistics for the health ministry. In the following chapters the information needed to install and configure the software properly can be found.
+The aim of this program is to manage, in the simplest manner, the hospital administrative operations like registering patients and laboratory analysis, and to produce detailed statistics and reports. In the following chapters all the information needed to install and configure the software are presented.
 
 <<<
 
@@ -61,11 +61,11 @@ The aim of this program is to manage, in the simplest manner, the hospital admin
 
 Open Hospital is a stand-alone Javafootnote:[Java is a registered trademark of Oracle and/or its affiliates.] software program that does not require installation and is often known as a portable installation. The .zip file can be copied and moved everywhere on the target system, whether the operating system is Windows or Linux.
 
-The software acts as a client application. The server part utilizes a DBMS (Database Management System) to persist information. From the inception of the software, the free and open-source MySQLfootnode:[See https://www.mysql.com/] database system is the DBMS of choice.
+The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MySQLfootnode:[See https://www.mariadb.org] MariaDB is the database server of choice.
 
-The real part of the installation includes installing the JRE (Java Runtime Environment), installing the MySQL Server, and the creation of the database (DB). This installation is accomplished through the execution of a script in the folder sql/ within the .zip file folders.
+The procedure includes the installation the JRE (Java Runtime Environment), the MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
-The classic installation schema in a regular wired LAN network is shown in the following figure:
+The typical client/server, network (LAN) configuration is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
@@ -81,11 +81,13 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
-For the MySQL installation and DB creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
+For the MySQL/MariaDB installation and database creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
 
 For the Open Hospital installation on every client, it is sufficient to copy and extract the zip file on the machine.
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
+
+TIP: Some tasks can be automated using the new oh.sh / oh.ps1 scripts.
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
@@ -96,9 +98,9 @@ include::./oh_software_compatibility_matrix.adoc[]
 [#jre]
 ==== 3.1.2 Java Runtime Environment (JRE)
 
-Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment (JRE)
-
-For instance, on a Microsoft Windows® system, the JRE is downloaded and setup file is executed, while on Linux based systems a single command is typed into a terminal window.
+Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment (JRE).
+The oh.sh / oh.ps1 set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install
+manually, following the specific instructions for your operating system.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
 
@@ -109,9 +111,9 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 
 Depending on the operating system, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
-For instance, on a Microsoft Windows® system, MySQL Workbench® serves as a client, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools are used to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
+For instance, on a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools are used to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
-The best approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
+The suggested approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB / MySQL version.
 
@@ -119,7 +121,7 @@ NOTE: MariaDB is the preferred alternative for the DBMS.
 
 ===== 3.1.3.1 MySQL - Server installation
 
-Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://www.mysql.com/downloads/] and installationfootnote:[https://dev.mysql.com/doc/] information while using this document.
+Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
 
 Generally, the main aspects the Administrator has to pay attention to are:
 
@@ -138,7 +140,7 @@ Generally, the main aspects the Administrator has to pay attention to are:
 * Select *Include Bin Directory In Windows PATH*
 * Select *Modify Security Settings*, choose the *root password*, and keep it safe
 
-Once the installation is complete the next stop is the Open Hospital DB creation. To check if the server is active and running,  open a terminal window (command prompt) and type the following command:
+Once the installation is complete the next stop is the Open Hospital database creation. To check if the server is active and running,  open a terminal window (command prompt) and type the following command:
 
 *# mysql –u root -p*
 
@@ -229,16 +231,17 @@ Open a terminal and navigate to the sql/ folder e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd D:\OpenHospital_1_11_0\sql
+C:\WINDOWS> cd D:\OpenHospital-v1.11.0\sql
 
-D:\OpenHospital_1_11_0\sql>
+D:\OpenHospital-v1.11.0\sql
+
 ----
 
 and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-D:\OpenHospital_1_11_0\mysq> mysql –u root -p
+D:\OpenHospital-v1.11.0\sql> mysql -u root -p
 Enter password: *****
 ----
 
@@ -288,7 +291,7 @@ client by logging in again and specifying the "--local-infile=1" parameter after
 
 The script creates the OH database structure and populates it with default data.
 
-The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the DB and its password must be changed immediately with the command:
+The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the database and its password must be changed immediately with the command:
 
 [source,shell]
 ----
@@ -322,10 +325,10 @@ Open Hospital comes with several configuration files called “properties files�
 Specify:
 
 * the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
-* the “isf” user *password*
+* the “isf” (or the user specified in the installation phase) user *password*
 * the MySQL Server *Port Number*, if changed from “3306”
 
-NOTE: These settings are required for every Open Hospital copy, that is to say, on every client.
+NOTE: These settings are required for every Open Hospital copy / client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
@@ -337,7 +340,7 @@ The Open Hospital software is now ready to be run by executing the proper launch
 * *on a Linux machine*: oh.sh -C (Client mode)
 * *on a Windows machine*: oh.bat (Select Client mode)
 
-If everything is OK the Open Hospital main splash screen appears:
+If everything is working, the Open Hospital main splash screen is presented:
 
 image:image17.jpeg[Splash.jpg,width=316,height=237]
 
@@ -351,9 +354,9 @@ image:image100.png[oh.ico,width=32,height=32]
 
 === 3.2 Open Hospital - Portable
 
-Open Hospital is also distributed in a portable format.
+Open Hospital is also distributed in a *portable* mode.
 
-Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the DB. This package can be copied and run everywhere, carrying together all the saved data.
+Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
 
 Since the JRE and MySQL are not platform-independent and come in different versions depending on the platform, there exists:
 
@@ -385,10 +388,14 @@ NOTE: Folder structure and known issues are found at:
 https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 [#backup-restore]
-=== 3.3 Backup & Restore (alternative with MySQL Workbench®)
+=== 3.3 Backup & Restore
+
+Backup of the Open Hospital database can be performed in several ways. The easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s":
+
+Restore of the database is also possible; See script help form more informations.
 
 [#backup-data]
-==== 3.3.1 Backup of data (Database)
+==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
 
 There are several ways to back up and restore *data* with MySQL. The recommend method is to use a common MySQL client such as MySQL Workbench®:
 
@@ -407,7 +414,7 @@ From https://stackoverflow.com/a/18379189:
 image:image22.png[image,width=642,height=461]
 
 [#restore-data]
-==== 3.3.2 Restore of data (Database)
+==== 3.3.2 Restore of database (alternative with MySQL Workbench®)
 
 To restore data with MySQL Workbench®:
 
@@ -441,7 +448,7 @@ Open Hospital has a folder tree hierarchy which consists of:
 * *rsc* – contains the *resources* of Open Hospital, like configuration files and other stuff
 * *rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *rsc/images* – contains the *images* used in Open Hospital
-* *sql* – contains the scripts and configurations for MySQL DB
+* *sql* – contains the scripts and configurations for MySQL database
 
 These folders may be organized differently depending on the version of the software.
 
@@ -472,7 +479,7 @@ In the Open Hospital zip file the following folder tree structure is found in th
 In Open Hospital portable for Linux the following folder tree structure is found in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
 
 * *OpenHospital-_<version>_-linux_i686-portable*/ or *OpenHospital-_<version>_-linux_x86_64-portable*/
-** data/ - folder for DB, DICOM files and logs
+** data/ - folder for database, DICOM files and logs
 ** etc/ - working folder
 ** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
 ** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
@@ -490,7 +497,7 @@ In Open Hospital portable for Linux the following folder tree structure is found
 In Open Hospital portable for Windows the following folder tree structure is found in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
 
 * *OpenHospital-_<version>_-win32-portable*/
-** data/ - folder for DB, DICOM files and logs
+** data/ - folder for database, DICOM files and logs
 ** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
 ** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
 ** *oh/ the OpenHospital subfolder structure*
