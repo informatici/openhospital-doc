@@ -1869,7 +1869,8 @@ To add a therapy the following information is required:
 
 Once the data is entered the *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the data of the therapy. The therapy is automatically saved.
+* *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
+<<save-function-therapy,Save function>> described below).
 * *[.underline]##C##ancel*: close the window and return to the *_Therapy_* window.
 
 image:image111.png[Therapy window,width=642,height=372]
@@ -1982,7 +1983,7 @@ The patient is already selected, while other fields need to be set:
 * *Duration (Min)*: the estimated duration of the service that will be provided (optional, default is 30min)
 * *Date*: the date and the time for the appointment
 
-The appointment is automatically saved and it will be shown in the calendar, along with the therapies.
+Press *[.underline]##O##K* to save the appointment and it will be shown in the calendar, along with the therapies.
 
 image:image118c.png[Therapy,width=600,height=302]
 
@@ -3020,6 +3021,7 @@ In all cases the window _[.underline]#always#_ shows the chosen date on the left
 The functions available in this window are:
 
 * *Add Visit*: schedule a new visit for a specific date (on the left or on the right).
+* *Remove Visit*: remove a visit for a specific date (on the left or on the right).
 * *Print this day's visits*: print the specific date scheduled visits.
 * *[.underline]##N##ext->*: see the schedule for the following day.
 * *<-[.underline]##P##rev.*: see the schedule for the previous day.
