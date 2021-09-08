@@ -21,9 +21,13 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 
 == 1 Abstract
 
-This application is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the management and the activities of the St. Luke Hospital in Angal (Uganda). After that initial mission, the St. Luke Hospital has become the first one of a long list of hospitals that have found this software useful.
+[Open Hospital][openhospital] (OH) is a free and pen-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] Electronic Health Record (EHR) application.
+Open Hospital is deployed as desktop application that can be used in a standalone (portable), single user mode
+or in a client-server network configuration, where multiple clients and users can connect to the same database server.
+Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the information management and the activities of hospitals and health centers.
+It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
 
-All the work on this software is done as an open-sourcefootnote:[Open-source = software for which the original *source code* is made available to anyone free of charge.] project using only open-source development software.
+Open Hospital is developed in Java and it is based on open-source tools and libraries; it is designed to work without an internet connection and requires low computer resources.
 
 This application software consists of the following parts:
 
