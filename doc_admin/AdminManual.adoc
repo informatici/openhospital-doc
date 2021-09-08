@@ -78,7 +78,7 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
-For the MariaDB/MySQL installation and database creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
+For the MariaDB/MySQL database server installation and database creation refer to the chapter <<database-server,Database Server and Open Hospital DB>> and the online documentation.
 
 For the Open Hospital installation on every client, it is sufficient to copy and extract the zip file on the machine.
 
@@ -103,7 +103,7 @@ NOTE: See Software Compatibility Matrix in order to identify the correct Java ve
 
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
-[#mysql-server]
+[#database-server]
 ==== 3.1.3 Database server configuration
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
