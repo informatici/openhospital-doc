@@ -96,8 +96,8 @@ include::./oh_software_compatibility_matrix.adoc[]
 ==== 3.1.2 Java Runtime Environment (JRE)
 
 Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment (JRE).
-The oh.sh / oh.ps1 set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install
-manually, following the specific instructions for your operating system.
+The oh.sh / oh.ps1 set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install it
+manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
 
@@ -389,7 +389,7 @@ https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 Backup of the Open Hospital database can be performed in several ways. The easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s":
 
-Restore of the database is also possible; See script help for more informations.
+Restore of the database is also possible; See script help for more information.
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
@@ -457,7 +457,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
 
-Depending on the choosen operating system and architecture, you will also find the directories containing the needed external applications and libraries, like MySQL/MariaDB and Java JRE:
+Depending on the choosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
 ** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
