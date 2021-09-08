@@ -30,6 +30,10 @@ Open Hospital is developed in Java and it is based on open-source tools and libr
 Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for the hospital administrative operations (like registering patients, manage laboratory analysis and pharmaceutical stocks) and to produce detailed statistics and reports.
 It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
 
+<<<
+
+== 2 Introduction
+
 Open Hospital features include:
 
 * Pharmacy management
@@ -44,14 +48,9 @@ Open Hospital features include:
 * Internal communication
 * Statistics and printing
 
-This manual describes the tasks needed to use the application. All the information needed to use the application software are not included; please refer to the _User’s Guide_, supplied with the application software.
-
-<<<
-
-== 2 Introduction
-
 In the following chapters all the information needed to install, configure, run and mantain an Open Hospital installation are presented.
-The information included allow enabling and disabling functionality as well as managing users and groups.
+The information included also allow enabling and disabling functionality as well as managing users and groups.
+All the information needed to use the application software are not included; please refer to the _User’s Guide_, supplied with the application software.
 
 <<<
 
