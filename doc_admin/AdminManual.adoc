@@ -436,9 +436,9 @@ correctly perform any future Update process (see <<update-open-hospital,Update O
 [#folders]
 == 4 Directory structure
 
-Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version:
+Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *<operating_system> with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
 
-* *OpenHospital-_<version>_-multiarch-client*/
+* *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
 * *bundle* – contains the *language* files
 * *etc* – contains the DBMS configuration files
 * *doc* – contains the Open Hospital *documentation*
@@ -460,20 +460,9 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
 
-=== 4.1 Folder tree in Open Hospital portable for Linux (32 and 64bit)
+Depending on the choosen operating system and architecture, you will also find the directories containing the needed external applications and libraries, like MySQL/MariaDB and Java JRE:
 
-In Open Hospital portable for Linux the following folder tree structure is found in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version and *_<arch>_* with the OS architecture (x32 or x64):
-
-* *OpenHospital-_<version>_-linux_i686-portable*/ or *OpenHospital-_<version>_-linux_x86_64-portable*/
-** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
-** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
-
-=== 4.2 Folder tree in Open Hospital portable for Windows (32bit)
-
-In Open Hospital portable for Windows the following folder tree structure is found in the downloaded archive, where *_<version>_* is replaced with the current Open Hospital version:
-
-* *OpenHospital-_<version>_-win32-portable*/
-** _jdk-11.0.9+11-jre/_ (64bit) or _zulu11.43.21-ca-jre11.0.9-linux_i686/_ (32bit) - Java Virtual Machine
+** _jdk-11.0.9+11-jre/_ or _zulu11.43.21-ca-jre11.0.9-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
 
 <<<
