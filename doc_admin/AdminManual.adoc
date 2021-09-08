@@ -387,7 +387,8 @@ https://github.com/informatici/openhospital/blob/master/POH-README.md
 [#backup-restore]
 === 3.3 Backup & Restore
 
-Backup of the Open Hospital database can be performed in several ways. The easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s":
+Backup of the Open Hospital database can be performed in several ways.
+NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s".
 
 Restore of the database is also possible; See script help for more information.
 
