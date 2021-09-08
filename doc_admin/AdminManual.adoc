@@ -59,7 +59,7 @@ The aim of this program is to manage, in the simplest manner, the hospital admin
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MySQLfootnode:[See https://www.mariadb.org] MariaDB is the database server of choice.
+The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MariaDBfootnode:[See https://www.mariadb.org] MariaDB is the database server of choice.
 
 The procedure includes the installation of the JRE (Java Runtime Environment), the MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
