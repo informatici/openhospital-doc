@@ -58,9 +58,9 @@ All the information needed to use the application software are not included; ple
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MariaDBfootnode:[See https://www.mariadb.org] MariaDB is the database server of choice.
+The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] MariaDB is the database server of choice.
 
-The procedure includes the installation of the JRE (Java Runtime Environment), the MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
+The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
 The typical client/server, network (LAN) configuration is shown in the following figure:
 
@@ -71,14 +71,14 @@ The Administrator/Installer tasks are hereby listed:
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 * Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for full compliance)
-* Install the MySQL server on a computer that will act as the OH “server”
+* Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Copy the Open Hospital application on every client (it may be installed on the server also)
-* Configure each Open Hospital copy to point to the MySQL server (using the hostname or the IP address)
+* Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
 
 For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
-For the MySQL/MariaDB installation and database creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
+For the MariaDB/MySQL installation and database creation refer to the chapter <<mysql-server,MySQL Server and Open Hospital DB>> and the online documentation.
 
 For the Open Hospital installation on every client, it is sufficient to copy and extract the zip file on the machine.
 
@@ -106,7 +106,7 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 [#mysql-server]
 ==== 3.1.3 Database server configuration
 
-Depending on the operating system, there are several software tools to install and manage a MySQL server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
+Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
 For instance, on a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools are used to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
 
@@ -116,9 +116,9 @@ NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB
 
 NOTE: MariaDB is the preferred alternative for the DBMS.
 
-===== 3.1.3.1 MySQL - Server installation
+===== 3.1.3.1 MariaDB/MySQL - Server installation
 
-Please referer to the latest MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
+Please referer to the latest MariaDB/MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
 
 Generally, the main aspects the Administrator has to pay attention to are:
 
@@ -147,14 +147,14 @@ The terminal should reply with the MySQL client command line prompt:
 
 *mysql>*
 
-The prompt means there is a successful connection to the MySQL Server instance that was just installed as evidenced by it waiting for commands to execute.
+The prompt means there is a successful connection to the database Server instance that was just installed as evidenced by it waiting for commands to execute.
 
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
 
-===== 3.1.3.2 MySQL - Configuration
+===== 3.1.3.2 MariaDB/MySQL - Configuration
 
-Please use the following configuration values for MySQL server in my.cnf config file. Values can be adjusted and adapted to the hardware resources available.
+Please use the following configuration values for MariaDB/MySQL server in my.cnf config file. Values can be adjusted and adapted to the hardware resources available.
 
 ----
 #
@@ -194,9 +194,9 @@ read_buffer = 2M
 write_buffer = 2M
 ----
 
-===== 3.1.3.3 MySQL - Networking
+===== 3.1.3.3 MariaDB/MySQL - Networking
 
-If deployed in a client-server, networked configuration, the MySQL server must be configured to listen on the network interface connected to the local LAN; this can be achieved by changing MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
+If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by changing MariaDB/MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
 
 Change:
 
@@ -321,9 +321,9 @@ Open Hospital comes with several configuration files called “properties files�
 
 Specify:
 
-* the *IP address* of the machine where the MySQL Server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
+* the *IP address* of the machine where the database server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
 * the “isf” (or the user specified in the installation phase) user *password*
-* the MySQL Server *Port Number*, if changed from “3306”
+* the MariaDB/MySQL Server *Port Number*, if changed from “3306”
 
 NOTE: These settings are required for every Open Hospital copy / client.
 
@@ -353,12 +353,12 @@ image:image100.png[oh.ico,width=32,height=32]
 
 Open Hospital is also distributed in a *portable* mode.
 
-Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
+Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
 
-Since the JRE and MySQL are not platform-independent and come in different versions depending on the platform, there exists:
+Since the JRE and MariaDB/MySQL are not platform-independent and come in different versions depending on the platform, there exists:
 
-* *Open Hospital portable for Linux* platforms (embedding Java JRE and MySQL for Linux, 32 or 64bit)
-* *Open Hospital portable for Windows* platforms (embedding Java JRE and MySQL for Windows)
+* *Open Hospital portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
+* *Open Hospital portable for Windows* platforms (embedding Java JRE and MariaDB for Windows)
 
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
@@ -452,7 +452,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *data/logs* – contains all the logs
 * *data/dicom* – contains all the logs
 * *data/dump* – contains the backups
-* *sql* – contains the scripts and configurations for MySQL database
+* *sql* – contains the database creation scripts
 * *tmp* – temporary folder
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
@@ -1316,17 +1316,17 @@ jdbc.password=isf123
 The first two parameters are not meant to be modified by the user nor by the Administrator.
 The remaining five parameters may need modification according to the network settings.
 
-* *jdbc.drivers*: the Java library used to connect to a MySQL Server
+* *jdbc.drivers*: the Java library used to connect to a database server
 * *jdbc.url*: the address to point to the MySQL Server
-* *jdbc.server*: the IP address of the server (where the MySQL Server is installed);
+* *jdbc.server*: the IP address of the databse server (where MariaDB/MySQL Server is installed);
 localhost means the same computer where this file is located; others values can be: +
 _127.0.0.1_ – loopback network +
 _192.168.0.100_ – an example of a private IP address (LAN) +
 _217.147.110.117_ – an example of a public IP address (WAN)
 * *jdbc.db*: the name of the Open Hospital database
-* *jdbc.username*: the MySQL user allowed to connect and operate on the database
+* *jdbc.username*: the database user allowed to connect and operate on the database
 * *jdbc.password*: the user password
-* *jdbc.port*: the TCP port where the MySQL Server is listening; by default, this port is 3306 but can be changed if needed to match the installation
+* *jdbc.port*: the TCP port where the database server is listening; by default, this port is 3306 but can be changed if needed to match the installation
 
 The full address for the database using the defaults then is:
 
@@ -1356,7 +1356,7 @@ dicom.max.size=4M
 ** org.isf.dicom.FileSystemDicomManager: The dicom file is stored in the file system
 * *dicom.storage.filesystem*: if the value of the first parameter is org.isf.dicom.FileSystemDicomManager,
 this property specifies the path where the DICOM files are stored.
-* *dicom.max.size*: is the maximum allowed size for a dicom/jpg image (the MySQL server setting max_allowed_packet should be set with the same or a larger value).
+* *dicom.max.size*: is the maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
 === 5.4 examination.properties
@@ -1648,13 +1648,13 @@ This file is used only if the XMPPMODULEENABLED flag is enabled (see <<xmppmodul
 
 To use the Communication module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#13-communication-communication[13 Communication] in the User’s Guide), install an
-XMPP Server separately on the OH Server, typically on the same machine as the MySQL Server.
+XMPP Server separately on the OH Server, typically on the same machine as the database server.
 
 The most common XMPP Server is the free and open-source project Ignite Openfire® (http://www.igniterealtime.org/projects/openfire/) available for Linux, Windows, and Mac.
 
 Once the XMPP Server is installed, active and running set the two parameters in the xmpp.properties file as follows:
 
-* *DOMAIN* – the IP address of the XMPP server (it could be the same as the MySQL Server)
+* *DOMAIN* – the IP address of the XMPP server (it could be the same as the database server)
 * *PORT* – 5222 or another if set differently
 
 NOTE: An application restart is required to see the modification applied.
@@ -1731,7 +1731,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
-Assuming Eclipse EE, MySQL/MariaDB and the Java Virtual Machine 1.8 or higher (Java8 or greater)
+Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
 are already installed on the computer, this chapter will focus on cloning version 1.11.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
