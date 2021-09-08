@@ -70,7 +70,7 @@ The Administrator/Installer tasks are hereby listed:
 
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
-* Install the Java Runtime Environment 1.8 or higher (1.8 is recommended for full compliance)
+* Install the Java Runtime Environment (see compatibility matrix for the right version)
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Copy the Open Hospital application on every client (it may be installed on the server also)
 * Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
@@ -108,9 +108,9 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
-For instance, on a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools are used to perform the same tasks. Some newer distributions (distros) include MySQL Workbench.
+On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
 
-The suggested approach for installation is to use the command-line MySQL client which uses essentially the same commands and syntax for every platform.
+The suggested approach for installation is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB / MySQL version.
 
