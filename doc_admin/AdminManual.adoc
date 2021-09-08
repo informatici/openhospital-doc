@@ -25,12 +25,12 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
 or in a client-server network configuration (CLIENT mode), where multiple clients and users can connect to the same database server.
 
-Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the information management and the activities of hospitals and health centers.
-It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
-
 Open Hospital is developed in Java and it is based on open-source tools and libraries; it is designed to work without an internet connection and requires low computer resources.
 
-This application software consists of the following parts:
+Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for the hospital administrative operations (like registering patients, manage laboratory analysis and pharmaceutical stocks) and to produce detailed statistics and reports.
+It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
+
+Open Hospital features include:
 
 * Pharmacy management
 * Laboratory management
@@ -44,15 +44,14 @@ This application software consists of the following parts:
 * Internal communication
 * Statistics and printing
 
-This document describes how to install and configure the application. This includes enabling and disabling functionality as well as managing users and groups.
-
-The reader of this manual will not find the information needed to use the application software; that information is found in the _User’s Guide_, supplied with the application software.
+This manual describes the tasks needed to use the application. All the information needed to use the application software are not included; please refer to the _User’s Guide_, supplied with the application software.
 
 <<<
 
 == 2 Introduction
 
-The aim of this program is to manage, in the simplest manner, the hospital administrative operations like registering patients and laboratory analysis, and to produce detailed statistics and reports. In the following chapters all the information needed to install and configure the software are presented.
+In the following chapters all the information needed to install, configure, run and mantain an Open Hospital installation are presented.
+The information included allow enabling and disabling functionality as well as managing users and groups.
 
 <<<
 
