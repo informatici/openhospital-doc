@@ -449,11 +449,11 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *oh/rsc* – contains the *resources* of Open Hospital, like configuration files and other related files
 * *oh/rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *oh/rsc/images* – contains the *images* used in Open Hospital
-* *data* – contains all the data (database, logs) - created after the first startup
+* *data* – contains all the OH data - created after the first startup
 * *data/db* – contains the database files
 * *data/logs* – contains all the logs
-* *data/dicom* – contains all the logs
-* *data/dump* – contains the backups
+* *data/dicom* – contains the dicom files
+* *data/dump* – contains the database backups
 * *sql* – contains the database creation scripts
 * *tmp* – temporary folder
 
@@ -462,7 +462,7 @@ These folders may be organized differently depending on the version of the softw
 Depending on the choosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
 ** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
-** _mysql-<version>-<arch>-<build>/_ or _mariadb-<version>-<arch>/_ - MySQL Server or MariaDB Server
+** __mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
 
@@ -490,7 +490,7 @@ Every configuration file works only [.underline]#locally# and is meant to manage
 
 This means that if there are many clients running Open Hospital they may run differently according to their own configuration files.
 
-NOTE: Any change to these files requires an application restart to see the modifications applied.
+NOTE: Any change to these files requires an application restart to apply the settings.
 
 The following chapters will describe these properties files and their features in detail.
 
@@ -583,7 +583,7 @@ Open Hospital ships with nine translations, identified by the international coun
 To change the language used in the application simply edit *_settings.properties_* and change the value of this key.
 If an unknown value is set, the local computer language is applied.
 
-NOTE: An application restart is required to see the modification applied.
+NOTE: An application restart is required to apply the setting.
 
 ==== 5.1.2 SINGLEUSER
 
