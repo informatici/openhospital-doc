@@ -287,7 +287,7 @@ NOTE: The data can be installed with different languages by using the related "c
 NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears the "local infile" command must be enabled on the
 client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
 
-The script creates the OH database structure and populates it with default data.
+The SQL script creates the OH database structure and populates it with default data.
 
 The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the database and its password must be changed immediately with the command:
 
@@ -390,7 +390,7 @@ https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 Backup of the Open Hospital database can be performed in several ways. The easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s":
 
-Restore of the database is also possible; See script help form more informations.
+Restore of the database is also possible; See script help for more informations.
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
