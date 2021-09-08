@@ -334,10 +334,10 @@ More information on these files can be found in the sections <<database-properti
 
 The Open Hospital software is now ready to be run by executing the proper launcher command:
 
-* *on a Linux machine*: oh.sh -C (Client mode)
-* *on a Windows machine*: oh.bat (Select Client mode)
+* on a Linux machine: *oh.sh -C* (Client mode)
+* on a Windows machine: *oh.bat* (Select Client modei from interactive menu)
 
-If everything is working, the Open Hospital main splash screen is presented:
+If everything is configured correctly, the Open Hospital main splash screen is presented:
 
 image:image17.jpeg[Splash.jpg,width=316,height=237]
 
@@ -349,7 +349,7 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
-=== 3.2 Open Hospital - Portable
+=== 3.2 Open Hospital - Portable mode
 
 Open Hospital is also distributed in a *portable* mode.
 
