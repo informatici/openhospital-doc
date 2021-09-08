@@ -84,7 +84,7 @@ For the Open Hospital installation on every client, it is sufficient to copy and
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
-TIP: Some tasks can be automated using the new oh.sh / oh.ps1 scripts.
+TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
@@ -96,7 +96,7 @@ include::./oh_software_compatibility_matrix.adoc[]
 ==== 3.1.2 Java Runtime Environment (JRE)
 
 Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment (JRE).
-The oh.sh / oh.ps1 set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install it
+The oh.sh / oh.bat set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install it
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
@@ -389,9 +389,9 @@ https://github.com/informatici/openhospital/blob/master/POH-README.md
 
 Backup of the Open Hospital database can be performed in several ways.
 
-NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.ps1) by choosing the option "-s".
+NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.bat) by choosing the option "-s".
 
-Restore of the database is also possible; See script help for more information.
+Restore of the database is also possible; See oh.sh/oh.bat script help for more information.
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
