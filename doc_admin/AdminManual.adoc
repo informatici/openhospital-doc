@@ -58,11 +58,11 @@ All the information needed to use the application software are not included; ple
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] MariaDB is the database server of choice.
+The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
 
 The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
-The typical client/server, network (LAN) configuration is shown in the following figure:
+The typical Client / Server, networked (LAN) configuration is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
@@ -104,7 +104,7 @@ NOTE: See Software Compatibility Matrix in order to identify the correct Java ve
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 [#database-server]
-==== 3.1.3 Database server configuration
+==== 3.1.3 Database Server
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
@@ -1956,7 +1956,7 @@ https://sourceforge.net/p/openhospital/support-requests/
 Remember to keep files that have been changed, especially any changes to the configuration settings
 (see <<config-files,Configuration Files>>). The most common way is to backup the working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
-. Start the program and check from log files (OpenHospital_1_11_0/logs) to ensure the new version running and has no error messages.
+. Start the program and check from log files (data/logs) to ensure the new version running and has no error messages.
 
 === 8.2 Update Open Hospital - portable
 
