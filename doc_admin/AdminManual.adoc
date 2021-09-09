@@ -23,7 +23,7 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 
 [Open Hospital][openhospital] (OH) is a free and open-source Electronic Health Record (EHR) software application.
 Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
-or in a client-server network configuration (CLIENT mode), where multiple clients and users can connect to the same database server.
+or in a client-server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
 
 Open Hospital is developed in Java and it is based on open-source tools and libraries; it is designed to work without an internet connection and requires low computer resources.
 
@@ -95,8 +95,8 @@ include::./oh_software_compatibility_matrix.adoc[]
 [#jre]
 ==== 3.1.2 Java Runtime Environment (JRE)
 
-Depending on the operating system, there are different ways to install a Java Virtual Machine and the Java Runtime Environment (JRE).
-The oh.sh / oh.bat set of scripts can download and install the latest JRE available by downloading it from internet; it is also possibile to install it
+Depending on the operating system, there are different ways to install the Java Runtime Environment (JRE).
+The oh.sh / oh.batscripts can be used to download and install the latest JRE available; it is also possible to install it
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
@@ -228,9 +228,9 @@ Open a terminal and navigate to the sql/ folder e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd D:\OpenHospital-v1.11.0\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.0\sql
 
-D:\OpenHospital-v1.11.0\sql
+C:\Users\OH\OpenHospital-v1.11.0\sql
 
 ----
 
@@ -238,7 +238,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-D:\OpenHospital-v1.11.0\sql> mysql -u root -p
+C:\Users\OH\OpenHospital-v1.11.0\sql> mysql -u root -p
 Enter password: *****
 ----
 
@@ -335,7 +335,7 @@ More information on these files can be found in the sections <<database-properti
 The Open Hospital software is now ready to be run by executing the proper launcher command:
 
 * on a Linux machine: *oh.sh -C* (Client mode)
-* on a Windows machine: *oh.bat* (Select Client modei from interactive menu)
+* on a Windows machine: *oh.bat* (Select Client mode from the interactive menu)
 
 If everything is configured correctly, the Open Hospital main splash screen is presented:
 
