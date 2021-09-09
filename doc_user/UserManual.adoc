@@ -1888,7 +1888,7 @@ See <<add-a-therapy,Add a therapy>> function for a detailed description.
 To remove a therapy highlight one occurrence of the therapy (see box above) in the
 *_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
 removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled). 
-The removing of a therapy is not effective until it is confirmed with *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
+The removing of a therapy is not effective until it is confirmed with the *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
 
 [#check-availability-of-the-pharmaceuticals]
 ==== 10.10.4 Check Availability of the Pharmaceuticals (C[.underline]##h##eck Availability)
@@ -1980,7 +1980,7 @@ The patient is already selected, while other fields need to be set:
 * *Ward*: to specify the ward where the patient has to be received (it will be shown in the Worksheet, see
 <<worksheet,Worksheet>>)
 * *Service*: a brief description of the service that will be provided to the patient (optional)
-* *Duration (Min)*: the estimated duration of the service that will be provided (optional, default is 30min)
+* *Duration (Min)*: the estimated duration of the service that will be provided (optional, default is 30 minutes)
 * *Date*: the date and the time for the appointment
 
 Press *[.underline]##O##K* to save the appointment and it will be shown in the calendar, along with the therapies.
