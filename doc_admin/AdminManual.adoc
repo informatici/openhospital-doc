@@ -58,7 +58,7 @@ All the information needed to use the application software are not included; ple
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DataBase Management System (DBMS) to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] MariaDB is the database server of choice.
+The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] MariaDB is the database server of choice.
 
 The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
