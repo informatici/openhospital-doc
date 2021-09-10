@@ -355,14 +355,14 @@ Open Hospital is also distributed in a *portable* mode.
 
 Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
 
-Since the JRE and MariaDB/MySQL are not platform-independent and come in different versions depending on the platform, there exists:
+Since the JRE and MariaDB/MySQL are not platform-independent and come in different versions and architectures, there exists:
 
-* *Open Hospital portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
-* *Open Hospital portable for Windows* platforms (embedding Java JRE and MariaDB for Windows)
+* *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
+* *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64bit)
 
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
-Once the required version is downloaded, the application can be started by launching the related script inside the package:
+Once the required version is downloaded, the application can be started by launching the script inside the package:
 
 * *oh.sh* in the Linux version
 * *oh.bat* in the Windows version
@@ -372,12 +372,12 @@ No other configuration is needed. Additional options can be shown by executing:
 * on Linux: *oh.sh -h*
 * on Windows: *oh.bat -h*
 
-NOTE: To use Open Hospital portable for Linux from a USB key it is required that the file permissions in the
+NOTE: To use Open Hospital in portable mode for Linux from a USB key it is required that the file permissions in the
 archive remain unchanged once extracted, otherwise the launcher cannot launch or use the application in an appropriate manner.
 
-NOTE: It is important to understand that the portable version is meant to be a trial, that is, to try or test the software
-or to be used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
-architecture, the full installation version is recommended.
+NOTE: It is important to understand that the portable mode is meant to try or test the software
+or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
+architecture, the full installation (client / server) is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
 
