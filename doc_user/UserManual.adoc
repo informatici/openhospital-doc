@@ -1963,7 +1963,7 @@ image:image118.png[Notify & SMS,width=170,height=131]
 
 Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS. 
 
-Briefly, the SMS notification will work in the following way:
+Briefly, the SMS notification works in the following way:
 
 * therapies: will be notified to the patient with an SMS at 8:00 am, with text “REMINDER: “ + therapy details
 * visits: will be notified to the patient with an SMS 24 hours before the scheduled date and time, with the text “REMINDER VISIT: “ + visit details (see
