@@ -96,7 +96,7 @@ include::./oh_software_compatibility_matrix.adoc[]
 ==== 3.1.2 Java Runtime Environment (JRE)
 
 Depending on the operating system, there are different ways to install the Java Runtime Environment (JRE).
-The oh.sh / oh.batscripts can be used to download and install the latest JRE available; it is also possible to install it
+The oh.sh / oh.bat scripts can be used to download and install the latest JRE available; it is also possible to install it
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
