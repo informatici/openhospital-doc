@@ -89,7 +89,7 @@ TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
-include::./oh_software_compatibility_matrix.adoc[]
+include::./OH_software_compatibility_matrix.adoc[]
 
 
 [#jre]
