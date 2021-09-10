@@ -1969,9 +1969,9 @@ To migrate a portable installation to a a full Client-Server configuration, keep
 [loweralpha]
 .. <<backup-data,Backup of data (Database)>>
 . Close Open Hospital
-. Install the database server as outlined heew <<database-server,Database Server and Open Hospital DB>>
+. Install the database server as outlined here <<database-server,Database Server and Open Hospital DB>>
 . <<restore-data,Restore of data (Database)>> to the new database
-. Change settings to point to the new database (see <<database-properties,database.properties>> and <log4j-properties,log4j.properties>>)
+. Change settings to point to the new database (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>)
 
 For questions about updating, migrating or maintaining an Open Hospital installation, please contact us at:
 info@informaticisenzafrontiere.org and specify:
