@@ -23,7 +23,7 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 
 [Open Hospital][openhospital] (OH) is a free and open-source Electronic Health Record (EHR) software application.
 Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
-or in a client-server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
+or in a client / server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
 
 Open Hospital is developed in Java and it is based on open-source tools and libraries; it is designed to work without an internet connection and requires low computer resources.
 
@@ -48,9 +48,9 @@ Open Hospital features include:
 * Internal communication
 * Statistics and printing
 
-In the following chapters all the information needed to install, configure, run and mantain an Open Hospital installation are presented.
-The information included also allow enabling and disabling functionality as well as managing users and groups.
-All the information needed to use the application software are not included; please refer to the _User’s Guide_, supplied with the application software.
+In the following chapters all the information needed to install, configure, run and maintain an Open Hospital installation are presented.
+The information included also allows enabling and disabling functionality as well as managing users and groups.
+All the information needed to use the application software is not included; please refer to the _User’s Guide_, supplied with the application software.
 
 <<<
 
@@ -62,7 +62,7 @@ The software acts as a client application. The server part utilizes a DBMSfootno
 
 The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
-The typical Client / Server, networked (LAN) configuration is shown in the following figure:
+The typical client / server, networked (LAN) configuration is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
@@ -88,7 +88,7 @@ TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
-Before starting, check the following software compatibility matrix, in order to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
+Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
 include::./OH_software_compatibility_matrix.adoc[]
 
 
@@ -99,7 +99,7 @@ Depending on the operating system, there are different ways to install the Java 
 The oh.sh / oh.bat scripts can be used to download and install the latest JRE available; it is also possible to install it
 manually, following the specific instructions for the operating system being used.
 
-NOTE: See Software Compatibility Matrix in order to identify the correct Java version.
+NOTE: See Software Compatibility Matrix to identify the correct Java version.
 
 TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
@@ -112,7 +112,7 @@ On a Microsoft Windows® system, MySQL Workbench® can be used as a client to co
 
 The suggested approach for installation is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
 
-NOTE: See Software Compatibility Matrix in order to identify the correct MariaDB / MySQL version.
+NOTE: See Software Compatibility Matrix to identify the correct MariaDB / MySQL version.
 
 NOTE: MariaDB is the preferred alternative for the DBMS.
 
@@ -147,7 +147,7 @@ The terminal should reply with the MySQL client command line prompt:
 
 *mysql>*
 
-The prompt means there is a successful connection to the database Server instance that was just installed as evidenced by it waiting for commands to execute.
+The prompt means there is a successful connection to the database server instance that was just installed as evidenced by it waiting for commands to execute.
 
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
@@ -260,7 +260,7 @@ mysql>  FLUSH PRIVILEGES;
 
 ----
 
-In order to check if the database has been correctly created, enter the following command:
+To check if the database has been correctly created, enter the following command:
 
 [source,shell]
 ----
@@ -317,7 +317,7 @@ mysql>quit;
 
 ==== 3.1.5 Open Hospital - Configuration
 
-Open Hospital comes with several configuration files called “properties files”. In order to let Open Hospital find its database, modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
+Open Hospital comes with several configuration files called “properties files”. To set up the database connection for Open Hospital, modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
 Specify:
 
@@ -325,7 +325,7 @@ Specify:
 * the “isf” (or the user specified in the installation phase) user *password*
 * the MariaDB/MySQL Server *Port Number*, if changed from “3306”
 
-NOTE: These settings are required for every Open Hospital copy / client.
+NOTE: These settings are required for every Open Hospital installation / client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
@@ -396,7 +396,7 @@ Restore of the database is also possible; See oh.sh/oh.bat script help for more 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
 
-There are several ways to back up and restore *data* with MySQL. The recommend method is to use a common MySQL client such as MySQL Workbench®:
+There are several ways to back up and restore *data* with MySQL. The recommended method is to use a common MySQL client such as MySQL Workbench®:
 
 From https://stackoverflow.com/a/18379189:
 
@@ -609,8 +609,8 @@ The default password for the “admin” user is “admin”. After typing this 
 Once logged in as the “admin” user defining additional users and/or groups is possible (see the
 link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#15-users-groups-file-users[Users & Groups] chapter in the User's Guide), or just continue with a simple form of data protection.
 
-NOTE: The setting is client-side specific, this means that one can disable the login on a specific client, but logons will still
-be required on other clients, with the same defined user and groups. (This behavior may change in newer versions of the product.)
+NOTE: The setting is client-side specific, this means that the login can be disabled on a specific client, but logons will still
+be required on other clients, with the same defined user and group.
 
 WARNING: Data security must never be left solely to the application but it must include proper network architecture and a rigid configuration of the clients.
 
@@ -1929,7 +1929,7 @@ mysql>
 ----
 
 [start=6]
-. Then launch all the scripts in order that differ from the previous version; for example:
+. Then execute all the SQL scripts that have been added from the previous version; for example:
 
 [source,shell]
 ----
@@ -1961,7 +1961,7 @@ settings in the new one (see <<backup-restore,Backup & Restore>>).
 === 8.2 Update Open Hospital - portable mode
 
 NOTE: Open Hospital, used in portable mode, is not meant to be used in a production environment.
-To migrate a portable installation to a a full Client-Server configuration, keeping the existing data, the following steps must pe performed:
+To migrate a portable installation to a a full client / server configuration, keeping the existing data, the following steps must pe performed:
 
 [arabic]
 . Start Open Hospital portable
