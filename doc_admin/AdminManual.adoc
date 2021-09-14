@@ -375,7 +375,7 @@ NOTE: It is important to understand that the portable version is meant to be a t
 or to be used in a very small facility (like a dispensary) with only one computer. If the facility is large and needs a networked
 architecture, the full installation version is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/OH-README.md[lines=21..197,leveloffset=+2]
 
 NOTE: Folder structure and known issues are found at:
 https://github.com/informatici/openhospital/blob/master/POH-README.md
