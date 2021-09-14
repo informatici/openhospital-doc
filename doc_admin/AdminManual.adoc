@@ -378,7 +378,7 @@ architecture, the full installation version is recommended.
 include::https://raw.githubusercontent.com/informatici/openhospital/master/OH-README.md[lines=21..197,leveloffset=+2]
 
 NOTE: Folder structure and known issues are found at:
-https://github.com/informatici/openhospital/blob/master/POH-README.md
+https://github.com/informatici/openhospital/blob/master/OH-README.md
 
 [#backup-restore]
 === 3.3 Backup & Restore (alternative with MySQL Workbench®)
@@ -478,8 +478,8 @@ In Open Hospital portable for Linux the following folder tree structure is found
 ** LICENSE - GNU GENERAL PUBLIC LICENSE V3
 ** oh.ico - icon image for launcher
 ** *oh.sh Launcher for OH-Linux*
-** POH-linux-changelog.md (changelog portable-linux)
-** POH-README.md (README portable-linux)
+** OH-linux-changelog.md (changelog portable-linux)
+** OH-README.md (README portable-linux)
 
 === 4.3 Folder tree in Open Hospital portable for Windows (32bit)
 
@@ -495,8 +495,8 @@ In Open Hospital portable for Windows the following folder tree structure is fou
 ** *oh.bat - Launcher for Windows*
 ** oh.ico - icon image for the launcher
 ** oh.ps1 - Launcher PowerShell for Windows
-** POH-README.md (README portable-windows)
-** POH-win-changelog.md (changelog portable-windows)
+** OH-README.md (README portable-windows)
+** OH-win-changelog.md (changelog portable-windows)
 
 <<<
 
