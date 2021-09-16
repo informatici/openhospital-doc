@@ -45,7 +45,7 @@ Open Hospital features include:
 * Vaccines database
 * Patient billing support
 * Therapy management
-* Appointment management
+* Appointment scheduling
 * Internal communication
 * Statistics and printing
 
