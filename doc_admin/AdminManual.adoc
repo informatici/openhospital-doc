@@ -379,10 +379,10 @@ NOTE: It is important to understand that the portable mode is meant to try or te
 or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
 architecture, the full installation (client / server) is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/POH-README.md[lines=21..197,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/OH-README.md[lines=21..197,leveloffset=+2]
 
 NOTE: Folder structure and known issues are found at:
-https://github.com/informatici/openhospital/blob/master/POH-README.md
+https://github.com/informatici/openhospital/blob/master/OH-README.md
 
 [#backup-restore]
 === 3.3 Backup & Restore
@@ -461,6 +461,8 @@ Depending on the choosen operating system and architecture, the needed external 
 
 ** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
 ** __mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
+
+<<<
 
 [#config-files]
 == 5 Configuration Files
