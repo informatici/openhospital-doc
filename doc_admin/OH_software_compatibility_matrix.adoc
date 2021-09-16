@@ -10,7 +10,7 @@
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |*?* |*?*
-.2+|*1.11.0* .2+| *10.2.40* .2+| 11.0.11 (OpenJDK) i(*) | any | any | any |KO |*?* |*v*
+.1+|*1.11.0* .1+| *10.2.40* .1+| 11.0.11 (OpenJDK) (*) | any | any | any |KO |*?* |*v*
 .5+|*1.10.0* .5+| 5.1.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* |*?* |*v*
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
