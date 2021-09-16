@@ -3,9 +3,9 @@
 9+|*Open Hospital compatibility matrix*
 
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|Java JRE version (Zulu) .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
-|DICOM* |SMS |Webcam
+|DICOM (*) |SMS (gsm) |Webcam
 
-.5+|*1.11.0* .5+| *10.2.40*/5.7.35 .5+|*1.8 (zulu8.56.0.21)*|Ubuntu 21.04 | x64 | 64bit |*v* |? |*v*
+.5+|*1.11.0* .5+| *10.2.40*/5.7.35 .5+|*1.8 (zulu8.56.0.21)*|Ubuntu 21.04 | x64 | 64bit |*v* |*v*|*v*
 |Windows 7/10 | x64 | 64bit |*x* |*v* |*v*
 |Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
