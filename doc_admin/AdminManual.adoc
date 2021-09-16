@@ -430,8 +430,6 @@ To restore data with MySQL Workbench®:
 Backup of the software *code and settings* is needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
-<<<
-
 [#folders]
 == 4 Directory structure
 
@@ -463,8 +461,6 @@ Depending on the choosen operating system and architecture, the needed external 
 
 ** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
 ** __mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
-
-<<<
 
 [#config-files]
 == 5 Configuration Files
