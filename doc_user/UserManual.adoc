@@ -9,23 +9,26 @@
 
 image:image1.jpeg[OH Logo,width=390,height=298]
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2020#
-pass:[<br>][.small]#User's Guide, &#169; 2020 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
+pass:[<br>][.small]#User's Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
 
 == 1 Abstract
 
-Open Hospital is the first of a series of software products that ISFfootnote:[Informatici Senza Frontiere = Computer scientists without frontiers] has developed
-to support the information management and the activities
-of hospitals and health centers in the simplest manner possible, by providing tools for the hospital administrative operations (like registering patients, manage laboratory analysis and pharmaceutical stocks) and to produce detailed statistics and reports.
+Open Hospital (OH) is a free and open-source Electronic Health Record (EHR) software application.
+Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
+or in a client / server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
+
+Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an internet connection.
+
+Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere - https://www.informaticisenzafrontiere.org] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for the hospital administrative operations (like registering patients, manage laboratory analysis and pharmaceutical stocks) and to produce detailed statistics and reports.
 It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
 
-All the work on this software is done as an open-sourcefootnote:[Open-source = software for which the original *source code* is
-made available to anyone free of charge.] project using only open-source development software.
+== 2 Introduction
 
-Open Hospital consists of the following parts:
+Open Hospital features include:
 
 * Pharmacy management
 * Laboratory management
@@ -36,20 +39,15 @@ Open Hospital consists of the following parts:
 * Vaccines database
 * Patient billing support
 * Therapy management
+* Appointment scheduling
 * Internal communication
-* Appointments management
 * Statistics and printing
 
-This document describes how all the above-mentioned items work and provides guidance as to the correct use of the program.
+This document describes how all the above-mentioned items work and provides specific guidance for the user.
 
 The reader will not find in this manual the information about the installation of Open Hospital or
-how to administer it; that information is provided in the _Administrator’s Guide_ supplied with the application software.
+how to administer it; that information is provided in the _Administrator’s Guide_ supplied with the software.
 
-== 2 Introduction
-
-The program aims to manage, in the simplest manner, the hospital administrative operations like registering patients
-and laboratory analysis, and to produce statistics for the health ministry. This document describes all
-the information needed to use the program properly.
 
 == 3 Useful Information Before Reading This User Manual
 
