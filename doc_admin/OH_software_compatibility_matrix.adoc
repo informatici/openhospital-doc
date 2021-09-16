@@ -1,4 +1,4 @@
-[width="99%",cols="^16%,^14%,^14%,^14,^14%,^14%,^14%,^14%,^14%",options="header"]
+[width="99%",cols="^16%,^14%,^14%,^14,^14%,^14%,^16%,^13%,^13%",options="header"]
 |===
 9+|*Open Hospital compatibility matrix*
 
@@ -30,5 +30,5 @@
 |*x* |_not working_ 
 |*?* |_not tested_ 
 |n/a |_not applicable_ 
-|_last update_ |_2021.08.23_
+|_last update_ |_2021.09.16_
 |===
