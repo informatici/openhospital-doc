@@ -22,10 +22,10 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 == 1 Abstract
 
 Open Hospital (OH) is a free and open-source Electronic Health Record (EHR) software application.
-Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
-or in a client / server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
+Open Hospital is deployed as a desktop application that can be used in a standalone, single-user mode (PORTABLE mode)
+or in a client/server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
 
-Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an internet connection.
+Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources, and is designed to work without an internet connection.
 
 Open Hospital is the first of a set of software products that ISFfootnote:[Informatici Senza Frontiere - https://www.informaticisenzafrontiere.org] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for the hospital administrative operations (like registering patients, manage laboratory analysis and pharmaceutical stocks) and to produce detailed statistics and reports.
 It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
@@ -49,7 +49,7 @@ Open Hospital features include:
 * Internal communication
 * Statistics and printing
 
-In the following chapters all the information needed to install, configure, run and maintain an Open Hospital installation are presented.
+In the following chapters, all the information needed to install, configure, run and maintain an Open Hospital installation are presented.
 The information included also allows enabling and disabling functionality as well as managing users and groups.
 All the information needed to use the application software is not included; please refer to the _User’s Guide_, supplied with the application software.
 
@@ -59,24 +59,24 @@ All the information needed to use the application software is not included; plea
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
+The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
 
 The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
 
-The typical client / server, networked (LAN) configuration is shown in the following figure:
+The typical client/server, networked (LAN) configuration is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
+TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 * Install the Java Runtime Environment (see compatibility matrix for the right version)
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Copy the Open Hospital application on every client (it may be installed on the server also)
 * Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
 
-For the Java Runtime Environment installation refer to the next chapter <<jre,Java Runtime Environment>>
+For the Java Runtime Environment, installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
 For the MariaDB/MySQL database server installation and database creation refer to the chapter <<database-server,Database Server and Open Hospital DB>> and the online documentation.
@@ -89,7 +89,7 @@ TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
-Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture and operating system.
+Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
 include::./OH_software_compatibility_matrix.adoc[]
 
 
@@ -102,7 +102,7 @@ manually, following the specific instructions for the operating system being use
 
 NOTE: See Software Compatibility Matrix to identify the correct Java version.
 
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
+TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 [#database-server]
 ==== 3.1.3 Database Server
@@ -123,8 +123,8 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 
 Generally, the main aspects the Administrator has to pay attention to are:
 
-* *on a Linux machine*: during the installation it will ask for a “root” password; it is very important to choose it carefully and to keep it safe. If the password is not prompted for during installation an empty password will be automatically set for the root user.
-* *on a Windows machine*: during the installation it will ask for several configuration options; the best configuration is (it options could differ a bit):
+* *on a Linux machine*: during the installation, it will ask for a “root” password; it is very important to choose it carefully and to keep it safe. If the password is not prompted for during installation an empty password will be automatically set for the root user.
+* *on a Windows machine*: during the installation, it will ask for several configuration options; the best configuration is (it options could differ a bit):
 
 * *Custom Installation*
 * Install all components except Developer ones
@@ -217,7 +217,7 @@ To:
 #bind-address               = 127.0.0.1
 ----
 
-In this way the database server listens on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
+In this way, the database server listens on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
 
 ==== 3.1.4 Open Hospital - Database creation
 
@@ -282,7 +282,7 @@ The next step is to launch the main SQL script “create_all_en.sql” with the 
 mysql> source create_all_en.sql
 ----
 
-NOTE: The data can be installed with different languages by using the related "create_all_xx.sql" file, or with demo data using the "create_all_demo.sql" file (English only).
+NOTE: The data can be installed in different languages by using the related "create_all_xx.sql" file or with demo data using the "create_all_demo.sql" file (English only).
 
 NOTE: If the error message "ERROR 1148 (42000): The used command is not allowed with this MySQL version" appears the "local infile" command must be enabled on the
 client by logging in again and specifying the "--local-infile=1" parameter after the "-p"; thus "mysql -u root -p --local-infile=1".
@@ -326,7 +326,7 @@ Specify:
 * the “isf” (or the user specified in the installation phase) user *password*
 * the MariaDB/MySQL Server *Port Number*, if changed from “3306”
 
-NOTE: These settings are required for every Open Hospital installation / client.
+NOTE: These settings are required for every Open Hospital installation/client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
@@ -361,7 +361,7 @@ Since the JRE and MariaDB/MySQL are not platform-independent and come in differe
 * *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
 * *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64bit)
 
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
+TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 Once the required version is downloaded, the application can be started by launching the script inside the package:
 
@@ -378,7 +378,7 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 
 NOTE: It is important to understand that the portable mode is meant to try or test the software
 or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
-architecture, the full installation (client / server) is recommended.
+architecture, the full installation (client/server) is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..197,leveloffset=+2]
 
@@ -428,7 +428,7 @@ To restore data with MySQL Workbench®:
 
 ==== 3.3.3 Backup of code and settings (Software)
 
-Backup of the software *code and settings* is needed only if changes have been made to the “official version” to
+Backup of the software *code and settings* are needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
 [#folders]
@@ -487,7 +487,7 @@ Furthermore, additional configurations files that are not meant to be modified b
 
 Every configuration file works only [.underline]#locally# and is meant to manage  [.underline]#only a single instance# of Open Hospital application.
 
-This means that if there are many clients running Open Hospital they may run differently according to their own configuration files.
+This means that if many clients are running Open Hospital they may run differently according to their configuration files.
 
 NOTE: Any change to these files requires an application restart to apply the settings.
 
@@ -603,7 +603,7 @@ If SINGLEUSER is set to NO the following login window appears when the program i
 
 image:image24.PNG[Login.PNG,width=305,height=148]
 
-The default password for the “admin” user is “admin”. After typing this password in the white field and pressing *[.underline]##S##ubmit*, the main *_Menu_* with all functionalities are enabled.
+The default password for the “admin” user is “admin”. After typing this password in the white field and pressing *[.underline]##S##ubmit*, the main *_Menu_* with the functions are enabled.
 
 Once logged in as the “admin” user defining additional users and/or groups is possible (see the
 link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#15-users-groups-file-users[Users & Groups] chapter in the User's Guide), or just continue with a simple form of data protection.
@@ -641,8 +641,8 @@ With *AUTOMATICLOT_IN = YES* the application generates a lot number automaticall
 
 With *AUTOMATICLOT_OUT = YES* the application discharges automatically the nearest expiring lot when required. By default, AUTOMATICLOT_OUT is set to NO. It is possible to change the value at any time.
 
-With *AUTOMATICLOTWARD_TOWARD = YES*, the application discharges from a Ward (to other Wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time.
-For discharges to Patients (drug giving) the lot is *never* asked.
+With *AUTOMATICLOTWARD_TOWARD = YES*, the application discharges from a ward (to other wards) the nearest expiring lot automatically when required. By default, AUTOMATICLOTWARD_TOWARD is set to NO. It is possible to change the value at any time.
+For discharges to patients (drug giving) the lot is *never* asked.
 
 NOTE: An application restart is required to see the modification applied for all the above settings.
 
@@ -1040,7 +1040,7 @@ To set up a GSM device, one must set the GSM mode in the related sms.properties 
 The default settings for a GSM modem should work with the majority of GSM devices (like phones, smartphones, USB modems, etc…).
 The exception is the PORT parameter which must be changed to match the SERIAL port address used by the device plugged into the system.
 
-If it believed that the PORT is correct but still Open Hospital is not communicating with the device (try switching to DEBUG log level – or lower - during this setup –
+If it is believed that the PORT is correct but still Open Hospital is not communicating with the device (try switching to DEBUG log level – or lower - during this setup –
 see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility in the Open Hospital root folder
 (see <<folders,Folders>>).
 
@@ -1108,9 +1108,9 @@ The following table shows the default value and the allowed ones:
 |VIDEOMODULEENABLED |no |yes, no
 |===
 
-Open Hospital can drive any webcam with the aim of shooting patient's images in the Admission/Patient module
+Open Hospital can drive any webcam with the aim of capturing patient's images in the Admission/Patient module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide).
-Once this option is activated the related button, *New Photo* in the *New Patient Extended* window is available to start and use the webcam.
+Once this option is activated the related button, *New Photo* in the *New Patient* window is available to start and use the webcam.
 
 By default, VIDEOMODULEENABLED is set to no.
 
@@ -1130,7 +1130,7 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital can register vaccines given to patients
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#9-vaccines-patient-vaccines[9 Vaccines] in the User’s Guide).
-This option allows toggling the patient’s full name in the *_Patient vaccines browsing_* window.
+This option allows toggling the patient’s full name in the *_Patient Vaccine Browser_* window.
 
 By default, PATIENTVACCINEEXTENDED is set to yes.
 
@@ -1150,7 +1150,7 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital can optimize memory usage when the number of registered patients becomes large
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-2-2-search-patient-enhanced[10.2.2 Search patient Enhanced] in the User’s Guide).
-With the enhanced search only, the patient matching a search criterion will be loaded in the memory, otherwise, all patients registered in the system will be loaded in the *_Patients browser_* window.
+With the enhanced search only, the patient matching a search criterion will be loaded in the memory, otherwise, all patients registered in the system will be loaded in the *_Patient Browser_* window.
 
 By default, ENHANCEDSEARCH is set to no.
 It is possible to toggle this option anytime to reduce the amount of memory needed by the computer or the server.
@@ -1228,7 +1228,7 @@ The following table shows the default value and the allowed ones:
 |===
 
 Open Hospital can run in debug mode when it would be useful to understand what is happening behind the user graphical interface.
-Currently, this option affects only the video module, which means that in place of the normal *New Patient Extended* window
+Currently, this option affects only the video module, which means that in place of the normal *New Patient* window
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#10-4-3-patient-photo-new-photo[10.4.3 Patient Photo] function in User’s Guide),
 the program opens the new special window shown below:
 
@@ -1407,11 +1407,11 @@ RR_MAX = 100
 ----
 
 * *LIST_SIZE*: the maximum number of examinations that can be viewed in the history. Must be less than or equal to 10
-* *HEIGHT_MIN*: the height minimum value (in cm), used to initialize the height slider in the *_Examination_* window
-* *HEIGHT_MAX*: the height maximum value (in cm), used to initialize the height slider in the *_Examination_* window
+* *HEIGHT_MIN*: the height minimum value (in cm), used to initialize the height slider in the *_Patient Examination_* window
+* *HEIGHT_MAX*: the height maximum value (in cm), used to initialize the height slider in the *_Patient Examination_* window
 * *HEIGHT_INIT*: the height default value (in cm)
-* *WEIGHT _MIN*: the weight minimum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
-* *WEIGHT _MAX*: the weight maximum value (in Kg), used to initialize the Weight slider in the *_Examination_* window
+* *WEIGHT _MIN*: the weight minimum value (in Kg), used to initialize the Weight slider in the *_Patient Examination_* window
+* *WEIGHT _MAX*: the weight maximum value (in Kg), used to initialize the Weight slider in the *_Patient Examination_* window
 * *WEIGHT _INIT*: the weight default value (in Kg)
 * *WEIGHT _STEP*: the step (in Kg) used when moving the weight slider
 * *AP _MIN*: the Arterial pressure minimum value (in mmHg)
@@ -1533,8 +1533,8 @@ sms.gateway.thread.icc=+39
 
 * *sms.gateway*: the SMS sender mode. Can take three values:
 ** *gsm-gateway-service*: requires a GSM modem connected to a COM port. The administrator should configure the SMSGateway/GSM.properties file to set the suitable PORT.
-** *skebby-gateway-service*: requires an Skebby provider account.
-** *textbelt-gateway-service*: requires an Textbelt provider account.
+** *skebby-gateway-service*: requires a Skebby provider account.
+** *textbelt-gateway-service*: requires a Textbelt provider account.
 * *TIMEOUT*: the timeout for the HTTP request. Required when sms.gateway is set to skebby-gateway-service or textbelt-gateway-service.
 * *LOOP*: the delay used by the sender to fetch new SMS operations. The value is in seconds.
 * *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
@@ -1583,7 +1583,7 @@ textbelt-gateway-service.ribbon.base-url=https://textbelt.com:443
 This file defines the parameters for sending SMS using the Skebby HTTP API.
 
 * *enable-testing-mode*: if set to "true", textbelt will do fake actions upon user/application requests.
-* *key*: the api key (if using a  purchased sms) from Textbelt provider (one can use "textbelt" to send 1 free sms per day)
+* *key*: the API key (if using a  purchased sms) from Textbelt provider (one can use "textbelt" to send 1 free sms per day)
 * *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
 [#txtprinter-properties]
@@ -1617,7 +1617,7 @@ image:image42.png[image,width=291,height=245]
 * *PRINT_AS_PAID*: This changes the behavior when a Bill is set to PAID in the Accounting module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-1-2-11-print-receipt-function[8.2.1.11 Print receipt] function in User’s Guide). +
  ** If it is set to _yes_, Open Hospital will try to print a receipt just after a Bill is set to PAID +
- *** A confirmation window will appear (see below), otherwise it must be done after, by pressing the *[.underline]##E##dit Bill* button on the already closed (“C”) bill
+ *** A confirmation window will appear (see below), otherwise, it must be done after, by pressing the *[.underline]##E##dit Bill* button on the already closed (“C”) bill
 
 image:image43.png[Accountin_print_as_paid]
 
@@ -1636,7 +1636,7 @@ NOTE: An application restart is required to see the modification applied.
 [#xmpp-properties]
 === 5.8 xmpp.properties
 
-Open Hospital 1.7 and greater versions, come with the xmpp.properties file set as follows by default:
+Open Hospital comes with the xmpp.properties file set as follows by default:
 
 [source,properties]
 ----
@@ -1662,9 +1662,9 @@ NOTE: An application restart is required to see the modification applied.
 
 ==== 5.8.1 OpenFire Settings
 
-The XMPP module needs some knowledge about XMPP protocol and how an XMPP server works.
+The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
 
-Every new log into Open Hospital, will create an OpenFire user with the same username and password (even if passwords are saved
+Every new log into Open Hospital creates an OpenFire user with the same username and password (even if passwords are saved
 differently in OH and OpenFire DB). For this reason, the OH "admin" user may conflict with OpenFire one not allowing the log in as admin and to chat.
 
 NOTE: If the admin user needs to chat with other users consider creating another "superuser" in OH
@@ -1679,7 +1679,7 @@ Please follow these settings:
 . Set OpenFire to use Embedded DB
 . Create a group "OH" in the OpenFire server and enable the "Contact List (Roster) Sharing"
 . Add new users automatically created from OH to the "OH" group
-. Consideration should be give to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
+. Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 === 5.9 Bundles
 
@@ -1690,7 +1690,7 @@ Bundles are the language (or translation) files provided with Open Hospital. As 
 
 where XY is an international country code.
 
-These files are property files (a text file), which contains multiple *key = value* pairs containing localized text for the language specified.
+These files are property files (a text file), which contain multiple *key = value* pairs containing localized text for the language specified.
 
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
@@ -1771,8 +1771,8 @@ Now that the run configuration settings have been selected, OH can be launched b
 image:image64.png[image,width=604,height=377] +
 image:image65.png[image,width=604,height=377]
 
-Because of the default settings, Open Hospital’s first run does not show the login window. The system defaults to “single user” mode
-as default. This can be verified by the “SINGLEUSER=yes” string on the third row of the <<settings-properties,settings.properties>> file.
+Because of the default settings, Open Hospital’s first run does not show the login window. The system defaults to “single-user” mode
+by default. This can be verified by the “SINGLEUSER=yes” string on the third row of the <<settings-properties,settings.properties>> file.
 In production use this is unacceptable as Open Hospital must be accessible only to the administrator and logged users.
 Click on the triangle near the project’s name, do the same on the “rsc” subfolder and then double-click on the <<settings-properties,settings.properties>> file.
 
@@ -1948,7 +1948,7 @@ mysql> source step_39_patientfolder_submenu.sql
 ----
 
 [start=7]
-. Take notes if any error message occur and report them to: +
+. Take notes if any error messages occur and report them to: +
 https://sourceforge.net/p/openhospital/support-requests/
 . If everything is successful, replace the working copy on each client with the new one and connect it to the same DB
 (see <<database-properties,database.properties>> and <log4j-properties,log4j.properties>>).
@@ -1960,7 +1960,7 @@ settings in the new one (see <<backup-restore,Backup & Restore>>).
 === 8.2 Update Open Hospital - portable mode
 
 NOTE: Open Hospital, used in portable mode, is not meant to be used in a production environment.
-To migrate a portable installation to a a full client / server configuration, keeping the existing data, the following steps must pe performed:
+To migrate a portable installation to a full client/server configuration, keeping the existing data, the following steps must be performed:
 
 [arabic]
 . Start Open Hospital portable
@@ -1972,7 +1972,7 @@ To migrate a portable installation to a a full client / server configuration, ke
 . <<restore-data,Restore of data (Database)>> to the new database
 . Change settings to point to the new database (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>)
 
-For questions about updating, migrating or maintaining an Open Hospital installation, please contact us at:
+For questions about updating, migrating, or maintaining an Open Hospital installation, please contact us at:
 info@informaticisenzafrontiere.org and specify:
 
 * A brief history of the organization
