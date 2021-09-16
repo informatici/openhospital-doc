@@ -431,7 +431,7 @@ Backup of the software *code and settings* is needed only if changes have been m
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
 [#folders]
-== 4 Directory structure
+== 4 Folders and directory structure
 
 Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *<operating_system> with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
 
