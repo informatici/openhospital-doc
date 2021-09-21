@@ -380,7 +380,7 @@ NOTE: It is important to understand that the portable mode is meant to try or te
 or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
 architecture, the full installation (client/server) is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..197,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..204,leveloffset=+2]
 
 NOTE: Folder structure and known issues are found at:
 https://github.com/informatici/openhospital/blob/master/oh-bundle/OH-README.md
