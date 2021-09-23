@@ -380,7 +380,7 @@ NOTE: It is important to understand that the portable mode is meant to try or te
 or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
 architecture, the full installation (client/server) is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..219,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..218,leveloffset=+2]
 
 NOTE: Folder structure and known issues are found at:
 https://github.com/informatici/openhospital/blob/master/oh-bundle/OH-README.md
@@ -1742,7 +1742,7 @@ link:https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[E
 === 7.1 Run the Project
 
 NOTE: Before running the project, the DB must be created as explained in
-chapter <<mysql-server,MySQL Server and Open Hospital DB>>.
+chapter <<database-server,MySQL Server and Open Hospital DB>>.
 
 To run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is OK, the splash screen will appear. If not, look in the Eclipse console for any error or warning messages.
 
