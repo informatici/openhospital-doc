@@ -1292,16 +1292,16 @@ The following data are shown in the *_Patient Browser_* window:
 
 The following functions are accessible from the *Buttons panel* of the window *_Patient Browser_* window:
 
-* *[.underline]##N##ew Patient*: insert a new patient.
-* *[.underline]##E##dit Patient*: modify an existing patient.
-* *Dele[.underline]##t##e Patient*: delete an existing patient.
+* *[.underline]##N##ew*: insert a new patient.
+* *[.underline]##E##dit*: modify an existing patient.
+* *Dele[.underline]##t##e*: delete an existing patient.
 * *[.underline]##A##dmission*: manage the admission of the patient in the hospital.
 * *E[.underline]##x##amination*: manage the patient examination.
 * *[.underline]##O##PD*: start an OPD visit on the selected patient.
 * *[.underline]##B##ill*: start a bill on the selected patient.
-* *[.underline]##D##ata*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
+* *Da[.underline]##t##a*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
 * *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it.
-* *[.underline]##T##herapy*: manage the therapy of a patient.
+* *T[.underline]##h##erapy*: manage the therapy of a patient.
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
 
 NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
@@ -1336,7 +1336,7 @@ Patient selection can be accomplished by specifying a specific value for the fie
 * *Search Key* Any character string entered is matched against the patient's name and address.
 A complete string or only some characters can be entered and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients that have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
 
-image:image79.png[Patient Browser Search,width=508,height=436]
+image:image79.png[Patient Browser Search,width=600,height=300]
 
 NOTE: Wards can be defined by the Administrator. Ask the Administrator how to do it or see
 <<settings,Settings>> in this document.
@@ -1352,7 +1352,7 @@ image:image80.png[Patient Browser Enhanced Search,width=600,height=300]
 Initially, the list is empty. To show some patients, enter a search criterion in the
 *Search Key* field and then press the search (image:image81.png[Search icon,width=15,height=15]) button and the window will show only patients matching the specified criteria.
 
-image:image82.png[Patient Browser Enhanced Search results,width=600height=300]
+image:image82.png[Patient Browser Enhanced Search results,width=600,height=300]
 
 Moreover, further search criteria are added in this mode:
 
@@ -1361,11 +1361,11 @@ Moreover, further search criteria are added in this mode:
 
 NOTE: To show the full patient list again just press the search button with an empty search criterion.
 
-=== 10.3 Insert a New Patient ([.underline]##N##ew Patient)
+=== 10.3 Insert a New Patient ([.underline]##N##ew)
 
 This function is used to register a new patient into the hospital.
 
-Press the *[.underline]##N##ew Patient* button in the *_Patient Browser_* window to access the *_New Patient_* window shown below.
+Press the *[.underline]##N##ew* button in the *_Patient Browser_* window to access the *_New Patient_* window shown below.
 
 image:image83.png[New Patient]
 
@@ -1386,9 +1386,9 @@ When finished entering the data the *Buttons panel* has two choices:
 * *[.underline]##O##K*: confirm the data and add the patient's record.
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without adding the patient.
 
-==== 10.3.1 Modify Data of a Patient ([.underline]##E##dit Patient)
+==== 10.3.1 Modify Data of a Patient ([.underline]##E##dit)
 
-To modify the data of a patient select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit Patient* button. When the *_New Patient_* window shown below appears, the record is available for changes. All the data can be changed.
+To modify the data of a patient select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_New Patient_* window shown below appears, the record is available for changes. All the data can be changed.
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
@@ -1397,10 +1397,10 @@ When finished modifying the data in the *Buttons panel* there are two choices:
 * *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data.
 
-==== 10.3.2 Delete a Patient (Dele[.underline]##t##e Patient)
+==== 10.3.2 Delete a Patient (Dele[.underline]##t##e)
 
 To delete a stored patient select the patient in the *_Patient Browser_* window.
-Next press the *Dele[.underline]##t##e Patient* button. The name of the patient is shown in the *_Question_* window below. The patient's data can then be deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system as the Administrator to restore the data at any time._
+Next press the *Dele[.underline]##t##e* button. The name of the patient is shown in the *_Question_* window below. The patient's data can then be deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system as the Administrator to restore the data at any time._
 
 image:image84.png[Delete a Patient]
 
@@ -1410,7 +1410,7 @@ In the *Buttons panel* the choices are:
 * *[.underline]##N##o*: close the window and return to the previous window.
 
 [#insert-a-new-patient-extended]
-=== 10.4 Insert a new Patient Extended ([.underline]##N##ew Patient)
+=== 10.4 Insert a new Patient Extended ([.underline]##N##ew)
 
 The New Patient functionality can be extended by changing the _PATIENTEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
@@ -1443,7 +1443,7 @@ NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Admi
 
 The height and weight of the patient are not required when registering a new patient. It is done through the examination module available in the *_Patient Browser_* window.
 
-==== 10.4.3 Patient Photo (New Photo)
+==== 10.4.3 Patient Photo ([.underline]##N##ew Photo)
 
 The New Patient functionality can be extended by changing the
 __[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
@@ -1458,7 +1458,7 @@ image:image89.png[Webcam photo,width=591,height=392]
 
 image:image90.png[Attach photo,width=591,height=392]
 
-By clicking again on the [.underline]##N##ew Photo* button, a picture is taken ready to be attached to the patient information.
+By clicking again on the *[.underline]##N##ew Photo* button, a picture is taken ready to be attached to the patient information.
 
 ===== 10.4.3.1 Camera Settings (image:image91.png[camera icon,width=22,height=12])
 
@@ -1647,12 +1647,12 @@ If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Admin
 The button *[.underline]##B##ill* in the *_Patient Browser_* window is used to start a bill for a selected patient (see
 <<insert-a-new-bill,Insert a new bill>> for more information).
 
-=== 10.8 Manage Patient Historical Data ([.underline]##D##ata)
+=== 10.8 Manage Patient Historical Data (D[.underline]##a##ta)
 
 This function allows modifying data about a patient and modifying or deleting the history of admissions and discharges of a patient. Malnutrition can also be managed with this function.
 
 To access the patient historical data function, first, highlight the patient in the *_Patient Browser_* window.
-Next, press the *[.underline]##D##ata* button. The *_Patient Data_* window shown below appears:
+Next, press the *D[.underline]##a##ta* button. The *_Patient Data_* window shown below appears:
 
 image:image99.png[Patient Data,width=575,height=423]
 
@@ -1828,10 +1828,10 @@ More than one DICOM file can be loaded into a patient folder. It is possible to 
 One can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
 
 [#therapy-management]
-=== 10.10 Therapy Management ([.underline]##T##herapy)
+=== 10.10 Therapy Management (T[.underline]##h##erapy)
 
 To manage the therapy of a patient, select the patient in the *_Patient Browser_* window. Next,
-press the *[.underline]##T##herapy* button. The specific window for therapy management of the selected patient appears. The window has no name but it is typically referred to as the *_Therapy_* window.
+press the *T[.underline]##h##erapy* button. The specific window for therapy management of the selected patient appears. The window has no name but it is typically referred to as the *_Therapy_* window.
 The name of the selected patient is shown at the top.
 
 In the *_Therapy_* window, it is possible to insert, modify or remove a therapy for the selected patient.
