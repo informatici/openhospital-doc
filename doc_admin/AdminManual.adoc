@@ -383,9 +383,6 @@ where only a single computer is available. If the facility is large and more cli
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..218,leveloffset=+2]
 
-NOTE: Folder structure and known issues are found at:
-https://github.com/informatici/openhospital/blob/master/oh-bundle/OH-README.md
-
 [#backup-restore]
 === 3.3 Backup & Restore
 
