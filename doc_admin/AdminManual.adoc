@@ -222,7 +222,7 @@ On a Microsoft Windows® system, MySQL Workbench® can be used as a client to co
 
 The suggested approach is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
 
-Open a terminal and navigate to the sql/ folder e.g.):
+Open a terminal and navigate to the sql/ folder (e.g.):
 
 [source,shell]
 ----
@@ -236,7 +236,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.0\sql> mysql -u root -p
+C:\Users\OH\OpenHospital-v1.11.0\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -332,8 +332,8 @@ More information on these files can be found in the sections <<database-properti
 
 The Open Hospital software is now ready to be run by executing the proper launcher command:
 
-* on a Linux machine: *oh.sh -C* (Client mode)
-* on a Windows machine: *oh.bat* (Select Client mode from the interactive menu)
+* on a Linux machine: *oh.sh -C* (CLIENT mode)
+* on a Windows machine: *oh.bat* (Select CLIENT mode from the interactive menu)
 
 If everything is configured correctly, the Open Hospital main splash screen is presented:
 
@@ -347,11 +347,11 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
-=== 3.2 Open Hospital - Portable mode
+=== 3.2 Open Hospital - PORTABLE mode
 
-Open Hospital is also distributed in a *portable* mode.
+Open Hospital is also distributed in a *PORTABLE* mode.
 
-Since Open Hospital is a Java software program, it is portable by definition. The term “portable” here refers to the possibility of having a self-contained copy of the software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
+Since Open Hospital is a Java software program, it is portable by definition. The “PORTABLE” mode here refers to the possibility of having a self-contained copy of the OH software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
 
 Since the JRE and MariaDB/MySQL are not platform-independent and come in different versions and architectures, there exists:
 
@@ -370,10 +370,10 @@ No other configuration is needed. Additional options can be shown by executing:
 * on Linux: *oh.sh -h*
 * on Windows: *oh.bat -h*
 
-NOTE: To use Open Hospital in portable mode for Linux from a USB key it is required that the file permissions in the
+NOTE: To use Open Hospital in PORTABLE mode for Linux from a USB key it is required that the file permissions in the
 archive remain unchanged once extracted, otherwise the launcher cannot launch or use the application in an appropriate manner.
 
-NOTE: It is important to understand that the portable mode is meant to try or test the software
+NOTE: It is important to understand that the PORTABLE mode is meant to try or test the software
 or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
 architecture, the full installation (client/server) is recommended.
 
@@ -1793,7 +1793,7 @@ log4j.properties as explained in the chapter <<log4j-properties,log4j.properties
 [#update-open-hospital]
 == 8 Update Open Hospital
 
-=== 8.1 Update Open Hospital (client mode)
+=== 8.1 Update Open Hospital (CLIENT mode)
 
 NOTE: Following instructions only applies between “official releases” downloaded from the SourceForge website.
 
@@ -1954,28 +1954,28 @@ Remember to keep files that have been changed, especially any changes to the con
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 . Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
 
-=== 8.2 Update Open Hospital - portable mode
+=== 8.2 Update Open Hospital - PORTABLE mode
 
-NOTE: Open Hospital, used in portable mode, is not meant to be used in a production environment.
+NOTE: Open Hospital, used in PORTABLE mode, is not meant to be used in a production environment.
 To migrate a portable installation to a full client/server configuration, keeping the existing data, the following steps must be performed:
 
 [arabic]
-. Start Open Hospital portable
-. While OH is running.
+. Start Open Hospital in PORTABLE mode;
+. While OH is running:
 [loweralpha]
 .. <<backup-data,Backup of data (Database)>>
-. Close Open Hospital
-. Install the database server as outlined here <<database-server,Database Server and Open Hospital DB>>
-. <<restore-data,Restore of data (Database)>> to the new database
-. Change settings to point to the new database (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>)
+. Close Open Hospital;
+. Install the database server as outlined here <<database-server,Database Server and Open Hospital DB>>;
+. <<restore-data,Restore of data (Database)>> onto the the new database server;
+. Change settings to point to the new database (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
 For questions about updating, migrating, or maintaining an Open Hospital installation, please contact us at:
 info@informaticisenzafrontiere.org and specify:
 
-* A brief history of the organization
-* The country where the installation is and the language used
-* Technical details of the OH installation
-* The current Open Hospital version
+* A brief history of the organization;
+* The country where the installation is and the language used;
+* Technical details of the OH installation;
+* The current Open Hospital version;
 * Complete the https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] form
 
 <<<
