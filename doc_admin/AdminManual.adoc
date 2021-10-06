@@ -83,11 +83,6 @@ For the Open Hospital installation on every client, it is sufficient to copy and
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
-TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
-
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
-
-
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
@@ -102,8 +97,6 @@ The oh.sh / oh.bat scripts can be used to download and install the latest JRE av
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix to identify the correct Java version.
-
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 [#database-server]
 ==== 3.1.3 Database Server
@@ -353,6 +346,8 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
+TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
+
 === 3.2 Open Hospital - PORTABLE mode
 
 Open Hospital is also distributed in a *PORTABLE* mode.
@@ -363,8 +358,6 @@ Since the JRE and MariaDB/MySQL are not platform-independent and come in differe
 
 * *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
 * *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64bit)
-
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
 
 Once the required version is downloaded, the application can be started by launching the script inside the package:
 
