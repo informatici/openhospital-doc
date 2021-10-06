@@ -193,7 +193,7 @@ write_buffer = 2M
 
 ===== 3.1.3.3 MariaDB/MySQL - Networking
 
-If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by editing MariaDB/MySQL's config file, “my.cnf”, and setting the "bind-address" parameter. For example, if you want the database server to listen on all network interfaces / IP addresses:
+If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by editing MariaDB/MySQL's config file, “my.cnf”, and setting the "bind-address" parameter. For example, if you want the database server to listen on all the available network interfaces / IP addresses:
 
 Change:
 
@@ -217,7 +217,7 @@ In this way, the database server listens on any IP address (0.0.0.0) configured 
 
 ==== 3.1.4 Open Hospital - Database creation
 
-To create the Open Hospital database, a mysql client and set of SQL script files placed under the sql/ folder are needed.
+To create the Open Hospital database, a mysql client and a set of SQL script files placed under the sql/ folder are needed.
 
 On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
 
@@ -248,7 +248,7 @@ using the ‘root’ password chosen during the installation process. The termin
 mysql>
 ----
 
-now we are ready to create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
+now we are ready to create the database user (isf) with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
@@ -287,6 +287,8 @@ client by logging in again and specifying the "--local-infile=1" parameter after
 
 The SQL script creates the OH database structure and populates it with default data.
 
+NOTE: Starting with version 1.11, it is possibile to use the provided scripts (oh.sh/oh.bat) to automatically perform all the database creation tasks.
+
 The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the database and its password must be changed immediately with the command:
 
 [source,shell]
@@ -307,12 +309,12 @@ mysql>FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ----
 
-NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts.
-
 [source,shell]
 ----
 mysql>quit;
 ----
+
+NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts.
 
 ==== 3.1.5 Open Hospital - Configuration
 
@@ -321,13 +323,15 @@ Open Hospital comes with several configuration files called “properties files�
 Specify:
 
 * the *IP address* of the machine where the database server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
-* the “isf” (or the user specified in the installation phase) user *password*
+* the “isf” user (or the user specified in the installation phase) *password*
 * the MariaDB/MySQL Server *Port Number*, if changed from “3306”
 
 NOTE: These settings are required for every Open Hospital installation/client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
+
+NOTE: Starting with version 1.11, it is possibile to use the provided scripts (oh.sh/oh.bat) to generate config files by choosing the option "-g".
 
 ==== 3.1.6 Open Hospital - Startup and run
 
