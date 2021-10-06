@@ -391,7 +391,9 @@ Backup of the Open Hospital database can be performed in several ways.
 
 NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.bat) by choosing the option "-s".
 
-Restore of the database is also possible; See oh.sh/oh.bat script help for more information.
+Restore of the Open Hospital database can be performed also in several ways.
+
+NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.bat) by choosing the option "-r".
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
