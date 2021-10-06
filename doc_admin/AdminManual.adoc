@@ -69,7 +69,7 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* Install the Java Runtime Environment (see compatibility matrix for the right version)
+* Install the Java Runtime Environment (see compatibility matrix for the right version) on every client
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Copy the Open Hospital application on every client (it may be installed on the server also)
 * Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
@@ -1798,7 +1798,9 @@ log4j.properties as explained in the chapter <<log4j-properties,log4j.properties
 
 NOTE: Following instructions only applies between “official releases” downloaded from the SourceForge website.
 
-New releases, as well as this Manual and the User Manual, are regularly released on SourceForge platform at the link: +
+New releases, as well as this Manual and the User Manual, are regularly released on SourceForge/GitHub:
+https://github.com/informatici/openhospital/releases
+
 https://sourceforge.net/projects/openhospital/files/
 
 There are two types of releases:
@@ -1822,7 +1824,7 @@ The most common way is to backup the working copy and re-apply those settings in
 Changes are found in the CHANGELOG file.
 
 Major releases always have changes to the DB, and these changes are implemented via different scripts included in the
-mysql folder (e.g.):
+sql (mysql for older version) folder (e.g.):
 
 [cols=",",options="header",]
 |===
