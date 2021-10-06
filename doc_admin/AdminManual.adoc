@@ -1799,6 +1799,7 @@ log4j.properties as explained in the chapter <<log4j-properties,log4j.properties
 NOTE: Following instructions only applies between “official releases” downloaded from the SourceForge website.
 
 New releases, as well as this Manual and the User Manual, are regularly released on SourceForge/GitHub:
+
 https://github.com/informatici/openhospital/releases
 
 https://sourceforge.net/projects/openhospital/files/
