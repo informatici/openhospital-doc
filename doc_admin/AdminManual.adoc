@@ -122,6 +122,7 @@ NOTE: MariaDB is the preferred alternative for the DBMS.
 Please referer to the latest MariaDB/MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
 
 *on a Linux machine*: during the installation, a “root” passwordi must be defined; it is very important to choose it carefully and to keep it safe. If the password is not set during installation an empty password will be automatically set for the root user.
+
 *on a Windows machine*: launch the installation and pay attention to the following steps:
 
 • Custom Setup
@@ -132,8 +133,9 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 • Select Install as service
 • Select Enable networking and write down the Port Number in an installation document
 
-**MariaDB installer does not include Bin Directory in Windows PATH
-It must be add manually to Windows system variable PATH**
+**MariaDB installer does not include Bin Directory in Windows PATH**
+
+**It must be add manually to Windows system variable PATH**
 
 
 Once the installation is complete the next stop is the Open Hospital database creation. To check if the server is active and running, open a terminal window (command prompt) and type the following command:
