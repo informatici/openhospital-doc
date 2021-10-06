@@ -424,10 +424,12 @@ To restore data with MySQL Workbench®:
 . Select the path and the name of the restore sql file.
 . Click the *Start Import* button at the right bottom corner of the window.
 
-==== 3.3.3 Backup of code and settings (Software)
+==== 3.3.3 Backup of client (data, code and settings)
 
 Backup of the software *code and settings* are needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
+
+Backup of the client data (for PORTABLE mode) and configuration files can be performed by saving the "data" folder, including all the subfolders.
 
 [#folders]
 == 4 Folders and directory structure
