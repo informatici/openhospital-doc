@@ -129,11 +129,7 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 • Select Install as service
 • Select Enable networking and write down the Port Number in an installation document
 
-**MariaDB installer does not include Bin Directory in Windows PATH; it must be added manually to Windows system variable PATH**
-
-On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
-
-The suggested approach is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
+NOTE: **MariaDB installer does not include Bin Directory in Windows PATH; it must be added manually to Windows system variable PATH.**
 
 To check if the server is active and running, open a terminal window (command prompt) and type the following command:
 
@@ -220,9 +216,11 @@ In this way, the database server listens on any IP address (0.0.0.0) configured 
 
 ==== 3.1.4 Open Hospital - Database creation
 
-To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
+To create the Open Hospital database, a mysql client and set of SQL script files placed under the sql/ folder are needed.
 
-If the *Include Bin Directory In Windows PATH* is selected during the installation process, the MySQL client can be run everywhere in the system.
+On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
+
+The suggested approach is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
 
 Open a terminal and navigate to the sql/ folder e.g.):
 
@@ -308,7 +306,7 @@ mysql>FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 ----
 
-NOTE: Remember to set the updated database password also in the Open Hospital configuration files.
+NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts.
 
 [source,shell]
 ----
