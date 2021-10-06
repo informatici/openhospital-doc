@@ -1806,8 +1806,8 @@ https://sourceforge.net/projects/openhospital/files/
 
 There are two types of releases:
 
-. Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
 . Minor Releases: only the third number changes (e.g. **1.8.**1 -> **1.8.**2)
+. Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
 
 *Minor Releases*:
 
