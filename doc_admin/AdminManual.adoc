@@ -109,10 +109,6 @@ TIP: If when running Open Hospital the application appears small-scaled or blurr
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
-On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
-
-The suggested approach for installation is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
-
 NOTE: See Software Compatibility Matrix to identify the correct MariaDB / MySQL version.
 
 NOTE: MariaDB is the preferred alternative for the DBMS.
@@ -135,7 +131,11 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 
 **MariaDB installer does not include Bin Directory in Windows PATH; it must be added manually to Windows system variable PATH**
 
-Once the installation is complete the next stop is the Open Hospital database creation. To check if the server is active and running, open a terminal window (command prompt) and type the following command:
+On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
+
+The suggested approach is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
+
+To check if the server is active and running, open a terminal window (command prompt) and type the following command:
 
 *# mysql –u root -p*
 
@@ -145,7 +145,7 @@ The terminal should reply with the MySQL client command line prompt:
 
 *mysql>*
 
-The prompt means there is a successful connection to the database server instance that was just installed as evidenced by it waiting for commands to execute.
+The prompt means that a successful connection to the database server instance that was just installed hase been established.
 
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
@@ -222,7 +222,7 @@ In this way, the database server listens on any IP address (0.0.0.0) configured 
 
 To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
 
-If the *Include Bin Directory In Windows PATH* is selected during the installation process (in Linux is always true) the MySQL client can be run everywhere in the system, otherwise, go back to that chapter and read the *NOTE* in the box.
+If the *Include Bin Directory In Windows PATH* is selected during the installation process, the MySQL client can be run everywhere in the system.
 
 Open a terminal and navigate to the sql/ folder e.g.):
 
