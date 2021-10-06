@@ -79,7 +79,7 @@ and the online documentation.
 
 For the MariaDB/MySQL database server installation and database creation refer to the chapter <<database-server,Database Server and Open Hospital DB>> and the online documentation.
 
-For the Open Hospital installation on every client, it is sufficient to copy and extract the zip file on the machine.
+For the Open Hospital installation on the clients, it is sufficient to copy and extract the zip package in the desired folder.
 
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
@@ -194,7 +194,7 @@ Change:
 ----
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-bind-address               = 127.0.0.1
+bind-address = 127.0.0.1
 ----
 
 To:
@@ -203,10 +203,15 @@ To:
 ----
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-bind-address               = 0.0.0.0
+bind-address = 0.0.0.0
 ----
 
 In this way, the database server listens on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
+
+In is also possible to specify a specific IP address, e.g:
+----
+bind-address = 192.168.1.100
+----
 
 ==== 3.1.4 Open Hospital - Database creation
 
