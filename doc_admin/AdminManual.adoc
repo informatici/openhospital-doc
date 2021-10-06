@@ -429,7 +429,7 @@ To restore data with MySQL Workbench®:
 Backup of the software *code and settings* are needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
-Backup of the client data (for PORTABLE mode) and configuration files can be performed by saving the "data" folder, including all the subfolders.
+Backup of the client data and configuration files, especially for "PORTABLE" mode, can be performed by saving the "data" folder (including all subfolders) present under the main OH path.
 
 [#folders]
 == 4 Folders and directory structure
