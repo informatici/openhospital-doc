@@ -69,8 +69,6 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
-
 * Install the Java Runtime Environment (see compatibility matrix for the right version)
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Copy the Open Hospital application on every client (it may be installed on the server also)
@@ -86,6 +84,9 @@ For the Open Hospital installation on every client, it is sufficient to copy and
 For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
 
 TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
+
+TIP: If when running Open Hospital the application appears small-scaled or blurry then the issue is probably using a high-dpi display. In such cases, there are some solutions (https://stackoverflow.com/a/39372897/5309541[click here]) to apply only on the machines using this type of monitor.
+
 
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
