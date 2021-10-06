@@ -1042,7 +1042,7 @@ The default settings for a GSM modem should work with the majority of GSM device
 The exception is the PORT parameter which must be changed to match the SERIAL port address used by the device plugged into the system.
 
 If the PORT param is correct but Open Hospital is not able to communicate with the device (try switching to DEBUG log level – or lower - during this setup –
-see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (OH startup script with the "G" option: oh.sh -G / oh.ps1 -> select "G").
+see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (OH startup script with the "G" option: oh.sh -G / oh.bat -> select "G").
 (see <<folders,Folders>>).
 
 ===== 5.1.22.2 SetupGSM
