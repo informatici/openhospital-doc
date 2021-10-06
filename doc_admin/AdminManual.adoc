@@ -374,9 +374,8 @@ No other configuration is needed. Additional options can be shown by executing:
 NOTE: To use Open Hospital in PORTABLE mode for Linux from a USB key it is required that the file permissions in the
 archive remain unchanged once extracted, otherwise the launcher cannot launch or use the application in an appropriate manner.
 
-NOTE: It is important to understand that the PORTABLE mode is meant to try or test the software
-or to be used in a facility (like a dispensary) where only a single computer is available. If the facility is large and needs a networked
-architecture, the full installation (client/server) is recommended.
+NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
+where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..218,leveloffset=+2]
 
