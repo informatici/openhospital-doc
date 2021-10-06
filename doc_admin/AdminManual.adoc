@@ -133,10 +133,7 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 • Select Install as service
 • Select Enable networking and write down the Port Number in an installation document
 
-**MariaDB installer does not include Bin Directory in Windows PATH**
-
-**It must be add manually to Windows system variable PATH**
-
+**MariaDB installer does not include Bin Directory in Windows PATH; it must be added manually to Windows system variable PATH**
 
 Once the installation is complete the next stop is the Open Hospital database creation. To check if the server is active and running, open a terminal window (command prompt) and type the following command:
 
@@ -156,8 +153,8 @@ NOTE: If the terminal does not reply as above most probably during installation 
 ===== 3.1.3.2 MariaDB/MySQL - Configuration
 
 Please use the following configuration values for MariaDB/MySQL server in my.cnf config file. Values can be adjusted and adapted to the hardware resources available.
-Config file can be my.ini or my.cnf
-Default for Windows MariaDB is my.ini located at C:\Program Files\MariaDB-[VERSION]\data\
+Config file can be my.ini or my.cnf;
+Default for Windows MariaDB is my.ini located at "C:\Program Files\MariaDB-[VERSION]\data\"
 
 ----
 #
@@ -199,7 +196,7 @@ write_buffer = 2M
 
 ===== 3.1.3.3 MariaDB/MySQL - Networking
 
-If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by changing MariaDB/MySQL's config file, “my.cnf”, and commenting out the "bind-address" parameter (using the *#* character)
+If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by editing MariaDB/MySQL's config file, “my.cnf”, and setting the "bind-address" parameter. For example, if you want the database server to listen on all network interfaces / IP addresses:
 
 Change:
 
@@ -216,7 +213,7 @@ To:
 ----
 # Instead of skip-networking the default is now to listen only on
 # localhost which is more compatible and is not less secure.
-#bind-address               = 127.0.0.1
+bind-address               = 0.0.0.0
 ----
 
 In this way, the database server listens on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
