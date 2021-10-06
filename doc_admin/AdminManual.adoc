@@ -420,7 +420,7 @@ image:image22.png[image,width=642,height=461]
 To restore data with MySQL Workbench®:
 
 [arabic]
-. Under *Server Administration* on the Home window select the server instance into which the data will be restored (Create *New Server Instance* if doing it the first time).
+. Under *Server Administration* on the Home window select the server instance onto which the data will be restored (Create *New Server Instance* if doing it the first time).
 . Click on *Manage Import/Export*
 . Click on *Data Import/Restore* on the left side of the screen.
 . Select *Import from Self-Contained File* radio button (right side of the screen)
@@ -432,7 +432,7 @@ To restore data with MySQL Workbench®:
 Backup of the software *code and settings* are needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
 
-Backup of the client data and configuration files, especially for "PORTABLE" mode, can be performed by saving the "data" folder (including all subfolders) under the main OH installation folder.
+Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving the *"data"* folder (including all subfolders) placed under the main OH installation folder.
 
 [#folders]
 == 4 Folders and directory structure
@@ -483,14 +483,14 @@ Customization of Open Hospital depends on settings set in text files called “p
 ** *txtPrinter.properties*– for the text printing system
 ** *xmpp.properties* – for the Xmpp Server
 
-Furthermore, additional configurations files that are not meant to be modified by the user are:
+Furthermore, additional configurations files (not meant to be modified by the user) are:
 
 * *resolutions.xml* –  stores locally the information about webcams
 * *version.properties* – contains the current Open Hospital version
 
 Every configuration file works only [.underline]#locally# and is meant to manage  [.underline]#only a single instance# of Open Hospital application.
 
-This means that if many clients are running Open Hospital they may run differently according to their configuration files.
+This means that clients running Open Hospital may run differently according to their configuration files.
 
 NOTE: Any change to these files requires an application restart to apply the settings.
 
@@ -1818,11 +1818,11 @@ There are two types of releases:
 
 Changes are found in the CHANGELOG file.
 
-Minor releases (if not otherwise specified) do not need changes to the DB, so the working copy can be replaced on each client with the new one and then connect to the same DB
+Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
-Remember to keep files that have been changed, especially configuration settings (see <<config-files,Configuration Files>>).
-The most common way is to backup the working copy and re-apply those settings in the new installation
+It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<config-files,Configuration Files>>).
+The easiest way is to backup the working copy and re-apply those settings in the new installation
 (see the <<backup-restore,Backup & Restore>> chapter).
 
 *Major Releases*:
