@@ -247,7 +247,7 @@ using the ‘root’ password chosen during the installation process. The termin
 mysql>
 ----
 
-Create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
+now we are ready to create the database user with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
@@ -272,7 +272,7 @@ mysql> show databases;
 | performance_schema |
 +--------------------+
 ----
-The next step is to launch the main SQL script “create_all_en.sql” with the command:
+The next step is to launch the main SQL database creation script with the command:
 
 [source,shell]
 ----
