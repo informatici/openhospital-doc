@@ -61,23 +61,24 @@ All the information needed to use the application software is not included; plea
 
 The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
 
-The procedure includes the installation of the JRE (Java Runtime Environment), the MariaDB/MySQL Server and the creation of the database through the execution of a script in the folder sql/ within the .zip file folders.
-
 The typical client/server, networked (LAN) configuration is shown in the following figure:
 
 image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* Install the Java Runtime Environment (see compatibility matrix for the right version) on every client
+* Install the JRE - Java Runtime Environment (see compatibility matrix for the right version) on every client
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
+* Create the OH database through the execution of a script in the folder sql/ within the .zip file folders
 * Copy the Open Hospital application on every client (it may be installed on the server also)
 * Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
 
 For the Java Runtime Environment, installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
-For the MariaDB/MySQL database server installation and database creation refer to the chapter <<database-server,Database Server and Open Hospital DB>> and the online documentation.
+For the MariaDB/MySQL database server installation and configuration refer to the chapter <<database-server,Database Server>> and the online documentation.
+
+For the OH database creation refer to the chapter <<ohdatabase-creation,Open Hospital - Database creation>> and the online documentation.
 
 For the Open Hospital installation on the clients, it is sufficient to copy and extract the zip package in the desired folder.
 
@@ -213,6 +214,7 @@ In is also possible to specify a specific IP address, e.g:
 bind-address = 192.168.1.100
 ----
 
+[#ohdatabase-creation]
 ==== 3.1.4 Open Hospital - Database creation
 
 To create the Open Hospital database, a MySQL client and a set of SQL script files placed under the sql/ folder are needed.
