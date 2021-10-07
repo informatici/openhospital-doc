@@ -97,7 +97,7 @@ then the main _menu_ of the OH application.
 
 If no desktop shortcut is present, open the folder where the software has been installed and double-click on the platform specific startup script (oh.bat on Windows / oh.sh on Linux).
 
-.The default Main Menu when the application starts.
+.The default Main Menu of the application.
 [#default-main-menu-4]
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
