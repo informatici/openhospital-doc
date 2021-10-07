@@ -45,11 +45,11 @@ Open Hospital features include:
 
 This document describes how all the above-mentioned items work and provides specific guidance for the user.
 
-The reader will not find in this manual the information about the installation of Open Hospital or
+NOTE: The reader will not find in this manual the information about installation or configuration of the Open Hospital software, nor
 how to administer it; that information is provided in the _Administrator’s Guide_ supplied with the software.
 
 
-== 3 Useful Information Before Reading This User Manual
+== 3 Useful Information about this User Manual
 
 === 3.1 Help
 
@@ -92,8 +92,10 @@ image:image4.png[Highlight Line,width=509,height=296]
 
 == 4 Run the Application
 
-After double-clicking the program icon on the desktop, an information image (splash image) appears for a few seconds and
-then the main _menu_ of the Open Hospital application.
+To run Open Hospital, double-click the program icon on the desktop; an information image (splash image) appears for a few seconds and
+then the main _menu_ of the OH application.
+
+If no desktop shortcut is present, open the folder where the software has been installed and double-click on the platform specific startup script (oh.bat on Windows / oh.sh on Linux).
 
 .The default Main Menu when the application starts.
 [#default-main-menu-4]
