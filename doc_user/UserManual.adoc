@@ -193,7 +193,7 @@ The second and third list continues to contain all diseases.
  +
 
 NOTE: Disease Types are defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph._
+<<settings,Settings>> chapter._
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
 during the same visit the doctor finds other concurrent pathologies thus it is possible to record
@@ -342,7 +342,7 @@ To insert a new pharmaceutical, enter the following fields:
 * *Pieces per Packet*: number of pieces per packet (if more than 1).
 * *Critical level*: the minimum quantity required in stock.
 
-NOTE: Types can be defined by the Administrator. See the <<settings,Settings>> paragraph for more information.
+NOTE: Types can be defined by the Administrator. Check the <<settings,Settings>> chapter for more information.
 
 image:image18.png[New Medical]
 
@@ -787,7 +787,7 @@ In Open Hospital there are two kinds of possible results for each exam:
 
 image:image45.png[New Laboratory Exam Procedure 1,width=309,height=340]image:image46.png[New Laboratory Exam Procedure 2,width=309,height=340]image:image46b.png[New Laboratory Exam Procedure 3,width=309,height=340]
 
-NOTE: Exams, Exam Type, and Results can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Exams, Exam Type, and Results can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 When the data is specified, the *Buttons panel* provides the following choices:
 
@@ -932,14 +932,14 @@ Data shown in the *Bill panel* area are:
 * *Patient*: the patient associated with the bill.
 * *List*: the Price List that will be used for this bill +
  +
-NOTE: Price Lists can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Price Lists can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 Data shown in the *Item Panel* area are:
 
 * *ITEM, QTY, AMOUNT*: the descriptions of the bill entry, the selected quantity, and the amount; the amount is calculated as the unit cost of the item multiplied by the quantity;
 * *TOTAL*: the total amount of the bill +
  +
-NOTE: Prices, or unit costs, can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Prices, or unit costs, can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 Data shown in the *Payments panel* area are:
 
@@ -970,7 +970,7 @@ There are several types of bill categories (or types) identified by the buttons 
 * *C[.underline]##us##tom*: enter custom items defined on the fly.
 
 NOTE: Types can be defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph in this document.
+<<settings,Settings>> chapter.
 
 
 ===== 8.2.1.1 Insert a Bill Entry Related to Medicals, Operations or Exams ([.underline]##M##edical, [.underline]##O##peration, [.underline]##E##xam)
@@ -1190,7 +1190,7 @@ Vaccinations can be selected by choosing specific field values from the followin
 * *Sex*: All / Male / Female
 
 NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph.
+<<settings,Settings>> chapter.
 
 After the selection press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
 
@@ -1215,7 +1215,7 @@ To record a new patient vaccination enters the following fields:
 * *Vaccine*: the vaccine
 
 NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph.
+<<settings,Settings>> chapter.
 
 When all the required information is entered the *Buttons panel* has the following choices:
 
@@ -1340,7 +1340,7 @@ A complete string or only some characters can be entered and the system will sho
 image:image79.png[Patient Browser Search,width=600,height=300]
 
 NOTE: Wards can be defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph.
+<<settings,Settings>> chapter.
 
 ==== 10.2.2 Search Patient Enhanced
 
@@ -1438,7 +1438,7 @@ Regardless of the way it is entered the age is converted to an age in years in t
 * *Has Insurance*: specify if the patient has a health financial protection plan (insurance)
 * *Load File*: a button used to load a patient's picture (it will be cropped and squared)
 
-NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 ==== 10.4.2 Height and Weight Functionality (Height and Weight)
 
@@ -1505,7 +1505,7 @@ To start an admission, enter the appropriate date into the following fields (on 
 
 TIP: It is possible to filter to find diseases more easily. To do this, enter a text fragment in the search field that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
 
-NOTE: Wards, Admission Types, and Diagnosis can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Wards, Admission Types, and Diagnosis can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 NOTE: The "Progressive in Year" field is automatically populated by the program; in the case of maternity, the
 counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
@@ -1586,7 +1586,7 @@ To delete a line from the table, select the line to delete by clicking on it (it
 then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
 
 NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> paragraph.
+<<settings,Settings>> chapter.
 
 [#insert-or-modify-delivery-data]
 ==== 10.5.4 Insert or Modify Delivery Data
@@ -1606,7 +1606,7 @@ In the Delivery tab, information about the Maternity case can be specified inclu
 
 image:image96.png[Admission Delivery,width=642,height=339]
 
-NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 [#discharge-of-a-patient]
 ==== 10.5.5 Discharge of a Patient ([.underline]##A##dmission)
@@ -1624,7 +1624,7 @@ TIP: As in the case of *_Diagnosis IN_*, it is possible to filter to find diseas
 
 image:image97.png[AdmissionDischarge,width=642,height=337]
 
-NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
+NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 When all the data has been entered the *Buttons panel* has the following choices:
 
