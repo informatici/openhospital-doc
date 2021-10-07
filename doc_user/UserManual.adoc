@@ -102,12 +102,11 @@ If no desktop shortcut is present, open the folder where the software has been i
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-From a menu access to other menus or functional areas is possible. In the example below, from the main *_menu_*
-selecting the *_Settings_* menu leads to another menu of various settings or code types:
+From the main menu it is possible to access functions and sub-menus. In the example below, selecting the *_Settings_* button leads to the OH settings sub-menu:
 
 image:image6.png[Setting Submenu,width=602,height=370]
 
-Some menu selections lead directly to a function of the application
+Some menu items lead directly to a specific function of the application
 (see the following example with the *_OPD Out Patient Department_* window):
 
 image:image7.png[Click OPD in main menu,width=649,height=374]
@@ -119,7 +118,7 @@ image:image7.png[Click OPD in main menu,width=649,height=374]
 
 === 5.1 Main Characteristics
 
-The function of the Out Patient Department (OPD) allows for recording ambulatory patient visits, searching, reviewing, editing, and
+The function of the Out Patient Department (OPD) allows the recording of ambulatory patient visits, searching, reviewing, editing, and
 eventually deleting visits. In addition queries necessary for statistical purposes are available.
 
 Click on the *[.underline]##O##PD* button or press “Alt + O” in the main *_menu_* to access the OPD function.
@@ -131,7 +130,7 @@ image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
 === 5.2 Functions of Out Patient Department
 
-All functions available under *[.underline]##O##PD* are accessible from the window *_OPD Out Patient Department_* shown below.
+All functions available under *[.underline]##O##PD* are accessible from the window *_OPD Out Patient Department_* shown below:
 
 image:image9.png[OPD,width=800,height=319]
 
@@ -142,7 +141,7 @@ The following functions are available from the *Buttons panel* of the window *_O
 * *[.underline]##D##elete*: delete a patient visit.
 * *[.underline]##C##lose*: exit from the *_OPD Out Patient Department_* function.
 
-Furthermore, a search function (*[.underline]##S##earch*) is available using the *Selection panel* on the left of the window.
+Furthermore, a search function (*[.underline]##S##earch*) is available using the *Selection panel* on the left side of the window.
 
 ==== 5.2.1 Search Patient Visits ([.underline]##S##earch)
 
@@ -161,7 +160,7 @@ After specifying the selection criteria, press the *[.underline]##S##earch* butt
 The counter at the bottom of the window indicates how many visits match the specified criteria
 and the individual visit data appears in the *Data table* area.
 
-The example below shows all the visits for patients with asthma admitted in the period from 29-5-2020 until
+The example below shows all the visits for patients with _asthma_ disease admitted in the period from 29-5-2020 until
 5-6-2021; all ages, all sexes, and all patient types are included.
 
 image:image10.png[OPD Visits,width=810,height=337]
@@ -193,8 +192,8 @@ after ten days to have his/her stitches removed, a new OPD record is then create
 The second and third list continues to contain all diseases.
  +
 
-NOTE: Disease Types are defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document._
+NOTE: Disease Types are defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph._
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
 during the same visit the doctor finds other concurrent pathologies thus it is possible to record
@@ -242,7 +241,7 @@ In the *Buttons panel* has the following choices:
 
 === 5.3 OPD Extended
 
-One can extend the OPD functionality by changing the _OPDEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The OPD functionality can be extended by changing the _OPDEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_ .
 
 ==== 5.3.1 Additional Features
 
@@ -282,7 +281,7 @@ Pressing *[.underline]##P##harmacy* from the main menu provides access to the Ph
 |===
 
 
-NOTE: Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: Pharmaceuticals Stock Ward functionality can be disabled by changing the INTERNALPHARMACIES flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#pharmaceuticals]
 === 6.1 Pharmaceuticals ([.underline]##P##harmaceuticals)
@@ -343,7 +342,7 @@ To insert a new pharmaceutical, enter the following fields:
 * *Pieces per Packet*: number of pieces per packet (if more than 1).
 * *Critical level*: the minimum quantity required in stock.
 
-NOTE: Types can be defined by the Administrator. See <<settings,Settings>> in this document for more information.
+NOTE: Types can be defined by the Administrator. See the <<settings,Settings>> paragraph for more information.
 
 image:image18.png[New Medical]
 
@@ -543,9 +542,9 @@ Finally, click the *[.underline]##S##ave* button to save the charge movement.
 
 NOTE: The Lot definition can be set as automatic by changing the AUTOMATICLOT_IN flag in the configuration
 file, so every new charging movement automatically creates a new lot. Regardless of the setting,
-the Expiring Date must always be provided. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+the Expiring Date must always be provided. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-NOTE: In order to avoid managing the cost of medicals set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: In order to avoid managing the cost of medicals set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
 ===== 6.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
@@ -583,7 +582,7 @@ Click the *[.underline]##S##ave* button to save the discharge movement.
 NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT in the configuration
 file, so every new discharging movement will automatically select a suitable lot for the operation according
 to the expiring date. If the first selected lot does not contain enough quantity to serve the discharging
-movement, several discharging movements may be generated. Ask the Administrator or read the _Administrator’s Guide_
+movement, several discharging movements may be generated. Ask the Administrator or check the _Administrator’s Guide_
 for more information.
 
 <<<
@@ -595,7 +594,7 @@ for more information.
 
 The Pharmaceutical Stock Ward feature allows the management of the pharmacy at the ward level.
 
-*Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask the Administrator how to do it or read the _Administrator’s Guide_.
+*Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ==== 6.3.2 Functions of Pharmaceuticals Stock Ward 
 
@@ -690,7 +689,7 @@ NOTE: The lot selection can be enabled or disabled (set as automatic) by changin
 the configuration file, so every new discharging movement will automatically select a suitable lot for the
 operation according to the expiring date (FEFO). If the first selected lot does not contain enough quantity
 to serve the discharging movement, several discharging movements may be generated if the quantity laying in
-other lots can satisfy the request. Ask the Administrator or read the _Administrator’s Guide_ for more information.
+other lots can satisfy the request. Ask the Administrator or check the _Administrator’s Guide_ for more information.
 
 Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed, it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
@@ -788,7 +787,7 @@ In Open Hospital there are two kinds of possible results for each exam:
 
 image:image45.png[New Laboratory Exam Procedure 1,width=309,height=340]image:image46.png[New Laboratory Exam Procedure 2,width=309,height=340]image:image46b.png[New Laboratory Exam Procedure 3,width=309,height=340]
 
-NOTE: Exams, Exam Type, and Results can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Exams, Exam Type, and Results can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 When the data is specified, the *Buttons panel* provides the following choices:
 
@@ -812,7 +811,7 @@ image:image48.png[Delete Laboratory Exam]
 
 === 7.3 Laboratory Extended
 
-The Laboratory functionality can be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask the Administrator how to do it.
+The Laboratory functionality can be extended by changing the _LABEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator's Guide_.
 
 ==== 7.3.1 Extended Laboratory Browsing
 
@@ -839,7 +838,7 @@ The *Patient’s Data* panel cannot be modified except for the *Note* field and 
 [#laboratory-multiple-insert]
 ==== 7.3.3 Laboratory Multiple Insert
 
-One can extend the _New Laboratory_ functionality by changing the _LABMULTIPLEINSERT_ flag in the configuration file. The flag _LABEXTENDED_ has to be enabled too. Ask the Administrator how to do it.
+The _New Laboratory_ functionality can be extended by changing the _LABMULTIPLEINSERT_ flag in the configuration file. The flag _LABEXTENDED_ has to be enabled too. Refer to the _Administration's Guide_.
 
 The New Laboratory Multiple allows multiple exam insertion for each patient, avoiding repeating the new laboratory exam procedure (*[.underline]##N##ew*) for every exam for the same patient.
 
@@ -916,7 +915,7 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 [#insert-a-new-bill]
 ==== 8.2.1 Insert a New Bill ([.underline]##N##ew Bill)
 
-One can use the *New Bill* function to generate a new bill for a patient.
+The *New Bill* function is used to to generate a new bill for a patient.
 Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
 
 To record a new bill it must be saved with the *[.underline]##S##ave* function (see description below).
@@ -933,14 +932,14 @@ Data shown in the *Bill panel* area are:
 * *Patient*: the patient associated with the bill.
 * *List*: the Price List that will be used for this bill +
  +
-NOTE: Price Lists can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Price Lists can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 Data shown in the *Item Panel* area are:
 
 * *ITEM, QTY, AMOUNT*: the descriptions of the bill entry, the selected quantity, and the amount; the amount is calculated as the unit cost of the item multiplied by the quantity;
 * *TOTAL*: the total amount of the bill +
  +
-NOTE: Prices, or unit costs, can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Prices, or unit costs, can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 Data shown in the *Payments panel* area are:
 
@@ -970,8 +969,8 @@ There are several types of bill categories (or types) identified by the buttons 
 * *O[.underline]##t##her*: enter other prices defined in the Price List.
 * *C[.underline]##us##tom*: enter custom items defined on the fly.
 
-NOTE: Types can be defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Types can be defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph in this document.
 
 
 ===== 8.2.1.1 Insert a Bill Entry Related to Medicals, Operations or Exams ([.underline]##M##edical, [.underline]##O##peration, [.underline]##E##xam)
@@ -1070,7 +1069,7 @@ If the patient is going to pay the complete amount of the bill press the *P[unde
 
 ===== 8.1.2.11 Print Receipt Function
 
-A receipt can be printed at any time by pressing the *P[.underline]##a##id* button__. To enable this feature, the RECEIPTPRINTER__ flag in the configuration file must be set and a proper printer device must be connected to the system. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+A receipt can be printed at any time by pressing the *P[.underline]##a##id* button__. To enable this feature, the RECEIPTPRINTER__ flag in the configuration file must be set and a proper printer device must be connected to the system. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ===== 8.2.1.12 Close Function ([.underline]##C##lose)
 
@@ -1124,12 +1123,12 @@ Once the choice has been made, after some time the JasperViewer® will show the 
 
 image:image65.png[Report output,width=642,height=470]
 
-NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]).  The report can also be printed by clicking
 on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
-NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 === 8.3 Functions of Accounting in Multi-user Mode
 
@@ -1190,8 +1189,8 @@ Vaccinations can be selected by choosing specific field values from the followin
 * *Age*: “**Age From**” and “**Age To**” subsets the patients subject to vaccinations by an age range
 * *Sex*: All / Male / Female
 
-NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph.
 
 After the selection press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
 
@@ -1215,8 +1214,8 @@ To record a new patient vaccination enters the following fields:
 * *Vaccine Type*: the Vaccine Type
 * *Vaccine*: the vaccine
 
-NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph.
 
 When all the required information is entered the *Buttons panel* has the following choices:
 
@@ -1245,7 +1244,7 @@ image:image75.png[Delete a patient vaccinaton]
 
 === 9.3 Vaccines Extended ([.underline]##V##accines)
 
-One can extend the vaccine functionality by changing the _PATIENTVACCINEEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The vaccine functionality can be extended by changing the _PATIENTVACCINEEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ==== 9.3.1 Extended Vaccine Browsing
 
@@ -1269,7 +1268,7 @@ The Admission/Patient functionality allows registering a new patient, modifying 
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu]
 
-NOTE: An OPD registration can be started from here if the OPDEXTENDED flag is set to YES. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: An OPD registration can be started from here if the OPDEXTENDED flag is set to YES. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 === 10.2 Functions of Admission/Patients
 
@@ -1281,7 +1280,7 @@ image:image78.png[Patient Browser,width=584,height=235]
 
 NOTE: If the list of patients becomes very large it is likely to result in a slowdown of the system depending on the
 network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in the
-configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 The following data are shown in the *_Patient Browser_* window:
 
@@ -1307,7 +1306,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
 
 NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
-registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 Furthermore, a search function is available using the *Selection panel* on the left of the window.
 
@@ -1340,12 +1339,12 @@ A complete string or only some characters can be entered and the system will sho
 
 image:image79.png[Patient Browser Search,width=600,height=300]
 
-NOTE: Wards can be defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Wards can be defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph.
 
 ==== 10.2.2 Search Patient Enhanced
 
-Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 Once the enhanced search has been enabled the new *_Patient Browser_* window looks like following:
 
@@ -1414,7 +1413,7 @@ In the *Buttons panel* the choices are:
 [#insert-a-new-patient-extended]
 === 10.4 Insert a new Patient Extended ([.underline]##N##ew)
 
-The New Patient functionality can be extended by changing the _PATIENTEXTENDED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The New Patient functionality can be extended by changing the _PATIENTEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ==== 10.4.1 Additional Features
 
@@ -1439,7 +1438,7 @@ Regardless of the way it is entered the age is converted to an age in years in t
 * *Has Insurance*: specify if the patient has a health financial protection plan (insurance)
 * *Load File*: a button used to load a patient's picture (it will be cropped and squared)
 
-NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 ==== 10.4.2 Height and Weight Functionality (Height and Weight)
 
@@ -1448,7 +1447,7 @@ The height and weight of the patient are not required when registering a new pat
 ==== 10.4.3 Patient Photo ([.underline]##N##ew Photo)
 
 The New Patient functionality can be extended by changing the
-__[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+__[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 Once the video module has been enabled the *_New Patient_* window looks as follows:
 
@@ -1471,7 +1470,7 @@ Once the camera is activated and the “eye-view” of the camera is visible, pr
 Open Hospital attempts to automatically set the best quality for any webcam connected to the computer and remembers the last settings used.
 
 NOTE: If the camera does not function then change the flag to DEBUG in the configuration file to generate additional
-diagnostic information. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 === 10.5 Admission Functions ([.underline]##A##dmission)
 
@@ -1506,11 +1505,11 @@ To start an admission, enter the appropriate date into the following fields (on 
 
 TIP: It is possible to filter to find diseases more easily. To do this, enter a text fragment in the search field that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
 
-NOTE: Wards, Admission Types, and Diagnosis can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Wards, Admission Types, and Diagnosis can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 NOTE: The "Progressive in Year" field is automatically populated by the program; in the case of maternity, the
 counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
-[.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or read the _Administrator’s Guide_.
+[.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or refer to the _Administrator’s Guide_.
 
 When done entering data the *Buttons panel* has the following choices:
 
@@ -1586,8 +1585,8 @@ WARNING: Clicking on the button *[.underline]##S##ave* just adds the operation t
 To delete a line from the table, select the line to delete by clicking on it (it automatically highlights), 
 then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
 
-NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator how to do it or see
-<<settings,Settings>> in this document.
+NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
+<<settings,Settings>> paragraph.
 
 [#insert-or-modify-delivery-data]
 ==== 10.5.4 Insert or Modify Delivery Data
@@ -1607,7 +1606,7 @@ In the Delivery tab, information about the Maternity case can be specified inclu
 
 image:image96.png[Admission Delivery,width=642,height=339]
 
-NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 [#discharge-of-a-patient]
 ==== 10.5.5 Discharge of a Patient ([.underline]##A##dmission)
@@ -1625,7 +1624,7 @@ TIP: As in the case of *_Diagnosis IN_*, it is possible to filter to find diseas
 
 image:image97.png[AdmissionDischarge,width=642,height=337]
 
-NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator how to do it or see <<settings,Settings>> in this document.
+NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> paragraph.
 
 When all the data has been entered the *Buttons panel* has the following choices:
 
@@ -1779,7 +1778,7 @@ The *Buttons panel* has the following choices:
 * *[.underline]##D##ICOM*: launch the DICOM viewer.
 * *[.underline]##C##lose*: close the window and return to the *_Patient Browser_* window without applying any changes.
 
-NOTE: The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 By pressing the *Launch [.underline]##R##eport* button in the *_Patient Data_* window, a new window appears:
 
@@ -1790,7 +1789,7 @@ The application is set to get the entire history of the patient, but this can be
 [#dicom-viewer]
 ==== 10.9.1 DICOM ([.underline]##D##ICOM Viewer)
 
-The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 In the *_Patient Data_* window, click the [.underline]##D##ICOM button to access the *_DICOM Viewer_* window as shown below.
 
@@ -1827,7 +1826,7 @@ The *Zoom* slider can be used to Zoom in or out of the image.
 
 More than one DICOM file can be loaded into a patient folder. It is possible to delete a DICOM file from the patient's folder. First, select the file in the left view and then click the *Delete DICOM* button.
 
-One can hide the thumbnails on the left by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The thumbnails on the left can be hidden by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#therapy-management]
 === 10.10 Therapy Management (T[.underline]##h##erapy)
@@ -1863,9 +1862,9 @@ To add a therapy the following information is required:
 * *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
 * *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above “One” means once per day
 * *Frequency within period*: set the periodicity of the therapy; in the example above every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
-* *Period*: set how long is the therapy, to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
+* *Period*: set the lenght of therapy; to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
-* *Note*: an optional area for free text for notes
+* *Note*: an optional area for free text or notes
 
 Once the data is entered the *Buttons panel* has the following choices:
 
@@ -2097,12 +2096,12 @@ After some time passes the JasperViewer® will show the generated report as foll
 
 image:image125.png[Report,width=591,height=420]
 
-NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator refer to the _Administrator’s Guide_.
 
 The report can be saved as a PDF by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]) or printing it by
 clicking on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
-NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 <<<
 
@@ -2142,14 +2141,14 @@ This report is a list of diseases, divided by types, as defined by the Administr
 
 === 13.1 Main Characteristics
 
-One can use the Communication module by changing the _XMPPMODULEENABLED_ flag in the configuration file. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The Communication module can be enabled by changing the _XMPPMODULEENABLED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 .Click with the mouse on the button or press "Alt + M" to enter the *Communication* window.
 [#default-main-menu-13]
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-This function is used to chat and share information with other users logged in the system if in turn the application has been set in [.underline]#multi-user# mode and an [.underline]#XMPP Server# is active and running (Ask the Administrator how to do it or read the __Administrator’s Guide_).
+This function is used to chat and share information with other users logged in the system if in turn the application has been set in [.underline]#multi-user# mode and an [.underline]#XMPP Server# is active and running (Ask the Administrator or refer to the __Administrator’s Guide_).
 
 The functionality allows the following tasks:
 
@@ -2889,7 +2888,7 @@ click on the *[.underline]##D##elete* button to remove the selected Supplier.
 
 WARNING: SMS pricing is set and collected by the SMS Provider (GSM or HTTP) and is related to or controlled by this software.
 
-NOTE: Sending SMS in Open Hospital requires that the Gateway is well configured. Either a GSM gateway or WebApi Gateway can be used. Ask the Administrator how to do it or read the _Administrator’s Guide_.
+NOTE: Sending SMS in Open Hospital requires that the Gateway is well configured. Either a GSM gateway or WebApi Gateway can be used. Ask the Administrator about enabling this function or refer the _Administrator’s Guide_.
 
 Once the *SMS Manager* button in the *_Settings_* menu is pressed, the *_SMS Manager_* window shown below appears:
 
@@ -2921,7 +2920,7 @@ To delete an SMS, highlight the SMS and click the *[.underline]##D##elete* butto
 [#users-groups]
 === 14.12 Users & Groups ([.underline]##U##sers & Groups)
 
-The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator how to do it or read the _Administrator’s Guide_.
+The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
 
 If _SINGLEUSER_ is set to NO the following login window appears when the program starts:
 
@@ -3015,7 +3014,7 @@ Once selected, the ward (it is possible to switch to another ward at any time), 
 
 image:image246.png[Worksheet with selection,width=600,height=265]
 
-One can select another date with the *Go to date* field or reset the schedule back to today with the button *Today*.
+Another date can be selected with the *Go to date* field or reset the schedule back to today with the button *Today*.
 In all cases, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
 
 The functions available in this window are:
