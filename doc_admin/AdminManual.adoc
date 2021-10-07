@@ -59,7 +59,7 @@ All the information needed to use the application software is not included; plea
 
 === 3.1 Open Hospital
 
-The software acts as a client application. The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
+Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
 
 The typical client/server, networked (LAN) configuration is shown in the following figure:
 
@@ -71,9 +71,9 @@ The Administrator/Installer tasks are hereby listed:
 * Install the MariaDB/MySQL server on a computer that will act as the OH server
 * Create the OH database through the execution of a script in the folder sql/ within the .zip file folders
 * Copy the Open Hospital application on every client (it may be installed on the server also)
-* Configure each Open Hospital copy to point to the OH server (using the hostname or the IP address)
+* Configure each Open Hospital instance to point to the OH server (using the hostname or the IP address)
 
-For the Java Runtime Environment, installation refer to the next chapter <<jre,Java Runtime Environment>>
+For the Java JRE installation refer to the next chapter <<jre,Java Runtime Environment>>
 and the online documentation.
 
 For the MariaDB/MySQL database server installation and configuration refer to the chapter <<database-server,Database Server>> and the online documentation.
