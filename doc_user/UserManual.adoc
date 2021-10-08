@@ -2578,7 +2578,7 @@ Once the *[.underline]##H##ospital* button in the *_Settings_* menu is pressed, 
 
 image:image162.png[Hospital]
 
-By pressing the *[.underline]##E##dit* button it is possible to edit the values to match those of where the software is installed.
+By pressing the *[.underline]##E##dit* button it is possible to modify the hospital information:
 
 image:image163.png[Hospital edit]
 
@@ -2639,7 +2639,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window appea
 
 image:image167.PNG[Edit Disease]
 
-In editing mode, the type and code cannot be changed and the only modifications allowed are to the Description and if the disease should appear only in OPD, or Admissions, or in both.
+In editing mode, the type and code cannot be changed and the the only modifications allowed are to the Description and if the disease should appear only in OPD, or Admissions, or in both.
 
 By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) a *[.underline]##D##elete* action is performed disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
@@ -2884,7 +2884,7 @@ click on the *[.underline]##D##elete* button to remove the selected Supplier.
 
 WARNING: SMS pricing is set and collected by the SMS Provider (GSM or HTTP) and is related to or controlled by this software.
 
-NOTE: Sending SMS in Open Hospital requires that the Gateway is well configured. Either a GSM gateway or WebApi Gateway can be used. Ask the Administrator about enabling this function or refer the _Administrator’s Guide_.
+NOTE: Sending SMS in Open Hospital requires that the Gateway is well configured. Either a GSM gateway or WebApi Gateway can be used. Ask the Administrator about enabling this function or refer to the _Administrator’s Guide_.
 
 Once the *SMS Manager* button in the *_Settings_* menu is pressed, the *_SMS Manager_* window shown below appears:
 
@@ -2898,7 +2898,7 @@ The functions available in this window are:
 
 It is also possible to filter the SMS list by a date range.
 
-To send a new SMS, click the *[.underline]##N##ew* button to access the *_New SMS_* window.
+To send a new SMS, click the *[.underline]##N##ew* button to access the *_New SMS_* window:
 
 image:image185.png[New SMS]
 
@@ -3002,11 +3002,11 @@ The *Worksheet* function allows the management and printing of the list of appoi
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-The _Worksheet_ module works at the Ward (Department) level therefore a ward must first be selected.
+The _Worksheet_ module works at the Ward (Department) level therefore a ward must first be selected:
 
 image:image245.png[Worksheet,width=600,height=265]
 
-Once selected, the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right).
+Once selected, the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
 
 image:image246.png[Worksheet with selection,width=600,height=265]
 
