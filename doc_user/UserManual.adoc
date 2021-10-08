@@ -102,7 +102,7 @@ If no desktop shortcut is present, open the folder where the software has been i
 [caption="Main Menu: "]
 image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
 
-From the main menu it is possible to access functions and sub-menus. In the example below, selecting the *_Settings_* button leads to the OH settings sub-menu:
+From the main menu it is possible to access functions and submenus. In the example below, selecting the *_Settings_* button leads to the OH settings submenu:
 
 image:image6.png[Setting Submenu,width=602,height=370]
 
@@ -2143,6 +2143,8 @@ This report is a list of diseases, divided by types, as defined by the Administr
 
 The Communication module can be enabled by changing the _XMPPMODULEENABLED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
+Through the communication module events and notifications can be shared among users logged into the system,
+
 .Click with the mouse on the button or press "Alt + M" to enter the *Communication* window.
 [#default-main-menu-13]
 [caption="Main Menu: "]
@@ -2169,17 +2171,15 @@ By double-clicking on an active user (i.e. Allan in the figure above) a chat ses
 
 image:image130.png[Communication window,width=641,height=286]
 
-To send a message to Allan, type the message into the white box at the bottom and then press “ENTER”; the message is immediately forwarded to Allan; when Allan does the same, the message is immediately forwarded back. Other users logged in (i.e. Mary in the figures above) cannot see our conversation.
+To send a message to Allan, type the message into the white box at the bottom and then press “ENTER”; the message is immediately sent to Allan; when Allan does the same, his response is immediately received. Other users logged in (i.e. Mary in the figures above) cannot see this private conversation.
 
 === 13.3 Admission/Discharge Notifications
-
-As mentioned before, with the communication module some events can be shared with other users.
 
 In the *_New Admission_* window, in the *Buttons panel* there is a dropdown box, as shown below:
 
 image:image131.png[Communication notifications,width=642,height=343]
 
-The box lists all users currently logged into the system (those with the green circle near the name) and allows for sending an alert or not (nobody) at the moment the *[.underline]##S##ave* button is pressed.
+The box lists all users currently logged into the system (those with the green circle near the name) and allows to send an alert or not (nobody) when the *[.underline]##S##ave* button is pressed.
 
 ==== 13.3.1 Admission Notifications
 
@@ -2199,8 +2199,6 @@ image:image133.png[Communication discharge for Allan,width=377,height=285]
 
 === 13.4 Pharmaceuticals Critical Level Notifications
 
-As mentioned previously, with the communication module events can be shared with other users.
-
 In the *_Stock Movement Inserting - Discharge_* window there is a new box at the bottom, as shown below:
 
 image:image134.png[Communication Stock alert,width=397,height=500]
@@ -2208,13 +2206,11 @@ image:image134.png[Communication Stock alert,width=397,height=500]
 The box becomes active and useful only if the movement is going to reduce the selected pharmaceutical below the critical level. Given such an occurrence the event can be shared with another user logged into the system at the given time when the *[.underline]##O##K* button is pressed.
 
 Assuming such a notification about this discharging movement is to be shared with user Allan,
-when the *[.underline]##O##K* button is pressed, Allan sees in his *_Communication_* window a message like “ALERT:” followed by the pharmaceutical name and the text “is about to end” as shown below:
+when the *[.underline]##O##K* button is pressed, Allan receives in his *_Communication_* window a message like “ALERT:” followed by the pharmaceutical name and the text “is about to end” as shown below:
 
 image:image135.png[Communication Stock alert for Allan,width=377,height=287]
 
 === 13.5 Report Sharing
-
-As mentioned previously, with the communication module events can be shared with other users.
 
 In the *_Report Launcher_* window there is a new box at the bottom, as shown below:
 
