@@ -124,7 +124,7 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 • Select Install as service
 • Select Enable networking and write down the Port Number in an installation document
 
-NOTE: MariaDB installer does not include bin directory in Windows PATH; it must be added manually to the Windows system variable PATH.
+NOTE: MariaDB installer does not include the bin directory in the Windows PATH environment variable; it must be added manually to the Windows system variable PATH.
 
 To check if the server is active and running, open a terminal window (command prompt) and type the following command:
 
