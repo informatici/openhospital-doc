@@ -87,6 +87,7 @@ For the Open Hospital configuration refer to the chapter <<config-files,Configur
 
 TIP: Some tasks can be automated using the new oh.sh / oh.bat scripts.
 
+
 ==== 3.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
@@ -116,6 +117,7 @@ The suggested approach for installation is to use the command-line MariaDB/MySQL
 NOTE: See Software Compatibility Matrix to identify the correct MariaDB / MySQL version.
 
 NOTE: MariaDB is the preferred alternative for the DBMS.
+
 
 ===== 3.1.3.1 MariaDB/MySQL - Server installation
 
@@ -219,6 +221,7 @@ To:
 
 In this way, the database server listens on any IP address (0.0.0.0) configured on the server and can serve the connecting clients.
 
+
 ==== 3.1.4 Open Hospital - Database creation
 
 To create the Open Hospital database everything required is found in a set of SQL script files contained in the Open Hospital ([.underline]#non-portable#) zip file in the folder sql/.
@@ -316,6 +319,7 @@ NOTE: Remember to set the updated database password also in the Open Hospital co
 mysql>quit;
 ----
 
+
 ==== 3.1.5 Open Hospital - Configuration
 
 Open Hospital comes with several configuration files called “properties files”. To set up the database connection for Open Hospital, modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
@@ -330,6 +334,7 @@ NOTE: These settings are required for every Open Hospital installation/client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
+
 
 ==== 3.1.6 Open Hospital - Startup and run
 
@@ -349,6 +354,7 @@ image:image18.png[MainMenu.PNG,width=235,height=456]
 It is possible to create a shortcut (link) to the executable script on the desktop, in the Programs Menu or wherever is useful by using the provided icon “oh.ico” that is found in the package.
 
 image:image100.png[oh.ico,width=32,height=32]
+
 
 === 3.2 Open Hospital - Portable mode
 
@@ -425,6 +431,7 @@ To restore data with MySQL Workbench®:
 . Select *Import from Self-Contained File* radio button (right side of the screen)
 . Select the path and the name of the restore sql file.
 . Click the *Start Import* button at the right bottom corner of the window.
+
 
 ==== 3.3.3 Backup of code and settings (Software)
 
@@ -530,6 +537,7 @@ INTERNALPHARMACIES=yes
 MERGEFUNCTION=yes
 SMSENABLED=no
 INTERNALVIEWER=yes
+DOC_DIR=doc
 MAINMENUALWAYSONTOP=no
 RECEIPTPRINTER=yes
 VIDEOMODULEENABLED=yes
@@ -584,6 +592,7 @@ If an unknown value is set, the local computer language is applied.
 
 NOTE: An application restart is required to apply the setting.
 
+
 ==== 5.1.2 SINGLEUSER
 
 The following table shows the default value and the allowed ones:
@@ -612,6 +621,7 @@ NOTE: The setting is client-side specific, this means that the login can be disa
 be required on other clients, with the same defined user and group.
 
 WARNING: Data security must never be left solely to the application but it must include proper network architecture and a rigid configuration of the clients.
+
 
 ==== 5.1.3 AUTOMATICLOT
 
@@ -646,6 +656,7 @@ For discharges to patients (drug giving) the lot is *never* asked.
 
 NOTE: An application restart is required to see the modification applied for all the above settings.
 
+
 ==== 5.1.4 LOTWITHCOST
 
 The following table shows the default value and the allowed ones:
@@ -660,6 +671,7 @@ Open Hospital allows for managing the cost of medicals in the main pharmacy
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#6-2-2-2-insert-stock-charging-movement-charge[6.2.2.2 Insert stock charging movement] in the User's Guide).
 
 NOTE: An application restart is required to see the modification applied.
+
 
 ==== 5.1.5 PATIENTSHEET
 
@@ -738,7 +750,6 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.9 PATIENTBILL
 
 The following table shows the default value and the allowed ones:
@@ -758,7 +769,6 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.10 BILLSREPORT
 
 The following table shows the default value and the allowed ones:
@@ -775,7 +785,6 @@ By default, BILLSREPORT is set to BillsReport, that is, the filename of the rela
 It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
 NOTE: An application restart is required to see the modification applied.
-
 
 
 ==== 5.1.11 BILLSREPORTMONTH
@@ -797,7 +806,6 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.12 PHARMACEUTICALORDER
 
 The following table shows the default value and the allowed ones:
@@ -815,7 +823,6 @@ By default, PHARMACEUTICALORDER is set to PharmaceuticalOrder, that is, the file
 It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
 
 NOTE: An application restart is required to see the modification applied.
-
 
 
 ==== 5.1.13 PHARMACEUTICALSTOCK
@@ -836,7 +843,6 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.14 PATIENTEXTENDED
 
 The following table shows the default value and the allowed ones:
@@ -852,8 +858,6 @@ Open Hospital allows for the registration of a patient with extended or more det
 By default, PATIENTEXTENDED is set to yes. It is possible to set it to no to reduce the amount of data collected and so reduce the workload for the staff involved in data entry.
 
 NOTE: An application restart is required to see the modification applied.
-
-
 
 
 ==== 5.1.15 OPDEXTENDED
@@ -875,7 +879,6 @@ It is possible to set it to no to reduce the amount of data to be collected (onl
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.16 MATERNITYRESTARTINJUNE
 
 The following table shows the default value and the allowed ones:
@@ -893,7 +896,6 @@ This option controls which behavior is followed.
 By default, MATERNITYRESTARTINJUNE is set to no.
 
 NOTE: An application restart is required to see the modification applied.
-
 
 
 ==== 5.1.17 LABEXTENDED
@@ -936,7 +938,6 @@ By default, LABMULTIPLEINSERT is set to yes, but if LABEXTENDED is set to no it 
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.19 INTERNALPHARMACIES
 
 The following table shows the default value and the allowed ones:
@@ -975,7 +976,6 @@ By default, MERGEFUNCTION is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-
 ==== 5.1.21 INTERNALVIEWER
 
 The following table shows the default value and the allowed ones:
@@ -1001,7 +1001,7 @@ One must ensure that the executable is available in the desktop environment.
 ----
 INTERNALVIEWER=AcroRd32.exe
 
-INTERNALVIEWER= C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\AcroRd32.exe
+INTERNALVIEWER=C:\\Program Files (x86)\\Adobe\\Reader 10.0\\Reader\\AcroRd32.exe
 ----
 NOTE: Please note the double file and folder separator “_\\_”.
 
@@ -1016,8 +1016,42 @@ By default, INTERNALVIEWER is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
+==== 5.1.22 DOC_DIR
 
-==== 5.1.22 SMSENABLED
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value |Valid Values
+|DOC_DIR |doc | any path
+|===
+
+Open Hospital documentation is link:https://github.com/informatici/openhospital-doc[online] and PDF versions are compiled
+and published at each release, and put in a folder that must be accessible by the application; this folder might change
+depending on the application version, or eventually be customized by the administrator (e.g., subfolder on the Desktop)
+
+*Example in Windows*:
+
+[source,properties]
+----
+DOC_DIR=doc
+DOC_DIR=C:\\Users\\user\\OneDrive\\Desktop\\doc
+----
+NOTE: Please note the double file and folder separator “_\\_”.
+
+*Example in Linux*:
+
+[source,properties]
+----
+DOC_DIR=doc
+DOC_DIR=../doc
+----
+By default, DOC_DIR is set to 'doc'.
+
+NOTE: An application restart is required to see the modification applied.
+
+
+==== 5.1.23 SMSENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1033,7 +1067,8 @@ Enabling or disabling this option only affects the possibility to set, or not se
 
 By default, SMSENABLED is set to no.
 
-===== 5.1.22.1 Configuration
+
+===== 5.1.23.1 Configuration
 
 To set up a GSM device, one must set the GSM mode in the related sms.properties file (see <<sms-properties,sms.properties>>).
 
@@ -1044,7 +1079,8 @@ If it is believed that the PORT is correct but still Open Hospital is not commun
 see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility in the Open Hospital root folder
 (see <<folders,Folders>>).
 
-===== 5.1.22.2 SetupGSM
+
+===== 5.1.23.2 SetupGSM
 
 To use the SetupGSM utility just follow these instructions:
 
@@ -1058,7 +1094,7 @@ image:image25.png[image,width=293,height=120]
 . Once “yes” is selected the sms.properties file is automatically modified by the utility with the proper port address
 
 
-==== 5.1.23 MAINMENUALWAYSONTOP
+==== 5.1.24 MAINMENUALWAYSONTOP
 
 The following table shows the default value and the allowed ones:
 
@@ -1076,7 +1112,7 @@ NOTE: An application restart is required to see the modification applied.
 
 
 [#receiptprinter]
-==== 5.1.24 RECEIPTPRINTER
+==== 5.1.25 RECEIPTPRINTER
 
 The following table shows the default value and the allowed ones:
 
@@ -1098,7 +1134,7 @@ NOTE: The text printer must be set as the default printer.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.25 VIDEOMODULEENABLED
+==== 5.1.26 VIDEOMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1117,8 +1153,7 @@ By default, VIDEOMODULEENABLED is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.26 PATIENTVACCINEEXTENDED
+==== 5.1.27 PATIENTVACCINEEXTENDED
 
 The following table shows the default value and the allowed ones:
 
@@ -1137,8 +1172,7 @@ By default, PATIENTVACCINEEXTENDED is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.27 ENHANCEDSEARCH
+==== 5.1.28 ENHANCEDSEARCH
 
 The following table shows the default value and the allowed ones:
 
@@ -1159,7 +1193,7 @@ NOTE: An application restart is required to see the modification applied.
 
 
 [#xmppmoduleenabled]
-==== 5.1.28 XMPPMODULEENABLED
+==== 5.1.29 XMPPMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1179,8 +1213,7 @@ By default, XMPPMODULEENABLED is set to no, but if SINGLEUSER is set to yes XMPP
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.29 DICOMMODULEENABLED
+==== 5.1.30 DICOMMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1198,8 +1231,7 @@ By default, DICOMMODULEENABLED is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.29.1 DICOMTHUMBNAILS
+==== 5.1.30.1 DICOMTHUMBNAILS
 
 The following table shows the default value and the allowed ones:
 
@@ -1216,8 +1248,7 @@ By default, DICOMTHUMBNAILS is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.30 DEBUG
+==== 5.1.31 DEBUG
 
 The following table shows the default value and the allowed ones:
 
@@ -1244,7 +1275,7 @@ By default, DEBUG is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.31 ALLOWMULTIPLEOPENEDBILL
+==== 5.1.32 ALLOWMULTIPLEOPENEDBILL
 
 The following table shows the default value and the allowed ones:
 
@@ -1263,7 +1294,7 @@ By default, ALLOWMULTIPLEOPENEDBILL is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.32 OPENEDBILLSREPORT
+==== 5.1.33 OPENEDBILLSREPORT
 
 The following table shows the default value and the allowed ones:
 
@@ -1280,7 +1311,8 @@ By default, OPENEDBILLSREPORT is set to OH023_BillsReportMonth.
 
 NOTE: An application restart is required to see the modification applied.
 
-==== 5.1.33 ALLOWPRINTOPENEDBILL
+
+==== 5.1.34 ALLOWPRINTOPENEDBILL
 
 The following table shows the default value and the allowed ones:
 
@@ -1297,6 +1329,7 @@ get the receipt by clicking the Receipt button in the buttons panel.
 By default, ALLOWPRINTOPENEDBILL is set to no.
 
 NOTE: An application restart is required to see the modification applied.
+
 
 [#database-properties]
 === 5.2 database.properties
@@ -1338,6 +1371,7 @@ NOTE: An application restart is required to see the modification applied. +
 NOTE: The same settings must be applied in log4.properties, see
 <<log4j-properties,log4j.properties>> in this manual.
 
+
 === 5.3 dicom.properties
 
 Open Hospital comes with a dicom.properties file set as follows by default:
@@ -1359,6 +1393,7 @@ dicom.max.size=4M
 this property specifies the path where the DICOM files are stored.
 * *dicom.max.size*: is the maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
+
 
 === 5.4 examination.properties
 
@@ -1660,6 +1695,7 @@ Once the XMPP Server is installed, active and running set the two parameters in 
 
 NOTE: An application restart is required to see the modification applied.
 
+
 ==== 5.8.1 OpenFire Settings
 
 The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
@@ -1681,6 +1717,7 @@ Please follow these settings:
 . Add new users automatically created from OH to the "OH" group
 . Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
+
 === 5.9 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
@@ -1693,6 +1730,7 @@ where XY is an international country code.
 These files are property files (a text file), which contain multiple *key = value* pairs containing localized text for the language specified.
 
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
+
 
 ==== 5.9.1 New Translations
 
@@ -1738,6 +1776,7 @@ environment.
 
 Please follow these
 link:https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[EGit User Guide - Working with remote Repositories].
+
 
 === 7.1 Run the Project
 
@@ -1956,6 +1995,7 @@ Remember to keep files that have been changed, especially any changes to the con
 (see <<config-files,Configuration Files>>). The most common way is to backup the working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 . Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
+
 
 === 8.2 Update Open Hospital - portable mode
 
