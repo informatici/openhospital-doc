@@ -287,8 +287,6 @@ client by logging in again and specifying the "--local-infile=1" parameter after
 
 The SQL script creates the OH database structure and populates it with default data.
 
-NOTE: Starting with version 1.11, it is also possibile to use the provided scripts (oh.sh/oh.bat) to automatically perform all the database creation tasks.
-
 The ‘isf’ user, different from the ‘root’ one, is the user that the Open Hospital software uses to connect to the database and its password must be changed immediately with the command:
 
 [source,shell]
