@@ -1574,6 +1574,7 @@ sms.gateway.thread.icc=+39
 * *LOOP*: the delay used by the sender to fetch new SMS operations. The value is in seconds.
 * *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
 
+
 ==== 5.6.1 skebby-gateway-service
 
 The default skebby-gateway-service section is:
