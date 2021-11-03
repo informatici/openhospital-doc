@@ -1,4 +1,4 @@
-= Administrator’s Guide 1.11.0
+= Administrator’s Guide 1.11.1
 :icons: font
 :stem:
 :toc: left
@@ -227,9 +227,9 @@ Open a terminal and navigate to the sql/ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.0\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.1\sql
 
-C:\Users\OH\OpenHospital-v1.11.0\sql
+C:\Users\OH\OpenHospital-v1.11.1\sql
 
 ----
 
@@ -237,7 +237,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.0\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.11.1\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -1724,7 +1724,7 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 7 Installing Open Hospital 1.11.0 in Eclipse EE
+== 7 Installing Open Hospital 1.11.1 in Eclipse EE
 
 WARNING: The code is available on GitHub at these links:
 https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
@@ -1734,7 +1734,7 @@ https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11.0 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.11.1 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -1908,9 +1908,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.0\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.1\sql
 
-C:\Users\OH\OpenHospital.1.11.0\sql>
+C:\Users\OH\OpenHospital.1.11.1\sql>
 ----
 
 [start=4]
@@ -1918,7 +1918,7 @@ C:\Users\OH\OpenHospital.1.11.0\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.11.0\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.11.1\sql> mysql –u root -p
 
 Enter password: ****
 ----
