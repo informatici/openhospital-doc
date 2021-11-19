@@ -442,7 +442,6 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 
 * *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
 * *bundle* – contains the *language* files
-* *etc* – contains the DBMS configuration files
 * *doc* – contains the Open Hospital *documentation*
 * *lib* – contains the Java *libraries* needed to run the software
 * *oh* – contains the Open Hospital application
@@ -453,6 +452,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *oh/rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *oh/rsc/images* – contains the *images* used in Open Hospital
 * *data* – contains all the OH data - created after the first startup
+* *data/conf* – contains the DBMS configuration files
 * *data/db* – contains the database files
 * *data/logs* – contains all the logs
 * *data/dicom* – contains the dicom files
