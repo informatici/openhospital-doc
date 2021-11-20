@@ -332,7 +332,7 @@ NOTE: These settings are required for every Open Hospital installation/client.
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-NOTE: Starting with version 1.11, it is possibile to use the provided scripts to generate config files: on linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
+NOTE: Starting with version 1.11, it is possibile to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
 
 ==== 3.1.6 Open Hospital - Startup and run
@@ -389,11 +389,11 @@ include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bu
 
 Backup of the Open Hospital database can be performed in several ways.
 
-NOTE: Starting with version 1.11, the easiest way is to use the provided scripts: on linux execute *oh.sh -s*, on Windows launch *oh.bat* and choose the option *s*.
+NOTE: Starting with version 1.11, the easiest way is to use the provided scripts: on Linux execute *oh.sh -s*, on Windows launch *oh.bat* and choose the option *s*.
 
 Restore of the Open Hospital database can be performed also in several ways.
 
-NOTE: Starting with version 1.11, the easiest way is to use the provided scripts: on linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
+NOTE: Starting with version 1.11, the easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
