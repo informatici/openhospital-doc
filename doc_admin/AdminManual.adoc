@@ -451,10 +451,10 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *oh/rsc* – contains the *resources* of Open Hospital, like configuration files and other related files
 * *oh/rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *oh/rsc/images* – contains the *images* used in Open Hospital
-* *data* – contains all the OH data - created after the first startup
+* *data* – contains the Open Hospital local data and configuration
 * *data/conf* – contains the DBMS configuration files
-* *data/db* – contains the database files
-* *data/logs* – contains all the logs
+* *data/db* – contains the database files (PORTABLE mode)
+* *data/logs* – contains all the log files
 * *data/dicom* – contains the dicom files
 * *data/dump* – contains the database backups
 * *sql* – contains the database creation scripts
@@ -464,7 +464,7 @@ These folders may be organized differently depending on the version of the softw
 
 Depending on the choosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
+** zulu8.58.0.13-ca-fx-jdk8.0.312-<operating_system>_<arch>/ - Java Virtual Machine
 ** __mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
