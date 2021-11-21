@@ -332,7 +332,7 @@ NOTE: These settings are required for every Open Hospital installation/client.
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-NOTE: Starting with version 1.11, it is possibile to use the provided scripts (oh.sh/oh.bat) to generate config files by choosing the option "-g".
+NOTE: It is possibile to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
 
 ==== 3.1.6 Open Hospital - Startup and run
@@ -374,7 +374,7 @@ Once the required version is downloaded, the application can be started by launc
 No other configuration is needed. Additional options can be shown by executing:
 
 * on Linux: *oh.sh -h*
-* on Windows: *oh.bat -h*
+* on Windows: *oh.bat* and choose among the available options. See *oh.bat -h* for legacymode help.
 
 NOTE: To use Open Hospital in PORTABLE mode for Linux from a USB key it is required that the file permissions in the
 archive remain unchanged once extracted, otherwise the launcher cannot launch or use the application in an appropriate manner.
@@ -382,18 +382,18 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..256,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..218,leveloffset=+2]
 
 [#backup-restore]
 === 3.3 Backup & Restore
 
 Backup of the Open Hospital database can be performed in several ways.
 
-NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.bat) by choosing the option "-s".
+NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -s*, on Windows launch *oh.bat* and choose the option *s*.
 
 Restore of the Open Hospital database can be performed also in several ways.
 
-NOTE: Starting with version 1.11, the easiest way is to use the provided scripts (oh.sh/oh.bat) by choosing the option "-r".
+NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
 
 [#backup-data]
 ==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
@@ -442,7 +442,6 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 
 * *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
 * *bundle* – contains the *language* files
-* *etc* – contains the DBMS configuration files
 * *doc* – contains the Open Hospital *documentation*
 * *lib* – contains the Java *libraries* needed to run the software
 * *oh* – contains the Open Hospital application
@@ -452,9 +451,10 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *oh/rsc* – contains the *resources* of Open Hospital, like configuration files and other related files
 * *oh/rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
 * *oh/rsc/images* – contains the *images* used in Open Hospital
-* *data* – contains all the OH data - created after the first startup
-* *data/db* – contains the database files
-* *data/logs* – contains all the logs
+* *data* – contains the Open Hospital local data and configuration
+* *data/conf* – contains the DBMS configuration files
+* *data/db* – contains the database files (PORTABLE mode)
+* *data/logs* – contains all the log files
 * *data/dicom* – contains the dicom files
 * *data/dump* – contains the database backups
 * *sql* – contains the database creation scripts
@@ -464,8 +464,8 @@ These folders may be organized differently depending on the version of the softw
 
 Depending on the choosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _jdk-11.0.9+11-jre/_ or _zulu11.50.19-ca-jre11.0.12-<operating_system>_<arch>/ - Java Virtual Machine
-** __mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
+** _zulu8.58.0.13-ca-fx-jdk8.0.312-<operating_system>_<arch>/ - Java Virtual Machine
+** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
 
@@ -1073,7 +1073,7 @@ The default settings for a GSM modem should work with the majority of GSM device
 The exception is the PORT parameter which must be changed to match the SERIAL port address used by the device plugged into the system.
 
 If the PORT param is correct but Open Hospital is not able to communicate with the device (try switching to DEBUG log level – or lower - during this setup –
-see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (OH startup script with the "G" option: oh.sh -G / oh.bat -> select "G").
+see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (launch the OH startup script with the "G" option: oh.sh -G / oh.bat -> select "G").
 (see <<folders,Folders>>).
 
 
