@@ -1404,7 +1404,7 @@ The remaining five parameters may need modification according to the network set
 
 * *jdbc.drivers*: the Java library used to connect to a database server
 * *jdbc.url*: the address to point to the MySQL Server
-* *jdbc.server*: the IP address of the databse server (where MariaDB/MySQL Server is installed);
+* *jdbc.server*: the IP address of the database server (where MariaDB/MySQL Server is installed);
 localhost means the same computer where this file is located; others values can be: +
 _127.0.0.1_ – loopback network +
 _192.168.0.100_ – an example of a private IP address (LAN) +
