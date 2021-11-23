@@ -19,7 +19,7 @@ pass:[<br>][.small]#Policies is made available under a http://creativecommons.or
 
 == Open Hospital
 
-== 1 Abstract
+== 1 Introduction
 
 OH - Open Hospital (https://www.open-hospital.org/) is a free and open-source Electronic Health Record (EHR) software application.
 Open Hospital is deployed as a desktop application that can be used in a standalone, single-user mode (PORTABLE mode)
@@ -32,9 +32,10 @@ It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it 
 
 <<<
 
-== 2 Introduction
 
-Open Hospital features include:
+=== 1.1 Main Features
+
+OH - Open Hospital features include:
 
 * Pharmacy management
 * Laboratory management
@@ -49,15 +50,80 @@ Open Hospital features include:
 * Internal communication
 * Statistics and printing
 
+=== 1.2 Hardware requirements
+
+Minimum hardware requirements for running Open Hospital:
+
+* PC / Notebook with dual core CPU
+* 2 Gb RAM (4 Gb recommended)
+* 4 Gb free hard disk space
+
+=== 1.3 Software requirements
+
+Minimum Operating System version required:
+
+* Windows 7 (Windows 10/11 recommended)
+* Ubuntu 18.04 (Ubuntu 20.04 recommended)
+
+32 bit (i686) and 64 bit (x86_64) architectures are supported.
+
+[#download]
+=== 1.5 Download
+
+Open Hospital official releases can be downloaded at the following link:
+
+**Download latest release from github**: https://github.com/informatici/openhospital/releases/latest
+
+More information can be found on the Open Hospital website: https://www.open-hospital.org/download
+
+[#setup]
+=== 1.6 Initial setup
+
+Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of choice, e.g.
+
+* on Linux:
+----
+/home/OH/OpenHospital-[VERSION]		# Linux
+C:\Users\OH\OpenHospital-[VERSION]	# Windows
+----
+
+To uncompress the package:
+
+* on Linux:
+----
+cd /home/OH
+tar zxvf OpenHospital-v[VERSION]-linux_[ARCH]-[portable].tgz # portable version
+unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
+----
+* on Windows:
+----
+unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
+unzip OpenHospital-v[VERSION]-multiarch-client.zip à multiarch client version
+----
+
+After uncompressing the package, browse to the extracted directory (example given for version 1.11.1):
+
+----
+cd /home/OH/OpenHospital-v1.11.1	# Linux
+cd C:\Users\OH\OpenHospital-v1.11.1	# Windows
+----
+
+
+NOTE: You need read/write permission on the folder of choice
+
+NOTE: Do not run OH by double-clicking on the oh.bat startup script without unzipping the package first!
+
+=== 1.7 Documentation
+
 In the following chapters, all the information needed to install, configure, run and maintain an Open Hospital installation are presented.
 The information included also allows enabling and disabling functionality as well as managing users and groups.
-All the information needed to use the application software is not included; please refer to the _User’s Guide_, supplied with the application software.
+The information needed to use the OH software is not included in this manual; please refer to the _User’s Guide_.
+More information can be found on the Open Hospital web site https://www.open-hospital.org.
 
-<<<
 
-== 3 Installation
+== 2 Installation
 
-=== 3.1 Open Hospital
+=== 2.1 OH - CLIENT mode
 
 Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
 
@@ -67,32 +133,22 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* Install the JRE - Java Runtime Environment (see compatibility matrix for the right version) on every client
-* Install the MariaDB/MySQL server on a computer that will act as the OH server
-* Create the OH database through the execution of a script in the folder sql/ within the .zip file folders
-* Copy the Open Hospital application on every client (it may be installed on the server also)
-* Configure each Open Hospital instance to point to the OH server (using the hostname or the IP address)
+* <<download,Download>> the Open Hospital package for the Operating System of choice
+* <<setup,Setup>> the downloaded OH package by uncompressing the archive in a folder of choice
+* <<jre,Install JAVA JRE>> - Java Runtime Environment (see compatibility matrix for the right version) on every client
+* <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
+* <<ohdatabase-creation,Create the OH database>> through the execution of a script placed in the _sql/_ folder
+* Copy the Open Hospital application on every client (it may also be installed on the server)
+* <<configuration,Configure>> each Open Hospital instance to point to the OH Database server (using the hostname or the IP address)
 
-For the Java JRE installation refer to the next chapter <<jre,Java Runtime Environment>>
-and the online documentation.
-
-For the MariaDB/MySQL database server installation and configuration refer to the chapter <<database-server,Database Server>> and the online documentation.
-
-For the OH database creation refer to the chapter <<ohdatabase-creation,Open Hospital - Database creation>> and the online documentation.
-
-For the Open Hospital installation on the clients, it is sufficient to copy and extract the zip package in the desired folder.
-
-For the Open Hospital configuration refer to the chapter <<config-files,Configuration Files>>.
-
-
-==== 3.1.1 Prerequisites - Software compatibility matrix
+==== 2.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
 include::./OH_software_compatibility_matrix.adoc[]
 
 
 [#jre]
-==== 3.1.2 Java Runtime Environment (JRE)
+==== 2.1.2 Java Runtime Environment (JRE)
 
 Depending on the operating system, there are different ways to install the Java Runtime Environment (JRE).
 The oh.sh / oh.bat scripts can be used to download and install the latest JRE available; it is also possible to install it
@@ -101,7 +157,7 @@ manually, following the specific instructions for the operating system being use
 NOTE: See Software Compatibility Matrix to identify the correct Java version.
 
 [#database-server]
-==== 3.1.3 Database Server
+==== 2.1.3 Database Server
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
@@ -110,7 +166,7 @@ NOTE: See Software Compatibility Matrix to identify the correct MariaDB / MySQL 
 NOTE: MariaDB is the preferred alternative for the DBMS.
 
 
-===== 3.1.3.1 MariaDB/MySQL - Server installation
+===== 2.1.3.1 MariaDB/MySQL - Server installation
 
 Please referer to the latest MariaDB/MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
 
@@ -143,7 +199,7 @@ The prompt means that a successful connection to the database server instance th
 NOTE: If the terminal does not reply as above most probably during installation the *Include Bin Directory in Windows PATH* option was not selected and therefore Windows can not find the mysql command. If this is the case add the path manually by searching "system variables" in the Control Panel or append the full path to the "mysql" command (e.g., "C:\Program Files\MySQL\MySQL Server 5.0\bin\mysql" [with the quotes]). Another option is to uninstall and reinstall MySQL with the *Include* option selected.
 
 
-===== 3.1.3.2 MariaDB/MySQL - Configuration
+===== 2.1.3.2 MariaDB/MySQL - Configuration
 
 Please use the following configuration values for MariaDB/MySQL server in my.cnf config file. Values can be adjusted and adapted to the hardware resources available.
 Config file can be my.ini or my.cnf;
@@ -187,7 +243,7 @@ read_buffer = 2M
 write_buffer = 2M
 ----
 
-===== 3.1.3.3 MariaDB/MySQL - Networking
+===== 2.1.3.3 MariaDB/MySQL - Networking
 
 If deployed in a client-server, networked configuration, the database server must be configured to listen on the network interface connected to the local LAN; this can be achieved by editing the MariaDB/MySQL's config file, “my.cnf”, and setting the "bind-address" parameter. For example, if you want the database server to listen on all the available network interfaces / IP addresses:
 
@@ -217,15 +273,15 @@ bind-address = 192.168.1.100
 ----
 
 [#ohdatabase-creation]
-==== 3.1.4 Open Hospital - Database creation
+==== 2.1.4 OH - Database creation
 
-To create the Open Hospital database, a MySQL client and a set of SQL script files placed under the sql/ folder are needed.
+To create the Open Hospital database, a MySQL client and a set of SQL script files placed under the _sql/_ folder are needed.
 
 On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
 
 The suggested approach is to use the command-line MariaDB/MySQL client which uses the same commands and syntax for every platform.
 
-Open a terminal and navigate to the sql/ folder (e.g.):
+Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
@@ -317,7 +373,7 @@ mysql>quit;
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts.
 
 
-==== 3.1.5 Open Hospital - Configuration
+==== 2.1.5 OH - Configuration
 
 Open Hospital comes with several configuration files called “properties files”. To set up the database connection for Open Hospital, modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
@@ -335,7 +391,7 @@ More information on these files can be found in the sections <<database-properti
 NOTE: It is possibile to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
 
-==== 3.1.6 Open Hospital - Startup and run
+==== 2.1.6 OH - Startup and run
 
 The Open Hospital software is now ready to be run by executing the proper launcher command:
 
@@ -355,9 +411,9 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 image:image100.png[oh.ico,width=32,height=32]
 
 
-=== 3.2 Open Hospital - Portable mode
+=== 2.2 OH - PORTABLE mode
 
-Open Hospital is also distributed in a *PORTABLE* mode.
+Open Hospital can also be executed in a *PORTABLE* mode. A "portable" version is also distributed, in order to have all the needed software in one single package.
 
 Since Open Hospital is a Java software program, it is portable by definition. The “PORTABLE” mode here refers to the possibility of having a self-contained copy of the OH software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
 
@@ -385,7 +441,7 @@ where only a single computer is available. If the facility is large and more cli
 include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=21..218,leveloffset=+2]
 
 [#backup-restore]
-=== 3.3 Backup & Restore
+=== 2.3 Backup & Restore
 
 Backup of the Open Hospital database can be performed in several ways.
 
@@ -396,7 +452,7 @@ Restore of the Open Hospital database can be performed also in several ways.
 NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
 
 [#backup-data]
-==== 3.3.1 Backup of database (alternative with MySQL Workbench®)
+==== 2.3.1 Backup of database (alternative with MySQL Workbench®)
 
 There are several ways to back up and restore *data* with MySQL. The recommended method is to use a common MySQL client such as MySQL Workbench®:
 
@@ -415,7 +471,7 @@ From https://stackoverflow.com/a/18379189:
 image:image22.png[image,width=642,height=461]
 
 [#restore-data]
-==== 3.3.2 Restore of database (alternative with MySQL Workbench®)
+==== 2.3.2 Restore of database (alternative with MySQL Workbench®)
 
 To restore data with MySQL Workbench®:
 
@@ -428,7 +484,7 @@ To restore data with MySQL Workbench®:
 . Click the *Start Import* button at the right bottom corner of the window.
 
 
-==== 3.3.3 Backup of code and settings (Software)
+==== 2.3.3 Backup of code and settings (Software)
 
 Backup of the software *code and settings* are needed only if changes have been made to the “official version” to
 correctly perform any future Update process (see <<update-open-hospital,Update Open Hospital>>).
@@ -436,7 +492,7 @@ correctly perform any future Update process (see <<update-open-hospital,Update O
 Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving the *"data"* folder (including all subfolders) placed under the main OH installation folder.
 
 [#folders]
-== 4 Folders and directory structure
+=== 2.4 Folders and directory structure
 
 Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *<operating_system> with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
 
@@ -469,8 +525,8 @@ Depending on the choosen operating system and architecture, the needed external 
 
 <<<
 
-[#config-files]
-== 5 Configuration Files
+[#configuration]
+== 3 Configuration
 
 Customization of Open Hospital depends on settings set in text files called “properties files”. Open Hospital comes with 8 main properties files:
 
@@ -498,7 +554,7 @@ NOTE: Any change to these files requires an application restart to apply the set
 The following chapters will describe these properties files and their features in detail.
 
 [#settings-properties]
-=== 5.1 settings.properties
+=== 3.1 settings.properties
 
 The default settings.properties file is:
 
@@ -562,7 +618,7 @@ Furthermore, values can be:
 In following chapters will describe the meaning of each of the key/value pairs.
 
 [#language]
-==== 5.1.1 LANGUAGE
+==== 3.1.1 LANGUAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -590,7 +646,7 @@ If an unknown value is set, the local computer language is applied.
 NOTE: An application restart is required to apply the setting.
 
 
-==== 5.1.2 SINGLEUSER
+==== 3.1.2 SINGLEUSER
 
 The following table shows the default value and the allowed ones:
 
@@ -620,7 +676,7 @@ be required on other clients, with the same defined user and group.
 WARNING: Data security must never be left solely to the application but it must include proper network architecture and a rigid configuration of the clients.
 
 
-==== 5.1.3 AUTOMATICLOT
+==== 3.1.3 AUTOMATICLOT
 
 The following table shows the default value and the alternatives for lot management:
 
@@ -654,7 +710,7 @@ For discharges to patients (drug giving) the lot is *never* asked.
 NOTE: An application restart is required to see the modification applied for all the above settings.
 
 
-==== 5.1.4 LOTWITHCOST
+==== 3.1.4 LOTWITHCOST
 
 The following table shows the default value and the allowed ones:
 
@@ -670,7 +726,7 @@ Open Hospital allows for managing the cost of medicals in the main pharmacy
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.5 PATIENTSHEET
+==== 3.1.5 PATIENTSHEET
 
 The following table shows the default value and the allowed ones:
 
@@ -689,7 +745,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.6 OPDCHART
+==== 3.1.6 OPDCHART
 
 The following table shows the default value and the allowed ones:
 
@@ -708,8 +764,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-
-==== 5.1.7 ADMCHART
+==== 3.1.7 ADMCHART
 
 The following table shows the default value and the allowed ones:
 
@@ -728,7 +783,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.8 DISCHART
+==== 3.1.8 DISCHART
 
 The following table shows the default value and the allowed ones:
 
@@ -747,7 +802,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.9 PATIENTBILL
+==== 3.1.9 PATIENTBILL
 
 The following table shows the default value and the allowed ones:
 
@@ -766,7 +821,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.10 BILLSREPORT
+==== 3.1.10 BILLSREPORT
 
 The following table shows the default value and the allowed ones:
 
@@ -784,7 +839,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.11 BILLSREPORTMONTH
+==== 3.1.11 BILLSREPORTMONTH
 
 The following table shows the default value and the allowed ones:
 
@@ -803,7 +858,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.12 PHARMACEUTICALORDER
+==== 3.1.12 PHARMACEUTICALORDER
 
 The following table shows the default value and the allowed ones:
 
@@ -822,7 +877,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.13 PHARMACEUTICALSTOCK
+==== 3.1.13 PHARMACEUTICALSTOCK
 
 The following table shows the default value and the allowed ones:
 
@@ -840,7 +895,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.14 PATIENTEXTENDED
+==== 3.1.14 PATIENTEXTENDED
 
 The following table shows the default value and the allowed ones:
 
@@ -857,7 +912,7 @@ By default, PATIENTEXTENDED is set to yes. It is possible to set it to no to red
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.15 OPDEXTENDED
+==== 3.1.15 OPDEXTENDED
 
 The following table shows the default value and the allowed ones:
 
@@ -876,7 +931,7 @@ It is possible to set it to no to reduce the amount of data to be collected (onl
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.16 MATERNITYRESTARTINJUNE
+==== 3.1.16 MATERNITYRESTARTINJUNE
 
 The following table shows the default value and the allowed ones:
 
@@ -895,7 +950,7 @@ By default, MATERNITYRESTARTINJUNE is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.17 LABEXTENDED
+==== 3.1.17 LABEXTENDED
 
 The following table shows the default value and the allowed ones:
 
@@ -916,7 +971,7 @@ By default, LABEXTENDED is set to yes. Anyway, is possible to set it to no to re
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.18 LABMULTIPLEINSERT
+==== 3.1.18 LABMULTIPLEINSERT
 
 The following table shows the default value and the allowed ones:
 
@@ -935,7 +990,7 @@ By default, LABMULTIPLEINSERT is set to yes, but if LABEXTENDED is set to no it 
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.19 INTERNALPHARMACIES
+==== 3.1.19 INTERNALPHARMACIES
 
 The following table shows the default value and the allowed ones:
 
@@ -953,7 +1008,7 @@ By default, INTERNALPHARMACIES is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.20 MERGEFUNCTION
+==== 3.1.20 MERGEFUNCTION
 
 The following table shows the default value and the allowed ones:
 
@@ -973,7 +1028,7 @@ By default, MERGEFUNCTION is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.21 INTERNALVIEWER
+==== 3.1.21 INTERNALVIEWER
 
 The following table shows the default value and the allowed ones:
 
@@ -1013,7 +1068,7 @@ By default, INTERNALVIEWER is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.22 DOC_DIR
+==== 3.1.22 DOC_DIR
 
 The following table shows the default value and the allowed ones:
 
@@ -1048,7 +1103,7 @@ By default, DOC_DIR is set to 'doc'.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.23 SMSENABLED
+==== 3.1.23 SMSENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1065,7 +1120,7 @@ Enabling or disabling this option only affects the possibility to set, or not se
 By default, SMSENABLED is set to no.
 
 
-===== 5.1.23.1 Configuration
+===== 3.1.23.1 GSM Configuration
 
 To set up a GSM device, the GSM mode has to be defined in the sms.properties file (see <<sms-properties,sms.properties>>).
 
@@ -1077,9 +1132,9 @@ see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (
 (see <<folders,Folders>>).
 
 
-===== 5.1.23.2 SetupGSM
+===== 3.1.23.2 SetupGSM utility
 
-To use the SetupGSM utility just follow these instructions:
+To use the SetupGSM utility (oh.sh -G / oh.bat -> select *G* option) just follow these instructions:
 
 . Plug the device into the system and be sure the system recognizes it, load a proper driver for it and assign a serial port (COM)
 . Launch the utility: the utility will scan all plugged devices and will try to recognize the modem (or phone) within them
@@ -1091,7 +1146,7 @@ image:image25.png[image,width=293,height=120]
 . Once “yes” is selected the sms.properties file is automatically modified by the utility with the proper port address
 
 
-==== 5.1.24 MAINMENUALWAYSONTOP
+==== 3.1.24 MAINMENUALWAYSONTOP
 
 The following table shows the default value and the allowed ones:
 
@@ -1109,7 +1164,7 @@ NOTE: An application restart is required to see the modification applied.
 
 
 [#receiptprinter]
-==== 5.1.25 RECEIPTPRINTER
+==== 3.1.25 RECEIPTPRINTER
 
 The following table shows the default value and the allowed ones:
 
@@ -1131,7 +1186,7 @@ NOTE: The text printer must be set as the default printer.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.26 VIDEOMODULEENABLED
+==== 3.1.26 VIDEOMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1150,7 +1205,7 @@ By default, VIDEOMODULEENABLED is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.27 PATIENTVACCINEEXTENDED
+==== 3.1.27 PATIENTVACCINEEXTENDED
 
 The following table shows the default value and the allowed ones:
 
@@ -1169,7 +1224,7 @@ By default, PATIENTVACCINEEXTENDED is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.28 ENHANCEDSEARCH
+==== 3.1.28 ENHANCEDSEARCH
 
 The following table shows the default value and the allowed ones:
 
@@ -1190,7 +1245,7 @@ NOTE: An application restart is required to see the modification applied.
 
 
 [#xmppmoduleenabled]
-==== 5.1.29 XMPPMODULEENABLED
+==== 3.1.29 XMPPMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1210,7 +1265,7 @@ By default, XMPPMODULEENABLED is set to no, but if SINGLEUSER is set to yes XMPP
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.30 DICOMMODULEENABLED
+==== 3.1.30 DICOMMODULEENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1228,7 +1283,7 @@ By default, DICOMMODULEENABLED is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.30.1 DICOMTHUMBNAILS
+==== 3.1.30.1 DICOMTHUMBNAILS
 
 The following table shows the default value and the allowed ones:
 
@@ -1245,7 +1300,7 @@ By default, DICOMTHUMBNAILS is set to yes.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.31 DEBUG
+==== 3.1.31 DEBUG
 
 The following table shows the default value and the allowed ones:
 
@@ -1272,7 +1327,7 @@ By default, DEBUG is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.32 ALLOWMULTIPLEOPENEDBILL
+==== 3.1.32 ALLOWMULTIPLEOPENEDBILL
 
 The following table shows the default value and the allowed ones:
 
@@ -1291,7 +1346,7 @@ By default, ALLOWMULTIPLEOPENEDBILL is set to no.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.33 OPENEDBILLSREPORT
+==== 3.1.33 OPENEDBILLSREPORT
 
 The following table shows the default value and the allowed ones:
 
@@ -1309,7 +1364,7 @@ By default, OPENEDBILLSREPORT is set to OH023_BillsReportMonth.
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.1.34 ALLOWPRINTOPENEDBILL
+==== 3.1.34 ALLOWPRINTOPENEDBILL
 
 The following table shows the default value and the allowed ones:
 
@@ -1329,7 +1384,7 @@ NOTE: An application restart is required to see the modification applied.
 
 
 [#database-properties]
-=== 5.2 database.properties
+=== 3.2 database.properties
 
 Open Hospital comes with a database.properties file with the following defaults:
 
@@ -1369,7 +1424,7 @@ NOTE: The same settings must be applied in log4.properties, see
 <<log4j-properties,log4j.properties>> in this manual.
 
 
-=== 5.3 dicom.properties
+=== 3.3 dicom.properties
 
 Open Hospital comes with a dicom.properties file set as follows by default:
 
@@ -1392,7 +1447,7 @@ this property specifies the path where the DICOM files are stored.
 If not specified the default value of "4M" is used.
 
 
-=== 5.4 examination.properties
+=== 3.4 examination.properties
 
 Open Hospital comes with the examination.properties file used in the examination module.
 The file is set as follow by default:
@@ -1462,7 +1517,7 @@ RR_MAX = 100
 * *DIURESIS_INIT*: = the Daily Urine Volume default value (in ml)
 
 [#log4j-properties]
-=== 5.5 log4j.properties
+=== 3.5 log4j.properties
 
 The default log4j.properties file is:
 
@@ -1545,7 +1600,7 @@ image:image37.png[image,width=645,height=84]
 NOTE: An application restart is required to see the effect of any applied parameter modification.
 
 [#sms-properties]
-=== 5.6 sms.properties
+=== 3.6 sms.properties
 
 The default sms.properties file is:
 
@@ -1572,7 +1627,7 @@ sms.gateway.thread.icc=+39
 * *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
 
 
-==== 5.6.1 skebby-gateway-service
+==== 3.6.1 skebby-gateway-service
 
 The default skebby-gateway-service section is:
 
@@ -1598,7 +1653,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *userKey*: the key generated by the Skebby provider upon user request (it replaces password)
 
 
-==== 5.6.2 textbelt-gateway-service
+==== 3.6.2 textbelt-gateway-service
 
 The default textbelt-gateway-service section is:
 
@@ -1621,7 +1676,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
 [#txtprinter-properties]
-===  5.7 txtPrinter.properties
+===  3.7 txtPrinter.properties
 
 The default txtPrinter.properties file is:
 
@@ -1668,7 +1723,7 @@ The best way to set these parameters for the device is to set them one by one an
 NOTE: An application restart is required to see the modification applied.
 
 [#xmpp-properties]
-=== 5.8 xmpp.properties
+=== 3.8 xmpp.properties
 
 Open Hospital comes with the xmpp.properties file set as follows by default:
 
@@ -1695,7 +1750,7 @@ Once the XMPP Server is installed, active and running set the two parameters in 
 NOTE: An application restart is required to see the modification applied.
 
 
-==== 5.8.1 OpenFire Settings
+==== 3.8.1 OpenFire Settings
 
 The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
 
@@ -1717,7 +1772,7 @@ Please follow these settings:
 . Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 
-=== 5.9 Bundles
+=== 3.9 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
 <<language,LANGUAGE>> chapter, Open Hospital comes with different available languages in the folder *bundles/* within the package file:
@@ -1731,7 +1786,7 @@ These files are property files (a text file), which contain multiple *key = valu
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
 
-==== 5.9.1 New Translations
+==== 3.9.1 New Translations
 
 To create a new translation, simply copy the English file, rename it with the new country code in
 place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
@@ -1744,7 +1799,7 @@ Then edit the Arabic bundle file and set the LANGUAGE parameter to *ar* to start
 <<<
 
 [#reports]
-== 6 Reports
+== 4 Reports
 
 Reports in Open Hospital are produced with JasperReports® technology that allows one to design a report in a WYSIWYG (What You See Is What You Get) way, connect it to a datasource (DB), test it, modify it, and then compile it to use it in the application software.
 
@@ -1760,7 +1815,7 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 7 Installing Open Hospital 1.11.1 in Eclipse EE
+== 5 Installing Open Hospital 1.11.1 in Eclipse EE
 
 WARNING: The code is available on GitHub at these links:
 https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
@@ -1777,7 +1832,7 @@ Please follow these
 link:https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[EGit User Guide - Working with remote Repositories].
 
 
-=== 7.1 Run the Project
+=== 5.1 Run the Project
 
 NOTE: Before running the project, the DB must be created as explained in
 chapter <<database-server,MySQL Server and Open Hospital DB>>.
@@ -1832,17 +1887,11 @@ log4j.properties as explained in the chapter <<log4j-properties,log4j.properties
 <<<
 
 [#update-open-hospital]
-== 8 Update Open Hospital
+== 6 Update Open Hospital
 
-=== 8.1 Update Open Hospital (CLIENT mode)
+=== 6.1 Update Open Hospital - CLIENT mode
 
-NOTE: Following instructions only applies between “official releases” downloaded from the SourceForge website.
-
-New releases, as well as this Manual and the User Manual, are regularly released on SourceForge/GitHub:
-
-https://github.com/informatici/openhospital/releases
-
-https://sourceforge.net/projects/openhospital/files/
+New releases, as well as this Admin Manual and the User Manual, are regularly released on Github/SourceForge. See the <<download,Download>> section for more details.
 
 There are two types of releases:
 
@@ -1853,10 +1902,12 @@ There are two types of releases:
 
 Changes are found in the CHANGELOG file.
 
+NOTE: Following instructions only apply between “official releases”.
+
 Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
-It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<config-files,Configuration Files>>).
+It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<configuration,Configuration>>).
 The easiest way is to backup the working copy and re-apply those settings in the new installation
 (see the <<backup-restore,Backup & Restore>> chapter).
 
@@ -1865,7 +1916,7 @@ The easiest way is to backup the working copy and re-apply those settings in the
 Changes are found in the CHANGELOG file.
 
 Major releases always have changes to the DB, and these changes are implemented via different scripts included in the
-sql (mysql for older version) folder (e.g.):
+_sql_ (mysql for older versions) folder (e.g.):
 
 [cols=",",options="header",]
 |===
@@ -1994,12 +2045,12 @@ https://sourceforge.net/p/openhospital/support-requests/
 . If everything is successful, replace the working copy on each client with the new one and connect it to the same DB
 (see <<database-properties,database.properties>> and <log4j-properties,log4j.properties>>).
 Remember to keep files that have been changed, especially any changes to the configuration settings
-(see <<config-files,Configuration Files>>). The most common way is to backup the working copy and re-apply those
+(see <<configuration,Configuration>>). The most common way is to backup the working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 . Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
 
 
-=== 8.2 Update Open Hospital - portable mode
+=== 6.2 Update Open Hospital - PORTABLE mode
 
 NOTE: Open Hospital, used in PORTABLE mode, is not meant to be used in a production environment.
 To migrate a portable installation to a full client/server configuration, keeping the existing data, the following steps must be performed:
@@ -2025,7 +2076,7 @@ info@informaticisenzafrontiere.org and specify:
 
 <<<
 
-== 9 License
+== 7 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
