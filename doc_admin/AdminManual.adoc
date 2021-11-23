@@ -388,7 +388,7 @@ NOTE: These settings are required for every Open Hospital installation/client.
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-NOTE: It is possibile to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
+NOTE: It is possible to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
 
 ==== 2.1.6 OH - Startup and run
@@ -518,7 +518,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
 
-Depending on the choosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
+Depending on the chosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
 ** _zulu8.58.0.13-ca-fx-jdk8.0.312-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
