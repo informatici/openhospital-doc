@@ -72,7 +72,7 @@ Minimum Operating System version required:
 
 Open Hospital official releases can be downloaded at the following link:
 
-**Download latest release from github**: https://github.com/informatici/openhospital/releases/latest
+**Download latest release from GitHub**: https://github.com/informatici/openhospital/releases/latest
 
 More information can be found on the Open Hospital website: https://www.open-hospital.org/download
 
@@ -80,8 +80,6 @@ More information can be found on the Open Hospital website: https://www.open-hos
 === 1.6 Initial setup
 
 Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of choice, e.g.
-
-* on Linux:
 ----
 /home/OH/OpenHospital-[VERSION]		# Linux
 C:\Users\OH\OpenHospital-[VERSION]	# Windows
@@ -109,7 +107,7 @@ cd C:\Users\OH\OpenHospital-v1.11.1	# Windows
 ----
 
 
-NOTE: You need read/write permission on the folder of choice
+NOTE: You need read/write permission on the folder of choice.
 
 NOTE: Do not run OH by double-clicking on the oh.bat startup script without unzipping the package first!
 
