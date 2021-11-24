@@ -510,6 +510,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *data/dicom* – contains the dicom files
 * *data/dump* – contains the database backups
 * *sql* – contains the database creation scripts
+* *sql/extra* – contains SQL scripts for custom / experimental / temporary features
 * *tmp* – temporary folder
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
