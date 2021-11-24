@@ -70,9 +70,7 @@ Minimum Operating System version required:
 [#download]
 === 1.5 Download
 
-Open Hospital official releases can be downloaded at the following link:
-
-**Download latest release from GitHub**: https://github.com/informatici/openhospital/releases/latest
+Open Hospital official releases can be downloaded from GitHub: https://github.com/informatici/openhospital/releases/latest
 
 More information can be found on the Open Hospital website: https://www.open-hospital.org/download
 
