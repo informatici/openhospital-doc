@@ -120,7 +120,7 @@ cd C:\Users\OH\OpenHospital-v1.11.1
 ----
 
 
-NOTE: You need read/write permission on the folder of choice.
+NOTE: You need read/write permission on the selected folder.
 
 NOTE: Do not run OH by double-clicking on the oh.bat startup script without unzipping the package first!
 
@@ -192,7 +192,7 @@ Please referer to the latest MariaDB/MySQL Server online documentation for downl
 • Select Enable access from remote machines for 'root' user
 • Select UTF8 as the default charset for Best Support For Multilingualism
 • Select Install as service
-• Select Enable networking and write down the Port Number in an installation document
+• Select Enable networking and take note of the selected Port Number
 
 NOTE: MariaDB installer does not include the bin directory in the Windows PATH environment variable; it must be added manually to the Windows system variable PATH.
 
@@ -1456,7 +1456,8 @@ Use the provided startup scripts in order to automatically generate the _dicom.p
 ** SqlDicomManager: DICOM files are stored in the database
 ** FileSystemDicomManager: DICOM files are stored in the file system
 * *OH_PATH_SUBSTITUTE/DICOM_DIR*: if the value of the first parameter is set to "FileSystemDicomManager",
-this property specifies the path where the DICOM files are stored
+this property specifies the path where the DICOM files are stored. It is possible to specify a local folder (_data/dicom_storage_ is the default path under the OH installation folder) or to set a shared network folder, userful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/dicom_storage_ path with a symbolic link.
+The shared folder needs read/write permissions for uploading DICOM images.
 * *DICOM_SIZE*: maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
@@ -1464,7 +1465,7 @@ Example _dicom.properties_ file:
 [source,properties]
 ----
 dicom.manager.impl=org.isf.dicom.manager.FileSystemDicomManager
-dicom.storage.filesystem=Z:\OH\Shared|Dicom_images
+dicom.storage.filesystem=Z:\OH\Shared\Dicom_images
 dicom.max.size=4M
 ----
 
