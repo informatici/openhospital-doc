@@ -137,7 +137,7 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 === 2.1 OH - CLIENT mode
 
-Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the database server of choice.
+Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the preferred database server.
 
 The typical client/server, networked (LAN) configuration is shown in the following figure:
 
@@ -145,11 +145,11 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* <<download,Download>> the Open Hospital package for the Operating System of choice
-* <<setup,Setup>> the downloaded OH package by uncompressing the archive in a folder of choice
+* <<download,Download>> the Open Hospital package for the selected Operating System
+* <<setup,Setup>> the downloaded OH package by uncompressing the archive in a folder of your choice
 * <<jre,Install JAVA JRE>> - Java Runtime Environment (see compatibility matrix for the right version) on every client
 * <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
-* <<ohdatabase-creation,Create the OH database>> through the execution of a script placed in the _sql/_ folder
+* <<ohdatabase-creation,Create the OH database>> through the execution of a script found in the _sql/_ folder
 * Copy the Open Hospital application on every client (it may also be installed on the server)
 * <<configuration,Configure>> each Open Hospital instance to point to the OH Database server (using the hostname or the IP address)
 
@@ -286,7 +286,7 @@ bind-address = 192.168.1.100
 [#ohdatabase-creation]
 ==== 2.1.4 OH - Database creation
 
-To create the Open Hospital database, a MySQL client and a set of SQL script files placed under the _sql/_ folder are needed.
+To create the Open Hospital database, a MySQL client and a set of SQL script files found under the _sql/_ folder are needed.
 
 On a Microsoft Windows® system, MySQL Workbench® can be used as a client to connect to the database server and perform the needed tasks, while on Linux based systems the MySQL Administrator and MySQL Query Browser tools can be used.
 
@@ -383,10 +383,9 @@ mysql>quit;
 
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
-
 ==== 2.1.5 OH - Database configuration
 
-To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
+To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ files, located in the _oh/rsc/_ “resource” folder.
 
 Specify:
 
@@ -400,7 +399,6 @@ More information on these files can be found in the sections <<database-properti
 <<log4j-properties,log4j.properties>>.
 
 NOTE: It is possible to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
-
 
 ==== 2.1.6 OH - Startup and run
 
@@ -421,14 +419,15 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
+NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
 === 2.2 OH - PORTABLE mode
 
-Open Hospital can also be executed in a *PORTABLE* mode. A "portable" version is also distributed, in order to have all the needed software in one single package.
+Open Hospital is a Java software program and it is portable by definition, since it does not require installation. The *PORTABLE* mode refers to the possibility of deploying and executing a single instance of the OH software in a self-contained package that includes Java, MariaDB/MySQL Server and all the data. Once deployed on a single computer, the package can be copied and run everywhere - even from an USB stick - carrying together all the saved data.
 
-Since Open Hospital is a Java software program, it is portable by definition. The “PORTABLE” mode here refers to the possibility of having a self-contained copy of the OH software that includes Java, MariaDB/MySQL Server, and the database. This package can be copied and run everywhere, carrying together all the saved data.
+"Portable" versions (where PORTABLE mode set by default) are available; see the <<download,Download>> section for more details.
 
-Since the JRE and MariaDB/MySQL are not platform-independent and come in different versions and architectures, there exists:
+Since the JRE and MariaDB/MySQL are not platform-independent and are provided in different versions and architectures, there exists:
 
 * *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
 * *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64bit)
@@ -498,9 +497,9 @@ To restore database data with MySQL Workbench®:
 
 ==== 2.3.3 Backup of OH code and settings
 
-Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder. Configuration files are placed under the *"oh/rsc"* folder.
+Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder. Configuration files are found under the *"oh/rsc"* folder.
 
-Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) placed under the main OH installation folder.
+Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
 
 [#folders]
 === 2.4 Folders and directory structure
@@ -1116,7 +1115,6 @@ By default, DOC_DIR is set to 'doc'.
 NOTE: An application restart is required to apply the modified setting.
 
 NOTE: The DOC_DIR setting is automatically generated/overwritten at any OpenHospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
-
 
 ==== 3.1.23 SMSENABLED
 
