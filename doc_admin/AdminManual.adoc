@@ -82,7 +82,7 @@ More information can be found on the Open Hospital website: https://www.open-hos
 [#setup]
 === 1.6 Initial setup
 
-Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of choice, e.g.
+Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of your choice, e.g.:
 
 * on Linux:
 ----
@@ -105,7 +105,7 @@ unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
 * on Windows:
 ----
 unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
-unzip OpenHospital-v[VERSION]-multiarch-client.zip à multiarch client version
+unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
 After uncompressing the package, browse to the extracted directory (example given for version 1.11.1):
@@ -122,7 +122,7 @@ cd C:\Users\OH\OpenHospital-v1.11.1
 
 NOTE: You need read/write permission on the selected folder.
 
-NOTE: Do not run OH by double-clicking on the oh.bat startup script without unzipping the package first!
+NOTE: Do not run OH by double-clicking on the **oh.bat** startup script without unzipping the package first!
 
 === 1.7 Documentation
 
@@ -163,7 +163,7 @@ include::./OH_software_compatibility_matrix.adoc[]
 ==== 2.1.2 Java Runtime Environment (JRE)
 
 Depending on the operating system, there are different ways to install the Java Runtime Environment (JRE).
-The oh.sh / oh.bat scripts can be used to download and install the latest JRE available; it is also possible to install it
+The **oh.sh / oh.bat** scripts can be used to download and install the latest JRE available; it is also possible to install it
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix to identify the correct Java version.
@@ -381,12 +381,12 @@ Query OK, 0 rows affected (0.00 sec)
 mysql>quit;
 ----
 
-NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts oh.sh / oh.ps1.
+NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
 
 ==== 2.1.5 OH - Database configuration
 
-To set up the database connection for Open Hospital, edit and configure the database settings in the oh.sh/oh.ps1 startup scripts or directly modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
+To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ files, located in the “resource” folder rsc/.
 
 Specify:
 
@@ -505,7 +505,7 @@ Backup of the client *data and configuration files*, especially for "PORTABLE" m
 [#folders]
 === 2.4 Folders and directory structure
 
-Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *<operating_system> with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
+Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *_<operating_system>_* with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
 
 * *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
 * *bundle* – contains the *language* files
@@ -540,7 +540,7 @@ Depending on the chosen operating system and architecture, the needed external a
 [#configuration]
 == 3 Configuration
 
-Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is set in the configuration files called “properties files”. The following properties files are placed in the **oh/rsc** subfolder:
+Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is set in the configuration files called “properties files”. The following properties files are found in the **oh/rsc** subfolder:
 
 ** *database.properties* – Open Hospital database connection
 ** *dicom.properties* – DICOM viewer module options
@@ -1143,8 +1143,7 @@ The default settings for a GSM modem should work with the majority of GSM device
 The exception is the PORT parameter which must be changed to match the SERIAL port address used by the device plugged into the system.
 
 If the PORT param is correct but Open Hospital is not able to communicate with the device (try switching to DEBUG log level – or lower - during this setup –
-see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility (launch the OH startup script with the "G" option: oh.sh -G / oh.bat -> select "G").
-(see <<folders,Folders>>).
+see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility as explained in the next chapter.
 
 
 ===== 3.1.23.2 SetupGSM utility
