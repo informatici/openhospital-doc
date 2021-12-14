@@ -262,7 +262,7 @@ The OPD Extended module affords the following additional features:
 * It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
 * if a new attendance for this patient is required set the "New Admittance" check box and proceed normally.
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Admittance" check box.
-* In the case the selected patient personal data need to be updated, it is possibile to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
+* In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
@@ -1863,7 +1863,7 @@ To add a therapy the following information is required:
 * *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
 * *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above “One” means once per day
 * *Frequency within period*: set the periodicity of the therapy; in the example above every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
-* *Period*: set the lenght of therapy; to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
+* *Period*: set the length of therapy; to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
 
@@ -2071,9 +2071,9 @@ Open Hospital ships with the following set of reports:
 * HMIS 105 - Opd referrals
 * HMIS 105 - Opd by diagnosis
 * HMIS 55b - Lab monthly formatted
-* HMIS 33b - Weekly epidem. surveil.
-* HMIS 33b - Weekly epidem. surveil. over 5 y.o.
-* HMIS 33b - Weekly epidem. surveil. under 5 y.o.
+* HMIS 33b - Weekly epidemiological surveillance
+* HMIS 33b - Weekly epidemiological surveillance over 5 years old
+* HMIS 33b - Weekly epidemiological surveillance under 5 years old
 * MOH 717 - Monthly Workload Report for Hospitals (Page1)
 * MOH 717 - Monthly Workload Report for Hospitals (Page2)
 * MOH 705A - Under 5 - Daily Outpatient Morbidity Summary Sheet
@@ -2352,7 +2352,7 @@ The Delivery Result Types defined are used in the Admission function (see
 
 Once the *De[.underline]##l##ivery Type* button in the *_Types_* menu is pressed, the *_Delivery Type Browser_* window is shown:
 
-image:image142.PNG[Discharge Types]
+image:image142.png[Discharge Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2368,7 +2368,7 @@ The Delivery Types defined are used in the Admission function (see
 
 Once the *[.underline]##D##isease Type* button in the *_Types_* menu is pressed, the *_Disease Type Browser_* window is shown:
 
-image:image144.PNG[Disease Type]
+image:image144.png[Disease Type]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2638,7 +2638,7 @@ The functions available in this window are:
 
 By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window is shown:
 
-image:image167.PNG[Edit Disease]
+image:image167.png[Edit Disease]
 
 In editing mode, the type and code cannot be changed and the the only modifications allowed are to the Description and if the disease should appear only in OPD, or Admissions, or in both.
 
