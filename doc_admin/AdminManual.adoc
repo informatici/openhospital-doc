@@ -214,8 +214,7 @@ NOTE: If the terminal does not reply as above most probably during installation 
 ===== 2.1.3.2 MariaDB/MySQL - Configuration
 
 Please use the following configuration values for MariaDB/MySQL server in _my.cnf_ config file. Values can be adjusted and adapted to the hardware resources available.
-Config file can be _my.ini_ or _my.cnf_;
-Default for Windows MariaDB is _my.ini_ located at "C:\Program Files\MariaDB-[VERSION]\data\"
+Config file can be _my.ini_ or _my.cnf_; default for Windows MariaDB is _my.ini_ located at "C:\Program Files\MariaDB-[VERSION]\data\"
 
 ----
 #
@@ -1457,7 +1456,7 @@ Use the provided startup scripts in order to automatically generate the _dicom.p
 ** FileSystemDicomManager: DICOM files are stored in the file system
 * *OH_PATH_SUBSTITUTE/DICOM_DIR*: if the value of the first parameter is set to "FileSystemDicomManager",
 this property specifies the path where the DICOM files are stored. It is possible to specify a local folder (_data/dicom_storage_ is the default path under the OH installation folder) or to set a shared network folder, userful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/dicom_storage_ path with a symbolic link.
-The shared folder needs read/write permissions for uploading DICOM images.
+The shared folder needs read/write permissions for uploading DICOM images. Always use slash "/" in the path variable and not backslash "\".
 * *DICOM_SIZE*: maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
@@ -1465,7 +1464,7 @@ Example _dicom.properties_ file:
 [source,properties]
 ----
 dicom.manager.impl=org.isf.dicom.manager.FileSystemDicomManager
-dicom.storage.filesystem=Z:\OH\Shared\Dicom_images
+dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
 dicom.max.size=4M
 ----
 
