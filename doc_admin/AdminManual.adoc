@@ -151,7 +151,7 @@ The Administrator/Installer tasks are hereby listed:
 * <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
 * <<ohdatabase-creation,Create the OH database>> through the execution of a script found in the _sql/_ folder
 * Copy the Open Hospital application on every client (it may also be installed on the server)
-* <<configuration,Configure>> each Open Hospital instance to point to the OH Database server (using the hostname or the IP address)
+* <<configuration,Configure>> each Open Hospital instance to point to the OH database server (using the hostname or the IP address)
 
 ==== 2.1.1 Prerequisites - Software compatibility matrix
 
@@ -385,20 +385,22 @@ NOTE: Remember to set the updated database password also in the Open Hospital co
 
 ==== 2.1.5 OH - Database configuration
 
-To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ files, located in the _oh/rsc/_ “resource” folder.
+To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ configuration files, located in the _oh/rsc/_ resource folder.
 
-Specify:
+Specify, according to the values specified in the installation phase:
 
-* the *IP address* of the machine where the database server was installed and containing the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
-* the “isf” user (or the user specified in the installation phase) *password*
-* the MariaDB/MySQL Server *Port Number*, if changed from the default “3306”
+* the *IP address* of the the MariaDB/MySQL database server hosting the the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
+* the *TCP Port Number* of the database server - default is “3306"
+* the *Database name* of the OH installation - default is "oh"
+* the *Database user* of the OH database - default is "isf"
+* the *Database password* associated with the user
 
 NOTE: These settings are required for every Open Hospital installation/client.
 
 More information on these files can be found in the sections <<database-properties,database.properties>> and
 <<log4j-properties,log4j.properties>>.
 
-NOTE: It is possible to use the provided scripts to generate config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
+NOTE: It is possible to use the provided scripts to generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
 ==== 2.1.6 OH - Startup and run
 
@@ -1274,8 +1276,9 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital embeds a technology that allows users logged into the application to chat and share information related to the hospital activities
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-communication-communication[11 Communication] in the User’s Guide);
-the SINGLEUSER option must be set to no too. If this option is active, Open Hospital will look for an XMPP Server at startup time. The *xmpp.properties* will be used to point to the server that must be installed on the computer or on the OH Server by the System Administrator
-(see <<xmpp-properties,xmpp.properties>> in this document).
+the SINGLEUSER option must be set to "no". If this option is active, Open Hospital will look for an XMPP Server at startup time. 
+
+See the <<xmpp-properties,xmpp.properties>> chapter for instructions on how to setup and configure the XMPP Server communication.
 
 By default, XMPPMODULEENABLED is set to no, but if SINGLEUSER is set to yes XMPPMODULEENABLED is ignored.
 
@@ -1415,15 +1418,16 @@ jdbc.password=DBPASS
 
 Use the provided startup scripts in order to automatically generate the _database.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
 
-* *DBSERVER*: the IP address of the OH Database Server. 
+* *DBSERVER*: the IP address of the OH database server. 
 IP address can be set to: +
 _127.0.0.1_ – localhost / loopback network interface (local computer) +
 _192.168.0.100_ – an example of a private IP address (LAN) +
 _217.147.110.117_ – an example of a public IP address (WAN)
-* *DBPORT*: the TCP port of the OH database Server
-* *DBNAME*: the database name
-* *DBUSER*: the database user
+* *DBPORT*: the TCP port of the OH database server - default is "3306"
+* *DBNAME*: the database name - default is "oh"
+* *DBUSER*: the database user - default is "isf"
 * *DBPASS*: the database user password
+
 
 NOTE: An application restart is required to apply the modified setting.
 
@@ -1581,20 +1585,20 @@ log4j.logger.org.hibernate=LOG_LEVEL,RollingFile,StdOut
 #log4j.logger.org.hibernate.SQL=INFO,RollingFile,StdOut
 ----
 
-Use the provided startup scripts in order to automatically generate the _log4j.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
+Use the provided OH startup scripts in order to automatically generate the _log4j.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
 
-* *DBSERVER*: the IP address of the OH Database Server. 
+* *DBSERVER*: the IP address of the OH database server. 
 IP address can be set to: +
 _127.0.0.1_ – localhost / loopback network +
 _192.168.0.100_ – an example of a private IP address (LAN) +
 _217.147.110.117_ – an example of a public IP address (WAN)
-* *DBPORT*: the TCP port of the OH database Server
-* *DBNAME*: the database name
-* *DBUSER*: the database user
+* *DBPORT*: the TCP port of the OH database server - default is "3306"
+* *DBNAME*: the database name - default is "oh"
+* *DBUSER*: the database user - default is "isf"
 * *DBPASS*: the database user password
 * *LOG_LEVEL*: the OH application log level - can be set to  INFO|DEBUG|TRACE
 
-NOTE: The same settings must be applied in _database.properties_, see
+NOTE: The same settings must be applied in the _database.properties_ configuration file, see
 <<database-properties,database.properties>> in this manual.
 
 [source,properties]
@@ -1624,9 +1628,7 @@ log4j.category.org.isf=INFO,RollingFile,StdOut
 ----
 
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
-(see <<database-properties,database.properties>>). The most important properties are those highlighted in *red* below:
-
-image:image37.png[image,width=645,height=84]
+(see <<database-properties,database.properties>>).
 
 NOTE: The _log4j.properties_ file is automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
 
@@ -1772,12 +1774,12 @@ PORT=5222
 This file is used only if the XMPPMODULEENABLED flag is enabled (see <<xmppmoduleenabled,XMPPMODULEENABLED>> in this document).
 
 To use the Communication module
-(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-communication-communication[11 Communication] in the User’s Guide), install an
-XMPP Server separately on the OH Server, typically on the same machine as the database server.
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-communication-communication[11 Communication] in the User’s Guide), 
+an XMPP Server must be installed and configured separately on a server/computer in the local network. The XMPP server can also be installed on the same machine as the OH database server.
 
 The most common XMPP Server is the free and open-source project Ignite Openfire® (http://www.igniterealtime.org/projects/openfire/) available for Linux, Windows, and Mac.
 
-Once the XMPP Server is installed, active and running set the two parameters in the xmpp.properties file as follows:
+Once the XMPP Server is installed, active and running set the two parameters in the _xmpp.properties_ file as follows:
 
 * *DOMAIN* – the IP address of the XMPP server (it could be the same as the database server)
 * *PORT* – 5222 or another if set differently
@@ -1789,8 +1791,8 @@ NOTE: An application restart is required to apply the modified setting.
 
 The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
 
-Every new log into Open Hospital creates an OpenFire user with the same username and password (even if passwords are saved
-differently in OH and OpenFire DB). For this reason, the OH "admin" user may conflict with OpenFire one not allowing the log in as admin and to chat.
+Every new user login into Open Hospital creates an OpenFire user with the same username and password (even if passwords are saved
+differently in OH and OpenFire DB). For this reason, the OH "admin" user may conflict with the OpenFire user, not allowing the log in as admin and to chat.
 
 NOTE: If the admin user needs to chat with other users consider creating another "superuser" in OH
 under the "admin" group.
