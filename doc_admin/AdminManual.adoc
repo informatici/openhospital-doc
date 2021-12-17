@@ -425,7 +425,7 @@ NOTE: Remember to review your setup in the Open Hospital configuration files and
 
 === 2.2 OH - PORTABLE mode
 
-Open Hospital is a Java software program and it is portable by definition. The *PORTABLE* mode described in this chapter refers to the possibility of using OH as a self contained package that includes Java, MariaDB/MySQL Server and all the data, without requiring any software installation. The package can be used on a single computer and used run everywhere just by copying a folder - even onto an USB stick - carrying together all the saved data.
+Open Hospital is a Java software program and it is portable by definition. The *PORTABLE* mode described in this chapter refers to the possibility of using OH as a self contained package that includes Java, MariaDB/MySQL Server and all the data, without requiring any software installation. The package can be used on a single computer and used everywhere just by copying a folder - even onto an USB stick - carrying together all the saved data.
 
 Pre-configured "Portable" packages are available for Windows and Linux; see the <<download,Download>> section for more details.
 
