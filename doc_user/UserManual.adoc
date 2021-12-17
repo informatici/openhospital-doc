@@ -5,9 +5,9 @@
 :toclevels: 4
 :url-docs: https://asciidoctor.org/docs
 :url-gem: https://rubygems.org/gems/asciidoctor
-:imagesdir: extracted-media/media/
+:imagesdir: media/
 
-image:image1.jpeg[OH Logo,width=390,height=298]
+image:OH-splash.png[OH splash,width=390,height=298]
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
 pass:[<br>][.small]#User's Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
@@ -101,7 +101,7 @@ If no desktop shortcut is present, open the folder where the software has been i
 .The default Main Menu of the OH application shows the available functions:.
 [#default-main-menu-4]
 [caption="Main Menu: "]
-image:image0_DefaultMainMenu.png[Default Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu,width=250,height=627]
 
 === 2.2 Functions
 

@@ -7,11 +7,11 @@
 :url-gem: https://rubygems.org/gems/asciidoctor
 :xlmnsBySa: http://purl.org/dc/terms/
 :docTitleBySa: dct:title
-:imagesdir: extracted-media/media/
+:imagesdir: media/
 
 <<<
 
-image:OH-splash.png[OH-splash.png,width=316,height=237]
+image:OH-splash.png[OH splash,width=316,height=237]
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
@@ -415,7 +415,7 @@ image:OH-splash.png[OH-splash.png,width=316,height=237]
 
 And then the main Menu:
 
-image:OH-main_menu.png[OH-main_menu.png,width=235,height=456]
+image:OH-main_menu.png[OH main menu,width=235,height=456]
 
 It is possible to create a shortcut (link) to the executable script on the desktop, in the Programs Menu or wherever is useful by using the provided icon “oh.ico” that is found in the package.
 
