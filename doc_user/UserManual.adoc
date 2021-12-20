@@ -77,7 +77,7 @@ without the use of the mouse. In this document, the “Alt” key and the “P�
 .Click with the mouse on the button or press "Alt + P" to enter the *Pharmacy*
 [#default-main-menu-3]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 * Each screen of the application is a called “window”. Most complex windows of the application are composed of more than one
 area. Areas can be a *Selection panel*, a *Data table*, or a *Buttons panel* (see *_Laboratory Browser_* window below).
@@ -101,7 +101,7 @@ If no desktop shortcut is present, open the folder where the software has been i
 .The default Main Menu of the OH application shows the available functions:.
 [#default-main-menu-4]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 === 2.2 Functions
 
@@ -129,7 +129,7 @@ Click on the *[.underline]##O##PD* button or press “Alt + O” in the main *_m
 .Press the *[.underline]##O##PD* button or “Alt + O”.
 [#default-main-menu-5]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 === 3.2 Functions of Out Patient Department
 
@@ -280,7 +280,7 @@ Pressing *[.underline]##P##harmacy* from the main menu provides access to the Ph
 [grid=none]
 [caption="Submenu: "]
 |===
-|image:OH-main_menu.png[OH Main Menu,width=250,height=627]|image:image16.png[SubMenu,width=256,height=212]
+|image:OH-main_menu.png[OH Main Menu]|image:image16.png[SubMenu,width=256,height=212]
 |===
 
 
@@ -707,7 +707,7 @@ The Laboratory features are used to manage the laboratory exams.
 .Press the *[.underline]##L##aboratory* button or “Alt + L”.
 [#default-main-menu-7]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 It is possible to create, modify or delete exams.
 
@@ -876,7 +876,7 @@ In addition, the accounting function supports the management of bill payments (t
 [grid=none]
 [caption="Submenu: "]
 |===
-|image:OH-main_menu.png[OH Main Menu,width=250,height=627]|image:image52.png[Accounting SubMenu,width=185,height=167]
+|image:OH-main_menu.png[OH Main Menu]|image:image52.png[Accounting SubMenu,width=185,height=167]
 |===
 
 === 6.2 Functions of Accounting
@@ -1159,7 +1159,7 @@ The vaccines functions are used to manage vaccines for all the registered patien
 .Click with the mouse on the button or press "Alt + V" to enter the *_Patient Vaccine Browser_* window
 [#default-main-menu-9]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 === 7.2 Functions of Vaccines
 
@@ -2040,7 +2040,7 @@ The purpose of this function is to extract data registered in the application an
 .Click with the mouse on the button or press "Alt + T" to enter the *Statistics Report Launcher*
 [#default-main-menu-11]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 Open Hospital provides a set of reports designed for the Ugandan Ministry of Health (HMIS) and for the
 Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
@@ -2115,7 +2115,7 @@ This function is used to generate reports about the hospital like a list of exam
 .Click with the mouse on the button or press "Alt + R" to enter the *Reports* submenu
 [#default-main-menu-12]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 Open Hospital currently only has these two reports:
 
@@ -2149,7 +2149,7 @@ Through the communication module events and notifications can be shared among us
 .Click with the mouse on the button or press "Alt + M" to enter the *Communication* window.
 [#default-main-menu-13]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 This function is used to chat and share information with other users logged in the system if in turn the application has been set in [.underline]#multi-user# mode and an [.underline]#XMPP Server# is active and running (Ask the Administrator or refer to the _Administrator’s Guide_).
 
@@ -2237,7 +2237,7 @@ Setup and customization of Open Hospital can be performed through the *[.underli
 [grid=none]
 [caption="Submenu: "]
 |===
-|image:OH-main_menu.png[OH Main Menu,width=250,height=627]|image:image0_DefaultGeneralDataMenu.png[SubMenu,width=185,height=527]
+|image:OH-main_menu.png[OH Main Menu]|image:image0_DefaultGeneralDataMenu.png[SubMenu,width=185,height=527]
 |===
 
 Pressing the *[.underline]##S##ettings* button main menu provides access to the *_Settings_* menu. From the *_Settings_* menu the following functions are available:
@@ -3001,7 +3001,7 @@ The *Worksheet* function allows the management and printing of the list of appoi
 
 [#default-main-menu-16]
 [caption="Main Menu: "]
-image:OH-main_menu.png[OH Main Menu,width=250,height=627]
+image:OH-main_menu.png[OH Main Menu]
 
 The _Worksheet_ module works at the Ward (Department) level therefore a ward must first be selected:
 
