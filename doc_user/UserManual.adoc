@@ -1267,7 +1267,7 @@ The Admission/Patient functionality allows registering a new patient, modifying 
 .Click with the mouse on the button or press "Alt + A" to enter the *_Patient Browser_* window
 [#default-main-menu-10]
 [caption="Main Menu: "]
-image:image0_DefaultM]ainMenu.png[Default Main Menu]
+image:OH-main_menu.png[Main Menu]
 
 NOTE: An OPD registration can be started from here if the OPDEXTENDED flag is set to YES. Ask the Administrator or refer to the _Administrator’s Guide_.
 
