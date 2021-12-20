@@ -280,7 +280,7 @@ Pressing *[.underline]##P##harmacy* from the main menu provides access to the Ph
 [grid=none]
 [caption="Submenu: "]
 |===
-|image:OH-main_menu.png[OH Main Menu]|image:image16.png[SubMenu,width=256,height=212]
+|image:OH-main_menu.png[OH Main Menu]|image:image16.png[SubMenu]
 |===
 
 
@@ -876,7 +876,7 @@ In addition, the accounting function supports the management of bill payments (t
 [grid=none]
 [caption="Submenu: "]
 |===
-|image:OH-main_menu.png[OH Main Menu]|image:image52.png[Accounting SubMenu,width=185,height=167]
+|image:OH-main_menu.png[OH Main Menu]|image:image52.png[Accounting SubMenu]
 |===
 
 === 6.2 Functions of Accounting
@@ -2967,7 +2967,9 @@ So, the Registration Office group can only use the Admission/Patient module to i
 
 So, the “main menu” for each user registered in the Registration Office group and for each one in the Cashiers group is shown as follows:
 
-image:image194.png[Main Menu,width=641,height=386]
+|===
+|image:OH-main_menu_s1.png[OH Main Menu 1]|image:OH-main_menu_s2.png[OH Main Menu 2]
+|===
 
 ==== 12.12.2 Users ([.underline]##U##sers)
 
