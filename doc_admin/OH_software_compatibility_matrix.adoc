@@ -2,13 +2,17 @@
 |===
 9+|*Open Hospital compatibility matrix*
 
-.2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|Java JRE version (*) .2+|O.S. .2+|O.S. Arch .2+|JAVA/JRE arch 3+|Special Features
+.2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|Java JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM (*) |SMS (gsm) |Webcam
 
+.4+|*1.11.1* .4+| *10.2.41*/5.7.35 .4+|*1.8 - zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
+|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | i386 | 32bit |*v* |*v* |*v*
 .5+|*1.11.0* .5+| *10.2.40*/5.7.35 .5+|*1.8 - zulu8.56.0.21* |Ubuntu 21.04 | x64 | 64bit |*v* |*x*|*v*
-|Windows 7/10 | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | x64 | 64bit |*x* |*v* |*v*
+|Windows 7/10 (**) | x64 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | i386 | 32bit |*v* |*v* |*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |? |?
 .5+|*1.10.0* .5+| 5.1.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* | ?  |*v*
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
@@ -25,9 +29,10 @@
 [width="60%",cols="30%,70%",]
 |===
 |(*) | With Java 9+ loading a JPG/JPEG as DICOM image may not work
+|(**) | Windows Powershell 5.1 is required
 |*v* |_working_ 
 |*x* |_not working_ 
 |*?* |_not tested_ 
 |n/a |_not applicable_ 
-|_last update_ |_2021.09.16_
+|_last updated_ |_2021.09.16_
 |===
