@@ -7,11 +7,11 @@
 :url-gem: https://rubygems.org/gems/asciidoctor
 :xlmnsBySa: http://purl.org/dc/terms/
 :docTitleBySa: dct:title
-:imagesdir: extracted-media/media/
+:imagesdir: media/
 
 <<<
 
-image:image1.jpeg[image,width=390,height=298]
+image:OH-splash.png[OH splash,width=316,height=237]
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
@@ -411,11 +411,11 @@ The Open Hospital software is now ready to be run by executing the proper launch
 
 If everything is configured correctly, the Open Hospital main splash screen is presented:
 
-image:image17.jpeg[Splash.jpg,width=316,height=237]
+image:OH-splash.png[OH-splash.png,width=316,height=237]
 
 And then the main Menu:
 
-image:image18.png[MainMenu.png,width=235,height=456]
+image:OH-main_menu.png[OH main menu]
 
 It is possible to create a shortcut (link) to the executable script on the desktop, in the Programs Menu or wherever is useful by using the provided icon “oh.ico” that is found in the package.
 
@@ -1878,7 +1878,7 @@ chapter <<database-server,MySQL Server and Open Hospital DB>>.
 
 To run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is OK, the splash screen will appear. If not, look in the Eclipse console for any error or warning messages.
 
-image:image1.jpeg[image,width=390,height=298]
+image:OH-splash.png[image,width=390,height=298]
 
 Open Hospital’s advanced features require “native” libraries generated to match the computer’s operating system. Right-click on the project’s name, then select _Run As -> Run Configurations_:
 
