@@ -502,8 +502,6 @@ Backup of the Open Hospital *code and settings* can be performed by saving the *
 
 Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
 
-Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving the *"data"* folder (including all subfolders) placed under the main OH installation folder.
-
 [#folders]
 === 2.4 Folders and directory structure
 
@@ -1404,7 +1402,6 @@ By default, ALLOWPRINTOPENEDBILL is set to no.
 NOTE: An application restart is required to apply the modified setting.
 
 
-
 [#database-properties]
 === 3.2 database.properties
 
@@ -1934,18 +1931,22 @@ _log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properti
 === 6.1 Update Open Hospital - CLIENT mode
 
 New releases, as well as this Admin Manual and the User Manual, are regularly released on Github/SourceForge. See the <<download,Download>> section for more details.
+
+There are two types of releases:
+
+. Minor Releases: only the third number changes (e.g. **1.8.**1 -> **1.8.**2)
+. Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
+
+*Minor Releases*:
+
+Changes are found in the CHANGELOG file.
+
 NOTE: Following instructions only apply between “official releases”.
 
 Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
 It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<configuration,Configuration>>).
-=======
-Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
-(see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
-
-It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<config-files,Configuration Files>>).
->>>>>>> develop
 The easiest way is to backup the working copy and re-apply those settings in the new installation
 (see the <<backup-restore,Backup & Restore>> chapter).
 
