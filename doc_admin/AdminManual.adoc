@@ -541,7 +541,7 @@ Depending on the chosen operating system and architecture, the needed external a
 
 === 2.5 Appearance
 
-Open Hospital main menu can be customized by adding a logo of choice. To test the feature, rename the image file _logo_hospital_example.png_ found in the _oh/rsc/images_ folder to _logo_hospital.png_:
+Open Hospital main menu appearance can be customized by adding a logo of choice. To test the feature, rename the image file _logo_hospital_example.png_ found in the _oh/rsc/images_ folder to _logo_hospital.png_:
 
 image:OH-main_menu_logo.png[OH main menu]
 
