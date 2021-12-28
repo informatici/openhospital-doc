@@ -421,11 +421,11 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
-On Linux, it might be necessary to set the correct permession to the **oh.sh** script:
+On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
 
-'''
+----
 chmod 755 ./oh.sh
-'''
+----
 
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
