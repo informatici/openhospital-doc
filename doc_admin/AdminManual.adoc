@@ -427,6 +427,12 @@ On Linux, it might be necessary to set the correct permissions to the **oh.sh** 
 chmod 755 ./oh.sh
 ----
 
+On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
+
+----
+chmod 755 ./oh.sh
+----
+
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
 === 2.2 OH - PORTABLE mode
