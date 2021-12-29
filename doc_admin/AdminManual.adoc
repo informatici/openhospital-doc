@@ -1,4 +1,4 @@
-= Open Hospital 1.11.1 - Administrator’s Guide
+= Open Hospital 1.11.2 - Administrator’s Guide
 :icons: font
 :stem:
 :toc: left
@@ -108,15 +108,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.11.1):
+After uncompressing the package, browse to the extracted directory (example given for version 1.11.2):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.11.1
+cd /home/OH/OpenHospital-v1.11.2
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.11.1
+cd C:\Users\OH\OpenHospital-v1.11.2
 ----
 
 
@@ -296,9 +296,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.1\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.2\sql
 
-C:\Users\OH\OpenHospital-v1.11.1\sql
+C:\Users\OH\OpenHospital-v1.11.2\sql
 
 ----
 
@@ -306,7 +306,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.1\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.11.2\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -421,6 +421,12 @@ It is possible to create a shortcut (link) to the executable script on the deskt
 
 image:image100.png[oh.ico,width=32,height=32]
 
+On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
+
+----
+chmod 755 ./oh.sh
+----
+
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
 === 2.2 OH - PORTABLE mode
@@ -502,6 +508,8 @@ Backup of the Open Hospital *code and settings* can be performed by saving the *
 
 Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
 
+Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving the *"data"* folder (including all subfolders) placed under the main OH installation folder.
+
 [#folders]
 === 2.4 Folders and directory structure
 
@@ -536,6 +544,14 @@ Depending on the chosen operating system and architecture, the needed external a
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
+
+=== 2.5 Appearance
+
+Open Hospital main menu appearance can be customized by adding a logo of choice. To test the feature, rename the image file _logo_hospital_example.png_ found in the _oh/rsc/images_ folder to _logo_hospital.png_:
+
+image:OH-main_menu_logo.png[OH main menu]
+
+The custom logo has to be a 100x100 pixel png image file.
 
 [#configuration]
 == 3 Configuration
@@ -1402,6 +1418,7 @@ By default, ALLOWPRINTOPENEDBILL is set to no.
 NOTE: An application restart is required to apply the modified setting.
 
 
+
 [#database-properties]
 === 3.2 database.properties
 
@@ -1854,17 +1871,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.11.1 in Eclipse EE
+== 5 Installing Open Hospital 1.11.2 in Eclipse EE
 
-WARNING: The code is available on GitHub at these links:
-https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
-https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui], and
-https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
+The OH source code is available on GitHub at the following links:
+
+* https://github.com/informatici/openhospital-core/tree/v1.11.2[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.11.2[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.11.2[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11.1 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.11.2 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -1931,16 +1949,6 @@ _log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properti
 === 6.1 Update Open Hospital - CLIENT mode
 
 New releases, as well as this Admin Manual and the User Manual, are regularly released on Github/SourceForge. See the <<download,Download>> section for more details.
-
-There are two types of releases:
-
-. Minor Releases: only the third number changes (e.g. **1.8.**1 -> **1.8.**2)
-. Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
-
-*Minor Releases*:
-
-Changes are found in the CHANGELOG file.
-
 NOTE: Following instructions only apply between “official releases”.
 
 Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
@@ -2035,9 +2043,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.1\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.2\sql
 
-C:\Users\OH\OpenHospital.1.11.1\sql>
+C:\Users\OH\OpenHospital.1.11.2\sql>
 ----
 
 [start=4]
@@ -2045,7 +2053,7 @@ C:\Users\OH\OpenHospital.1.11.1\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.11.1\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.11.2\sql> mysql –u root -p
 
 Enter password: ****
 ----
