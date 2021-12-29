@@ -419,7 +419,13 @@ image:OH-main_menu.png[OH main menu]
 
 It is possible to create a shortcut (link) to the executable script on the desktop, in the Programs Menu or wherever is useful by using the provided icon “oh.ico” that is found in the package.
 
-image:image100.png[oh.ico,width=32,height=32]
+image:OH-icon.png[OH-icon,width=32,height=32]
+
+On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
+
+----
+chmod 755 ./oh.sh
+----
 
 On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
 
