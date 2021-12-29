@@ -1955,12 +1955,6 @@ Minor releases (if not otherwise specified) do not need changes to the database 
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 
 It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<configuration,Configuration>>).
-=======
-Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
-(see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
-
-It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<config-files,Configuration Files>>).
->>>>>>> develop
 The easiest way is to backup the working copy and re-apply those settings in the new installation
 (see the <<backup-restore,Backup & Restore>> chapter).
 
