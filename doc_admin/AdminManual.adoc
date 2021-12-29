@@ -577,7 +577,7 @@ The properties files can be generated automatically from the packaged _.dist_ fi
 
 NOTE: Any change to these files requires an application restart to apply the modified settings.
 
-NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting GENERATE_CONFIG_FILES option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 The following chapters will describe these properties files and their features in detail.
 
@@ -1131,7 +1131,7 @@ By default, DOC_DIR is set to 'doc'.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.23 SMSENABLED
 
@@ -1450,7 +1450,7 @@ NOTE: An application restart is required to apply the modified setting.
 NOTE: The same settings must be applied in _log4.properties_, see
 <<log4j-properties,log4j.properties>> in this manual.
 
-NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 === 3.3 dicom.properties
 
@@ -1486,7 +1486,7 @@ dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
 dicom.max.size=4M
 ----
 
-NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting GENERATE_CONFIG_FILES option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 
 === 3.4 examination.properties
@@ -1650,7 +1650,7 @@ log4j.category.org.isf=INFO,RollingFile,StdOut
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
 (see <<database-properties,database.properties>>).
 
-NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting GENERATE_CONFIG_FILES option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 
 NOTE: DEBUG mode can generate large log files and should be avoided in production environment.
