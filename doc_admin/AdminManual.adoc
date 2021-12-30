@@ -427,12 +427,6 @@ On Linux, it might be necessary to set the correct permissions to the **oh.sh** 
 chmod 755 ./oh.sh
 ----
 
-On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
-
-----
-chmod 755 ./oh.sh
-----
-
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
 === 2.2 OH - PORTABLE mode
@@ -462,7 +456,7 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..368,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..374,leveloffset=+2]
 
 [#backup-restore]
 === 2.3 Backup & Restore
@@ -583,7 +577,7 @@ The properties files can be generated automatically from the packaged _.dist_ fi
 
 NOTE: Any change to these files requires an application restart to apply the modified settings.
 
-NOTE: The properties files are automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 The following chapters will describe these properties files and their features in detail.
 
@@ -680,7 +674,7 @@ If an unknown value is set, the local computer language is applied.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The OH_LANGUAGE setting is automatically generated/overwritten at any OpenHospital startup, unless MANUAL_CONFIG option is set to "on" in the  **oh.sh / oh.ps1** scripts.
+NOTE: The OH_LANGUAGE can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the  **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.2 SINGLEUSER
 
@@ -1137,7 +1131,7 @@ By default, DOC_DIR is set to 'doc'.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The DOC_DIR setting is automatically generated/overwritten at any OpenHospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.23 SMSENABLED
 
@@ -1456,7 +1450,7 @@ NOTE: An application restart is required to apply the modified setting.
 NOTE: The same settings must be applied in _log4.properties_, see
 <<log4j-properties,log4j.properties>> in this manual.
 
-NOTE: The _database.properties_ file is automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 === 3.3 dicom.properties
 
@@ -1492,7 +1486,8 @@ dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
 dicom.max.size=4M
 ----
 
-NOTE: The _dicom.properties_ file is automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, unless MANUAL_CONFIG option is set to "on" in the scripts.
+NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+
 
 === 3.4 examination.properties
 
@@ -1655,7 +1650,8 @@ log4j.category.org.isf=INFO,RollingFile,StdOut
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
 (see <<database-properties,database.properties>>).
 
-NOTE: The _log4j.properties_ file is automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+
 
 NOTE: DEBUG mode can generate large log files and should be avoided in production environment.
 
