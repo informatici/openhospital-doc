@@ -1,4 +1,4 @@
-= Open Hospital 1.11.1 - Administrator’s Guide
+= Open Hospital 1.11.2 - Administrator’s Guide
 :icons: font
 :stem:
 :toc: left
@@ -108,15 +108,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.11.1):
+After uncompressing the package, browse to the extracted directory (example given for version 1.11.2):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.11.1
+cd /home/OH/OpenHospital-v1.11.2
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.11.1
+cd C:\Users\OH\OpenHospital-v1.11.2
 ----
 
 
@@ -296,9 +296,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.1\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.2\sql
 
-C:\Users\OH\OpenHospital-v1.11.1\sql
+C:\Users\OH\OpenHospital-v1.11.2\sql
 
 ----
 
@@ -306,7 +306,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.1\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.11.2\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -419,7 +419,13 @@ image:OH-main_menu.png[OH main menu]
 
 It is possible to create a shortcut (link) to the executable script on the desktop, in the Programs Menu or wherever is useful by using the provided icon “oh.ico” that is found in the package.
 
-image:image100.png[oh.ico,width=32,height=32]
+image:OH-icon.png[OH-icon,width=32,height=32]
+
+On Linux, it might be necessary to set the correct permissions to the **oh.sh** script:
+
+----
+chmod 755 ./oh.sh
+----
 
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
@@ -450,7 +456,7 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..368,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..374,leveloffset=+2]
 
 [#backup-restore]
 === 2.3 Backup & Restore
@@ -498,9 +504,9 @@ To restore database data with MySQL Workbench®:
 
 ==== 2.3.3 Backup of OH code and settings
 
-Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder. Configuration files are found under the *"oh/rsc"* folder.
+Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder (configuration files are found under the *"oh/rsc"* folder).
 
-Backup of the client *data and configuration files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
+Backup of the client *data files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
 
 [#folders]
 === 2.4 Folders and directory structure
@@ -537,6 +543,14 @@ Depending on the chosen operating system and architecture, the needed external a
 
 <<<
 
+=== 2.5 Appearance
+
+Open Hospital main menu appearance can be customized by adding a logo of choice. To test the feature, rename the image file _logo_hospital_example.png_ found in the _oh/rsc/images_ folder to _logo_hospital.png_:
+
+image:OH-main_menu_logo.png[OH main menu]
+
+The custom logo has to be a 100x100 pixel png image file.
+
 [#configuration]
 == 3 Configuration
 
@@ -561,7 +575,7 @@ The properties files can be generated automatically from the packaged _.dist_ fi
 
 NOTE: Any change to these files requires an application restart to apply the modified settings.
 
-NOTE: The properties files are automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 The following chapters will describe these properties files and their features in detail.
 
@@ -658,7 +672,7 @@ If an unknown value is set, the local computer language is applied.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The OH_LANGUAGE setting is automatically generated/overwritten at any OpenHospital startup, unless MANUAL_CONFIG option is set to "on" in the  **oh.sh / oh.ps1** scripts.
+NOTE: The OH_LANGUAGE can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the  **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.2 SINGLEUSER
 
@@ -1115,7 +1129,7 @@ By default, DOC_DIR is set to 'doc'.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The DOC_DIR setting is automatically generated/overwritten at any OpenHospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.23 SMSENABLED
 
@@ -1433,7 +1447,7 @@ NOTE: An application restart is required to apply the modified setting.
 NOTE: The same settings must be applied in _log4.properties_, see
 <<log4j-properties,log4j.properties>> in this manual.
 
-NOTE: The _database.properties_ file is automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 === 3.3 dicom.properties
 
@@ -1469,7 +1483,8 @@ dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
 dicom.max.size=4M
 ----
 
-NOTE: The _dicom.properties_ file is automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, unless MANUAL_CONFIG option is set to "on" in the scripts.
+NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+
 
 === 3.4 examination.properties
 
@@ -1632,7 +1647,8 @@ log4j.category.org.isf=INFO,RollingFile,StdOut
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
 (see <<database-properties,database.properties>>).
 
-NOTE: The _log4j.properties_ file is automatically generated/overwritten at any Open Hospital startup, unless MANUAL_CONFIG option is set to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+
 
 NOTE: DEBUG mode can generate large log files and should be avoided in production environment.
 
@@ -1854,17 +1870,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.11.1 in Eclipse EE
+== 5 Installing Open Hospital 1.11.2 in Eclipse EE
 
-WARNING: The code is available on GitHub at these links:
-https://github.com/informatici/openhospital-core/tree/v1.11.0[openhospital-core],
-https://github.com/informatici/openhospital-gui/tree/v1.11.0[openhospital-gui], and
-https://github.com/informatici/openhospital-doc/tree/v1.11.0[openhospital-doc].
+The OH source code is available on GitHub at the following links:
+
+* https://github.com/informatici/openhospital-core/tree/v1.11.2[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.11.2[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.11.2[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11.1 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.11.2 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -1931,16 +1948,6 @@ _log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properti
 === 6.1 Update Open Hospital - CLIENT mode
 
 New releases, as well as this Admin Manual and the User Manual, are regularly released on Github/SourceForge. See the <<download,Download>> section for more details.
-
-There are two types of releases:
-
-. Minor Releases: only the third number changes (e.g. **1.8.**1 -> **1.8.**2)
-. Major Releases: the first or second number changes (e.g. **1.**7.3 -> **1.**8.0)
-
-*Minor Releases*:
-
-Changes are found in the CHANGELOG file.
-
 NOTE: Following instructions only apply between “official releases”.
 
 Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
@@ -2035,9 +2042,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.1\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.2\sql
 
-C:\Users\OH\OpenHospital.1.11.1\sql>
+C:\Users\OH\OpenHospital.1.11.2\sql>
 ----
 
 [start=4]
@@ -2045,7 +2052,7 @@ C:\Users\OH\OpenHospital.1.11.1\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.11.1\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.11.2\sql> mysql –u root -p
 
 Enter password: ****
 ----
