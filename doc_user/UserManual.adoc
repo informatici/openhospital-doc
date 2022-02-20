@@ -1787,6 +1787,8 @@ image:image244.png[Report,width=300,height=356]
 
 The application is set to get the entire history of the patient, but this can be changed by querying different date ranges and a specific set of information.
 
+NOTE: it is possibile to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category. 
+
 [#dicom-viewer]
 ==== 8.9.1 DICOM ([.underline]##D##ICOM Viewer)
 
