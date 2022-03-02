@@ -204,7 +204,7 @@ To check if the server is active and running, open a terminal window (command pr
 
 The terminal should reply with the MySQL client command line prompt:
 
-*mysql>*
+*MariaDB>*
 
 The prompt means that a successful connection to the database server instance has been established.
 
@@ -221,7 +221,7 @@ Config file can be _my.ini_ or _my.cnf_; default for Windows MariaDB is _my.ini_
 # Configuration to be inserted below last row of [mysqld] section
 #
 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
-max_allowed_packet = 4M # must be adjusted with the value used on clients for DICOM_SIZE
+max_allowed_packet = 4M # must match the value used on clients for DICOM_SIZE
 skip-external-locking
 key_buffer_size = 16M
 thread_cache_size = 64
@@ -314,17 +314,27 @@ using the ‘root’ password chosen during the installation process. The termin
 
 [source,shell]
 ----
-mysql>
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 13
+Server version: 10.2.43-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
 ----
 
 now we are ready to create the database user (isf) with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
-mysql>  CREATE DATABASE oh CHARACTER SET utf8; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123';
-        CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123'; GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; \
-        GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'%';
-mysql>  FLUSH PRIVILEGES;
+MariaDB> CREATE DATABASE oh CHARACTER SET utf8;
+	 CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123';
+	 CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123';
+	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; \
+	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'%';
+MariaDB> FLUSH PRIVILEGES;
 
 ----
 
@@ -332,7 +342,7 @@ To check if the database has been correctly created, enter the following command
 
 [source,shell]
 ----
-mysql> show databases;
+MariaDB> show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -346,7 +356,7 @@ The next step is to launch the main SQL database creation script with the comman
 
 [source,shell]
 ----
-mysql> source create_all_en.sql
+MariaDB> source create_all_en.sql
 ----
 
 NOTE: The data can be installed in different languages by using the related "create_all_xx.sql" file or with demo data using the "create_all_demo.sql" file (English only).
@@ -360,7 +370,7 @@ The ‘isf’ user, different from the ‘root’ one, is the user that the Open
 
 [source,shell]
 ----
-mysql>SET PASSWORD FOR isf'@'%' = PASSWORD('new-password-here');
+MariaDB> SET PASSWORD FOR 'isf'@'%' = PASSWORD('new-password-here');
 
 Query OK, 1 row affected (0.00 sec)
 
@@ -371,14 +381,14 @@ And then:
 
 [source,shell]
 ----
-mysql>FLUSH PRIVILEGES;
+MariaDB> FLUSH PRIVILEGES;
 
 Query OK, 0 rows affected (0.00 sec)
 ----
 
 [source,shell]
 ----
-mysql>quit;
+MariaDB> quit;
 ----
 
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
@@ -538,7 +548,7 @@ These folders may be organized differently depending on the version of the softw
 
 Depending on the chosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _zulu8.58.0.13-ca-fx-jdk8.0.312-<operating_system>_<arch>/ - Java Virtual Machine
+** _zulu8.<versio>-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
@@ -2063,7 +2073,7 @@ Enter password: ****
 
 [source,shell]
 ----
-mysql>
+MariaDB>
 ----
 
 [start=6]
@@ -2071,17 +2081,19 @@ mysql>
 
 [source,shell]
 ----
-mysql> source step_34_slim_opd_table.sql
+MariaDB> source step_34_slim_opd_table.sql
 
-mysql> source step_35_doctors_log.sql
+MariaDB> source step_35_doctors_log.sql
 
-mysql> source step_36_patientexamination_and_rollback_step23.sql
+MariaDB> source step_36_patientexamination_and_rollback_step23.sql
 
-mysql> source step_37_suppliers_table.sql
+MariaDB> source step_37_suppliers_table.sql
 
-mysql> source step_38_dicom.sql
+MariaDB> source step_38_dicom.sql
 
-mysql> source step_39_patientfolder_submenu.sql
+MariaDB> source step_39_patientfolder_submenu.sql
+
+MariaDB> source step_xx_function_yy.sql
 
 ...
 ----
