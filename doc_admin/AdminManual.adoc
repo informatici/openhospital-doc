@@ -332,7 +332,7 @@ now we are ready to create the database user (isf) with password, the main OH da
 MariaDB> CREATE DATABASE oh CHARACTER SET utf8;
 	 CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123';
 	 CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123';
-	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; \
+	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; 
 	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'%';
 MariaDB> FLUSH PRIVILEGES;
 
@@ -548,7 +548,7 @@ These folders may be organized differently depending on the version of the softw
 
 Depending on the chosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _zulu8.<versio>-<operating_system>_<arch>/ - Java Virtual Machine
+** _zulu8.<version>-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
