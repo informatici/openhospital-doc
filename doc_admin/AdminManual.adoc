@@ -310,7 +310,7 @@ C:\Users\OH\OpenHospital-v1.11.3\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
-using the ‘root’ password chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
+using the ‘root’ password chosen during the installation process. The terminal should reply with the MariaDB client command line prompt:
 
 [source,shell]
 ----
