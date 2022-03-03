@@ -514,9 +514,9 @@ To restore database data with MySQL Workbench®:
 
 ==== 2.3.3 Backup of OH code and settings
 
-Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder. Configuration files are found under the *"oh/rsc"* folder.
+Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder (configuration files are found under the *"oh/rsc"* folder).
 
-Backup of the client *data files*, useful for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation path.
+Backup of the client *data files*, useful for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation path
 
 [#folders]
 === 2.4 Folders and directory structure
@@ -1424,7 +1424,6 @@ get the receipt by clicking the Receipt button in the buttons panel.
 By default, ALLOWPRINTOPENEDBILL is set to no.
 
 NOTE: An application restart is required to apply the modified setting.
-
 
 
 [#database-properties]
