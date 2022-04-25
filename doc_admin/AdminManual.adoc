@@ -1424,15 +1424,23 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value |Valid Values
-|PATIENTPHOTO |DB |DB, filesystem path
+|PATIENTPHOTO |DB |DB, FILE
 |===
 
-Open Hospital can save profile picture on DB or on filesystem. 
-When it is not specified DB but a non empty string, Open Hospital will search for profile picture in the path specified in PATIENTPHOTO parameter.
+Open Hospital can save the user's profile picture in the database or on the file system.
+
+If the PATIENTPHOTO parameter is set to FILE, Open Hospital searches for the profile picture in the path specified in he PATIENTPHOTO parameter. 
+
+If the PATHPHOTO parameter is set to DB, then Open Hospital searches for the patient profile picture in the DB.
+
 
 By default, PATIENTPHOTO is set to DB.
 
 NOTE: An application restart is required to apply the modified setting.
+
+==== 3.1.36 PATIENTPHOTOPATH
+
+If PATIENTPHOTO is equal to FILE, then it is mandatory to set the PATIENTPHOTOPATH that should contain the directory where the patient profile pictures will be stored.
 
 
 [#database-properties]
