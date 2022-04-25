@@ -631,6 +631,7 @@ ALLOWMULTIPLEOPENEDBILL=yes
 PATIENTBILLGROUPED=PatientBillGrouped
 PATIENTBILLSTATEMENT=PatientBillStatement
 DEBUG=no
+PATIENTPHOTO=DB
 ----
 
 Every line is composed of a KEY and a value:
@@ -1412,6 +1413,24 @@ When the parameter is enabled, in the Accounting module under the pending tab on
 get the receipt by clicking the Receipt button in the buttons panel.
 
 By default, ALLOWPRINTOPENEDBILL is set to no.
+
+NOTE: An application restart is required to apply the modified setting.
+
+
+==== 3.1.36 PATIENTPHOTO
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value |Valid Values
+|PATIENTPHOTO |DB |DB, filesystem path
+|===
+
+Open Hospital can save profile picture on DB or on filesystem. 
+When it is not specified DB but a non empty string, Open Hospital will search for profile picture in the path specified in PATIENTPHOTO parameter.
+
+By default, PATIENTPHOTO is set to DB.
 
 NOTE: An application restart is required to apply the modified setting.
 
