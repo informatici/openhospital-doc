@@ -1,4 +1,4 @@
-= Open Hospital 1.11.2 - User's Guide
+= Open Hospital 1.11.3 - User's Guide
 :icons: font
 :stem:
 :toc: left
@@ -9,8 +9,8 @@
 
 image:OH-splash.png[OH splash,width=390,height=298]
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
-pass:[<br>][.small]#User's Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+pass:[<br>][.small]#User's Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
@@ -256,7 +256,7 @@ image:image14.png[OPD Edit Extended,width=1024,height=771]
 The OPD Extended module affords the following additional features:
 
 * Calendar to choose the visit date (1);
-* the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made as needed. The OPD number *MUST* be unique for each year.
+* the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made only at the first registration in a year, then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and therefore is a service to the patient by knowing his/her history.
 * Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
@@ -1787,6 +1787,8 @@ image:image244.png[Report,width=300,height=356]
 
 The application is set to get the entire history of the patient, but this can be changed by querying different date ranges and a specific set of information.
 
+NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category. 
+
 [#dicom-viewer]
 ==== 8.9.1 DICOM ([.underline]##D##ICOM Viewer)
 
@@ -3031,6 +3033,6 @@ TIP: To schedule a visit can also be done in the *Therapy Management* module, se
 
 == 14 License
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
-pass:[<br>][.small]#User's Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+pass:[<br>][.small]#User's Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#

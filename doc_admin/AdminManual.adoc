@@ -1,4 +1,4 @@
-= Open Hospital 1.11.2 - Administrator’s Guide
+= Open Hospital 1.11.3 - Administrator’s Guide
 :icons: font
 :stem:
 :toc: left
@@ -13,8 +13,8 @@
 
 image:OH-splash.png[OH splash,width=316,height=237]
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
@@ -108,15 +108,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.11.2):
+After uncompressing the package, browse to the extracted directory (example given for version 1.11.3):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.11.2
+cd /home/OH/OpenHospital-v1.11.3
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.11.2
+cd C:\Users\OH\OpenHospital-v1.11.3
 ----
 
 
@@ -204,7 +204,7 @@ To check if the server is active and running, open a terminal window (command pr
 
 The terminal should reply with the MySQL client command line prompt:
 
-*mysql>*
+*MariaDB>*
 
 The prompt means that a successful connection to the database server instance has been established.
 
@@ -221,7 +221,7 @@ Config file can be _my.ini_ or _my.cnf_; default for Windows MariaDB is _my.ini_
 # Configuration to be inserted below last row of [mysqld] section
 #
 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
-max_allowed_packet = 4M # must be adjusted with the value used on clients for DICOM_SIZE
+max_allowed_packet = 4M # must match the value used on clients for DICOM_SIZE
 skip-external-locking
 key_buffer_size = 16M
 thread_cache_size = 64
@@ -296,9 +296,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.2\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.3\sql
 
-C:\Users\OH\OpenHospital-v1.11.2\sql
+C:\Users\OH\OpenHospital-v1.11.3\sql
 
 ----
 
@@ -306,25 +306,35 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.2\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.11.3\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
-using the ‘root’ password chosen during the installation process. The terminal should reply with the MySQL client command line prompt:
+using the ‘root’ password chosen during the installation process. The terminal should reply with the MariaDB client command line prompt:
 
 [source,shell]
 ----
-mysql>
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 13
+Server version: 10.2.43-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]>
 ----
 
 now we are ready to create the database user (isf) with password, the main OH database and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
-mysql>  CREATE DATABASE oh; CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123';
-        CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123'; GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; \
-        GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'%';
-mysql>  FLUSH PRIVILEGES;
+MariaDB> CREATE DATABASE oh CHARACTER SET utf8;
+	 CREATE USER 'isf'@'localhost' IDENTIFIED BY 'isf123';
+	 CREATE USER 'isf'@'%' IDENTIFIED BY 'isf123';
+	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'localhost'; 
+	 GRANT ALL PRIVILEGES ON oh.* TO 'isf'@'%';
+MariaDB> FLUSH PRIVILEGES;
 
 ----
 
@@ -332,7 +342,7 @@ To check if the database has been correctly created, enter the following command
 
 [source,shell]
 ----
-mysql> show databases;
+MariaDB> show databases;
 +--------------------+
 | Database           |
 +--------------------+
@@ -346,7 +356,7 @@ The next step is to launch the main SQL database creation script with the comman
 
 [source,shell]
 ----
-mysql> source create_all_en.sql
+MariaDB> source create_all_en.sql
 ----
 
 NOTE: The data can be installed in different languages by using the related "create_all_xx.sql" file or with demo data using the "create_all_demo.sql" file (English only).
@@ -360,7 +370,7 @@ The ‘isf’ user, different from the ‘root’ one, is the user that the Open
 
 [source,shell]
 ----
-mysql>SET PASSWORD FOR isf'@'%' = PASSWORD('new-password-here');
+MariaDB> SET PASSWORD FOR 'isf'@'%' = PASSWORD('new-password-here');
 
 Query OK, 1 row affected (0.00 sec)
 
@@ -371,14 +381,14 @@ And then:
 
 [source,shell]
 ----
-mysql>FLUSH PRIVILEGES;
+MariaDB> FLUSH PRIVILEGES;
 
 Query OK, 0 rows affected (0.00 sec)
 ----
 
 [source,shell]
 ----
-mysql>quit;
+MariaDB> quit;
 ----
 
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
@@ -456,7 +466,7 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..374,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..413,leveloffset=+2]
 
 [#backup-restore]
 === 2.3 Backup & Restore
@@ -538,7 +548,7 @@ These folders may be organized differently depending on the version of the softw
 
 Depending on the chosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _zulu8.58.0.13-ca-fx-jdk8.0.312-<operating_system>_<arch>/ - Java Virtual Machine
+** _zulu8.<version>-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
 <<<
@@ -642,7 +652,7 @@ Values can be:
 * *Boolean*: yes | no or true | false
 * *String*: usually a filename or a country code (ISO 3166-1)
 
-Use the provided startup scripts in order to automatically generate the _settings.properties_ file from the corresponding _.dist_ file, or set manually the KEY/value pair as explained in the following sections.
+Use the provided startup scripts in order to automatically generate the _settings.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the KEY/value pair as explained in the following sections.
 
 [#language]
 ==== 3.1.1 LANGUAGE
@@ -1429,7 +1439,7 @@ jdbc.username=DBUSER
 jdbc.password=DBPASS
 ----
 
-Use the provided startup scripts in order to automatically generate the _database.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
+Use the provided startup scripts in order to automatically generate the _database.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DBSERVER*: the IP address of the OH database server. 
 IP address can be set to: +
@@ -1464,7 +1474,7 @@ dicom.storage.filesystem=OH_PATH_SUBSTITUTE/DICOM_DIR
 dicom.max.size=DICOM_SIZE
 ----
 
-Use the provided startup scripts in order to automatically generate the _dicom.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
+Use the provided startup scripts in order to automatically generate the _dicom.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DICOM_STORAGE*: This property accepts one of the following:
 ** SqlDicomManager: DICOM files are stored in the database
@@ -1602,7 +1612,7 @@ log4j.logger.org.hibernate=LOG_LEVEL,RollingFile,StdOut
 #log4j.logger.org.hibernate.SQL=INFO,RollingFile,StdOut
 ----
 
-Use the provided OH startup scripts in order to automatically generate the _log4j.properties_ file from the corresponding _.dist_ file, or set manually the following parameters:
+Use the provided OH startup scripts in order to automatically generate the _log4j.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DBSERVER*: the IP address of the OH database server. 
 IP address can be set to: +
@@ -1870,18 +1880,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.11.2 in Eclipse EE
+== 5 Installing Open Hospital 1.11.3 in Eclipse EE
 
 The OH source code is available on GitHub at the following links:
 
-* https://github.com/informatici/openhospital-core/tree/v1.11.2[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.11.2[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.11.2[openhospital-doc]
+* https://github.com/informatici/openhospital-core/tree/v1.11.3[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.11.3[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.11.3[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11.2 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.11.3 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -2042,9 +2052,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.2\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.3\sql
 
-C:\Users\OH\OpenHospital.1.11.2\sql>
+C:\Users\OH\OpenHospital.1.11.3\sql>
 ----
 
 [start=4]
@@ -2052,7 +2062,7 @@ C:\Users\OH\OpenHospital.1.11.2\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.11.2\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.11.3\sql> mysql –u root -p
 
 Enter password: ****
 ----
@@ -2062,7 +2072,7 @@ Enter password: ****
 
 [source,shell]
 ----
-mysql>
+MariaDB>
 ----
 
 [start=6]
@@ -2070,17 +2080,19 @@ mysql>
 
 [source,shell]
 ----
-mysql> source step_34_slim_opd_table.sql
+MariaDB> source step_34_slim_opd_table.sql
 
-mysql> source step_35_doctors_log.sql
+MariaDB> source step_35_doctors_log.sql
 
-mysql> source step_36_patientexamination_and_rollback_step23.sql
+MariaDB> source step_36_patientexamination_and_rollback_step23.sql
 
-mysql> source step_37_suppliers_table.sql
+MariaDB> source step_37_suppliers_table.sql
 
-mysql> source step_38_dicom.sql
+MariaDB> source step_38_dicom.sql
 
-mysql> source step_39_patientfolder_submenu.sql
+MariaDB> source step_39_patientfolder_submenu.sql
+
+MariaDB> source step_xx_function_yy.sql
 
 ...
 ----
@@ -2124,6 +2136,6 @@ https://www.open-hospital.org/contact and specify:
 
 == 7 License
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2021#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2021 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
