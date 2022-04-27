@@ -516,7 +516,7 @@ To restore database data with MySQL Workbench®:
 
 Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder (configuration files are found under the *"oh/rsc"* folder).
 
-Backup of the client *data files*, useful for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation path
+Backup of the client *data files*, especially for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation folder.
 
 [#folders]
 === 2.4 Folders and directory structure
