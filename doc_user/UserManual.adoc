@@ -1430,6 +1430,10 @@ To record a new patient, the following fields are available:
 image:image86.png[Age by Age,width=187,height=74]image:image87.png[Age by Birthdate,width=188,height=74]image:image88.png[Age by Description,width=183,height=74]
  +
 Regardless of the way it is entered the age is converted to an age in years in the *_Patient Browser_* window.
+
+NOTE: The date picker includes a "Clear" option (lower right corner) to remove or clear the current date value.
+image:image87a.png[Age by Age,width=187,height=74]
+
 * *BloodType*: valid values are 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: valid values are Single, Married, Divorced, and Widowed. If left empty, the default is Unknown
 * *Profession*: valid values are Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering. If left empty, the default is Unknown
