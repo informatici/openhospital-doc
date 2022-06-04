@@ -1442,8 +1442,14 @@ NOTE: An application restart is required to apply the modified setting.
 
 If PATIENTPHOTO is equal to FILE, then it is mandatory to set the PATIENTPHOTOPATH that should contain the directory where the patient profile pictures will be stored.
 
+==== 3.1.37 MAXPROFPICFILESIZEBYTES
+Specifies the maximum size of the patient's profile photo.
+
 
 [#database-properties]
+
+
+
 === 3.2 database.properties
 
 Database configuration is set in the _database.properties_ file.
