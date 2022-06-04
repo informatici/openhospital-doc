@@ -29,7 +29,7 @@ our [Slack workspace][slack] or by subscribing to our [mailing list][ml].
 
  [openhospital]: https://www.open-hospital.org/
  [adminmanual]: https://github.com/informatici/openhospital-doc/blob/develop/doc_admin/AdminManual.adoc
- [usermanual]: https://github.com/informatici/openhospital-doc/tree/develop/doc_user
+ [usermanual]: https://github.com/informatici/openhospital-doc/tree/develop/doc_user/UserManual.adoc
  [contribution-guide]: https://openhospital.atlassian.net/wiki/display/OH/Contribution+Guidelines
  [jira]: https://openhospital.atlassian.net/jira/software/c/projects/OP/issues/
  [asciidoc]: https://asciidoc.org/
