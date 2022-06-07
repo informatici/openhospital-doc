@@ -115,9 +115,9 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 == 2 Installation
 
-Open Hospital is a client application that can be used two modalities: 
+Open Hospital is a client application that can be used in two modalities: 
 
-* <<client,2.1 OH - CLIENT mode>>: multi computers setup, with a central database (requires a little IT knowledge)=
+* <<client,2.1 OH - CLIENT mode>>: multi computers setup, with a central database (requires a little IT knowledge)
 * <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with inbuilt databases (click and run)
 
 TIP: Portable mode can be also used to test the application
@@ -137,13 +137,13 @@ The Administrator/Installer tasks are hereby listed:
 
 * Server 
 ** <<download,Download>> the Open Hospital package for the selected Operating System (see <<prereq,Prerequisites>>)
-** <<unpack,Unpack>> the downloaded OH package on the server machine by uncompressing the archive in a folder of your choice
-** <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
-** <<ohdatabase-creation,Create the OH database>> through the execution of a script found in the _sql/_ folder
+** <<unpack,Unpack>> the downloaded package on the server machine by uncompressing the archive in a folder of your choice
+** <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the database server
+** <<ohdatabase-creation,Create the database>> through the execution of a script found in the _sql/_ folder
 ** <<setup,Test>> and <<run,run>> the application using 'localhost' setting
 * Clients
-** Unpack the downloaded OH package on a client machine by uncompressing the archive in a folder of your choice
-** <<setup,Setup>> and <<run,run>> Open Hospital to point to the OH database server using the hostname or the IP address
+** Unpack the downloaded package on a client machine in a folder of your choice
+** <<setup,Setup>> and <<run,run>> the application to point to the database server using the hostname or the IP address
 ** Copy the so configured package on every client
 
 [#prereq]
