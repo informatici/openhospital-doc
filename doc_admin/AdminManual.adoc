@@ -89,13 +89,9 @@ In this way, the archive is just opened, but not uncompressed. Let's say it is o
 
 In order to work with the application you need to unzip (uncompress) the downloaded package in a folder of your choice.
 
-To uncompress the package: 
+To uncompress the package: *Right-click on the package -> Extract all/here*
 
-TIP: Right-click on the package -> Extract all.../here...
-
-==== 1.6.1 Alternative, uncompress with command line instructions:
-
-NOTE: You need read/write permission on the selected folder. 
+*Alternative*: to uncompress with command line instructions
 
 * on Linux:
 ----
@@ -107,7 +103,6 @@ unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
 unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
-
 
 === 1.7 Documentation
 
