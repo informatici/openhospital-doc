@@ -91,7 +91,7 @@ In order to work with the application you need to unzip (uncompress) the downloa
 
 To uncompress the package: *Right-click on the package -> Extract all/here*
 
-*Alternative*: to uncompress with command line instructions
+*Alternative method*: uncompress package from command line
 
 * on Linux:
 ----
