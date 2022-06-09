@@ -79,26 +79,22 @@ Open Hospital official releases can be downloaded from GitHub: https://github.co
 
 More information can be found on the Open Hospital website: https://www.open-hospital.org/download
 
-[#setup]
-=== 1.6 Initial setup
+[#unpack]
+=== 1.6 Unpack
 
-Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of your choice, e.g.:
+NOTE: Do not double-click on the **oh.bat** startup script without unzipping the package first!
 
-* on Linux:
-----
-/home/OH/OpenHospital-[VERSION]
-----
+A downloaded compressed archive can be opened on most operating systems by just double-clicking on it.
+In this way, the archive is just opened, but not uncompressed. Let's say it is open for "inspection" only. 
 
-* on Windows:
-----
-C:\Users\OH\OpenHospital-[VERSION]
-----
+In order to work with the application you need to unzip (uncompress) the downloaded package in a folder of your choice.
 
-To uncompress the package:
+To uncompress the package: *Right-click on the package -> Extract all/here*
+
+*Alternative method*: uncompress package from command line
 
 * on Linux:
 ----
-cd /home/OH
 tar zxvf OpenHospital-v[VERSION]-linux_[ARCH]-[portable].tgz # portable version
 unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
 ----
@@ -107,22 +103,6 @@ unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
 unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
-
-After uncompressing the package, browse to the extracted directory (example given for version 1.11.3):
-
-* on Linux:
-----
-cd /home/OH/OpenHospital-v1.11.3
-----
-* on Windows:
-----
-cd C:\Users\OH\OpenHospital-v1.11.3
-----
-
-
-NOTE: You need read/write permission on the selected folder.
-
-NOTE: Do not run OH by double-clicking on the **oh.bat** startup script without unzipping the package first!
 
 === 1.7 Documentation
 
@@ -135,9 +115,19 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 == 2 Installation
 
+Open Hospital is a client application that can be used in two different ways: 
+
+* <<client,2.1 OH - CLIENT mode>>: multi computers setup, with a central database (requires a little IT knowledge)
+* <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with inbuilt databases (click and run)
+
+TIP: Portable mode can be also used to test the application.
+
+[#client]
 === 2.1 OH - CLIENT mode
 
-Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the preferred database server.
+In this mode, the application will need a Server with a DBMSfootnote:[DataBase Management System] to store the data. 
+
+The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the preferred database server.
 
 The typical client/server, networked (LAN) configuration is shown in the following figure:
 
@@ -145,14 +135,18 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* <<download,Download>> the Open Hospital package for the selected Operating System
-* <<setup,Setup>> the downloaded OH package by uncompressing the archive in a folder of your choice
-* <<jre,Install JAVA JRE>> - Java Runtime Environment (see compatibility matrix for the right version) on every client
-* <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
-* <<ohdatabase-creation,Create the OH database>> through the execution of a script found in the _sql/_ folder
-* Copy the Open Hospital application on every client (it may also be installed on the server)
-* <<configuration,Configure>> each Open Hospital instance to point to the OH database server (using the hostname or the IP address)
+* Server 
+** <<download,Download>> the Open Hospital package for the selected Operating System (see <<prereq,Prerequisites>>)
+** <<unpack,Unpack>> the downloaded package on the server machine by uncompressing the archive in a folder of your choice
+** <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the database server
+** <<ohdatabase-creation,Create the database>> through the execution of a script found in the _sql/_ folder
+** <<setup,Test>> and <<run,run>> the application using 'localhost' setting
+* Clients
+** Unpack the downloaded package on a client machine in a folder of your choice
+** <<setup,Setup>> and <<run,run>> the application to point to the database server using the hostname or the IP address
+** Copy the newly configured package on every client
 
+[#prereq]
 ==== 2.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
@@ -393,7 +387,8 @@ MariaDB> quit;
 
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
-==== 2.1.5 OH - Database configuration
+[#setup]
+==== 2.1.5 OH - CLIENT configuration
 
 To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ configuration files, located in the _oh/rsc/_ resource folder.
 
@@ -407,11 +402,11 @@ Specify, according to the values specified in the installation phase:
 
 NOTE: These settings are required for every Open Hospital installation/client.
 
-More information on these files can be found in the sections <<database-properties,database.properties>> and
-<<log4j-properties,log4j.properties>>.
+More information on these files can be found in the <<configuration,3. Configuration>> section.
 
 NOTE: It is possible to use the provided scripts to generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
+[#run]
 ==== 2.1.6 OH - Startup and run
 
 The Open Hospital software is now ready to be run by executing the proper launcher command:
@@ -439,6 +434,7 @@ chmod 755 ./oh.sh
 
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
+[#portable]
 === 2.2 OH - PORTABLE mode
 
 Open Hospital is a Java software program and it is portable by definition. The *PORTABLE* mode described in this chapter refers to the possibility of using OH as a self contained package that includes Java, MariaDB/MySQL Server and all the data, without requiring any software installation. The package can be used on a single computer and used everywhere just by copying a folder - even onto an USB stick - carrying together all the saved data.
