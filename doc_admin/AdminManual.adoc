@@ -84,7 +84,7 @@ More information can be found on the Open Hospital website: https://www.open-hos
 
 NOTE: Do not double-click on the **oh.bat** startup script without unzipping the package first!
 
-Most operating systems allow one to "open" a downloaded compressed archive by just double-clicking on it. 
+A downloaded compressed archive can be opened on most operating systems by just double-clicking on it.
 In this way, the archive is just opened, but not uncompressed. Let's say it is open for "inspection" only. 
 
 In order to work with the application you need to unzip (uncompress) the downloaded package in a folder of your choice.
@@ -161,7 +161,6 @@ The **oh.sh / oh.bat** scripts can be used to download and install the latest JR
 manually, following the specific instructions for the operating system being used.
 
 NOTE: See Software Compatibility Matrix to identify the correct Java version.
-
 
 [#database-server]
 ==== 2.1.3 Database Server
