@@ -411,7 +411,7 @@ $script:MYSQL_ROOT_PW="tmp2021oh111"
 $script:DATABASE_NAME="oh"
 $script:DATABASE_USER="isf"
 $script:DATABASE_PASSWORD="isf123"
-```` 
+```
 
 After you can generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
