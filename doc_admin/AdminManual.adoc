@@ -402,7 +402,7 @@ Database settings are:
 
 Please set them according to the values specified in the installation phase:
 
-in **oh.sh / oh.ps1** scripts:
+in **oh.sh / oh.ps1** scripts
 
 ```
 $script:MYSQL_SERVER="127.0.0.1"
@@ -419,14 +419,14 @@ After you can generate the config files: on Linux execute *oh.sh -g*, on Windows
 
 Please set them according to the values specified in the installation phase:
 
-in _database.properties_ config file:
+in _database.properties_ config file
 ```
 jdbc.url=jdbc:mysql://127.0.0.1:3306/oh
 jdbc.username=isf
 jdbc.password=isf123
 ```
 
-in _log4j.properties_ config file>
+in _log4j.properties_ config file
 ```
 log4j.appender.DB.URL=jdbc:mysql://127.0.0.1:3306/oh?autoReconnect=true
 log4j.appender.DB.user=isf
