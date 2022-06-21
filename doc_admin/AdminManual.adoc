@@ -433,7 +433,6 @@ log4j.appender.DB.user=isf
 log4j.appender.DB.password=isf123
 ```
 
-
 NOTE: These settings are required for every Open Hospital installation/client.
 
 More information on these files can be found in the <<configuration,3. Configuration>> section.
