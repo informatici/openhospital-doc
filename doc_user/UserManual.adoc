@@ -2616,6 +2616,7 @@ To insert a new ward, provide the following required inputs:
 * *Number of beds*: the value is shown in the admission module to check for available beds; 0 – zero beds wards will be not shown in the admission module
 * *Number of nurses*: it may be shown in some reports (0 – zero is allowed)
 * *Number of doctors*: it may be shown in some reports (0 – zero is allowed)
+* *Visit duration*: length of a visit (in minutes and must be greater than zero)
 * *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked it means that ward can be a destination for discharging movements, otherwise it will be not shown in the list
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
