@@ -2123,14 +2123,15 @@ This function is used to generate reports about the hospital like a list of exam
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-Open Hospital currently only has these two reports:
+Open Hospital currently only has these three reports:
 
 * Exams List
 * Diseases List
+* Operations List
 
 === 10.2 Reports
 
-By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
+By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List*, *[.underline]##D##isease List* and *[.underline]##O##peration List.*
 
 image:image127.png[Reports submenu,width=642,height=323]
 
@@ -2141,6 +2142,10 @@ This report is a list of exams, divided by types, as defined by the Administrato
 ==== 10.2.2 Disease List ([.underline]##D##isease List)
 
 This report is a list of diseases, divided by types, as defined by the Administrator.
+
+==== 10.2.3 Operation List ([.underline]##O##peration List)
+
+This report is a list of operations, divided by types, as defined by the Administrator.
 
 <<<
 
