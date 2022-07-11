@@ -729,7 +729,7 @@ When SINGLEUSER is set to YES (default) the program starts with this user and al
 
 If SINGLEUSER is set to NO the following login window appears when the program is started:
 
-image:image27.png[UsersListLogin.png,width=305,height=148]
+image:image27.png[UsersListLogin.png,width=375,height=139]
 
 NOTE: See <<users-list-login, 3.1.36 USERSLISTLOGIN>> in this document to change the login mode.
 
@@ -1472,11 +1472,11 @@ When Open Hospital is used in multi-user mode, i.e. SINGLEUSER = no, it is possi
 
 (1) by typing the username directly in a textbox, if USERSLISTLOGIN is set to NO (default):
 
-image:image27.png[UsersListLogin.png,width=305,height=148]
+image:image27.png[UsersListLogin.png,width=375,height=139]
 
 (2) by selecting the username from a list of users, if USERSLISTLOGIN is set to YES:
 
-image:image24.png[Login.png,width=305,height=148]
+image:image24.png[Login.png,width=375,height=139]
 
 
 [#database-properties]
