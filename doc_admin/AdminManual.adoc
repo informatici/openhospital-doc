@@ -641,7 +641,7 @@ ALLOWMULTIPLEOPENEDBILL=yes
 PATIENTBILLGROUPED=PatientBillGrouped
 PATIENTBILLSTATEMENT=PatientBillStatement
 DEBUG=no
-PATIENTPHOTO=DB
+PATIENTPHOTOSTORAGE=DB
 ----
 
 Every line is composed of a KEY and a value:
@@ -1427,7 +1427,7 @@ By default, ALLOWPRINTOPENEDBILL is set to no.
 NOTE: An application restart is required to apply the modified setting.
 
 
-==== 3.1.36 PATIENTPHOTO
+==== 3.1.36 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -1439,19 +1439,14 @@ The following table shows the default value and the allowed ones:
 
 Open Hospital can save the user's profile picture in the database or on the file system.
 
-If the PATIENTPHOTO parameter is set to FILE, Open Hospital searches for the profile picture in the path specified in he PATIENTPHOTO parameter. 
+If the PATIENTPHOTOSTORAGE parameter is set to a path (different from "DB"), Open Hospital searches for the profile picture in the specified path.
 
-If the PATHPHOTO parameter is set to DB, then Open Hospital searches for the patient profile picture in the DB.
+If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital searches for the patient profile picture in the DB.
 
 
-By default, PATIENTPHOTO is set to DB.
+By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
-
-==== 3.1.36 PATIENTPHOTOPATH
-
-If PATIENTPHOTO is equal to FILE, then it is mandatory to set the PATIENTPHOTOPATH that should contain the directory where the patient profile pictures will be stored.
-
 
 [#database-properties]
 === 3.2 database.properties
