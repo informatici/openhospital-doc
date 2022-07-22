@@ -1464,6 +1464,7 @@ NOTE: An application restart is required to apply the modified setting.
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
+|===
 |Key |Default Value | Allowed Values
 |USERSLISTLOGIN |no |yes, no
 |===
