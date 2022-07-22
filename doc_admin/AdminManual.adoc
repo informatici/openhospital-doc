@@ -1434,7 +1434,7 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value |Valid Values
-|PATIENTPHOTO |DB |DB, FILE
+|PATIENTPHOTOSTORAGE |DB |DB, _<path_to_folder>_
 |===
 
 Open Hospital can save the user's profile picture in the database or on the file system.
