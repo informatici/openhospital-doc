@@ -2123,14 +2123,15 @@ This function is used to generate reports about the hospital like a list of exam
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-Open Hospital currently only has these two reports:
+Open Hospital currently only has these three reports:
 
 * Exams List
 * Diseases List
+* Operations List
 
 === 10.2 Reports
 
-By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
+By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List*, *[.underline]##D##isease List* and *[.underline]##O##peration List.*
 
 image:image127.png[Reports submenu,width=642,height=323]
 
@@ -2141,6 +2142,10 @@ This report is a list of exams, divided by types, as defined by the Administrato
 ==== 10.2.2 Disease List ([.underline]##D##isease List)
 
 This report is a list of diseases, divided by types, as defined by the Administrator.
+
+==== 10.2.3 Operation List ([.underline]##O##peration List)
+
+This report is a list of operations, divided by types, as defined by the Administrator.
 
 <<<
 
@@ -2616,6 +2621,7 @@ To insert a new ward, provide the following required inputs:
 * *Number of beds*: the value is shown in the admission module to check for available beds; 0 – zero beds wards will be not shown in the admission module
 * *Number of nurses*: it may be shown in some reports (0 – zero is allowed)
 * *Number of doctors*: it may be shown in some reports (0 – zero is allowed)
+* *Visit duration*: length of a visit (in minutes and must be greater than zero)
 * *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked it means that ward can be a destination for discharging movements, otherwise it will be not shown in the list
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
@@ -2912,7 +2918,6 @@ image:image185.png[New SMS]
 In order to insert a new SMS, the following data is required:
 
 * *Scheduled Date*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
-* *Scheduled Time*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
 * *Number*: the recipient of the SMS. You can select a patient by clicking the button image:image186.png[number icon,width=43,height=23]. The phone number of the selected patient is automatically inserted.
 * *SMS*: type the text of the SMS in the white space (maximum of 160 characters).
 
