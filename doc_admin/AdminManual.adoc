@@ -693,6 +693,7 @@ DEBUG=no
 USERSLISTLOGIN=no
 STRONGPASSWORD=yes
 STRONGLENGTH=10
+PATIENTPHOTOSTORAGE=DB
 ----
 
 Every line is composed of a KEY and a value:
@@ -1502,6 +1503,10 @@ image:image27.png[UsersListLogin.png,width=375,height=139]
 
 image:image24.png[Login.png,width=375,height=139]
 
+By default, USERSLISTLOGIN is set to no.
+
+NOTE: An application restart is required to apply the modified setting.
+
 [#strongpasword]
 ==== 3.1.37 STRONGPASSWORD
 
@@ -1531,6 +1536,28 @@ The following table shows the default value and the allowed ones:
 |===
 
 The value of STRONGLENGTH is the minimum length of a user's password.
+
+NOTE: An application restart is required to apply the modified setting.
+
+
+==== 3.1.39 PATIENTPHOTOSTORAGE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value |Valid Values
+|PATIENTPHOTOSTORAGE |DB |DB, _<path_to_folder>_
+|===
+
+Open Hospital can save the user's profile picture in the database or on the file system.
+
+If the PATIENTPHOTOSTORAGE parameter is set to a path (different from "DB"), Open Hospital searches for the profile picture in the specified path.
+
+If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital searches for the patient profile picture in the DB.
+
+
+By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
 
