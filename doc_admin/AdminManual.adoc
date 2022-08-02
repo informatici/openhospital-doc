@@ -1554,9 +1554,9 @@ Open Hospital can save the user's profile picture in the database or on the file
 
 NOTE: The maximum size for patient's profile picture is limited to 4096 bytes. If a bigger image is provided, it will automatically resized.
 
-If the PATIENTPHOTOSTORAGE parameter is set to a path (different from "DB"), Open Hospital looks for or save the patient's profile picture in the specified path.
+If the PATIENTPHOTOSTORAGE parameter is set to a path (that is, not "DB"), then Open Hospital looks for or saves the patient's profile picture in the specified path.
 
-If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital looks for or save the patient's profile picture in the DB.
+If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital looks for or saves the patient's profile picture in the Open Hospital database.
 
 
 By default, PATIENTPHOTOSTORAGE is set to "DB".
