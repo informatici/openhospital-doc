@@ -1478,6 +1478,20 @@ image:image27.png[UsersListLogin.png,width=375,height=139]
 
 image:image24.png[Login.png,width=375,height=139]
 
+[#stronglength]
+==== 3.1.37 STRONGLENGTH
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|STRONGLENGTH |10 | positive integer value
+|===
+
+The value of STRONGLENGTH is the minimum length of a user's password.
+
+NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 === 3.2 database.properties
