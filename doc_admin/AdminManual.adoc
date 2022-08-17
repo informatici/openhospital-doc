@@ -1491,7 +1491,7 @@ The following table shows the default value and the allowed ones:
 
 By default, the value of STRONGPASSWORD is the set to yes indicating that the
 password must contain at least one alphabetic, numeric, and special character.
-The list of recognized special characters is: *@#$%^&+=!-_?*
+The list of recognized special characters is: *_$&+,:;=\?@#|/'<>.^*()%!-*
 
 NOTE: An application restart is required to apply the modified setting.
 
