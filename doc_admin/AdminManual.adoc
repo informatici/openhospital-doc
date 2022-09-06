@@ -511,19 +511,25 @@ NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r
 
 There are several ways to back up and restore *data* with MySQL. The recommended method is to use a common MySQL client such as MySQL Workbench®:
 
-From https://stackoverflow.com/a/18379189:
-
-. Click on the Management tab on the left side of the Navigator Panel
-. Click on Data Export Option
-. Select Schema
-. Select Tables
-. Select the required option from the dropdown below the tables list as required
-. Select Include Create schema checkbox
-. Click on the Advance option
-. Select Complete insert checkbox in Inserts Panel
-. Start Export
+. Click on the **Administration** tab on the left side of the Navigator Panel
+. Click on **Data Export** option
+. Select the **oh** schema
+. Select the required option from the dropdown below the tables list as required (the suggested option is **Dump Structure and Data**)
+. Click on **Export to Self-Contained File**
+. Adjust output file location as needed
+. Select **Create Dump in a Single Transaction** checkbox
+. Select **Include Create Schema** checkbox
+. Click on the **Advanced Options** button and scroll down to the **Inserts** panel (see second image below):
+.. Select **complete-insert** checkbox
+.. Uncheck **extended-insert** checkbox
+.. Return to the main panel
+. Select the **Start Export** button
 
 image:image22.png[image,width=642,height=461]
+
+**Advanced Options** image:
+
+image:image22a.png[image,width=642,height=461]
 
 [#restore-data]
 ==== 2.3.2 Restore of database (alternative with MySQL Workbench®)
