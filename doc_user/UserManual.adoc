@@ -2211,9 +2211,9 @@ image:image133.png[Communication discharge for Allan,width=377,height=285]
 
 === 11.4 Pharmaceuticals Critical Level Notifications
 
-In the *_Stock Movement Inserting - Discharge_* window there is a new box at the bottom, as shown below:
+In the *_Stock Movement_* window there is a new box at the bottom, as shown below:
 
-image:image134.png[Communication Stock alert,width=397,height=500]
+image:image134.png[Communication Stock alert,width=500,height=500]
 
 The box becomes active and useful only if the movement is going to reduce the selected pharmaceutical below the critical level. Given such an occurrence the event can be shared with another user logged into the system at the given time when the *[.underline]##O##K* button is pressed.
 
