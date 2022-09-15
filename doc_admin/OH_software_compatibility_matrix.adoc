@@ -5,6 +5,10 @@
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|Java JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/JRE arch 3+|Special Features
 |DICOM (*) |SMS (gsm) |Webcam
 
+.4+|*1.11.4* .4+| *10.2.42*/ n/a .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
+|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | i386 | 32bit |*v* |*v* |*v*
 .4+|*1.11.3* .4+| *10.2.42*/ n/a .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
 |Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
 |Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
