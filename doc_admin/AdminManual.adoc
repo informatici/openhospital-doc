@@ -691,6 +691,8 @@ PATIENTBILLGROUPED=PatientBillGrouped
 PATIENTBILLSTATEMENT=PatientBillStatement
 DEBUG=no
 USERSLISTLOGIN=no
+STRONGPASSWORD=yes
+STRONGLENGTH=10
 ----
 
 Every line is composed of a KEY and a value:
