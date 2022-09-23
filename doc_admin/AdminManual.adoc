@@ -636,6 +636,7 @@ Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is 
 ** *log4j.properties* – Logging system and paths
 ** *settings.properties* – Open Hospital options and settings
 ** *sms.properties* – SMS Manager module
+** *telemetry.properties* – Telemetry module settings
 ** *txtPrinter.properties* – Text printing system
 ** *xmpp.properties* – Xmpp Server configuration
 
@@ -737,6 +738,9 @@ USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
 PASSWORDIDLE=365
+
+# telemetry
+TELEMETRYENABLED=yes
 ----
 
 Every line is composed of a KEY and a value:
@@ -1654,6 +1658,22 @@ By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
 
+[#telemetryenabled]
+==== 3.1.39 TELEMETRYENABLED
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|STRONGPASSWORD |yes | yes, no
+|===
+
+By default, the value of TELEMETRYENABLED is the set to yes indicating that the
+Telemetry module is enabled
+
+
+
 [#database-properties]
 
 ==== 3.1.42 SESSIONTIMEOUT
@@ -2012,8 +2032,15 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *key*: the API key (if using a  purchased sms) from Textbelt provider (one can use "textbelt" to send 1 free sms per day)
 * *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
+[#telemetry-properties]
+=== 3.7 telemetry.properties
+
+The Telemetry module is meant to 
+
+
+
 [#txtprinter-properties]
-===  3.7 txtPrinter.properties
+=== 3.8 txtPrinter.properties
 
 Text printer configuration is set in the _txtPrinter.properties_ file:
 
@@ -2060,7 +2087,7 @@ The best way to set these parameters for the device is to set them one by one an
 NOTE: An application restart is required to apply the modified setting.
 
 [#xmpp-properties]
-=== 3.8 xmpp.properties
+=== 3.9 xmpp.properties
 
 XMPP module configuration is set in the _xmpp.properties_ file:
 
@@ -2087,7 +2114,7 @@ Once the XMPP Server is installed, active and running set the two parameters in 
 NOTE: An application restart is required to apply the modified setting.
 
 
-==== 3.8.1 OpenFire Settings
+==== 3.9.1 OpenFire Settings
 
 The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
 
@@ -2109,7 +2136,7 @@ Please follow these settings:
 . Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin https://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 
-=== 3.9 Bundles
+=== 3.10 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
 <<language,LANGUAGE>> chapter, Open Hospital comes with different available languages in the folder *bundles/* within the package file:
@@ -2123,7 +2150,7 @@ These property files (text format) contain multiple *key = value* pairs containi
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
 
-==== 3.9.1 New Translations
+==== 3.10.1 New Translations
 
 To create a new translation, simply copy the English file, rename it with the new country code in
 place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
