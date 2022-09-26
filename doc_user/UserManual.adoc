@@ -1306,6 +1306,8 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *T[.underline]##h##erapy*: manage the therapy of a patient.
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
 
+NOTE: It is possible to have a *D[.underline]##I##COM* function that allows for loading and viewing of image files for the selected patient by changing the flag DICOMMODULEENABLED in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
+
 NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
 registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
