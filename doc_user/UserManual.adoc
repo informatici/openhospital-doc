@@ -1300,6 +1300,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *[.underline]##A##dmission*: manage the admission of the patient in the hospital.
 * *E[.underline]##x##amination*: manage the patient examination.
 * *[.underline]##O##PD*: start an OPD visit on the selected patient.
+* *[.underline]##L##aboratory*: start a new laboratory exam on the selected patient.
 * *[.underline]##B##ill*: start a bill on the selected patient.
 * *Da[.underline]##t##a*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
 * *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it.
