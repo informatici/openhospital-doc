@@ -152,6 +152,7 @@ Queries about ambulatory patient visits can be done using the search criteria av
 
 The following fields are available to select or narrow the resulting matches:
 
+* *Ward*: Select a specific OPD ward
 * *Disease type*: Select a specific disease type or all disease types
 * *Disease*: select a specific disease, or all diseases, or searching for partial matches by typing some letters in the search field
 * *Date*: “Date From” and “Date To” to select all visits occurring during the specified period
@@ -242,6 +243,7 @@ The *Buttons panel* shows the following choices:
 * *[.underline]##Y##es*: confirm the deletion of the visit.
 * *[.underline]##N##o*: close the window and return to the *_OPD Out Patient Department_* window without deleting the visit.
 
+[#opd-extended]
 === 3.3 OPD Extended
 
 The OPD functionality can be extended by changing the _OPDEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_ .
@@ -259,15 +261,17 @@ The OPD Extended module affords the following additional features:
 * the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made only at the first registration in a year, then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and therefore is a service to the patient by knowing his/her history.
 * Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
-* It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
-* if a new attendance for this patient is required set the "New Admittance" check box and proceed normally.
+* It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
+* The selection of the the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
+* If a new attendance for this patient is required, click the "New Admittance" (6) check box and proceed normally.
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Admittance" check box.
 * In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
-** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see
-<<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
+** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
+
+NOTE: For OPD and IPD wards see <<ward,Ward>> settings.
 
 <<<
 
@@ -2600,6 +2604,7 @@ image:image163.png[Hospital edit]
 By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected throughout the entire application; for example, in the reports heading (see
 <<statistics,Statistics>> in this document).
 
+[#ward]
 === 12.4 Ward ([.underline]##W##ard)
 
 Once the *[.underline]##W##ard* button in the *_Settings_* menu is pressed, the *_Ward Browser_* window is shown:
@@ -2625,14 +2630,14 @@ To insert a new ward, provide the following required inputs:
 * *Number of nurses*: it may be shown in some reports (0 – zero is allowed)
 * *Number of doctors*: it may be shown in some reports (0 – zero is allowed)
 * *Visit duration*: length of a visit (in minutes and must be greater than zero)
-* *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked it means that ward can be a destination for discharging movements, otherwise it will be not shown in the list
+* *Ward with OPD*: if checked, it means that the ward will also be available in the <<opd-extended,OPD Extended>> mode
+* *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked, it means that the ward can be a destination for discharging movements, otherwise it will be not shown in the list
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
 
-NOTE: Using this function the definition of wards with 0 (zero) beds but with a pharmacy is possible.
-This allows for "logical" departments (rather than physical) to manage pharmacy movements.
+NOTE: Maternity (M) and OPD (OPD) wards are _built-in_ wards and cannot be deleted, although they can be modified as needed.
 
-The wards defined are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
+The wards defined here are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
 <<admission-patient,Admission/Patient>>, <<pharmaceutical-stock,Pharmaceutical Stock>> and
 <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
