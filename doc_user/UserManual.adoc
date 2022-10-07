@@ -2652,7 +2652,7 @@ The functions available in this window are:
 
 * *Selected Type*: filter the list by selecting only one Disease Type.
 * *[.underline]##N##ew*: enter a new disease (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing disease (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing disease (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing disease (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2660,7 +2660,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window is sh
 
 image:image167.png[Edit Disease]
 
-In editing mode, the type and code cannot be changed and the the only modifications allowed are to the Description and if the disease should appear only in OPD, or Admissions, or in both.
+In editing mode, the code cannot be changed and the only modifications allowed are to the Type, the Description and if the disease should appear only in OPD, or Admissions, or in both.
 
 By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) a *[.underline]##D##elete* action is performed disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
@@ -2680,7 +2680,7 @@ The functions available in this window are:
 * *Search*: subset the list by typing a keyword.
 * *Select Type*: subset the list by selecting only one Exam Type.
 * *[.underline]##N##ew*: enter a new exam (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing exam (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing exam (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing exam (it is set as not present in OPD or in IPD).
 * *[.underline]##R##esults*: define possible results for the selected exam.
 * *[.underline]##C##lose*: close the window.
@@ -2689,7 +2689,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Exam_* window is shown
 
 image:image169.png[Edit Exam]
 
-In editing mode, the type, code or procedure cannot be changed and the only modifications allowed are to the Description and the default value.
+In editing mode, the code or procedure cannot be changed and the only modifications allowed are to the Type, the Description and the default value.
 
 By pressing the *[.underline]##N##ew* button, the *_New Exam_* window is shown:
 
@@ -2744,7 +2744,7 @@ The functions available in this window are:
 
 * *Selected type*: filter the list by selecting only one Operation Type.
 * *[.underline]##N##ew*: enter a new operation (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing operation (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing operation (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing operation (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2752,7 +2752,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Operation_* window is 
 
 image:image174.png[Edit Operation]
 
-In editing mode, the type or the code cannot be changed but only modification of the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
+In editing mode, the code cannot be changed but only modification of the Type, the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
 
 You can also change the operation's context: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
 
@@ -2769,7 +2769,7 @@ The functions available in this window are:
 
 * *Selected type*: filter the list by selecting only one Vaccine Type.
 * *[.underline]##N##ew*: enter a new vaccine (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing vaccine (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing vaccine (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing vaccine (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2777,7 +2777,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Vaccine_* window is sh
 
 image:image176.png[Edit Vaccine]
 
-In editing mode, type and code cannot be changed; only modification of the Description is permitted.
+In editing mode, the code cannot be changed; only modification of the Type and the Description is permitted.
 
 The vaccines defined are used throughout the entire application, like in the Vaccine module (see
 <<vaccines,Vaccines>> in this document).
@@ -3000,7 +3000,7 @@ The functions available in this window are:
 
 * *Selected group*: filter the list by selecting only one group.
 * *[.underline]##N##ew*: enter a new user (cannot use the same name).
-* *[.underline]##E##dit*: edit an existing user (the group cannot be changed).
+* *[.underline]##E##dit*: edit an existing user (the password cannot be changed).
 * *[.underline]##R##eset Password*: change the password for an existing user.
 * *[.underline]##D##elete*: delete an existing user.
 * *[.underline]##C##lose*: close the window.
@@ -3009,7 +3009,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown
 
 image:image198.png[Edit User]
 
-In editing mode, only the description can be modified.
+In editing mode, only the group and the description can be modified.
 
 <<<
 
