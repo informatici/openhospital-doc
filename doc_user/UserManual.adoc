@@ -1094,7 +1094,7 @@ NOTE: Only bills with status “O” (Open) can be modified by enabled users (Se
 
 If the bill, at the time of creation, was related to an admitted patient, the related ward will be shown at the upper right. 
 
-If the patient's status has changed since then, the application will ask what to do.
+If the patient's status has changed since then, the application will ask what to do:
 
 *Case 1)*
 
@@ -1126,7 +1126,7 @@ image:image61f.png[Question This bill was linked to a previous admission. Do you
 
 If the answer selected is "Yes", the bill will be update and will belong to the current admission.
 
-image:image61d.png[Edit Patient Bill Maternity Ward]
+image:image61e.png[Edit Patient Bill Maternity Ward]
 
 If the answer selected is "No", the bill remains unchanged and will belong to the original admission.
 
