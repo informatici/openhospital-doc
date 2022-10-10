@@ -890,7 +890,7 @@ press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
 
-image:image241.png[Patient Bills Management,width=641,height=442]
+image:image241.png[Patient Bills Management]
 
 For each bill the following data are shown in the *Data table*:
 
