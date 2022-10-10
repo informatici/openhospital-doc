@@ -1132,6 +1132,11 @@ If the answer selected is "No", the bill remains unchanged and will belong to th
 
 image:image61a.png[Edit Patient Bill Female Ward]
 
+Bill status can be easily identified in the last column in "Patient Bills Management" windows:
+
+image:image61g.png[Patient Bills Management]
+
+
 
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
@@ -1168,7 +1173,7 @@ image:image64.png[Report Options]
 
 Once the choice has been made, after some time the JasperViewer® will show the generated report as follows:
 
-image:image65.png[Report output,width=642,height=470]
+image:image65.png[Report output]
 
 NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
@@ -1189,9 +1194,9 @@ So, the *Incomes Table* will show the following information:
 * *Second Row*: the *PAID* and *UNPAID* for the specified *Period*
 * *Third Row*: the *PAID* and *UNPAID* for the current *user* for *Today*
 
-The Administrator user can filter all incomes for all users have some payment amount:
+The Administrator, or any enabled user (See <<users-groups, User & Groups>>) can filter all incomes for all users have some payment amount:
 
-image:image69.png[Filter Patient Bills Management,width=521,height=334]
+image:image69.png[Filter Patient Bills Management]
 
 <<<
 
