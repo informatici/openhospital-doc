@@ -1112,7 +1112,7 @@ image:image61a.png[Edit Patient Bill Female Ward]
 
 image:image61d.png[Question This patient is admitted now. Do you want to link this bill to the current admission?]
 
-If the answer selected is "Yes", the bill will be update and will belong to the current admission.
+If the answer selected is "Yes", the bill will be updated and will belong to the current admission.
 
 image:image61e.png[Edit Patient Bill Maternity Ward]
 
@@ -1124,7 +1124,7 @@ image:image61c.png[Edit Patient Bill OPD]
 
 image:image61f.png[Question This bill was linked to a previous admission. Do you want to link it to the current admission instead?]
 
-If the answer selected is "Yes", the bill will be update and will belong to the current admission.
+If the answer selected is "Yes", the bill will be updated and will belong to the current admission.
 
 image:image61e.png[Edit Patient Bill Maternity Ward]
 
