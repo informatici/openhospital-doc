@@ -1194,7 +1194,7 @@ So, the *Incomes Table* will show the following information:
 * *Second Row*: the *PAID* and *UNPAID* for the specified *Period*
 * *Third Row*: the *PAID* and *UNPAID* for the current *user* for *Today*
 
-The Administrator, or any enabled user (See <<users-groups, User & Groups>>) can filter all incomes for all users have some payment amount:
+The Administrator, or any enabled user (See <<users-groups, User & Groups>>), can filter all incomes for all users with a  payment amount:
 
 image:image69.png[Filter Patient Bills Management]
 
