@@ -902,6 +902,7 @@ For each bill the following data are shown in the *Data table*:
 * *Last payment*: the date and time of the last payment.
 * *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
 * *Balance*: the bill amount which has not yet been paid.
+* *IN/OUT*: the bill refers to an admission or OPD
 
 The following functions are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
 
@@ -1087,9 +1088,50 @@ image:image61.png[Confirmation]
 
 To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window is shown:
 
-image:image61a.png[Edit Patient Bill,width=543,height=563]
+image:image61a.png[Edit Patient Bill Female Ward]
 
-NOTE: Only bills with status “O” (Open) can be modified, otherwise, an A4 report will be shown.
+NOTE: Only bills with status “O” (Open) can be modified by enabled users (See <<users-groups, User & Groups>>), otherwise, an A4 report will be shown.
+
+If the bill, at the time of creation, was related to an admitted patient, the related ward will be shown at the upper right. 
+
+If the patient's status has changed since then, the application will ask what to do.
+
+*Case 1)*
+
+image:image61b.png[Question This patient is no longer admitted. Do you want to unlink this bill from the previous admission?]
+
+If the answer selected is "Yes", the bill will be updated and will belong under the "OPD" category (no admission).
+
+image:image61c.png[Edit Patient Bill OPD]
+
+If the answer selected is "No", the bill remains unchanged and will belong to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
+*Case 2)*
+
+image:image61d.png[Question This patient is admitted now. Do you want to link this bill to the current admission?]
+
+If the answer selected is "Yes", the bill will be update and will belong to the current admission.
+
+image:image61e.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill remains unchanged and will belong under the "OPD" category (no admission)
+
+image:image61c.png[Edit Patient Bill OPD]
+
+*Case 3)*
+
+image:image61f.png[Question This bill was linked to a previous admission. Do you want to link it to the current admission instead?]
+
+If the answer selected is "Yes", the bill will be update and will belong to the current admission.
+
+image:image61d.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill remains unchanged and will belong to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
 
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
@@ -2075,6 +2117,7 @@ Open Hospital ships with the following set of reports:
 * OH011A - Revenues, Incomes & Receivables (All)
 * OH011B - Revenues, Incomes & Receivables (Pending)
 * OH011C - Revenues, Incomes & Receivables (Month)
+* OH011D - Revenues, Incomes & Receivables (Ward / Month)
 * HMIS 108 - page 1 - 1. census info
 * HMIS 108 - page 1 - 2. referrals
 * HMIS 108 - page 1 - 3. operations
