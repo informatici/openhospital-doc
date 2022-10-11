@@ -201,7 +201,7 @@ NOTE: Disease Types are defined by the Administrator. Ask the Administrator or c
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
 during the same visit the doctor finds other concurrent pathologies thus it is possible to record
-up to  a maximum of three (the first being the only one mandatory) diagnoses. +
+up to a maximum of three (the first being the only one mandatory) diagnoses. +
 It is possible to use filters to find diseases more easily.
 To do so, enter a text fragment in the search field that is part of the disease name.
 The closer the search text comes to the name of the disease being searched, the more precise the search is.
@@ -403,7 +403,7 @@ Press the *[.underline]##S##tock* button in the *_Pharmaceutical Browser_* windo
 ===== 4.1.2.6 Stoc[.underline]##k##Card (Stoc[.underline]##k##Card)
 
 Press the *Stoc[.underline]##k##Card* button in the *_Pharmaceutical Browser_* window to
-show the history of movement for a selected pharmaceutical for a specific time range.  The data
+show the history of movement for a selected pharmaceutical for a specific time range. The data
 can either be in report format or exported to a CSV file.
 
 ===== 4.1.2.7 Order of Pharmaceuticals ([.underline]##O##rder)
@@ -458,7 +458,7 @@ The following functions are available from the *Buttons panel* of the window *_S
 * *Stock [.underline]##L##edger*: show the history of movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake.  In this example use a discharge movement to undo the unwanted change.
+NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake. In this example use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -890,7 +890,7 @@ press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
 
-image:image241.png[Patient Bills Management,width=641,height=442]
+image:image241.png[Patient Bills Management]
 
 For each bill the following data are shown in the *Data table*:
 
@@ -902,6 +902,7 @@ For each bill the following data are shown in the *Data table*:
 * *Last payment*: the date and time of the last payment.
 * *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
 * *Balance*: the bill amount which has not yet been paid.
+* *IN/OUT*: the bill refers to an admission or OPD
 
 The following functions are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
 
@@ -1028,7 +1029,7 @@ The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
 ===== 6.2.1.3 Remove a Bill Entry of a Bill (Remove Item)
 
-To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button.  The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
+To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button. The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
 <<save-function-accounting,Save function>> described below).
 
 ===== 6.2.1.4 Insert a Payment (Pa[.underline]##y##ment)
@@ -1087,9 +1088,55 @@ image:image61.png[Confirmation]
 
 To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window is shown:
 
-image:image61a.png[Edit Patient Bill,width=543,height=563]
+image:image61a.png[Edit Patient Bill Female Ward]
 
-NOTE: Only bills with status “O” (Open) can be modified, otherwise, an A4 report will be shown.
+NOTE: Only bills with a status of “O” (Open) can be modified by enabled users (See <<users-groups, User & Groups>>), otherwise, an A4 report is shown.
+
+If the bill, at the time of creation, was related to an admitted patient, the related ward is shown in the upper right. 
+
+If the patient's status has changed the application prompts for the next action:
+
+*Case 1)*
+
+image:image61b.png[Question This patient is no longer admitted. Do you want to unlink this bill from the previous admission?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the "OPD" category (no admission).
+
+image:image61c.png[Edit Patient Bill OPD]
+
+If the answer selected is "No", the bill remains unchanged and continues to belong to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
+*Case 2)*
+
+image:image61d.png[Question This patient is admitted now. Do you want to link this bill to the current admission?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the current admission.
+
+image:image61e.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill is unchanged and is associated with the "OPD" category (no admission)
+
+image:image61c.png[Edit Patient Bill OPD]
+
+*Case 3)*
+
+image:image61f.png[Question This bill was linked to a previous admission. Do you want to link it to the current admission instead?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the current admission.
+
+image:image61e.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill is unchanged and belongs to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
+The relation of a bill with a patient admission is found in the last column in "Patient Bills Management" windows:
+
+image:image61g.png[Patient Bills Management]
+
+
 
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
@@ -1126,11 +1173,11 @@ image:image64.png[Report Options]
 
 Once the choice has been made, after some time the JasperViewer® will show the generated report as follows:
 
-image:image65.png[Report output,width=642,height=470]
+image:image65.png[Report output]
 
 NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]).  The report can also be printed by clicking
+The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]). The report can also be printed by clicking
 on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
 NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator or refer to the _Administrator’s Guide_.
@@ -1147,9 +1194,9 @@ So, the *Incomes Table* will show the following information:
 * *Second Row*: the *PAID* and *UNPAID* for the specified *Period*
 * *Third Row*: the *PAID* and *UNPAID* for the current *user* for *Today*
 
-The Administrator user can filter all incomes for all users have some payment amount:
+The Administrator, or any enabled user (See <<users-groups, User & Groups>>), can filter all incomes for all users with a payment amount:
 
-image:image69.png[Filter Patient Bills Management,width=521,height=334]
+image:image69.png[Filter Patient Bills Management]
 
 <<<
 
@@ -1465,7 +1512,7 @@ Once the video module has been enabled the *_New Patient_* window looks as follo
 
 image:image88p.png[New Patient Extended photo,width=587,height=339]
 
-By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device).  The *Patient Photo* window should show what the camera is pointing at.
+By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device). The *Patient Photo* window should show what the camera is pointing at.
 
 image:image89.png[Webcam photo,width=591,height=392]
 
@@ -1652,7 +1699,7 @@ image:image98.png[Discharged,width=642,height=337]
 
 === 8.6 OPD ([.underline]##O##PD)
 
-If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting  an OPD by selecting the related patient first (see
+If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting an OPD by selecting the related patient first (see
 <<create-a-new-patient-visit,Create a new patient visit>> for more information).
 
 === 8.7 Bill ([.underline]##B##ill)
@@ -1747,7 +1794,7 @@ Next, press the *[.underline]##M##alnutrition Control* button. The *_Malnutritio
 
 image:image102.png[Malnutrition Browser,width=642,height=288]
 
-This function supports the insertion (*New*) of a new malnutrition control, the modification  (*Edit*) or deletion (*Delete*) of an existing malnutrition control.
+This function supports the insertion (*New*) of a new malnutrition control, the modification (*Edit*) or deletion (*Delete*) of an existing malnutrition control.
 
 ===== 8.8.5.1 Insert a New Control ([.underline]##N##ew)
 
@@ -2005,7 +2052,7 @@ TIP: By pressing the *Worksheet* button a visit can be added also there after ch
 
 === 8.11 Merge Function ([.underline]##M##erge)
 
-The merge function is used to merge two patients’ histories into a single case.  This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
+The merge function is used to merge two patients’ histories into a single case. This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
 
 To merge data of two patients requires the highlighting of both of them in the *_Patient Browser_* window.
 
@@ -2075,6 +2122,7 @@ Open Hospital ships with the following set of reports:
 * OH011A - Revenues, Incomes & Receivables (All)
 * OH011B - Revenues, Incomes & Receivables (Pending)
 * OH011C - Revenues, Incomes & Receivables (Month)
+* OH011D - Revenues, Incomes & Receivables (Ward / Month)
 * HMIS 108 - page 1 - 1. census info
 * HMIS 108 - page 1 - 2. referrals
 * HMIS 108 - page 1 - 3. operations
