@@ -694,6 +694,7 @@ USERSLISTLOGIN=no
 STRONGPASSWORD=yes
 STRONGLENGTH=10
 PATIENTPHOTOSTORAGE=DB
+SESSIONTIMEOUT=5
 ----
 
 Every line is composed of a KEY and a value:
@@ -1564,6 +1565,20 @@ By default, PATIENTPHOTOSTORAGE is set to "DB".
 NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
+
+==== 3.1.39 SESSIONTIMEOUT
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|STRONGLENGTH |300000 | positive integer value
+|===
+
+The value SESSIONTIMEOUT represents the time of user inactivity beyond which the software application performs the automatic logout.
+
+NOTE: An application restart is required to apply the modified setting.
+
 === 3.2 database.properties
 
 Database configuration is set in the _database.properties_ file.
