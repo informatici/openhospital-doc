@@ -1572,10 +1572,10 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|STRONGLENGTH |300000 | positive integer value
+|SESSIONTIMEOUT |5 | positive integer value
 |===
 
-The value SESSIONTIMEOUT represents the time of user inactivity beyond which the software application performs the automatic logout.
+The value SESSIONTIMEOUT represents the time in minutesof user inactivity beyond which the software application performs the automatic logout.
 
 NOTE: An application restart is required to apply the modified setting.
 
