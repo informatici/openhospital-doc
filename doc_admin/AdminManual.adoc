@@ -1575,7 +1575,7 @@ The following table shows the default value and the allowed ones:
 |SESSIONTIMEOUT |5 | positive integer value
 |===
 
-The value SESSIONTIMEOUT represents the time in minutesof user inactivity beyond which the software application performs the automatic logout.
+The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyond which the software application performs the automatic logout.
 
 NOTE: An application restart is required to apply the modified setting.
 
