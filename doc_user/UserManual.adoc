@@ -1358,7 +1358,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *T[.underline]##h##erapy*: manage the therapy of a patient.
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
 
-NOTE: It is possible to have a *D[.underline]##I##COM* function that allows for loading and viewing of image files for the selected patient by changing the flag DICOMMODULEENABLED in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
+NOTE: It is possible to have a *[.underline]##I##maging* function that allows for loading and viewing of image files for the selected patient by changing the flag DICOMMODULEENABLED in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
 registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
@@ -1834,10 +1834,10 @@ The *Buttons panel* has the following choices:
 * *[.underline]##A##dmission Chart*: print the Admission chart if the selected row in the grid on top is an Admission.
 * *Di[.underline]##s##charge Chart*: print the Discharge chart if the selected row in the grid on top is an Admission and the patient is already discharged.
 * *Launch [.underline]##R##eport*: print the clinical sheet of a patient.
-* *[.underline]##D##ICOM*: launch the DICOM viewer.
+* *[.underline]##I##maging*: launch the image viewer.
 * *[.underline]##C##lose*: close the window and return to the *_Patient Browser_* window without applying any changes.
 
-NOTE: The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
+NOTE: The DICOM flag in the configuration file must be changed to activate the image viewing functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 By pressing the *Launch [.underline]##R##eport* button in the *_Patient Data_* window, a new window is shown:
 
@@ -1848,44 +1848,46 @@ The application is set to get the entire history of the patient, but this can be
 NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category. 
 
 [#dicom-viewer]
-==== 8.9.1 DICOM ([.underline]##D##ICOM Viewer)
+==== 8.9.1 Imaging ([.underline]##I##maging Viewer)
 
-The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
+NOTE: The imaging viewer was previously referred to as DICOM viewer.
 
-In the *_Patient Data_* window, click the [.underline]##D##ICOM button to access the *_DICOM Viewer_* window as shown below.
+The DICOM flag in the configuration file must be changed to activate the image viewer functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-image:image105.png[DICOM Viewer,width=642,height=361]
+In the *_Patient Data_* window, click the [.underline]##I##maging button to access the *_Imaging Viewer_* window as shown below.
 
-This module allows attaching DICOM files to the patient’s folder. To do this,
-click the *[.underline]##L##oad DICOM* button. The following window is shown:
+image:image105.png[Imaging Viewer,width=642,height=361]
 
-image:image106.png[DICOM Open,width=517,height=366]
+This module allows attaching image files to the patient’s folder. To do this,
+click the *[.underline]##L##oad Image* button. The following window is shown:
 
-In the case of multi-frame DICOM the whole folder can be selected:
+image:image106.png[Image Open,width=517,height=366]
 
-image:image106b.png[Dicom open multi-frame,width=517,height=366]
+In the case of multi-frame images the whole folder can be selected:
 
-Next, the following data to be used for the DICOM is prompted for (or the multi-frame DICOM series):
+image:image106b.png[Image open multi-frame,width=517,height=366]
 
-* *Date*: the system will propose the current date or other dates provided by the DICOM file itself
-* *Category*: optionally select a Dicom category (see <<dicom-types,Dicom Types>>):
+Next, the following data to be used for the image is prompted for (or the multi-frame image series):
+
+* *Date*: the system will propose the current date or other dates provided by the image file itself
+* *Category*: optionally select a image category (see <<dicom-types,Dicom Types>>):
 * *Description*: the description to be used.
 
-image:image243.png[Dicom information,width=282,height=200]
+image:image243.png[Image information,width=282,height=200]
 
-*[.underline]#N.B.#* There is no *Edit DICOM*, so if a mistake is made, delete the DICOM file (*Delete DICOM*) and then reload it (*Load DICOM*) again.
+*[.underline]#N.B.#* There is no *Edit Image*, so if a mistake is made, delete the image file (*Delete Image*) and then reload it (*Load Image*) again.
 
-Find the DICOM file and click the *Open DICOM* button to load the file into the *_DICOM viewer_*.
+Find the image file and click the *Open Image* button to load the file into the *_Imaging viewer_*.
 
-image:image107.png[Dicom file,width=642,height=362]
+image:image107.png[Image file,width=642,height=362]
 
 To view the file in the main window, double-click on it.
 
-image:image108.png[DICOM file view,width=642,height=360]
+image:image108.png[Image file view,width=642,height=360]
 
 The *Zoom* slider can be used to Zoom in or out of the image.
 
-More than one DICOM file can be loaded into a patient folder. It is possible to delete a DICOM file from the patient's folder. First, select the file in the left view and then click the *Delete DICOM* button.
+More than one image file can be loaded into a patient folder. It is possible to delete a image file from the patient's folder. First, select the file in the left view and then click the *Delete Image* button.
 
 The thumbnails on the left can be hidden by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
@@ -2636,8 +2638,8 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-The DICOM Types defined are used in the DICOM Load function (see
-<<dicom-viewer,DICOM Viewer>> in this document).
+The DICOM Types defined are used in the Image Load function (see
+<<dicom-viewer,Imaging Viewer>> in this document).
 
 === 12.3 Hospital ([.underline]##H##ospital)
 

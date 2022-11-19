@@ -587,7 +587,7 @@ Open Hospital has a folder tree hierarchy which is shown here, where *_<version>
 * *data/conf* – contains the DBMS configuration files
 * *data/db* – contains the database files (PORTABLE mode)
 * *data/logs* – contains all the log files
-* *data/dicom* – contains the dicom files
+* *data/images* – contains the image files
 * *data/dump* – contains the database backups
 * *sql* – contains the database creation scripts
 * *sql/extra* – contains SQL scripts for custom / experimental / temporary features
@@ -616,7 +616,10 @@ The custom logo has to be a 100x100 pixel png image file.
 Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is set in the configuration files called “properties files”. The following properties files are found in the **oh/rsc** subfolder:
 
 ** *database.properties* – Open Hospital database connection
-** *dicom.properties* – DICOM viewer module options
+** *dicom.properties* – Imaging viewer module options
+
+NOTE: The imaging viewer was previously referred to as DICOM viewer.
+
 ** *examination.properties* – contains the settings for the ‘examination’ module
 ** *log4j.properties* – Logging system and paths
 ** *settings.properties* – Open Hospital options and settings
@@ -1374,10 +1377,12 @@ The following table shows the default value and the allowed ones:
 |DICOMMODULEENABLED |no |yes, no
 |===
 
-Open Hospital includes a feature that allows attaching DICOM files to a patient’s clinical sheet.
-When this option is enabled, a *DICOM* button is shown in the patient Clinical sheet module.
+Open Hospital includes a feature that allows attaching image files to a patient’s clinical sheet.
+When this option is enabled, an *Imaging* button is shown in the patient Clinical sheet module.
 
 By default, DICOMMODULEENABLED is set to no.
+
+NOTE: The imaging viewer was previously referred to as DICOM viewer.
 
 NOTE: An application restart is required to apply the modified setting.
 
@@ -1392,9 +1397,11 @@ The following table shows the default value and the allowed ones:
 |DICOMTHUMBNAILS |yes |yes, no
 |===
 
-Open Hospital can enable or disable thumbnails in the Dicom Viewer.
+Open Hospital can enable or disable thumbnails in the Imaging Viewer.
 
 By default, DICOMTHUMBNAILS is set to yes.
+
+NOTE: The imaging viewer was previously referred to as DICOM viewer.
 
 NOTE: An application restart is required to apply the modified setting.
 
@@ -1598,8 +1605,8 @@ NOTE: The _database.properties_ file can be automatically generated/overwritten 
 
 === 3.3 dicom.properties
 
-DICOM configuration is set in the _dicom.properties_ file.
-Default DICOM configuration is available in the _dicom.properties.dist_ file:
+Imaging configuration is set in the _dicom.properties_ file.
+Default imaging configuration is available in the _dicom.properties.dist_ file:
 
 [source,properties]
 ----
@@ -1614,21 +1621,23 @@ dicom.max.size=DICOM_SIZE
 Use the provided startup scripts in order to automatically generate the _dicom.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DICOM_STORAGE*: This property accepts one of the following:
-** SqlDicomManager: DICOM files are stored in the database
-** FileSystemDicomManager: DICOM files are stored in the file system
+** SqlDicomManager: Image files are stored in the database
+** FileSystemDicomManager: Image files are stored in the file system
 * *OH_PATH_SUBSTITUTE/DICOM_DIR*: if the value of the first parameter is set to "FileSystemDicomManager",
-this property specifies the path where the DICOM files are stored. It is possible to specify a local folder (_data/dicom_storage_ is the default path under the OH installation folder) or to set a shared network folder, useful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/dicom_storage_ path with a symbolic link.
-The shared folder needs read/write permissions for uploading DICOM images. Always use slash "/" in the path variable and not backslash "\".
-* *DICOM_SIZE*: maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
+this property specifies the path where the image files are stored. It is possible to specify a local folder (_data/image_storage_ is the default path under the OH installation folder) or to set a shared network folder, useful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/image_storage_ path with a symbolic link.
+The shared folder needs read/write permissions for uploading images. Always use slash "/" in the path variable and not backslash "\".
+* *DICOM_SIZE*: maximum allowed size for an image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
 Example _dicom.properties_ file:
 [source,properties]
 ----
 dicom.manager.impl=org.isf.dicom.manager.FileSystemDicomManager
-dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
+dicom.storage.filesystem=Z:/OH/Shared/patient_images
 dicom.max.size=4M
 ----
+
+NOTE: The imaging viewer was previously referred to as DICOM viewer.
 
 NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
