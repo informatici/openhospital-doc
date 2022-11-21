@@ -1870,7 +1870,7 @@ image:image106b.png[Image open multi-frame,width=517,height=366]
 Next, the following data to be used for the image is prompted for (or the multi-frame image series):
 
 * *Date*: the system will propose the current date or other dates provided by the image file itself
-* *Category*: optionally select a image category (see <<dicom-types,Dicom Types>>):
+* *Category*: optionally select a image category (see <<dicom-types,Imaging Types>>):
 * *Description*: the description to be used.
 
 image:image243.png[Image information,width=282,height=200]
@@ -2362,7 +2362,7 @@ _i.e. Admission Fee, Food, POP, etc._
 _i.e. Newborn, Childhood, Adult, Elderly, etc._
 * *[.underline]##V##accine Type*: the way similar vaccines are grouped +
 _i.e. Child, Adult, Pregnant, etc._
-* *D[.underline]##I##COM Type*: the way similar DICOM types are grouped +
+* *[.underline]##I##maging Type*: the way similar images types are grouped +
 _i.e. X-Ray, CT-Scan, NMR, etc._
 
 
@@ -2625,11 +2625,11 @@ The Vaccine Types defined are used in the Vaccine function (see
 <<vaccines,Vaccines>> in this document).
 
 [#dicom-types]
-==== 12.2.14 DICOM Types (D[.underline]##I##COM Type)
+==== 12.2.14 Imaging Type ([.underline]##I##maging Type)
 
-Once the *D[.underline]##I##COM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window is shown:
+Once the *[.underline]##I##magin Type* button in the *_Types_* menu is pressed, the *_Imageing Type Browser_* window is shown:
 
-image:image242.png[DICOM Types]
+image:image242.png[Imaging Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2638,7 +2638,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-The DICOM Types defined are used in the Image Load function (see
+The Imaging Types defined are used in the Image Load function (see
 <<dicom-viewer,Imaging Viewer>> in this document).
 
 === 12.3 Hospital ([.underline]##H##ospital)
