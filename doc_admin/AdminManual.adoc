@@ -1566,7 +1566,7 @@ NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 
-==== 3.1.39 SESSIONTIMEOUT
+==== 3.1.40 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
