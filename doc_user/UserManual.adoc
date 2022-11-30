@@ -191,7 +191,7 @@ _Example: A patient comes to the ambulatory because they report a cut; this even
 NEW ATTENDANCE and the doctor sutures the wound and invites the patient to come back ten days later; when the same patient comes back
 after ten days to have his/her stitches removed, a new OPD record is then created but without the NEW ATTENDANCE flag set._
  +
-* *Attendence Date*: The date on which the patient is seen for the recorded activity.
+* *Attendance Date*: The date on which the patient is seen for the recorded activity.
 * *Disease Type*: By selecting a _Disease Type_, the first diagnosis list will contain only related diseases.
 The second and third list continues to contain all diseases.
  +
@@ -263,8 +263,8 @@ The OPD Extended module affords the following additional features:
 * Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
 * The selection of the the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
-* If a new attendance for this patient is required, click the "New Attendence" (6) check box and proceed normally.
-* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendence" check box.
+* If a new attendance for this patient is required, click the "New Attendance" (6) check box and proceed normally.
+* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendance" check box.
 * In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
