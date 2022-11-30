@@ -449,7 +449,7 @@ The *_Stock Movement Browser_* window shown below is opened.
 
 image:image23.png[Stock Movement Browser]
 
-NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
+NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file. Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
 
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
