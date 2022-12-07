@@ -268,8 +268,7 @@ The OPD Extended module affords the following additional features:
  time in the ambulatory, it does not matter in regard to this selection.
  The important criteria for selecting *New Attendance* is that the problem
  under consideration is a new issue; that is, one that has not been dealt
- with previously. For
- an issue or disease previously dealt with but not completely addressed (that
+ with previously. For an issue or disease previously dealt with but not completely addressed (that
  is, completely cured or healed) then *Re-Attendance* is
  selected and records are created for the patient in regard to the
  follow-up care and instructions for recovery.  Any other follow-up visits
