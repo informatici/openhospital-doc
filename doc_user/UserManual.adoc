@@ -261,21 +261,26 @@ The OPD Extended module affords the following additional features:
 * the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made only at the first registration in a year, then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and therefore is a service to the patient by knowing his/her history.
 * radio box (5) to distinguish whether an individual is new (*New Attendance*)
- or not (*Re-Attendance*) in the ambulatory (that is, whether this is the
- absolute first time they have entered the ambulatory). The *New Attendance*
- selection indicates whether the patient comes to the ambulatory to report a new
- health issue or new disease for which no care has been previously addressed or
- recorded. This could be their initial visit or their n-th time in the
- ambulatory, it does not matter in regard to this field. If this visit is
- for an issue or disease previously addressed then *Re-Attendance* is
+ or a (*Re-Attendance*) in the ambulatory. The *New Attendance*
+ selection indicates that the patient came to the ambulatory to report a
+ new health issue or new disease for which no care has been previously
+ provided for and/or addressed. This could be their initial visit or their n-th
+ time in the ambulatory, it does not matter in regard to this selection.
+ The important criteria for selecting *New Attendance* is that the problem
+ is under consideration is a new issue; that is, one that has not been dealt
+ with previously. For
+ an issue or disease previously dealt with but not completely addressed (that
+ is, completely cured or healed) then *Re-Attendance* is
  selected and records are created for the patient in regard to the
- follow-up care and instructions for recovery.
+ follow-up care and instructions for recovery.  Any other follow-up visits
+ for the same issue are also marked as *Re-Attendance*.
 
  Example: A patient comes to the ambulatory because they report a cut; this
- event is recorded as *New Attenance* and the doctor sutures the wound and
- invites the patient to come back ten days later; when the same patient comes
+ event is recorded as a *New Attenance* and the doctor sutures the wound and
+ invites the patient to come back in ten days; when the same patient comes
  back after ten days to have his/her stitches removed, a new OPD record is
- then created but the *Re-Attendance* flag set.
+ then created with the *Re-Attendance* flag set as this visit is a
+ continuation of previous visit and medical problem.
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
