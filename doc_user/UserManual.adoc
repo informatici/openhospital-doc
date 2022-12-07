@@ -210,7 +210,7 @@ The closer the search text comes to the name of the disease being searched, the 
 _Example: In the *OPD Out Patient Department* window only the first diagnosis and its type are shown,
 but all the corresponding data is stored and available in reports and for searching._
  +
-* *Age*: The patient's age; the valid age range is 0-200.
+* *Age*: The patient's age; the valid age range is 0-120.
 * *Sex*: The patient's sex; either male or female.
 
 When finished entering data, the *Buttons panel* has the following choices:
@@ -780,7 +780,7 @@ To record the visit, enter the following fields:
 * *Patient In*: it activates itself if the selected patient is currently admitted, it is possible to change it if needed.
 * *Select a patient*: select the patient that is examined. The field is not mandatory as the patient's data be input into the following fields.
 * *Name*: the first and last name of the patient _(automatically filled if a patient is selected)_.
-* *Age*: the age of the patient (range 0-200) _(automatically filled if a patient is selected)_.
+* *Age*: the age of the patient (range 0-120) _(automatically filled if a patient is selected)_.
 * *Sex*: the value _M_ for male or the value _F_ for female _(automatically filled if a patient is selected)_.
 * *Note*: a free-form area for notes and/or description.
 * *Result*: based on the exam chosen the panel is populated with all available results for selection.
