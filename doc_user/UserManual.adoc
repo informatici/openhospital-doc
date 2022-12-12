@@ -1531,6 +1531,11 @@ Open Hospital attempts to automatically set the best quality for any webcam conn
 NOTE: If the camera does not function then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
+====== 8.4.6 anamnesis
+The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions, either to the patient or to other people who know the person and can give suitable information, with the aim of obtaining information useful in formulating a diagnosis and providing medical care to the patient.
+
+To modify the anamnesis data of a patient select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_New Patient_* window is shown, then click on *_Anamnesis_* button, the record is available for changes. All the data can be changed.
+
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
 The admission functions include the managing of patient admission, including surgery, delivery, and discharge.
