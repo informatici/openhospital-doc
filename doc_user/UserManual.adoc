@@ -283,6 +283,7 @@ The OPD Extended module affords the following additional features:
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
+* Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
 * If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendance" radio box.
