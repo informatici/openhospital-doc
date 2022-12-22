@@ -2030,11 +2030,11 @@ Press *[.underline]##O##K* to finish.
 
 ==== 8.10.6 Close Function (Close)
 
-The close function exits from the *_Therapy window._* Press the *Close* button to access the Close function. The *_Select an option_* window is shown: 
+The close function exits from the *_Therapy_* window. Press the *Close* button to access the Close function. The *_Select an Option_* window is shown:
 
 The *Buttons panel* has the following choices:
 
-image:image117.png[Therapy save and close,width=379,height=128]
+image:image117.png[Therapy close]
 
 * *[.underline]##Y##es*: this function is the same as the *Save function ([.underline]##S##ave)* described above.
 * *[.underline]##N##o*: return to the *_Therapy_* window without saving the therapy plan.
