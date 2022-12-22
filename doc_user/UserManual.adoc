@@ -1156,7 +1156,7 @@ If the answer selected is "No", the bill is unchanged and belongs to the origina
 
 image:image61a.png[Edit Patient Bill Female Ward]
 
-The relation of a bill with a patient admission is found in the last column in "Patient Bills Management" windows:
+The relation of a bill with a patient admission is found in the last column in "Patient Bills Management" window:
 
 image:image61g.png[Patient Bills Management]
 
