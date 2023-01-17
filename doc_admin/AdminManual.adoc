@@ -1095,8 +1095,7 @@ The following table shows the default value and the allowed ones:
 |INTERNALPHARMACIES |yes |yes, no
 |===
 
-Open Hospital can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application
-(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#811-merge-function-merge[Merge function] in the User's Guide).
+Open Hospital can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application.
 
 By default, INTERNALPHARMACIES is set to yes.
 
