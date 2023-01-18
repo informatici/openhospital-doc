@@ -2126,14 +2126,12 @@ The purpose of this function is to extract data registered in the application an
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-Open Hospital provides a set of reports designed for the Ugandan Ministry of Health (HMIS) and for the
-Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
-All of these reports may be useful for any organization and can be added or removed as explained in
-the Administrator Manual's chapter “6 – Reports”.
+Open Hospital provides a set of reports designed for the Ugandan Ministry of Health (HMIS) and for the Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
+All of these reports may be useful for any organization and can be added or removed as explained in the Administrator Manual's chapter “6 – Reports”.
 
 Open Hospital ships with the following set of reports:
 
-* OH001 - Registered Patients
+* OH001 - Registered patients
 * OH002 - Registered patients by origin
 * OH003 - Registered patients by Age and Sex
 * OH004 - All incomes by price codes
