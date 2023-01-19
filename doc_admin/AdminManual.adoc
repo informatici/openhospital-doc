@@ -2025,7 +2025,7 @@ Reports in Open Hospital are produced with JasperReports® technology that allow
 
 Open Hospital reports are divided in three different folders, i.e. rpt_base/, rpt_stat/ and rpt_extra/ folder (see <<folders,Folders>> in this document):
 
-* rpt_base/ folder contains all the hardcoded reports used by the applicatione
+* rpt_base/ folder contains all the hardcoded reports used by the application
 * rpt_stat/ folder contains the OHxxx basic reports available in the Statistics menu
 * rpt_extra/ folder contains additional reports defined by the user also available in the Statistics menu. Users can create new custom reports, copy them to the folder and the application will make them available in the Statistics menu.
     
@@ -2033,7 +2033,7 @@ Each report consists of two files:
 
 * a .*jrxml* file: JasperReport XML file, that can be modified with a proper editor
 * a .*jasper* file: Jasper file, that is the compiled version that can be run in Open Hospital; this file is produced on the jrxml base
-* some reports could have also more than one *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English). At least the default *.properties* file should contain the *jTitle* property that define the name visualized in the Open Hospital application, otherwise the application will show the name of the *.jasper* file.
+* some reports could have also more than one *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name visualized in the Open Hospital application, otherwise the application will show the name of the *.jasper* file.
 
 The editor to create and modify JasperReports® is https://sourceforge.net/projects/jasperstudio/[TIBCO Jaspersoft® Studio] version 6.14.0 or later, a free and open-source software.
 
