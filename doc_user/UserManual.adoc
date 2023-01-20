@@ -250,7 +250,7 @@ The OPD functionality can be extended by changing the _OPDEXTENDED_ flag in the 
 
 ==== 3.3.1 Additional Features
 
-Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the 
+Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the
 *_New OPD Registration_* window shown below.
 
 image:image14.png[OPD Edit Extended,width=1024,height=771]
@@ -461,7 +461,7 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 In this way, which movement that refers to the pharmaceuticals expiring can be found, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
 * the supplier of the pharmaceutical. This characteristic is needed for charging movements only. This field is empty in other cases.
 
-==== 4.2.2 Functions of Pharmaceuticals Stock 
+==== 4.2.2 Functions of Pharmaceuticals Stock
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical [.underline]##S##tock* in the Pharmacy menu shown below.
 
@@ -627,7 +627,7 @@ The Pharmaceutical Stock Ward feature allows the management of the pharmacy at t
 
 *Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask the Administrator or refer to the _Administrator’s Guide_.
 
-==== 4.3.2 Functions of Pharmaceuticals Stock Ward 
+==== 4.3.2 Functions of Pharmaceuticals Stock Ward
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical Stock [.underline]##W##ard* on the Pharmacy menu shown below.
 
@@ -728,7 +728,7 @@ Before pressing the *[.underline]##O##K* button, insert as many Medicals as need
 [#laboratory]
 == 5 Laboratory ([.underline]##L##aboratory)
 
-=== 5.1 Main Characteristics 
+=== 5.1 Main Characteristics
 
 The Laboratory features are used to manage the laboratory exams.
 
@@ -1116,7 +1116,7 @@ image:image61a.png[Edit Patient Bill Female Ward]
 
 NOTE: Only bills with a status of “O” (Open) can be modified by enabled users (See <<users-groups, User & Groups>>), otherwise, an A4 report is shown.
 
-If the bill, at the time of creation, was related to an admitted patient, the related ward is shown in the upper right. 
+If the bill, at the time of creation, was related to an admitted patient, the related ward is shown in the upper right.
 
 If the patient's status has changed the application prompts for the next action:
 
@@ -1555,6 +1555,13 @@ Open Hospital attempts to automatically set the best quality for any webcam conn
 NOTE: If the camera does not function then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
+====== 8.4.6 anamnesis
+The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions either of the patient, or of other people who know the person and can give suitable information.  The aim is to obtain information useful in formulating a diagnosis and providing medical care to the patient.
+
+To modify the anamnesis data of a patient, select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient_* window is shown, click on the *_Anamnesis_* button and the record is available for changes. All the data can be changed.
+
+image:image247.png[Anamnesis]
+
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
 The admission functions include the managing of patient admission, including surgery, delivery, and discharge.
@@ -1665,7 +1672,7 @@ To add a new operation, click on the button *[.underline]##N##ew* and enter the 
 
 WARNING: Clicking on the button *[.underline]##S##ave* just adds the operation to the table; it is not yet permanently recorded.
 
-To delete a line from the table, select the line to delete by clicking on it (it automatically highlights), 
+To delete a line from the table, select the line to delete by clicking on it (it automatically highlights),
 then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
 
 NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
@@ -1869,7 +1876,7 @@ image:image244.png[Report,width=300,height=356]
 
 The application is set to get the entire history of the patient, but this can be changed by querying different date ranges and a specific set of information.
 
-NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category. 
+NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category.
 
 [#dicom-viewer]
 ==== 8.9.1 DICOM ([.underline]##D##ICOM Viewer)
@@ -1971,7 +1978,7 @@ See <<add-a-therapy,Add a therapy>> function for a detailed description.
 
 To remove a therapy highlight one occurrence of the therapy (see box above) in the
 *_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
-removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled). 
+removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled).
 The removal of a therapy is not effective until it is confirmed with the *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
 
 [#check-availability-of-the-pharmaceuticals]
@@ -2041,11 +2048,11 @@ image:image117.png[Therapy close]
 * *[.underline]##C##ancel*: exit the function and return to the *_Therapy_* window without applying any changes.
 
 
-==== 8.10.7 Notify & SMS 
+==== 8.10.7 Notify & SMS
 
 image:image118.png[Notify & SMS,width=170,height=131]
 
-Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS. 
+Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS.
 
 Briefly, the SMS notification works in the following way:
 
@@ -2778,7 +2785,7 @@ To insert a new Exam the following data must be provided:
 [#results]
 ==== 12.6.1 Results ([.underline]##R##esults)
 
-Once an exam is defined, the next step is the definition of the set of results the 
+Once an exam is defined, the next step is the definition of the set of results the
 exam can have. First, select the exam in the *_Exam Browser_* window and then press the *[.underline]##Re##sults* button.
 
 In Open Hospital three kinds of results can be defined, called “Procedure”:
