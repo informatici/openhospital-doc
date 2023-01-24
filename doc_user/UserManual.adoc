@@ -918,7 +918,7 @@ image:image241.png[Patient Bills Management]
 
 For each bill the following [.underline]##data## are shown in the *Data table*:
 
-* *USER*: the user who initially created or at later time updated the bill
+* *USER*: the user who initially created or later updated the bill
 * *ID*: the number of the bill (created automatically by the application).
 * *DATE*: the date and time of the bill creation.
 * *PAT ID*: the patient's ID (created automatically by the application at the registration time).
