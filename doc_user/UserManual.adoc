@@ -1192,7 +1192,7 @@ and click the *Recei[.underline]##p##t* button. A proper printer device must be 
 The Open Hospital accounting module comes with a set of reports hereby listed:
 
 * *Today (Closure)*: a report that shows the current user incomes
-* *Today*: a report that shows a statement with all paid and unpaid bills within today
+* *Today*: a report that shows a statement with all paid and unpaid bills for today
 * *Period*: a report that shows a statement with all paid and unpaid bills within the period currently selected
 * *This month*: a report that shows a statement with all paid and unpaid bills within the current month
 * *Select month*: a report that shows a statement with all paid and unpaid bills within the specified month
