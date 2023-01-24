@@ -916,21 +916,30 @@ By default, the window shows in the *Data table* all the bills for today (curren
 
 image:image241.png[Patient Bills Management]
 
-For each bill the following data are shown in the *Data table*:
+For each bill the following [.underline]##data## are shown in the *Data table*:
 
+* *USER*: the user who initially created or later updated the bill
 * *ID*: the number of the bill (created automatically by the application).
-* *Date*: the date and time of the bill creation.
-* *Pat ID*: the patient's ID (created automatically by the application at the registration time).
-* *Patient*: the patient's name.
-* *Amount*: the total amount of the bill.
-* *Last payment*: the date and time of the last payment.
-* *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
-* *Balance*: the bill amount which has not yet been paid.
+* *DATE*: the date and time of the bill creation.
+* *PAT ID*: the patient's ID (created automatically by the application at the registration time).
+* *PATIENT*: the patient's name.
+* *AMOUNT*: the total amount of the bill.
+* *LAST PAYMENT*: the date and time of the last payment.
+* *STATUS*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
+* *BALANCE*: the bill amount which has not yet been paid.
 * *IN/OUT*: the bill refers to an admission or OPD
 
-The following functions are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
+The follwing [.underline]##filter options## are available at the *Upper panel* of the *_Patient Bills Management_* window:
 
-* *[.underline]##T##oday*: (button on top of the window) shows in the *Data table* only the bills for the current day.
+* *[user]* selector (e.g. 'admin'): users (cashiers) filter
+* *[.underline]##T##oday*: shows in the *Data table* only the bills for the current day.
+* *Date From* and *Date To*: dates selectors used to select a period
+* *[Month]* selector (e.g. 'December'): to quickly select one month in *Date From* and *Date To* field
+* *[year]* selector (e.g. '2022'): to quickly select a year in *Date From* and *Date To* field
+* *[Patient]* selector: to filter bills for a patient within the specified *Date From* and *Date To* period
+
+The following [.underline]##functions## are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
+
 * *[.underline]##N##ew Bill*: insert a new bill.
 * *[.underline]##E##dit Bill*: modify a stored bill if its status is “O” (Open).
 * *[.underline]##D##elete Bill*: delete a stored bill (does not remove the bill but changes the status to “D”).
@@ -942,6 +951,9 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 
 * *First Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for *Today*
 * *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
+* *Third Row*: the amount *PAID* for *Today* and within the selected *Period* for the selected *User*
+
+NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>) 
 
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
@@ -1180,10 +1192,11 @@ and click the *Recei[.underline]##p##t* button. A proper printer device must be 
 The Open Hospital accounting module comes with a set of reports hereby listed:
 
 * *Today (Closure)*: a report that shows the current user incomes
-* *Today*: a report that shows a statement with all paid and unpaid bills within today
+* *Today*: a report that shows a statement with all paid and unpaid bills for today
 * *Period*: a report that shows a statement with all paid and unpaid bills within the period currently selected
 * *This month*: a report that shows a statement with all paid and unpaid bills within the current month
-* *Other month*: a report that shows a statement with all paid and unpaid bills within a specified month
+* *Select month*: a report that shows a statement with all paid and unpaid bills within the specified month
+* *Patient's Statement*: a report that shows a statement with all paied and unpaid bills for the selected patient
 
 image:image63.png[Report Selection]
 
@@ -1191,7 +1204,6 @@ For each report, except Today (Closure), one of the following options must be ch
 
 * *Short Report (only BadDebts bills)*: a report that shows a statement with only the unpaid bills and the total for the others
 * *Full Report (all bills)*: a report that shows a statement with all paid and unpaid bills
-* *OH23A1-open bills list*: a report that shows the list of opened bills (pending bills)
 
 image:image64.png[Report Options]
 
@@ -1206,6 +1218,7 @@ on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
 NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator or refer to the _Administrator’s Guide_.
 
+[#functions-accounting]
 === 6.3 Functions of Accounting in Multi-user Mode
 
 In multi-user mode, the Incomes Table will show only the Incomes for the logged user:
