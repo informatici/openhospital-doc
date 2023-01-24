@@ -1916,7 +1916,7 @@ image:image108.png[Image file view,width=642,height=360]
 
 The *Zoom* slider can be used to Zoom in or out of the image.
 
-More than one image file can be loaded into a patient folder. It is possible to delete a image file from the patient's folder. First, select the file in the left view and then click the *Delete Image* button.
+More than one image file can be loaded into a patient folder. It is possible to delete an image file from the patient's folder. First, select the file in the left view and then click the *Delete Image* button.
 
 The thumbnails on the left can be hidden by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
