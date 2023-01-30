@@ -153,8 +153,8 @@ Queries about ambulatory patient visits can be done using the search criteria av
 The following fields are available to select or narrow the resulting matches:
 
 * *Search by code* (work only one per time)
-** *Code*: Search *ONE* OPD visit by its code, that is unique, hence only one result is expected
-** *OPD No.*: Search OPD visits by their Progressive in Year, that starts every year from one, hence one or more results are expected
+** *Code*: Search an OPD visit by its code, that is unique, hence only *ONE* result is expected
+** *OPD No.*: Search OPD visits by their Progressive in Year, that starts every year from 1, hence one or more results are expected
 ** *Pat. Id*: Search OPD visits by Patient ID, hence one or more results are expected
 
 NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ and press __ENTER__.
