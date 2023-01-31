@@ -1,36 +1,39 @@
 [width="99%",cols="^16%,^14%,^14%,^14,^14%,^14%,^14%,^14%,^14%",options="header"]
 |===
-9+|*Open Hospital software compatibility matrix*
+9+|*Open Hospital compatibility matrix*
 
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|*JAVA* JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/MariaDB arch 3+|Special Features
-|DICOM (*) |SMS (gsm) |Webcam
+|Imaging - DICOM (*) |SMS (gsm) |Webcam
 
-.4+|*1.12.0* .2+| *10.6.11* / n.a. .2+|*zulu11.62.17* |*Ubuntu 22.10* | *x64* | *64bit* |*v* |*x*|*v*
+.4+|*1.12.0* .2+| *10.6.11* / n.a. .2+|*zulu11.60.19* |*Ubuntu 22.10* | *x64* | *64bit* |*v* |*x*|*v*
 |*Windows 10/11* (**) | *x64* | *64bit* |*v* |*v* |*v*
-|10.5.18|zulu11.62.17 |_Linux32_ | _i686_ | _32bit_ |*v* |*v* |*v*
-|10.6.4|zulu11.62.17|_Windows 7/10 (**)_ | _i386_ | _32bit_ |*v* |*v* |*v*
+| 10.5.18  |zulu11.60.19 |_Linux32_ | _i686_ | _32bit_ |*v* |*v* |*v*
+|10.6.4|zulu11.60.19|_Windows 7/10 (**)_ | _i386_ | _32bit_ |*v* |*v* |*v*
 
-.4+|*1.11.5* .3+| *10.2.43* / n.a. .3+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
-|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
-|10.2.41|zulu8.60.0.21|Windows 7/10 (**) | _i686_ | _32bit_ |*v* |*v* |*v*
-
-.4+|*1.11.3/4* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+.4+|*1.11.4* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
 |Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
 |Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 (**) | _i686_ | _32bit_ |*v* |*v* |*v*
 
-.4+|*1.11.1/2* .4+| *10.2.41* / 5.7.35 .4+|*zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+.4+|*1.11.3* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
+|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | i386 | 32bit |*v* |*v* |*v*
+
+.4+|*1.11.2* .4+| *10.2.41* / 5.7.35 .4+|*zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
 |Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
 |Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 (**) | i686 | 32bit |*v* |*v* |*v*
 
+.4+|*1.11.1* .4+| *10.2.41* / 5.7.35 .4+|*zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
+|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
+|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
+|Windows 7/10 (**) | i686 | 32bit |*v* |*v* |*v*
 .5+|*1.11.0* .5+| *10.2.40* / 5.7.35 .5+|*zulu8.56.0.21* |Ubuntu 21.04 | x64 | 64bit |*v* |*x*|*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |? |?
 |Windows 7/10 (**) | x64 | 64bit |*x* |*v* |*v*
 |Windows 7/10 (**) | x64 | 32bit |*v* |*v* |*v*
 |Windows 7/10 (**) | i686 | 32bit |*v* |*v* |*v*
-
 .5+|*1.10.0* .5+| n.a. / 5.1.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* | ?  |*v*
 |Ubuntu 18.04 | i386 | 32bit |*v* |*x* |?
 |Windows 7/10 | x64 | 64bit |x |*v* |*v*
@@ -52,5 +55,5 @@
 |*x* |_not working_ 
 |*?* |_not tested_ 
 |n/a |_not applicable_ 
-|_last updated_ |_2023.01.17_
+|_last updated_ |_2022.12.22_
 |===
