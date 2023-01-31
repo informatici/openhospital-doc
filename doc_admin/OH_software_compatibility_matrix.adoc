@@ -3,7 +3,7 @@
 9+|*Open Hospital compatibility matrix*
 
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|*JAVA* JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/MariaDB arch 3+|Special Features
-|DICOM (*) |SMS (gsm) |Webcam
+|Imaging - DICOM (*) |SMS (gsm) |Webcam
 
 .4+|*1.12.0* .2+| *10.6.11* / n.a. .2+|*zulu11.60.19* |*Ubuntu 22.10* | *x64* | *64bit* |*v* |*x*|*v*
 |*Windows 10/11* (**) | *x64* | *64bit* |*v* |*v* |*v*
