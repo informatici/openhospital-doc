@@ -152,7 +152,7 @@ Queries about ambulatory patient visits can be done using the search criteria av
 
 The following fields are available to select or narrow the resulting matches:
 
-* *Search by code* (work only one per time)
+* *Search by code* (only one can be used at a time)
 ** *Code*: Search an OPD visit by its code, that is unique, hence only *ONE* result is expected
 ** *OPD No.*: Search OPD visits by their Progressive in Year, that starts every year from 1, hence one or more results are expected
 ** *Pat. Id*: Search OPD visits by Patient ID, hence one or more results are expected
@@ -162,7 +162,7 @@ NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ a
 * *Other filters* (they are all applied when pressing [.underline]##S##earch)
 ** *Ward*: Select a specific OPD ward
 ** *Disease type*: Select a specific disease type or all disease types
-** *Disease*: select a specific disease, or all diseases, or searching for partial matches by typing some letters in the search field
+** *Disease*: Select a specific disease, or all diseases, or search using partial matches by typing some letters in the search field
 ** *Sex*: Select patients by sex: All / Male / Female
 ** *Date*: “Date From” and “Date To” to select all visits occurring during the specified period
 ** *Age*: “Age From” and “Age To” to select patients by age
