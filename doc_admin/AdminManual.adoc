@@ -516,8 +516,8 @@ include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bu
 
 === 2.3 OH - SERVER mode (portable)
 
-Open Hospital can be lauched in SERVER (portable) mode. SERVER mode allows to launch a local instance of the database server and listen for connections from other clients.
-It is useful to test/simulate a client/server configuration or networked environment; it is not suggested for production setup.
+Open Hospital can be launched in SERVER (portable) mode. SERVER mode launches a local instance of the database server and listens for connections from other clients.
+This mode is useful to test/simulate a client/server configuration or networked environment; it is not suggested for production setup.
 To setup a complete client / server configuration, refer to chapter <<database-server,2.1.3 - Database Server>>
 
 [#backup-restore]
