@@ -621,7 +621,7 @@ The custom logo has to be a 100x100 pixel png image file.
 
 Open Hospital can be lauched in SERVER (portable) mode. SERVER mode allows to launch a local instance of the database server and listen for connections from other clients.
 It is useful to test/simulate a client/server configuration or networked environment; it is not suggested for production setup.
-To setup a complete client / server configuration, refer to chapter <<database-server,database server>>
+To setup a complete client / server configuration, refer to chapter <<database-server,2.1.3 - Database Server>>
 
 [#configuration]
 == 3 Configuration
