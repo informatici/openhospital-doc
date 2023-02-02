@@ -748,7 +748,7 @@ The following table shows the allowed values for the OH_LANGUAGE variable:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|LANGUAGE |en |ar, de, en, es, fr, it, fr, pt, sw, zh_CN
+|LANGUAGE |en |ar, de, en, es, fr, it, pt, sw, zh_CN
 |===
 
 Open Hospital is available in nine different languages, identified by the international country code:
