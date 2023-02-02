@@ -608,7 +608,6 @@ Depending on the chosen operating system and architecture, the needed external a
 ** _zulu11.<version>-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
-<<<
 
 === 2.5 Appearance
 
@@ -620,8 +619,9 @@ The custom logo has to be a 100x100 pixel png image file.
 
 === 2.2 OH - SERVER mode (portable)
 
-Starting with version 1.12, Open Hospital can be lauched in SERVER mode. SERVER mode allows to launch a local instance of the database server and listen for connections from other clients.
+Open Hospital can be lauched in SERVER (portable) mode. SERVER mode allows to launch a local instance of the database server and listen for connections from other clients.
 It is useful to test/simulate a client/server configuration or networked environment; it is not suggested for production setup.
+To setup a complete client / server configuration, refer to chapter <<database-server,database server>>
 
 [#configuration]
 == 3 Configuration
@@ -1620,7 +1620,7 @@ The following table shows the default value and the allowed ones:
 |EXAMINATIONCHART |patient_examination | any kind of .jasper file name
 |===
 
-Open Hospital can produce a report about the Patient Examinations.
+Open Hospital can produce a report about patient_examinations.
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-5-2-patient-examination[8.5.2 Patient Examination] in the User's Guide).
 
 By default, EXAMINATIONCHART is set to patient_examination which is the filename of the related report to use for the *Patient Examination* functionality.
