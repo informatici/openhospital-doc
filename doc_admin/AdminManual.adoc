@@ -1,4 +1,5 @@
 = Open Hospital 1.12.0 - Administrator’s Guide
+<<<
 :icons: font
 :stem:
 :toc: left
@@ -512,7 +513,7 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..413,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=28..429,leveloffset=+2]
 
 === 2.3 OH - SERVER mode (portable)
 
