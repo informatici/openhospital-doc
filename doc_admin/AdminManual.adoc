@@ -132,12 +132,13 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 == 2 Installation
 
-Open Hospital is a client application that can be used in two different ways: 
+Open Hospital is a client application that can be used in three different ways: 
 
-* <<client,2.1 OH - CLIENT mode>>: multi computers setup, with a central database (requires a little IT knowledge)
-* <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with inbuilt databases (click and run)
+* <<client,2.1 OH - CLIENT mode>>: multi computer setup, with a central database (requires a little IT knowledge)
+* <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with the database on the same computer (click and run)
+* <<server,2.3 OH - SERVER mode (portable)>>: multi computer setup, with the central database created by the Open Hospital script (click and run)
 
-TIP: Portable mode can be also used to test the application.
+TIP: PORTABLE mode can be also used to test the application.
 
 [#client]
 === 2.1 OH - CLIENT mode
@@ -515,6 +516,7 @@ where only a single computer is available. If the facility is large and more cli
 
 include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=28..429,leveloffset=+2]
 
+[#server]
 === 2.3 OH - SERVER mode (portable)
 
 Open Hospital can be launched in SERVER (portable) mode. SERVER mode launches a local instance of the database server and listens for connections from other clients.
