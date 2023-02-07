@@ -44,7 +44,7 @@
 
 [width="60%",cols="30%,70%",]
 |===
-|*NOTE*| *32 bit environments are EOF*
+|*NOTE*| *32 bit environments are EOL*
 |(*) | Before 1.12.0, DICOM imaging functionality may not work
 |(**) | Windows Powershell 5.1 is required
 |*v* |_working_ 
