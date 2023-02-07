@@ -1,4 +1,5 @@
-= Open Hospital 1.11.5 - User's Guide
+= Open Hospital 1.12.0 - User's Guide
+<<<
 :icons: font
 :stem:
 :toc: left
@@ -10,7 +11,7 @@
 image:OH-splash.png[OH splash,width=390,height=298]
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#User's Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#User's Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
@@ -152,16 +153,26 @@ Queries about ambulatory patient visits can be done using the search criteria av
 
 The following fields are available to select or narrow the resulting matches:
 
-* *Disease type*: Select a specific disease type or all disease types
-* *Disease*: select a specific disease, or all diseases, or searching for partial matches by typing some letters in the search field
-* *Date*: “Date From” and “Date To” to select all visits occurring during the specified period
-* *Age*: “Age From” and “Age To” to select patients by age
-* *Sex*: Select patients by sex: All / Male / Female
-* *Type of patient*: Select visits by type of attendance: All / New / Re-Attendance
+* *Search by code* (only one can be used at a time)
+** *Code*: Search an OPD visit by its code, that is unique, hence only *ONE* result is expected
+** *OPD No.*: Search OPD visits by their Progressive in Year, that starts every year from 1, hence one or more results are expected
+** *Pat. Id*: Search OPD visits by Patient ID, hence one or more results are expected
+
+NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ and press __ENTER__.
+
+* *Other filters* (they are all applied when pressing [.underline]##S##earch)
+** *Ward*: Select a specific OPD ward
+** *Disease type*: Select a specific disease type or all disease types
+** *Disease*: Select a specific disease, or all diseases, or search using partial matches by typing some letters in the search field
+** *Sex*: Select patients by sex: All / Male / Female
+** *Date*: “Date From” and “Date To” to select all visits occurring during the specified period
+** *Age*: “Age From” and “Age To” to select patients by age
+** *Type of patient*: Select visits by type of attendance: All / New / Re-Attendance
+** *User*: Select visits by doctor (USER column): only visits inserted by the logged user (me) or All
 
 After specifying the selection criteria, press the *[.underline]##S##earch* button.
-The counter at the bottom of the window indicates how many visits match the specified criteria
-and the individual visit data is shown in the *Data table* area.
+The counter at the bottom of the window indicates how many visits match the specified criteria and the individual visit data is shown in the *Data table* area.
+The *[.underline]##R##eset* button blanks all filters to default values.
 
 The example below shows all the visits for patients with _asthma_ disease admitted in the period from 29-5-2020 until
 5-6-2021; all ages, all sexes, and all patient types are included.
@@ -190,7 +201,7 @@ _Example: A patient comes to the ambulatory because they report a cut; this even
 NEW ATTENDANCE and the doctor sutures the wound and invites the patient to come back ten days later; when the same patient comes back
 after ten days to have his/her stitches removed, a new OPD record is then created but without the NEW ATTENDANCE flag set._
  +
-* *Admittance Date*: The date on which the patient is seen for the recorded activity.
+* *Attendance Date*: The date on which the patient is seen for the recorded activity.
 * *Disease Type*: By selecting a _Disease Type_, the first diagnosis list will contain only related diseases.
 The second and third list continues to contain all diseases.
  +
@@ -200,7 +211,7 @@ NOTE: Disease Types are defined by the Administrator. Ask the Administrator or c
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
 during the same visit the doctor finds other concurrent pathologies thus it is possible to record
-up to  a maximum of three (the first being the only one mandatory) diagnoses. +
+up to a maximum of three (the first being the only one mandatory) diagnoses. +
 It is possible to use filters to find diseases more easily.
 To do so, enter a text fragment in the search field that is part of the disease name.
 The closer the search text comes to the name of the disease being searched, the more precise the search is.
@@ -209,7 +220,7 @@ The closer the search text comes to the name of the disease being searched, the 
 _Example: In the *OPD Out Patient Department* window only the first diagnosis and its type are shown,
 but all the corresponding data is stored and available in reports and for searching._
  +
-* *Age*: The patient's age; the valid age range is 0-200.
+* *Age*: The patient's age; the valid age range is 0-120.
 * *Sex*: The patient's sex; either male or female.
 
 When finished entering data, the *Buttons panel* has the following choices:
@@ -242,13 +253,14 @@ The *Buttons panel* shows the following choices:
 * *[.underline]##Y##es*: confirm the deletion of the visit.
 * *[.underline]##N##o*: close the window and return to the *_OPD Out Patient Department_* window without deleting the visit.
 
+[#opd-extended]
 === 3.3 OPD Extended
 
 The OPD functionality can be extended by changing the _OPDEXTENDED_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_ .
 
 ==== 3.3.1 Additional Features
 
-Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the 
+Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the
 *_New OPD Registration_* window shown below.
 
 image:image14.png[OPD Edit Extended,width=1024,height=771]
@@ -258,16 +270,40 @@ The OPD Extended module affords the following additional features:
 * Calendar to choose the visit date (1);
 * the OPD number now is visible (2): it is the progressive number per year automatically set by the system, changes to the value can be made only at the first registration in a year, then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and therefore is a service to the patient by knowing his/her history.
-* Once the patient is selected and a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the Re-Attendance checkbox will be selected automatically upon selection of the main (first) disease (6);
-* It is now possible to set the next appointment date (7). This automatically schedules a visit visible in *_Therapy Management_*.
-* if a new attendance for this patient is required set the "New Admittance" check box and proceed normally.
-* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Admittance" check box.
+* radio box (5) to distinguish whether an individual is new (*New Attendance*)
+ or a (*Re-Attendance*) in the ambulatory. The *New Attendance*
+ selection indicates that the patient came to the ambulatory to report a
+ new health issue or new disease for which no care has been previously
+ provided for and/or addressed. This could be their initial visit or their n-th
+ time in the ambulatory, it does not matter in regard to this selection.
+ The important criteria for selecting *New Attendance* is that the problem
+ under consideration is a new issue; that is, one that has not been dealt
+ with previously. For an issue or disease previously dealt with but not completely addressed (that
+ is, completely cured or healed) then *Re-Attendance* is
+ selected and records are created for the patient in regard to the
+ follow-up care and instructions for recovery.  Any other follow-up visits
+ for the same issue are also marked as *Re-Attendance*.
+
+ Example: A patient comes to the ambulatory because they report a cut; this
+ event is recorded as a *New Attenance* and the doctor sutures the wound and
+ invites the patient to come back in ten days; when the same patient comes
+ back after ten days to have his/her stitches removed, a new OPD record is
+ then created with the *Re-Attendance* flag set as this visit is a
+ continuation of previous visit and medical problem.
+
+* Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
+* It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
+* Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
+* The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
+* If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
+* If editing an old OPD it is possible to change everything except the patient, which the OPD refers to, and the "New Attendance" radio box.
 * In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
-** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see
-<<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
+** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
+
+NOTE: For OPD and IPD wards see <<ward,Ward>> settings.
 
 <<<
 
@@ -399,7 +435,7 @@ Press the *[.underline]##S##tock* button in the *_Pharmaceutical Browser_* windo
 ===== 4.1.2.6 Stoc[.underline]##k##Card (Stoc[.underline]##k##Card)
 
 Press the *Stoc[.underline]##k##Card* button in the *_Pharmaceutical Browser_* window to
-show the history of movement for a selected pharmaceutical for a specific time range.  The data
+show the history of movement for a selected pharmaceutical for a specific time range. The data
 can either be in report format or exported to a CSV file.
 
 ===== 4.1.2.7 Order of Pharmaceuticals ([.underline]##O##rder)
@@ -435,7 +471,7 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 In this way, which movement that refers to the pharmaceuticals expiring can be found, or pharmaceuticals prepared on a specific date, or how many movements have been registered about that lot, and so on.
 * the supplier of the pharmaceutical. This characteristic is needed for charging movements only. This field is empty in other cases.
 
-==== 4.2.2 Functions of Pharmaceuticals Stock 
+==== 4.2.2 Functions of Pharmaceuticals Stock
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical [.underline]##S##tock* in the Pharmacy menu shown below.
 
@@ -445,7 +481,7 @@ The *_Stock Movement Browser_* window shown below is opened.
 
 image:image23.png[Stock Movement Browser]
 
-NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
+NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file. Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
 
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
@@ -456,7 +492,7 @@ The following functions are available from the *Buttons panel* of the window *_S
 * *Stock [.underline]##L##edger*: show the history of movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake.  In this example use a discharge movement to undo the unwanted change.
+NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake. In this example use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -601,7 +637,7 @@ The Pharmaceutical Stock Ward feature allows the management of the pharmacy at t
 
 *Pharmaceuticals Stock [.underline]##W##ard* functionality can be enabled or disabled by changing the _INTERNALPHARMACIES_ flag in the configuration file**.** Ask the Administrator or refer to the _Administrator’s Guide_.
 
-==== 4.3.2 Functions of Pharmaceuticals Stock Ward 
+==== 4.3.2 Functions of Pharmaceuticals Stock Ward
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical Stock [.underline]##W##ard* on the Pharmacy menu shown below.
 
@@ -702,7 +738,7 @@ Before pressing the *[.underline]##O##K* button, insert as many Medicals as need
 [#laboratory]
 == 5 Laboratory ([.underline]##L##aboratory)
 
-=== 5.1 Main Characteristics 
+=== 5.1 Main Characteristics
 
 The Laboratory features are used to manage the laboratory exams.
 
@@ -776,7 +812,7 @@ To record the visit, enter the following fields:
 * *Patient In*: it activates itself if the selected patient is currently admitted, it is possible to change it if needed.
 * *Select a patient*: select the patient that is examined. The field is not mandatory as the patient's data be input into the following fields.
 * *Name*: the first and last name of the patient _(automatically filled if a patient is selected)_.
-* *Age*: the age of the patient (range 0-200) _(automatically filled if a patient is selected)_.
+* *Age*: the age of the patient (range 0-120) _(automatically filled if a patient is selected)_.
 * *Sex*: the value _M_ for male or the value _F_ for female _(automatically filled if a patient is selected)_.
 * *Note*: a free-form area for notes and/or description.
 * *Result*: based on the exam chosen the panel is populated with all available results for selection.
@@ -888,22 +924,32 @@ press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
 
-image:image241.png[Patient Bills Management,width=641,height=442]
+image:image241.png[Patient Bills Management]
 
-For each bill the following data are shown in the *Data table*:
+For each bill the following [.underline]##data## are shown in the *Data table*:
 
+* *USER*: the user who initially created or later updated the bill
 * *ID*: the number of the bill (created automatically by the application).
-* *Date*: the date and time of the bill creation.
-* *Pat ID*: the patient's ID (created automatically by the application at the registration time).
-* *Patient*: the patient's name.
-* *Amount*: the total amount of the bill.
-* *Last payment*: the date and time of the last payment.
-* *Status*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
-* *Balance*: the bill amount which has not yet been paid.
+* *DATE*: the date and time of the bill creation.
+* *PAT ID*: the patient's ID (created automatically by the application at the registration time).
+* *PATIENT*: the patient's name.
+* *AMOUNT*: the total amount of the bill.
+* *LAST PAYMENT*: the date and time of the last payment.
+* *STATUS*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
+* *BALANCE*: the bill amount which has not yet been paid.
+* *IN/OUT*: the bill refers to an admission or OPD
 
-The following functions are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
+The follwing [.underline]##filter options## are available at the *Upper panel* of the *_Patient Bills Management_* window:
 
-* *[.underline]##T##oday*: (button on top of the window) shows in the *Data table* only the bills for the current day.
+* *[user]* selector (e.g. 'admin'): users (cashiers) filter
+* *[.underline]##T##oday*: shows in the *Data table* only the bills for the current day.
+* *Date From* and *Date To*: dates selectors used to select a period
+* *[Month]* selector (e.g. 'December'): to quickly select one month in *Date From* and *Date To* field
+* *[year]* selector (e.g. '2022'): to quickly select a year in *Date From* and *Date To* field
+* *[Patient]* selector: to filter bills for a patient within the specified *Date From* and *Date To* period
+
+The following [.underline]##functions## are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
+
 * *[.underline]##N##ew Bill*: insert a new bill.
 * *[.underline]##E##dit Bill*: modify a stored bill if its status is “O” (Open).
 * *[.underline]##D##elete Bill*: delete a stored bill (does not remove the bill but changes the status to “D”).
@@ -915,6 +961,9 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 
 * *First Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for *Today*
 * *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
+* *Third Row*: the amount *PAID* for *Today* and within the selected *Period* for the selected *User*
+
+NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>) 
 
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
@@ -1026,7 +1075,7 @@ The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
 ===== 6.2.1.3 Remove a Bill Entry of a Bill (Remove Item)
 
-To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button.  The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
+To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button. The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
 <<save-function-accounting,Save function>> described below).
 
 ===== 6.2.1.4 Insert a Payment (Pa[.underline]##y##ment)
@@ -1085,9 +1134,55 @@ image:image61.png[Confirmation]
 
 To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window is shown:
 
-image:image61a.png[Edit Patient Bill,width=543,height=563]
+image:image61a.png[Edit Patient Bill Female Ward]
 
-NOTE: Only bills with status “O” (Open) can be modified, otherwise, an A4 report will be shown.
+NOTE: Only bills with a status of “O” (Open) can be modified by enabled users (See <<users-groups, User & Groups>>), otherwise, an A4 report is shown.
+
+If the bill, at the time of creation, was related to an admitted patient, the related ward is shown in the upper right.
+
+If the patient's status has changed the application prompts for the next action:
+
+*Case 1)*
+
+image:image61b.png[Question This patient is no longer admitted. Do you want to unlink this bill from the previous admission?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the "OPD" category (no admission).
+
+image:image61c.png[Edit Patient Bill OPD]
+
+If the answer selected is "No", the bill remains unchanged and continues to belong to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
+*Case 2)*
+
+image:image61d.png[Question This patient is admitted now. Do you want to link this bill to the current admission?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the current admission.
+
+image:image61e.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill is unchanged and is associated with the "OPD" category (no admission)
+
+image:image61c.png[Edit Patient Bill OPD]
+
+*Case 3)*
+
+image:image61f.png[Question This bill was linked to a previous admission. Do you want to link it to the current admission instead?]
+
+If the answer selected is "Yes", the bill is updated and belongs to the current admission.
+
+image:image61e.png[Edit Patient Bill Maternity Ward]
+
+If the answer selected is "No", the bill is unchanged and belongs to the original admission.
+
+image:image61a.png[Edit Patient Bill Female Ward]
+
+The relation of a bill with a patient admission is found in the last column in "Patient Bills Management" window:
+
+image:image61g.png[Patient Bills Management]
+
+
 
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
@@ -1107,10 +1202,11 @@ and click the *Recei[.underline]##p##t* button. A proper printer device must be 
 The Open Hospital accounting module comes with a set of reports hereby listed:
 
 * *Today (Closure)*: a report that shows the current user incomes
-* *Today*: a report that shows a statement with all paid and unpaid bills within today
+* *Today*: a report that shows a statement with all paid and unpaid bills for today
 * *Period*: a report that shows a statement with all paid and unpaid bills within the period currently selected
 * *This month*: a report that shows a statement with all paid and unpaid bills within the current month
-* *Other month*: a report that shows a statement with all paid and unpaid bills within a specified month
+* *Select month*: a report that shows a statement with all paid and unpaid bills within the specified month
+* *Patient's Statement*: a report that shows a statement with all paied and unpaid bills for the selected patient
 
 image:image63.png[Report Selection]
 
@@ -1118,21 +1214,21 @@ For each report, except Today (Closure), one of the following options must be ch
 
 * *Short Report (only BadDebts bills)*: a report that shows a statement with only the unpaid bills and the total for the others
 * *Full Report (all bills)*: a report that shows a statement with all paid and unpaid bills
-* *OH23A1-open bills list*: a report that shows the list of opened bills (pending bills)
 
 image:image64.png[Report Options]
 
 Once the choice has been made, after some time the JasperViewer® will show the generated report as follows:
 
-image:image65.png[Report output,width=642,height=470]
+image:image65.png[Report output]
 
 NOTE: By default, an internal PDF viewer is used. An external PDF reader can be used by modifying the INTERNALVIEWER flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]).  The report can also be printed by clicking
+The PDF report can be saved by clicking on the save button (image:image66.png[Report save icon,width=21,height=19]). The report can also be printed by clicking
 on the print button (image:image67.png[Report print icon,width=21,height=18]).
 
 NOTE: A PDF copy of every report is always saved within the folders of Open Hospital. Ask the Administrator or refer to the _Administrator’s Guide_.
 
+[#functions-accounting]
 === 6.3 Functions of Accounting in Multi-user Mode
 
 In multi-user mode, the Incomes Table will show only the Incomes for the logged user:
@@ -1145,9 +1241,9 @@ So, the *Incomes Table* will show the following information:
 * *Second Row*: the *PAID* and *UNPAID* for the specified *Period*
 * *Third Row*: the *PAID* and *UNPAID* for the current *user* for *Today*
 
-The Administrator user can filter all incomes for all users have some payment amount:
+The Administrator, or any enabled user (See <<users-groups, User & Groups>>), can filter all incomes for all users with a payment amount:
 
-image:image69.png[Filter Patient Bills Management,width=521,height=334]
+image:image69.png[Filter Patient Bills Management]
 
 <<<
 
@@ -1279,7 +1375,7 @@ All the functions available under *[.underline]##A##dmission/Patient* are access
 
 By default, the window shows a *Data table* all of the patients currently present in the system.
 
-image:image78.png[Patient Browser,width=584,height=235]
+image:image78.png[Patient Browser,width=600,height=300]
 
 NOTE: If the list of patients becomes very large it is likely to result in a slowdown of the system depending on the
 network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in the
@@ -1302,11 +1398,14 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *[.underline]##A##dmission*: manage the admission of the patient in the hospital.
 * *E[.underline]##x##amination*: manage the patient examination.
 * *[.underline]##O##PD*: start an OPD visit on the selected patient.
+* *[.underline]##L##aboratory*: start a new laboratory exam on the selected patient.
 * *[.underline]##B##ill*: start a bill on the selected patient.
 * *Da[.underline]##t##a*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
 * *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it.
 * *T[.underline]##h##erapy*: manage the therapy of a patient.
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
+
+NOTE: It is possible to have an *[.underline]##I##maging* function that allows for loading and viewing of image files for the selected patient by changing the flag DICOMMODULEENABLED in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 NOTE: It is possible to have a *[.underline]##M##erge* function that can be used in the case of double patient
 registration, by changing the flag MERGEFUNCTION in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
@@ -1432,6 +1531,10 @@ To record a new patient, the following fields are available:
 image:image86.png[Age by Age,width=187,height=74]image:image87.png[Age by Birthdate,width=188,height=74]image:image88.png[Age by Description,width=183,height=74]
  +
 Regardless of the way it is entered the age is converted to an age in years in the *_Patient Browser_* window.
+
+NOTE: The date picker includes a "Clear" option (lower right corner) to remove or clear the current date value.
+image:image87a.png[Age by Age,width=187,height=74]
+
 * *BloodType*: valid values are 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: valid values are Single, Married, Divorced, and Widowed. If left empty, the default is Unknown
 * *Profession*: valid values are Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering. If left empty, the default is Unknown
@@ -1456,7 +1559,7 @@ Once the video module has been enabled the *_New Patient_* window looks as follo
 
 image:image88p.png[New Patient Extended photo,width=587,height=339]
 
-By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device).  The *Patient Photo* window should show what the camera is pointing at.
+By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device). The *Patient Photo* window should show what the camera is pointing at.
 
 image:image89.png[Webcam photo,width=591,height=392]
 
@@ -1474,6 +1577,13 @@ Open Hospital attempts to automatically set the best quality for any webcam conn
 
 NOTE: If the camera does not function then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
+
+====== 8.4.6 anamnesis
+The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions either of the patient, or of other people who know the person and can give suitable information.  The aim is to obtain information useful in formulating a diagnosis and providing medical care to the patient.
+
+To modify the anamnesis data of a patient, select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient_* window is shown, click on the *_Anamnesis_* button and the record is available for changes. All the data can be changed.
+
+image:image247.png[Anamnesis]
 
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
@@ -1585,7 +1695,7 @@ To add a new operation, click on the button *[.underline]##N##ew* and enter the 
 
 WARNING: Clicking on the button *[.underline]##S##ave* just adds the operation to the table; it is not yet permanently recorded.
 
-To delete a line from the table, select the line to delete by clicking on it (it automatically highlights), 
+To delete a line from the table, select the line to delete by clicking on it (it automatically highlights),
 then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
 
 NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
@@ -1643,7 +1753,7 @@ image:image98.png[Discharged,width=642,height=337]
 
 === 8.6 OPD ([.underline]##O##PD)
 
-If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting  an OPD by selecting the related patient first (see
+If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting an OPD by selecting the related patient first (see
 <<create-a-new-patient-visit,Create a new patient visit>> for more information).
 
 === 8.7 Bill ([.underline]##B##ill)
@@ -1738,7 +1848,7 @@ Next, press the *[.underline]##M##alnutrition Control* button. The *_Malnutritio
 
 image:image102.png[Malnutrition Browser,width=642,height=288]
 
-This function supports the insertion (*New*) of a new malnutrition control, the modification  (*Edit*) or deletion (*Delete*) of an existing malnutrition control.
+This function supports the insertion (*New*) of a new malnutrition control, the modification (*Edit*) or deletion (*Delete*) of an existing malnutrition control.
 
 ===== 8.8.5.1 Insert a New Control ([.underline]##N##ew)
 
@@ -1778,10 +1888,10 @@ The *Buttons panel* has the following choices:
 * *[.underline]##A##dmission Chart*: print the Admission chart if the selected row in the grid on top is an Admission.
 * *Di[.underline]##s##charge Chart*: print the Discharge chart if the selected row in the grid on top is an Admission and the patient is already discharged.
 * *Launch [.underline]##R##eport*: print the clinical sheet of a patient.
-* *[.underline]##D##ICOM*: launch the DICOM viewer.
+* *[.underline]##I##maging*: launch the imaging viewer.
 * *[.underline]##C##lose*: close the window and return to the *_Patient Browser_* window without applying any changes.
 
-NOTE: The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
+NOTE: The DICOM flag in the configuration file must be changed to activate the imaging functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 By pressing the *Launch [.underline]##R##eport* button in the *_Patient Data_* window, a new window is shown:
 
@@ -1789,47 +1899,47 @@ image:image244.png[Report,width=300,height=356]
 
 The application is set to get the entire history of the patient, but this can be changed by querying different date ranges and a specific set of information.
 
-NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category. 
+NOTE: it is possible to double-click an item on any table to automatically restrict the Clinical Sheet report to the selected date ranges and item's category.
 
-[#dicom-viewer]
-==== 8.9.1 DICOM ([.underline]##D##ICOM Viewer)
+[#imaging-viewer]
+==== 8.9.1 Imaging ([.underline]##I##maging)
 
-The DICOM flag in the configuration file must be changed to activate the DICOM functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
+The DICOM flag in the configuration file must be changed to activate the imaging functionality. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-In the *_Patient Data_* window, click the [.underline]##D##ICOM button to access the *_DICOM Viewer_* window as shown below.
+In the *_Patient Data_* window, click the [.underline]##I##maging button to access the *_Imaging Viewer_* window as shown below.
 
-image:image105.png[DICOM Viewer,width=642,height=361]
+image:image105.png[Imaging Viewer,width=642,height=361]
 
-This module allows attaching DICOM files to the patient’s folder. To do this,
-click the *[.underline]##L##oad DICOM* button. The following window is shown:
+This module allows attaching image files to the patient’s folder. To do this,
+click the *[.underline]##L##oad Image* button. The following window is shown:
 
-image:image106.png[DICOM Open,width=517,height=366]
+image:image106.png[Image Open,width=517,height=366]
 
-In the case of multi-frame DICOM the whole folder can be selected:
+In the case of multi-frame image the whole folder can be selected:
 
-image:image106b.png[Dicom open multi-frame,width=517,height=366]
+image:image106b.png[Image open multi-frame,width=517,height=366]
 
-Next, the following data to be used for the DICOM is prompted for (or the multi-frame DICOM series):
+Next, the following data to be used for the image is prompted for (or the multi-frame image series):
 
-* *Date*: the system will propose the current date or other dates provided by the DICOM file itself
-* *Category*: optionally select a Dicom category (see <<dicom-types,Dicom Types>>):
+* *Date*: the system will propose the current date or other dates provided by the image file itself
+* *Category*: optionally select an image category (see <<imaging-types,Imaging Types>>):
 * *Description*: the description to be used.
 
-image:image243.png[Dicom information,width=282,height=200]
+image:image243.png[Image information,width=282,height=200]
 
-*[.underline]#N.B.#* There is no *Edit DICOM*, so if a mistake is made, delete the DICOM file (*Delete DICOM*) and then reload it (*Load DICOM*) again.
+*[.underline]#N.B.#* There is no *Edit Image*, so if a mistake is made, delete the image file (*Delete Image*) and then reload it (*Load Image*) again.
 
-Find the DICOM file and click the *Open DICOM* button to load the file into the *_DICOM viewer_*.
+Find the image file and click the *Open Image* button to load the file into the *_Imaging viewer_*.
 
-image:image107.png[Dicom file,width=642,height=362]
+image:image107.png[Image file,width=642,height=362]
 
 To view the file in the main window, double-click on it.
 
-image:image108.png[DICOM file view,width=642,height=360]
+image:image108.png[Image file view,width=642,height=360]
 
 The *Zoom* slider can be used to Zoom in or out of the image.
 
-More than one DICOM file can be loaded into a patient folder. It is possible to delete a DICOM file from the patient's folder. First, select the file in the left view and then click the *Delete DICOM* button.
+More than one image file can be loaded into a patient folder. It is possible to delete an image file from the patient's folder. First, select the file in the left view and then click the *Delete Image* button.
 
 The thumbnails on the left can be hidden by changing the _DICOMTHUMBNAILS_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
@@ -1891,7 +2001,7 @@ See <<add-a-therapy,Add a therapy>> function for a detailed description.
 
 To remove a therapy highlight one occurrence of the therapy (see box above) in the
 *_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
-removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled). 
+removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled).
 The removal of a therapy is not effective until it is confirmed with the *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
 
 [#check-availability-of-the-pharmaceuticals]
@@ -1950,22 +2060,22 @@ Press *[.underline]##O##K* to finish.
 
 ==== 8.10.6 Close Function (Close)
 
-The close function exits from the *_Therapy window._* Press the *Close* button to access the Close function. The *_Select an option_* window is shown: 
+The close function exits from the *_Therapy_* window. Press the *Close* button to access the Close function. The *_Select an Option_* window is shown:
 
 The *Buttons panel* has the following choices:
 
-image:image117.png[Therapy save and close,width=379,height=128]
+image:image117.png[Therapy close]
 
 * *[.underline]##Y##es*: this function is the same as the *Save function ([.underline]##S##ave)* described above.
 * *[.underline]##N##o*: return to the *_Therapy_* window without saving the therapy plan.
 * *[.underline]##C##ancel*: exit the function and return to the *_Therapy_* window without applying any changes.
 
 
-==== 8.10.7 Notify & SMS 
+==== 8.10.7 Notify & SMS
 
 image:image118.png[Notify & SMS,width=170,height=131]
 
-Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS. 
+Use these two checkboxes to set the therapies plan for this patient as important (_[.underline]##not implemented yet##_) and notifiable via SMS.
 
 Briefly, the SMS notification works in the following way:
 
@@ -1996,7 +2106,7 @@ TIP: By pressing the *Worksheet* button a visit can be added also there after ch
 
 === 8.11 Merge Function ([.underline]##M##erge)
 
-The merge function is used to merge two patients’ histories into a single case.  This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
+The merge function is used to merge two patients’ histories into a single case. This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
 
 To merge data of two patients requires the highlighting of both of them in the *_Patient Browser_* window.
 
@@ -2046,14 +2156,12 @@ The purpose of this function is to extract data registered in the application an
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-Open Hospital provides a set of reports designed for the Ugandan Ministry of Health (HMIS) and for the
-Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
-All of these reports may be useful for any organization and can be added or removed as explained in
-the Administrator Manual's chapter “6 – Reports”.
+Open Hospital provides a set of reports designed for the Ugandan Ministry of Health (HMIS) and for the Kenyan Ministry of Health (MOH) as well as national independent reports (OH).
+All of these reports may be useful for any organization and can be added or removed as explained in the Administrator Manual's chapter “6 – Reports”.
 
 Open Hospital ships with the following set of reports:
 
-* OH001 - Registered Patients
+* OH001 - Registered patients
 * OH002 - Registered patients by origin
 * OH003 - Registered patients by Age and Sex
 * OH004 - All incomes by price codes
@@ -2066,6 +2174,7 @@ Open Hospital ships with the following set of reports:
 * OH011A - Revenues, Incomes & Receivables (All)
 * OH011B - Revenues, Incomes & Receivables (Pending)
 * OH011C - Revenues, Incomes & Receivables (Month)
+* OH011D - Revenues, Incomes & Receivables (Ward / Month)
 * HMIS 108 - page 1 - 1. census info
 * HMIS 108 - page 1 - 2. referrals
 * HMIS 108 - page 1 - 3. operations
@@ -2121,14 +2230,15 @@ This function is used to generate reports about the hospital like a list of exam
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-Open Hospital currently only has these two reports:
+Open Hospital currently only has these three reports:
 
 * Exams List
 * Diseases List
+* Operations List
 
 === 10.2 Reports
 
-By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List* and *[.underline]##D##isease List.*
+By pressing *[underline]##R##eports* from the main menu, the *_Reports_* menu is accessed. From this menu, the following types of reports are available: *[.underline]##E##xams List*, *[.underline]##D##isease List* and *[.underline]##O##peration List.*
 
 image:image127.png[Reports submenu,width=642,height=323]
 
@@ -2139,6 +2249,10 @@ This report is a list of exams, divided by types, as defined by the Administrato
 ==== 10.2.2 Disease List ([.underline]##D##isease List)
 
 This report is a list of diseases, divided by types, as defined by the Administrator.
+
+==== 10.2.3 Operation List ([.underline]##O##peration List)
+
+This report is a list of operations, divided by types, as defined by the Administrator.
 
 <<<
 
@@ -2204,9 +2318,9 @@ image:image133.png[Communication discharge for Allan,width=377,height=285]
 
 === 11.4 Pharmaceuticals Critical Level Notifications
 
-In the *_Stock Movement Inserting - Discharge_* window there is a new box at the bottom, as shown below:
+In the *_Stock Movement_* window there is a new box at the bottom, as shown below:
 
-image:image134.png[Communication Stock alert,width=397,height=500]
+image:image134.png[Communication Stock alert,width=500,height=500]
 
 The box becomes active and useful only if the movement is going to reduce the selected pharmaceutical below the critical level. Given such an occurrence the event can be shared with another user logged into the system at the given time when the *[.underline]##O##K* button is pressed.
 
@@ -2298,7 +2412,7 @@ _i.e. Admission Fee, Food, POP, etc._
 _i.e. Newborn, Childhood, Adult, Elderly, etc._
 * *[.underline]##V##accine Type*: the way similar vaccines are grouped +
 _i.e. Child, Adult, Pregnant, etc._
-* *D[.underline]##I##COM Type*: the way similar DICOM types are grouped +
+* *[.underline]##I##maging Type*: the way similar imaging types are grouped +
 _i.e. X-Ray, CT-Scan, NMR, etc._
 
 
@@ -2560,12 +2674,12 @@ The functions available in this window (similar to other windows in the *_Types_
 The Vaccine Types defined are used in the Vaccine function (see
 <<vaccines,Vaccines>> in this document).
 
-[#dicom-types]
-==== 12.2.14 DICOM Types (D[.underline]##I##COM Type)
+[#imaging-types]
+==== 12.2.14 Imaging Type ([.underline]##I##maging Type)
 
-Once the *D[.underline]##I##COM Type* button in the *_Types_* menu is pressed, the *_DICOM Type Browser_* window is shown:
+Once the *[.underline]##I##maging Type* button in the *_Types_* menu is pressed, the *_Imaging Type Browser_* window is shown:
 
-image:image242.png[DICOM Types]
+image:image242.png[Imaging Types]
 
 The functions available in this window (similar to other windows in the *_Types_* menu) are:
 
@@ -2574,8 +2688,8 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-The DICOM Types defined are used in the DICOM Load function (see
-<<dicom-viewer,DICOM Viewer>> in this document).
+The Imaging Types defined are used in the imaging Load function (see
+<<imaging-viewer,Imaging Viewer>> in this document).
 
 === 12.3 Hospital ([.underline]##H##ospital)
 
@@ -2590,6 +2704,7 @@ image:image163.png[Hospital edit]
 By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected throughout the entire application; for example, in the reports heading (see
 <<statistics,Statistics>> in this document).
 
+[#ward]
 === 12.4 Ward ([.underline]##W##ard)
 
 Once the *[.underline]##W##ard* button in the *_Settings_* menu is pressed, the *_Ward Browser_* window is shown:
@@ -2614,14 +2729,15 @@ To insert a new ward, provide the following required inputs:
 * *Number of beds*: the value is shown in the admission module to check for available beds; 0 – zero beds wards will be not shown in the admission module
 * *Number of nurses*: it may be shown in some reports (0 – zero is allowed)
 * *Number of doctors*: it may be shown in some reports (0 – zero is allowed)
-* *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked it means that ward can be a destination for discharging movements, otherwise it will be not shown in the list
+* *Visit duration*: length of a visit (in minutes and must be greater than zero)
+* *Ward with OPD*: if checked, it means that the ward will also be available in the <<opd-extended,OPD Extended>> mode
+* *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked, it means that the ward can be a destination for discharging movements, otherwise it will be not shown in the list
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
 
-NOTE: Using this function the definition of wards with 0 (zero) beds but with a pharmacy is possible.
-This allows for "logical" departments (rather than physical) to manage pharmacy movements.
+NOTE: Maternity (M) and OPD (OPD) wards are _built-in_ wards and cannot be deleted, although they can be modified as needed.
 
-The wards defined are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
+The wards defined here are used throughout the entire application. See for example, the Admission module, Pharmaceuticals Stock and Pharmaceuticals Stock Ward (see
 <<admission-patient,Admission/Patient>>, <<pharmaceutical-stock,Pharmaceutical Stock>> and
 <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
@@ -2636,7 +2752,7 @@ The functions available in this window are:
 
 * *Selected Type*: filter the list by selecting only one Disease Type.
 * *[.underline]##N##ew*: enter a new disease (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing disease (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing disease (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing disease (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2644,7 +2760,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Disease_* window is sh
 
 image:image167.png[Edit Disease]
 
-In editing mode, the type and code cannot be changed and the the only modifications allowed are to the Description and if the disease should appear only in OPD, or Admissions, or in both.
+In editing mode, the code cannot be changed and the only modifications allowed are to the Type, the Description and if the disease should appear only in OPD, or Admissions, or in both.
 
 By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) a *[.underline]##D##elete* action is performed disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
@@ -2664,7 +2780,7 @@ The functions available in this window are:
 * *Search*: subset the list by typing a keyword.
 * *Select Type*: subset the list by selecting only one Exam Type.
 * *[.underline]##N##ew*: enter a new exam (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing exam (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing exam (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing exam (it is set as not present in OPD or in IPD).
 * *[.underline]##R##esults*: define possible results for the selected exam.
 * *[.underline]##C##lose*: close the window.
@@ -2673,7 +2789,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Exam_* window is shown
 
 image:image169.png[Edit Exam]
 
-In editing mode, the type, code or procedure cannot be changed and the only modifications allowed are to the Description and the default value.
+In editing mode, the code or procedure cannot be changed and the only modifications allowed are to the Type, the Description and the default value.
 
 By pressing the *[.underline]##N##ew* button, the *_New Exam_* window is shown:
 
@@ -2690,7 +2806,7 @@ To insert a new Exam the following data must be provided:
 [#results]
 ==== 12.6.1 Results ([.underline]##R##esults)
 
-Once an exam is defined, the next step is the definition of the set of results the 
+Once an exam is defined, the next step is the definition of the set of results the
 exam can have. First, select the exam in the *_Exam Browser_* window and then press the *[.underline]##Re##sults* button.
 
 In Open Hospital three kinds of results can be defined, called “Procedure”:
@@ -2728,7 +2844,7 @@ The functions available in this window are:
 
 * *Selected type*: filter the list by selecting only one Operation Type.
 * *[.underline]##N##ew*: enter a new operation (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing operation (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing operation (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing operation (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2736,7 +2852,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Operation_* window is 
 
 image:image174.png[Edit Operation]
 
-In editing mode, the type or the code cannot be changed but only modification of the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
+In editing mode, the code cannot be changed but only modification of the Type, the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
 
 You can also change the operation's context: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
 
@@ -2753,7 +2869,7 @@ The functions available in this window are:
 
 * *Selected type*: filter the list by selecting only one Vaccine Type.
 * *[.underline]##N##ew*: enter a new vaccine (cannot use an existing code).
-* *[.underline]##E##dit*: edit an existing vaccine (the code and type cannot be changed).
+* *[.underline]##E##dit*: edit an existing vaccine (the code cannot be changed).
 * *[.underline]##D##elete*: delete an existing vaccine (it is set as not present in OPD or in IPD).
 * *[.underline]##C##lose*: close the window.
 
@@ -2761,7 +2877,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Vaccine_* window is sh
 
 image:image176.png[Edit Vaccine]
 
-In editing mode, type and code cannot be changed; only modification of the Description is permitted.
+In editing mode, the code cannot be changed; only modification of the Type and the Description is permitted.
 
 The vaccines defined are used throughout the entire application, like in the Vaccine module (see
 <<vaccines,Vaccines>> in this document).
@@ -2910,7 +3026,6 @@ image:image185.png[New SMS]
 In order to insert a new SMS, the following data is required:
 
 * *Scheduled Date*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
-* *Scheduled Time*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
 * *Number*: the recipient of the SMS. You can select a patient by clicking the button image:image186.png[number icon,width=43,height=23]. The phone number of the selected patient is automatically inserted.
 * *SMS*: type the text of the SMS in the white space (maximum of 160 characters).
 
@@ -2985,7 +3100,7 @@ The functions available in this window are:
 
 * *Selected group*: filter the list by selecting only one group.
 * *[.underline]##N##ew*: enter a new user (cannot use the same name).
-* *[.underline]##E##dit*: edit an existing user (the group cannot be changed).
+* *[.underline]##E##dit*: edit an existing user (the password cannot be changed).
 * *[.underline]##R##eset Password*: change the password for an existing user.
 * *[.underline]##D##elete*: delete an existing user.
 * *[.underline]##C##lose*: close the window.
@@ -2994,7 +3109,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown
 
 image:image198.png[Edit User]
 
-In editing mode, only the description can be modified.
+In editing mode, only the group and the description can be modified.
 
 <<<
 
@@ -3036,5 +3151,5 @@ TIP: To schedule a visit can also be done in the *Therapy Management* module, se
 == 14 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#User's Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#User's Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#

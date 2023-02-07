@@ -1,4 +1,5 @@
-= Open Hospital 1.11.5 - Administrator’s Guide
+= Open Hospital 1.12.0 - Administrator’s Guide
+<<<
 :icons: font
 :stem:
 :toc: left
@@ -14,7 +15,7 @@
 image:OH-splash.png[OH splash,width=316,height=237]
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
 
 == Open Hospital
@@ -68,9 +69,9 @@ These specifications are for the OH application only; database server specificat
 Minimum Operating System version required for running OH:
 
 * Windows 7 (Windows 10/11 recommended)
-* Ubuntu 18.04 (Ubuntu 20.04 recommended)
+* Ubuntu 18.04 (Ubuntu 22.04 recommended)
 
-32 bit (i686) and 64 bit (x86_64) architectures are supported.
+32 bit (i686) and 64 bit (x86_64) architectures are supported: 64 bit architecture is recommended.
 
 [#download]
 === 1.5 Download
@@ -79,26 +80,22 @@ Open Hospital official releases can be downloaded from GitHub: https://github.co
 
 More information can be found on the Open Hospital website: https://www.open-hospital.org/download
 
-[#setup]
-=== 1.6 Initial setup
+[#unpack]
+=== 1.6 Unpack
 
-Open Hospital does not require installation. It is sufficient to unzip the downloaded package in a folder of your choice, e.g.:
+NOTE: Do not double-click on the **oh.bat** startup script without unzipping the package first!
 
-* on Linux:
-----
-/home/OH/OpenHospital-[VERSION]
-----
+A compressed archive can be opened on most operating systems by just double-clicking on it.
+In this way, the archive is just opened, but not uncompressed.
 
-* on Windows:
-----
-C:\Users\OH\OpenHospital-[VERSION]
-----
+In order to correctly run OH **you need to unzip (uncompress) the downloaded package** in a folder of your choice.
 
-To uncompress the package:
+To uncompress the package: *Right-click on the package -> Extract all/here*
+
+*Alternative method*: uncompress package from command line
 
 * on Linux:
 ----
-cd /home/OH
 tar zxvf OpenHospital-v[VERSION]-linux_[ARCH]-[portable].tgz # portable version
 unzip x OpenHospital-v[VERSION]-linux_multiarch.zip # multiarch client version
 ----
@@ -108,15 +105,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.11.4):
+After uncompressing the package, browse to the extracted directory (example given for version 1.12.0):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.11.4
+cd /home/OH/OpenHospital-v1.12.0
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.11.4
+cd C:\Users\OH\OpenHospital-v1.12.0
 ----
 
 
@@ -128,16 +125,27 @@ NOTE: Do not run OH by double-clicking on the **oh.bat** startup script without 
 
 In the following chapters, all the information needed to install, configure, deploy, run and maintain an Open Hospital 
 installation is presented, including procedures on how to enable and disable features as well as managing users and groups in a multi user environment.
-More information can be found on the Open Hospital web site https://www.open-hospital.org.
+More information can be found on the Open Hospital web site https://www.open-hospital.org/documentation.
 
 NOTE: The information needed to use the OH software is not included in this manual; please refer to the _Open Hospital User’s Guide_.
 
 
 == 2 Installation
 
+Open Hospital is a client application that can be used in three different ways: 
+
+* <<client,2.1 OH - CLIENT mode>>: multi computer setup, with a central database (requires a little IT knowledge)
+* <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with the database on the same computer (click and run)
+* <<server,2.3 OH - SERVER mode (portable)>>: multi computer setup, with the central database created by the Open Hospital script (click and run)
+
+TIP: PORTABLE mode can be also used to test the application.
+
+[#client]
 === 2.1 OH - CLIENT mode
 
-Open Hospital is a client application that can be used on a single computer (PORTABLE mode) or in a client/server configuration (CLIENT mode). The server part utilizes a DBMSfootnote:[DataBase Management System] to archive, share, and present the information. The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the preferred database server.
+In this mode, the application will need a Server with a DBMSfootnote:[DataBase Management System] to store the data. 
+
+The free and open-source MariaDBfootnote:[See https://www.mariadb.org] is the preferred database server.
 
 The typical client/server, networked (LAN) configuration is shown in the following figure:
 
@@ -145,14 +153,18 @@ image:image3.png[image,width=642,height=243]
 
 The Administrator/Installer tasks are hereby listed:
 
-* <<download,Download>> the Open Hospital package for the selected Operating System
-* <<setup,Setup>> the downloaded OH package by uncompressing the archive in a folder of your choice
-* <<jre,Install JAVA JRE>> - Java Runtime Environment (see compatibility matrix for the right version) on every client
-* <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the OH database server
-* <<ohdatabase-creation,Create the OH database>> through the execution of a script found in the _sql/_ folder
-* Copy the Open Hospital application on every client (it may also be installed on the server)
-* <<configuration,Configure>> each Open Hospital instance to point to the OH database server (using the hostname or the IP address)
+* Server 
+** <<download,Download>> the Open Hospital package for the selected Operating System (see <<prereq,Prerequisites>>)
+** <<unpack,Unpack>> the downloaded package on the server machine by uncompressing the archive in a folder of your choice
+** <<database-server,Install and configure MariaDB/MySQL>> on the server/computer that will act as the database server
+** <<ohdatabase-creation,Create the database>> through the execution of a script found in the _sql/_ folder
+** <<setup,Test>> and <<run,run>> the application using 'localhost' setting
+* Clients
+** Unpack the downloaded package on a client machine in a folder of your choice
+** <<setup,Configure>> and <<run,run>> the application to point to the database server using the hostname or the IP address
+** Copy the newly configured package on every client
 
+[#prereq]
 ==== 2.1.1 Prerequisites - Software compatibility matrix
 
 Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
@@ -166,14 +178,14 @@ Depending on the operating system, there are different ways to install the Java 
 The **oh.sh / oh.bat** scripts can be used to download and install the latest JRE available; it is also possible to install it
 manually, following the specific instructions for the operating system being used.
 
-NOTE: See Software Compatibility Matrix to identify the correct Java version.
+NOTE: See OH Software Compatibility Matrix to identify the correct Java version.
 
 [#database-server]
 ==== 2.1.3 Database Server
 
 Depending on the operating system, there are several software tools to install and manage a MariaDB/MySQL database server. In most cases just a standard installation package of the software is needed, paying attention to configuration options during the installation process.
 
-NOTE: See Software Compatibility Matrix to identify the correct MariaDB / MySQL version.
+NOTE: See OH Software Compatibility Matrix to identify the correct MariaDB / MySQL version.
 
 NOTE: MariaDB is the preferred alternative for the DBMS.
 
@@ -296,9 +308,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.11.4\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.12.0\sql
 
-C:\Users\OH\OpenHospital-v1.11.4\sql
+C:\Users\OH\OpenHospital-v1.12.0\sql
 
 ----
 
@@ -306,7 +318,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.11.4\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.12.0\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -316,7 +328,7 @@ using the ‘root’ password chosen during the installation process. The termin
 ----
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 13
-Server version: 10.2.43-MariaDB MariaDB Server
+Server version: 10.6.11-MariaDB MariaDB Server
 
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
@@ -325,7 +337,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 MariaDB [(none)]>
 ----
 
-now we are ready to create the database user (isf) with password, the main OH database and grant the necessary permissions with the following SQL commands:
+we are now ready to create the database user (isf) with password, the main OH database (oh) and grant the necessary permissions with the following SQL commands:
 
 [source,shell]
 ----
@@ -337,6 +349,8 @@ MariaDB> CREATE DATABASE oh CHARACTER SET utf8;
 MariaDB> FLUSH PRIVILEGES;
 
 ----
+
+NOTE: "isf123" is used here as the default password. Change it for production setup!
 
 To check if the database has been correctly created, enter the following command:
 
@@ -352,11 +366,11 @@ MariaDB> show databases;
 | performance_schema |
 +--------------------+
 ----
-The next step is to launch the main SQL database creation script with the command:
+The next step is to use the created database and launch the main SQL database creation script with the command:
 
 [source,shell]
 ----
-MariaDB> source create_all_en.sql
+MariaDB> use oh; source create_all_en.sql
 ----
 
 NOTE: The data can be installed in different languages by using the related "create_all_xx.sql" file or with demo data using the "create_all_demo.sql" file (English only).
@@ -393,11 +407,12 @@ MariaDB> quit;
 
 NOTE: Remember to set the updated database password also in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
-==== 2.1.5 OH - Database configuration
+[#setup]
+==== 2.1.5 OH - CLIENT configuration
 
-To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts or directly modify the _database.properties_ and _log4j.properties_ configuration files, located in the _oh/rsc/_ resource folder.
+To set up the database connection for Open Hospital, edit and configure the database settings in the **oh.sh / oh.ps1** startup scripts.
 
-Specify, according to the values specified in the installation phase:
+Database settings are:
 
 * the *IP address* of the the MariaDB/MySQL database server hosting the the Open Hospital database. Replace “localhost” with the server IP address (e.g., 192.168.1.100)
 * the *TCP Port Number* of the database server - default is “3306"
@@ -405,13 +420,45 @@ Specify, according to the values specified in the installation phase:
 * the *Database user* of the OH database - default is "isf"
 * the *Database password* associated with the user
 
+Please set them according to the values specified in the installation phase:
+
+in **oh.sh / oh.ps1** scripts
+
+```
+$script:MYSQL_SERVER="127.0.0.1"
+$script:MYSQL_PORT=3306
+$script:MYSQL_ROOT_PW="tmp2021oh111"
+$script:DATABASE_NAME="oh"
+$script:DATABASE_USER="isf"
+$script:DATABASE_PASSWORD="isf123"
+```
+NOTE: "isf123" is used here as the default password. Change it for production setup!
+
+After you can generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
+
+*Alternative method*: you can first generate the config files with the *-g* and after directly modify the _database.properties_ and _log4j.properties_ configuration files, located in the _oh/rsc/_ resource folder, without generating them every time.
+
+Please set them according to the values specified in the installation phase:
+
+in _database.properties_ config file
+```
+jdbc.url=jdbc:mysql://127.0.0.1:3306/oh
+jdbc.username=isf
+jdbc.password=isf123
+```
+
+in _log4j.properties_ config file
+```
+log4j.appender.DB.URL=jdbc:mysql://127.0.0.1:3306/oh?autoReconnect=true
+log4j.appender.DB.user=isf
+log4j.appender.DB.password=isf123
+```
+
 NOTE: These settings are required for every Open Hospital installation/client.
 
-More information on these files can be found in the sections <<database-properties,database.properties>> and
-<<log4j-properties,log4j.properties>>.
+More information on these files can be found in the <<configuration,3. Configuration>> section.
 
-NOTE: It is possible to use the provided scripts to generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
-
+[#run]
 ==== 2.1.6 OH - Startup and run
 
 The Open Hospital software is now ready to be run by executing the proper launcher command:
@@ -439,6 +486,7 @@ chmod 755 ./oh.sh
 
 NOTE: Remember to review your setup in the Open Hospital configuration files and startup scripts **oh.sh / oh.ps1**.
 
+[#portable]
 === 2.2 OH - PORTABLE mode
 
 Open Hospital is a Java software program and it is portable by definition. The *PORTABLE* mode described in this chapter refers to the possibility of using OH as a self contained package that includes Java, MariaDB/MySQL Server and all the data, without requiring any software installation. The package can be used on a single computer and used everywhere just by copying a folder - even onto an USB stick - carrying together all the saved data.
@@ -466,10 +514,17 @@ archive remain unchanged once extracted, otherwise the launcher cannot launch or
 NOTE: Important: the PORTABLE mode is meant to try or test the software or to be used in a facility (like a dispensary)
 where only a single computer is available. If the facility is large and more clients/operators need to work on the same data, the full installation (client/server) in a networked architecture is recommended.
 
-include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=25..413,leveloffset=+2]
+include::https://raw.githubusercontent.com/informatici/openhospital/master/oh-bundle/OH-README.md[lines=28..429,leveloffset=+2]
+
+[#server]
+=== 2.3 OH - SERVER mode (portable)
+
+Open Hospital can be launched in SERVER (portable) mode. SERVER mode launches a local instance of the database server and listens for connections from other clients.
+This mode is useful to test/simulate a client/server configuration or networked environment; it is not suggested for production setup.
+To setup a complete client / server configuration, refer to chapter <<database-server,2.1.3 - Database Server>>
 
 [#backup-restore]
-=== 2.3 Backup & Restore
+=== 2.4 Backup & Restore
 
 Backup of the Open Hospital database can be performed in several ways.
 
@@ -480,7 +535,7 @@ Restore of the Open Hospital database can be performed also in several ways.
 NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
 
 [#backup-data]
-==== 2.3.1 Backup of database (alternative with MySQL Workbench®)
+==== 2.4.1 Backup of database (alternative with MySQL Workbench®)
 
 There are several ways to back up and restore *data* with MySQL. The recommended method is to use a common MySQL client such as MySQL Workbench®:
 
@@ -505,7 +560,7 @@ image:image22.png[image,width=642,height=461]
 image:image22a.png[image,width=642,height=461]
 
 [#restore-data]
-==== 2.3.2 Restore of database (alternative with MySQL Workbench®)
+==== 2.4.2 Restore of database (alternative with MySQL Workbench®)
 
 To restore database data with MySQL Workbench®:
 
@@ -518,48 +573,51 @@ To restore database data with MySQL Workbench®:
 . Click the *Start Import* button at the right bottom corner of the window.
 
 
-==== 2.3.3 Backup of OH code and settings
+==== 2.4.3 Backup of OH code and settings
 
 Backup of the Open Hospital *code and settings* can be performed by saving the *"oh"* folder (configuration files are found under the *"oh/rsc"* folder).
 
 Backup of the client *data files*, useful for "PORTABLE" mode, can be performed by saving/copying the *"data"* folder (including all subfolders) found under the main OH installation path
 
 [#folders]
-=== 2.4 Folders and directory structure
+=== 2.5 Folders and directory structure
 
 Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *_<operating_system>_* with windows or linux and *_<arch>_* with the OS architecture (32 or 64 bit):
 
 * *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
-* *bundle* – contains the *language* files
-* *doc* – contains the Open Hospital *documentation*
-* *lib* – contains the Java *libraries* needed to run the software
-* *oh* – contains the Open Hospital application
-* *oh/bin* – contains the Open Hospital *binaries* (compiled software)
-* *oh/rpt* – contains the JasperReports® *reports* used in Open Hospital
-* *oh/rpt/PDF* – contains the reports generated by Open Hospital in PDF format
-* *oh/rsc* – contains the *resources* of Open Hospital, like configuration files and other related files
-* *oh/rsc/icons* – contains the *icons* used in Open Hospital for windows and buttons
-* *oh/rsc/images* – contains the *images* used in Open Hospital
-* *data* – contains the Open Hospital local data and configuration
-* *data/conf* – contains the DBMS configuration files
-* *data/db* – contains the database files (PORTABLE mode)
-* *data/logs* – contains all the log files
-* *data/dicom* – contains the dicom files
-* *data/dump* – contains the database backups
-* *sql* – contains the database creation scripts
-* *sql/extra* – contains SQL scripts for custom / experimental / temporary features
-* *tmp* – contains temporary files
+* *bundle* – language files
+* *doc* – Open Hospital documentation
+* *lib* – Java libraries needed to run the software
+* *oh* – Open Hospital application
+* *oh/bin* – Open Hospital binaries (compiled software)
+* *oh/rpt_base* – JasperReports® reports used by Open Hospital
+* *oh/rpt_base/PDF* – Reports defined in oh/rpt_base generated by Open Hospital in PDF format
+* *oh/rpt_stat* – JasperReports® reports used by Open Hospital in section Statistics
+* *oh/rpt_stat/PDF* – Reports defined in oh/rpt_stat generated by Open Hospital in PDF format
+* *oh/rpt_extra* – JasperReports® reports defined by the user
+* *oh/rpt_extra/PDF* – Reports defined in oh/rpt_extra generated in PDF format    
+* *oh/rsc* – *resources* of Open Hospital, as configuration files and other related files
+* *oh/rsc/icons* – icons used in Open Hospital for windows and buttons
+* *oh/rsc/images* – images used in Open Hospital
+* *data* – Open Hospital local data and configuration
+* *data/conf* – Database server configuration files
+* *data/db* – Database files (PORTABLE mode)
+* *data/logs* – Log files
+* *data/dicom* – Image files
+* *data/dump* – Database dumps/backups
+* *data/photo* – Patients photos
+* *sql* – Database creation scripts
+* *sql/extra* – SQL scripts for custom / experimental / temporary features
+* *tmp* – Temporary files
 
 These folders may be organized differently depending on the version of the software or the architecture of the operating system.
 
 Depending on the chosen operating system and architecture, the needed external applications and libraries (like MySQL/MariaDB and Java JRE) will be present also:
 
-** _zulu8.<version>-<operating_system>_<arch>/ - Java Virtual Machine
+** _zulu11.<version>-<operating_system>_<arch>/ - Java Virtual Machine
 ** _mariadb-<version>-<arch>/ or _mysql-<version>-<arch>-<build>/_ - MySQL Server or MariaDB Server
 
-<<<
-
-=== 2.5 Appearance
+=== 2.6 Appearance
 
 Open Hospital main menu appearance can be customized by adding a logo of choice. To test the feature, rename the image file _logo_hospital_example.png_ found in the _oh/rsc/images_ folder to _logo_hospital.png_:
 
@@ -573,7 +631,7 @@ The custom logo has to be a 100x100 pixel png image file.
 Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is set in the configuration files called “properties files”. The following properties files are found in the **oh/rsc** subfolder:
 
 ** *database.properties* – Open Hospital database connection
-** *dicom.properties* – DICOM viewer module options
+** *dicom.properties* – Imaging viewer module options
 ** *examination.properties* – contains the settings for the ‘examination’ module
 ** *log4j.properties* – Logging system and paths
 ** *settings.properties* – Open Hospital options and settings
@@ -591,7 +649,7 @@ The properties files can be generated automatically from the packaged _.dist_ fi
 
 NOTE: Any change to these files requires an application restart to apply the modified settings.
 
-NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The properties files can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 The following chapters will describe these properties files and their features in detail.
 
@@ -603,50 +661,76 @@ Default configuration is available in the _settings.properties.dist_ file:
 
 [source,properties]
 ----
+###########################################
 # This file contains Open Hospital settings
+###########################################
+# external settings
+MODE=OH_MODE
+DEMODATA=off
+
+# internal settings, modules, directories
 LANGUAGE=OH_LANGUAGE
-SINGLEUSER=yes
+SINGLEUSER=YES_OR_NO
+DEBUG=no
+DOC_DIR=OH_DOC_DIR
+PATIENTPHOTOSTORAGE=PHOTO_DIR
+INTERNALVIEWER=yes
+SMSENABLED=no
+VIDEOMODULEENABLED=yes
+XMPPMODULEENABLED=no
+
+# application settings
+ENHANCEDSEARCH=no
+INTERNALPHARMACIES=yes
+LABEXTENDED=yes
+LABMULTIPLEINSERT=yes
+MATERNITYRESTARTINJUNE=no
+MERGEFUNCTION=yes
+OPDEXTENDED=yes
+PATIENTEXTENDED=yes
+PATIENTVACCINEEXTENDED=yes
+
+# GUI settings
+MAINMENUALWAYSONTOP=no
+
+# accounting
+ALLOWMULTIPLEOPENEDBILL=yes
+ALLOWPRINTOPENEDBILL=yes
+BILLSREPORT=BillsReport
+BILLSREPORTMONTHLY=BillsReportMonthly
+BILLSREPORTPENDING=BillsReportPending
+PATIENTBILL=PatientBill
+PATIENTBILLGROUPED=PatientBillGrouped
+PATIENTBILLSTATEMENT=PatientBillStatement
+RECEIPTPRINTER=yes
+
+# pharmacy
 AUTOMATICLOT_IN=no
 AUTOMATICLOT_OUT=no
 AUTOMATICLOTWARD_TOWARD=no
 LOTWITHCOST=yes
-VISITSHEET=WardVisits
-PATIENTSHEET=patient_clinical_sheet_ver3
-EXAMINATIONCHART=patient_examination
-OPDCHART=patient_opd_chart
-ADMCHART=patient_adm_chart
-DISCHART=patient_dis_chart
-PATIENTBILL=PatientBill
-BILLSREPORT=BillsReport
-BILLSREPORTPENDING=BillsReportPending
-BILLSREPORTMONTHLY=BillsReportMonthly
 PHARMACEUTICALORDER=PharmaceuticalOrder
 PHARMACEUTICALSTOCK=PharmaceuticalStock_ver4
 PHARMACEUTICALSTOCKLOT=PharmaceuticalStock_ver5
 PHARMACEUTICALAMC=PharmaceuticalAMC
-PATIENTEXTENDED=yes
-OPDEXTENDED=yes
-MATERNITYRESTARTINJUNE=no
-LABEXTENDED=yes
-LABMULTIPLEINSERT=yes
-INTERNALPHARMACIES=yes
-MERGEFUNCTION=yes
-SMSENABLED=no
-INTERNALVIEWER=yes
-DOC_DIR=OH_DOC_DIR
-MAINMENUALWAYSONTOP=no
-RECEIPTPRINTER=yes
-VIDEOMODULEENABLED=yes
-PATIENTVACCINEEXTENDED=yes
-ENHANCEDSEARCH=no
-XMPPMODULEENABLED=no
+
+# dicom / imaging settings
 DICOMMODULEENABLED=yes
 DICOMTHUMBNAILS=yes
-ALLOWPRINTOPENEDBILL=yes
-ALLOWMULTIPLEOPENEDBILL=yes
-PATIENTBILLGROUPED=PatientBillGrouped
-PATIENTBILLSTATEMENT=PatientBillStatement
-DEBUG=no
+
+# reports
+ADMCHART=patient_adm_chart
+DISCHART=patient_dis_chart
+EXAMINATIONCHART=patient_examination
+OPDCHART=patient_opd_chart
+PATIENTSHEET=patient_clinical_sheet_ver3
+VISITSHEET=WardVisits
+
+# security
+SESSIONTIMEOUT=5
+STRONGPASSWORD=yes
+STRONGLENGTH=10
+USERSLISTLOGIN=no
 ----
 
 Every line is composed of a KEY and a value:
@@ -668,7 +752,7 @@ The following table shows the allowed values for the OH_LANGUAGE variable:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|LANGUAGE |en |ar, en, it, fr, es, de, sw
+|LANGUAGE |en |ar, de, en, es, fr, it, pt, sw, zh_CN
 |===
 
 Open Hospital is available in nine different languages, identified by the international country code:
@@ -688,7 +772,7 @@ If an unknown value is set, the local computer language is applied.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The OH_LANGUAGE can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the  **oh.sh / oh.ps1** scripts.
+NOTE: The language (OH_LANGUAGE) can be automatically set by using the provided **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.2 SINGLEUSER
 
@@ -707,7 +791,10 @@ When SINGLEUSER is set to YES (default) the program starts with this user and al
 
 If SINGLEUSER is set to NO the following login window appears when the program is started:
 
-image:image24.png[Login.png,width=305,height=148]
+image:image27.png[UsersListLogin.png,width=375,height=139]
+
+NOTE: See <<users-list-login, 3.1.36 USERSLISTLOGIN>> in this document to change the login mode.
+
 
 The default password for the “admin” user is “admin”. After typing this password in the white field and pressing *[.underline]##S##ubmit*, the main *_Menu_* with the functions are enabled.
 
@@ -1044,8 +1131,7 @@ The following table shows the default value and the allowed ones:
 |INTERNALPHARMACIES |yes |yes, no
 |===
 
-Open Hospital can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application
-(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#811-merge-function-merge[Merge function] in the User's Guide).
+Open Hospital can register all dispensing to patients within a ward. Activating this option, the Pharmaceutical Stock Ward functionality will be available in the application.
 
 By default, INTERNALPHARMACIES is set to yes.
 
@@ -1145,7 +1231,7 @@ By default, DOC_DIR is set to 'doc'.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.23 SMSENABLED
 
@@ -1324,8 +1410,8 @@ The following table shows the default value and the allowed ones:
 |DICOMMODULEENABLED |no |yes, no
 |===
 
-Open Hospital includes a feature that allows attaching DICOM files to a patient’s clinical sheet.
-When this option is enabled, a *DICOM* button is shown in the patient Clinical sheet module.
+Open Hospital includes a feature that allows attaching image files to a patient’s clinical sheet.
+When this option is enabled, a *Imaging* button is shown in the patient Clinical sheet module.
 
 By default, DICOMMODULEENABLED is set to no.
 
@@ -1342,7 +1428,7 @@ The following table shows the default value and the allowed ones:
 |DICOMTHUMBNAILS |yes |yes, no
 |===
 
-Open Hospital can enable or disable thumbnails in the Dicom Viewer.
+Open Hospital can enable or disable thumbnails in the Imaging Viewer.
 
 By default, DICOMTHUMBNAILS is set to yes.
 
@@ -1432,7 +1518,133 @@ By default, ALLOWPRINTOPENEDBILL is set to no.
 NOTE: An application restart is required to apply the modified setting.
 
 
+[#users-list-login]
+==== 3.1.36 USERSLISTLOGIN
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|USERSLISTLOGIN |no |yes, no
+|===
+
+When Open Hospital is used in multi-user mode, i.e. SINGLEUSER = no, it is possible to choose between two different login modes:
+
+(1) by typing the username directly in a textbox, if USERSLISTLOGIN is set to NO (default):
+
+image:image27.png[UsersListLogin.png,width=375,height=139]
+
+(2) by selecting the username from a list of users, if USERSLISTLOGIN is set to YES:
+
+image:image24.png[Login.png,width=375,height=139]
+
+By default, USERSLISTLOGIN is set to no.
+
+NOTE: An application restart is required to apply the modified setting.
+
+[#strongpasword]
+==== 3.1.37 STRONGPASSWORD
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|STRONGPASSWORD |yes | yes, no
+|===
+
+By default, the value of STRONGPASSWORD is the set to yes indicating that the
+password must contain at least one alphabetic, numeric, and special character.
+The list of recognized special characters is: *_$&+,:;=\?@#|/'<>.^*()%!-*
+
+NOTE: An application restart is required to apply the modified setting.
+
+[#stronglength]
+==== 3.1.38 STRONGLENGTH
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|STRONGLENGTH |10 | positive integer value
+|===
+
+The value of STRONGLENGTH is the minimum length of a user's password.
+
+NOTE: An application restart is required to apply the modified setting.
+
+
+==== 3.1.39 PATIENTPHOTOSTORAGE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value |Valid Values
+|PATIENTPHOTOSTORAGE |DB |DB, _<path_to_folder>_
+|===
+
+Open Hospital can save the user's profile picture in the database or on the file system.
+
+NOTE: The maximum size for patient's profile picture is limited to 32,768 bytes. If a bigger image is provided, it will automatically resized.
+
+If the PATIENTPHOTOSTORAGE parameter is set to a path (that is, not "DB"), then Open Hospital looks for or saves the patient's profile picture in the specified path.
+
+If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital looks for or saves the patient's profile picture in the Open Hospital database.
+
+
+By default, PATIENTPHOTOSTORAGE is set to "DB".
+
+NOTE: An application restart is required to apply the modified setting.
+
 [#database-properties]
+
+==== 3.1.40 SESSIONTIMEOUT
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|SESSIONTIMEOUT |5 | positive integer value
+|===
+
+The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyond which the software application performs the automatic logout.
+
+NOTE: An application restart is required to apply the modified setting.
+
+==== 3.1.41 EXAMINATIONCHART
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|EXAMINATIONCHART |patient_examination | any kind of .jasper file name
+|===
+
+Open Hospital can produce a report about patient_examinations.
+(see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#8-5-2-patient-examination[8.5.2 Patient Examination] in the User's Guide).
+
+By default, EXAMINATIONCHART is set to patient_examination which is the filename of the related report to use for the *Patient Examination* functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
+
+NOTE: An application restart is required to apply the modified setting.
+
+==== 3.1.42 VISITSHEET
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|VISITSHEET |WardVisits | any kind of .jasper file name
+|===
+
+By default, VISITSHEET is set to WardVisits which is the filename of the related report to use for the *Visit Sheet* functionality.
+It is possible to use a different report by installing it in the report folder (see <<reports,Reports>>) and by changing this parameter.
+
+NOTE: An application restart is required to apply the modified setting.
+
 === 3.2 database.properties
 
 Database configuration is set in the _database.properties_ file.
@@ -1463,12 +1675,12 @@ NOTE: An application restart is required to apply the modified setting.
 NOTE: The same settings must be applied in _log4.properties_, see
 <<log4j-properties,log4j.properties>> in this manual.
 
-NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 === 3.3 dicom.properties
 
-DICOM configuration is set in the _dicom.properties_ file.
-Default DICOM configuration is available in the _dicom.properties.dist_ file:
+Imaging configuration is set in the _dicom.properties_ file.
+A default imaging configuration is available in the _dicom.properties.dist_ file:
 
 [source,properties]
 ----
@@ -1483,11 +1695,11 @@ dicom.max.size=DICOM_SIZE
 Use the provided startup scripts in order to automatically generate the _dicom.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DICOM_STORAGE*: This property accepts one of the following:
-** SqlDicomManager: DICOM files are stored in the database
-** FileSystemDicomManager: DICOM files are stored in the file system
+** SqlDicomManager: Image files are stored in the database
+** FileSystemDicomManager: Image files are stored in the file system
 * *OH_PATH_SUBSTITUTE/DICOM_DIR*: if the value of the first parameter is set to "FileSystemDicomManager",
-this property specifies the path where the DICOM files are stored. It is possible to specify a local folder (_data/dicom_storage_ is the default path under the OH installation folder) or to set a shared network folder, useful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/dicom_storage_ path with a symbolic link.
-The shared folder needs read/write permissions for uploading DICOM images. Always use slash "/" in the path variable and not backslash "\".
+this property specifies the path where the image files are stored. It is possible to specify a local folder (_data/dicom_storage_ is the default path under the OH installation folder) or to set a shared network folder, useful for LAN - client/server environment. Suggested configuration is to map the network/NFS folder under the _data/dicom_storage_ path with a symbolic link.
+The shared folder needs read/write permissions for uploading images. Always use slash "/" in the path variable and not backslash "\".
 * *DICOM_SIZE*: maximum allowed size for a dicom/jpg image (the MariaDB/MySQL server setting max_allowed_packet should be set with the same or a larger value).
 If not specified the default value of "4M" is used.
 
@@ -1499,7 +1711,7 @@ dicom.storage.filesystem=Z:/OH/Shared/Dicom_images
 dicom.max.size=4M
 ----
 
-NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _dicom.properties_ file can be automatically generated/overwritten at any **oh.sh / oh.ps1**  startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 
 === 3.4 examination.properties
@@ -1663,7 +1875,7 @@ log4j.category.org.isf=INFO,RollingFile,StdOut
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
 (see <<database-properties,database.properties>>).
 
-NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the GENERATE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 
 NOTE: DEBUG mode can generate large log files and should be avoided in production environment.
@@ -1874,11 +2086,17 @@ Then edit the Arabic bundle file and set the LANGUAGE parameter to *ar* to start
 
 Reports in Open Hospital are produced with JasperReports® technology that allows one to design a report in a WYSIWYG (What You See Is What You Get) way, connect it to a datasource (DB), test it, modify it, and then compile it to use it in the application software.
 
-Open Hospital reports are all contained in reports rpt/ folder (see <<folders,Folders>> in this document). Each report consists of two files:
+Open Hospital reports are divided in three different folders, i.e. rpt_base/, rpt_stat/ and rpt_extra/ folder (see <<folders,Folders>> in this document):
+
+* rpt_base/ folder contains all the hardcoded reports used by the application
+* rpt_stat/ folder contains the OHxxx basic reports available in the Statistics menu
+* rpt_extra/ folder contains additional reports defined by the user also available in the Statistics menu. Users can create new custom reports, copy them to the folder and the application will make them available in the Statistics menu.
+    
+Each report consists of two files:
 
 * a .*jrxml* file: JasperReport XML file, that can be modified with a proper editor
 * a .*jasper* file: Jasper file, that is the compiled version that can be run in Open Hospital; this file is produced on the jrxml base
-* some reports could have also one or more *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English)
+* some reports could have also more than one *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name visualized in the Open Hospital application, otherwise the application will not show the report (this can be useful for subreports).
 
 The editor to create and modify JasperReports® is https://sourceforge.net/projects/jasperstudio/[TIBCO Jaspersoft® Studio] version 6.14.0 or later, a free and open-source software.
 
@@ -1886,18 +2104,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.11.4 in Eclipse EE
+== 5 Installing Open Hospital 1.12.0 in Eclipse EE
 
 The OH source code is available on GitHub at the following links:
 
-* https://github.com/informatici/openhospital-core/tree/v1.11.4[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.11.4[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.11.4[openhospital-doc]
+* https://github.com/informatici/openhospital-core/tree/v1.12.0[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.12.0[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.12.0[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.11.4 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.12.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -2058,9 +2276,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.11.4\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.0\sql
 
-C:\Users\OH\OpenHospital.1.11.4\sql>
+C:\Users\OH\OpenHospital.1.12.0\sql>
 ----
 
 [start=4]
@@ -2068,7 +2286,7 @@ C:\Users\OH\OpenHospital.1.11.4\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.11.4\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.12.0\sql> mysql –u root -p
 
 Enter password: ****
 ----
@@ -2143,5 +2361,5 @@ https://www.open-hospital.org/contact and specify:
 == 7 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2022 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
