@@ -938,7 +938,7 @@ For each bill the following [.underline]##data## are shown in the *Data table*:
 * *BALANCE*: the bill amount which has not yet been paid.
 * *IN/OUT*: the bill refers to an admission or OPD
 
-The follwing [.underline]##filter options## are available at the *Upper panel* of the *_Patient Bills Management_* window:
+The following [.underline]##filter options## are available at the *Upper panel* of the *_Patient Bills Management_* window:
 
 * *[user]* selector (e.g. 'admin'): users (cashiers) filter
 * *[.underline]##T##oday*: shows in the *Data table* only the bills for the current day.
@@ -1205,7 +1205,7 @@ The Open Hospital accounting module comes with a set of reports hereby listed:
 * *Period*: a report that shows a statement with all paid and unpaid bills within the period currently selected
 * *This month*: a report that shows a statement with all paid and unpaid bills within the current month
 * *Select month*: a report that shows a statement with all paid and unpaid bills within the specified month
-* *Patient's Statement*: a report that shows a statement with all paied and unpaid bills for the selected patient
+* *Patient's Statement*: a report that shows a statement with all paid and unpaid bills for the selected patient
 
 image:image63.png[Report Selection]
 
