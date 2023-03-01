@@ -731,6 +731,8 @@ SESSIONTIMEOUT=5
 STRONGPASSWORD=yes
 STRONGLENGTH=10
 USERSLISTLOGIN=no
+PASSWORDTRIES=5
+PASSWORDLOCKTIME=60
 ----
 
 Every line is composed of a KEY and a value:
@@ -1575,8 +1577,38 @@ The value of STRONGLENGTH is the minimum length of a user's password.
 
 NOTE: An application restart is required to apply the modified setting.
 
+[#passwordtries]
+==== 3.1.39 PASSWORDTRIES
 
-==== 3.1.39 PATIENTPHOTOSTORAGE
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDTRIES |5 | a positive integer value greater than or equal to 5
+|===
+
+The value of PASSWORDTRIES is the maximum number of consecutive failed passwords when attempting to log in before the account is locked.
+
+NOTE: An application restart is required to apply the modified setting.
+
+[#passwordlocktime]
+==== 3.1.40 PASSWORDLOCKTIME
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDLOCKTIME | 60 | a positive integer value greater than or equal to 60; the unit of time is minutes
+|===
+
+The value of PASSWORDLOCKTIME is the number of minutes that an account is locked after failing to specify the correct password the number of times specified by
+the PASSWORDTRIES variable described above.
+
+NOTE: An application restart is required to apply the modified setting.
+
+==== 3.1.41 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -1601,7 +1633,7 @@ NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 
-==== 3.1.40 SESSIONTIMEOUT
+==== 3.1.42 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1614,7 +1646,7 @@ The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyon
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.41 EXAMINATIONCHART
+==== 3.1.43 EXAMINATIONCHART
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1631,7 +1663,7 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.42 VISITSHEET
+==== 3.1.44 VISITSHEET
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
