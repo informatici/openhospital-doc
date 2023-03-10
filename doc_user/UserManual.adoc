@@ -284,7 +284,7 @@ The OPD Extended module affords the following additional features:
  for the same issue are also marked as *Re-Attendance*.
 
  Example: A patient comes to the ambulatory because they report a cut; this
- event is recorded as a *New Attenance* and the doctor sutures the wound and
+ event is recorded as a *New Attendance* and the doctor sutures the wound and
  invites the patient to come back in ten days; when the same patient comes
  back after ten days to have his/her stitches removed, a new OPD record is
  then created with the *Re-Attendance* flag set as this visit is a
@@ -967,7 +967,7 @@ NOTE: The USER column, The [User] selector and the *Third Row* are shown only in
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
 
-The *New Bill* function is used to to generate a new bill for a patient.
+The *New Bill* function is used to generate a new bill for a patient.
 Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
 
 To record a new bill it must be saved with the *[.underline]##S##ave* function (see description below).
