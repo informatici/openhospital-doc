@@ -170,7 +170,7 @@ NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ a
 ** *User*: Select visits by doctor (USER column): only visits inserted by the logged user (me) or All
 
 After specifying the selection criteria, press the *[.underline]##S##earch* button.
-The counter at the bottom of the window indicates how many visits match the specified criteria and the individual visit data is shown in the *Data table* area.
+The counter at the bottom of the window indicates how many visits match the specified criteria, and the individual visit data is shown in the *Data table* area.
 The *[.underline]##R##eset* button blanks all filters to default values.
 
 The example below shows all the visits for patients with _asthma_ disease admitted in the period from 29-5-2020 until
