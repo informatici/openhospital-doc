@@ -66,7 +66,7 @@ called a “button”. *[.underline]##P##harmacy* is a button.
 * When a text is written in bold Italic (as an example, *_Laboratory Browser)_*, it indicates the screen with the name
 “Laboratory Browser” (see example below). Each screen of the application is called a window. *_Laboratory Browser_* is a window.
 
-* When a text is written in bold as - *Search patient visits –* it indicates a function of the application,
+* When a text is written in bold as *Search patient visits –*, it indicates a function of the application,
 or an area of the window (for example, *Data table*).
 
 * Each button always has a single letter with an underscore. The functionality offered by the button is made available by
@@ -278,7 +278,7 @@ The OPD Extended module affords the following additional features:
  The important criteria for selecting *New Attendance* is that the problem
  under consideration is a new issue; that is, one that has not been dealt
  with previously. For an issue or disease previously dealt with but not completely addressed (that
- is, completely cured or healed) then *Re-Attendance* is
+ is, completely cured or healed), *Re-Attendance* is
  selected and records are created for the patient in regard to the
  follow-up care and instructions for recovery.  Any other follow-up visits
  for the same issue are also marked as *Re-Attendance*.
@@ -295,14 +295,14 @@ The OPD Extended module affords the following additional features:
 * Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
-* If editing an old OPD it is possible to change everything except the patient which the OPD refers to, and the "New Attendance" radio box.
+* If editing an old OPD, it is possible to change everything except the patient which the OPD refers to, and the "New Attendance" radio box.
 * In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
-* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>) the following is shown:
+* If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>), the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
 ** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
 
-NOTE: For OPD and IPD wards see <<ward,Ward>> settings.
+NOTE: For OPD and IPD wards, see <<ward,Ward>> settings.
 
 <<<
 
@@ -491,7 +491,7 @@ The following functions are available from the *Buttons panel* of the window *_S
 * *Stock [.underline]##L##edger*: show the history of movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur, for example, the wrong quantity of a pharmaceutical is inserted in charge then use a new opposite movement to correct the mistake. In this example use a discharge movement to undo the unwanted change.
+NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -1041,7 +1041,7 @@ The *Buttons panel* of the *_Medical_* window has the following choices:
 * *[.underline]##O##K*: select the highlighted pharmaceutical
 * *[.underline]##C##ancel*: return to the *_New Patient Bill_* window without selecting any pharmaceutical
 
-If *[.underline]##O##K* is selected the *_Quantity_* window is shown, where the quantity of the pharmaceutical used by the patient can be entered:
+If *[.underline]##O##K* is selected, the *_Quantity_* window is shown, where the quantity of the pharmaceutical used by the patient can be entered:
 
 image:image57.png[Quantity]
 
@@ -1105,18 +1105,18 @@ A payment can be removed by selected the payment in the *_New Patient Bill_* win
 
 ===== 6.2.1.8 Give Change ([.underline]##G##ive Change)
 
-Sometimes it could be useful to calculate the difference between the bill balance and the payment amount the patient is making when paying their bill. By pressing the *[.underline]##G##ive Change* button the amount the patient is paying must be specified and the program calculates the difference between the payment and the current bill balance. If the amount being paid is greater than the bill balance (i.e., they are overpaying) the amount of change to give to the patient is displayed.
+Sometimes it could be useful to calculate the difference between the bill balance and the payment amount the patient is making when paying their bill. By pressing the *[.underline]##G##ive Change* button the amount the patient is paying must be specified and the program calculates the difference between the payment and the current bill balance. If the amount being paid is greater than the bill balance (i.e., they are overpaying), the amount of change to give to the patient is displayed.
 
 [#save-function-accounting]
 ===== 6.2.1.9 Save Function ([.underline]##S##ave)
 
-When all the data input for a bill is completed (bill or payments) press the *[.underline]##S##ave* button in the *Buttons panel* of the *_New Patient Bill_* window.
+When all the data input for a bill is completed (bill or payments), press the *[.underline]##S##ave* button in the *Buttons panel* of the *_New Patient Bill_* window.
 
 The application saves the bill and returns to the *_Patient Bills Management_* window; the status of the bill is “O” (Open) until it is PAID (*P[.underline]##a##id*).
 
 ===== 6.2.1.10 Paid Function (P[.underline]##a##id)
 
-If the patient is going to pay the complete amount of the bill press the *P[underline]##a##id* button. If the balance is not equal to zero the system automatically adds a payment in the payments list equal to the balance and sets the bill as “C” (Closed).
+If the patient is going to pay the complete amount of the bill, press the *P[underline]##a##id* button. If the balance is not equal to zero, the system automatically adds a payment in the payments list equal to the balance and sets the bill as “C” (Closed).
 
 ===== 6.2.1.11 Print Receipt Function
 
@@ -1139,7 +1139,7 @@ NOTE: Only bills with a status of “O” (Open) can be modified by enabled user
 
 If the bill, at the time of creation, was related to an admitted patient, the related ward is shown in the upper right.
 
-If the patient's status has changed the application prompts for the next action:
+If the patient's status has changed, the application prompts for the next action:
 
 *Case 1)*
 
@@ -1315,7 +1315,7 @@ To record a new patient vaccination, enter the following fields:
 NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter.
 
-When all the required information is entered the *Buttons panel* has the following choices:
+When all the required information is entered, the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm the data and record the patient vaccination.
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without recording the patient vaccination,
@@ -1376,7 +1376,7 @@ By default, the window shows a *Data table* all of the patients currently presen
 
 image:image78.png[Patient Browser,width=600,height=300]
 
-NOTE: If the list of patients becomes very large it is likely to result in a slowdown of the system depending on the
+NOTE: If the list of patients becomes very large, it is likely to result in a slowdown of the system depending on the
 network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in the
 configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
@@ -1483,7 +1483,7 @@ To record a new patient, enter the following fields:
 * *Telephone*: the patient's telephone number
 * *Note*: A free text for adding notes about the patient
 
-When finished entering the data the *Buttons panel* has two choices:
+When finished entering the data, the *Buttons panel* has two choices:
 
 * *[.underline]##O##K*: confirm the data and add the patient's record.
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without adding the patient.
@@ -1494,7 +1494,7 @@ To modify the data of a patient, select the patient in the *_Patient Browser_* w
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
-When finished modifying the data in the *Buttons panel* there are two choices:
+When finished modifying the data in the *Buttons panel*, there are two choices:
 
 * *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data.
@@ -1574,7 +1574,7 @@ Once the camera is activated and the “eye-view” of the camera is visible, pr
 
 Open Hospital attempts to automatically set the best quality for any webcam connected to the computer and remembers the last settings used.
 
-NOTE: If the camera does not function then change the flag to DEBUG in the configuration file to generate additional
+NOTE: If the camera does not function, then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ====== 8.4.6 anamnesis
@@ -1591,9 +1591,9 @@ The admission functions include the managing of patient admission, including sur
 To access the Admission function, first highlight the patient in the *_Patient Browser_* window.
 Next, press the *[.underline]##A##dmission* button.
 
-If the patient is not admitted then the *_New Admission_* window is shown.
+If the patient is not admitted, then the *_New Admission_* window is shown.
 
-If the patient is already admitted then the *_Edit Admission Record_* is shown.
+If the patient is already admitted, then the *_Edit Admission Record_* is shown.
 
 [#start-the-admission-of-a-patient]
 ==== 8.5.1 Start the Admission of a Patient ([.underline]##A##dmission)
@@ -1623,7 +1623,7 @@ NOTE: The "Progressive in Year" field is automatically populated by the program;
 counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
 [.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or refer to the _Administrator’s Guide_.
 
-When done entering data the *Buttons panel* has the following choices:
+When done entering data, the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm and persist the current values.
 * *E[.underline]##x##amination*: open the *_Examination_* window (see
@@ -1738,7 +1738,7 @@ image:image97.png[AdmissionDischarge,width=642,height=337]
 
 NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
-When all the data has been entered the *Buttons panel* has the following choices:
+When all the data has been entered, the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm the values on the window.
 * *E[.underline]##x##amination*: to open the *_Examination_* window (See
@@ -1752,7 +1752,7 @@ image:image98.png[Discharged,width=642,height=337]
 
 === 8.6 OPD ([.underline]##O##PD)
 
-If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator) the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting an OPD by selecting the related patient first (see
+If the _OPDEXTENDED_ flag is set as YES in the configuration file (ask the Administrator), the button *[.underline]##O##PD* in the *_Patient Browser_* window allows for starting an OPD by selecting the related patient first (see
 <<create-a-new-patient-visit,Create a new patient visit>> for more information).
 
 === 8.7 Bill ([.underline]##B##ill)
@@ -1792,7 +1792,7 @@ To modify the data of an admission, select the admission in the *Data table* of 
 
 image:image100.png[Edit Admission Record,width=642,height=333]
 
-When the changes are complete the *Buttons panel* has the following choices:
+When the changes are complete, the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -1805,7 +1805,7 @@ To modify the data of an outpatient visit, select the OPD in the *Data table* of
 
 image:image100o.png[Edit OPD Registration,width=642,height=333]
 
-When the changes are complete the *Buttons panel* has the following choices:
+When the changes are complete, the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -2006,7 +2006,7 @@ The removal of a therapy is not effective until it is confirmed with the *[.unde
 [#check-availability-of-the-pharmaceuticals]
 ==== 8.10.4 Check Availability of the Pharmaceuticals (C[.underline]##h##eck Availability)
 
-When the therapy plan is entered (all the therapies of a patient) press the _Check Availability_ button in the *Buttons panel* on the right side of the *_Therapy_* window to check the availability of the related pharmaceuticals in the hospital. If the pharmaceutical checked is present in the quantity requested by the therapy plan green-colored checkmark is shown.
+When the therapy plan is entered (all the therapies of a patient), press the _Check Availability_ button in the *Buttons panel* on the right side of the *_Therapy_* window to check the availability of the related pharmaceuticals in the hospital. If the pharmaceutical checked is present in the quantity requested by the therapy plan, a green-colored checkmark is shown.
 
 image:image112.png[Therapy available]
 
@@ -2032,7 +2032,7 @@ When the input of the therapy plan is completed, press the *[.underline]##S##ave
 image:image116.png[Therapy plan saved]
 
 If the availability check has not been executed yet (see
-<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>) the *_Not checked_* window is shown:
+<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>), the *_Not checked_* window is shown:
 
 image:image114.png[Therapy not checked]
 
@@ -2042,7 +2042,7 @@ The *Buttons panel* has the following choices:
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
 If the availability check is done (see
-<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>) but the drugs requested by the therapy plan are not available in the hospital, the *_Not Available_* window is shown:
+<<check-availability-of-the-pharmaceuticals,Check availability of the pharmaceuticals>>), but the drugs requested by the therapy plan are not available in the hospital, the *_Not Available_* window is shown:
 
 image:image115.png[Therapy not available]
 
@@ -2131,7 +2131,7 @@ The other (older) patient is then deleted.
 
 ==== 8.11.1 Different Names
 
-If two patients with different names are merged the final name must be chosen in the window shown below:
+If two patients with different names are merged, the final name must be chosen in the window shown below:
 
 image:image121.png[Patient merge names]
 
@@ -3037,7 +3037,7 @@ To delete an SMS, highlight the SMS and click the *[.underline]##D##elete* butto
 
 The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
 
-If _SINGLEUSER_ is set to NO the following login window is shown when the program starts:
+If _SINGLEUSER_ is set to NO, the following login window is shown when the program starts:
 
 image:image187.png[Login,width=305,height=148]
 
