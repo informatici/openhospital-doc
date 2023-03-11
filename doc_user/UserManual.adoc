@@ -295,7 +295,7 @@ The OPD Extended module affords the following additional features:
 * Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
-* If editing an old OPD, it is possible to change everything except the patient which the OPD refers to, and the "New Attendance" radio box.
+* If editing an old OPD, it is possible to change everything except the patient to whom the OPD, and the "New Attendance" radio box.
 * In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
 * In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>), the following is shown:
@@ -459,10 +459,10 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 
 * date of the movement
 * type of the movement, that is, if it is a charging or discharging one
-* the ward that the movement refers to. This feature is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used; otherwise, this field is empty
+* the ward to which the movement refers. This feature is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used; otherwise, this field is empty
 * the quantity
 * the pharmaceutical (which in turn relates to different categories: Laboratory, Surgery, Drugs or Chemical)
-* the lot to which the movement is referred to. Some pharmaceuticals may not have a lot related (for example, ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
+* the lot to which the movement is referred. Some pharmaceuticals may not have a lot related (for example, ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
 ** a name (that can be its code)
 ** a preparation date
 ** a due date
