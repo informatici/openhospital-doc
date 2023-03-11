@@ -1728,7 +1728,7 @@ To discharge a patient from the hospital, highlight the patient in the *_Patient
 To complete the discharge of the patient, enter the following data:
 
 * *Discharge Date*: the date of the discharge
-* *Bed Days*: the number of days admitted; computed by the system by finding the difference between admission date and discharge date
+* *Bed Days*: the number of days admitted. Computed by the system as the difference between admission date and discharge date
 * *Discharge Type*: the type of the discharge
 * *Diagnosis OUT*: the diagnosis the patient was discharged with
 
@@ -3115,7 +3115,7 @@ In editing mode, only the group and the description can be modified.
 [#worksheet]
 == 13 Worksheet ([.underline]##W##orksheet)
 
-The *Worksheet* function allows for the management and printing of the list of appointments scheduled.
+The *Worksheet* function allows the management and printing of the list of appointments scheduled.
 
 .Click the mouse on the button or press "Alt + W" to enter the *Worksheet* page:
 
