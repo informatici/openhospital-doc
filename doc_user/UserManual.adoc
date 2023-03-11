@@ -2100,7 +2100,7 @@ Press *[.underline]##O##K* to save the appointment and it will be shown in the c
 
 image:image118c.png[Therapy,width=600,height=302]
 
-TIP: By pressing the *Worksheet* button a visit can be added also there after checking the actual workload for a specific date.
+TIP: By pressing the *Worksheet* button, a visit can be added also there, after checking the actual workload for a specific date.
 
 
 === 8.11 Merge Function ([.underline]##M##erge)
