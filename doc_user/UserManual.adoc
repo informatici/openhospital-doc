@@ -1105,7 +1105,7 @@ A payment can be removed by selected the payment in the *_New Patient Bill_* win
 
 ===== 6.2.1.8 Give Change ([.underline]##G##ive Change)
 
-Sometimes it could be useful to calculate the difference between the bill balance and the payment amount the patient is making when paying their bill. By pressing the *[.underline]##G##ive Change* button the amount the patient is paying must be specified and the program calculates the difference between the payment and the current bill balance. If the amount being paid is greater than the bill balance (i.e., they are overpaying), the amount of change to give to the patient is displayed.
+Sometimes it could be useful to calculate the difference between the bill balance and the payment amount the patient is making when paying their bill. By pressing the *[.underline]##G##ive Change* button, the amount the patient is paying must be specified and the program calculates the difference between the payment and the current bill balance. If the amount being paid is greater than the bill balance (i.e., they are overpaying), the amount of change to give to the patient is displayed.
 
 [#save-function-accounting]
 ===== 6.2.1.9 Save Function ([.underline]##S##ave)
@@ -1399,7 +1399,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *[.underline]##O##PD*: start an OPD visit on the selected patient.
 * *[.underline]##L##aboratory*: start a new laboratory exam on the selected patient.
 * *[.underline]##B##ill*: start a bill on the selected patient.
-* *Da[.underline]##t##a*: modify data for a patient including the history of their admissions/out of patient visits as well as their malnutrition data.
+* *Da[.underline]##t##a*: modify data for a patient, including the history of their admissions/out of patient visits as well as their malnutrition data.
 * *Clinical [.underline]##S##heet*: analyze the clinical sheet of a patient and print it.
 * *T[.underline]##h##erapy*: manage the therapy of a patient.
 * *[.underline]##C##lose*: exit from the *_Patient Browser_* window and return to the main menu.
@@ -1608,11 +1608,11 @@ image:image92.png[New Admission,width=637,height=334]
 To start an admission, enter the appropriate date into the following fields (on the right side of the window):
 
 * *Ward*: the ward where the patient is admitted
-* *From Health Unit*: (not mandatory) in case of referral optionally enter the name of the facility where the patient came from
+* *From Health Unit*: (not mandatory) in case of referral, optionally enter the name of the facility where the patient came from
 * *Progressive in Year*: is the progressive number per year and per ward automatically set by the system; the value can be changed as needed
 * *Admission Date*: the date of the admission, automatically set to today
 * *Admission Type*: the type of admission (i.e. Ambulance, Self, Referral, etc.)
-* *Malnutrition*: (not mandatory) in case of malnutrition optionally check this box so management of the malnutrition control can be done in the *_Patient Data_* window (see the Malnutrition control function).
+* *Malnutrition*: (not mandatory) in case of malnutrition, optionally check this box so management of the malnutrition control can be done in the *_Patient Data_* window (see the Malnutrition control function).
 * *Diagnosis IN*: the diagnosis the patient was admitted with
 
 TIP: It is possible to filter to find diseases more easily. To do this, enter a text fragment in the search field that is part of the disease name. The closer the search text comes to the name of the disease being searched for, the more precise the search is.
@@ -2100,7 +2100,7 @@ Press *[.underline]##O##K* to save the appointment and it will be shown in the c
 
 image:image118c.png[Therapy,width=600,height=302]
 
-TIP: By pressing the *Worksheet* button, a visit can be added also there, after checking the actual workload for a specific date.
+TIP: By pressing the *Worksheet* button, a visit can also be added there, after checking the actual workload for a specific date.
 
 
 === 8.11 Merge Function ([.underline]##M##erge)
@@ -2494,7 +2494,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-The Disease Types defined are used throughout the application. For example, in the definition of Diseases or in OPD (see
+The Disease Types defined are used throughout the application (for example, in the definition of Diseases or in OPD - see
 <<disease,Disease>> and <<create-a-new-patient-visit,Create a new patient visit>> in this document).
 
 [#exam-types]
@@ -2557,8 +2557,8 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-The Medical Types defined are used throughout the application. For example,
-in the Pharmacy function and Pharmaceutical Stock Ward (see
+The Medical Types defined are used throughout the application (for example,
+in the Pharmacy function and Pharmaceutical Stock Ward  - see
 <<insert-a-new-pharmaceutical,Insert a new pharmaceutical>> and
 <<search-ward-pharmacy-movements,Search Ward Pharmacy movements>> in this document).
 
@@ -2622,7 +2622,7 @@ To insert a new price, provide the following data:
 
 image:image153.png[New Prices_daily]
 
-* *Discharge*: if the item has to be treated as a negative value so it will act as a discharge in the billing statement (i.e., Charge-Off, Free-of-charge, etc.).
+* *Discharge*: if the item must be treated as a negative value to act as a discharge in the billing statement (i.e., Charge-Off, Free-of-charge, etc.).
 * *Undefined*: if the item has no value in the Price List and the amount was set as “on the fly” while editing a bill; if checked, a value for “How much is it?” in the following *_Undefined_* window must be provided:
 
 image:image154.png[New Prices_undefined]
@@ -2644,7 +2644,7 @@ image:image156.png[Age Types Edit]
 
 By double-clicking on each value, the value is changed by typing a new value. Then pressing the *[.underline]##S##ave* button, the new information is stored in the system.
 
-Only integer values are allowed and every range must be *contiguous* and may not *overlap* any previous or following value.
+Only integer values are allowed; also, every range must be *contiguous* and may not *overlap* any previous or following value.
 
 For example, in the following case, ranges _Late Childhood_ and _Adolescent_ are not *contiguous* and ages 14 and 15 are not defined in any range:
 
@@ -2700,7 +2700,7 @@ By pressing the *[.underline]##E##dit* button, it is possible to modify the hosp
 
 image:image163.png[Hospital edit]
 
-By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected throughout the entire application; for example, in the reports heading (see
+By pressing the *[.underline]##U##pdate* button, the new information is stored in the system and is reflected throughout the entire application (for example, in the reports heading - see
 <<statistics,Statistics>> in this document).
 
 [#ward]
@@ -3131,8 +3131,8 @@ Once you have selected the ward (it is possible to switch to another ward at any
 
 image:image246.png[Worksheet with selection,width=600,height=265]
 
-Another date can be selected with the *Go to date* field or reset the schedule back to today with the button *Today*.
-In all cases, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
+You can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
+In either case, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
 
 The functions available in this window are:
 
