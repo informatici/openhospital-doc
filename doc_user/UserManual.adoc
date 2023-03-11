@@ -504,7 +504,7 @@ Using the *_Stock Movement Browser_* search function, the information in the win
 * how many boxes of pharmaceutical remains in the stock
 * which movements have been made on a specific day
 * in which ward a specific pharmaceutical has been discharged
-* if there are any pharmaceutical expired
+* if there are any pharmaceuticals expired
 
 Queries about movements of pharmaceuticals can be done using the search criteria available on the *Selection panel* area of the *_Stock Movement Browser_* window (left side of the browser). The search results are shown in the *Data table* area.
 
