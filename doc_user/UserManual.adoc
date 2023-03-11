@@ -1436,7 +1436,7 @@ Patient selection can be accomplished by specifying a specific value for the fie
 ** *Female*
 
 * *Search Key* Any character string entered is matched against the patient's name and address.
-A complete string or only some characters can be entered and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients who have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
+A complete string or only some characters can be entered, and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients who have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
 
 image:image79.png[Patient Browser Search,width=600,height=300]
 
@@ -1445,7 +1445,7 @@ NOTE: Wards can be defined by the Administrator. Ask the Administrator or check 
 
 ==== 8.2.2 Search Patient Enhanced
 
-Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
+When the number of registered patients becomes huge, memory usage can be optimized by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 Once the enhanced search has been enabled, the new *_Patient Browser_* window looks like the following:
 
@@ -1529,7 +1529,7 @@ To record a new patient, the following fields are available:
  +
 image:image86.png[Age by Age,width=187,height=74]image:image87.png[Age by Birthdate,width=188,height=74]image:image88.png[Age by Description,width=183,height=74]
  +
-Regardless of the way it is entered the age is converted to an age in years in the *_Patient Browser_* window.
+Regardless of how it is entered, the age is converted to an age in years in the *_Patient Browser_* window.
 
 NOTE: The date picker includes a "Clear" option (lower right corner) to remove or clear the current date value.
 image:image87a.png[Age by Age,width=187,height=74]
@@ -1541,7 +1541,7 @@ image:image87a.png[Age by Age,width=187,height=74]
 * *Mother's Name*: specify the name of the patient's mother and if she is still alive
 * *Parents Together*: specify if the parents are still together
 * *Has Insurance*: specify if the patient has a health financial protection plan (insurance)
-* *Load File*: a button used to load a patient's picture (it will be cropped and squared)
+* *Load File*: a button used to load a patient's picture (which will be cropped and squared)
 
 NOTE: Age Types (Descriptions) can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
@@ -3123,7 +3123,7 @@ The *Worksheet* function allows the management and printing of the list of appoi
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
 
-The _Worksheet_ module works at the Ward (Department) level therefore a ward must first be selected:
+The _Worksheet_ module works at the Ward (Department) level; therefore, a ward must first be selected:
 
 image:image245.png[Worksheet,width=600,height=265]
 
