@@ -296,8 +296,8 @@ The OPD Extended module affords the following additional features:
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
 * If editing an old OPD, it is possible to change everything except the patient to whom the OPD refers, and the "New Attendance" radio box.
-* In the case the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
-* In the case the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
+* In the event that the selected patient personal data need to be updated, it is possible to click on the Edit icon image:image15.png[Edit icon,width=26,height=26] near his/her name; a new window shows the patient personal information ready for modification.
+* In the event that the patient is not yet registered, the *_<new patient>_* entry can be selected to register a new patient; after registration, the program returns to the OPD window and the new patient is selected.
 * If the user is enabled by the Administrator (see <<users-groups,Users & Groups>>), the following is shown:
 ** the *Examination* button function (see <<patient-examination,Patient examination>>)
 ** the *Operation* tab after the patient's tab (5) to record small surgeries and other interventions (see <<operations,Operations>>) as well as in Admission (see <<insert-or-modify-surgery-data,Insert or Modify Surgery Data>>).
