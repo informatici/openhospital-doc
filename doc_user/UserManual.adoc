@@ -2107,7 +2107,7 @@ TIP: By pressing the *Worksheet* button a visit can be added also there after ch
 
 The merge function is used to merge two patients’ histories into a single case. This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
 
-To merge data of two patients requires the highlighting of both of them in the *_Patient Browser_* window.
+Merging data of two patients requires the highlighting of both of them in the *_Patient Browser_* window.
 
 image:image119.png[Patient merge,width=642,height=180]
 
