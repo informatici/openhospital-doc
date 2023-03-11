@@ -187,7 +187,7 @@ image:image11.png[New Patient Visit,width=391,height=435]
 
 To record a visit, enter data into the following fields:
 
-* *Type of attendance*: This field is not meant to distinguish whether an individual is new or not in the ambulatory
+* *Type of attendance*: This field is not meant to distinguish whether or not an individual is new in the ambulatory
 (that is, whether this is the absolute first time they have entered the ambulatory). The NEW ATTENDANCE selection
 indicates whether the patient comes to the ambulatory to report a new
 health issue or new disease for which no care has been previously addressed or recorded. This could be their initial
@@ -331,7 +331,7 @@ Pharmaceutical functions allow for the insertion, modification, and deletion of 
 * the current quantity lying in the stock
 * the limit quantity that defines when a pharmaceutical is going out of stock
 * if the pharmaceutical is out of stock
-* the expiring drugs today or a within a specified time period
+* the drugs expiring today or within a specified time period
 
 NOTE: In Open Hospital to identify pharmaceuticals sometimes the word, “pharmaceutical” is used and
 sometimes the synonym “medical” is used.
