@@ -501,7 +501,7 @@ image:image24.png[Stock Movements Filter,width=169,height=507]
 
 Using the *_Stock Movement Browser_* search function, the information in the window can be filtered to show:
 
-* how many boxes of pharmaceutical remains in the stock
+* how many boxes of pharmaceutical remain in the stock
 * which movements have been made on a specific day
 * in which ward a specific pharmaceutical has been discharged
 * if there are any pharmaceuticals expired
