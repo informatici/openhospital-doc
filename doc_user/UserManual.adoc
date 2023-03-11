@@ -208,7 +208,7 @@ The second and third list continues to contain all diseases.
 NOTE: Disease Types are defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter.
 
-* *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally, the patient reports at least one visit reason, but it may happen that
+* *Diagnosis*: A maximum of three diseases can be diagnosed per attendance (“new attendance” or “re-attendance” does not matter in this context). Normally, the patient reports at least one visit reason, but it may happen that
 during the same visit, the doctor finds other concurrent pathologies. Thus it is possible to record
 up to a maximum of three (the first being the only one mandatory) diagnoses. +
 It is possible to use filters to find diseases more easily.
@@ -429,7 +429,7 @@ image:image21.png[Export Save,width=452,height=319]
 
 ===== 4.1.2.5 Stock Report ([.underline]##S##tock)
 
-Press the *[.underline]##S##tock* button in the *_Pharmaceutical Browser_* window to produce the report of pharmaceuticals in the stock grouped by _IN STOCK_ and _OUT OF STOCK_.
+Press the *[.underline]##S##tock* button in the *_Pharmaceutical Browser_* window to produce the report of pharmaceuticals in the stock, grouped by _IN STOCK_ and _OUT OF STOCK_.
 
 ===== 4.1.2.6 Stoc[.underline]##k##Card (Stoc[.underline]##k##Card)
 
@@ -443,7 +443,7 @@ Press the *[.underline]##O##rder* button in the *_Pharmaceutical Browser_* windo
 
 ===== 4.1.2.8 Expiring Pharmaceuticals (Ex[.underline]##p##iring)
 
-Press the *Ex[.underline]##p##iring* button in the *_Pharmaceutical Browser_* window to produce the list of pharmaceuticals that are going to expire grouped by type and lot.
+Press the *Ex[.underline]##p##iring* button in the *_Pharmaceutical Browser_* window to produce the list of pharmaceuticals that are going to expire, grouped by type and lot.
 
 ===== 4.1.2.9 Average Monthly Consumption (A[.underline]##M##C)
 
