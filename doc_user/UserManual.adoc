@@ -133,7 +133,7 @@ image:OH-main_menu.png[OH Main Menu]
 
 === 3.2 Functions of Out Patient Department
 
-All functions available under *[.underline]##O##PD* are accessible from the window *_OPD Out Patient Department_* shown below:
+All functions available under *[.underline]##O##PD* are accessible from the window *_OPD Out Patient Department_*, shown below:
 
 image:image9.png[OPD,width=800,height=319]
 
@@ -181,7 +181,7 @@ image:image10.png[OPD Visits,width=810,height=337]
 [#create-a-new-patient-visit]
 ==== 3.2.2 Create a New Patient Visit ([.underline]##N##ew)
 
-Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the *_New OPD Registration_* window shown below.
+Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the *_New OPD Registration_* window, shown below.
 
 image:image11.png[New Patient Visit,width=391,height=435]
 
@@ -260,7 +260,7 @@ The OPD functionality can be extended by changing the _OPDEXTENDED_ flag in the 
 ==== 3.3.1 Additional Features
 
 Press the *[.underline]##N##ew* button in the *_OPD Out Patient Department_* window to access the
-*_New OPD Registration_* window shown below.
+*_New OPD Registration_* window, shown below.
 
 image:image14.png[OPD Edit Extended,width=1024,height=771]
 
@@ -340,7 +340,7 @@ sometimes the synonym “medical” is used.
 
 To access the functions of Pharmaceuticals, press *[.underline]##P##harmaceuticals* in the Pharmacy menu.
 
-All functions available under Pharmaceuticals are accessible from the *_Pharmaceutical Browser_* window
+All functions available under Pharmaceuticals are accessible from the *_Pharmaceutical Browser_* window,
 shown below. It displays all the pharmaceuticals available in the hospital.
 
 image:image17.png[Pharmaceuticals,width=548,height=262]
@@ -370,7 +370,7 @@ It is possible to sort the table by any of the column headers by double-clicking
 [#insert-a-new-pharmaceutical]
 ===== 4.1.2.1 Insert a New Pharmaceutical ([.underline]##N##ew)
 
-Press the *[.underline]##N##ew* button in the *_Pharmaceutical Browser_* window to access the *_New Medical_* window shown below.
+Press the *[.underline]##N##ew* button in the *_Pharmaceutical Browser_* window to access the *_New Medical_* window, shown below.
 
 To insert a new pharmaceutical, enter the following fields:
 
@@ -391,7 +391,7 @@ When all the data is entered, the *Buttons panel* has the following choices:
 
 ===== 4.1.2.2 Modify an Existing Pharmaceutical ([.underline]##E##dit)
 
-After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window shown below. All the data except for the “Type” value can be modified or changed.
+After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window, shown below. All the data except for the “Type” value can be modified or changed.
 
 image:image19.png[Edit Medical]
 
@@ -415,7 +415,7 @@ The *Buttons panel* has the following choices:
 
 Use this function to export the list of pharmaceuticals shown in the *_Pharmaceutical Browser_* window that then can be imported into Excel.
 
-Press the *E[.underline]##x##port* button in the *_Pharmaceutical Browser_* window to access the *_Save_* window shown below. The window uses the language of the computer, regardless of the language used in Open Hospital.
+Press the *E[.underline]##x##port* button in the *_Pharmaceutical Browser_* window to access the *_Save_* window, shown below. The window uses the language of the computer, regardless of the language used in Open Hospital.
 
 This begins the exporting of the list of pharmaceuticals.
 
@@ -472,11 +472,11 @@ In this way, which movement that refers to the pharmaceuticals expiring can be f
 
 ==== 4.2.2 Functions of Pharmaceuticals Stock
 
-To access the functions of Pharmaceuticals, press *Pharmaceutical [.underline]##S##tock* in the Pharmacy menu shown below.
+To access the functions of Pharmaceuticals, press *Pharmaceutical [.underline]##S##tock* in the Pharmacy menu, shown below.
 
 image:image22.png[Pharmacy Menu,width=220,height=182]
 
-The *_Stock Movement Browser_* window shown below is opened.
+The *_Stock Movement Browser_* window, shown below, is opened.
 
 image:image23.png[Stock Movement Browser]
 
@@ -642,7 +642,7 @@ To access the functions of Pharmaceuticals, press *Pharmaceutical Stock [.underl
 
 image:image22.png[Phamacy Menu,width=220,height=182]
 
-The window *_Ward Pharmacy_* shown below will be opened. All functions available under Pharmaceutical Stock are accessible from the *_Ward Pharmacy_* window selecting one *WARD* on the top left of the window.
+The window *_Ward Pharmacy_*, shown below, will be opened. All functions available under Pharmaceutical Stock are accessible from the *_Ward Pharmacy_* window selecting one *WARD* on the top left of the window.
 
 image:image34.png[Ward Pharmacy]
 
@@ -756,7 +756,7 @@ It is possible to create, modify or delete exams.
 
 To access the Laboratory’s functions, press *[.underline]##L##aboratory* on the main menu of Open Hospital. The *_Laboratory Browser_* window is shown:
 
-All functions available under *[.underline]##L##aboratory* are accessible from the *_Laboratory Browser_* window shown below. By default, the system shows all the laboratory exams record in the last week.
+All functions available under *[.underline]##L##aboratory* are accessible from the *_Laboratory Browser_* window, shown below. By default, the system shows all the laboratory exams record in the last week.
 
 image:image43.png[Laboratory Browser]
 
@@ -837,7 +837,7 @@ When the data is specified, the *Buttons panel* provides the following choices:
 ==== 5.2.3 Modify a Laboratory Exam ([.underline]##E##dit)
 
 To modify an exam, highlight the exam in the *_Laboratory Browser_* window. Once highlighted,
-press the *[.underline]##E##dit* button to enter the *_Edit Laboratory Exam_* window shown below. Now the record is available for changes. This function allows for editing all the data for the exam including setting the result of the exam.
+press the *[.underline]##E##dit* button to enter the *_Edit Laboratory Exam_* window, shown below. Now the record is available for changes. This function allows for editing all the data for the exam including setting the result of the exam.
 
 image:image47.png[Edit Laboratory Exam]
 
@@ -918,7 +918,7 @@ In addition, the accounting function supports the management of bill payments (t
 
 === 6.2 Functions of Accounting
 
-All functions available under *A[.underline]##c##counting* are accessible from the *_Patients Bills Management_* window shown below. To access the *_Patient Bills Management_* window,
+All functions available under *A[.underline]##c##counting* are accessible from the *_Patients Bills Management_* window, shown below. To access the *_Patient Bills Management_* window,
 press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
@@ -968,7 +968,7 @@ NOTE: The USER column, The [User] selector and the *Third Row* are shown only in
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
 
 The *New Bill* function is used to generate a new bill for a patient.
-Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
+Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window, shown below.
 
 To record a new bill, it must be saved with the *[.underline]##S##ave* function (see description below).
 
@@ -1052,7 +1052,7 @@ The *Buttons panel* of the *_Quantity_* window has the following choices:
 
 ===== 6.2.1.2 Insert a Bill Entry Related to Various Custom Reasons (C[.underline]##u##stom)
 
-To insert a custom bill entry, press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
+To insert a custom bill entry, press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window, shown below.
 
 image:image58.png[Custom Item]
 
@@ -1079,7 +1079,7 @@ To remove a bill entry, select the bill in the *_New Patient Bill_* window and t
 
 ===== 6.2.1.4 Insert a Payment (Pa[.underline]##y##ment)
 
-To insert a payment, press the *Pa[.underline]##y##ment* button. The application shows the *_Quantity_* window shown below.
+To insert a payment, press the *Pa[.underline]##y##ment* button. The application shows the *_Quantity_* window, shown below.
 
 image:image60.png[Payment]
 
@@ -1260,7 +1260,7 @@ image:OH-main_menu.png[OH Main Menu]
 
 === 7.2 Functions of Vaccines
 
-All functions available under *[.underline]##V##accines* are accessible from the window *_Patient Vaccine Browser_* window shown below.
+All functions available under *[.underline]##V##accines* are accessible from the window *_Patient Vaccine Browser_* window, shown below.
 
 By default, the window shows in the *Data table* all the vaccinations added to the system in the last week.
 
@@ -1300,7 +1300,7 @@ image:image72.png[Search Vaccines,width=619,height=245]
 
 This function is used to register a new patient vaccination.
 
-Press the *[.underline]##N##ew* button in the *_Patient Vaccine Browser_* window to access the *_New Patient Vaccine_* window shown below.
+Press the *[.underline]##N##ew* button in the *_Patient Vaccine Browser_* window to access the *_New Patient Vaccine_* window, shown below.
 
 image:image73.png[Enter a new patient vaccintation]
 
@@ -1370,7 +1370,7 @@ NOTE: An OPD registration can be started from here if the OPDEXTENDED flag is se
 
 === 8.2 Functions of Admission/Patients
 
-All the functions available under *[.underline]##A##dmission/Patient* are accessible from the *_Patient Browser_* window shown below.
+All the functions available under *[.underline]##A##dmission/Patient* are accessible from the *_Patient Browser_* window, shown below.
 
 By default, the window shows a *Data table* all of the patients currently present in the system.
 
@@ -1467,7 +1467,7 @@ NOTE: To show the full patient list again, just press the search button with an 
 
 This function is used to register a new patient into the hospital.
 
-Press the *[.underline]##N##ew* button in the *_Patient Browser_* window to access the *_New Patient_* window shown below.
+Press the *[.underline]##N##ew* button in the *_Patient Browser_* window to access the *_New Patient_* window, shown below.
 
 image:image83.png[New Patient]
 
@@ -1851,7 +1851,7 @@ This function supports the insertion (*New*) of a new malnutrition control, the 
 
 ===== 8.8.5.1 Insert a New Control ([.underline]##N##ew)
 
-By pressing the *[.underline]##N##ew* button in the *_Malnutrition Browser_* window, the *_New Malnutrition_* window shown below is available:
+By pressing the *[.underline]##N##ew* button in the *_Malnutrition Browser_* window, the *_New Malnutrition_* window, shown below, is available:
 
 image:image103.png[New Malnutrition]
 
@@ -2048,7 +2048,7 @@ image:image115.png[Therapy not available]
 
 The *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved but there are not the requested pharmaceuticals in the hospital. The application saves the therapy plan and shows the confirmation window shown below.
+* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved but there are not the requested pharmaceuticals in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
 Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below the therapies plan is saved.
@@ -2131,13 +2131,13 @@ The other (older) patient is then deleted.
 
 ==== 8.11.1 Different Names
 
-If two patients with different names are merged, the final name must be chosen in the window shown below:
+If two patients with different names are merged, the final name must be chosen in the window, shown below:
 
 image:image121.png[Patient merge names]
 
 ==== 8.11.2 Different Sex
 
-If two patients with a different sex are merged the operation is not allowed, with the window shown below:
+If two patients with a different sex are merged, the operation is not allowed, with the window shown below:
 
 image:image122.png[Patient merge sex]
 
