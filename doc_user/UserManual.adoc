@@ -621,7 +621,7 @@ Click the *[.underline]##S##ave* button to save the discharge movement.
 
 NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT in the configuration
 file, so every new discharging movement will automatically select a suitable lot for the operation according
-to the expiring date. If the first selected lot does not contain enough quantity to serve the discharging
+to the expiring date. If the first selected lot does not contain a high enough quantity to serve the discharging
 movement, several discharging movements may be generated. Ask the Administrator or check the _Administrator’s Guide_
 for more information.
 
