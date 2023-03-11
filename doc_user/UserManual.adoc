@@ -57,13 +57,13 @@ this document [.underline]#offline#.
 
 ==== 1.2.2 Legend
 
-In this document the following conventions are used:
+In this document, the following conventions are used:
 
 * When a text is written in bold and highlighted in grey *–*
 like *[.underline]##P##harmacy* or *[.underline]##N##ew –* it indicates a function of the application and it is also
 called a “button”. *[.underline]##P##harmacy* is a button.
 
-* When a text is written in bold Italic (as an example, *_Laboratory Browser)_* it indicates the screen with the name
+* When a text is written in bold Italic (as an example, *_Laboratory Browser)_*, it indicates the screen with the name
 “Laboratory Browser” (see example below). Each screen of the application is called a window. *_Laboratory Browser_* is a window.
 
 * When a text is written in bold as - *Search patient visits –* it indicates a function of the application,
@@ -84,7 +84,7 @@ area. Areas can be a *Selection panel*, a *Data table*, or a *Buttons panel* (se
 
 image:image3.png[Window areas,width=642,height=464]
 
-* To highlight an entry (for example, a single line in a *Data table*) click the mouse on the entry.
+* To highlight an entry (for example, a single line in a *Data table*), click the mouse on the entry.
 The entry (the entire line) is then highlighted in blue. This behavior is valid throughout the application (see example below):
 
 image:image4.png[Highlight Line,width=509,height=296]
@@ -105,7 +105,7 @@ image:OH-main_menu.png[OH Main Menu]
 
 === 2.2 Functions
 
-From the main menu it is possible to access functions and submenus. In the example below, selecting the *_Settings_* button leads to the OH settings submenu:
+From the main menu, it is possible to access functions and submenus. In the example below, selecting the *_Settings_* button leads to the OH settings submenu:
 
 image:image6.png[Setting Submenu,width=602,height=370]
 
@@ -122,7 +122,7 @@ image:image7.png[Click OPD in main menu,width=649,height=374]
 === 3.1 Main Characteristics
 
 The function of the Out Patient Department (OPD) allows the recording of ambulatory patient visits, searching, reviewing, editing, and
-eventually deleting visits. In addition queries necessary for statistical purposes are available.
+eventually deleting visits. In addition, queries necessary for statistical purposes are available.
 
 Click on the *[.underline]##O##PD* button or press “Alt + O” in the main *_menu_* to access the OPD function.
 
@@ -192,7 +192,7 @@ To record a visit, enter data into the following fields:
 indicates whether the patient comes to the ambulatory to report a new
 health issue or new disease for which no care has been previously addressed or recorded. This could be their initial
 visit or their n-th time in the ambulatory; it does not matter with regards to this field. If this visit is for an
-issue or disease previously addressed the field is not selected and records are created for the patient
+issue or disease previously addressed, the field is not selected and records are created for the patient
 with regards to the follow-up care and instructions for recovery.
  +
  +
@@ -216,7 +216,7 @@ To do so, enter a text fragment in the search field that is part of the disease 
 The closer the search text comes to the name of the disease being searched, the more precise the search is.
  +
  +
-_Example: In the *OPD Out Patient Department* window only the first diagnosis and its type are shown,
+_Example: In the *OPD Out Patient Department* window, only the first diagnosis and its type are shown,
 but all the corresponding data is stored and available in reports and for searching._
  +
 * *Age*: The patient's age; the valid age range is 0-120.
@@ -345,9 +345,9 @@ shown below. It displays all the pharmaceuticals available in the hospital.
 
 image:image17.png[Pharmaceuticals,width=548,height=262]
 
-If the pharmaceutical quantity is under the critical level it is shown in RED.
+If the pharmaceutical quantity is under the critical level, it is shown in RED.
 
-If the pharmaceutical quantity is zero it is shown in GRAY and the square in the last column is checked.
+If the pharmaceutical quantity is zero, it is shown in GRAY and the square in the last column is checked.
 
 The following functions are accessible from the *Buttons panel* of the *_Pharmaceutical Browser_* window:
 
@@ -519,15 +519,15 @@ For a *Pharmaceutical*, choose either its:
 
 To avoid conflicting filters, only one of the options is available at any one time. So, when the description combo box is active, the other one is not, and vice versa.
 
-To quickly find a medical simply type a keyword that is a part of the medical's name into the text field at the top of the pharmaceuticals products combo box and
+To quickly find a medical, simply type a keyword that is a part of the medical's name into the text field at the top of the pharmaceuticals products combo box and
 press the search button (image:image81.png[Search icon,width=15,height=15]) that follows this text field.
 
 For a *Movement*, choose either its:
 
 * *_Type_*: specifies if it is a charge or a discharge type. If the discharge option is selected, then the ward combo box is enabled. The ward combo box allows finding any discharging movements that refer to a specific ward.
-* *_Date_*: specifies the data range for the search, between the ‘Date From’ and ‘Date To’ values. The date tools consist of three blank areas, which (from left to right) refer to day, month and year. As a value is inserted into a blank area, moving to the next area is accomplished by using the “Tab” key on the keyboard. When the window is shown the date range is set to the previous week by default.
+* *_Date_*: specifies the data range for the search, between the ‘Date From’ and ‘Date To’ values. The date tools consist of three blank areas, which (from left to right) refer to day, month and year. As a value is inserted into a blank area, moving to the next area is accomplished by using the “Tab” key on the keyboard. When the window is shown, the date range is set to the previous week by default.
 
-Finally, for *Lot Preparation Date* and *Lot Due Date* movements that refer to specific lots can be found by inserting:
+Finally, for *Lot Preparation Date* and *Lot Due Date*, movements that refer to specific lots can be found by inserting:
 
 * the _lot preparation date_: a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
 * the _due date_; behaves similarly to the lot preparation tool and the movement date tool
@@ -584,7 +584,7 @@ NOTE: The Lot definition can be set as automatic by changing the AUTOMATICLOT_IN
 file, so every new charging movement automatically creates a new lot. Regardless of the setting,
 the Expiring Date must always be provided. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-NOTE: In order to avoid managing the cost of medicals set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
+NOTE: In order to avoid managing the cost of medicals, set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
 ===== 4.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
@@ -721,7 +721,7 @@ As mentioned previously, only discharging movements are allowed in this function
 
 image:image41.png[WardPharmacy Quantity,width=231,height=139]
 
-If _AUTOMATICLOTWARD_TOWARD_ has been enabled the user will be requested to select a lot (similar to
+If _AUTOMATICLOTWARD_TOWARD_ has been enabled, the user will be requested to select a lot (similar to
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>>).
 
 NOTE: The lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD in
@@ -754,7 +754,7 @@ It is possible to create, modify or delete exams.
 
 === 5.2 Functions of Laboratory
 
-To access the Laboratory’s functions press *[.underline]##L##aboratory* on the main menu of Open Hospital. The *_Laboratory Browser_* window is shown:
+To access the Laboratory’s functions, press *[.underline]##L##aboratory* on the main menu of Open Hospital. The *_Laboratory Browser_* window is shown:
 
 All functions available under *[.underline]##L##aboratory* are accessible from the *_Laboratory Browser_* window shown below. By default, the system shows all the laboratory exams record in the last week.
 
@@ -766,7 +766,7 @@ Data that identify laboratory exams are the following:
 * *Exam*: the description of the exam
 * *Result*: the result of the exam
 
-To access the other functions of the laboratory in the *Buttons panel* the following choices are available:
+To access the other functions of the laboratory in the *Buttons panel*, the following choices are available:
 
 * *[.underline]##N##ew*: enter a new laboratory exam.
 * *[.underline]##E##dit*: modify an existing laboratory exam.
@@ -818,7 +818,7 @@ To record the visit, enter the following fields:
 
 ===== 5.2.2.1 Results
 
-In Open Hospital there are two kinds of possible results for each exam:
+In Open Hospital, there are two kinds of possible results for each exam:
 
 * *Single Result*: selection of a single result from a list (Procedure 1)
 * *Multiple Results*: selection of many results from a list of positive/negative values (Procedure 2)
@@ -918,14 +918,14 @@ In addition, the accounting function supports the management of bill payments (t
 
 === 6.2 Functions of Accounting
 
-All functions available under *A[.underline]##c##counting* are accessible from the *_Patients Bills Management_* window shown below. To access the *_Patient Bills Management_* window
+All functions available under *A[.underline]##c##counting* are accessible from the *_Patients Bills Management_* window shown below. To access the *_Patient Bills Management_* window,
 press *Bill [.underline]##M##anager* on the *_Accounting_* menu.
 
 By default, the window shows in the *Data table* all the bills for today (current day).
 
 image:image241.png[Patient Bills Management]
 
-For each bill the following [.underline]##data## are shown in the *Data table*:
+For each bill, the following [.underline]##data## are shown in the *Data table*:
 
 * *USER*: the user who initially created or later updated the bill
 * *ID*: the number of the bill (created automatically by the application).
@@ -970,9 +970,9 @@ NOTE: The USER column, The [User] selector and the *Third Row* are shown only in
 The *New Bill* function is used to generate a new bill for a patient.
 Press the *[.underline]##N##ew Bill* button in the *_Patients Bills Management_* window to access the *_New Patient Bill_* window shown below.
 
-To record a new bill it must be saved with the *[.underline]##S##ave* function (see description below).
+To record a new bill, it must be saved with the *[.underline]##S##ave* function (see description below).
 
-Before describing the function of the *_New Patient Bill_* window the components of the window are described.
+Before describing the function of the *_New Patient Bill_* window, the components of the window are described.
 
 The *_New Patient Bill_* window is composed of four areas: the *Bill panel* at the top, the *Item panel* in the center, the *Payments panel* at the bottom, and the *Buttons panel* on the right.
 
@@ -1001,7 +1001,7 @@ Data shown in the *Payments panel* area are:
 
 image:image54.png[New Patient Bill]
 
-To insert a new bill *Date field* value is required. The application defaults to the current date and time but the values can be modified.
+To insert a new bill, *Date field* value is required. The application defaults to the current date and time but the values can be modified.
 
 In addition, a patient must be selected. To do that, press the *Find [.underline]##P##atient* button on top of the screen. The *_Patient Selection_* window is shown:
 
@@ -1052,7 +1052,7 @@ The *Buttons panel* of the *_Quantity_* window has the following choices:
 
 ===== 6.2.1.2 Insert a Bill Entry Related to Various Custom Reasons (C[.underline]##u##stom)
 
-To insert a custom bill entry press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
+To insert a custom bill entry, press the *C[.underline]##u##stom* button. The application will show the *_Custom Item_* window shown below.
 
 image:image58.png[Custom Item]
 
@@ -1074,12 +1074,12 @@ The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
 ===== 6.2.1.3 Remove a Bill Entry of a Bill (Remove Item)
 
-To remove a bill entry select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button. The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
+To remove a bill entry, select the bill in the *_New Patient Bill_* window and then press the *Remove Item* button. The selected bill entry is removed. Bill entries can be removed before or after the final saving (see
 <<save-function-accounting,Save function>> described below).
 
 ===== 6.2.1.4 Insert a Payment (Pa[.underline]##y##ment)
 
-To insert a payment press the *Pa[.underline]##y##ment* button. The application shows the *_Quantity_* window shown below.
+To insert a payment, press the *Pa[.underline]##y##ment* button. The application shows the *_Quantity_* window shown below.
 
 image:image60.png[Payment]
 
@@ -1131,7 +1131,7 @@ image:image61.png[Confirmation]
 
 ==== 6.2.2 Edit an Existing Bill ([.underline]##E##dit Bill)
 
-To modify an existing bill select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window is shown:
+To modify an existing bill, select the bill in the *_Patient Bills Management_* window and then press the *[.underline]##E##dit Bill* button. The *_Edit Patient Bill_* window is shown:
 
 image:image61a.png[Edit Patient Bill Female Ward]
 
@@ -1185,7 +1185,7 @@ image:image61g.png[Patient Bills Management]
 
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
-To delete an existing bill select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window is shown:
+To delete an existing bill, select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window is shown:
 
 image:image62.png[Delete Bill]
 
@@ -1304,7 +1304,7 @@ Press the *[.underline]##N##ew* button in the *_Patient Vaccine Browser_* window
 
 image:image73.png[Enter a new patient vaccintation]
 
-To record a new patient vaccination enters the following fields:
+To record a new patient vaccination, enter the following fields:
 
 * *Date*: the date of the vaccination
 * *Progressive*: the progressive number in the year (set automatically by the system)
@@ -1322,7 +1322,7 @@ When all the required information is entered the *Buttons panel* has the followi
 
 ==== 7.2.3 Modify Data of a Recorded Patient Vaccination ([.underline]##E##dit)
 
-To modify data of a patient vaccination select the vaccination in the *_Patient Vaccine Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient Vaccine_* window is shown, the record is available for changes. Date, vaccine type, and the vaccine can be changed:
+To modify data of a patient vaccination, select the vaccination in the *_Patient Vaccine Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient Vaccine_* window is shown, the record is available for changes. Date, vaccine type, and the vaccine can be changed:
 
 image:image74.png[Edit a patient vaccination]
 
@@ -1335,7 +1335,7 @@ Once all the changes are made the *Buttons panel* has the following choices:
 
 ==== 7.2.4 Delete a Patient Vaccination ([.underline]##D##elete)
 
-To delete a stored patient vaccination select the vaccination in the table in the *_Patient Vaccine Browser_* window. Next,
+To delete a stored patient vaccination, select the vaccination in the table in the *_Patient Vaccine Browser_* window. Next,
 press the *[.underline]##D##elete* button. The confirmation window is shown. The vaccination can then be deleted. Deleted vaccinations are no longer available.
 
 image:image75.png[Delete a patient vaccinaton]
@@ -1461,7 +1461,7 @@ Moreover, further search criteria are added in this mode:
 * *Admission Date*: search for all patients admitted in between the specified dates, regardless if they are still admitted or not
 * *Discharge Date*: search for all patients discharged in between the specified dates, regardless if they were admitted again later on
 
-NOTE: To show the full patient list again just press the search button with an empty search criterion.
+NOTE: To show the full patient list again, just press the search button with an empty search criterion.
 
 === 8.3 Insert a New Patient ([.underline]##N##ew)
 
@@ -1490,7 +1490,7 @@ When finished entering the data the *Buttons panel* has two choices:
 
 ==== 8.3.1 Modify Data of a Patient ([.underline]##E##dit)
 
-To modify the data of a patient select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_New Patient_* window is shown, the record is available for changes. All the data can be changed.
+To modify the data of a patient, select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_New Patient_* window is shown, the record is available for changes. All the data can be changed.
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
@@ -1501,12 +1501,12 @@ When finished modifying the data in the *Buttons panel* there are two choices:
 
 ==== 8.3.2 Delete a Patient (Dele[.underline]##t##e)
 
-To delete a stored patient select the patient in the *_Patient Browser_* window.
-Next press the *Dele[.underline]##t##e* button. The name of the patient is shown in the *_Question_* window below: by pressing "yes", the patient's data is deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system; ask the Administrator to restore the data if needed._
+To delete a stored patient, select the patient in the *_Patient Browser_* window.
+Next, press the *Dele[.underline]##t##e* button. The name of the patient is shown in the *_Question_* window below: by pressing "yes", the patient's data is deleted. Deleted information is no longer available in the system. _The patient is not completely removed from the system; ask the Administrator to restore the data if needed._
 
 image:image84.png[Delete a Patient]
 
-In the *Buttons panel* the choices are:
+In the *Buttons panel*, the choices are:
 
 * *[.underline]##Y##es*: confirm the deletion of the patient.
 * *[.underline]##N##o*: close the window and return to the previous window.
@@ -1673,7 +1673,7 @@ To remove an examination, select one or more records in the lower table and clic
 [#insert-or-modify-surgery-data]
 ==== 8.5.3 Insert or Modify Surgery Data
 
-To insert/modify operations data of a patient admission first highlight the patient in the *_Patient Browser_* window and then
+To insert/modify operations data of a patient admission, first highlight the patient in the *_Patient Browser_* window and then
 press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window is shown.
 
 Operation related data can be inserted or modified directly by selecting the *Operation* tab at the top of the window during the admission or modification process of the admission.
@@ -1723,9 +1723,9 @@ NOTE: Treatment Type, Delivery Type, and Delivery Result Type can be defined by 
 [#discharge-of-a-patient]
 ==== 8.5.5 Discharge of a Patient ([.underline]##A##dmission)
 
-To discharge a patient from the hospital highlight the patient in the *_Patient Browser_* window and then press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window is shown.
+To discharge a patient from the hospital, highlight the patient in the *_Patient Browser_* window and then press the *[.underline]##A##dmission* button. The *_Edit Admission Record_* window is shown.
 
-To complete the discharge of the patient enter the following data:
+To complete the discharge of the patient, enter the following data:
 
 * *Discharge Date*: the date of the discharge
 * *Bed Days*: the number of days admitted; computed by the system by finding the difference between admission date and discharge date
@@ -1764,7 +1764,7 @@ The button *[.underline]##B##ill* in the *_Patient Browser_* window is used to s
 
 This function allows modifying data about a patient and modifying or deleting the history of admissions and discharges of a patient. Malnutrition can also be managed with this function.
 
-To access the patient historical data function, first, highlight the patient in the *_Patient Browser_* window.
+To access the patient historical data function, first highlight the patient in the *_Patient Browser_* window.
 Next, press the *D[.underline]##a##ta* button. The *_Patient Data_* window is shown:
 
 image:image99.png[Patient Data,width=575,height=423]
@@ -1788,7 +1788,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 
 ==== 8.8.1 Modify Data of an Admission ([.underline]##E##dit)
 
-To modify the data of an admission select the admission in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit Admission Record_* window is shown, the record is available for changes. All data can be changed.
+To modify the data of an admission, select the admission in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit Admission Record_* window is shown, the record is available for changes. All data can be changed.
 
 image:image100.png[Edit Admission Record,width=642,height=333]
 
@@ -1801,7 +1801,7 @@ When the changes are complete the *Buttons panel* has the following choices:
 
 ==== 8.8.2 Modify Data of an Outpatient Visit ([.underline]##E##dit)
 
-To modify the data of an outpatient visit select the OPD in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window is shown, the record is available for changes. All data can be changed.
+To modify the data of an outpatient visit, select the OPD in the *Data table* of the *_Patient Data_* window and then press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window is shown, the record is available for changes. All data can be changed.
 
 image:image100o.png[Edit OPD Registration,width=642,height=333]
 
@@ -1814,7 +1814,7 @@ When the changes are complete the *Buttons panel* has the following choices:
 
 ==== 8.8.3 Delete an Admission ([.underline]##D##elete)
 
-To delete a stored admission select the admission in the *_Patient Data_* window.
+To delete a stored admission, select the admission in the *_Patient Data_* window.
 Next, press the *[.underline]##D##elete* button. A confirmation window is shown; now the admission can be deleted. Deleted admissions are no longer available.
 
 image:image101.png[Delete confirmation]
@@ -1826,7 +1826,7 @@ The *Buttons panel* has the following choices:
 
 ==== 8.8.4 Delete an Outpatient Visit ([.underline]##D##elete)
 
-To delete a stored outpatient visit (OPD) highlight it in the *_Patient Data_* window.
+To delete a stored outpatient visit (OPD), highlight it in the *_Patient Data_* window.
 Next, press the *[.underline]##D##elete* button. A confirmation window is shown; now the OPD can be deleted. Deleted outpatient visits are no longer available.
 
 image:image101o.png[Deletion confirmation]
@@ -1970,7 +1970,7 @@ image:image110.png[Therapy Entry Form,width=642,height=313]
 
 NOTE: To better explain how the function *Add a therapy* works, the *Therapy* window below shows the results of the therapy defined in the *_New Therapy Entry Form_* shown above.
 
-To add a therapy the following information is required:
+To add a therapy, the following information is required:
 
 * *Pharmaceutical*: the pharmaceutical of the therapy; in the example above _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
 * *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
@@ -1990,7 +1990,7 @@ image:image111.png[Therapy window,width=642,height=372]
 
 ==== 8.10.2 Modify a Therapy ([.underline]##E##dit Therapy)
 
-To modify a therapy highlight one occurrence of the therapy (see box above)
+To modify a therapy, highlight one occurrence of the therapy (see box above)
 in the *_Therapy_* window and then press the **[.underline]##E##dit Therapy** button.
 The *_Edit Therapy Entry Form_* window will appear. Any of the data can be modified as in the *Add a therapy* function.
 
@@ -1998,7 +1998,7 @@ See <<add-a-therapy,Add a therapy>> function for a detailed description.
 
 ==== 8.10.3 Remove a Therapy (Remove Therapy)
 
-To remove a therapy highlight one occurrence of the therapy (see box above) in the
+To remove a therapy, highlight one occurrence of the therapy (see box above) in the
 *_Therapy_* window and then press the **[.underline]##R##emove Therapy** button and the therapy is
 removed from the window and the *[.underline]##S##ave* button will be enabled (if not already enabled).
 The removal of a therapy is not effective until it is confirmed with the *[.underline]##S##ave* button (see <<save-function-therapy,Save function>>).
@@ -2794,7 +2794,7 @@ By pressing the *[.underline]##N##ew* button, the *_New Exam_* window is shown:
 
 image:image170.png[New Exam]
 
-To insert a new Exam the following data must be provided:
+To insert a new Exam, the following data must be provided:
 
 * *Type*: the Exam Type (see <<exam-types,Exam Types>> in this document).
 * *Code*: a unique code; a warning window will appear if not unique.
@@ -2902,14 +2902,14 @@ the system automatically creates a price for every exam (see <<exam,Exam>>),
 operation (see <<operations,Operations>>) and medical (see <<pharmaceuticals,Pharmaceuticals>>) defined in
 the system, plus other prices defined in Other Prices module (see <<other-prices,Other Prices>>).
 
-To modify a price just double-click on it and type the new price.
+To modify a price, just double-click on it and type the new price.
 
-NOTE: If a price has been defined as “undefined” (see <<other-prices,Other Prices>>) it will appear as 0 (zero) and cannot be modified.
+NOTE: If a price has been defined as “undefined” (see <<other-prices,Other Prices>>), it will appear as 0 (zero) and cannot be modified.
 
 NOTE: Exams', operations' and medicals' prices are automatically created as OPD, IPD, not “daily”,
 not “undefined”, and not “discharge”; see <<other-prices,Other Prices>> for more information.
 
-When all the modifications are made the changes can be stored permanently in the system by pressing the *[.underline]##S##ave* button. A confirmation message reports the success of the operation:
+When all the modifications are made, the changes can be stored permanently in the system by pressing the *[.underline]##S##ave* button. A confirmation message reports the success of the operation:
 
 image:image178.png[Save Price confirmation]
 
