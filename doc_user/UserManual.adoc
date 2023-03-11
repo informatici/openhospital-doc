@@ -566,9 +566,9 @@ image:image28.png[Existing Lots]
 
 If stock movement is related to this existing lot, select it and click *Selected Lot*. Otherwise, click *New Lot* and the *_Lot Information_* window is shown with the following fields:
 
-* *Lot No.*: The lot code
-* *Lot preparation*: The lot preparation date
-* *Expiring*: The lot expiring date
+* *Lot No.*: the lot code
+* *Lot preparation*: the lot preparation date
+* *Expiring*: the lot expiring date
 
 image:image29.png[Lot Information]
 
@@ -864,7 +864,7 @@ The presence of the patient name column is required by this mode.
 
 The *_New Laboratory Exam_* window is now strictly related to the patient, that is to say, that the exam must be assigned to a patient previously registered in the system.
 
-Before closing the window with the exam result a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
+Before closing the window with the exam result, a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
 
 A search field can be used to find a patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
 
@@ -1290,7 +1290,7 @@ Vaccinations can be selected by choosing specific field values from the followin
 NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter.
 
-After the selection press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
+After the selection, press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
 
 The function also shows in the field “Count:” the number of vaccinations that are shown in the *Data table* (in the example there are 26).
 
@@ -1423,7 +1423,7 @@ Patient selection can be accomplished by specifying a specific value for the fie
 ** *Admitted*: only patients admitted are included in the selection
 ** *Not Admitted*: only patients not admitted are included in the selection
 
-* *Ward* Select one or more wards:
+* *Ward.* Select one or more wards:
 ** *Children Ward*
 ** *Female Ward*
 ** *Male Ward*
@@ -1447,7 +1447,7 @@ NOTE: Wards can be defined by the Administrator. Ask the Administrator or check 
 
 Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-Once the enhanced search has been enabled the new *_Patient Browser_* window looks like following:
+Once the enhanced search has been enabled, the new *_Patient Browser_* window looks like following:
 
 image:image80.png[Patient Browser Enhanced Search,width=600,height=300]
 
@@ -1554,7 +1554,7 @@ The height and weight of the patient are not required when registering a new pat
 The New Patient functionality can be extended by changing the
 __[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-Once the video module has been enabled the *_New Patient_* window looks as follows:
+Once the video module has been enabled, the *_New Patient_* window looks as follows:
 
 image:image88p.png[New Patient Extended photo,width=587,height=339]
 
@@ -1630,7 +1630,7 @@ When done entering data the *Buttons panel* has the following choices:
 <<patient-examination,Patient examination>>).
 * *[.underline]##C##lose*: close the window and return to the *_Patient Browser_* window without applying any changes.
 
-Once the *[.underline]##S##ave* button is pressed the *_New Admission_* window closes and the patient's status is changed in the *_Patient Browser_* window as shown in the following figure:
+Once the *[.underline]##S##ave* button is pressed, the *_New Admission_* window closes and the patient's status is changed in the *_Patient Browser_* window as shown in the following figure:
 
 image:image93.png[Patient admitted,width=642,height=167]
 
@@ -1745,7 +1745,7 @@ When all the data has been entered the *Buttons panel* has the following choices
 <<patient-examination,Patient examination>>).
 * *[.underline]##C##lose*: close the window and return to the *_Patient Browser_* window without applying any changes.
 
-Once the *[.underline]##S##ave* button is pressed the *_Edit Admission Record_* window closes and the patient's status is changed in the *_Patient Browser_* window as
+Once the *[.underline]##S##ave* button is pressed, the *_Edit Admission Record_* window closes and the patient's status is changed in the *_Patient Browser_* window as
 shown in the following figure:
 
 image:image98.png[Discharged,width=642,height=337]
@@ -1980,7 +1980,7 @@ To add a therapy, the following information is required:
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
 
-Once the data is entered the *Buttons panel* has the following choices:
+Once the data is entered, the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
 <<save-function-therapy,Save function>> described below).
@@ -2205,7 +2205,7 @@ To produce one report:
 * Specify the period (it could be _month-year_ or _from date-to date_ depending on the report)
 * Press the *Launch [.underline]##R##eport* button for PDF or *[.underline]##E##xcel* for CSV (Comma Separated Values) format
 
-After some time passes the JasperViewer® will show the generated report as follows:
+After some time passes, the JasperViewer® will show the generated report as follows:
 
 image:image125.png[Report,width=591,height=420]
 
@@ -2373,7 +2373,7 @@ Pressing the *[.underline]##S##ettings* button main menu provides access to the 
 
 === 12.2 Types ([.underline]##T##ypes)
 
-Once the *[.underline]##T##ypes* button is pressed in the *_Settings_* menu the *_Types_* menu is presented:
+Once the *[.underline]##T##ypes* button is pressed in the *_Settings_* menu, the *_Types_* menu is presented:
 
 .Press the *[.underline]##T##ypes* button or “Alt + T” to open the Types Menu
 [frame=none]
@@ -2950,7 +2950,7 @@ By default, the new list is created with the following information:
 
 *CURRENCY*: the currency of the selected price list
 
-Once the copy has been created the information can be changed by editing the price list just created.
+Once the copy has been created, the information can be changed by editing the price list just created.
 
 By pressing the *[.underline]##E##dit* button, the *_Edit List_* window is shown:
 
