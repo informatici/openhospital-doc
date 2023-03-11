@@ -1871,7 +1871,7 @@ Next, press the *Clinical [.underline]##S##heet* button. The *_Patient Data_* wi
 
 image:image104.png[Patient Data,width=624,height=368]
 
-The window does not allow changing the data but, for the selected patient, it shows all the outpatient (OPD) visits, the Admissions, his/her Laboratory exams and the various surgeries they underwent;
+The window does not allow changing the data, but for the selected patient, it shows all the outpatient (OPD) visits, the Admissions, his/her Laboratory exams and the various surgeries they underwent;
 by clicking on a row in the *Data table* at the top of the window, the related laboratory exams will be shown as follows:
 
 * the selected row is an Admission: all the exams done between the admission date and the discharge date are shown in the *Data table*, in the *_Exams_* tab;
@@ -2107,7 +2107,7 @@ TIP: By pressing the *Worksheet* button, a visit can be added also there, after 
 
 The merge function is used to merge two patients’ histories into a single case. This is used to fix the case of two different registrations when a patient is admitted to the Hospital.
 
-Merging data of two patients requires the highlighting of both of them in the *_Patient Browser_* window.
+Merging data of two patients requires highlighting both of them in the *_Patient Browser_* window.
 
 image:image119.png[Patient merge,width=642,height=180]
 
