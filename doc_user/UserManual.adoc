@@ -1481,7 +1481,7 @@ To record a new patient, enter the following fields:
 * *City*: the city where the patient lives
 * *Next of Kin*: the name of the patient's closest relative
 * *Telephone*: the patient's telephone number
-* *Note*: A free text for adding notes about the patient
+* *Note*: a free text for adding notes about the patient
 
 When finished entering the data, the *Buttons panel* has two choices:
 
