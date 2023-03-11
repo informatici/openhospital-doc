@@ -284,10 +284,10 @@ The OPD Extended module affords the following additional features:
  for the same issue are also marked as *Re-Attendance*.
 
  Example: A patient comes to the ambulatory because they report a cut; this
- event is recorded as a *New Attendance* and the doctor sutures the wound and
- invites the patient to come back in ten days; when the same patient comes
+ event is recorded as a *New Attendance*. The doctor sutures the wound, and
+ invites the patient to come back in ten days. When the same patient comes
  back after ten days to have his/her stitches removed, a new OPD record is
- then created with the *Re-Attendance* flag set as this visit is a
+ created with the *Re-Attendance* flag set, as this visit is a
  continuation of previous visit and medical problem.
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
@@ -892,7 +892,7 @@ To record the visit, enter the following fields:
 * *Date*: the date of the exam, the application defaults to the current date.
 * *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button.
 * *OPD/IPD*: the window automatically checks if the patient is admitted or not in the hospital; the value can be changed if needed.
-* *[.underline]##E##xam*: choose the exam. A first window asks for the material. Then a second window asks for the exam. Finally a third window asks for the result if the exam allows only a single result; otherwise the list of multiple results are shown in the right panel, together with the chosen material.
+* *[.underline]##E##xam*: choose the exam. A first window asks for the material. Then a second window asks for the exam. Finally, a third window asks for the result if the exam allows only a single result; otherwise the list of multiple results are shown in the right panel, together with the chosen material.
 * *[.underline]##R##emove*: remove a selected exam.
 * *Note*: additional exam reporting (different for each exam).
 
