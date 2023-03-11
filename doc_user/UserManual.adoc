@@ -229,7 +229,7 @@ When finished entering data, the *Buttons panel* has the following choices:
 
 ==== 3.2.3 Modify a Recorded Patient Visit ([.underline]##E##dit)
 
-In order to modify a visit, first highlight it in the *_OPD Out Patient Department_* window. Once highlighted,
+In order to modify a visit, first highlight it in the *_OPD Out Patient Department_* window. Once the visit has been highlighted,
 press the *[.underline]##E##dit* button. When the *_Edit OPD Registration_* window is shown, all the data can be changed or modified.
 
 image:image12.png[Edit Patient Visit,width=373,height=414]
@@ -242,7 +242,7 @@ Once the data have been inserted, the *Buttons panel* shows the following choice
 ==== 3.2.4 Delete a Recorded Patient Visit ([.underline]##D##elete)
 
 In order to delete a visit, first highlight it in the *_OPD Out Patient Department_* window.
-Once highlighted, press the *[.underline]##D##elete* button. The highlighted record is shown in a
+Once the visit has been highlighted, press the *[.underline]##D##elete* button. The highlighted record is shown in a
 confirmation dialog: now the record can be deleted. Deleted records are no longer available.
 
 image:image13.png[Delete Patient Visit,width=278,height=206]
@@ -836,14 +836,14 @@ When the data is specified, the *Buttons panel* provides the following choices:
 
 ==== 5.2.3 Modify a Laboratory Exam ([.underline]##E##dit)
 
-To modify an exam, highlight the exam in the *_Laboratory Browser_* window. Once highlighted,
+To modify an exam, highlight the exam in the *_Laboratory Browser_* window. Once the exam has been highlighted,
 press the *[.underline]##E##dit* button to enter the *_Edit Laboratory Exam_* window, shown below. Now the record is available for changes. This function allows for editing all the data for the exam including setting the result of the exam.
 
 image:image47.png[Edit Laboratory Exam]
 
 ==== 5.2.4 Delete Laboratory Exam ([.underline]##D##elete)
 
-To delete an exam, highlight the exam in the *_Laboratory Browser_* window. Once highlighted,
+To delete an exam, highlight the exam in the *_Laboratory Browser_* window. Once the exam has been highlighted,
 press the *[.underline]##D##elete* button, and a confirmation window is shown:
 
 image:image48.png[Delete Laboratory Exam]
@@ -864,7 +864,7 @@ The presence of the patient name column is required by this mode.
 
 The *_New Laboratory Exam_* window is now strictly related to the patient, that is to say, that the exam must be assigned to a patient previously registered in the system.
 
-Before closing the window with the exam result, a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
+Before you close the window with the exam result, a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
 
 A search field can be used to find a patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
 
@@ -1483,7 +1483,7 @@ To record a new patient, enter the following fields:
 * *Telephone*: the patient's telephone number
 * *Note*: a free text for adding notes about the patient
 
-When finished entering the data, the *Buttons panel* has two choices:
+When you have finished entering the data, observe that the *Buttons panel* has two choices:
 
 * *[.underline]##O##K*: confirm the data and add the patient's record.
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without adding the patient.
@@ -1494,7 +1494,7 @@ To modify the data of a patient, select the patient in the *_Patient Browser_* w
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
-When finished modifying the data in the *Buttons panel*, there are two choices:
+When you have finished modifying the data, observe that the *Buttons panel* has two choices:
 
 * *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data.
@@ -1623,7 +1623,7 @@ NOTE: The "Progressive in Year" field is automatically populated by the program;
 counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
 [.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or refer to the _Administrator’s Guide_.
 
-When done entering data, the *Buttons panel* has the following choices:
+When you have finished entering data, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm and persist the current values.
 * *E[.underline]##x##amination*: open the *_Examination_* window (see
@@ -1738,7 +1738,7 @@ image:image97.png[AdmissionDischarge,width=642,height=337]
 
 NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
-When all the data has been entered, the *Buttons panel* has the following choices:
+When you have finished entering all of the data, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm the values on the window.
 * *E[.underline]##x##amination*: to open the *_Examination_* window (See
@@ -1792,7 +1792,7 @@ To modify the data of an admission, select the admission in the *Data table* of 
 
 image:image100.png[Edit Admission Record,width=642,height=333]
 
-When the changes are complete, the *Buttons panel* has the following choices:
+When you have completed the changes, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -1805,7 +1805,7 @@ To modify the data of an outpatient visit, select the OPD in the *Data table* of
 
 image:image100o.png[Edit OPD Registration,width=642,height=333]
 
-When the changes are complete, the *Buttons panel* has the following choices:
+When you have completed the changes, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -1980,7 +1980,7 @@ To add a therapy, the following information is required:
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
 
-Once the data is entered, the *Buttons panel* has the following choices:
+When you have finished entering the data, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
 <<save-function-therapy,Save function>> described below).
