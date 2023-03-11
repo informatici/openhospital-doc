@@ -266,15 +266,15 @@ image:image14.png[OPD Edit Extended,width=1024,height=771]
 
 The OPD Extended module affords the following additional features:
 
-* Calendar to choose the visit date (1);
-* the OPD number now is visible (2): it is the progressive number per year automatically set by the system; changes to the value can be made only at the first registration in a year, and then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
-* Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient use the search field nearby by typing part of the patient's name or code; this improves the reliability of reports and statistics, and therefore is a service to the patient by knowing his/her history.
-* radio box (5) to distinguish whether an individual is new (*New Attendance*)
+* Calendar (1): to choose the visit date
+* OPD number (2): the progressive number per year automatically set by the system; changes to the value can be made only at the first registration in a year, and then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
+* Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient, use the nearby search field by typing part of the patient's name or code. This improves the reliability of reports and statistics, and is a service to the patient as it accounts for the patient's history.
+* Radio box (5): to distinguish whether an individual is new (*New Attendance*)
  or a (*Re-Attendance*) in the ambulatory. The *New Attendance*
  selection indicates that the patient came to the ambulatory to report a
  new health issue or new disease for which no care has been previously
  provided and/or addressed. This could be their initial visit or their n-th
- time in the ambulatory; it does not matter in regard to this selection.
+ time in the ambulatory; it does not matter for this selection.
  The important criteria for selecting *New Attendance* is that the problem
  under consideration is a new issue; that is, one that has not been dealt
  with previously. For an issue or disease previously dealt with but not completely addressed (that
@@ -2051,7 +2051,7 @@ The *Buttons panel* has the following choices:
 * *[.underline]##O##K*: confirm the therapy plan; the therapy is saved, but the requested pharmaceuticals are not in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
-Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below, the therapies plan is saved.
+Whether or not the availability check that the pharmaceuticals are present in the hospital is done, when the application shows the notification window below, the therapies plan is saved.
 
 image:image116.png[Therapy saved]
 
