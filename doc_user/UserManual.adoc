@@ -153,8 +153,8 @@ Queries about ambulatory patient visits can be done using the search criteria av
 The following fields are available to select or narrow the resulting matches:
 
 * *Search by code* (only one can be used at a time)
-** *Code*: Search an OPD visit by its code, that is unique, hence only *ONE* result is expected
-** *OPD No.*: Search OPD visits by their Progressive in Year, that starts every year from 1, hence one or more results are expected
+** *Code*: Search an OPD visit by its code; each code is unique, hence only *ONE* result is expected
+** *OPD No.*: Search OPD visits by their Progressive in Year; that starts every year from 1, hence one or more results are expected
 ** *Pat. Id*: Search OPD visits by Patient ID, hence one or more results are expected
 
 NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ and press __ENTER__.
@@ -191,14 +191,14 @@ To record a visit, enter data into the following fields:
 (that is, whether this is the absolute first time they have entered the ambulatory). The NEW ATTENDANCE selection
 indicates whether the patient comes to the ambulatory to report a new
 health issue or new disease for which no care has been previously addressed or recorded. This could be their initial
-visit or their n-th time in the ambulatory, it does not matter with regards to this field. If this visit is for an
+visit or their n-th time in the ambulatory; it does not matter with regards to this field. If this visit is for an
 issue or disease previously addressed the field is not selected and records are created for the patient
 with regards to the follow-up care and instructions for recovery.
  +
  +
 _Example: A patient comes to the ambulatory because they report a cut; this event is recorded as
-NEW ATTENDANCE and the doctor sutures the wound and invites the patient to come back ten days later; when the same patient comes back
-after ten days to have his/her stitches removed, a new OPD record is then created but without the NEW ATTENDANCE flag set._
+NEW ATTENDANCE. The doctor sutures the wound, and invites the patient to come back ten days later. When the same patient comes back
+after ten days to have his/her stitches removed, a new OPD record is created, without the NEW ATTENDANCE flag set._
  +
 * *Attendance Date*: The date on which the patient is seen for the recorded activity.
 * *Disease Type*: By selecting a _Disease Type_, the first diagnosis list will contain only related diseases.
@@ -208,8 +208,8 @@ The second and third list continues to contain all diseases.
 NOTE: Disease Types are defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter._
 
-* *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally the patient reports at least one visit reason but it may happen that
-during the same visit the doctor finds other concurrent pathologies thus it is possible to record
+* *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally, the patient reports at least one visit reason, but it may happen that
+during the same visit, the doctor finds other concurrent pathologies. Thus it is possible to record
 up to a maximum of three (the first being the only one mandatory) diagnoses. +
 It is possible to use filters to find diseases more easily.
 To do so, enter a text fragment in the search field that is part of the disease name.
@@ -459,7 +459,7 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 
 * date of the movement
 * type of the movement, that is, if it is a charging or discharging one
-* the ward that the movement refers to. This feature is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used, otherwise, this field is empty
+* the ward that the movement refers to. This feature is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used; otherwise, this field is empty
 * the quantity
 * the pharmaceutical (which in turn relates to different categories: Laboratory, Surgery, Drugs or Chemical)
 * the lot to which the movement is referred to. Some pharmaceuticals may not have a lot related (for example ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
@@ -730,7 +730,7 @@ operation according to the expiring date (FEFO). If the first selected lot does 
 to serve the discharging movement, several discharging movements may be generated if the quantity laying in
 other lots can satisfy the request. Ask the Administrator or check the _Administrator’s Guide_ for more information.
 
-Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed, it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
+Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed; it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
 <<<
 
@@ -805,7 +805,7 @@ image:image44.png[New Laboratory Exam]
 
 To record the visit, enter the following fields:
 
-* *Date*: the date of the exam, the application defaults to the current date.
+* *Date*: the date of the exam; the application defaults to the current date.
 * *Material*: choose from the available values the material used in the exam.
 * *Exam*: choose the exam.
 * *Patient In*: it activates itself if the selected patient is currently admitted, it is possible to change it if needed.
@@ -892,7 +892,7 @@ To record the visit, enter the following fields:
 * *Date*: the date of the exam, the application defaults to the current date.
 * *Patient*: select a patient by pressing the *Find [.underline]##P##atient* button.
 * *OPD/IPD*: the window automatically checks if the patient is admitted or not in the hospital; the value can be changed if needed.
-* *[.underline]##E##xam*: choose the exam; a first window asks for the material, then a second window asks for the exam, finally a third window asks for the result if the exam allows only a single result, otherwise the list of multiple results are shown in the right panel, together with the chosen material.
+* *[.underline]##E##xam*: choose the exam. A first window asks for the material. Then a second window asks for the exam. Finally a third window asks for the result if the exam allows only a single result; otherwise the list of multiple results are shown in the right panel, together with the chosen material.
 * *[.underline]##R##emove*: remove a selected exam.
 * *Note*: additional exam reporting (different for each exam).
 
