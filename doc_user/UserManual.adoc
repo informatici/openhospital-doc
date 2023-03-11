@@ -530,7 +530,7 @@ For a *Movement*, choose either its:
 Finally, for *Lot Preparation Date* and *Lot Due Date* movements that refer to specific lots can be found by inserting:
 
 * the _lot preparation date_: a valid time span (between ‘Preparation Date From’ and ‘Preparation Date To’)
-* the _due date_; behaves similar to the lot preparation tool and the movement date tool
+* the _due date_; behaves similarly to the lot preparation tool and the movement date tool
 
 Each filter can be combined with another, allowing for many possibilities.
 
@@ -660,7 +660,7 @@ The available functions are:
 * *Stock [.underline]##L##edger*: show the history of movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window.
 
-Different than the *Pharmaceuticals [.underline]##S##tock* functionality, the *Pharmaceutical Stock [.underline]##W##ard* allows only discharging movement to patients since it is an internal management of pharmaceuticals held in the ward after they have been “charged” by the main pharmacy. It is also possible that the discharging movement from ward to ward can be accomplished.
+Differently from the *Pharmaceuticals [.underline]##S##tock* functionality, the *Pharmaceutical Stock [.underline]##W##ard* allows only discharging movement to patients since it is an internal management of pharmaceuticals held in the ward after they have been “charged” by the main pharmacy. It is also possible that the discharging movement from ward to ward can be accomplished.
 
 The *_Ward Pharmacy_* window shows a *Filter panel* on the left, a *Movements panel* in the right-center, and a *Button panel* at the bottom.
 
