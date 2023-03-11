@@ -308,7 +308,7 @@ NOTE: For OPD and IPD wards see <<ward,Ward>> settings.
 
 == 4 Pharmacy ([.underline]##P##harmacy)
 
-Pressing *[.underline]##P##harmacy* from the main menu provides access to the Pharmacy menu. From the Pharmacy menu, the following functions are available: *[.underline]##P##harmaceuticals* and *Pharmaceuticals [.underline]##S##tock*, *Pharmaceuticals Stock [.underline]##W##ard.*
+Pressing *[.underline]##P##harmacy* from the main menu provides access to the Pharmacy menu. From the Pharmacy menu, the following functions are available: *[.underline]##P##harmaceuticals*, *Pharmaceuticals [.underline]##S##tock*, and *Pharmaceuticals Stock [.underline]##W##ard.*
 
 .Press the *[.underline]##P##harmacy* button or “Alt + P” to open the Pharmacy submenu
 [frame=none]
