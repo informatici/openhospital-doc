@@ -1056,7 +1056,7 @@ To insert a custom bill entry, press the *C[.underline]##u##stom* button. The ap
 
 image:image58.png[Custom Item]
 
-In this window enter a description for the custom item (in the example below, it is “Number of days of hospitalization”).
+In this window enter a description for the custom item (in the example above, it is “Number of days of hospitalization”).
 
 The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
