@@ -1436,7 +1436,7 @@ Patient selection can be accomplished by specifying a specific value for the fie
 ** *Female*
 
 * *Search Key* Any character string entered is matched against the patient's name and address.
-A complete string or only some characters can be entered and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients that have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
+A complete string or only some characters can be entered and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients who have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
 
 image:image79.png[Patient Browser Search,width=600,height=300]
 
@@ -1683,7 +1683,7 @@ Operations data that can be managed are:
 * *Operation*: the operation type
 * *Date*: the operation date (must be at least older than, or equal to the admission date and at most, more recent than, or equal to the discharge date)
 * *Result*: the result of the operation
-* *Trans Unit*: (not mandatory) the number of transfusion units of blood were used
+* *Trans Unit*: (not mandatory) the number of transfusion units of blood used
 * *Remarks*: (not mandatory) comments about the operation
 
 image:image95.png[Patient's operation,width=642,height=345]
@@ -1838,7 +1838,7 @@ The *Buttons panel* has the following choices:
 
 ==== 8.8.5 Manage Malnutrition Control of a Patient ([.underline]##M##alnutrition Control)
 
-The malnutrition control function is available only for the admissions that have concerns about malnutrition (malnutrition field activated in *_New Admission_* window, see the next page).
+The malnutrition control function is available only for the admissions who have concerns about malnutrition (malnutrition field activated in *_New Admission_* window, see the next page).
 
 The Malnutrition control function allows the registration of specified visits for those patients who need to control their weight/height index.
 
