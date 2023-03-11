@@ -702,7 +702,7 @@ The *Movements panel* is made up of three tabs:
 
 * *Outcomes*: shows all the movements registered between the dates in the *From* and *To* fields at the top of the window. By default, *From* and *To* dates are set to the current date. Every movement is identified by the following fields:
 ** *Date*: the date of the movement.
-** *Patient*: the patient the movement is related to, their age, sex, and weight (ND if the weight has not been defined at the registration moment).
+** *Patient*: the patient the movement is related to, their age, sex, and weight (ND if the weight has not been defined at the moment of registration).
 ** *Medical*: the drug subject of the movement.
 ** *Quantity*: the quantity subject of the movement.
 * *Incomings*: shows all incomings from the main pharmacy; it is to say, all discharging movements registered in the *_Pharmaceutical Stock_* window related to the selected ward.
