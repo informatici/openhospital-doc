@@ -273,7 +273,7 @@ The OPD Extended module affords the following additional features:
  or a (*Re-Attendance*) in the ambulatory. The *New Attendance*
  selection indicates that the patient came to the ambulatory to report a
  new health issue or new disease for which no care has been previously
- provided for and/or addressed. This could be their initial visit or their n-th
+ provided and/or addressed. This could be their initial visit or their n-th
  time in the ambulatory; it does not matter in regard to this selection.
  The important criteria for selecting *New Attendance* is that the problem
  under consideration is a new issue; that is, one that has not been dealt
@@ -462,7 +462,7 @@ The Pharmaceutical Stock feature is used to store and trace every stock movement
 * the ward that the movement refers to. This feature is needed for discharging movements only. It is important to know in which ward pharmaceuticals have been used; otherwise, this field is empty
 * the quantity
 * the pharmaceutical (which in turn relates to different categories: Laboratory, Surgery, Drugs or Chemical)
-* the lot to which the movement is referred to. Some pharmaceuticals may not have a lot related (for example ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
+* the lot to which the movement is referred to. Some pharmaceuticals may not have a lot related (for example, ‘Gloves’), so the field can be omitted. It is recommended to store even the lot (if it exists) because every lot has its own peculiarity:
 ** a name (that can be its code)
 ** a preparation date
 ** a due date
@@ -2010,7 +2010,7 @@ When the therapy plan is entered (all the therapies of a patient), press the _Ch
 
 image:image112.png[Therapy available]
 
-If there are not sufficient quantities available, the application shows the small window (shown below), called *_Therapy Not Available:_*
+If insufficient quantities are available, the application shows the small window (shown below), called *_Therapy Not Available:_*
 
 image:image113.png[Therapy Not Available]
 
@@ -2048,7 +2048,7 @@ image:image115.png[Therapy not available]
 
 The *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved, but there are not the requested pharmaceuticals in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
+* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved, but the requested pharmaceuticals are not in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
 Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below the therapies plan is saved.
