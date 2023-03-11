@@ -70,7 +70,7 @@ called a “button”. *[.underline]##P##harmacy* is a button.
 or an area of the window (for example, *Data table*).
 
 * Each button always has a single letter with an underscore. The functionality offered by the button is made available by
-pressing the “Alt” key and at the same time the “underlined” key (in the example of *[.underline]##P##harmacy*,
+simultaneously pressing the “Alt” key and the “underlined” key (in the example of *[.underline]##P##harmacy*,
 press “Alt” and “P”)*.* This behavior is common throughout the application and allows the user to operate (almost)
 without the use of the mouse. In this document, the “Alt” key and the “P” key will be indicated as “Alt + P”.
 
