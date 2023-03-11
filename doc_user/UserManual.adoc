@@ -288,7 +288,7 @@ The OPD Extended module affords the following additional features:
  invites the patient to come back in ten days. When the same patient comes
  back after ten days to have his/her stitches removed, a new OPD record is
  created with the *Re-Attendance* flag set, as this visit is a
- continuation of previous visit and medical problem.
+ continuation of the previous visit and medical problem.
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
@@ -2279,13 +2279,13 @@ The functionality allows the following tasks:
 
 === 11.2 Chat
 
-By pressing the *Co[.underline]##m##munication* the *_Communication_* window is shown:
+By pressing the *Co[.underline]##m##munication*, the *_Communication_* window is shown:
 
 image:image129.png[Communication window,width=367,height=275]
 
 It shows all users logged into the system. Some of them have a green circle near their name: it means that they are currently logged in the system and they are the only ones that can be interacted with. Others have the grey circle near their name: it means that they logged in at least one time in the past but are not currently using the system.
 
-By double-clicking on an active user (i.e. Allan in the figure above) a chat session can be started, as shown in the figures below:
+By double-clicking on an active user (i.e. Allan in the figure above), a chat session can be started, as shown in the figures below:
 
 image:image130.png[Communication window,width=641,height=286]
 
@@ -2696,7 +2696,7 @@ Once the *[.underline]##H##ospital* button in the *_Settings_* menu is pressed, 
 
 image:image162.png[Hospital]
 
-By pressing the *[.underline]##E##dit* button it is possible to modify the hospital information:
+By pressing the *[.underline]##E##dit* button, it is possible to modify the hospital information:
 
 image:image163.png[Hospital edit]
 
@@ -2717,7 +2717,7 @@ The functions available in this window are:
 * *[.underline]##D##elete*: delete an existing ward (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-By pressing the *[.underline]##N##ew* button the *_New Ward_* window is shown:
+By pressing the *[.underline]##N##ew* button, the *_New Ward_* window is shown:
 
 image:image165.png[New Ward]
 
@@ -3115,7 +3115,7 @@ In editing mode, only the group and the description can be modified.
 [#worksheet]
 == 13 Worksheet ([.underline]##W##orksheet)
 
-The *Worksheet* function allows the management and printing of the list of appointments scheduled.
+The *Worksheet* function allows for the management and printing of the list of appointments scheduled.
 
 .Click the mouse on the button or press "Alt + W" to enter the *Worksheet* page:
 
