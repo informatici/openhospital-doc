@@ -2347,7 +2347,7 @@ image:image137.png[Communication reports for Allan,width=377,height=284]
 
 === 12.1 Main Characteristics
 
-Setup and customization of Open Hospital can be performed through the *[.underline]##S##ettings* functionality. This feature allows the configuration all “types” and “data” used in the current Open Hospital implementation.
+Setup and customization of Open Hospital can be performed through the *[.underline]##S##ettings* functionality. This feature allows the configuration of all “types” and “data” used in the current Open Hospital implementation.
 
 .Press the *[.underline]##S##ettings* button or “Alt + S” to open the Settings submenu.
 [frame=none]
