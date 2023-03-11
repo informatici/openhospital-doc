@@ -1973,10 +1973,10 @@ NOTE: To better explain how the function *Add a therapy* works, the *Therapy* wi
 To add a therapy, the following information is required:
 
 * *Pharmaceutical*: the pharmaceutical of the therapy; in the example above, this is _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
-* *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above, the selected value is “4”
+* *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantities) or moving the cursor on the right (for large quantities); in the example above, the selected value is “4”
 * *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above, “One” means once per day
-* *Frequency within period*: set the periodicity of the therapy; in the example above, every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
-* *Period*: set the length of therapy; to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
+* *Frequency within period*: set the periodicity of the therapy; in the example above, this is every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
+* *Period*: set the length of therapy. To do this, select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
 
