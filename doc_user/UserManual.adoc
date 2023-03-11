@@ -799,7 +799,7 @@ After the selection press, the *[.underline]##S##earch* button; the system shows
 [#create-a-new-laboratory-exam]
 ==== 5.2.2 Create a New Laboratory Exam ([.underline]##N##ew)
 
-Press the *[.underline]##N##ew* button in the *_Laboratory Browser_* window: The *_New Laboratory Exam_* window is shown:
+Press the *[.underline]##N##ew* button in the *_Laboratory Browser_* window. The *_New Laboratory Exam_* window is shown:
 
 image:image44.png[New Laboratory Exam]
 
