@@ -66,7 +66,7 @@ called a “button”. *[.underline]##P##harmacy* is a button.
 * When a text is written in bold Italic (as an example, *_Laboratory Browser)_*, it indicates the screen with the name
 “Laboratory Browser” (see example below). Each screen of the application is called a window. *_Laboratory Browser_* is a window.
 
-* When a text is written in bold as *Search patient visits –*, it indicates a function of the application,
+* When a text is written in bold as *Search patient visits*, it indicates a function of the application,
 or an area of the window (for example, *Data table*).
 
 * Each button always has a single letter with an underscore. The functionality offered by the button is made available by
@@ -162,7 +162,7 @@ NOTE: to apply the above *Exclusive Filters* one has to just type a __number__ a
 * *Other filters* (they are all applied when pressing [.underline]##S##earch)
 ** *Ward*: Select a specific OPD ward
 ** *Disease type*: Select a specific disease type or all disease types
-** *Disease*: Select a specific disease, or all diseases, or search using partial matches by typing some letters in the search field
+** *Disease*: Select either a specific disease or all diseases, or search using partial matches by typing some letters in the search field
 ** *Sex*: Select patients by sex: All / Male / Female
 ** *Date*: “Date From” and “Date To” to select all visits occurring during the specified period
 ** *Age*: “Age From” and “Age To” to select patients by age
@@ -1001,7 +1001,7 @@ Data shown in the *Payments panel* area are:
 
 image:image54.png[New Patient Bill]
 
-To insert a new bill, *Date field* value is required. The application defaults to the current date and time but the values can be modified.
+To insert a new bill, *Date field* value is required. The application defaults to the current date and time, but the values can be modified.
 
 In addition, a patient must be selected. To do that, press the *Find [.underline]##P##atient* button on top of the screen. The *_Patient Selection_* window is shown:
 
@@ -1447,7 +1447,7 @@ NOTE: Wards can be defined by the Administrator. Ask the Administrator or check 
 
 Memory usage can be optimized when the number of registered patients becomes huge by changing the _ENHANCEDSEARCH_ flag in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-Once the enhanced search has been enabled, the new *_Patient Browser_* window looks like following:
+Once the enhanced search has been enabled, the new *_Patient Browser_* window looks like the following:
 
 image:image80.png[Patient Browser Enhanced Search,width=600,height=300]
 
@@ -1568,7 +1568,7 @@ By clicking again on the *[.underline]##N##ew Photo* button, a picture is taken 
 
 ===== 8.4.3.1 Camera Settings (image:image91.png[camera icon,width=22,height=12])
 
-If nothing happens when pressing the *[.underline]##N##ew Photo* button, press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if there is more than one; if only one camera is connected to the computer it is useful to reset the camera settings and restart it.
+If nothing happens when pressing the *[.underline]##N##ew Photo* button, press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if there is more than one; if only one camera is connected to the computer, it is useful to reset the camera settings and restart it.
 
 Once the camera is activated and the “eye-view” of the camera is visible, press on “+” or “-“ to increase or reduce the image quality.
 
@@ -1600,7 +1600,7 @@ If the patient is already admitted, then the *_Edit Admission Record_* is shown.
 
 Once a patient is registered, they can be admitted to a hospital ward.
 
-First, to insert the admission of a patient highlight the patient in the *_Patient Browser_* window. Once this is done,
+First, to insert the admission of a patient, highlight the patient in the *_Patient Browser_* window. Once this is done,
 press the *[.underline]##A##dmission* button. The *_New Admission_* window is shown (if the patient is already admitted the *_Edit Admission Record_* window is shown):
 
 image:image92.png[New Admission,width=637,height=334]
@@ -1946,7 +1946,7 @@ The thumbnails on the left can be hidden by changing the _DICOMTHUMBNAILS_ flag 
 === 8.10 Therapy Management (T[.underline]##h##erapy)
 
 To manage the therapy of a patient, select the patient in the *_Patient Browser_* window. Next,
-press the *T[.underline]##h##erapy* button. The specific window for therapy management of the selected patient is shown. The window has no name but it is typically referred to as the *_Therapy_* window.
+press the *T[.underline]##h##erapy* button. The specific window for therapy management of the selected patient is shown. The window has no name, but it is typically referred to as the *_Therapy_* window.
 The name of the selected patient is shown at the top.
 
 In the *_Therapy_* window, it is possible to insert, modify or remove a therapy for the selected patient.
@@ -2014,7 +2014,7 @@ If there are not sufficient quantities available, the application shows the smal
 
 image:image113.png[Therapy Not Available]
 
-This window provides information that the therapy is not available but it does not block the input of the Therapy plan.
+This window provides information that the therapy is not available, but it does not block the input of the Therapy plan.
 Click the *[.underline]##O##K* button to dismiss the window.
 
 After the check, in the *Buttons panel* of the *_Therapy_* window if there is a red X and the text “NOT AVAILABLE” this means that at least one of the involved drugs is not available.
@@ -2048,7 +2048,7 @@ image:image115.png[Therapy not available]
 
 The *Buttons panel* has the following choices:
 
-* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved but there are not the requested pharmaceuticals in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
+* *[.underline]##O##K*: confirm the therapy plan; the therapy is saved, but there are not the requested pharmaceuticals in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
 Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below the therapies plan is saved.
@@ -2761,7 +2761,7 @@ image:image167.png[Edit Disease]
 
 In editing mode, the code cannot be changed and the only modifications allowed are to the Type, the Description and if the disease should appear only in OPD, or Admissions, or in both.
 
-By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-) a *[.underline]##D##elete* action is performed disabling the disease from appearing in the application. This action can be undone by editing the disease again.
+By removing the check from all the checkboxes (OPD, IPD -IN-, and IPD -OUT-), a *[.underline]##D##elete* action is performed, disabling the disease from appearing in the application. This action can be undone by editing the disease again.
 
 The diseases defined are reflected throughout the entire application, like in the Admission module and the OPD module (see
 <<admission-patient,Admission/Patient>> and
