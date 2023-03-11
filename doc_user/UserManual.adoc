@@ -3143,7 +3143,7 @@ The functions available in this window are:
 * *<-[.underline]##P##rev.*: see the schedule for the previous day.
 * *[.underline]##C##lose*: close the window.
 
-TIP: To schedule a visit can also be done in the *Therapy Management* module, see <<therapy-management,Therapy Management>>
+TIP: Scheduling a visit can also be done in the *Therapy Management* module, see <<therapy-management,Therapy Management>>
 
 <<<
 
