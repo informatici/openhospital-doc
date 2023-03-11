@@ -564,7 +564,7 @@ Then press *[.underline]##O##K*. If there is an existing lot in the system, the 
 
 image:image28.png[Existing Lots]
 
-If stock movement is related to this existing lot, select it and click *Selected Lot*. Otherwise, click *New Lot* and the *_Lot Information_* window is shown with the following fields:
+If stock movement is related to this existing lot, select it and click *Selected Lot*. Otherwise, click *New Lot*; then the *_Lot Information_* window is shown with the following fields:
 
 * *Lot No.*: the lot code
 * *Lot preparation*: the lot preparation date
@@ -607,7 +607,7 @@ press *ENTER.* This opens the *_Choose a Medical_* window.
 
 image:image26.png[Medical Selection]
 
-Select the desired medical and click *[.underline]##Y##es*. This then opens the *_Quantity_* window showing the existing stock for the medical. In the input field, enter the quantity of the medical to discharge.
+Select the desired medical and click *[.underline]##Y##es*. This opens the *_Quantity_* window, showing the existing stock for the medical. In the input field, enter the quantity of the medical to discharge.
 
 image:image32.png[Quantity Input]
 
