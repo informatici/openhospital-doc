@@ -1056,7 +1056,7 @@ To insert a custom bill entry, press the *C[.underline]##u##stom* button. The ap
 
 image:image58.png[Custom Item]
 
-In this window enter a description for the custom item (in the example below is “Number of days of hospitalization”).
+In this window enter a description for the custom item (in the example below, it is “Number of days of hospitalization”).
 
 The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
@@ -1065,7 +1065,7 @@ The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
 image:image59.png[Custom Item Cost]
 
-In the *_Custom Item_* window enter the amount related to the bill entry (in the example above the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
+In the *_Custom Item_* window enter the amount related to the bill entry (in the example above, the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
 
 The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
@@ -1083,7 +1083,7 @@ To insert a payment, press the *Pa[.underline]##y##ment* button. The application
 
 image:image60.png[Payment]
 
-Provide the amount of the payment (in the example above is “12” in the local currency, i.e. it is US dollars if the country is the USA) in the text field.
+Provide the amount of the payment (in the example above, the “12” is in the local currency, i.e. it is US dollars if the country is the USA) in the text field.
 
 The *Buttons panel* of the *_Quantity_* window has the following choices:
 
@@ -1292,7 +1292,7 @@ NOTE: Vaccine Types and Vaccines can be defined by the Administrator. Ask the Ad
 
 After the selection, press the *[.underline]##S##earch* button; the system shows in the *Data table* the results of applying the search criteria requested.
 
-The function also shows in the field “Count:” the number of vaccinations that are shown in the *Data table* (in the example there are 26).
+The function also shows in the field “Count:” the number of vaccinations that are shown in the *Data table* (in the example, there are 26).
 
 image:image72.png[Search Vaccines,width=619,height=245]
 
@@ -1972,10 +1972,10 @@ NOTE: To better explain how the function *Add a therapy* works, the *Therapy* wi
 
 To add a therapy, the following information is required:
 
-* *Pharmaceutical*: the pharmaceutical of the therapy; in the example above _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
-* *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above the selected value is “4”
-* *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above “One” means once per day
-* *Frequency within period*: set the periodicity of the therapy; in the example above every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
+* *Pharmaceutical*: the pharmaceutical of the therapy; in the example above, this is _Cyclophosphamide 500mg_ (highlight the desired pharmaceutical)
+* *Quantity*: set the quantity; this can be done by clicking on the small up/down arrows (for small quantity) or moving the cursor on the right (for large quantity); in the example above, the selected value is “4”
+* *Frequency within day*: set how many times (frequency) the dose has to be given during one day (possible choices are: one, two, three, four); in the example above, “One” means once per day
+* *Frequency within period*: set the periodicity of the therapy; in the example above, every two days (a quantity of 4 _Cyclophosphamide 500mg_ every two days has to be given)
 * *Period*: set the length of therapy; to do it select days, weeks, and months; in the example above, the therapy is 11 days long (4 days and 1 week)
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
