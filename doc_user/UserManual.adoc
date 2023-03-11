@@ -98,7 +98,7 @@ If no desktop shortcut is present, open the folder where the software has been i
 
 === 2.1 Main menu
 
-.The default Main Menu of the OH application shows the available functions:.
+.The default Main Menu of the OH application shows the available functions.
 [#default-main-menu-4]
 [caption="Main Menu: "]
 image:OH-main_menu.png[OH Main Menu]
@@ -206,7 +206,7 @@ The second and third list continues to contain all diseases.
  +
 
 NOTE: Disease Types are defined by the Administrator. Ask the Administrator or check the
-<<settings,Settings>> chapter._
+<<settings,Settings>> chapter.
 
 * *Diagnosis*: A maximum of three diseases can be diagnosed per each attendance (“new attendance” or “re-attendance” does not matter in this context). Normally, the patient reports at least one visit reason, but it may happen that
 during the same visit, the doctor finds other concurrent pathologies. Thus it is possible to record
