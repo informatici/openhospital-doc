@@ -1266,7 +1266,7 @@ By default, the window shows in the *Data table* all the vaccinations added to t
 
 image:image71.png[Patient Vaccine Browser,width=594,height=263]
 
-The following functions are accessible from the *Buttons panel* of the window *_Patient Vaccine Browser_* window:
+The following functions are accessible from the *Buttons panel* of the *_Patient Vaccine Browser_* window:
 
 * *[.underline]##N##ew*: insert a new vaccination.
 * *[.underline]##E##dit*: modify a stored vaccination.
@@ -1376,7 +1376,7 @@ By default, the window shows a *Data table* all of the patients currently presen
 
 image:image78.png[Patient Browser,width=600,height=300]
 
-NOTE: If the list of patients becomes very large, it is likely to result in a slowdown of the system depending on the
+NOTE: If the list of patients becomes very large, it is likely to result in a slowdown of the system, depending on the
 network settings. It is possible to optimize the use of memory by changing the flag ENHANCEDSEARCH in the
 configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
@@ -2051,7 +2051,7 @@ The *Buttons panel* has the following choices:
 * *[.underline]##O##K*: confirm the therapy plan; the therapy is saved, but the requested pharmaceuticals are not in the hospital. The application saves the therapy plan and shows the confirmation window, shown below.
 * *[.underline]##C##ancel*: return to the *_Therapy_* window without saving the therapy plan.
 
-Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below the therapies plan is saved.
+Whether the availability check that the pharmaceuticals are present in the hospital is done or not, when the application shows the notification window below, the therapies plan is saved.
 
 image:image116.png[Therapy saved]
 
