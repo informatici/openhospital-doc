@@ -671,7 +671,7 @@ click the *[.underline]##R##ectify* button to open the *_Rectify_* window.
 
 image:image36.png[Rectify]
 
-* Select the medical. Once done, the quantity currently in stock is displayed.
+* Select the medical. Once the medical has been selected, the quantity currently in stock is displayed.
 * If lots exist for the drug, click *Choose a [.underline]##L##ot*; otherwise, click on *[.underline]##N##ew Lot* (new lot creation).
 * Modify the *Actual Quantity*.
 * Enter the reason for the rectification.
@@ -1007,7 +1007,7 @@ In addition, a patient must be selected. To do that, press the *Find [.underline
 
 image:image54a.png[Patient Selection]
 
-Once the patient is selected start entering the data related to the bill.
+Once the patient is selected, start entering the data related to the bill.
 
 NOTE: A patient can have several pending bills only if the parameter ALLOWMULTIPLEOPENEDBILL is enabled
 (see the Administrator Manual). Otherwise, if the patient has a pending bill, the bill will be recalled to
@@ -1328,7 +1328,7 @@ image:image74.png[Edit a patient vaccination]
 
 All the data for the vaccination can be changed except for the patient associated with the vaccination.
 
-Once all the changes are made the *Buttons panel* has the following choices:
+Once all the changes are made, the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Vaccine Browser_* window without changing any values.
@@ -3041,7 +3041,7 @@ If _SINGLEUSER_ is set to NO, the following login window is shown when the progr
 
 image:image187.png[Login,width=305,height=148]
 
-Once successfully logged into the system, if enabled by the Administrator, the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is available.
+Once you have successfully logged into the system, the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is available, if enabled by the Administrator.
 
 Once the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is pressed, the *_Users & Groups_* submenu is shown:
 
@@ -3127,7 +3127,7 @@ The _Worksheet_ module works at the Ward (Department) level; therefore, a ward m
 
 image:image245.png[Worksheet,width=600,height=265]
 
-Once selected, the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
+Once you have selected the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
 
 image:image246.png[Worksheet with selection,width=600,height=265]
 
