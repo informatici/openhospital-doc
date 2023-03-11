@@ -333,7 +333,7 @@ Pharmaceutical functions allow for the insertion, modification, and deletion of 
 * if the pharmaceutical is out of stock
 * the drugs expiring today or within a specified time period
 
-NOTE: In Open Hospital to identify pharmaceuticals sometimes the word, “pharmaceutical” is used and
+NOTE: In Open Hospital, to identify pharmaceuticals, sometimes the word, “pharmaceutical” is used and
 sometimes the synonym “medical” is used.
 
 ==== 4.1.2 Functions of Pharmaceuticals
@@ -491,7 +491,7 @@ The following functions are available from the *Buttons panel* of the window *_S
 * *Stock [.underline]##L##edger*: show the history of movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example use a discharge movement to undo the unwanted change.
+NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example, use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -607,7 +607,7 @@ press *ENTER.* This opens the *_Choose a Medical_* window.
 
 image:image26.png[Medical Selection]
 
-Select the desired medical and click *[.underline]##Y##es*. This then opens the *_Quantity_* window showing the existing stock for the medical. In the input field enter the quantity of the medical to discharge.
+Select the desired medical and click *[.underline]##Y##es*. This then opens the *_Quantity_* window showing the existing stock for the medical. In the input field, enter the quantity of the medical to discharge.
 
 image:image32.png[Quantity Input]
 
@@ -1056,7 +1056,7 @@ To insert a custom bill entry, press the *C[.underline]##u##stom* button. The ap
 
 image:image58.png[Custom Item]
 
-In this window enter a description for the custom item (in the example above, it is “Number of days of hospitalization”).
+In this window, enter a description for the custom item (in the example above, it is “Number of days of hospitalization”).
 
 The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
@@ -1065,7 +1065,7 @@ The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
 image:image59.png[Custom Item Cost]
 
-In the *_Custom Item_* window enter the amount related to the bill entry (in the example above, the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
+In the *_Custom Item_* window, enter the amount related to the bill entry (in the example above, the “20” is in the local currency, i.e., it is in US dollars if the country is the USA).
 
 The *Buttons panel* of the *_Custom Item_* window has the following choices:
 
@@ -1914,7 +1914,7 @@ click the *[.underline]##L##oad Image* button. The following window is shown:
 
 image:image106.png[Image Open,width=517,height=366]
 
-In the case of multi-frame image the whole folder can be selected:
+In the case of multi-frame image, the whole folder can be selected:
 
 image:image106b.png[Image open multi-frame,width=517,height=366]
 
@@ -2317,7 +2317,7 @@ image:image133.png[Communication discharge for Allan,width=377,height=285]
 
 === 11.4 Pharmaceuticals Critical Level Notifications
 
-In the *_Stock Movement_* window there is a new box at the bottom, as shown below:
+In the *_Stock Movement_* window, there is a new box at the bottom, as shown below:
 
 image:image134.png[Communication Stock alert,width=500,height=500]
 
@@ -2330,7 +2330,7 @@ image:image135.png[Communication Stock alert for Allan,width=377,height=287]
 
 === 11.5 Report Sharing
 
-In the *_Report Launcher_* window there is a new box at the bottom, as shown below:
+In the *_Report Launcher_* window, there is a new box at the bottom, as shown below:
 
 image:image136.png[Communication reports,width=642,height=123]
 
@@ -2808,7 +2808,7 @@ To insert a new Exam, the following data must be provided:
 Once an exam is defined, the next step is the definition of the set of results the
 exam can have. First, select the exam in the *_Exam Browser_* window and then press the *[.underline]##Re##sults* button.
 
-In Open Hospital three kinds of results can be defined, called “Procedure”:
+In Open Hospital, three kinds of results can be defined, called “Procedure”:
 
 * *Procedure 1*: a set of values as description; only one will be selectable as exam *Single Result*
 * *Procedure 2*: a set of Positive/Negative values; all of them will figure as exam *Multiple Results*
