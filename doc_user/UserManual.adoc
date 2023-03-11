@@ -52,7 +52,7 @@ NOTE: The information needed to install, configure or administer Open Hospital i
 
 ==== 1.2.1 Help
 
-* The *[.underline]##H##elp* function available on the bottom of the main MENU of Open Hospital provides access to
+* The *[.underline]##H##elp* function available at the bottom of the main MENU of Open Hospital provides access to
 this document [.underline]#offline#.
 
 ==== 1.2.2 Legend
@@ -94,7 +94,7 @@ image:image4.png[Highlight Line,width=509,height=296]
 To run Open Hospital, double-click the program icon on the desktop; an information image (splash image) appears for a few seconds and
 then the main _menu_ of the OH application is shown.
 
-If no desktop shortcut is present, open the folder where the software has been installed and double-click on the platform specific startup script (**oh.bat** on Windows / **oh.sh** on Linux).
+If no desktop shortcut is present, open the folder where the software has been installed and double-click on the platform-specific startup script (**oh.bat** on Windows / **oh.sh** on Linux).
 
 === 2.1 Main menu
 
