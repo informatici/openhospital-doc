@@ -45,7 +45,7 @@ OH - Open Hospital features include:
 
 === 1.2 About this User Manual
 
-In the following chapters, all the information needed to use correctly and efficiently the OH software is presented.
+In the following chapters, all the information needed to correctly and efficiently use the OH software is presented.
 More information can be found on the Open Hospital web site: https://www.open-hospital.org.
 
 NOTE: The information needed to install, configure or administer Open Hospital is not included in this manual; please refer to the _Open Hospital Administrator’s Guide_ supplied with the software.
