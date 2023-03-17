@@ -167,7 +167,7 @@ The Administrator/Installer tasks are hereby listed:
 [#prereq]
 ==== 2.1.1 Prerequisites - Software compatibility matrix
 
-Before starting, check the following software compatibility matrix, to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
+Before starting, check the following software compatibility matrix to verify the external software versions needed to run Open Hospital and the current available extended features for every version, architecture, and operating system.
 include::./OH_software_compatibility_matrix.adoc[]
 
 
@@ -2203,7 +2203,7 @@ image:image67.png[image,width=604,height=377] +
 
 If the password is not correct, an error message is shown, asking the user to try again.
 
-To better understand the processes built in the software also enable the “Standard Output” in
+To better understand the processes built in the software, also enable the “Standard Output” in
 _log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properties>>.
 
 <<<
