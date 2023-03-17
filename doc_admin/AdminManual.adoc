@@ -192,7 +192,7 @@ NOTE: MariaDB is the preferred alternative for the DBMS.
 
 ===== 2.1.3.1 MariaDB/MySQL - Server installation
 
-Please referer to the latest MariaDB/MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
+Please refer to the latest MariaDB/MySQL Server online documentation for downloadfootnote:[https://mariadb.org/download/] and installationfootnote:[https://mariadb.org/documentation/] information while using this document.
 
 *on a Linux machine*: during the installation, a “root” password must be defined; it is very important to choose it carefully and to keep it safe.
 
