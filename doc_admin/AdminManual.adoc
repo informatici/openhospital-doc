@@ -786,7 +786,7 @@ The following table shows the default value and the allowed ones:
 |SINGLEUSER |yes |yes, no
 |===
 
-Open Hospital is designed to support multi-user usage. This means that is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
+Open Hospital is designed to support multi-user usage. This means that it is possible to define different users, arrange them by group and set different rights in application usage; for instance, a user “receptionist” may be able to register a new patient but not to prescribe a therapy.
 
 Open Hospital has a predefined user called “admin” that has access rights to all the features of the application.
 When SINGLEUSER is set to YES (default) the program starts with this user and all the features are available.
@@ -822,7 +822,7 @@ The following table shows the default value and the alternatives for lot managem
 |===
 
 Open Hospital allows for automatic management of lots in the main pharmacy.
-This means that is possible to work in the pharmacy without taking care of lot definitions in loading the store and
+This means that it is possible to work in the pharmacy without taking care of lot definitions in loading the store and
 just specify preparation and expiring date for each charging movement
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#4-2-2-2-insert-stock-charging-movement-charge[4.2.2.2 Insert stock charging movement] in the User's Guide).
 
