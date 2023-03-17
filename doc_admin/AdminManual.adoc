@@ -530,7 +530,7 @@ Backup of the Open Hospital database can be performed in several ways.
 
 NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -s*, on Windows launch *oh.bat* and choose the option *s*.
 
-Restore of the Open Hospital database can be performed also in several ways.
+Restoring the Open Hospital database can also be performed in several ways.
 
 NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
 
@@ -1454,7 +1454,7 @@ the program opens the new special window shown below:
 
 image:image26.png[New Patient Extended_photo_debug.png,width=645,height=535]
 
-From this window is possible to have more information about webcams connected to the system.
+From this window it is possible to have more information about webcams connected to the system.
 It is possible to apply different resolutions in order to find the best setting or get information about a problem.
 
 Once a photo is produced, Open Hospital remembers the settings and uses them in the future.
@@ -2128,7 +2128,7 @@ Each report consists of two files:
 
 * a .*jrxml* file: JasperReport XML file, that can be modified with a proper editor
 * a .*jasper* file: Jasper file, that is the compiled version that can be run in Open Hospital; this file is produced on the jrxml base
-* some reports could have also more than one *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name visualized in the Open Hospital application, otherwise the application will not show the report (this can be useful for subreports).
+* some reports could also have more than one *.properties* file that works for the localization, it means that the report has been translated to appear in more languages (default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name visualized in the Open Hospital application, otherwise the application will not show the report (this can be useful for subreports).
 
 The editor to create and modify JasperReports® is https://sourceforge.net/projects/jasperstudio/[TIBCO Jaspersoft® Studio] version 6.14.0 or later, a free and open-source software.
 
