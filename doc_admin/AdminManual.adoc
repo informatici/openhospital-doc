@@ -1413,7 +1413,7 @@ The following table shows the default value and the allowed ones:
 |===
 
 Open Hospital includes a feature that allows attaching image files to a patient’s clinical sheet.
-When this option is enabled, a *Imaging* button is shown in the patient Clinical sheet module.
+When this option is enabled, an *Imaging* button is shown in the patient Clinical sheet module.
 
 By default, DICOMMODULEENABLED is set to no.
 
