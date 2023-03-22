@@ -864,7 +864,7 @@ The presence of the patient name column is required by this mode.
 
 The *_New Laboratory Exam_* window is now strictly related to the patient, that is to say, that the exam must be assigned to a patient previously registered in the system.
 
-Before you close the window with the exam result, a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
+Before one closes the window with the exam result, a patient must be selected from the list; the fields in the *Patient's Data* panel provide some simple patient details.
 
 A search field can be used to find a patient by typing part of his/her name or his/her Open Hospital code (which is specified in the Patient window, see *_Patient Extended_*).
 
@@ -1483,7 +1483,7 @@ To record a new patient, enter the following fields:
 * *Telephone*: the patient's telephone number
 * *Note*: a free text for adding notes about the patient
 
-When you have finished entering the data, observe that the *Buttons panel* has two choices:
+When data entry has been completed, observe that the *Buttons panel* has two choices:
 
 * *[.underline]##O##K*: confirm the data and add the patient's record.
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without adding the patient.
@@ -1494,7 +1494,7 @@ To modify the data of a patient, select the patient in the *_Patient Browser_* w
 
 image:image83e.png[Edit Patient,width=416,height=386]
 
-When you have finished modifying the data, observe that the *Buttons panel* has two choices:
+When modification of the data has been completed, observe that the *Buttons panel* has two choices:
 
 * *[.underline]##O##K*: confirm the new values (all the previous values will be lost).
 * *[.underline]##C##ancel*: close the window and return to the *_Patient Browser_* window without changing the patient's data.
@@ -1623,7 +1623,7 @@ NOTE: The "Progressive in Year" field is automatically populated by the program;
 counter starts from the first of January or from the first of June based on the current norm for the health facility. To change the behavior please ask the Administrator to set the
 [.underline]#MATERNITYRESTARTINJUNE# flag in the configuration file or refer to the _Administrator’s Guide_.
 
-When you have finished entering data, observe that the *Buttons panel* has the following choices:
+When data entry has been completed, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm and persist the current values.
 * *E[.underline]##x##amination*: open the *_Examination_* window (see
@@ -1738,7 +1738,7 @@ image:image97.png[AdmissionDischarge,width=642,height=337]
 
 NOTE: Discharge Types and Diseases can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
-When you have finished entering all of the data, observe that the *Buttons panel* has the following choices:
+When data entry has been completed, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm the values on the window.
 * *E[.underline]##x##amination*: to open the *_Examination_* window (See
@@ -1792,7 +1792,7 @@ To modify the data of an admission, select the admission in the *Data table* of 
 
 image:image100.png[Edit Admission Record,width=642,height=333]
 
-When you have completed the changes, observe that the *Buttons panel* has the following choices:
+When the changes have been completed, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -1805,7 +1805,7 @@ To modify the data of an outpatient visit, select the OPD in the *Data table* of
 
 image:image100o.png[Edit OPD Registration,width=642,height=333]
 
-When you have completed the changes, observe that the *Buttons panel* has the following choices:
+When the changes have been completed, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##S##ave*: confirm new values (all the previous values are lost).
 * *E[.underline]##x##amination*: open the *_Examination_* window (See
@@ -1980,7 +1980,7 @@ To add a therapy, the following information is required:
 * *Starts – Ends*: set start and end dates of the therapy; in the example, the therapy starts on November 20^th^ and finishes on November 30^th^
 * *Note*: an optional area for free text or notes
 
-When you have finished entering the data, observe that the *Buttons panel* has the following choices:
+When data entry has been completed, observe that the *Buttons panel* has the following choices:
 
 * *[.underline]##O##K*: confirm the data of the therapy. The therapy is not saved until it is confirmed with the *[.underline]##S##ave* button in the *_Therapy_* window (see
 <<save-function-therapy,Save function>> described below).
@@ -2851,9 +2851,9 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Operation_* window is 
 
 image:image174.png[Edit Operation]
 
-In editing mode, the code cannot be changed but only modification of the Type, the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
+In editing mode, the code cannot be changed; only modification of the Type, the Description and whether the operation concerns Major or Minor surgery for statistical purposes (not yet implemented) are allowed.
 
-You can also change the operation's context: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
+The operation's context can also be changed: _OPD / ADMISSION_, _ADMISSION_, _OPD_.
 
 The Operations defined are used throughout the entire application, like in the Admission module (see
 <<insert-or-modify-surgery-data,Insert or Modify Surgery data>> in this document).
@@ -3025,7 +3025,7 @@ image:image185.png[New SMS]
 In order to insert a new SMS, the following data is required:
 
 * *Scheduled Date*: use this field to send an SMS in the future. Use the current date and time to send the SMS immediately.
-* *Number*: the recipient of the SMS. You can select a patient by clicking the button image:image186.png[number icon,width=43,height=23]. The phone number of the selected patient is automatically inserted.
+* *Number*: the recipient of the SMS. Select a patient by clicking the button image:image186.png[number icon,width=43,height=23]. The phone number of the selected patient is automatically inserted.
 * *SMS*: type the text of the SMS in the white space (maximum of 160 characters).
 
 Then click *[.underline]##O##K* to save the new SMS. If the scheduled date and time are now, the SMS is sent immediately.
@@ -3041,7 +3041,7 @@ If _SINGLEUSER_ is set to NO, the following login window is shown when the progr
 
 image:image187.png[Login,width=305,height=148]
 
-Once you have successfully logged into the system, the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is available, if enabled by the Administrator.
+Once one has successfully logged into the system, the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is available, if enabled by the Administrator.
 
 Once the *_[.underline]##U##sers & Groups_* button in the *_Settings_* submenu is pressed, the *_Users & Groups_* submenu is shown:
 
@@ -3127,11 +3127,11 @@ The _Worksheet_ module works at the Ward (Department) level; therefore, a ward m
 
 image:image245.png[Worksheet,width=600,height=265]
 
-Once you have selected the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
+Once one has selected the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
 
 image:image246.png[Worksheet with selection,width=600,height=265]
 
-You can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
+One can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
 In either case, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
 
 The functions available in this window are:
