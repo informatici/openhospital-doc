@@ -1941,7 +1941,6 @@ sms.gateway.thread.icc=+39
 * *LOOP*: the delay used by the sender to fetch new SMS operations. The value is in seconds.
 * *ICC*: the International Country Code that needs to be added to the phone numbers (if missing).
 
-
 ==== 3.6.1 skebby-gateway-service
 
 The default skebby-gateway-service section is:
@@ -2224,7 +2223,7 @@ The easiest way is to backup the working copy and re-apply those settings in the
 *Major Releases*:
 Changes are documented in the RELEASE_NOTES file.
 
-=== 6.1 Update Open Hospital - Database
+=== 6.1 Update Database
 
 Major OH releases usually require changes to the database structure, and these changes are implemented via different SQL scripts included in the
 _sql_ (mysql for older versions) folder (e.g.):
@@ -2329,9 +2328,16 @@ Enter password: ****
 ----
 MariaDB>
 ----
-
 [start=6]
-. Then execute all the SQL scripts that have been added from the previous version; for example:
+. Select the open hospital database;
+
+[source,shell]
+----
+MariaDB>USE oh;
+----
+
+[start=7]
+. Execute all the SQL scripts that have been added from the previous version; for example:
 
 [source,shell]
 ----
@@ -2352,11 +2358,11 @@ MariaDB> source step_xx_function_yy.sql
 ...
 ----
 
-[start=7]
+[start=8]
 . If any error message occurs you can report an issue here:+
  https://openhospital.atlassian.net/.
 
-=== 6.2 Update Open Hospital - Client
+=== 6.2 Update Client
 
 If the database upgrade procedure is successful, it is possibile to update the OH software by replacing the OH working copy on each client with the new one and connect it to the same DB
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
@@ -2365,7 +2371,7 @@ Remember to maintain the configuration files that have been changed, to preserve
 settings in the new one (see <<backup-restore,Backup & Restore>>).
 Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
 
-=== 6.3 Update Open Hospital - Portable
+=== 6.3 Update Portable
 
 NOTE: Open Hospital, used in PORTABLE mode, is not meant to be used in a production environment.
 To migrate a portable installation to a full client/server configuration, keeping the existing data, the following steps must be performed:
