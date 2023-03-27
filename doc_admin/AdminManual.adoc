@@ -1,4 +1,4 @@
-= Open Hospital 1.12.0 - Administrator’s Guide
+= Open Hospital 1.12.1 - Administrator’s Guide
 <<<
 :icons: font
 :stem:
@@ -105,15 +105,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.12.0):
+After uncompressing the package, browse to the extracted directory (example given for version 1.12.1):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.12.0
+cd /home/OH/OpenHospital-v1.12.1
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.12.0
+cd C:\Users\OH\OpenHospital-v1.12.1
 ----
 
 
@@ -308,9 +308,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.12.0\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.12.1\sql
 
-C:\Users\OH\OpenHospital-v1.12.0\sql
+C:\Users\OH\OpenHospital-v1.12.1\sql
 
 ----
 
@@ -318,7 +318,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.12.0\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.12.1\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -528,11 +528,11 @@ To setup a complete client / server configuration, refer to chapter <<database-s
 
 Backup of the Open Hospital database can be performed in several ways.
 
-NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -s*, on Windows launch *oh.bat* and choose the option *s*.
+NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -e*, on Windows launch *oh.bat* and choose the option *e*.
 
 Restoring the Open Hospital database can also be performed in several ways.
 
-NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -r*, on Windows launch *oh.bat* and choose the option *r*.
+NOTE: The easiest way is to use the provided scripts: on Linux execute *oh.sh -e*, on Windows launch *oh.bat* and choose the option *e*.
 
 [#backup-data]
 ==== 2.4.1 Backup of database (alternative with MySQL Workbench®)
@@ -2136,18 +2136,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.12.0 in Eclipse EE
+== 5 Installing Open Hospital 1.12.1 in Eclipse EE
 
 The OH source code is available on GitHub at the following links:
 
-* https://github.com/informatici/openhospital-core/tree/v1.12.0[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.12.0[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.12.0[openhospital-doc]
+* https://github.com/informatici/openhospital-core/tree/v1.12.1[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.12.1[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.12.1[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.12.0 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.12.1 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -2211,8 +2211,6 @@ _log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properti
 [#update-open-hospital]
 == 6 Update Open Hospital
 
-=== 6.1 Update Open Hospital - CLIENT mode
-
 New releases, as well as this Admin Manual and the User Manual, are regularly released on Github/SourceForge. See the <<download,Download>> section for more details.
 NOTE: Following instructions only apply between “official releases”.
 
@@ -2224,10 +2222,11 @@ The easiest way is to backup the working copy and re-apply those settings in the
 (see the <<backup-restore,Backup & Restore>> chapter).
 
 *Major Releases*:
+Changes are documented in the RELEASE_NOTES file.
 
-Changes are found in the CHANGELOG file.
+=== 6.1 Update Open Hospital - Database
 
-Major releases always have changes to the DB, and these changes are implemented via different scripts included in the
+Major OH releases usually require changes to the database structure, and these changes are implemented via different SQL scripts included in the
 _sql_ (mysql for older versions) folder (e.g.):
 
 [cols=",",options="header",]
@@ -2308,9 +2307,9 @@ Thus the update process is as follows:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.0\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.1\sql
 
-C:\Users\OH\OpenHospital.1.12.0\sql>
+C:\Users\OH\OpenHospital.1.12.1\sql>
 ----
 
 [start=4]
@@ -2318,7 +2317,7 @@ C:\Users\OH\OpenHospital.1.12.0\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.12.0\sql> mysql –u root -p
+C:\Users\OH\OpenHospital.1.12.1\sql> mysql –u root -p [-h hostname/ip address]
 
 Enter password: ****
 ----
@@ -2356,31 +2355,33 @@ MariaDB> source step_xx_function_yy.sql
 [start=7]
 . If any error message occurs you can report an issue here:+
  https://openhospital.atlassian.net/.
-. If the procedure is successful, replace the OH working copy on each client with the new one and connect it to the same DB
+
+=== 6.2 Update Open Hospital - Client
+
+If the database upgrade procedure is successful, it is possibile to update the OH software by replacing the OH working copy on each client with the new one and connect it to the same DB
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 Remember to maintain the configuration files that have been changed, to preserve the custom settings.
 (see <<configuration,Configuration>>). The most common way is to backup the working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
-. Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
+Start the program and check the log files (data/logs) to ensure that the new version is running and has no error messages.
 
-
-=== 6.2 Update Open Hospital - PORTABLE mode
+=== 6.3 Update Open Hospital - Portable
 
 NOTE: Open Hospital, used in PORTABLE mode, is not meant to be used in a production environment.
 To migrate a portable installation to a full client/server configuration, keeping the existing data, the following steps must be performed:
 
 [arabic]
-. Start Open Hospital in PORTABLE mode;
-. While OH is running:
-[loweralpha]
-.. <<backup-data,Backup of data (Database)>>
 . Close Open Hospital;
-. Install the database server as outlined here <<database-server,Database Server and Open Hospital DB>>;
-. <<restore-data,Restore of data (Database)>> onto the new database server;
-. Change settings to point to the new database (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
+. use oh.sh / oh.ps1 **e** option to export database
+. overwrite local working copy with the new version files
+. use oh.sh / oh.ps1 **r** option to restore exported database
 
-For questions about updating, migrating, or maintaining an Open Hospital installation, please contact us at:
-https://www.open-hospital.org/contact and specify:
+If needed, start the PORTABLE instance in SERVER mode, connect to the local running database and apply the required SQL scripts.
+
+== 7 Support
+
+For support, questions about updating, migrating, or maintaining an Open Hospital installation, please check our website at https://www.open-hospital.org.
+You can contact us at: https://www.open-hospital.org/contact and specify:
 
 * A brief history of the organization;
 * The country where the installation is and the language used;
@@ -2390,7 +2391,7 @@ https://www.open-hospital.org/contact and specify:
 
 <<<
 
-== 7 License
+== 8 License
 
 image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
