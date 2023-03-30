@@ -2226,89 +2226,29 @@ Changes are documented in the RELEASE_NOTES file.
 === 6.1 Update Database
 
 Major OH releases usually require changes to the database structure, and these changes are implemented via different SQL scripts included in the
-_sql_ (mysql for older versions) folder (e.g.):
+_sql/update_ folder (e.g.):
 
-[cols=",",options="header",]
+[cols=",,",options="header",]
 |===
-|*OpenHospital_1_7_3.zip* |*OpenHospital_1_8_0.zip*
-|*OpenHospital_1_7_3/mysql/* |*OpenHospital_1_8_0/mysql/*
-a|
-…
-
-step_30_help_manual.sql
-
-step_31_alter_tables_innodb.sql
-
-step_32_convert_birthdate_to_date.sql
-
-step_33_grants_on_patientfolder.sql
-
-a|
-…
-
-step_30_help_manual.sql
-
-step_31_alter_tables_innodb.sql
-
-step_32_convert_birthdate_to_date.sql
-
-step_33_grants_on_patientfolder.sql
-
-*step_34_slim_opd_table.sql*
-
-*step_35_doctors_log.sql*
-
-*step_36_patientexamination_and_rollback_step23.sql*
-
-*step_37_suppliers_table.sql*
-
-*step_38_dicom.sql*
-
-*step_39_patientfolder_submenu.sql*
-
-*step_40_sms_module.sql*
-
-*step_41_common_bundles.sql*
-
-*step_42_procedure_accounting.sql*
-
-*step_43_no_payments_fix.sql*
-
-*step_44_lot_cost.sql*
-
-*step_45_new_pharmacy_alter_table.sql*
-
-*step_46_patients_birthdate.sql*
-
-*step_47_ipd_out_disease.sql*
-
-*step_48_male_female_wards.sql*
-
-*step_49_encrypt_passwords.sql*
-
-*step_50_medical_ward_permissions.sql*
-
-*step_51_rectify_medical_ward.sql*
-
-*step_52_therapy_model_changes.sql*
-
-*step_53_sms_module_extension.sql*
-
-*step_54_enable_sms_on_visits.sql*
-
+|*Previous OH version* |*New OH version*|*Database update script*
+| 1.8.4 | 1.9 | _update_1_8_4-1_9.sql_
+| 1.9 | 1.10 | _update_1_9-1_10.sql_
+| 1.10 | 1.10 | _update_1_10-1_11.sql_
+| 1.11 | 1.12.0 | _update_1_11-1_12_0.sql_
+| 1.12.1 | 1.12.1 | _update_1_12_0-1_12_1.sql_
 |===
 
-Thus the update process is as follows:
+To perform the database update process follow these steps:
 
 . Close the program if it is still running
 . Backup the current DB for safety (see <<backup-restore,Backup & Restore>>)
-. Open a terminal in the folder sql/ (e.g.):
+. Open a terminal in the folder sql/update (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.1\sql
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.1\sql\update
 
-C:\Users\OH\OpenHospital.1.12.1\sql>
+C:\Users\OH\OpenHospital.1.12.1\sql\update>
 ----
 
 [start=4]
@@ -2316,7 +2256,7 @@ C:\Users\OH\OpenHospital.1.12.1\sql>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.12.1\sql> mysql –u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital.1.12.1\sql\update> mysql –u root -p [-h hostname/ip address]
 
 Enter password: ****
 ----
@@ -2337,23 +2277,19 @@ MariaDB>USE oh;
 ----
 
 [start=7]
-. Execute all the SQL scripts that have been added from the previous version; for example:
+. Execute all the SQL scripts from the current OH version until the new one:
 
 [source,shell]
 ----
-MariaDB> source step_34_slim_opd_table.sql
+MariaDB> source update_1_8_4-1_9.sql
 
-MariaDB> source step_35_doctors_log.sql
+MariaDB> source update_1_9-1_10.sql
 
-MariaDB> source step_36_patientexamination_and_rollback_step23.sql
+MariaDB> source update_1_10-1_11.sql
 
-MariaDB> source step_37_suppliers_table.sql
+MariaDB> source update_1_11-1_12_0.sql
 
-MariaDB> source step_38_dicom.sql
-
-MariaDB> source step_39_patientfolder_submenu.sql
-
-MariaDB> source step_xx_function_yy.sql
+MariaDB> source update_1_12_0-1_12_1.sql
 
 ...
 ----
