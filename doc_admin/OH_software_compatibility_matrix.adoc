@@ -5,51 +5,53 @@
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|*JAVA* JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/MariaDB arch 3+|Special Features
 |Imaging - DICOM (*) |SMS (gsm) |Webcam
 
-.4+|*1.12.0* .2+| *10.6.11* / n.a. .2+|*zulu11.60.19* |*Ubuntu 22.10* | *x64* | *64bit* |*v* |*x*|*v*
-|*Windows 10/11* (**) | *x64* | *64bit* |*v* |*v* |*v*
-| 10.5.18  |zulu11.60.19 |_Linux32_ | _i686_ | _32bit_ |*v* |*v* |*v*
-|10.6.4|zulu11.60.19|_Windows 7/10 (**)_ | _i386_ | _32bit_ |*v* |*v* |*v*
+.4+|*1.12.1* .2+| *10.6.12* / n.a. .2+|*zulu11.62.17* |*Ubuntu 22.10* | *x64* | *64bit* |✔|n/t|✔
+|*Windows 10/11* (**) | *x64* | *64bit* |✔|n/t|✔
+|10.5.19 |zulu11.62.17 |_Linux32_ | _i686_ | _32bit_ |✔|n/t|n/t
+|10.6.5 |zulu11.62.17|_Windows 7/10 (**)_ | _i386_ | _32bit_ |✔|n/t|n/t
 
-.4+|*1.11.5/4* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
-|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 (**) | _i686_ | _32bit_ |*v* |*v* |*v*
+.4+|*1.12.0* .2+| *10.6.11* / n.a. .2+|*zulu11.62.17* |*Ubuntu 22.10* | *x64* | *64bit* |✔|n/t|✔
+|*Windows 10/11* (**) | *x64* | *64bit* |✔|n/t|✔
+|10.5.18 |zulu11.62.17 |_Linux32_ | _i686_ | _32bit_ |✔|n/t|n/t
+|10.6.5 |zulu11.62.17|_Windows 7/10 (**)_ | _i386_ | _32bit_ |✔|n/t|n/t
 
-.4+|*1.11.3* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
-|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 (**) | i386 | 32bit |*v* |*v* |*v*
+.4+|*1.11.5/4/3* .4+| *10.2.42* / n.a. .4+|*zulu8.60.0.21* |Ubuntu 21.10 | x64 | 64bit |✔|❌|✔
+|Windows 7/10/11 (**) | x64 | 64bit |❌|✔|✔
+|Windows 7/10/11 (**) | x64 | 32bit |✔|✔|✔
+|Windows 7/10 (**) | _i686_ | _32bit_ |✔|✔|✔
 
-.4+|*1.11.2/1* .4+| *10.2.41* / 5.7.35 .4+|*zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |*v* |*x*|*v*
-|Windows 7/10/11 (**) | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10/11 (**) | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 (**) | i686 | 32bit |*v* |*v* |*v*
+.4+|*1.11.2/1* .4+| *10.2.41*/5.7.35 .4+|*zulu8.58.0.13* |Ubuntu 21.10 | x64 | 64bit |✔|❌|✔
+|Windows 7/10/11 (**) | x64 | 64bit |❌|✔|✔
+|Windows 7/10/11 (**) | x64 | 32bit |✔|✔|✔
+|Windows 7/10 (**) | i386 | 32bit |✔|✔|✔
 
-.5+|*1.11.0* .5+| *10.2.40* / 5.7.35 .5+|*zulu8.56.0.21* |Ubuntu 21.04 | x64 | 64bit |*v* |*x*|*v*
-|Ubuntu 18.04 | i386 | 32bit |*v* |? |?
-|Windows 7/10 (**) | x64 | 64bit |*x* |*v* |*v*
-|Windows 7/10 (**) | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 (**) | i686 | 32bit |*v* |*v* |*v*
-.5+|*1.10.0* .5+| n.a. / 5.1.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* | ?  |*v*
-|Ubuntu 18.04 | i386 | 32bit |*v* |*x* |?
-|Windows 7/10 | x64 | 64bit |x |*v* |*v*
-|Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
-.7+|*1.9.1* .5+| n.a. / 5.0.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |*v* | ?  |*v*
-|Ubuntu 18.04 | i386 | 32bit |*v* | ? | ? 
-|Windows 7/10 | x64 | 64bit |x |*v* |*v*
-|Windows 7/10 | x64 | 32bit |*v* |*v* |*v*
-|Windows 7/10 | i386 | 32bit |*v* |*v* |*v*
+.5+|*1.11.0* .5+| *10.2.40*/5.7.35 .5+|*zulu8.56.0.21* |Ubuntu 21.04 | x64 | 64bit |✔|❌|✔
+|Ubuntu 18.04 | i386 | 32bit |✔|n/t|n/t
+|Windows 7/10 (**) | x64 | 64bit |❌|✔|✔
+|Windows 7/10 (**) | x64 | 32bit |✔|✔|✔
+|Windows 7/10 (**) | i686 | 32bit |✔|✔|✔
+
+.5+|*1.10.0* .5+| 5.1.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |✔|n/t|✔
+|Ubuntu 18.04 | i386 | 32bit |✔|❌|n/t
+|Windows 7/10 | x64 | 64bit |❌|✔|✔
+|Windows 7/10 | x64 | 32bit |✔|✔|✔
+|Windows 7/10 | i386 | 32bit |✔|✔|✔
+
+.7+|*1.9.1* .5+| 5.0.x .5+| 1.6 | Ubuntu 20.04 | x64 | 64bit |✔|n/t|✔
+|Ubuntu 18.04 | i386 | 32bit |✔|n/t|n/t
+|Windows 7/10 | x64 | 64bit |❌|✔|✔
+|Windows 7/10 | x64 | 32bit |✔|✔|✔
+|Windows 7/10 | i386 | 32bit |✔|✔|✔
+
 |===
-
 [width="60%",cols="30%,70%",]
 |===
 |*NOTE*| *32 bit environments are EOL (End Of Life)*
-|(*) | Before 1.12.0, DICOM imaging functionality may not work
-|(**) | Windows Powershell 5.1 is required
-|*v* |_working_ 
-|*x* |_not working_ 
-|*?* |_not tested_ 
-|n/a |_not applicable_ 
-|_last updated_ |_2023.02.07_
+|(*)| Before OH v.1.12.0, Imaging/DICOM functionality may not work
+|(**)| Windows Powershell 5.1 is required
+|✔|_working_ 
+|❌|_not working_ 
+|n/t|_not tested_ 
+|n/a|_not applicable_ 
+|last updated|_2023.02.21_
 |===
