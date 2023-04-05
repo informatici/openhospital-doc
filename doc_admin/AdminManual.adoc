@@ -6,7 +6,7 @@
 :toclevels: 4
 :url-docs: https://asciidoctor.org/docs
 :url-gem: https://rubygems.org/gems/asciidoctor
-:xlmnsBySa: http://purl.org/dc/terms/
+:xlmnsBySa: https://purl.org/dc/terms/
 :docTitleBySa: dct:title
 :imagesdir: media/
 
@@ -14,9 +14,9 @@
 
 image:OH-splash.png[OH splash,width=316,height=237]
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
-pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
+pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
 
 == Open Hospital
 
@@ -2054,7 +2054,7 @@ To use the Communication module
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#11-communication-communication[11 Communication] in the User’s Guide), 
 an XMPP Server must be installed and configured separately on a server/computer in the local network. The XMPP server can also be installed on the same machine as the OH database server.
 
-The most common XMPP Server is the free and open-source project Ignite Openfire® (http://www.igniterealtime.org/projects/openfire/) available for Linux, Windows, and Mac.
+The most common XMPP Server is the free and open-source project Ignite Openfire® (https://www.igniterealtime.org/projects/openfire/) available for Linux, Windows, and Mac.
 
 Once the XMPP Server is installed, active and running set the two parameters in the _xmpp.properties_ file as follows:
 
@@ -2083,7 +2083,7 @@ Please follow these settings:
 . Set OpenFire to use Embedded DB
 . Create a group "OH" in the OpenFire server and enable the "Contact List (Roster) Sharing"
 . Add new users automatically created from OH to the "OH" group
-. Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin http://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
+. Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin https://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 
 === 3.9 Bundles
@@ -2332,6 +2332,6 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 
 == 8 License
 
-image:by-sa.png[bysa,width=88,height=31,link="http://creativecommons.org/licenses/by-sa/4.0"] [.small]#Informatici Senza Frontiere Onlus, 2022#
+image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
-pass:[<br>][.small]#Policies is made available under a http://creativecommons.org/licenses/by-sa/4.0/[Creative Commons Attribution-ShareAlike 4.0] International License: http://creativecommons.org/licenses/by-sa/4.0/.#
+pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
