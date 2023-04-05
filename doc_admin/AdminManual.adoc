@@ -366,7 +366,7 @@ MariaDB> show databases;
 | performance_schema |
 +--------------------+
 ----
-The next step is to use the created database and launch the main SQL database creation script with the command:
+The next step is to select the created database and execute the main SQL database creation script with the command:
 
 [source,shell]
 ----
@@ -1233,7 +1233,7 @@ By default, DOC_DIR is set to 'doc'.
 
 NOTE: An application restart is required to apply the modified setting.
 
-NOTE: The DOC_DIR setting can be automatically generated/overwritten at any OpenHospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The DOC_DIR setting can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 ==== 3.1.23 SMSENABLED
 
@@ -2155,8 +2155,8 @@ link:https://wiki.eclipse.org/EGit/User_Guide#Working_with_remote_Repositories[E
 
 === 5.1 Run the Project
 
-NOTE: Before running the project, the DB must be created as explained in
-chapter <<database-server,MySQL Server and Open Hospital DB>>.
+NOTE: Before running the project, the database must be created as explained in
+chapter <<database-server,MySQL Server and Open Hospital Database>>.
 
 To run the application, look for class _openhospital-gui/src/main/java/org/isf/menu/gui/Menu.java_, then right-click on it and choose _Run As -> Java Application_. If everything is OK, the splash screen will appear. If not, look in the Eclipse console for any error or warning messages.
 
@@ -2234,14 +2234,13 @@ _sql/update_ folder (e.g.):
 | 1.8.4 | 1.9 | _update_1_8_4-1_9.sql_
 | 1.9 | 1.10 | _update_1_9-1_10.sql_
 | 1.10 | 1.10 | _update_1_10-1_11.sql_
-| 1.11 | 1.12.0 | _update_1_11-1_12_0.sql_
-| 1.12.0 | 1.12.1 | _update_1_12_0-1_12_1.sql_
+| 1.11 | 1.12 | _update_1_11-1_12.sql_
 |===
 
 To perform the database update process follow these steps:
 
 . Close the program if it is still running
-. Backup the current DB for safety (see <<backup-restore,Backup & Restore>>)
+. Backup the current database for safety (see <<backup-restore,Backup & Restore>>)
 . Open a terminal in the folder sql/update (e.g.):
 
 [source,shell]
@@ -2287,9 +2286,7 @@ MariaDB> source update_1_9-1_10.sql
 
 MariaDB> source update_1_10-1_11.sql
 
-MariaDB> source update_1_11-1_12_0.sql
-
-MariaDB> source update_1_12_0-1_12_1.sql
+MariaDB> source update_1_11-1_12.sql
 
 ...
 ----
@@ -2300,7 +2297,7 @@ MariaDB> source update_1_12_0-1_12_1.sql
 
 === 6.2 Update Client
 
-If the database upgrade procedure is successful, it is possibile to update the OH software by replacing the OH working copy on each client with the new one and connect it to the same DB
+If the database upgrade procedure is successful, it is possibile to update the OH software by replacing the OH working copy on each client with the new one. 
 (see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
 Remember to maintain the configuration files that have been changed, to preserve the custom settings.
 (see <<configuration,Configuration>>). The most common way is to backup the working copy and re-apply those
