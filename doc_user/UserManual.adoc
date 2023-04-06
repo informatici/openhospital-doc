@@ -2102,6 +2102,14 @@ image:image118c.png[Therapy,width=600,height=302]
 
 TIP: By pressing the *Worksheet* button, a visit can also be added there, after checking the actual workload for a specific date.
 
+[#visit-validation-rules]
+===== 8.10.8.1 Visits rules
+
+A patient visit is valid if it does not overlap with:
+
+* other appointments within the same ward
+* an existing appointment for the same patient in a different ward
+
 
 === 8.11 Merge Function ([.underline]##M##erge)
 
@@ -3133,6 +3141,8 @@ image:image246.png[Worksheet with selection,width=1350,height=600]
 
 One can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
 In either case, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
+
+NOTE: The section <<visit-validation-rules>> describes the constraints to create a valid appointment/visit.
 
 The functions available in this window are:
 
