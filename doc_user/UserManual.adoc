@@ -3125,11 +3125,11 @@ image:OH-main_menu.png[OH Main Menu]
 
 The _Worksheet_ module works at the Ward (Department) level; therefore, a ward must first be selected:
 
-image:image245.png[Worksheet,width=600,height=265]
+image:image245.png[Worksheet,width=1350,height=600]
 
 Once one has selected the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
 
-image:image246.png[Worksheet with selection,width=600,height=265]
+image:image246.png[Worksheet with selection,width=1350,height=600]
 
 One can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
 In either case, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
