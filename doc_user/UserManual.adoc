@@ -962,7 +962,7 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 * *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
 * *Third Row*: the amount *PAID* for *Today* and within the selected *Period* for the selected *User*
 
-NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>) 
+NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>)
 
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
