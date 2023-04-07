@@ -2,3 +2,4 @@
 .settings
 .idea
 *.iml
+/doc_user/UserManual.html

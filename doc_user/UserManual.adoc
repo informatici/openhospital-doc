@@ -962,7 +962,7 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 * *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
 * *Third Row*: the amount *PAID* for *Today* and within the selected *Period* for the selected *User*
 
-NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>) 
+NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>)
 
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
@@ -2102,6 +2102,14 @@ image:image118c.png[Therapy,width=600,height=302]
 
 TIP: By pressing the *Worksheet* button, a visit can also be added there, after checking the actual workload for a specific date.
 
+[#appointment-validation-rules]
+===== 8.10.8.1 Appointments rules
+
+A patient appointment/visit is valid if it does not overlap with:
+
+* other appointments within the same ward
+* an existing appointment for the same patient in a different ward
+
 
 === 8.11 Merge Function ([.underline]##M##erge)
 
@@ -3125,14 +3133,16 @@ image:OH-main_menu.png[OH Main Menu]
 
 The _Worksheet_ module works at the Ward (Department) level; therefore, a ward must first be selected:
 
-image:image245.png[Worksheet,width=600,height=265]
+image:image245.png[Worksheet,width=1350,height=600]
 
 Once one has selected the ward (it is possible to switch to another ward at any time), a two-column appointment schedule is shown with the appointments/services scheduled for today (on the left) and tomorrow (on the right):
 
-image:image246.png[Worksheet with selection,width=600,height=265]
+image:image246.png[Worksheet with selection,width=1350,height=600]
 
 One can either select another date with the *Go to date* field, or reset the schedule back to today with the button *Today*.
 In either case, the window _[.underline]#always#_ shows the chosen date on the left and the following day on the right.
+
+NOTE: The section <<appointment-validation-rules>> describes the constraints to create a valid appointment/visit.
 
 The functions available in this window are:
 
