@@ -1603,7 +1603,7 @@ The following table shows the default value and the allowed ones:
 |PASSWORDLOCKTIME | 60 | a positive integer value greater than or equal to 60; the unit of time is minutes
 |===
 
-The value of PASSWORDLOCKTIME is the number of minutes that an account is locked after failing to specify the correct password and the number of times specified by
+The value of PASSWORDLOCKTIME is the number of minutes that an account is locked after failing to specify the correct password for the number of times specified by
 the PASSWORDTRIES variable described above.
 
 NOTE: An application restart is required to apply the modified setting.
