@@ -1570,7 +1570,7 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|STRONGLENGTH |10 | positive integer value
+|STRONGLENGTH |10 | a positive integer value greater than or equal to 6
 |===
 
 The value of STRONGLENGTH is the minimum length of a user's password.
