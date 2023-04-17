@@ -1570,7 +1570,7 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|STRONGLENGTH |6 | 0 or a positive integer value greater than or equal to 6
+|STRONGLENGTH |10 | 0 or a positive integer value greater than or equal to 10
 |===
 
 The value of STRONGLENGTH is the minimum length of a user's password.  To disable the checking of the password's length set STRONGLENGTH to 0.
@@ -1585,10 +1585,11 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|PASSWORDTRIES |5 | a positive integer value greater than or equal to 5
+|PASSWORDTRIES |5 | 0 or a positive integer value greater than or equal to 5
 |===
 
-The value of PASSWORDTRIES is the maximum number of consecutive failed passwords when attempting to log in before the account is locked.
+The value of PASSWORDTRIES is the maximum number of consecutive failed passwords when attempting to log in before the account is locked.  To disable the checking
+of the consecutive failed attempts set PASSWORDTRIES to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
