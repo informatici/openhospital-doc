@@ -1588,7 +1588,7 @@ The following table shows the default value and the allowed ones:
 |PASSWORDTRIES |5 | 0 or a positive integer value greater than or equal to 5
 |===
 
-The value of PASSWORDTRIES is the maximum number of consecutive failed passwords when attempting to log in before the account is locked.  To disable the checking
+The value of PASSWORDTRIES is the maximum number of consecutive failed passwords when attempting to log in before the account is locked. To disable the checking
 of the consecutive failed attempts set PASSWORDTRIES to 0.
 
 NOTE: An application restart is required to apply the modified setting.
