@@ -729,7 +729,7 @@ VISITSHEET=WardVisits
 # security
 SESSIONTIMEOUT=5
 STRONGPASSWORD=yes
-STRONGLENGTH=10
+STRONGLENGTH=6
 USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
@@ -1570,10 +1570,12 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value | Allowed Values
-|STRONGLENGTH |10 | 0 or a positive integer value greater than or equal to 10
+|STRONGLENGTH | 6 | 0 or a positive integer value
 |===
 
 The value of STRONGLENGTH is the minimum length of a user's password.  To disable the checking of the password's length set STRONGLENGTH to 0.
+
+NOTE: If STRONGPASSWORD is set to *yes*, then STRONGLENGTH should be set to a value greater than or equal to 3 as that is the minimum number of unique characters required.
 
 NOTE: An application restart is required to apply the modified setting.
 
