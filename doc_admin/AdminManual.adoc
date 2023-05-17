@@ -691,7 +691,7 @@ PATIENTEXTENDED=yes
 PATIENTVACCINEEXTENDED=yes
 
 # GUI settings
-MAINMENUALWAYSONTOP=no
+MAINMENUALWAYSONTOP=false
 
 # accounting
 ALLOWMULTIPLEOPENEDBILL=yes
@@ -1289,12 +1289,12 @@ The following table shows the default value and the allowed ones:
 [cols=",,",options="header",]
 |===
 |Key |Default Value |Valid Values
-|MAINMENUALWAYSONTOP |no |yes, no
+|MAINMENUALWAYSONTOP |false |true, false
 |===
 
 Open Hospital can keep the main menu always on top so it cannot be overlapped or hidden by other windows.
 
-By default, MAINMENUALWAYSONTOP is set to no.
+By default, MAINMENUALWAYSONTOP is set to false.
 
 NOTE: An application restart is required to apply the modified setting.
 
