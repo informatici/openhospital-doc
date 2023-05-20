@@ -1588,8 +1588,8 @@ image:image247.png[Anamnesis]
 Consent from a patient is needed regardless of the procedure, whether it's a physical examination or something else. The principle of consent is an important part of medical ethics and international human rights law.
  In Open Hospital there are three types of Patient consent:
 - Consent to treatment: consent to treatment means a person must give permission before they receive any type of medical treatment, test or examination. This field is mandatory.
-- Administrative consent: administrative consent order means a legal agreement signed by the Director and the owner or operator of a Poultry Feeding Operation.
-- Consent to additional services
+- Consent to additional services - to introduce a flag in the patient registration form to record the patient consensus for additional services (optional, for the Portal)
+This consent should also be de-selectable, which implies the opt-out from the additional services (performed by the Patient Portal Connector)
 
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
