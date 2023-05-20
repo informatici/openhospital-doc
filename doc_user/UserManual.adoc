@@ -3110,9 +3110,11 @@ Once the *[.underline]##U##sers* button in the *_Users & Groups_* submenu is pre
 
 image:image195.png[User Browser,width=621,height=305]
 
+The last column, *LOCKED*, if checked indicates that the user is cuurently locked out from logging into the system.
+
 The functions available in this window are:
 
-* *Selected group*: filter the list by selecting only one group.
+* *Select group*: filter the list by selecting only one group.
 * *[.underline]##N##ew*: enter a new user (cannot use the same name).
 * *[.underline]##E##dit*: edit an existing user (the password cannot be changed).
 * *[.underline]##R##eset Password*: change the password for an existing user.
@@ -3123,7 +3125,8 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown
 
 image:image198.png[Edit User]
 
-In editing mode, only the group and the description can be modified.
+In editing mode, the group, the description, and whether the user is locked out from logging into the system can be modified.
+To *lock* or *unlock* a user account check or uncheck the box after *Locked:*.
 
 <<<
 
