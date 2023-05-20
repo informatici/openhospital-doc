@@ -1588,8 +1588,7 @@ image:image247.png[Anamnesis]
 Consent from a patient is needed regardless of the procedure, whether it's a physical examination or something else. The principle of consent is an important part of medical ethics and international human rights law.
  In Open Hospital there are two types of Patient consent:
 - Consent to treatment: consent to treatment means a person must give permission before they receive any type of medical treatment, test or examination. This field is mandatory.
-- Consent to additional services - to introduce a flag in the patient registration form to record the patient consensus for additional services (optional, for the Portal).
-This consent should also be de-selectable, which implies the opt-out from the additional services (performed by the Patient Portal Connector).
+- Consent to additional services - consent to additional services means that the person consents to the use of the registered data for additional services, such as communications, mails, calls, follow ups reminders, digital services, etc. This field is NOT mandatory, but one hospital may decide to introduce it in its paper forms.
 
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
