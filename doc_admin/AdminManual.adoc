@@ -733,6 +733,7 @@ STRONGLENGTH=6
 USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
+PASSWORDIDLE=365
 ----
 
 Every line is composed of a KEY and a value:
@@ -1545,7 +1546,7 @@ By default, USERSLISTLOGIN is set to no.
 
 NOTE: An application restart is required to apply the modified setting.
 
-[#strongpasword]
+[#strongpassword]
 ==== 3.1.37 STRONGPASSWORD
 
 The following table shows the default value and the allowed ones:
@@ -1608,6 +1609,22 @@ The following table shows the default value and the allowed ones:
 
 The value of PASSWORDLOCKTIME is the number of minutes that an account is locked after failing to specify the correct password for the number of times specified by
 the PASSWORDTRIES variable described above.
+
+NOTE: An application restart is required to apply the modified setting.
+
+[#passwordidle]
+==== 3.1.40 PASSWORDIDLE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDIDLE | 365 | a positive integer value greater than or equal to 0; the unit of time is days
+|===
+
+The value of PASSWORDIDLE specifies the maximum number of days that an account can be unused before being locked and requiring intervention by the administrator.
+To disable this check set PASSWORDIDLE to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
