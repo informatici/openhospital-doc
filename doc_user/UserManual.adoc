@@ -1395,6 +1395,7 @@ The following functions are accessible from the *Buttons panel* of the window *_
 * *[.underline]##E##dit*: modify an existing patient.
 * *Dele[.underline]##t##e*: delete an existing patient.
 * *[.underline]##A##dmission*: manage the admission of the patient in the hospital.
+* *Ana[.underline]##m##nesis*: manage the medical history, case history, or anamnesis of a patient.
 * *E[.underline]##x##amination*: manage the patient examination.
 * *[.underline]##O##PD*: start an OPD visit on the selected patient.
 * *[.underline]##L##aboratory*: start a new laboratory exam on the selected patient.
@@ -1577,14 +1578,14 @@ Open Hospital attempts to automatically set the best quality for any webcam conn
 NOTE: If the camera does not function, then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
-====== 8.4.6 anamnesis
+====== 8.4.6 Anamnesis
 The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions either of the patient or of other people who know the person and can give suitable information.  The aim is to obtain information useful in formulating a diagnosis and providing medical care to the patient.
 
 To modify the anamnesis data of a patient, select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient_* window is shown, click on the *_Anamnesis_* button and the record is available for changes. All the data can be changed.
 
 image:image247.png[Anamnesis]
 
-====== 8.4.7 Patient consensus
+====== 8.4.7 Patient Consensus
 Consent from a patient is needed regardless of the procedure, whether it's a physical examination or something else. The principle of consent is an important part of medical ethics and international human rights law.
  In Open Hospital there are two types of Patient consent:
 - Consent to treatment: consent to treatment means a person must give permission before they receive any type of medical treatment, test or examination. This field is mandatory.
