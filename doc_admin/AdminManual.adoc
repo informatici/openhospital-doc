@@ -1,4 +1,4 @@
-= Open Hospital 1.12.1 - Administrator’s Guide
+= Open Hospital 1.13.0 - Administrator’s Guide
 <<<
 :icons: font
 :stem:
