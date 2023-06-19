@@ -3110,7 +3110,7 @@ Once the *[.underline]##U##sers* button in the *_Users & Groups_* submenu is pre
 
 image:image195.png[User Browser,width=621,height=305]
 
-The last column, *LOCKED*, if checked indicates that the user is cuurently locked out from logging into the system.
+The last column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
 
 The functions available in this window are:
 
