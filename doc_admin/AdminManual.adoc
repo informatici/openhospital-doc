@@ -134,7 +134,7 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 Open Hospital is a client application that can be used in three different ways: 
 
-* <<client,2.1 OH - CLIENT mode>>: multi-computer setup, with a central database (requires a little IT knowledge)
+* <<client,2.1 OH - CLIENT mode>>: multi-computer setup, with a central database (requires some IT knowledge)
 * <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with the database on the same computer (click and run)
 * <<server,2.3 OH - SERVER mode (portable)>>: multi-computer setup, with the central database created by the Open Hospital script (click and run)
 
