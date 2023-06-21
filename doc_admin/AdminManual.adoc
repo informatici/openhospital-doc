@@ -1,4 +1,4 @@
-= Open Hospital 1.12.1 - Administrator’s Guide
+= Open Hospital 1.13.0 - Administrator’s Guide
 <<<
 :icons: font
 :stem:
@@ -71,7 +71,7 @@ Minimum Operating System version required for running OH:
 * Windows 7 (Windows 10/11 recommended)
 * Ubuntu 18.04 (Ubuntu 22.04 recommended)
 
-32-bit (i686) and 64-bit (x86_64) architectures are supported: 64-bit architecture is recommended.
+32bit (i686) and 64bit (x86_64) architectures are supported: 64bit architecture is recommended.
 
 [#download]
 === 1.5 Download
@@ -105,15 +105,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.12.1):
+After uncompressing the package, browse to the extracted directory (example given for version 1.13.0):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.12.1
+cd /home/OH/OpenHospital-v1.13.0
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.12.1
+cd C:\Users\OH\OpenHospital-v1.13.0
 ----
 
 
@@ -134,7 +134,7 @@ NOTE: The information needed to use the OH software is not included in this manu
 
 Open Hospital is a client application that can be used in three different ways: 
 
-* <<client,2.1 OH - CLIENT mode>>: multi-computer setup, with a central database (requires a little IT knowledge)
+* <<client,2.1 OH - CLIENT mode>>: multi-computer setup, with a central database (requires some IT knowledge)
 * <<portable,2.2 OH - PORTABLE mode>>: single computer setup, with the database on the same computer (click and run)
 * <<server,2.3 OH - SERVER mode (portable)>>: multi-computer setup, with the central database created by the Open Hospital script (click and run)
 
@@ -308,9 +308,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.12.1\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.13.0\sql
 
-C:\Users\OH\OpenHospital-v1.12.1\sql
+C:\Users\OH\OpenHospital-v1.13.0\sql
 
 ----
 
@@ -318,7 +318,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.12.1\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.13.0\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -495,8 +495,8 @@ Pre-configured "Portable" packages are available for Windows and Linux; see the 
 
 Since the JRE and MariaDB/MySQL are not platform-independent and are provided in different versions and architectures, there exists:
 
-* *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64-bit)
-* *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64-bit)
+* *Open Hospital - portable for Linux* platforms (embedding Java JRE and MariaDB for Linux, 32 or 64bit)
+* *Open Hospital - portable for Windows* platforms (embedding Java JRE and MariaDB for Windows, 32 or 64bit)
 
 Once the required version is downloaded, the application can be started by launching the script inside the package:
 
@@ -582,7 +582,7 @@ Backup of the client *data files*, useful for "PORTABLE" mode, can be performed 
 [#folders]
 === 2.5 Folders and directory structure
 
-Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *_<operating_system>_* with windows or linux and *_<arch>_* with the OS architecture (32 or 64-bit):
+Open Hospital has a folder tree hierarchy which is shown here, where *_<version>_* is replaced with the current Open Hospital version, *_<operating_system>_* with windows or linux and *_<arch>_* with the OS architecture (32 or 64bit):
 
 * *OpenHospital-_<version>_-<operating_system>_<arch>-<client|portable>*/
 * *bundle* – language files
@@ -667,6 +667,9 @@ The default configuration is available in the _settings.properties.dist_ file:
 # external settings
 MODE=OH_MODE
 DEMODATA=off
+
+# experimental settings
+APISERVER=off
 
 # internal settings, modules, directories
 LANGUAGE=OH_LANGUAGE
@@ -2156,18 +2159,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.12.1 in Eclipse EE
+== 5 Installing Open Hospital 1.13.0 in Eclipse EE
 
 The OH source code is available on GitHub at the following links:
 
-* https://github.com/informatici/openhospital-core/tree/v1.12.1[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.12.1[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.12.1[openhospital-doc]
+* https://github.com/informatici/openhospital-core/tree/v1.13.0[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.13.0[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.13.0[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
-Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 1.8 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.12.1 into the Eclipse J2EE (or Eclipse EE)
+Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 11 or higher (Java8 or greater)
+are already installed on the computer, this chapter will focus on cloning version 1.13.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -2195,7 +2198,7 @@ Select the “Arguments” tab and fill in the “VM arguments” path typing (o
 -Dsun.java2d.dpiaware=false -Djava.library.path=lib\native\<OS name>
 ----
 
-<OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64-bit Windows) or “Windows” (for 32-bit Windows)
+<OS name> can be “Mac_OS_X”, “Solaris”, “Linux”, “Win64” (for 64bit Windows) or “Windows” (for 32bit Windows)
 according to the folder's schema found in the related folder “native”.
 Click on “Run” to close the window and run the application.
 
@@ -2256,6 +2259,7 @@ _sql/update_ folder (e.g.):
 | 1.9 | 1.10 | _update_1_9-1_10.sql_
 | 1.10 | 1.10 | _update_1_10-1_11.sql_
 | 1.11 | 1.12 | _update_1_11-1_12.sql_
+| 1.12 | 1.13 | _update_1_12-1_13.sql_
 |===
 
 To perform the database update process follow these steps:
@@ -2266,9 +2270,9 @@ To perform the database update process follow these steps:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital.1.12.1\sql\update
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital-v1.13.0\sql\update
 
-C:\Users\OH\OpenHospital.1.12.1\sql\update>
+C:\Users\OH\OpenHospital-v1.13.0\sql\update>
 ----
 
 [start=4]
@@ -2276,7 +2280,7 @@ C:\Users\OH\OpenHospital.1.12.1\sql\update>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.12.1\sql\update> mysql –u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital.1.13.0\sql\update> mysql –u root -p [-h hostname/ip address]
 
 Enter password: ****
 ----
@@ -2297,24 +2301,24 @@ MariaDB>USE oh;
 ----
 
 [start=7]
-. Execute all the SQL scripts from the current OH version until the new one:
+. Execute all the SQL scripts from your current OH version up to the new one:
+
+Example: updating version from 1.10.X to 1.13.X
 
 [source,shell]
 ----
-MariaDB> source update_1_8_4-1_9.sql
-
-MariaDB> source update_1_9-1_10.sql
-
 MariaDB> source update_1_10-1_11.sql
 
 MariaDB> source update_1_11-1_12.sql
+
+MariaDB> source update_1_12-1_13.sql
 
 ...
 ----
 
 [start=8]
-. If any error message occurs you can report an issue here:+
- https://openhospital.atlassian.net/.
+. If any error message occurs you can report an issue here:
+ https://openhospital.atlassian.net/
 
 === 6.2 Update Client
 
