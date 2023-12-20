@@ -2048,8 +2048,32 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 [#telemetry-properties]
 === 3.7 telemetry.properties
 
-The Telemetry module is meant to 
+The Telemetry configuration is set in the telemetry.properties_ file:
 
+[source,properties]
+----
+# number of second to check if it should send a message
+telemetry.daemon.thread.loop.seconds=14400
+
+# enabled remote geo ip lookup service
+# allowed values:
+# - geoiplookup-remote-service
+# - ipapi-remote-service
+telemetry.enabled.geo.ip.lookup.service=geoiplookup-remote-service
+# endpoints remote services
+geoiplookup-remote-service.ribbon.base-url=https://json.geoiplookup.io
+ipapi-remote-service.ribbon.base-url=http://ip-api.com/json 
+----
+
+This file is used only if the TELEMETRYENABLED flag is true (see <<telemetryenabled,TELEMETRYENABLED>> in this document).
+
+The file has the following configurable parameters:
+
+* *telemetry.daemon.thread.loop.seconds*: number of seconds the Telemetry module should try to send again the telemetry data; if the telemetry data have been sent in the same day it will not send again.
+* *telemetry.enabled.geo.ip.lookup.service*: the GeoIP service to use among the ones available in the comment: geoiplookup-remote-service or ipapi-remote-service; more service may be added in the future.
+* *<service>.ribbon.base-url*: the URL for each available GeoIP service 
+
+NOTE: An application restart is required to apply the modified setting.
 
 
 [#txtprinter-properties]
