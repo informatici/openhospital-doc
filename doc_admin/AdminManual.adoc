@@ -682,6 +682,7 @@ INTERNALVIEWER=yes
 SMSENABLED=no
 VIDEOMODULEENABLED=yes
 XMPPMODULEENABLED=no
+PARAMSURL=https://conf.open-hospital.org/oh-conf.json
 
 # application settings
 ENHANCEDSEARCH=no
@@ -1653,28 +1654,9 @@ If the PATIENTPHOTOSTORAGE parameter is set to a path (that is, not "DB"), then 
 
 If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital looks for or saves the patient's profile picture in the Open Hospital database.
 
-
 By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
-
-[#telemetryenabled]
-==== 3.1.39 TELEMETRYENABLED
-
-The following table shows the default value and the allowed ones:
-
-[cols=",,",options="header",]
-|===
-|Key |Default Value | Allowed Values
-|STRONGPASSWORD |yes | yes, no
-|===
-
-By default, the value of TELEMETRYENABLED is the set to yes indicating that the
-Telemetry module is enabled
-
-
-
-[#database-properties]
 
 ==== 3.1.42 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
@@ -1720,6 +1702,37 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
+[#telemetryenabled]
+==== 3.1.45 TELEMETRYENABLED
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|TELEMETRYENABLED |yes | yes, no
+|===
+
+By default, the value of TELEMETRYENABLED is the set to `yes` indicating that the Telemetry module is enabled.
+
+When the Telemetry module is enabled, users are presented with the option to participate in anonymous data collection on the software's usage during the initial application launch. This process is designed to gather information that contributes to the ongoing improvement of software quality. User-selected data collection preferences, customizable at any time, will be applied automatically during subsequent launches.
+
+The collected data is transmitted to a server managed by ISF, solely for the purpose of optimizing the application and generating usage statistics. ISF ensures that this data is treated anonymously and with utmost respect for user privacy.
+
+The Telemetry module can be disabled at any time throuhg the Settings menu or via <<settings-properties,settings.properties>>.
+
+image:image68.png[image,width=831,height=378]
+
+image:image69.png[image,width=847,height=522]
+
+[#paramsurl]
+==== 3.1.46 PARAMSURL
+
+This is the URL of the online configuration/parameters file.
+
+NOTE: This setting is not meant to be modified by the user.
+
+[#database-properties]
 === 3.2 database.properties
 
 Database configuration is set in the _database.properties_ file.
