@@ -1719,7 +1719,7 @@ When the Telemetry module is enabled, users are presented with the option to par
 
 The collected data is transmitted to a server managed by ISF, solely for the purpose of optimizing the application and generating usage statistics. ISF ensures that this data is treated anonymously and with utmost respect for user privacy.
 
-The Telemetry module can be disabled at any time throuhg the Settings menu or via <<settings-properties,settings.properties>>.
+The Telemetry module can be disabled at any time through the Settings menu or via <<settings-properties,settings.properties>>.
 
 image:image68.png[image,width=831,height=378]
 
