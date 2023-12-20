@@ -2069,7 +2069,7 @@ This file is used only if the TELEMETRYENABLED flag is true (see <<telemetryenab
 
 The file has the following configurable parameters:
 
-* *telemetry.daemon.thread.loop.seconds*: number of seconds the Telemetry module should try to send again the telemetry data; if the telemetry data have been sent in the same day it will not send again.
+* *telemetry.daemon.thread.loop.seconds*: number of seconds the Telemetry module should try again to send the telemetry data; if the telemetry data have been sent in the same day it will not send again.
 * *telemetry.enabled.geo.ip.lookup.service*: the GeoIP service to use among the ones available in the comment: geoiplookup-remote-service or ipapi-remote-service; more service may be added in the future.
 * *<service>.ribbon.base-url*: the URL for each available GeoIP service 
 
