@@ -292,7 +292,7 @@ The OPD Extended module affords the following additional features:
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
-* Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
+* Selecting the trash can icon (7) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
 * If editing an old OPD, it is possible to change everything except the patient to whom the OPD refers, and the "New Attendance" radio box.
@@ -1557,23 +1557,21 @@ __[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Adm
 
 Once the video module has been enabled, the *_New Patient_* window looks as follows:
 
-image:image88p.png[New Patient Extended photo,width=587,height=339]
+image:image89.png[New Patient Extended photo,width=587,height=339]
 
 By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device). The *Patient Photo* window should show what the camera is pointing at.
 
-image:image89.png[Webcam photo,width=591,height=392]
+image:image89a.png[Webcam photo,width=591,height=392]
 
-image:image90.png[Attach photo,width=591,height=392]
+By clicking on the *Capture* button a picture is taken and the location of the selection is shown in red.
+
+image:image89b.png[Attach photo,width=591,height=392]
+
+By clicking on the *OK* button the picture is attached to the patient information.
+
+image:image88p.png[Attach photo,width=591,height=392]
 
 By clicking again on the *[.underline]##N##ew Photo* button, a picture is taken ready to be attached to the patient information.
-
-===== 8.4.3.1 Camera Settings (image:image91.png[camera icon,width=22,height=12])
-
-If nothing happens when pressing the *[.underline]##N##ew Photo* button, press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if there is more than one; if only one camera is connected to the computer, it is useful to reset the camera settings and restart it.
-
-Once the camera is activated and the “eye-view” of the camera is visible, press on “+” or “-“ to increase or reduce the image quality.
-
-Open Hospital attempts to automatically set the best quality for any webcam connected to the computer and remembers the last settings used.
 
 NOTE: If the camera does not function, then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
