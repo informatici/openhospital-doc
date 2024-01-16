@@ -2414,6 +2414,7 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 * A brief history of the organization;
 * The country where the installation is and the language used;
 * Technical details of the OH installation;
+* The application logs (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#help[Help] chapter in the User's Guide)
 * The current Open Hospital version;
 * Complete the https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] form
 
