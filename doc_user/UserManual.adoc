@@ -50,10 +50,15 @@ More information can be found on the Open Hospital web site: https://www.open-ho
 
 NOTE: The information needed to install, configure or administer Open Hospital is not included in this manual; please refer to the _Open Hospital Administrator’s Guide_ supplied with the software.
 
+[#help]
 ==== 1.2.1 Help
 
 * The *[.underline]##H##elp* function available at the bottom of the main MENU of Open Hospital provides access to
 this document [.underline]#offline#.
+
+* It allows enabled user to easily access the application *[.underline]##L##ogs* folder
+
+image:image0_HelpMenu.png[OH Help Menu]
 
 ==== 1.2.2 Legend
 
