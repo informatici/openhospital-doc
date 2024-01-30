@@ -633,7 +633,7 @@ for more information.
 
 [#delete-last-stock-movement]
 ===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
-To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. if it is not the last movement you will have and *_Warning_* window:
+To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. If it is not the last movement you will see a *_Warning_* window:
 
 image:image250.png[Warning]
 
