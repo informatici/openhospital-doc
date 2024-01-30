@@ -650,10 +650,9 @@ If no, the last stock movement will be deleted from the table and you will have 
 
 image:image251.png[success]
 
-[#pharmaceutical-stock-ward]
-
 NOTE: This button can be deactivated if you don't want to allow movements to be deleted. Ask the Administrator or check the Administrator's Guide for more information.
 
+[#pharmaceutical-stock-ward]
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
 
 ==== 4.3.1 Main Characteristics
