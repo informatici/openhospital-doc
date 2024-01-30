@@ -491,6 +491,7 @@ The following functions are available from the *Buttons panel* of the window *_S
 
 * *C[.underline]##h##arge*: record a new charge movement.
 * *[.underline]##D##ischarge*: record a new discharge movement.
+* *[.underline]##D##elete*: delete the last movement.
 * *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
@@ -630,9 +631,29 @@ to the expiring date. If the first selected lot does not contain a high enough q
 movement, several discharging movements may be generated. Ask the Administrator or check the _Administrator’s Guide_
 for more information.
 
-<<<
+[#delete-last-stock-movement]
+===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
+To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. if it is not the last movement you will have and *_Warning_* window:
+
+image:image250.png[Warning]
+
+But, if the row selected is the last movement you will have the *_Question_* window:
+
+image:image248.png[Question]
+
+Click *[.underline]##Y##es* if you realy want to delete the last movement or click *[.underline]##N##o* if no. Before click the *[.underline]##Y##es* button to be sure that the product present in the last movement is not used in the *_Pharmaceuticals Stock [.underline]##W##ard_*
+if yes you will have the *_Error_* window.
+
+image:image249.png[Error]
+
+If no, the last stock movement will be deleted from the table and you will have the *_Success_* window:
+
+image:image251.png[success]
 
 [#pharmaceutical-stock-ward]
+
+NOTE: This button can be deactivated if you don't want to allow movements to be deleted. Ask the Administrator or check the Administrator's Guide for more information.
+
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
 
 ==== 4.3.1 Main Characteristics
