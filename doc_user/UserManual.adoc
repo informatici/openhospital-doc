@@ -637,7 +637,7 @@ To delete the last movement, select first the row that you want to delete and pr
 
 image:image250.png[Warning]
 
-But, if the row selected is the last movement you will have the *_Question_* window:
+But if the row selected is the last movement the *_Question_* window is presented:
 
 image:image248.png[Question]
 
