@@ -646,7 +646,7 @@ if it is then the *_Error_* window is shown.
 
 image:image249.png[Error]
 
-If no, the last stock movement will be deleted from the table and you will have the *_Success_* window:
+If it is not present then the last stock movement will be deleted from the table and the *_Success_* window is shown:
 
 image:image251.png[success]
 
