@@ -642,7 +642,7 @@ But if the row selected is the last movement the *_Question_* window is presente
 image:image248.png[Question]
 
 Click *[.underline]##Y##es* if you want to confirm the deletion of the last movement or click *[.underline]##N##o* if you do not want to delete the movement. Before clicking the *[.underline]##Y##es* button check that the product present in the last movement is not used in the *_Pharmaceuticals Stock [.underline]##W##ard_*
-if yes you will have the *_Error_* window.
+if it is then the *_Error_* window is shown.
 
 image:image249.png[Error]
 
