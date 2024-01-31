@@ -649,7 +649,7 @@ But if the row selected is the last movement this *_Question_* message is presen
 
 image:image248.png[Question]
 
-Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks that the product involved the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_*.
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks if the product involved in the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_* (see <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
 If the product has been already used in a Ward, then the *_Error_* message is shown.
 
