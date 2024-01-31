@@ -490,7 +490,7 @@ NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ fl
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
 * *C[.underline]##h##arge*: record a new charge movement.
-* *[.underline]##D##ischarge*: record a new discharge movement.
+* *Discha[.underline]##r##ge*: record a new discharge movement.
 * *[.underline]##D##elete*: delete the last movement.
 * *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
@@ -593,9 +593,9 @@ the Expiring Date must always be provided. Ask the Administrator or refer to the
 NOTE: In order to avoid managing the cost of medicals, set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
-===== 4.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
+===== 4.2.2.3 Insert Stock Discharging Movement (Discha[.underline]##r##ge)
 
-To insert discharging movements, press the *[.underline]##D##ischarge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
+To insert discharging movements, press the *Discha[.underline]##r##ge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
 
 image:image31.png[Stock Movement Discharging]
 
@@ -633,9 +633,15 @@ for more information.
 
 [#delete-last-stock-movement]
 ===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
-To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. If it is not the last movement you will see a *_Warning_* window:
+To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. If it is not the last movement you will see a *_Error_* window:
 
-image:image250.png[Warning]
+image:image250.png[Error]
+
+if you don't choosed any row and:
+
+image:image252.png[Error]
+
+if you choosed more than one row.
 
 But if the row selected is the last movement the *_Question_* window is presented:
 
