@@ -631,6 +631,8 @@ to the expiring date. If the first selected lot does not contain a high enough q
 movement, several discharging movements may be generated. Ask the Administrator or check the _Administrator’s Guide_
 for more information.
 
+<<<
+
 [#delete-last-stock-movement]
 ===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
 To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. If it is not the last movement you will see a *_Error_* window:
