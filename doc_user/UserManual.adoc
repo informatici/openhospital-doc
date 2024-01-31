@@ -647,16 +647,17 @@ But if the row selected is the last movement this *_Question_* message is presen
 
 image:image248.png[Question]
 
-Click *[.underline]##Y##es* if you want to confirm the deletion of the last movement or click *[.underline]##N##o* if you do not want to delete the movement. Before clicking the *[.underline]##Y##es* button check that the product present in the last movement is not used in the *_Pharmaceuticals Stock [.underline]##W##ard_*
-if it is then the *_Error_* window is shown.
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks that the product involved the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_*.
+
+If the product has been already used in a Ward, then the *_Error_* message is shown.
 
 image:image249.png[Error]
 
-If it is not present then the last stock movement will be deleted from the table and the *_Success_* window is shown:
+Otherwise the selected movement is deleted and the *_Success_* window is shown:
 
 image:image251.png[success]
 
-NOTE: This button can be deactivated to not allow movements to be deleted. Ask the Administrator or check the Administrator's Guide for more information.
+NOTE: This button can be enabled/disabled to allow/not allow movements deletion. Ask the Administrator or check the Administrator's Guide for more information.
 
 [#pharmaceutical-stock-ward]
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
