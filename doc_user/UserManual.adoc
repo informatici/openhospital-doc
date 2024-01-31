@@ -497,8 +497,6 @@ The following functions are available from the *Buttons panel* of the window *_S
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
 
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example, use a discharge movement to undo the unwanted change.
-
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
 ===== 4.2.2.1 Search Pharmaceuticals Stock Movements ([.underline]##F##ilter)
