@@ -490,13 +490,12 @@ NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ fl
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
 * *C[.underline]##h##arge*: record a new charge movement.
-* *[.underline]##D##ischarge*: record a new discharge movement.
+* *Discha[.underline]##r##ge*: record a new discharge movement.
+* *[.underline]##D##elete*: delete the last movement.
 * *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
-
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example, use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -592,9 +591,9 @@ the Expiring Date must always be provided. Ask the Administrator or refer to the
 NOTE: In order to avoid managing the cost of medicals, set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
-===== 4.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
+===== 4.2.2.3 Insert Stock Discharging Movement (Discha[.underline]##r##ge)
 
-To insert discharging movements, press the *[.underline]##D##ischarge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
+To insert discharging movements, press the *Discha[.underline]##r##ge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
 
 image:image31.png[Stock Movement Discharging]
 
@@ -631,6 +630,34 @@ movement, several discharging movements may be generated. Ask the Administrator 
 for more information.
 
 <<<
+
+[#delete-last-stock-movement]
+===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
+In Pharmaceutical Stock it is not possible to change the past and all operations need to be done in consecutive order. If a mistake concerns a movement in the past (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake (in the example, use a discharge movement to undo the unwanted change).
+
+Nevertheless, the admin can enable/disable the *[.underline]##D##elete* button that allows the enabled user do delete only the last movement, and helps quickly undoing mistakes.
+
+To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. Only one row is allowed to delete at a time.
+
+If it is not the last movement the following  *_Error_* message is shown:
+
+image:image250.png[Not last movement error]
+
+But if the row selected is the last movement this *_Question_* message is presented:
+
+image:image248.png[Question]
+
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks if the product involved in the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_* (see <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
+
+If the product has been already used in a Ward, then the *_Error_* message is shown.
+
+image:image249.png[Error]
+
+Otherwise the selected movement is deleted and the *_Success_* window is shown:
+
+image:image251.png[success]
+
+NOTE: This button can be enabled/disabled to allow/not allow movements deletion. Ask the Administrator or check the Administrator's Guide for more information.
 
 [#pharmaceutical-stock-ward]
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
