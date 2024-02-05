@@ -2181,9 +2181,9 @@ Open Hospital is packaged with a login "hint" visible only if the _default_crede
 
 image:image23.png[image,width=357,height=177]
 
-NOTE: mouse over the "i" icon to see the hint
+NOTE: Mouse over the "i" icon to see the hint.
 
-To remove the hint, is enough to delete this file. 
+To not show the hint just delete _default_credentials.properties_ file. 
 
 The original values are found in _default_credentials.properties.dist_ and _default_demo_credentials.properties.dist_ files.
 
@@ -2203,7 +2203,7 @@ laboratorist:laboratorist
 doctor:doctor
 ----
 
-NOTE: is always recommended to change the admin user password in production env.
+NOTE: It is always recommended to change the **admin** user password in a production environment.
 
 
 
