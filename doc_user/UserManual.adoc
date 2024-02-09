@@ -782,7 +782,7 @@ image:image248.png[Question]
 
 Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks if to see if the product involved in the selected movement and has not been used in the *_Pharmaceuticals Stock [.underline]##W##ard_*.   If not then the last movement is discharged from ward to ward.
 
-If the product has been already used in a Ward, then the *_Error_* message is shown.
+If the product has been used in a ward, then the *_Error_* message is shown:
 
 image:image249.png[Error]
 
