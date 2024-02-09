@@ -776,7 +776,7 @@ If the selection is not the last movement the following error message dialog is 
 
 image:image250.png[Not last movement error]
 
-But if the row selected is the last movement this *_Question_* message is presented:
+If the row selected is the last movement then this *_Question_* message is presented:
 
 image:image248.png[Question]
 
