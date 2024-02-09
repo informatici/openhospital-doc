@@ -766,7 +766,7 @@ other lots can satisfy the request. Ask the Administrator or check the _Administ
 Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed; it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
 
 ===== 4.3.2.5 Delete the Last Stock Movement in a Ward ([.underline]##D##elete)
-In pharmaceutical stock ward, we have possibility to discharge medical from *patient*, *internal use* or *another ward*. if you make a mistake during the discharge you have the possibility to delete it in order to correct the stock of the ward and resume the action if possible.
+In a pharmaceutical stock ward, it is possible to discharge medicals from *patient*, *internal use* or *another ward*. If a mistake is made during the discharge, it is possible to delete it in order to correct the stock of the ward and resume the action.
 
 Nevertheless, the admin can enable/disable the *[.underline]##D##elete* button that allows the enabled user do delete only the last movement, and helps quickly undoing mistakes.
 
