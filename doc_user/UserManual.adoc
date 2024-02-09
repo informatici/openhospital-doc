@@ -768,7 +768,7 @@ Before pressing the *[.underline]##O##K* button, insert as many Medicals as need
 ===== 4.3.2.5 Delete the Last Stock Movement in a Ward ([.underline]##D##elete)
 In a pharmaceutical stock ward, it is possible to discharge medicals from *patient*, *internal use* or *another ward*. If a mistake is made during the discharge, it is possible to delete it in order to correct the stock of the ward and resume the action.
 
-The Administrator can enable or disable the *[.underline]##D##elete* button that allows the deletion of the last movement.  This aids in quickly undoing mistakes.
+The Administrator can enable or disable the *[.underline]##D##elete* button that allows the deletion of the last movement. This aids in quickly undoing mistakes.
 
 To delete the last movement, select first the row that you want to delete and press the Delete button in the Stock Movement Browser window. Only one row is allowed to delete at a time.
 
