@@ -772,7 +772,7 @@ The Administrator can enable or disable the *[.underline]##D##elete* button that
 
 To delete the last movement, select first the row that you want to delete and press the Delete button in the Stock Movement Browser window. Only one row is allowed to delete at a time.
 
-If it is not the last movement the following Error message is shown:
+If the selection is not the last movement the following error message dialog is shown:
 
 image:image250.png[Not last movement error]
 
