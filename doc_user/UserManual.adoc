@@ -688,6 +688,7 @@ The available functions are:
 * *[.underline]##R##ectify*: rectify the quantity lying in stock (see 6.3.2.1 Rectify).
 * *Re[.underline]##p##ort*: print the ward medical inventory report.
 * *[.underline]##E##xcel*: export the data in a format to import into Excel.
+* *[.underline]##D##elete*: delete the last movement.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window.
@@ -763,6 +764,33 @@ to serve the discharging movement, several discharging movements may be generate
 other lots can satisfy the request. Ask the Administrator or check the _Administrator’s Guide_ for more information.
 
 Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed; it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
+
+===== 4.3.2.5 Delete the Last Stock Movement in a Ward ([.underline]##D##elete)
+In a pharmaceutical stock ward, it is possible to discharge medicals to *patient*, *internal use* or *another ward*. If a mistake is made during the discharge, it is possible to delete it in order to correct the stock of the ward and resume the action.
+
+The Administrator can enable or disable the *[.underline]##D##elete* button that allows the deletion of the last movement. This aids in quickly undoing mistakes.
+
+To delete the last movement, select first the row that you want to delete and press the Delete button in the Stock Movement Browser window. Only one row is allowed to delete at a time.
+
+If the selection is not the last movement the following error message dialog is shown:
+
+image:image250.png[Not last movement error]
+
+If the row selected is the last movement then this *_Question_* message is presented:
+
+image:image248.png[Question]
+
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, if the movement discharges to another ward, the system checks if the product involved in the selected movement has not been used in the destination ward. If not, then the movement is deleted, otherwise the deletion is denied.
+
+If the product has been used in the destination ward, then the *_Error_* message is shown:
+
+image:image249.png[Error]
+
+Otherwise the selected movement is deleted and the *_Success_* window is shown:
+
+image:image251.png[success]
+
+NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
 <<<
 
