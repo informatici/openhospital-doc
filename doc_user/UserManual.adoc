@@ -790,7 +790,7 @@ Otherwise the selected movement is deleted and the *_Success_* window is shown:
 
 image:image251.png[success]
 
-NOTE: This button can be enabled/disabled to allow/not allow movements deletion. Ask the Administrator or check the Administrator's Guide for more information.
+NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
 <<<
 
