@@ -782,7 +782,7 @@ image:image248.png[Question]
 
 Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, if the movement discharges to another ward, the system checks if the product involved in the selected movement has not been used in the destination ward. If not, then the movement is deleted, otherwise the deletion is denied.
 
-If the product has been used in a ward, then the *_Error_* message is shown:
+If the product has been used in the destination ward, then the *_Error_* message is shown:
 
 image:image249.png[Error]
 
