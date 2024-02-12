@@ -639,6 +639,7 @@ Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is 
 ** *telemetry.properties* – Telemetry module settings
 ** *txtPrinter.properties* – Text printing system
 ** *xmpp.properties* – Xmpp Server configuration
+** *default_credentials.properties* – contains the default credentials
 
 Furthermore, additional configurations files (not meant to be modified by the user) are:
 
@@ -2173,7 +2174,40 @@ Please follow these settings:
 . Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin https://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 
-=== 3.10 Bundles
+[#default-credentials-properties]
+=== 3.10 default_credentials.properties
+
+Open Hospital is packaged with a login "hint" visible only if the _default_credentials.properties_ file is found.
+
+image:image23.png[image,width=357,height=177]
+
+NOTE: Mouse over the "i" icon to see the hint.
+
+To not show the hint just delete _default_credentials.properties_ file. 
+
+The original values are found in _default_credentials.properties.dist_ and _default_demo_credentials.properties.dist_ files.
+
+[source,properties]
+----
+# Default credentials
+admin:admin
+guest:guest
+----
+
+[source,properties]
+----
+# Default credentials
+admin:admin
+guest:guest
+laboratorist:laboratorist
+doctor:doctor
+----
+
+NOTE: It is always recommended to change the **admin** user password in a production environment.
+
+
+
+=== 3.11 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
 <<language,LANGUAGE>> chapter, Open Hospital comes with different available languages in the folder *bundles/* within the package file:
@@ -2187,7 +2221,7 @@ These property files (text format) contain multiple *key = value* pairs containi
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
 
-==== 3.10.1 New Translations
+==== 3.11.1 New Translations
 
 To create a new translation, simply copy the English file, rename it with the new country code in
 place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
