@@ -1976,6 +1976,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.6 sms.properties
 
 SMS communication module configuration is set in the _sms.properties_ file:
+Default SMS configuration is available in the _sms.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2050,7 +2051,8 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 [#telemetry-properties]
 === 3.7 telemetry.properties
 
-The Telemetry configuration is set in the telemetry.properties_ file:
+The Telemetry configuration is set in the _telemetry.properties_ file:
+Default Telemetry configuration is available in the _telemetry.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2082,6 +2084,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.8 txtPrinter.properties
 
 Text printer configuration is set in the _txtPrinter.properties_ file:
+Default Text printer configuration is available in the _txtPrinter.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2129,6 +2132,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.9 xmpp.properties
 
 XMPP module configuration is set in the _xmpp.properties_ file:
+Default XMPP module configuration is available in the _xmpp.properties.dist_ file:
 
 [source,properties]
 ----
