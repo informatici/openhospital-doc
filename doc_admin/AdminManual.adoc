@@ -2202,7 +2202,7 @@ guest:guest
 
 [source,properties]
 ----
-# Default credentials
+# Default demo credentials
 admin:admin
 guest:guest
 laboratorist:laboratorist
