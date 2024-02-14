@@ -1806,6 +1806,7 @@ NOTE: The _dicom.properties_ file can be automatically generated/overwritten at 
 === 3.4 examination.properties
 
 The examination module configuration is set in the _examination.properties_ file:
+Default examination module configuration is available in the _examination.properties.dist_ file:
 
 [source,properties]
 ----
