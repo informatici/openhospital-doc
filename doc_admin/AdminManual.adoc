@@ -1806,7 +1806,7 @@ NOTE: The _dicom.properties_ file can be automatically generated/overwritten at 
 === 3.4 examination.properties
 
 The examination module configuration is set in the _examination.properties_ file.
-A default examination module configuration is available in the _examination.properties.dist_ file:
+A default configuration file for this module is available in the _examination.properties.dist_ file:
 
 [source,properties]
 ----
@@ -1977,7 +1977,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.6 sms.properties
 
 The SMS communication module configuration is set in the _sms.properties_ file.
-A default SMS communication module configuration is available in the _sms.properties.dist_ file:
+A default configuration file for this module is available in the _sms.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2053,7 +2053,7 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 === 3.7 telemetry.properties
 
 The telemetry configuration is set in the _telemetry.properties_ file.
-A default telemetry configuration is available in the _telemetry.properties.dist_ file:
+A default configuration file for this module is available in the _telemetry.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2085,7 +2085,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.8 txtPrinter.properties
 
 The text printer configuration is set in the _txtPrinter.properties_ file.
-A default text printer configuration is available in the _txtPrinter.properties.dist_ file:
+A default configuration file for this module is available in the _txtPrinter.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2133,7 +2133,7 @@ NOTE: An application restart is required to apply the modified setting.
 === 3.9 xmpp.properties
 
 The XMPP module configuration is set in the _xmpp.properties_ file.
-A default XMPP module configuration is available in the _xmpp.properties.dist_ file:
+A default configuration file for this module is available in the _xmpp.properties.dist_ file:
 
 [source,properties]
 ----
