@@ -1,4 +1,4 @@
-= Open Hospital 1.13.0 - Administrator’s Guide
+= Open Hospital 1.14.0 - Administrator’s Guide
 <<<
 :icons: font
 :stem:
@@ -105,15 +105,15 @@ unzip OpenHospital-v[VERSION]-windows_[ARCH]-[portable].zip # portable version
 unzip OpenHospital-v[VERSION]-multiarch-client.zip # multiarch client version
 ----
 
-After uncompressing the package, browse to the extracted directory (example given for version 1.13.0):
+After uncompressing the package, browse to the extracted directory (example given for version 1.14.0):
 
 * on Linux:
 ----
-cd /home/OH/OpenHospital-v1.13.0
+cd /home/OH/OpenHospital-v1.14.0
 ----
 * on Windows:
 ----
-cd C:\Users\OH\OpenHospital-v1.13.0
+cd C:\Users\OH\OpenHospital-v1.14.0
 ----
 
 
@@ -308,9 +308,9 @@ Open a terminal and navigate to the _sql/_ folder (e.g.):
 
 [source,shell]
 ----
-C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.13.0\sql
+C:\WINDOWS> cd C:\Users\OH\OpenHospital-v1.14.0\sql
 
-C:\Users\OH\OpenHospital-v1.13.0\sql
+C:\Users\OH\OpenHospital-v1.14.0\sql
 
 ----
 
@@ -318,7 +318,7 @@ and run the following command to connect to the database server (e.g.):
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital-v1.13.0\sql> mysql -u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital-v1.14.0\sql> mysql -u root -p [-h hostname/ip address]
 Enter password: *****
 ----
 
@@ -636,8 +636,10 @@ Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is 
 ** *log4j.properties* – Logging system and paths
 ** *settings.properties* – Open Hospital options and settings
 ** *sms.properties* – SMS Manager module
+** *telemetry.properties* – Telemetry module settings
 ** *txtPrinter.properties* – Text printing system
 ** *xmpp.properties* – Xmpp Server configuration
+** *default_credentials.properties* – contains the default credentials
 
 Furthermore, additional configurations files (not meant to be modified by the user) are:
 
@@ -681,6 +683,7 @@ INTERNALVIEWER=yes
 SMSENABLED=no
 VIDEOMODULEENABLED=yes
 XMPPMODULEENABLED=no
+PARAMSURL=https://conf.open-hospital.org/oh-conf.json
 
 # application settings
 ENHANCEDSEARCH=no
@@ -737,6 +740,9 @@ USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
 PASSWORDIDLE=365
+
+# telemetry
+TELEMETRYENABLED=yes
 ----
 
 Every line is composed of a KEY and a value:
@@ -1649,12 +1655,9 @@ If the PATIENTPHOTOSTORAGE parameter is set to a path (that is, not "DB"), then 
 
 If the PATIENTPHOTOSTORAGE parameter is set to "DB", then Open Hospital looks for or saves the patient's profile picture in the Open Hospital database.
 
-
 By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
-
-[#database-properties]
 
 ==== 3.1.42 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
@@ -1700,6 +1703,37 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
+[#telemetryenabled]
+==== 3.1.45 TELEMETRYENABLED
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|TELEMETRYENABLED |yes | yes, no
+|===
+
+By default, the value of TELEMETRYENABLED is the set to `yes` indicating that the Telemetry module is enabled.
+
+When the Telemetry module is enabled, users are presented with the option to participate in anonymous data collection on the software's usage during the initial application launch. This process is designed to gather information that contributes to the ongoing improvement of software quality. User-selected data collection preferences, customizable at any time, will be applied automatically during subsequent launches.
+
+The collected data is transmitted to a server managed by ISF, solely for the purpose of optimizing the application and generating usage statistics. ISF ensures that this data is treated anonymously and with utmost respect for user privacy.
+
+The Telemetry module can be disabled at any time through the Settings menu or via <<settings-properties,settings.properties>>.
+
+image:image68.png[image,width=831,height=378]
+
+image:image69.png[image,width=847,height=522]
+
+[#paramsurl]
+==== 3.1.46 PARAMSURL
+
+This is the URL of the online configuration/parameters file.
+
+NOTE: This setting is not meant to be modified by the user.
+
+[#database-properties]
 === 3.2 database.properties
 
 Database configuration is set in the _database.properties_ file.
@@ -1771,7 +1805,8 @@ NOTE: The _dicom.properties_ file can be automatically generated/overwritten at 
 
 === 3.4 examination.properties
 
-The examination module configuration is set in the _examination.properties_ file:
+The examination module configuration is set in the _examination.properties_ file.
+A default configuration file for this module is available in the _examination.properties.dist_ file:
 
 [source,properties]
 ----
@@ -1857,10 +1892,11 @@ log4j.appender.StdOut.layout=org.apache.log4j.PatternLayout
 log4j.appender.StdOut.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m%n
 
 # File Appender (with classes), daily rotation
-log4j.appender.RollingFile = org.apache.log4j.DailyRollingFileAppender
-log4j.appender.RollingFile.DatePattern='.'yyyy-MM-dd
+log4j.appender.RollingFile=org.apache.log4j.RollingFileAppender
+log4j.appender.RollingFile.PatternLayout.pattern='.'yyyy-MM-dd
 log4j.appender.RollingFile.File=LOG_DEST
 log4j.appender.RollingFile.layout=org.apache.log4j.PatternLayout
+log4j.appender.RollingFile.Policies.TimeBasedTriggeringPolicy=1
 log4j.appender.RollingFile.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m (%l)%n
 
 # DB Appender (table columns)
@@ -1940,7 +1976,8 @@ NOTE: An application restart is required to apply the modified setting.
 [#sms-properties]
 === 3.6 sms.properties
 
-SMS communication module configuration is set in the _sms.properties_ file:
+The SMS communication module configuration is set in the _sms.properties_ file.
+A default configuration file for this module is available in the _sms.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2012,10 +2049,43 @@ This file defines the parameters for sending SMS using the Skebby HTTP API.
 * *key*: the API key (if using a  purchased sms) from Textbelt provider (one can use "textbelt" to send 1 free sms per day)
 * *ribbon.base-url*: The URL of the Textbelt HTTP API.
 
-[#txtprinter-properties]
-===  3.7 txtPrinter.properties
+[#telemetry-properties]
+=== 3.7 telemetry.properties
 
-Text printer configuration is set in the _txtPrinter.properties_ file:
+The telemetry configuration is set in the _telemetry.properties_ file.
+A default configuration file for this module is available in the _telemetry.properties.dist_ file:
+
+[source,properties]
+----
+# number of seconds to check if it should send a message
+telemetry.daemon.thread.loop.seconds=14400
+
+# enabled remote geo ip lookup service
+# allowed values:
+# - geoiplookup-remote-service
+# - ipapi-remote-service
+telemetry.enabled.geo.ip.lookup.service=geoiplookup-remote-service
+# endpoints remote services
+geoiplookup-remote-service.ribbon.base-url=https://json.geoiplookup.io
+ipapi-remote-service.ribbon.base-url=http://ip-api.com/json 
+----
+
+This file is used only if the TELEMETRYENABLED flag is true (see <<telemetryenabled,TELEMETRYENABLED>> in this document).
+
+The file has the following configurable parameters:
+
+* *telemetry.daemon.thread.loop.seconds*: number of seconds the Telemetry module should try again to send the telemetry data; if the telemetry data have been sent in the same day it will not send again.
+* *telemetry.enabled.geo.ip.lookup.service*: the GeoIP service to use among the ones available in the comment: geoiplookup-remote-service or ipapi-remote-service; more services may be added in the future.
+* *<service>.ribbon.base-url*: the URL for each available GeoIP service 
+
+NOTE: An application restart is required to apply the modified setting.
+
+
+[#txtprinter-properties]
+=== 3.8 txtPrinter.properties
+
+The text printer configuration is set in the _txtPrinter.properties_ file.
+A default configuration file for this module is available in the _txtPrinter.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2060,9 +2130,10 @@ The best way to set these parameters for the device is to set them one by one an
 NOTE: An application restart is required to apply the modified setting.
 
 [#xmpp-properties]
-=== 3.8 xmpp.properties
+=== 3.9 xmpp.properties
 
-XMPP module configuration is set in the _xmpp.properties_ file:
+The XMPP module configuration is set in the _xmpp.properties_ file.
+A default configuration file for this module is available in the _xmpp.properties.dist_ file:
 
 [source,properties]
 ----
@@ -2087,7 +2158,7 @@ Once the XMPP Server is installed, active and running set the two parameters in 
 NOTE: An application restart is required to apply the modified setting.
 
 
-==== 3.8.1 OpenFire Settings
+==== 3.9.1 OpenFire Settings
 
 The XMPP module needs some knowledge about the XMPP protocol and how an XMPP server works.
 
@@ -2109,7 +2180,40 @@ Please follow these settings:
 . Consideration should be given to using the OpenFire plugin to automatically add new users to a group (e.g., registration plugin https://www.igniterealtime.org/projects/openfire/plugins/registration.jar)
 
 
-=== 3.9 Bundles
+[#default-credentials-properties]
+=== 3.10 default_credentials.properties
+
+Open Hospital is packaged with a login "hint" visible only if the _default_credentials.properties_ file is found.
+
+image:image23.png[image,width=357,height=177]
+
+NOTE: Mouse over the "i" icon to see the hint.
+
+To not show the hint just delete _default_credentials.properties_ file. 
+
+The original values are found in _default_credentials.properties.dist_ and _default_demo_credentials.properties.dist_ files.
+
+[source,properties]
+----
+# Default credentials
+admin:admin
+guest:guest
+----
+
+[source,properties]
+----
+# Default demo credentials
+admin:admin
+guest:guest
+laboratorist:laboratorist
+doctor:doctor
+----
+
+NOTE: It is always recommended to change the **admin** user password in a production environment.
+
+
+
+=== 3.11 Bundles
 
 Bundles are the language (or translation) files provided with Open Hospital. As described in the
 <<language,LANGUAGE>> chapter, Open Hospital comes with different available languages in the folder *bundles/* within the package file:
@@ -2123,7 +2227,7 @@ These property files (text format) contain multiple *key = value* pairs containi
 All files must be encoded in *UTF-8* to accept any language-specific characters (e.g. è ì ò à ñ ú ù ¡ ¿ ...).
 
 
-==== 3.9.1 New Translations
+==== 3.11.1 New Translations
 
 To create a new translation, simply copy the English file, rename it with the new country code in
 place of the “XY” in the filename, and start translating with a simple text editor. A text editor can also be used to modify
@@ -2159,18 +2263,18 @@ With Jaspersoft® Studio it is possible to edit Open Hospital reports and re-com
 
 <<<
 
-== 5 Installing Open Hospital 1.13.0 in Eclipse EE
+== 5 Installing Open Hospital 1.14.0 in Eclipse EE
 
 The OH source code is available on GitHub at the following links:
 
-* https://github.com/informatici/openhospital-core/tree/v1.13.0[openhospital-core]
-* https://github.com/informatici/openhospital-gui/tree/v1.13.0[openhospital-gui]
-* https://github.com/informatici/openhospital-doc/tree/v1.13.0[openhospital-doc]
+* https://github.com/informatici/openhospital-core/tree/v1.14.0[openhospital-core]
+* https://github.com/informatici/openhospital-gui/tree/v1.14.0[openhospital-gui]
+* https://github.com/informatici/openhospital-doc/tree/v1.14.0[openhospital-doc]
 
 _Please use EGit (Eclipse Plugin for Git) to clone the code into the Eclipse instance._
 
 Assuming Eclipse EE, MariaDB/MySQL and the Java Virtual Machine 11 or higher (Java8 or greater)
-are already installed on the computer, this chapter will focus on cloning version 1.13.0 into the Eclipse J2EE (or Eclipse EE)
+are already installed on the computer, this chapter will focus on cloning version 1.14.0 into the Eclipse J2EE (or Eclipse EE)
 environment.
 
 Please follow these
@@ -2260,6 +2364,7 @@ _sql/update_ folder (e.g.):
 | 1.10 | 1.10 | _update_1_10-1_11.sql_
 | 1.11 | 1.12 | _update_1_11-1_12.sql_
 | 1.12 | 1.13 | _update_1_12-1_13.sql_
+| 1.13 | 1.14 | _update_1_13-1_14.sql_
 |===
 
 To perform the database update process follow these steps:
@@ -2270,9 +2375,9 @@ To perform the database update process follow these steps:
 
 [source,shell]
 ----
-C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital-v1.13.0\sql\update
+C:\WINDOWS\system32> cd C:\Users\OH\OpenHospital-v1.14.0\sql\update
 
-C:\Users\OH\OpenHospital-v1.13.0\sql\update>
+C:\Users\OH\OpenHospital-v1.14.0\sql\update>
 ----
 
 [start=4]
@@ -2280,7 +2385,7 @@ C:\Users\OH\OpenHospital-v1.13.0\sql\update>
 
 [source,shell]
 ----
-C:\Users\OH\OpenHospital.1.13.0\sql\update> mysql –u root -p [-h hostname/ip address]
+C:\Users\OH\OpenHospital.1.14.0\sql\update> mysql –u root -p [-h hostname/ip address]
 
 Enter password: ****
 ----
@@ -2350,6 +2455,7 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 * A brief history of the organization;
 * The country where the installation is and the language used;
 * Technical details of the OH installation;
+* The application logs (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#help[Help] chapter in the User's Guide)
 * The current Open Hospital version;
 * Complete the https://goo.gl/forms/rXgcYTWpAyp9Eyqw1[Open Hospital Assessment online-form] form
 

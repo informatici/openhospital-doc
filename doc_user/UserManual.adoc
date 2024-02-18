@@ -1,4 +1,4 @@
-= Open Hospital 1.13.0 - User's Guide
+= Open Hospital 1.14.0 - User's Guide
 :icons: font
 :stem:
 :toc: left
@@ -50,10 +50,15 @@ More information can be found on the Open Hospital web site: https://www.open-ho
 
 NOTE: The information needed to install, configure or administer Open Hospital is not included in this manual; please refer to the _Open Hospital Administrator’s Guide_ supplied with the software.
 
+[#help]
 ==== 1.2.1 Help
 
 * The *[.underline]##H##elp* function available at the bottom of the main MENU of Open Hospital provides access to
 this document [.underline]#offline#.
+
+* It allows enabled user to easily access the application *[.underline]##L##ogs* folder
+
+image:image0_HelpMenu.png[OH Help Menu]
 
 ==== 1.2.2 Legend
 
@@ -292,7 +297,7 @@ The OPD Extended module affords the following additional features:
 
 * Once a patient is selected and if a previous OPD visit is found, special fields are populated with the most recent visit of the patient (4), his/her personal data (5), and the *Re-Attendance* radio box will be selected automatically upon selection of the main (first) disease (6);
 * It is now possible to set the next appointment date (7) and in what ward (OPD or IPD). This automatically schedules a visit visible in <<therapy-management,Therapy Management>> and <<worksheet,Worksheet>>.
-* Selecting the trash can icon (9) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
+* Selecting the trash can icon (7) clears the next visit information (date, time and ward) and deletes the appointment if previously specified.
 * The selection of the OPD ward (8) is required so as to specify where the visit is taking place. After the first selection in a session, the application remembers the selection to ease the data entry.
 * If a new attendance for this patient is required, click the "New Attendance" (6) radio box and proceed normally.
 * If editing an old OPD, it is possible to change everything except the patient to whom the OPD refers, and the "New Attendance" radio box.
@@ -485,13 +490,12 @@ NOTE: The User column can be enabled or disabled by changing the _SINGLEUSER_ fl
 The following functions are available from the *Buttons panel* of the window *_Stock Movement Browser_*:
 
 * *C[.underline]##h##arge*: record a new charge movement.
-* *[.underline]##D##ischarge*: record a new discharge movement.
+* *Discha[.underline]##r##ge*: record a new discharge movement.
+* *[.underline]##D##elete*: delete the last movement.
 * *[.underline]##E##xport to Excel*: export pharmaceuticals stock movements.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit the *_Stock Movement Browser_* window.
-
-NOTE: There is no “Delete” button as movements cannot be deleted. If a mistake does occur (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake. In this example, use a discharge movement to undo the unwanted change.
 
 Furthermore, a search function (*[.underline]##F##ilter)* is available using the *Selection panel* on the left of the window.
 
@@ -587,9 +591,9 @@ the Expiring Date must always be provided. Ask the Administrator or refer to the
 NOTE: In order to avoid managing the cost of medicals, set the LOTWITHCOST flag to _no_ in the configuration file. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 [#insert-stock-discharging-movement]
-===== 4.2.2.3 Insert Stock Discharging Movement ([.underline]##D##ischarge)
+===== 4.2.2.3 Insert Stock Discharging Movement (Discha[.underline]##r##ge)
 
-To insert discharging movements, press the *[.underline]##D##ischarge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
+To insert discharging movements, press the *Discha[.underline]##r##ge* button in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
 
 image:image31.png[Stock Movement Discharging]
 
@@ -627,6 +631,34 @@ for more information.
 
 <<<
 
+[#delete-last-stock-movement]
+===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
+In Pharmaceutical Stock it is not possible to change the past and all operations need to be done in consecutive order. If a mistake concerns a movement in the past (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake (in the example, use a discharge movement to undo the unwanted change).
+
+Nevertheless, the admin can enable/disable the *[.underline]##D##elete* button that allows the enabled user do delete only the last movement, and helps quickly undoing mistakes.
+
+To delete the last movement, select first the row that you want to delete and press the *[.underline]##D##elete* button in the *_Stock Movement Browser_* window. Only one row is allowed to delete at a time.
+
+If it is not the last movement the following  *_Error_* message is shown:
+
+image:image250.png[Not last movement error]
+
+But if the row selected is the last movement this *_Question_* message is presented:
+
+image:image248.png[Question]
+
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks if the product involved in the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_* (see <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
+
+If the product has been already used in a Ward, then the *_Error_* message is shown.
+
+image:image249.png[Error]
+
+Otherwise the selected movement is deleted and the *_Success_* window is shown:
+
+image:image251.png[success]
+
+NOTE: This button can be enabled/disabled to allow/not allow movements deletion. Ask the Administrator or check the Administrator's Guide for more information.
+
 [#pharmaceutical-stock-ward]
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
 
@@ -656,6 +688,7 @@ The available functions are:
 * *[.underline]##R##ectify*: rectify the quantity lying in stock (see 6.3.2.1 Rectify).
 * *Re[.underline]##p##ort*: print the ward medical inventory report.
 * *[.underline]##E##xcel*: export the data in a format to import into Excel.
+* *[.underline]##D##elete*: delete the last movement.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
 * *[.underline]##C##lose*: exit from the *_Ward Pharmacy_* window.
@@ -731,6 +764,33 @@ to serve the discharging movement, several discharging movements may be generate
 other lots can satisfy the request. Ask the Administrator or check the _Administrator’s Guide_ for more information.
 
 Before pressing the *[.underline]##O##K* button, insert as many Medicals as needed; it will show a corresponding number of movements in the *Outcomes* tab of the *Movement panel* in the *_Ward Pharmacy_* window. These movements are also visible in the *Incomings* tab of the *Movement panel* in the *_Ward Pharmacy_* window of the receiving ward, in case of discharging to another ward.
+
+===== 4.3.2.5 Delete the Last Stock Movement in a Ward ([.underline]##D##elete)
+In a pharmaceutical stock ward, it is possible to discharge medicals to *patient*, *internal use* or *another ward*. If a mistake is made during the discharge, it is possible to delete it in order to correct the stock of the ward and resume the action.
+
+The Administrator can enable or disable the *[.underline]##D##elete* button that allows the deletion of the last movement. This aids in quickly undoing mistakes.
+
+To delete the last movement, select first the row that you want to delete and press the Delete button in the Stock Movement Browser window. Only one row is allowed to delete at a time.
+
+If the selection is not the last movement the following error message dialog is shown:
+
+image:image250.png[Not last movement error]
+
+If the row selected is the last movement then this *_Question_* message is presented:
+
+image:image248.png[Question]
+
+Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, if the movement discharges to another ward, the system checks if the product involved in the selected movement has not been used in the destination ward. If not, then the movement is deleted, otherwise the deletion is denied.
+
+If the product has been used in the destination ward, then the *_Error_* message is shown:
+
+image:image249.png[Error]
+
+Otherwise the selected movement is deleted and the *_Success_* window is shown:
+
+image:image251.png[success]
+
+NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
 <<<
 
@@ -1557,23 +1617,21 @@ __[.underline]#VIDEOMODULEENABLED#__ flag in the configuration file. Ask the Adm
 
 Once the video module has been enabled, the *_New Patient_* window looks as follows:
 
-image:image88p.png[New Patient Extended photo,width=587,height=339]
+image:image89.png[New Patient Extended photo,width=587,height=339]
 
 By clicking on the *[.underline]##N##ew Photo* button, the webcam should be activated (check for any lights on the device). The *Patient Photo* window should show what the camera is pointing at.
 
-image:image89.png[Webcam photo,width=591,height=392]
+image:image89a.png[Webcam photo,width=591,height=392]
 
-image:image90.png[Attach photo,width=591,height=392]
+By clicking on the *Capture* button a picture is taken and the location of the selection is shown in red.
+
+image:image89b.png[Attach photo,width=591,height=392]
+
+By clicking on the *OK* button the picture is attached to the patient information.
+
+image:image88p.png[Attach photo,width=591,height=392]
 
 By clicking again on the *[.underline]##N##ew Photo* button, a picture is taken ready to be attached to the patient information.
-
-===== 8.4.3.1 Camera Settings (image:image91.png[camera icon,width=22,height=12])
-
-If nothing happens when pressing the *[.underline]##N##ew Photo* button, press the *switch camera* button image:image91.png[camera icon,width=22,height=12] that allows switching among the webcams connected to the computer if there is more than one; if only one camera is connected to the computer, it is useful to reset the camera settings and restart it.
-
-Once the camera is activated and the “eye-view” of the camera is visible, press on “+” or “-“ to increase or reduce the image quality.
-
-Open Hospital attempts to automatically set the best quality for any webcam connected to the computer and remembers the last settings used.
 
 NOTE: If the camera does not function, then change the flag to DEBUG in the configuration file to generate additional
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
