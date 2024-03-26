@@ -1,4 +1,4 @@
-= Open Hospital 1.14.0 - User's Guide
+= Open Hospital 1.14.1 - User's Guide
 :icons: font
 :stem:
 :toc: left
@@ -632,7 +632,7 @@ for more information.
 <<<
 
 [#delete-last-stock-movement]
-===== 4.2.2.3 Delete Last Stock Movement (*[.underline]##D##elete*)
+===== 4.2.2.4 Delete Last Stock Movement (*[.underline]##D##elete*)
 In Pharmaceutical Stock it is not possible to change the past and all operations need to be done in consecutive order. If a mistake concerns a movement in the past (for example, the wrong quantity of a pharmaceutical is inserted in charge), then use a new opposite movement to correct the mistake (in the example, use a discharge movement to undo the unwanted change).
 
 Nevertheless, the admin can enable/disable the *[.underline]##D##elete* button that allows the enabled user do delete only the last movement, and helps quickly undoing mistakes.
@@ -1022,7 +1022,7 @@ Furthermore, the *_Patient Bills Management_* window shows an *Incomes Table* wi
 * *Second Row*: the *PAID* and *UNPAID* amounts (in the specified currency) for the visualized *Period*
 * *Third Row*: the amount *PAID* for *Today* and within the selected *Period* for the selected *User*
 
-NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<function-accounting>>)
+NOTE: The USER column, The [User] selector and the *Third Row* are shown only in multi-user mode (see <<save-function-accounting>>)
 
 [#insert-a-new-bill]
 ==== 6.2.1 Insert a New Bill ([.underline]##N##ew Bill)
