@@ -1,4 +1,4 @@
-= Open Hospital 1.14.0 - User's Guide
+= Open Hospital 1.14.1 - User's Guide
 :icons: font
 :stem:
 :toc: left
