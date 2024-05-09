@@ -396,7 +396,7 @@ When all the data is entered, the *Buttons panel* has the following choices:
 
 ===== 4.1.2.2 Modify an Existing Pharmaceutical ([.underline]##E##dit)
 
-After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window, shown below. All the data except for the “Type” value can be modified or changed.
+After selecting the pharmaceutical to modify, press the *[.underline]##E##dit* button in the *_Pharmaceutical Browser_* window to access the *_Edit Medical_* window, shown below. All the data can be modified or changed.
 
 image:image19.png[Edit Medical]
 
