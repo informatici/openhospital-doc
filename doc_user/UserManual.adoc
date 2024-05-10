@@ -501,7 +501,7 @@ Furthermore, a search function (*[.underline]##F##ilter)* is available using the
 
 ===== 4.2.2.1 Search Pharmaceuticals Stock Movements ([.underline]##F##ilter)
 
-image:image24.png[Stock Movements Filter,width=169,height=507]
+image:image24.png[Stock Movements Filter]
 
 Using the *_Stock Movement Browser_* search function, the information in the window can be filtered to show:
 
@@ -539,6 +539,8 @@ Finally, for *Lot Preparation Date* and *Lot Due Date*, movements that refer to 
 Each filter can be combined with another, allowing for many possibilities.
 
 After the filtering criteria are chosen, press the *[.underline]##F##ilter* button and the matching data is shown in the *Data table* area.
+
+By pressing the *Rese[.underline]##t##* button, all criteria reset to default values.
 
 ===== 4.2.2.2 Insert Stock Charging Movement ([.underline]##C##harge)
 
