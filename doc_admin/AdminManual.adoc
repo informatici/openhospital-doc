@@ -436,7 +436,7 @@ NOTE: "isf123" is used here as the default password. Change it for production se
 
 After you can generate the config files: on Linux execute *oh.sh -g*, on Windows launch *oh.bat* and choose the option *g*.
 
-*Alternative method*: you can first generate the config files with the *-g* and after directly modify the _database.properties_ and _log4j.properties_ configuration files, located in the _oh/rsc/_ resource folder, without generating them every time.
+*Alternative method*: you can first generate the config files with the *-g* and after directly modify the _database.properties_ and _log4j2-spring.properties_ configuration files, located in the _oh/rsc/_ resource folder, without generating them every time.
 
 Please set them according to the values specified in the installation phase:
 
@@ -447,11 +447,12 @@ jdbc.username=isf
 jdbc.password=isf123
 ```
 
-in _log4j.properties_ config file
+in _log4j2-spring.properties_ config file
 ```
-log4j.appender.DB.URL=jdbc:mysql://127.0.0.1:3306/oh?autoReconnect=true
-log4j.appender.DB.user=isf
-log4j.appender.DB.password=isf123
+appender.jdbc.connectionSource.connectionString = mysql://127.0.0.1:3306/oh?autoReconnect=true
+appender.jdbc.connectionSource.userName = isf
+appender.jdbc.connectionSource.password = isf123
+
 ```
 
 NOTE: These settings are required for every Open Hospital installation/client.
@@ -633,7 +634,7 @@ Configuration of the local Open Hospital instance (CLIENT and PORTABLE mode) is 
 ** *database.properties* – Open Hospital database connection
 ** *dicom.properties* – Imaging viewer module options
 ** *examination.properties* – contains the settings for the ‘examination’ module
-** *log4j.properties* – Logging system and paths
+** *log4j2-spring.properties* – Logging system and paths
 ** *settings.properties* – Open Hospital options and settings
 ** *sms.properties* – SMS Manager module
 ** *telemetry.properties* – Telemetry module settings
@@ -1270,7 +1271,7 @@ The default settings for a GSM modem should work with the majority of GSM device
 The exception is the PORT parameter which must be changed to match the SERIAL port address used by the device plugged into the system.
 
 If the PORT param is correct but Open Hospital is not able to communicate with the device (try switching to DEBUG log level – or lower - during this setup –
-see <<log4j-properties,log4j.properties>>) and try to use the SetupGSM utility as explained in the next chapter.
+see <<log4j2-spring-properties,log4j2-spring.properties>>) and try to use the SetupGSM utility as explained in the next chapter.
 
 
 ===== 3.1.23.2 SetupGSM utility
@@ -1762,7 +1763,7 @@ _217.147.110.117_ – an example of a public IP address (WAN)
 NOTE: An application restart is required to apply the modified setting.
 
 NOTE: The same settings must be applied in _log4.properties_, see
-<<log4j-properties,log4j.properties>> in this manual.
+<<log4j2-spring-properties,log4j2-spring.properties>> in this manual.
 
 NOTE: The _database.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
@@ -1872,56 +1873,75 @@ RR_MAX = 100
 * *HGT_INIT*: = the Hemo Glucose Test default value (in mg/dl)
 * *DIURESIS_INIT*: = the Daily Urine Volume default value (in ml)
 
-[#log4j-properties]
-=== 3.5 log4j.properties
+[#log4j2-spring-properties]
+=== 3.5 log4j2-spring.properties
 
-The logging configuration is set in the _log4j.properties_ file.
-Default logging configuration is available in the _log4j.properties.dist_ file:
+The logging configuration is set in the _log4j2-spring.properties_ file.
+Default logging configuration is available in the _log4j2-spring.properties.dist_ file:
 
 [source,properties]
 ----
-# global logging to RollingFile (logs/ folder), available levels INFO, DEBUG, FINEST (debug++)
-log4j.rootCategory=INFO,RollingFile
 
-# Null appender (off)
-log4j.appender.null=org.apache.log4j.varia.NullAppender
+status = INFO
+rootLogger.level = INFO
+rootLogger.appenderRef.console.ref = STDOUT
+rootLogger.appenderRef.rolling.ref = RollingFile
 
-# StdOut Appender (with classes) (not used)
-log4j.appender.StdOut = org.apache.log4j.ConsoleAppender
-log4j.appender.StdOut.layout=org.apache.log4j.PatternLayout
-log4j.appender.StdOut.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m%n
+# Direct log messages to STDOUT
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = [%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m%n
 
 # File Appender (with classes), daily rotation
-log4j.appender.RollingFile=org.apache.log4j.RollingFileAppender
-log4j.appender.RollingFile.PatternLayout.pattern='.'yyyy-MM-dd
-log4j.appender.RollingFile.File=LOG_DEST
-log4j.appender.RollingFile.layout=org.apache.log4j.PatternLayout
-log4j.appender.RollingFile.Policies.TimeBasedTriggeringPolicy=1
-log4j.appender.RollingFile.layout.ConversionPattern=[%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m (%l)%n
+appender.rolling.type = RollingFile
+appender.rolling.name = RollingFile
+appender.rolling.fileName= LOG_DEST/openhospital.log
+appender.rolling.filePattern= LOG_DEST/openhospital.log.%d{yyyy-MM-dd}
+appender.rolling.layout.type = PatternLayout
+appender.rolling.layout.pattern = [%d{dd/MMM/yyyy HH:mm:ss}] [%X{OHUserGroup}:%X{OHUser}] %-p - %m (%l)%n
+appender.rolling.policies.type = Policies
+# To change log file every day
+appender.rolling.policies.time.type = TimeBasedTriggeringPolicy
+appender.rolling.policies.time.interval = 1
+appender.rolling.policies.time.modulate = true
+
 
 # DB Appender (table columns)
-log4j.appender.DB=org.apache.log4j.jdbc.JDBCAppender
-log4j.appender.DB.URL=jdbc:mysql://DBSERVER:DBPORT/DBNAME?autoReconnect=true
-log4j.appender.DB.user=DBUSER
-log4j.appender.DB.password=DBPASS
-log4j.appender.DB.sql=INSERT INTO LOG (LOG_TYPE, LOG_CLASS, LOG_METHOD, LOG_TIME, LOG_MESS, LOG_USER) VALUES (1, '%C', '%M', '%d{yyyy-MM-dd HH:mm:ss}', LEFT('%m', 1024), '%X{OHUser}')
-log4j.appender.DB.layout=org.apache.log4j.PatternLayout
+appender.jdbc.type = JDBC
+appender.jdbc.name = jdbc
+appender.jdbc.connectionSource.driverClassName = com.mysql.cj.jdbc.Driver
+appender.jdbc.connectionSource.type = DriverManager
+appender.jdbc.connectionSource.connectionString = dbc:mysql://DBSERVER:DBPORT/DBNAME?autoReconnect=true
+appender.jdbc.connectionSource.userName = DBUSER
+appender.jdbc.connectionSource.password = DBPASS
+appender.jdbc.tableName = logs
+appender.jdbc.ignoreExceptions = false
+appender.jdbc.columnConfigs[0].type = COLUMN
+appender.jdbc.columnConfigs[0].name = LOG_TIME
+appender.jdbc.columnConfigs[0].pattern = %d
+appender.jdbc.columnConfigs[0].isUnicode = false
+appender.jdbc.columnConfigs[1].type = COLUMN
+appender.jdbc.columnConfigs[1].name = LOG_LEVEL
+appender.jdbc.columnConfigs[1].pattern = %5p
+appender.jdbc.columnConfigs[1].isUnicode = false
+appender.jdbc.columnConfigs[2].type = COLUMN
+appender.jdbc.columnConfigs[2].name = MESSAGE
+appender.jdbc.columnConfigs[2].pattern = %mm%ex%n
+appender.jdbc.columnConfigs[2].isUnicode = false
 
-# Security settings - see log4j CVE-2021-44228
-log4j.formatMsgNoLookups=true
-
-# Assigning appenders to packages (application loggers)
-log4j.category.org.isf=LOG_LEVEL,RollingFile
-log4j.additivity.org.isf = false
 
 # Assigning appenders to Hibernate packages (DB loggers)
 # - hibernate.SQL to DEBUG for SQL queries to be logged
 # - hibernate.type to TRACE for queries parameters to be logged with "binding parameter [?]"
-log4j.logger.org.hibernate=LOG_LEVEL,RollingFile,StdOut
-#log4j.logger.org.hibernate.SQL=INFO,RollingFile,StdOut
+##logger.hibernate-SQL.name=org.hibernate.SQL
+##logger.hibernate-SQL.level=DEBUG
+##
+##logger.hibernate-type.name=org.hibernate.type
+##logger.hibernate-type.level=TRACE
 ----
 
-Use the provided OH startup scripts in order to automatically generate the _log4j.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
+Use the provided OH startup scripts in order to automatically generate the _log4j2-spring.properties_ file from the corresponding _.dist_ file; after generation, optionally adjust the following parameters:
 
 * *DBSERVER*: the IP address of the OH database server. 
 IP address can be set to: +
@@ -1939,34 +1959,45 @@ NOTE: The same settings must be applied in the _database.properties_ configurati
 
 [source,properties]
 ----
-log4j.category.org.isf=INFO,RollingFile
+status = INFO
+rootLogger.level = INFO
+rootLogger.appenderRef.rolling.ref = RollingFile
 ----
 
 To investigate bugs or issues, the log level can be increased to "TRACE" in order to log more detailed information:
 
 [source,properties]
 ----
-log4j.category.org.isf=TRACE,RollingFile
+status = TRACE
+rootLogger.level = TRACE
+rootLogger.appenderRef.rolling.ref = RollingFile
 ----
 
 Logging can be routed to the database (DB) by adding the respective *appender*:
 
 [source,properties]
 ----
-log4j.category.org.isf=INFO,RollingFile,DB
+status = INFO
+rootLogger.level = INFO
+rootLogger.appenderRef.console.ref = STDOUT
+rootLogger.appenderRef.rolling.ref = RollingFile
+rootLogger.appenderRef.db = JDBC
 ----
 
 Logging can also be routed to standard output (the console window) with:
 
 [source,properties]
 ----
-log4j.category.org.isf=INFO,RollingFile,StdOut
+status = INFO
+rootLogger.level = INFO
+rootLogger.appenderRef.console.ref = STDOUT
+rootLogger.appenderRef.rolling.ref = RollingFile
 ----
 
 If the DB appender is specified, the configuration must be set to match the settings in the _database.properties_ file
 (see <<database-properties,database.properties>>).
 
-NOTE: The _log4j.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
+NOTE: The _log4j2-spring.properties_ file can be automatically generated/overwritten at any Open Hospital startup, by setting the WRITE_CONFIG_FILES option to "on" in the **oh.sh / oh.ps1** scripts.
 
 
 NOTE: DEBUG mode can generate large log files and should be avoided in a production environment.
@@ -2331,7 +2362,7 @@ image:image67.png[image,width=604,height=377] +
 If the password is not correct, an error message is shown, asking the user to try again.
 
 To better understand the processes built in the software, also enable the “Standard Output” in
-_log4j.properties_ as explained in the chapter <<log4j-properties,log4j.properties>>.
+_log4j2-spring.properties_ as explained in the chapter <<log4j2-spring-properties,log4j2-spring.properties>>.
 
 <<<
 
@@ -2342,7 +2373,7 @@ New releases, as well as this Admin Manual and the User Manual, are regularly re
 NOTE: Following instructions only apply between “official releases”.
 
 Minor releases (if not otherwise specified) do not need changes to the database structure, so the working copy can be replaced on each client with the new one and then connect to the same DB
-(see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
+(see <<database-properties,database.properties>> and <<log4j2-spring-properties,log4j2-spring.properties>>).
 
 It is important to keep/preserve files that have been created or modified, especially configuration/settings and data files (see <<configuration,Configuration>>).
 The easiest way is to backup the working copy and re-apply those settings in the new installation
@@ -2428,7 +2459,7 @@ MariaDB> source update_1_12-1_13.sql
 === 6.2 Update Client
 
 If the database upgrade procedure is successful, it is possible to update the OH software by replacing the OH working copy on each client with the new one.
-(see <<database-properties,database.properties>> and <<log4j-properties,log4j.properties>>).
+(see <<database-properties,database.properties>> and <<log4j2-spring-properties,log4j2-spring.properties>>).
 Remember to maintain the configuration files that have been changed, to preserve the custom settings.
 (see <<configuration,Configuration>>). The most common way is to backup the working copy and re-apply those
 settings in the new one (see <<backup-restore,Backup & Restore>>).
