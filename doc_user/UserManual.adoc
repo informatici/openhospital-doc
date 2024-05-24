@@ -348,7 +348,7 @@ To access the functions of Pharmaceuticals, press *[.underline]##P##harmaceutica
 All functions available under Pharmaceuticals are accessible from the *_Pharmaceutical Browser_* window,
 shown below. It displays all the pharmaceuticals available in the hospital.
 
-image:image17.png[Pharmaceuticals,width=548,height=262]
+image:image17.png[Pharmaceuticals]
 
 If the pharmaceutical quantity is under the critical level, it is shown in RED.
 
@@ -367,8 +367,10 @@ The following functions are accessible from the *Buttons panel* of the *_Pharmac
 * *A[.underline]##M##C*: show the AMC (average monthly consumption) of pharmaceuticals.
 * *[.underline]##C##lose*: exit from the *Pharmaceuticals Browser*.
 
-At the bottom left of the window, there is a "Select type" combo box. Based on the value selected, the table either displays a pharmaceutical of a specific type
-or all pharmaceuticals if the default value of ALL is used. Just to the right of the combo box is a field that is used to search for a specific pharmaceutical by description by typing a keyword into the field.
+At the bottom left of the window, there are an "Active Only" and a "Select type" selectors. Based on the values selected, the table either displays a pharmaceutical of a specific type
+or all pharmaceuticals if the default value of "All" is used. Similarly, the "Active Only" shows only the active pharmaceuticals; other options are "Disabled Only" and "All".
+
+Just to the right of the selectors is a field that is used to search for a specific pharmaceutical by description by typing a keyword into the field.
 
 It is possible to sort the table by any of the column headers by double-clicking on the column name. Filtered type (combo box), searched keys (the search field) and sorting are all reflected in the STOCK report.
 
@@ -384,6 +386,7 @@ To insert a new pharmaceutical, enter the following fields:
 * *Description*: the description of the pharmaceutical.
 * *Pieces per Packet*: number of pieces per packet (if more than 1).
 * *Critical level*: the minimum quantity required in stock.
+* *Active*: if the pharmaceutical is active or not.
 
 NOTE: Types can be defined by the Administrator. Check the <<settings,Settings>> chapter for more information.
 
@@ -560,6 +563,8 @@ The *Panel* contains the following fields:
 The *Grid* is filled with the pharmaceuticals involved in the charging movement. To fill the grid, use the field above the grid to select a pharmaceutical. Enter into the field the code or the description of the pharmaceutical to move, and
 press *ENTER.* This will open the *_Choose a Medical_* window.
 
+NOTE: Only *Active* pharmaceuticals will be displayed (see <<pharmaceuticals,4.1 Pharmaceuticals>>)
+
 image:image26.png[Medical Selection]
 
 Select the desired medical and click *[.underline]##Y##es*. This will open a new window where the quantity of the medical is specified:
@@ -610,6 +615,8 @@ The *Panel* contains the following fields:
 
 The *Grid* is filled in with pharmaceuticals involved in the discharging movement. To fill the grid, enter into the field above the grid the description of the pharmaceutical to discharge, and
 press *ENTER.* This opens the *_Choose a Medical_* window.
+
+NOTE: Only *Active* pharmaceuticals will be displayed (see <<pharmaceuticals,4.1 Pharmaceuticals>>
 
 image:image26.png[Medical Selection]
 
