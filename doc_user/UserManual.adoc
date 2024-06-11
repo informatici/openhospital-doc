@@ -2613,15 +2613,26 @@ By pressing the *[.underline]##N##ew* button, the *_New Medical Stock Movement T
 
 image:image147.png[New Medical Stock Movement]
 
-The allowed types are “+” and “-“ and this means that any kind of movements is either a charging (+) or a discharging (-) of the stock.
+The allowed types are “\+” and “-“ and this means that any kind of movements is either a charging (+) or a discharging (-) of the stock.
+
+The allowed categories are “Operational” and “Non-Operational”. 
+
+*Operational* movements encompass all transactions related to the day-to-day functioning of the warehouse. These movements directly affect the operational stock levels and are crucial for managing the supply chain efficiently. They include receiving goods from suppliers, transferring goods to wards, shipping products to customers, and other routine activities necessary for maintaining the flow of inventory.
+
+*Non-Operational* movements include transactions that do not directly impact the core operational activities of the warehouse. These movements are typically one-time or irregular transactions that are not part of the regular inventory management process. They include adjustments due to inventory discrepancies.
 
 Examples are:
 
-* Positive correction (+)
-* Negative correction (-)
-* Donation (+)
-* Lost (-)
+* Operational - Charge (+) 
+* Operational - Discharge (-)
+* Operational - Donation (+)
+* Non-Operational - Inventory (+) 
+* Non-Operational - Inventory (-)
+* Non-Operational - Expired (-)
+* Non-Operational - Lost (-)
 * ...
+
+Operational will be used to calculate effective consumptions in some reports, like the Average Monthly Consumption report (see <<pharmaceuticals,Pharmaceuticals>>). 
 
 The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
