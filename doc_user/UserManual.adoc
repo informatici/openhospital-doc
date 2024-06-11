@@ -2632,7 +2632,7 @@ Examples are:
 * Non-Operational - Lost (-)
 * ...
 
-Operational will be used to calculate effective consumptions in some reports, like the Average Monthly Consumption report (see <<pharmaceuticals,Pharmaceuticals>>). 
+Operational movements will be used to calculate effective consumptions in some reports, like the *Average Monthly Consumption* report (see <<pharmaceuticals,Pharmaceuticals>>). 
 
 The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
 <<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
