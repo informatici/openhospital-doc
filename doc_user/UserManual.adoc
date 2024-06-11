@@ -2619,7 +2619,7 @@ The allowed categories are “Operational” and “Non-Operational”.
 
 *Operational* movements encompass all transactions related to the day-to-day functioning of the warehouse. These movements directly affect the operational stock levels and are crucial for managing the supply chain efficiently. They include receiving goods from suppliers, transferring goods to wards, shipping products to customers, and other routine activities necessary for maintaining the flow of inventory.
 
-*Non-Operational* movements include transactions that do not directly impact the core operational activities of the warehouse. These movements are typically one-time or irregular transactions that are not part of the regular inventory management process. They include adjustments due to inventory discrepancies.
+*Non-Operational* movements include transactions that do not directly impact the core operational activities of the warehouse. These movements are typically one-time or irregular transactions that are not part of the regular warehouse management process. They include adjustments due to inventory discrepancies.
 
 Examples are:
 
