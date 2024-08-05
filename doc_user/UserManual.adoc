@@ -694,7 +694,7 @@ image:image35.png[Ward Pharmacy]
 The available functions are:
 
 * *[.underline]##N##ew*: create a new discharging movement for the patient.
-* *[.underline]##R##ectify*: rectify the quantity lying in stock (see 6.3.2.1 Rectify).
+* *[.underline]##R##ectify*: rectify the quantity lying in stock (see 4.3.2.1 Rectify).
 * *Re[.underline]##p##ort*: print the ward medical inventory report.
 * *[.underline]##E##xcel*: export the data in a format to import into Excel.
 * *[.underline]##D##elete*: delete the last movement.
