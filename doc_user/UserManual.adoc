@@ -3182,7 +3182,7 @@ The last column, *LOCKED*, if checked indicates that the user is currently locke
 The functions available in this window are:
 
 * *Select group*: filter the list by selecting only one group.
-* *[.underline]##N##ew*: enter a new user (cannot use the same name). Valid characters are A-Z, a-z, 0-9 and the period.
+* *[.underline]##N##ew*: enter a new user (cannot use the same name). Valid characters are a-z, 0-9, dash, period and underscore.
 * *[.underline]##E##dit*: edit an existing user (the password cannot be changed).
 * *[.underline]##R##eset Password*: change the password for an existing user.
 * *[.underline]##D##elete*: delete an existing user.
