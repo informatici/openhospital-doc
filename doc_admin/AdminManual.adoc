@@ -238,6 +238,7 @@ skip-external-locking
 key_buffer_size = 16M
 thread_cache_size = 64
 lower_case_table_names = 1
+explicit_defaults_for_timestamp = OFF
 table_open_cache = 64
 tmp_table_size = 16M
 read_buffer_size = 256K
