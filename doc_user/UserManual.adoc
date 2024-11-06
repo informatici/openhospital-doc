@@ -274,7 +274,7 @@ The OPD Extended module affords the following additional features:
 * Calendar (1): to choose the visit date
 * OPD number (2): the progressive number per year automatically set by the system; changes to the value can be made only at the first registration in a year, and then it will be increased automatically at each registration. The OPD number *MUST* be unique for each year.
 * Registered Patient (3): before choosing a disease, first select a patient from the drop-down list (this is *required*); to find a patient, use the nearby search field by typing part of the patient's name or code. This improves the reliability of reports and statistics, and is a service to the patient as it accounts for the patient's history.
-* Radio box (5): to distinguish whether an individual is new (*New Attendance*)
+* Radio box (6): to distinguish whether an individual is new (*New Attendance*)
  or a (*Re-Attendance*) in the ambulatory. The *New Attendance*
  selection indicates that the patient came to the ambulatory to report a
  new health issue or new disease for which no care has been previously
