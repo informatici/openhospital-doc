@@ -3199,7 +3199,7 @@ image:image195.png[User Browser,width=621,height=305]
 
 The column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
 
-The last column, *DISABLED*, if checked indicates that the user has been marked as deleted and cannot be assigned to new users.
+The last column, *DISABLED*, if checked indicates that the user has been marked as deleted and, unlike the locked user, it cannot even try to login.
 
 The functions available in this window are:
 
