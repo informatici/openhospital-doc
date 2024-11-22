@@ -3150,6 +3150,8 @@ Once the *[.underline]##G##roups* button in the *_Users_* submenu is pressed, th
 
 image:image189.png[Groups Browser,width=642,height=180]
 
+The last column, *DISABLED*, if checked indicates that the group has been marked as deleted and cannot be assigned to new users.
+
 The functions available in this window are:
 
 * *[.underline]##E##dit*: edit an existing group (only the description can be changed).
@@ -3214,7 +3216,7 @@ image:image198.png[Edit User]
 
 In editing mode, the group, the description, whether the user is marked as deleted and whether the user is locked out from logging into the system can be modified.
 To *lock* or *unlock* a user account check or uncheck the box after *Locked:*.
-To mark an user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
+To mark a user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
 
 <<<
 
