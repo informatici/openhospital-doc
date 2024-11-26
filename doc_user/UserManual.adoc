@@ -3150,13 +3150,22 @@ Once the *[.underline]##G##roups* button in the *_Users_* submenu is pressed, th
 
 image:image189.png[Groups Browser,width=642,height=180]
 
+The last column, *DISABLED*, if checked indicates that the group has been marked as deleted and cannot be assigned to new users.
+
 The functions available in this window are:
 
 * *[.underline]##E##dit*: edit an existing group (only the description can be changed).
 * *[.underline]##N##ew*: enter a new group.
 * *Group[.underline]##M##enu*: define rights and permission for a selected group.
-* *[.underline]##D##elete*: delete an existing group.
+* *[.underline]##D##elete*: delete an existing group. If the group is already used in the system, then the application will prompt you to mark it as deleted instead.
 * *[.underline]##C##lose*: close the window.
+
+By pressing the *[.underline]##E##dit* button, the *_Edit Group_* window is shown:
+
+image:image199.png[Edit Group]
+
+In editing mode, the description, and whether the user group is marked as deleted can be modified.
+To mark an user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window is shown:
 
@@ -3188,7 +3197,9 @@ Once the *[.underline]##U##sers* button in the *_Users & Groups_* submenu is pre
 
 image:image195.png[User Browser,width=621,height=305]
 
-The last column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
+The column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
+
+The last column, *DISABLED*, if checked indicates that the user has been marked as deleted and, unlike the locked user, it cannot even try to login.
 
 The functions available in this window are:
 
@@ -3196,15 +3207,16 @@ The functions available in this window are:
 * *[.underline]##N##ew*: enter a new user (cannot use the same name). Valid characters are a-z, 0-9, dash, period and underscore.
 * *[.underline]##E##dit*: edit an existing user (the password cannot be changed).
 * *[.underline]##R##eset Password*: change the password for an existing user.
-* *[.underline]##D##elete*: delete an existing user.
+* *[.underline]##D##elete*: delete an existing user. If the user is already used in the system, then the application will prompt you to mark it as deleted instead.
 * *[.underline]##C##lose*: close the window.
 
 By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown:
 
 image:image198.png[Edit User]
 
-In editing mode, the group, the description, and whether the user is locked out from logging into the system can be modified.
+In editing mode, the group, the description, whether the user is marked as deleted and whether the user is locked out from logging into the system can be modified.
 To *lock* or *unlock* a user account check or uncheck the box after *Locked:*.
+To mark a user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
 
 <<<
 
