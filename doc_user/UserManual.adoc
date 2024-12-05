@@ -2650,7 +2650,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
 * *[.underline]##C##lose*: close the window.
 
-Deleted MedicalType will be marked as “Deleted” and will not be shown in the list of Medical Types throught the application. User cannot mark a MedicalType as “Deleted” if it is still used somewhere in the application.
+Deleted Medical Types will be marked as “Deleted” and will not be shown in the list of Medical Types in the application. User cannot mark a Medical Type as “Deleted” if it is still used somewhere in the application.
 
 The Medical Types defined are used throughout the application (for example,
 in the Pharmacy function and Pharmaceutical Stock Ward  - see
