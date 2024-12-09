@@ -2647,10 +2647,10 @@ The functions available in this window (similar to other windows in the *_Types_
 
 * *[.underline]##N##ew*: enter a new type (cannot use an existing code).
 * *[.underline]##E##dit*: edit an existing type (the code cannot be changed).
-* *[.underline]##D##elete*: delete an existing type (cannot be deleted if still used somewhere in the application).
+* *[.underline]##D##elete*: delete an existing type. *
 * *[.underline]##C##lose*: close the window.
 
-Deleted Medical Types will be marked as “Deleted” and will not be shown in the list of Medical Types in the application. User cannot mark a Medical Type as “Deleted” if it is still used somewhere in the application.
+*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e. linked to previous data) but can be marked as “Deleted” and will not be shown in the list of Medical Types in the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal.
 
 The Medical Types defined are used throughout the application (for example,
 in the Pharmacy function and Pharmaceutical Stock Ward  - see
