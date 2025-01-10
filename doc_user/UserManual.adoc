@@ -850,20 +850,26 @@ Furthermore, a search function (*[.underline]##S##earch)* is available using the
 
 The search function allows for selecting and showing laboratory exams on the *Data table* of the *_Laboratory Browser_* window.
 
-In the example below, all types of exams executed on the date 21.11.2020 are shown in the *Data table*.
+In the example below, all types of exams executed from the date 01.12.2017 to 01.10.2025 by the patient with ID equals to 558 are shown in the *Data table*.
 
 image:image43b.png[Laboratory Browser after search,width=528,height=339]
 
 Data about exams can be selected by choosing specific fields among the following:
 
+* *Pat.Id*: Search laboratory exams by Patient ID. Valid values are:
+
+** Empty: Don't apply this filter to the search. All patients are considered.
+** _Integer_: Valid Patient ID. If there is no patient attached to this ID, the table will be cleared.
+
 * *Select an exam*: Valid values are:
 
-** _All_: exams of all types are shown
-** Pick a single exam from the list; only exams of the selected type are shown
+** _All_: exams of all types are shown.
+** Pick a single exam from the list; only exams of the selected type are shown.
 
-* *Date*: “Date From” and “Date To” only shows the exams executed within the requested time period
+* *Date*: “Date From” and “Date To” only shows the exams executed within the requested time period.
 
-After the selection press, the *[.underline]##S##earch* button; the system shows in the table results of the search applying the criteria requested.
+
+After the selection, press the *[.underline]##S##earch* button; the system shows in the table results of the search applying the criteria requested. Furthermore, when pressing "ENTER" while completing the Patient ID field, the results are show considering only that field.
 
 [#create-a-new-laboratory-exam]
 ==== 5.2.2 Create a New Laboratory Exam ([.underline]##N##ew)
