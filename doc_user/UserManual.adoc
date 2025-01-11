@@ -859,7 +859,7 @@ Data about exams can be selected by choosing specific fields among the following
 * *Pat.Id*: Search laboratory exams by Patient ID. Valid values are:
 
 ** Empty: Do not apply this filter to the search. All patients are considered.
-** _Integer_: Valid Patient ID. If there is no patient attached to this ID, the table will be cleared.
+** _Integer_: Valid Patient ID. If there is no patient with this ID, the table will be cleared.
 
 * *Select an exam*: Valid values are:
 
