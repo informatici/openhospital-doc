@@ -869,7 +869,7 @@ Data about exams can be selected by choosing specific fields among the following
 * *Date*: “Date From” and “Date To” only shows the exams executed within the requested time period.
 
 
-After the selection, press the *[.underline]##S##earch* button; the system shows in the table results of the search applying the criteria requested. Furthermore, when pressing "ENTER" while completing the Patient ID field, the results are show considering only that field.
+After the selection, press the *[.underline]##S##earch* button; the system shows in the table results of the search applying the criteria requested. Furthermore, when pressing "ENTER" while completing the Patient ID field, only the results with the patient ID are shown.
 
 [#create-a-new-laboratory-exam]
 ==== 5.2.2 Create a New Laboratory Exam ([.underline]##N##ew)
