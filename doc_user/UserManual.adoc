@@ -2656,7 +2656,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type. *
 * *[.underline]##C##lose*: close the window.
 
-*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e. linked to previous data) but can be marked as “Deleted” and will not be shown in the list of Medical Types in the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal.
+*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e. linked to previous data) but can be marked as “Deleted” here and will not be shown in the list of Medical Types in the rest of the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
 
 The Medical Types defined are used throughout the application (for example,
 in the Pharmacy function and Pharmaceutical Stock Ward  - see
@@ -3158,7 +3158,7 @@ Once the *[.underline]##G##roups* button in the *_Users_* submenu is pressed, th
 
 image:image189.png[Groups Browser,width=642,height=180]
 
-The last column, *DISABLED*, if checked indicates that the group has been marked as deleted and cannot be assigned to new users.
+The last column, *DISABLED*, if checked indicates that the group has been marked as “Deleted” and cannot be assigned to new users.
 
 The functions available in this window are:
 
@@ -3172,8 +3172,8 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Group_* window is show
 
 image:image199.png[Edit Group]
 
-In editing mode, the description, and whether the user group is marked as deleted can be modified.
-To mark an user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
+In editing mode, the description, and whether the user group is marked as “Deleted” can be modified.
+To mark an user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a Group has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window is shown:
 
@@ -3207,7 +3207,7 @@ image:image195.png[User Browser,width=621,height=305]
 
 The column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
 
-The last column, *DISABLED*, if checked indicates that the user has been marked as deleted and, unlike the locked user, it cannot even try to login.
+The last column, *DISABLED*, if checked indicates that the user has been marked as “Deleted” and, unlike the locked user, it cannot even try to login.
 
 The functions available in this window are:
 
@@ -3222,9 +3222,9 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown
 
 image:image198.png[Edit User]
 
-In editing mode, the group, the description, whether the user is marked as deleted and whether the user is locked out from logging into the system can be modified.
-To *lock* or *unlock* a user account check or uncheck the box after *Locked:*.
-To mark a user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
+In editing mode, the group, the description, whether the user is marked as “Deleted” and whether the user is locked out from logging into the system can be modified.
+To *lock* or *unlock* a user account check or uncheck the box after *Locked*.
+To mark a user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a User has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
 
 <<<
 
