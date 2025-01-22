@@ -46,18 +46,27 @@ OH - Open Hospital features include:
 [#soft-deletion-and-disabling-features]
 ==== 1.1.2 Soft Deletion and Disabling Features
 
-In general, records can be created, edited, or deleted from the DB. Certain records, however, are not deleted but allow their status to be modified, either by being "deleted," "disabled," or "marked as deleted," depending on the module.
+In general, records can be created, edited, or deleted from the database. Certain records, however, are not permanently deleted but allow their status to be modified, either by being "deleted," "disabled," or "marked as deleted," depending on the module.
 
-* *Soft Deletion (Mark as Deleted)*: Soft deletion is the practice of marking a record as deleted without actually removing it from the database. The record remains stored but is typically hidden from standard operations and searches. The purpose is to retains historical or auditing data, avoids irreversible data loss and allows for potential recovery or undeleting. Generally they are hidden from standard users and workflows to avoid cluttering the user interface with irrelevant or obsolete data. Common cases is __Deleting user accounts while retaining their activity logs__. Examples include:
-** <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflows and cannot be referenced for new medicals.__
-** <<groups,12.12.1 Groups>>: __User Groups that are marked as deleted cannot be referenced for new users. A unique code is required for new groups.__
-** <<users,12.12.2 Users>>: __Users that are marked as deleted cannot be used anymore. A unique name is required for new users.__
-* *Disabling Records*: Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, the record is often still part of workflows, albeit restricted in functionality. The purpose is to temporarily suspend a record's usage and allow for reactivation if needed. Often still visible to standard users but clearly marked as "inactive" or "disabled." to provide transparency and maintain awareness of the record's existence. Common case is __Temporarily deactivating user accounts (e.g., suspending a subscription)__. Examples include:
-** <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflows__
-* *Statuses*: represent a record's inclusion in a process workflow without necessarily removing or disabling it. Examples include:
-** <<delete-a-bill,6.2.3 Delete a Bill>>: __Bills that have been moved to deleted status, will continue to appear in the list, but will not be counted in the reports.__
+* **Soft Deletion (Mark as Deleted):** Soft deletion is the practice of marking a record as deleted without actually removing it from the database. The record remains stored but is typically hidden from standard operations and searches. The purpose of soft deletion is to:
+- Retain historical or auditing data.
+- Avoid irreversible data loss.
+- Allow for potential recovery or undeleting.
++
+These records are generally **hidden** from standard users and workflows to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
+- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflows and cannot be referenced for new medicals.__
+- <<groups,12.12.1 Groups>>: __User Groups that are marked as deleted cannot be referenced for new users. A unique code is required for new groups.__
+- <<users,12.12.2 Users>>: __Users that are marked as deleted cannot be used anymore. A unique name is required for new users.__
 
-NOTE: These features — *Soft Deletion*, *Disabling Records*, and *Statuses* — allow for precise record management across modules. They ensure flexibility while preserving data integrity and enabling workflow consistency.
+* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflows, albeit restricted in functionality. The purpose of disabling is to:
+- Temporarily suspend a record's usage.
+- Allow for reactivation if needed.
++
+Disabled records are often still **visible** to standard users but clearly marked as "inactive" or "disabled." This provides transparency and maintains awareness of the record's existence. A common use case is __temporarily deactivating user accounts (e.g., suspending a subscription)__. Examples include:
+- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflows.__
+
+* **Statuses:** Statuses represent a record's inclusion in a process workflow without necessarily removing or disabling it. For example:
+- <<delete-a-bill,6.2.3 Delete a Bill>>: __Bills that have been moved to a deleted status will continue to appear in the list but will not be counted in the reports.__
 
 === 1.2 About this User Manual
 
