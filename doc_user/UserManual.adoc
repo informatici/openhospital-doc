@@ -43,6 +43,31 @@ OH - Open Hospital features include:
 * Internal communication
 * Statistics and printing
 
+[#soft-deletion-and-disabling-features]
+==== 1.1.2 Soft Deletion and Disabling Features
+
+In general, records can be created, edited, or deleted from the database. Certain records, however, are not permanently deleted but allow their status to be modified, either by being "deleted," "disabled," or "marked as deleted," depending on the module.
+
+* **Soft Deletion (Mark as Deleted):** Soft deletion is the practice of marking a record as deleted without actually removing it from the database. The record remains stored but is typically hidden from standard operations and searches. The purpose of soft deletion is to:
+- Retain historical or auditing data.
+- Avoid irreversible data loss.
+- Allow for potential recovery or undeleting.
++
+These records are generally **hidden** from standard users and workflows to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
+- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflows and cannot be referenced for new medicals.__
+- <<groups,12.12.1 Groups>>: __User Groups that are marked as deleted cannot be referenced for new users. A unique code is required for new groups.__
+- <<users,12.12.2 Users>>: __Users that are marked as deleted cannot be used anymore. A unique name is required for new users.__
+
+* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflows, albeit restricted in functionality. The purpose of disabling is to:
+- Temporarily suspend a record's usage.
+- Allow for reactivation if needed.
++
+Disabled records are often still **visible** to standard users but clearly marked as "inactive" or "disabled." This provides transparency and maintains awareness of the record's existence. A common use case is __temporarily deactivating user accounts (e.g., suspending a subscription)__. Examples include:
+- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflows.__
+
+* **Statuses:** Statuses represent a record's inclusion in a process workflow without necessarily removing or disabling it. For example:
+- <<delete-a-bill,6.2.3 Delete a Bill>>: __Bills that have been moved to a deleted status will continue to appear in the list but will not be counted in the reports.__
+
 === 1.2 About this User Manual
 
 In the following chapters, all the information needed to correctly and efficiently use the OH software is presented.
@@ -419,6 +444,8 @@ The *Buttons panel* has the following choices:
 * *[.underline]##Y##es*: confirm the deletion of the pharmaceutical.
 * *[.underline]##N##o*: close the window and return to the *_Pharmaceutical Browser_* window.
 
+NOTE: If a pharmaceutical has been already used in the system, it will be "Disabled" (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>).
+
 ===== 4.1.2.4 Export the List of Pharmaceuticals (E[.underline]##x##port)
 
 Use this function to export the list of pharmaceuticals shown in the *_Pharmaceutical Browser_* window that then can be imported into Excel.
@@ -764,7 +791,7 @@ As mentioned previously, only discharging movements are allowed in this function
 image:image41.png[WardPharmacy Quantity,width=231,height=139]
 
 If _AUTOMATICLOTWARD_TOWARD_ has been enabled, the user will be requested to select a lot (similar to
-<<#insert-stock-discharging-movement,Insert Stock Discharging Movement>>).
+<<insert-stock-discharging-movement,Insert Stock Discharging Movement>>).
 
 NOTE: The lot selection can be enabled or disabled (set as automatic) by changing the flag AUTOMATICLOTWARD_TOWARD in
 the configuration file, so every new discharging movement will automatically select a suitable lot for the
@@ -1009,7 +1036,7 @@ For each bill, the following [.underline]##data## are shown in the *Data table*:
 * *PATIENT*: the patient's name.
 * *AMOUNT*: the total amount of the bill.
 * *LAST PAYMENT*: the date and time of the last payment.
-* *STATUS*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid.
+* *STATUS*: the status of the bill; values are: ”O” (open) if not fully paid; ”C” (closed) if fully paid; ”D” (deleted) if the bill has been deleted.
 * *BALANCE*: the bill amount which has not yet been paid.
 * *IN/OUT*: the bill refers to an admission or OPD
 
@@ -1257,14 +1284,14 @@ The relation of a bill with a patient admission is found in the last column in t
 image:image61g.png[Patient Bills Management]
 
 
-
+[#delete-a-bill]
 ==== 6.2.3 Delete a Bill ([.underline]##D##elete Bill)
 
 To delete an existing bill, select the bill in the *_Patient Bills Management_* window and press the *[.underline]##D##elete Bill* button. The *_Delete_* window is shown:
 
 image:image62.png[Delete Bill]
 
-NOTE: Generally, this functionality is not allowed for regular users and should be performed only by the Administrator.
+NOTE: Generally, this functionality is not allowed for regular users and should be performed only by the Administrator. For auditing purposes, the bill will not be deleted but its status updated to "Deleted" (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>).
 
 ==== 6.2.4 Receipt (Recei[.underline]##p##t)
 
@@ -2641,8 +2668,9 @@ Examples are:
 Operational movements will be used to calculate effective consumptions in some reports, like the *Average Monthly Consumption* report (see <<pharmaceuticals,Pharmaceuticals>>). 
 
 The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
-<<#insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
+<<insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
 
+[#medicals-types]
 ==== 12.2.8 Medicals Types ([.underline]##M##edicals Type)
 
 Once the *[.underline]##M##edicals Type* button in the *_Types_* menu is pressed, the *_Medical Type Browser_* window is shown:
@@ -2656,7 +2684,8 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type. *
 * *[.underline]##C##lose*: close the window.
 
-*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e. linked to previous data) but can be marked as “Deleted” and will not be shown in the list of Medical Types in the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal.
+*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e., linked to previous data) but can be marked as “Deleted” here and will not be shown in the list of Medical Types in the rest of the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
+(see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 The Medical Types defined are used throughout the application (for example,
 in the Pharmacy function and Pharmaceutical Stock Ward  - see
@@ -3152,13 +3181,14 @@ Open Hospital allows the management of users organized into groups; each group i
 
 Before registering a new user in the system, ensure that there is a group defined with the related permissions to which the user should have access.
 
+[#groups]
 ==== 12.12.1 Groups ([.underline]##G##roups)
 
 Once the *[.underline]##G##roups* button in the *_Users_* submenu is pressed, the *_Groups Browser_* window is shown:
 
 image:image189.png[Groups Browser,width=642,height=180]
 
-The last column, *DISABLED*, if checked indicates that the group has been marked as deleted and cannot be assigned to new users.
+The last column, *DISABLED*, if checked indicates that the group has been marked as “Deleted” and cannot be assigned to new users.
 
 The functions available in this window are:
 
@@ -3172,8 +3202,9 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Group_* window is show
 
 image:image199.png[Edit Group]
 
-In editing mode, the description, and whether the user group is marked as deleted can be modified.
-To mark an user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
+In editing mode, the description, and whether the user group is marked as “Deleted” can be modified.
+To mark an user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a group has never been used or is not linked to any previous data, the deletion will be completed with the actual record removed from the database.
+(see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window is shown:
 
@@ -3199,15 +3230,16 @@ So, the “main menu” for each user registered in the Registration Office grou
 |image:OH-main_menu_s1.png[OH Main Menu 1]|image:OH-main_menu_s2.png[OH Main Menu 2]
 |===
 
+[#users]
 ==== 12.12.2 Users ([.underline]##U##sers)
 
 Once the *[.underline]##U##sers* button in the *_Users & Groups_* submenu is pressed, the *_User Browser_* window is shown:
 
-image:image195.png[User Browser,width=621,height=305]
+image:image195.png[User Browser,width=740,height=614]
 
 The column, *LOCKED*, if checked indicates that the user is currently locked out from logging into the system.
 
-The last column, *DISABLED*, if checked indicates that the user has been marked as deleted and, unlike the locked user, it cannot even try to login.
+The last column, *DELETED*, if checked indicates that the user has been marked as “Deleted” and, unlike the locked user, it cannot even try to login.
 
 The functions available in this window are:
 
@@ -3222,9 +3254,10 @@ By pressing the *[.underline]##E##dit* button, the *_Edit User_* window is shown
 
 image:image198.png[Edit User]
 
-In editing mode, the group, the description, whether the user is marked as deleted and whether the user is locked out from logging into the system can be modified.
-To *lock* or *unlock* a user account check or uncheck the box after *Locked:*.
-To mark a user as deleted or restore it from deleted status, check or uncheck the box after *Deleted:*.
+In editing mode, the group, the description, whether the user is marked as “Deleted” and whether the user is locked out from logging into the system can be modified.
+To *lock* or *unlock* a user account check or uncheck the box after *Locked*.
+To mark a user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a user has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
+(see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 <<<
 
