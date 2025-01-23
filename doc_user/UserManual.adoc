@@ -1291,7 +1291,7 @@ To delete an existing bill, select the bill in the *_Patient Bills Management_* 
 
 image:image62.png[Delete Bill]
 
-NOTE: Generally, this functionality is not allowed for regular users and should be performed only by the Administrator. Anyway, for auditing purposes, the bill will not be deleted but its status updated to "Deleted" (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>).
+NOTE: Generally, this functionality is not allowed for regular users and should be performed only by the Administrator. For auditing purposes, the bill will not be deleted but its status updated to "Deleted" (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>).
 
 ==== 6.2.4 Receipt (Recei[.underline]##p##t)
 
@@ -2684,7 +2684,7 @@ The functions available in this window (similar to other windows in the *_Types_
 * *[.underline]##D##elete*: delete an existing type. *
 * *[.underline]##C##lose*: close the window.
 
-*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e. linked to previous data) but can be marked as “Deleted” here and will not be shown in the list of Medical Types in the rest of the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
+*DELETION - Medical Types cannot be deleted if still used somewhere in the application (i.e., linked to previous data) but can be marked as “Deleted” here and will not be shown in the list of Medical Types in the rest of the application. If a Medical Type has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
 (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 The Medical Types defined are used throughout the application (for example,
@@ -3203,7 +3203,7 @@ By pressing the *[.underline]##E##dit* button, the *_Edit Group_* window is show
 image:image199.png[Edit Group]
 
 In editing mode, the description, and whether the user group is marked as “Deleted” can be modified.
-To mark an user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a Group has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
+To mark an user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a group has never been used or is not linked to any previous data, the deletion will be completed with the actual record removed from the database.
 (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 By pressing the *Group[.underline]##M##enu* button, the *_Menu Item Browser_* window is shown:
@@ -3256,7 +3256,7 @@ image:image198.png[Edit User]
 
 In editing mode, the group, the description, whether the user is marked as “Deleted” and whether the user is locked out from logging into the system can be modified.
 To *lock* or *unlock* a user account check or uncheck the box after *Locked*.
-To mark a user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a User has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
+To mark a user as “Deleted” or restore it from “Deleted” status, check or uncheck the box after *Deleted:*. If a user has never been used or is not linked to any previous data, the deletion will be completed with the actual record removal from the database.
 (see <<soft-deletion-and-disabling-features,1.1.2 Soft Deletion and Disabling Features>>)
 
 <<<
