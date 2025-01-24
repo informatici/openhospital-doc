@@ -801,6 +801,69 @@ image:image251.png[success]
 
 NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
+=== 4.4 Inventory ([.underline]##I##nventory)
+
+==== 4.4.1 Main Characteristics
+
+The Inventory features is used to correct the stock in the *_Main Store_*.
+
+==== 4.4.2 Functions of Inventory
+
+To access the functions of inventory, press *[.underline]##I##nventory* on the Pharmacy menu shown below.
+
+image:image22.png[Phamacy Menu,width=220,height=182]
+
+All functions available under *[.underline]##I##nventory* are accessible from the *_Inventory Browser_* window, shown below. By default, the system shows all the inventories recorded in the period.
+
+image:image252.png[Inventory Browser]
+
+Data that identify inventory are the following:
+
+* *Reference*: indicates the reference of the inventory
+* *Date*: indicates the date when the inventory was entered
+* *Status*: the status of the inventory
+* *User*: the user who make the inventory
+
+To access the other functions of the inventory in the *Buttons panel*, the following choices are available:
+
+* *[.underline]##N##ew*: enter a new inventory.
+* *[.underline]##E##dit*: modify an existing inventory.
+* *[.underline]##V##iew*: show an existing inventory.
+* *[.underline]##D##elete*: cancel an existing inventory.
+* *[.underline]##C##lose*: close the window and return to the main menu.
+
+The following [.underline]##filter options## are available at the *Upper panel* of the window:
+
+* *Date From* and *Date To*: dates selectors used to select a period.
+* *[status]* selector (e.g. 'all'): status filter.
+
+[#create-a-new-inventory]
+===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
+
+The *New Inventory* function is used to create a new inventory on the main store.
+Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_Create Inventory Browser_* window, shown below.
+
+To record a new inventory, it must be saved with the *[.underline]##S##ave* function (see description below).
+
+Before describing the function of the *_Create Inventory Browser_* window, the components of the window are described.
+
+The *_Create Inventory Browser_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom.
+
+Inventory are composed of inventory(ies) row(s). A Inventory(ies) row(s) is a lot related to either a pharmaceutical.
+
+Data shown in the *Inventory panel* area are:
+
+* *Date*: the date of the inventory.
+* *Reference*: the reference associated to the inventory.
+* *Charge Type*: the charge movement type that will be used for this inventory.
+* *Discharge Type*: the discharge movement type that will be used for this inventory.
+* *Supplier*: the supplier that will be used for this inventory.
+* *Destination*: the ward that will be used for this inventory.
+ +
+NOTE: Destination, charge Type, discharge Type and supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
+
+Data shown in the *Inventory row table* area are:
+
 <<<
 
 [#laboratory]
