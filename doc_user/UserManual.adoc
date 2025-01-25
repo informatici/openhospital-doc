@@ -826,7 +826,7 @@ Data that identify inventory are the following:
 
 To access the other functions of the inventory in the *Buttons panel*, the following choices are available:
 
-* *[.underline]##N##ew*: enter a new inventory.
+* *[.underline]##N##ew*: create a new inventory.
 * *[.underline]##E##dit*: modify an existing inventory.
 * *[.underline]##V##iew*: show an existing inventory.
 * *[.underline]##D##elete*: cancel an existing inventory.
@@ -835,34 +835,77 @@ To access the other functions of the inventory in the *Buttons panel*, the follo
 The following [.underline]##filter options## are available at the *Upper panel* of the window:
 
 * *Date From* and *Date To*: dates selectors used to select a period.
-* *[status]* selector (e.g. 'all'): status filter.
+* *[status]* selector (e.g. 'all'): inventory status filter.
 
 [#create-a-new-inventory]
 ===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
 
 The *New Inventory* function is used to create a new inventory on the main store.
-Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_Create Inventory Browser_* window, shown below.
+Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window, shown below.
 
 To record a new inventory, it must be saved with the *[.underline]##S##ave* function (see description below).
 
-Before describing the function of the *_Create Inventory Browser_* window, the components of the window are described.
+Before describing the function of the *_New Inventory_* window, the components of the window are described.
 
-The *_Create Inventory Browser_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom.
+The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom.
 
-Inventory are composed of inventory(ies) row(s). A Inventory(ies) row(s) is a lot related to either a pharmaceutical.
+Inventory is composed of inventory(ies) row(s). A inventory row is a lot related to a pharmaceutical.
+
+image:image253.png[New Inventory]
 
 Data shown in the *Inventory panel* area are:
 
 * *Date*: the date of the inventory.
 * *Reference*: the reference associated to the inventory.
-* *Charge Type*: the charge movement type that will be used for this inventory.
-* *Discharge Type*: the discharge movement type that will be used for this inventory.
-* *Supplier*: the supplier that will be used for this inventory.
-* *Destination*: the ward that will be used for this inventory.
- +
+* *Charge Type*: the charge movement type that will be used for the charge movement (when theoretic qty < real qty).
+* *Discharge Type*: the discharge movement type that will be used for discharge movement (when theoretic qty > real qty).
+* *Supplier*: the supplier that will be used for the charge movement.
+* *Destination*: the ward that will be used for the discharge movement.
+* *Status* (e.g. 'DRAFT'): the status of the inventory.
++
 NOTE: Destination, charge Type, discharge Type and supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 Data shown in the *Inventory row table* area are:
+
+* *Code*: the code of the phamaceutical.
+* *Product*: the description of the phamaceutical.
+* *New Lot*: indicates if the inventory row is for new lot or not.
+* *Lot No.*: the lot code of the pharmaceutical.
+* *Due Date*: the due date of the lot.
+* *Theoretic Qty*: the theoretic quantity of the lot of pharmaceutical.
+* *Real Qty*: the real(physical) quantity of the lot of pharmaceutical.
+* *Total Cost*: the total cost that represent the real value of the lot.
++
+NOTE: You can insert inventory row either for specific products or for a set of products.
+
+====== 4.4.2.1.1 Insert Inventory Row By using TextField
+ 
+To insert an inventory row for a specific product, enter into the field for specific product the code or the description of the pharmaceutical to insert, and press ENTER. This will open the Choose a Medical window.
+
+image:image254.png[Choose medical]
+
+Select the desired medical or search the pharmaceutical by code or description using the search field and select the medical and click Yes.
+
+====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
+
+To insert an inventory row for a set of products, click on the SELECT button. This will open the Lot Information window.
+
+image:image255.png[Lot Information]
+
+Select the Medical Type on the combo box and choose:
+
+* *All*: if you need all the pharmaceutical for selected Medical Type.
+* *Only non zero quantity*: if you need all the pharmaceutical for selected Medical Type with non zero quantity.
+* *with movement only*: if you need all the pharmaceutical for selected Medical Type and which has at least one movement.
+
+Then click OK to insert the inventory(ies) row(s) in the table.
+
+[#Edit-a-new-inventory]
+===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
+
+To modify an inventory, highlight the inventory in the Inventory Browser window. Once the inventory has been highlighted, press the Edit button to enter the Edit Inventory window, shown below. Now the record is available for changes. This function allows for editing all the data for the inventory including inventory(ies) row(s) of the inventory.
+
+image:image256.png[Edit Inventory]
 
 <<<
 
