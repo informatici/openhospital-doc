@@ -919,7 +919,13 @@ To modify an inventory, highlight the inventory in the Inventory Browser window.
 
 image:image256.png[Edit Inventory]
 
-During modication you have possibility to validate the inventory By press on Validate button. After some seconde you will have the Dialog below.
+During modication you have possibility to validate the inventory By press on *[.underline]##V##alidate* button. After some seconde you will have the Dialog below.
+
+image:image256.png[Validate Inventory]
+
+During modication you have also possibility to Confirm the inventory By press on [.underline]##C##onfirm button. After some seconde you will have the Dialog below.
+
+image:image256.png[Confirm Inventory]
 
 ===== 4.4.2.3 View Inventory ([.underline]##V##iew)
 
@@ -1037,15 +1043,27 @@ NOTE: This button is enable just for the inventory with is already validated els
 
 NOTE: You can insert inventory row either for specific products or for a set of products.
 
-===== 4.5.2.2 Edit Inventory ([.underline]##E##dit)
+===== 4.5.2.2 Edit Ward Inventory ([.underline]##E##dit)
 
-===== 4.5.2.3 View Inventory ([.underline]##V##iew)
+To modify a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory has been highlighted, press the *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window, shown below. Now the record is available for changes. This function allows for editing all the data for the inventory including inventory(ies) row(s).
 
-===== 4.5.2.4 Delete Inventory ([.underline]##D##elete)
+image:image256.png[Edit ward Inventory]
+
+During modication you have possibility to validate the inventory By press on *[.underline]##V##alidate* button. After some seconde you will have the Dialog below.
+
+image:image256.png[Validate Inventory]
+
+During modication you have also possibility to Confirm the inventory By press on [.underline]##C##onfirm button. After some seconde you will have the Dialog below.
+
+image:image256.png[Confirm Inventory]
+
+===== 4.5.2.3 View Ward Inventory ([.underline]##V##iew)
+
+===== 4.5.2.4 Delete Ward Inventory ([.underline]##D##elete)
 
 Delete button is used to cancel an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, press the *[.underline]##D##elete* button on the *Buttons panel*, and a confirmation window is shown:
 
-image:image257.png[Delete Inventory]
+image:image257.png[Delete ward Inventory]
 
 <<<
 
