@@ -820,7 +820,7 @@ The *_New Inventory_* window is composed of three areas: the *Search panel* at t
 The *Search panel* at the top, allows narrowing or subsetting the inventory list by;
 
 * *Date From* and *Date To*: dates selectors used to select a date range.
-* *[status]* selector (e.g. 'all'): inventory status filter.
+* *[status]* selector (e.g., 'all'): inventory status filter.
 
 *Inventory table* in the center has the  data that identify inventory like:
 
