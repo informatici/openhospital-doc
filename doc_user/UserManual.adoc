@@ -809,25 +809,25 @@ The Inventory features is used to correct the stock in the *_Main Store_*.
 
 ==== 4.4.2 Functions of Inventory
 
-To access the functions of inventory, press *[.underline]##I##nventory* on the Pharmacy menu shown below.
+To access the functions of inventory, click on *[.underline]##I##nventory* on the Pharmacy menu.
 
 image:image22.png[Phamacy Menu,width=220,height=182]
 
-All functions available under *[.underline]##I##nventory* are accessible from the *_Inventory Browser_* window, shown below. By default, the system shows all the inventories recorded in the period.
+All functions available under *[.underline]##I##nventory* are accessible from the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period.
 
 The *_New Inventory_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
 
-The *Search panel* at the top, allows narrowing or subsetting the inventory list by;
+The *Search panel* at the top, allows narrowing or subsetting the inventory list by:
 
-* *Date From* and *Date To*: dates selectors used to select a date range.
+* *Date From* and *Date To*: dates selectors used to select a period.
 * *[status]* selector (e.g., 'all'): inventory status filter.
 
 The *Inventory table* in the center identifies the inventory by:
 
-* *Reference*:  the reference of the inventory.
-* *Date*: the date where the inventory was entered into the system.
-* *Status*: the status of the inventory.
-* *User*: the user who entered the inventory.
+* *Reference*: indicates the reference of the inventory.
+* *Date*: indicates the date with which the inventory was entered into the system.
+* *Status*: indicates the status of the inventory.
+* *User*: indicates the user who entered the inventory.
 
 The *Buttons panel* has all the functions of the main inventory, the following choices are available:
 
@@ -842,8 +842,7 @@ image:image252.png[Inventory Browser]
 [#create-a-new-inventory]
 ===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
 
-The *New Inventory* function is used to create a new inventory on the main store.
-Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window.
+The *New Inventory* function is used to create a new inventory on the main store. Click on *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window.
 
 The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom. See the image below.
 
@@ -855,13 +854,13 @@ Data shown in the *Inventory panel* area are:
 * *Reference*: the reference associated to the inventory.
 * *Charge Type*: the charge movement type used for the charge movement (when theoretic qty < real qty).
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretic qty > real qty).
-* *Supplier*: the supplier tsed for the charge movement.
+* *Supplier*: the supplier used for the charge movement.
 * *Destination*: the ward used for the discharge movement.
 * *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically. 
 +
 *NOTE:* The Destination, Charge Type, Discharge Type and Supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
-Data shown in the *Inventory row table* area are:
+The data shown in the *Inventory row table* area are:
 
 * *Code*: the code of the phamaceutical.
 * *Product*: the description of the phamaceutical.
@@ -872,12 +871,12 @@ Data shown in the *Inventory row table* area are:
 * *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
 * *Total Cost*: the total cost that represents the real value of the lot.
 
-*Buttons panel* is used to perform some action:
+The *Buttons panel* is used to perform some action:
 
-* *[.underline]##S##ave*: this button is use to save the inventory.
-* *[.underline]##L##ot*: this button is use to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first highlighted the product and click on this button.
+* *[.underline]##S##ave*: this button is used to save the inventory.
+* *[.underline]##L##ot*: this button is used to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first highlighted the product and click on this button.
 
-*NOTE:* This button is enable just for the inventory row that column *New Lot* has value *N*, otherwise the button is disabled.
+*NOTE:* This button is enabled just for the inventory row that column *New Lot* has value *N*, otherwise the button is disabled.
 
 * *[.underline]##D##elete*:  used to remove one or the set of the inventory row(s).
 * *Clean [.underline]##T##able*:  used to remove all the inventory rows.
@@ -906,30 +905,30 @@ image:image255.png[Lot Information]
 
 Select the Medical Type on the combo box and choose:
 
-* *All*: if we need all the pharmaceutical for selected Medical Type.
-* *Only non zero quantity*: if we need all the pharmaceutical for selected Medical Type with non zero quantity.
-* *with movement only*: if we need all the pharmaceutical for selected Medical Type and which has at least one movement.
+* *All*: if we need all the pharmaceuticals for selected Medical Type.
+* *Only non zero quantity*: if we need all the pharmaceuticals for selected Medical Type with non zero quantity.
+* *with movement only*: if we need all the pharmaceuticals for selected Medical Type and which has at least one movement.
 
-Then click OK to insert the inventory(ies) row(s) in the table.
+Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that match the choise as the inventory(ies) row(s) in the *Inventory row table*.
 
 [#Edit-a-new-inventory]
 ===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
 
-To modify an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, press the Edit button to enter on the *_Edit Inventory_* window, shown below. Now the record is available for changes. This function allows for editing all the data for the inventory including inventory(ies) row(s) of the inventory.
+To modify an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click on *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. Now the record is available for changes. This function allows to edit all the data of the inventory including inventory(ies) row(s) of the inventory.
 
 image:image256.png[Edit Inventory]
 
-During modication we have possibility to validate the inventory by press on *[.underline]##V##alidate* button. After some seconde we will have the dialog below.
+During modication we have possibility to validate the inventory by clicking on *[.underline]##V##alidate* button. After some secondes we will have the dialog below.
 
 image:image266.png[Validate Inventory]
 
-During modication we have also possibility to Confirm the inventory by press on *[.underline]##C##onfirm* button. After some seconde we will have the dialog below.
+During modication we have also possibility to Confirm the inventory by clicking on *[.underline]##C##onfirm* button. After some secondes we will have the dialog below.
 
 image:image267.png[Confirm Inventory]
 
 ===== 4.4.2.3 View Inventory ([.underline]##V##iew)
 
-To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, press the *[.underline]##V##iew* button to enter on the *_View Browser_* window, shown below. 
+To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted and click on *[.underline]##V##iew* button to enter on the *_View Browser_* window. 
 
 image:image258.png[View Inventory]
 
@@ -937,21 +936,21 @@ This function allows to view all the data for the inventory including inventory(
 
 NOTE: On view mode it is not possible to update something.
 
-To print the inventory, press the *[.underline]##P##rint* button to print the data, shown the picture below
+To print the inventory, click on *[.underline]##P##rint* button to print the data, See the image below:
 
 image:image259.png[Print Inventory]
 
-Press *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
+Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
 
 image:image260.png[Report output without real qty]
 
-If we press *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
+If we click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
 
 image:image261.png[Report output with real qty]
 
 ===== 4.4.2.4 Delete Inventory ([.underline]##D##elete)
 
-Delete button is used to cancel an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, press the *[.underline]##D##elete* button, and a confirmation window is shown:
+The delete button is used to cancel an inventory. Highlight the inventory in the *_Inventory Browser_* window, when the inventory has been highlighted then click on *[.underline]##D##elete* button. A confirmation window is shown:
 
 image:image257.png[Delete Inventory]
 
@@ -963,42 +962,41 @@ The Inventory features is used to correct the stock in the *_Ward_*.
 
 ==== 4.5.2 Functions of Ward Inventory
 
-To access the functions of ward inventory, press *[.underline]##W##ard Inventory* on the Pharmacy menu shown below.
+To access the functions of ward inventory, click on *[.underline]##W##ard Inventory* on the Pharmacy menu.
 
 image:image22.png[Phamacy Menu,width=220,height=182]
 
-All functions available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window, shown below. By default, the system shows all the inventories recorded in the period.
+All the functions available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period.
 
-The *_Manage Ward Inventory_* window is composed of three areas: the *Search panel* at the top, the *Ward Inventory table* in the center and the *Buttons panel* on the bottom. see the picture below.
+The *_Manage Ward Inventory_* window is composed of three areas: the *Search panel* at the top, the *Ward Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
 
-*Search panel* at the top, allow us to make research, we can make research by:
+The *Search panel* at the top, allows narrowing or subsetting the inventory list by:
 
 * *Date From* and *Date To*: dates selectors used to select a period.
-* *[status]* selector (e.g. 'all'): inventory status filter.
+* *[status]* selector (e.g., 'all'): the status used to filter inventory.
 
-*Inventory table* in the center has the  data that identify ward inventory like:
+The *Inventory table* in the center identifies the inventory by:
 
 * *Reference*: indicates the reference of the ward inventory.
 * *Ward*: indicates the ward related to the inventory.
-* *Date*: indicates the date when the ward inventory was entered.
-* *Status*: the status of the ward inventory.
-* *User*: the user who make the ward inventory.
+* *Date*: indicates the date with which the ward inventory was entered into the system.
+* *Status*: indicates the status of the ward inventory.
+* *User*: indicates the user who entered the ward inventory.
 
-*Buttons panel* has all the functions of the ward inventory, the following choices are available:
+The *Buttons panel* has all the functions of the ward inventory, the following choices are available:
 
-* *[.underline]##N##ew*: create a new ward inventory.
-* *[.underline]##E##dit*: modify an existing ward inventory.
-* *[.underline]##V##iew*: show an existing ward inventory.
-* *[.underline]##D##elete*: cancel an existing ward inventory.
-* *[.underline]##C##lose*: close the window and return to the main menu.
+* *[.underline]##N##ew*: this button is used to create a new ward inventory.
+* *[.underline]##E##dit*: this button is used to modify an existing ward inventory.
+* *[.underline]##V##iew*: this button is used to show an existing ward inventory.
+* *[.underline]##D##elete*: this button is used to cancel an existing ward inventory.
+* *[.underline]##C##lose*: this button is used to close the window and return to the main menu.
 
 image:image262.png[Ward Inventory Browser]
 
 [#create-a-new-ward-inventory]
 ===== 4.5.2.1 Create a New ward Inventory ([.underline]##N##ew)
 
-The *New Inventory* function is used to create a new inventory on the main store.
-Press the *[.underline]##N##ew* button in the *_Manage Ward Inventory_* window to access the *_New Inventory_* window, shown below.
+The *New Inventory* function is used to create a new inventory on the main store. Click on *[.underline]##N##ew* button in the *_Manage Ward Inventory_* window to access the *_New Inventory_* window.
 
 image:image263.png[New ward Inventory]
 
@@ -1008,58 +1006,58 @@ image:image264.png[New ward Inventory]
 
 The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom.
 
-Data shown in the *Upper panel* area are:
+The data shown in the *Upper panel* area are:
 
 * *Ward*: the ward that we are making the inventory.
 * *Date*: the date of the inventory.
 * *Reference*: the reference associated to the inventory.
 
-Data shown in the *Center panel* area represente Inventory row. they are:
+The data shown in the *Center panel* area represente inventory row. they are:
 
 * *Code*: the code of the phamaceutical.
 * *Product*: the description of the phamaceutical.
-* *New Lot*: indicates if the inventory row is for new lot or not.
+* *New Lot*: indicates if the inventory row is for a new lot or not.
 * *Lot's Code.*: the lot code of the pharmaceutical.
 * *Due Date*: the due date of the lot.
-* *Theoretic Qty*: the theoretic quantity of the lot of pharmaceutical.
-* *Real Qty*: the real(physical) quantity of the lot of pharmaceutical.
-* *Total Cost*: the total cost that represent the real value of the lot.
+* *Theoretic Qty*: the theoretic quantity of the lot of the pharmaceutical.
+* *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
+* *Total Cost*: the total cost that represents the real value of the lot.
 
-*Buttons panel* is used to perform some action:
+The *Buttons panel* is used to perform some action:
 
-* *[.underline]##S##ave*: this button is use to save the inventory.
-* *[.underline]##L##ot*: this button is use to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first highlighted the product and click on this button.
+* *[.underline]##S##ave*: this button is used to save the inventory.
+* *[.underline]##L##ot*: this button is used to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first highlighted the product and click on this button.
 
-NOTE: This button is enable just for the inventory row that column *New Lot* has value *N* else the button is disable.
+NOTE: This button is enabled just for the inventory row that column *New Lot* has value *N* else the button is disable.
 
-* *[.underline]##D##elete*: this button is use to remove one or the set of the inventory row.
-* *Clean [.underline]##T##able*: this button is use to remove all the inventory row.
-* *[.underline]##V##alidate*: this button is use to validate the inventory.
-* *[.underline]##C##onfirm*: this button is use to validate the inventory.
+* *[.underline]##D##elete*: this button is used to remove one or the set of inventory row.
+* *Clean [.underline]##T##able*: this button is used to remove all the inventory row.
+* *[.underline]##V##alidate*: this button is used to validate the inventory.
+* *[.underline]##C##onfirm*: this button is used to validate the inventory.
 
 NOTE: This button is enable just for the inventory with is already validated else the button is disable.
 
-* *[.underline]##C##lose*: this button is use to back on the *_Inventory Browser_* window.
+* *[.underline]##C##lose*: this button is used to back on the *_Inventory Browser_* window.
 
 NOTE: We can insert inventory row either for specific products or for a set of products.
 
 ===== 4.5.2.2 Edit Ward Inventory ([.underline]##E##dit)
 
-To modify a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory has been highlighted, press the *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window, shown below. Now the record is available for changes. This function allows for editing all the data for the inventory including inventory(ies) row(s).
+To modify a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory has been highlighted, click on *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. Now the record is available for changes. This function allows for editing all the data for the inventory including inventory(ies) row(s).
 
 image:image268.png[Edit ward Inventory]
 
-During modication We have possibility to validate the inventory by press on *[.underline]##V##alidate* button. After some seconde We will have the dialog below.
+During modication We have possibility to validate the inventory by clicking on *[.underline]##V##alidate* button. After some secondes We will have the dialog below.
 
 image:image266.png[Validate Inventory]
 
-During modication we have also possibility to Confirm the inventory by press on *[.underline]##C##onfirm* button. After some seconde we will have the dialog below.
+During modication we have also possibility to Confirm the inventory by clicking on *[.underline]##C##onfirm* button. After some secondes we will have the dialog below.
 
 image:image267.png[Confirm Inventory]
 
 ===== 4.5.2.3 View Ward Inventory ([.underline]##V##iew)
 
-To view an ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory has been highlighted, press the *[.underline]##V##iew* button to enter on the *_View Inventory_* window, shown below. 
+To view an ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory has been highlighted, click on *[.underline]##V##iew* button to enter on the *_View Inventory_* window. 
 
 image:image265.png[View Ward Inventory]
 
@@ -1067,21 +1065,21 @@ This function allows to view all the data for the inventory including inventory(
 
 NOTE: On view mode it is not possible to update something.
 
-To print the inventory, press the *[.underline]##P##rint* button to print the data, shown the picture below
+To print the inventory, click on *[.underline]##P##rint* button to print the data, shown the im below
 
 image:image259.png[Print Ward Inventory]
 
-Press *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
+Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
 
 image:image269.png[Report output without real qty]
 
-If We press *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
+If we click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
 
 image:image270.png[Report output with real qty]
 
 ===== 4.5.2.4 Delete Ward Inventory ([.underline]##D##elete)
 
-Delete button is used to cancel an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, press the *[.underline]##D##elete* button on the *Buttons panel*, and a confirmation window is shown:
+The delete button is used to cancel an inventory. Highlight the inventory in the *_Inventory Browser_* window, wwhen the inventory has been highlighted then click on *[.underline]##D##elete* button on the *Buttons panel*. A confirmation window is shown:
 
 image:image257.png[Delete ward Inventory]
 
