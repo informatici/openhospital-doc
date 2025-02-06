@@ -853,7 +853,7 @@ Data shown in the *Inventory panel* area are:
 
 * *Date*: the date of the inventory.
 * *Reference*: the reference associated to the inventory.
-* *Charge Type*: the charge movement type that will be used for the charge movement (when theoretic qty < real qty).
+* *Charge Type*: the charge movement type used for the charge movement (when theoretic qty < real qty).
 * *Discharge Type*: the discharge movement type that will be used for discharge movement (when theoretic qty > real qty).
 * *Supplier*: the supplier that will be used for the charge movement.
 * *Destination*: the ward that will be used for the discharge movement.
