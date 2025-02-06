@@ -817,7 +817,7 @@ All functions available under *[.underline]##I##nventory* are accessible from th
 
 The *_New Inventory_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
 
-*Search panel* at the top, allow user to make research, we can make research by:
+The *Search panel* at the top, allows narrowing or subsetting the inventory list by;
 
 * *Date From* and *Date To*: dates selectors used to select a period.
 * *[status]* selector (e.g. 'all'): inventory status filter.
