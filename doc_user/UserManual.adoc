@@ -824,7 +824,7 @@ The *Search panel* at the top, allows narrowing or subsetting the inventory list
 
 The *Inventory table* in the center identifies the inventory by:
 
-* *Reference*: indicates the reference of the inventory
+* *Reference*:  the reference of the inventory
 * *Date*: indicates the date when the inventory was entered
 * *Status*: the status of the inventory
 * *User*: the user who make the inventory
