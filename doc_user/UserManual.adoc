@@ -827,7 +827,7 @@ The *Inventory table* in the center identifies the inventory by:
 * *Reference*:  the reference of the inventory
 * *Date*: the date the inventory was entered into the system
 * *Status*: the status of the inventory
-* *User*: the user who make the inventory
+* *User*: the user who entered the inventory
 
 *Buttons panel* has all the functions of the main inventory, the following choices are available:
 
