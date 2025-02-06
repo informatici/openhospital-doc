@@ -843,7 +843,7 @@ image:image252.png[Inventory Browser]
 ===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
 
 The *New Inventory* function is used to create a new inventory on the main store.
-Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window, shown below.
+Press the *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window.
 
 The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom. See the image below.
 
