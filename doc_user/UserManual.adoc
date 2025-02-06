@@ -848,7 +848,7 @@ The *_New Inventory_* window is composed of three areas: the *Inventory panel* a
 
 image:image253.png[New Inventory]
 
-Data shown in the *Inventory panel* area are:
+The data shown in the *Inventory panel* area are:
 
 * *Date*: the date where the inventory was entered at the system.
 * *Reference*: the reference associated to the inventory.
