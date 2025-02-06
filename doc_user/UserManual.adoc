@@ -857,7 +857,7 @@ Data shown in the *Inventory panel* area are:
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretic qty > real qty).
 * *Supplier*: the supplier tsed for the charge movement.
 * *Destination*: the ward used for the discharge movement.
-* *Status* (e.g. 'DRAFT'): the status of the inventory. this value of status is set automaticaly. 
+* *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically. 
 +
 NOTE: Destination, charge Type, discharge Type and supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
