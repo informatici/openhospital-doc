@@ -882,7 +882,7 @@ NOTE: This button is enable just for the inventory row that column *New Lot* has
 * *[.underline]##D##elete*: this button is use to remove one or the set of the inventory row.
 * *Clean [.underline]##T##able*: this button is use to remove all the inventory row.
 * *[.underline]##V##alidate*: this button is use to validate the inventory.
-* *[.underline]##C##onfirm*: this button is use to validate the inventory.
+* *[.underline]##C##onfirm*: used to validate the inventory.
 
 NOTE: This button is enable just for the inventory with is already validated else the button is disable.
 
