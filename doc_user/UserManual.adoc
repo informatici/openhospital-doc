@@ -888,7 +888,7 @@ Data shown in the *Inventory row table* area are:
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
 
-NOTE: We can insert inventory row either for specific products or for a set of products.
+*NOTE:* An inventory row can be inserted either for specific products or for a set of products.
 
 ====== 4.4.2.1.1 Insert Inventory Row By Using TextField
  
