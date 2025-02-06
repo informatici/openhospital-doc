@@ -822,7 +822,7 @@ The *Search panel* at the top, allows narrowing or subsetting the inventory list
 * *Date From* and *Date To*: dates selectors used to select a date range.
 * *[status]* selector (e.g., 'all'): inventory status filter.
 
-*Inventory table* in the center has the  data that identify inventory like:
+The *Inventory table* in the center identifies the inventory by:
 
 * *Reference*: indicates the reference of the inventory
 * *Date*: indicates the date when the inventory was entered
