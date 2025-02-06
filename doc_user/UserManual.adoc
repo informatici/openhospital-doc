@@ -829,7 +829,7 @@ The *Inventory table* in the center identifies the inventory by:
 * *Status*: the status of the inventory
 * *User*: the user who entered the inventory
 
-*Buttons panel* has all the functions of the main inventory, the following choices are available:
+The *Buttons panel* has all the functions of the main inventory, the following choices are available:
 
 * *[.underline]##N##ew*: create a new inventory.
 * *[.underline]##E##dit*: modify an existing inventory.
