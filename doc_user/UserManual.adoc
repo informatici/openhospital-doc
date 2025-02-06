@@ -868,7 +868,7 @@ Data shown in the *Inventory row table* area are:
 * *New Lot*: indicates if the inventory row is for a new lot or not.
 * *Lot No.*: the lot code of the pharmaceutical.
 * *Due Date*: the due date of the lot.
-* *Theoretic Qty*: the theoretic quantity of the lot of pharmaceutical.
+* *Theoretic Qty*: the theoretic quantity of the lot of the pharmaceutical.
 * *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
 * *Total Cost*: the total cost that represents the real value of the lot.
 
