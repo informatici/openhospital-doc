@@ -884,7 +884,7 @@ Data shown in the *Inventory row table* area are:
 * *[.underline]##V##alidate*: used to validate the inventory.
 * *[.underline]##C##onfirm*: used to validate the inventory.
 
-NOTE: This button is enable just for the inventory with is already validated else the button is disable.
+*NOTE:* This button is enabled for the inventory after it it validated,, otherwise the button is disabled.
 
 * *[.underline]##C##lose*: this button is use to back on the *_Inventory Browser_* window.
 
