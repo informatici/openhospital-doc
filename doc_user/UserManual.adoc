@@ -825,7 +825,7 @@ The *Search panel* at the top, allows narrowing or subsetting the inventory list
 The *Inventory table* in the center identifies the inventory by:
 
 * *Reference*:  the reference of the inventory.
-* *Date*: the date the inventory was entered into the system.
+* *Date*: the date where the inventory was entered into the system.
 * *Status*: the status of the inventory.
 * *User*: the user who entered the inventory.
 
@@ -851,7 +851,7 @@ image:image253.png[New Inventory]
 
 Data shown in the *Inventory panel* area are:
 
-* *Date*: the date of the inventory.
+* *Date*: the date where the inventory was entered at the system.
 * *Reference*: the reference associated to the inventory.
 * *Charge Type*: the charge movement type used for the charge movement (when theoretic qty < real qty).
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretic qty > real qty).
