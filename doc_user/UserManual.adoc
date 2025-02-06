@@ -865,7 +865,7 @@ Data shown in the *Inventory row table* area are:
 
 * *Code*: the code of the phamaceutical.
 * *Product*: the description of the phamaceutical.
-* *New Lot*: indicates if the inventory row is for new lot or not.
+* *New Lot*: indicates if the inventory row is for a new lot or not.
 * *Lot No.*: the lot code of the pharmaceutical.
 * *Due Date*: the due date of the lot.
 * *Theoretic Qty*: the theoretic quantity of the lot of pharmaceutical.
