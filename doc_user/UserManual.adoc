@@ -1037,7 +1037,7 @@ NOTE: This button is enabled only for the inventory row where the column *New Lo
 
 NOTE: This button is enable just for the inventory with is already validated else the button is disable.
 
-* *[.underline]##C##lose*: this button is used to back on the *_Inventory Browser_* window.
+* *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
 
 *NOTE:* It is possible to insert inventory row(s) either for specific products or for a set of products.
 
