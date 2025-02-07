@@ -905,7 +905,7 @@ image:image255.png[Lot Information]
 
 Select the Medical Type on the combo box and choose:
 
-* *All*: if we need all the pharmaceuticals for selected Medical Type.
+* *All*: if all the pharmaceuticals for the selected Medical Type are needed.
 * *Only non zero quantity*: if only all the pharmaceuticals for the selected Medical Type with non zero quantity are needed.
 * *with movement only*: if all the pharmaceuticals for the selected Medical Type and which has at least one movement are needed.
 
