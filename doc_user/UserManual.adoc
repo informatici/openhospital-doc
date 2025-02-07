@@ -940,7 +940,7 @@ To print the inventory, click on *[.underline]##P##rint* button to print the dat
 
 image:image259.png[Print Inventory]
 
-Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
+Click on *[.underline]##Y##es* button, which results in the JasperViewer® showing the generated report without real quantities as follows:
 
 image:image260.png[Report output without real qty]
 
