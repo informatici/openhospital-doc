@@ -918,7 +918,7 @@ To modify an inventory, highlight the inventory in the *_Inventory Browser_* win
 
 image:image256.png[Edit Inventory]
 
-During modication we have possibility to validate the inventory by clicking on *[.underline]##V##alidate* button. After some secondes we will have the dialog below.
+During modification it is possible to validate the inventory by clicking on *[.underline]##V##alidate* button.  This results in the following dialog:
 
 image:image266.png[Validate Inventory]
 
