@@ -1008,7 +1008,7 @@ The *_New Inventory_* window is composed of three areas: the *Inventory panel* a
 
 The data shown in the *Upper panel* area are:
 
-* *Ward*: the ward that we are making the inventory.
+* *Ward*: the ward that is associated with the new inventory.
 * *Date*: the date of the inventory.
 * *Reference*: the reference associated to the inventory.
 
