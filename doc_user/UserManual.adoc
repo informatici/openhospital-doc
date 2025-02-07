@@ -922,7 +922,7 @@ During modication we have possibility to validate the inventory by clicking on *
 
 image:image266.png[Validate Inventory]
 
-During modication we have also possibility to Confirm the inventory by clicking on *[.underline]##C##onfirm* button. After some secondes we will have the dialog below.
+During modification it is possible to Confirm the inventory by clicking on *[.underline]##C##onfirm* button.  This results in the following dialog:
 
 image:image267.png[Confirm Inventory]
 
