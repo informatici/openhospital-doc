@@ -1028,7 +1028,7 @@ The *Buttons panel* is used to perform some action:
 * *[.underline]##S##ave*: this button is used to save the inventory.
 * *[.underline]##L##ot*: this button is used to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first highlighted the product and click on this button.
 
-NOTE: This button is enabled just for the inventory row that column *New Lot* has value *N* else the button is disable.
+NOTE: This button is enabled only for the inventory row where the column *New Lot* has value the value *N*, otherwise the button is disabled.
 
 * *[.underline]##D##elete*: this button is used to remove one or the set of inventory row.
 * *Clean [.underline]##T##able*: this button is used to remove all the inventory row.
