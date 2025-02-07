@@ -1035,7 +1035,7 @@ NOTE: This button is enabled only for the inventory row where the column *New Lo
 * *[.underline]##V##alidate*: this button is used to validate the inventory.
 * *[.underline]##C##onfirm*: this button is used to validate the inventory.
 
-NOTE: This button is enable just for the inventory with is already validated else the button is disable.
+*NOTE:* The Confirm button is enabled only if the inventory is validated, otherwise the button is disabled.
 
 * *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
 
