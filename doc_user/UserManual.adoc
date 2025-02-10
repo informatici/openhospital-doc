@@ -1047,7 +1047,7 @@ To modify a ward inventory, highlight the inventory in the *_Manage Ward Invento
 
 image:image268.png[Edit ward Inventory]
 
-During modication We have possibility to validate the inventory by clicking on *[.underline]##V##alidate* button. After some secondes We will have the dialog below.
+During modification it is possible to validate the inventory by clicking on *[.underline]##V##alidate* button. This results in a dialog like the one below:
 
 image:image266.png[Validate Inventory]
 
