@@ -1012,7 +1012,7 @@ The data shown in the *Upper panel* area are:
 * *Date*: the date of the inventory.
 * *Reference*: the reference associated to the inventory.
 
-The data shown in the *Center panel* area represente inventory row. they are:
+The data shown in the *Center panel* area represents an inventory row. The data are:
 
 * *Code*: the code of the phamaceutical.
 * *Product*: the description of the phamaceutical.
