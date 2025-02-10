@@ -1030,7 +1030,7 @@ The *Buttons panel* is used to perform some action:
 
 NOTE: This button is enabled only for the inventory row where the column *New Lot* has value the value *N*, otherwise the button is disabled.
 
-* *[.underline]##D##elete*: this button is used to remove one or the set of inventory row.
+* *[.underline]##D##elete*: this button is used to remove one or a set of inventory rows.
 * *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
 * *[.underline]##V##alidate*: this button is used to validate the inventory.
 * *[.underline]##C##onfirm*: this button is used to validate the inventory.
