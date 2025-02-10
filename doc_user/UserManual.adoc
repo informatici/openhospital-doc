@@ -1021,7 +1021,7 @@ The data shown in the *Center panel* area represents an inventory row. The data 
 * *Due Date*: the due date of the lot.
 * *Theoretic Qty*: the theoretic quantity of the lot of the pharmaceutical.
 * *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
-* *Total Cost*: the total cost that represents the real value of the lot.
+* *Total Cost*: the total cost or real value of the lot.
 
 The *Buttons panel* is used to perform some action:
 
