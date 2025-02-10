@@ -1065,7 +1065,7 @@ This function allows to view all the data for the inventory including inventory(
 
 NOTE: On view mode it is not possible to update something.
 
-To print the inventory, click on *[.underline]##P##rint* button to print the data, shown the im below
+To print the inventory, click the *[.underline]##P##rint* button shown the image below:
 
 image:image259.png[Print Ward Inventory]
 
