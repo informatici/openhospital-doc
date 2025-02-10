@@ -1061,7 +1061,7 @@ To view an ward inventory, highlight the inventory in the *_Manage Ward Inventor
 
 image:image265.png[View Ward Inventory]
 
-This function allows to view all the data for the inventory including inventory(ies) row(s) of the inventory. We also have possibility to *[.underline]##P##rint* those data.
+This function is used to view all the data for the inventory including inventory(ies) row(s) of the inventory.  There is a;sp the option to *[.underline]##P##rint* the data.
 
 *NOTE:* While in view mode it is not possible to update the data.
 
