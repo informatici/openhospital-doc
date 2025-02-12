@@ -1033,7 +1033,7 @@ NOTE: This button is enabled only for the inventory row where the column *New Lo
 * *[.underline]##D##elete*: this button is used to remove one or a set of inventory rows.
 * *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
 * *[.underline]##V##alidate*: this button is used to validate the inventory.
-* *[.underline]##C##onfirm*: this button is used to validate the inventory.
+* *[.underline]##C##onfirm*: this button is used to confirm the inventory.
 
 *NOTE:* The Confirm button is enabled only if the inventory is validated, otherwise the button is disabled.
 
