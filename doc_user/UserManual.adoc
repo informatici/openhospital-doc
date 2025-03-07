@@ -936,7 +936,7 @@ This function allows viewing all the data for the inventory including inventory(
 
 NOTE: On view mode it is not possible to update something.
 
-To print the inventory, click on *[.underline]##P##rint* button to print the data, See the image below:
+To print the inventory, click on the *[.underline]##P##rint* button, See the resulting image below:
 
 image:image259.png[Print Inventory]
 
