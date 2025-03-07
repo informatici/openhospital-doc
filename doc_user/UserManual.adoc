@@ -928,7 +928,7 @@ image:image267.png[Confirm Inventory]
 
 ===== 4.4.2.3 View Inventory ([.underline]##V##iew)
 
-To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted and click on *[.underline]##V##iew* button to enter on the *_View Browser_* window. 
+To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory is highlighted, click on the *[.underline]##V##iew* button to enter the *_View Browser_* window. 
 
 image:image258.png[View Inventory]
 
