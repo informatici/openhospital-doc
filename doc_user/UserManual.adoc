@@ -1073,7 +1073,7 @@ Click on *[.underline]##Y##es* button, after some time the JasperViewer® will s
 
 image:image269.png[Report output without real qty]
 
-If we click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
+Click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
 
 image:image270.png[Report output with real qty]
 
