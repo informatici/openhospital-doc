@@ -932,7 +932,7 @@ To view an inventory, highlight the inventory in the *_Inventory Browser_* windo
 
 image:image258.png[View Inventory]
 
-This function allows to view all the data for the inventory including inventory(ies) row(s) of the inventory. We also have possibility to *[.underline]##P##rint* those data.
+This function allows viewing all the data for the inventory including inventory(ies) row(s) of the inventory. There is also an option to *[.underline]##P##rint* the data.
 
 NOTE: On view mode it is not possible to update something.
 
