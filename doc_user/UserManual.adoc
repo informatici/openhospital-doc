@@ -895,7 +895,7 @@ To insert an inventory row for a specific product, enter into the field for spec
 
 image:image254.png[Choose medical]
 
-Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to back on the *_Inventory Browser_* window.
+Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to back out of the *_Inventory Browser_* window.
 
 ====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
 
