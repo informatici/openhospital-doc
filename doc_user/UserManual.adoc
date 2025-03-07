@@ -899,7 +899,7 @@ Select the desired pharmaceutical or search the pharmaceutical by code or descri
 
 ====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
 
-To insert an inventory row for a set of products, click on the SELECT button. This will open the Lot Information window.
+To insert an inventory row for a set of products, click on the [.underline]##S##elect* button. This will open the *_Lot Information_* window.
 
 image:image255.png[Lot Information]
 
