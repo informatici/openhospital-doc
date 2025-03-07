@@ -1079,7 +1079,7 @@ image:image270.png[Report output with real qty]
 
 ===== 4.5.2.4 Delete Ward Inventory ([.underline]##D##elete)
 
-The delete button is used to cancel an inventory.  First, highlight the inventory in the *_Inventory Browser_* window, When the inventory is highlighted, click the *[.underline]##D##elete* button in the *Buttons panel*. A confirmation window is shown:
+The delete button is used to cancel an inventory.  First, highlight the inventory in the *_Inventory Browser_* window, when the inventory is highlighted, click the *[.underline]##D##elete* button in the *Buttons panel*. A confirmation window is shown:
 
 image:image257.png[Delete ward Inventory]
 
