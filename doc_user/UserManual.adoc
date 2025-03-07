@@ -914,7 +914,7 @@ Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that
 [#Edit-a-new-inventory]
 ===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
 
-To modify an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click on *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. Now the record is available for changes. This function allows to edit all the data of the inventory including inventory(ies) row(s) of the inventory.
+To modify an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click on *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. Now the record is available for changes. This function allows editing all the data of the inventory including inventory(ies) row(s) of the inventory.
 
 image:image256.png[Edit Inventory]
 
