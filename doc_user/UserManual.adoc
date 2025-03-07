@@ -950,7 +950,7 @@ image:image261.png[Report output with real qty]
 
 ===== 4.4.2.4 Delete Inventory ([.underline]##D##elete)
 
-The delete button is used to cancel an inventory. Highlight the inventory in the *_Inventory Browser_* window, when the inventory has been highlighted then click on *[.underline]##D##elete* button. A confirmation window is shown:
+The delete button is used to remove an inventory. Highlight the inventory in the *_Inventory Browser_* window, when the inventory is highlighted click on *[.underline]##D##elete* button. A confirmation window is shown:
 
 image:image257.png[Delete Inventory]
 
