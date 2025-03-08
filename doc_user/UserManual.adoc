@@ -801,6 +801,37 @@ image:image251.png[success]
 
 NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
+===== 4.3.2.6 Adding Pagination and Search in MedicalBrowser ([.underline]##D##elete)
+
+The addition of pagination and search in MedicalBrowser enables smoother navigation and more efficient medication management.
+
+image:image251.png[Search and Pagination ]
+
+Each page displays a limited number of medications, with the following elements:
+
+Total Medical: Total number of available medications.
+
+Pages: Total number of pages generated based on the number of medications and the selected type.
+
+Medication Type: Filtering by category (All, Drugs, Chemical, Laboratory, Surgery).
+
+Status: Filtering by state (Active only, Disabled only, All).
+
+Navigation: Previous and Next buttons for page traversal.
+
+Direct Selection: Combo box to choose a specific page.
+
+Search
+The search bar is positioned at the top of the interface and works as follows:
+
+The search is performed on the description of medications.
+
+The user can execute the search by pressing Enter or clicking on the search icon.
+
+The results are updated in real-time, considering pagination and active filters.
+
+This module ensures optimized navigation and quick access to essential pharmaceutical information.
+
 <<<
 
 [#laboratory]
