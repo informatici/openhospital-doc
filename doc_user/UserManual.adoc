@@ -850,7 +850,9 @@ image:image253.png[New Inventory]
 
 The data shown in the *Inventory panel* area are:
 
-* *Date*: the date where the inventory was entered at the system.
+* *Date*: the date when the physical check for this inventory has been done in the main store.
++
+NOTE: this will affect the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Reference*: the reference associated to the inventory.
 * *Charge Type*: the charge movement type used for the charge movement (when theoretic qty < real qty).
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretic qty > real qty).
