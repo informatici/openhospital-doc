@@ -882,7 +882,7 @@ The *Buttons panel* is used to perform some action:
 * *Clean [.underline]##T##able*:  used to remove all the inventory rows.
 * *[.underline]##V##alidate*: used to validate the inventory.
 * *[.underline]##C##onfirm*: used to confirm the inventory.
-
++
 *NOTE:* This button is enabled for the inventory after it it validated,, otherwise the button is disabled.
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
