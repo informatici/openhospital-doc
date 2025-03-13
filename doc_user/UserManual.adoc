@@ -858,7 +858,7 @@ The data shown in the *Inventory panel* area are:
 * *Destination*: the ward used for the discharge movement.
 * *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically. 
 +
-*NOTE:* The Destination, Charge Type, Discharge Type and Supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
+*NOTE:* The Destination, Charge Type, Discharge Type and Supplier can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 The data shown in the *Inventory row table* area are:
 
