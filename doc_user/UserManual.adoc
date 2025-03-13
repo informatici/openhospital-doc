@@ -805,7 +805,7 @@ NOTE: This button can be enabled or disabled to control movements deletions. Ask
 
 ==== 4.4.1 Main Characteristics
 
-The Inventory features is used to correct the stock in the *_Main Store_*.
+The Inventory features is used to manage stock levels in the *_Main Store_* as the hospital's central storage area.
 
 ==== 4.4.2 Functions of Inventory
 
