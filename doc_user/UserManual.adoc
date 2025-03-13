@@ -886,7 +886,7 @@ The *Buttons panel* is used to perform some action:
 *NOTE:* This button is enabled for the inventory after it it validated,, otherwise the button is disabled.
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
-
++
 *NOTE:* An inventory row can be inserted either for specific products or for a set of products.
 
 ====== 4.4.2.1.1 Insert Inventory Row By Using TextField
