@@ -803,6 +803,12 @@ NOTE: This button can be enabled or disabled to control movements deletions. Ask
 
 === 4.4 Inventory ([.underline]##I##nventory)
 
+The Inventory feature in the Open Hospital application enables users to manage stock levels within the hospital's Main Store. This functionality allows for the accurate tracking and adjustment of inventory, ensuring that stock levels are correctly maintained and recorded.
+
+The application supports two types of inventory management:
+- Main Store Inventory: this is the primary inventory management system for the hospital's central storage area. The details of this system are covered in this chapter.
+- Ward Inventory: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in chapter 4.5.
+
 ==== 4.4.1 Main Characteristics
 
 The Inventory features is used to manage stock levels in the *_Main Store_* as the hospital's central storage area.
@@ -815,6 +821,8 @@ image:image22.png[Phamacy Menu,width=220,height=182]
 
 Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period.
 
+image:image252.png[Inventory Browser]
+
 The *_Inventory Browser_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
 
 The *Search panel* at the top, allows narrowing or sub-setting the inventory list by:
@@ -824,10 +832,10 @@ The *Search panel* at the top, allows narrowing or sub-setting the inventory lis
 
 The *Inventory table* in the center identifies the inventory by:
 
-* *Reference*: indicates the reference of the inventory.
-* *Date*: indicates the date with which the inventory was entered into the system.
-* *Status*: indicates the status of the inventory.
-* *User*: indicates the user who entered the inventory.
+* *REFERENCE*: indicates the reference of the inventory.
+* *DATE*: indicates the date with which the inventory was entered into the system.
+* *STATUS*: indicates the status of the inventory.
+* *USER*: indicates the user who entered the inventory.
 
 The *Buttons panel* has all the functions of the main inventory, the following choices are available:
 
@@ -836,8 +844,6 @@ The *Buttons panel* has all the functions of the main inventory, the following c
 * *[.underline]##V##iew*: show an existing inventory.
 * *[.underline]##D##elete*: cancel an existing inventory.
 * *[.underline]##C##lose*: close the window and return to the main menu.
-
-image:image252.png[Inventory Browser]
 
 [#create-a-new-inventory]
 ===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
@@ -866,14 +872,15 @@ NOTE: this will affect the _validation_ step, when the system will check all fur
 
 The data shown in the *Inventory row table* area are:
 
-* *Code*: the code of the phamaceutical.
-* *Product*: the description of the phamaceutical.
-* *New Lot*: indicates if the inventory row is for a new lot or not.
-* *Lot No.*: the lot code of the pharmaceutical.
-* *Due Date*: the due date of the lot.
-* *Theoretic Qty*: the theoretic quantity of the lot of the pharmaceutical.
-* *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
-* *Total Cost*: the total cost that represents the real value of the lot.
+* *CODE*: the code of the phamaceutical.
+* *MEDICAL*: the description of the phamaceutical.
+* *NEW LOT*: indicates if the inventory row is for a new lot or not.
+* *LOT's CODE*: the lot code of the pharmaceutical.
+* *DUE DATE*: the due date of the lot.
+* *THEORETICAL*: the theoretic quantity of the lot of the pharmaceutical.
+* *REAL QUANTITY*: the real(physical) quantity of the lot of the pharmaceutical.
+* *UNIT COST*: the unit cost of the pharmaceutical
+* *TOTAL COST*: the total cost that represents the real value of the lot.
 
 The *Buttons panel* is used to perform some action:
 
@@ -903,11 +910,7 @@ Select the desired pharmaceutical or search the pharmaceutical by code or descri
 
 ====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
 
-<<<<<<< HEAD
 To insert an inventory row for a set of medicals, click on the SELECT button. This will open the Lot Information window.
-=======
-To insert an inventory row for a set of products, click on the [.underline]##S##elect* button. This will open the *_Lot Information_* window.
->>>>>>> 9498ba66784ec72fb385c147d2be1372eed2b7e8
 
 image:image255.png[Lot Information]
 
@@ -985,11 +988,11 @@ The *Search panel* at the top, allows narrowing or sub-setting the inventory lis
 
 The *Inventory table* in the center identifies the inventory by:
 
-* *Reference*: indicates the reference of the ward inventory.
-* *Ward*: indicates the ward related to the inventory.
-* *Date*: indicates the date with which the ward inventory was entered into the system.
-* *Status*: indicates the status of the ward inventory.
-* *User*: indicates the user who entered the ward inventory.
+* *REFERENCE*: indicates the reference of the ward inventory.
+* *WARD*: indicates the ward related to the inventory.
+* *DATE*: indicates the date with which the ward inventory was entered into the system.
+* *STATUS*: indicates the status of the ward inventory.
+* *USER*: indicates the user who entered the ward inventory.
 
 The *Buttons panel* has all the functions of the ward inventory, the following choices are available:
 
@@ -1022,14 +1025,15 @@ The data shown in the *Upper panel* area are:
 
 The data shown in the *Center panel* area represents an inventory row. The data are:
 
-* *Code*: the code of the phamaceutical.
-* *Product*: the description of the phamaceutical.
-* *New Lot*: indicates if the inventory row is for a new lot or not.
-* *Lot's Code.*: the lot code of the pharmaceutical.
-* *Due Date*: the due date of the lot.
-* *Theoretic Qty*: the theoretic quantity of the lot of the pharmaceutical.
-* *Real Qty*: the real(physical) quantity of the lot of the pharmaceutical.
-* *Total Cost*: the total cost or real value of the lot.
+* *CODE*: the code of the phamaceutical.
+* *MEDICAL*: the description of the phamaceutical.
+* *NEW LOT*: indicates if the inventory row is for a new lot or not.
+* *LOT's CODE.*: the lot code of the pharmaceutical.
+* *DUE DATE*: the due date of the lot.
+* *THEORETICAL*: the theoretic quantity of the lot of the pharmaceutical.
+* *REAL QUANTITY*: the real(physical) quantity of the lot of the pharmaceutical.
+* *UNIT COST*: the unit cost of the pharmaceutical.
+* *TOTAL COST*: the total cost or real value of the lot.
 
 The *Buttons panel* is used to perform some action:
 
