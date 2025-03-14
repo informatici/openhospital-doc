@@ -856,7 +856,9 @@ The data shown in the *Inventory panel* area are:
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretic qty > real qty).
 * *Supplier*: the supplier used for the charge movement.
 * *Destination*: the ward used for the discharge movement.
-* *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically. 
+* *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically.
+* *Add medical*: this field is use to Add inventory row for a medical.
+* *Add medicals by*: This button is use to Add inventory row for a set of medicals.
 +
 *NOTE:* The Destination, Charge Type, Discharge Type and Supplier can be defined by the Administrator. Ask the Administrator or check the <<settings,Settings>> chapter.
 
@@ -891,7 +893,7 @@ The *Buttons panel* is used to perform some action:
 
 ====== 4.4.2.1.1 Insert Inventory Row By Using TextField
  
-To insert an inventory row for a specific product, enter into the field for specific product the code or the description of the pharmaceutical to insert, and press ENTER. This will open the Choose a Medical window.
+To insert an inventory row for a medical, enter into the field for specific product the code or the description of the pharmaceutical to insert, and press ENTER. This will open the Choose a Medical window.
 
 image:image254.png[Choose medical]
 
@@ -899,7 +901,7 @@ Select the desired pharmaceutical or search the pharmaceutical by code or descri
 
 ====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
 
-To insert an inventory row for a set of products, click on the SELECT button. This will open the Lot Information window.
+To insert an inventory row for a set of medicals, click on the SELECT button. This will open the Lot Information window.
 
 image:image255.png[Lot Information]
 
