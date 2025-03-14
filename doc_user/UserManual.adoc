@@ -979,6 +979,8 @@ image:image22.png[Phamacy Menu,width=220,height=182]
 
 All the functions available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period.
 
+image:image262.png[Ward Inventory Browser]
+
 The *_Manage Ward Inventory_* window is composed of three areas: the *Search panel* at the top, the *Ward Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
 
 The *Search panel* at the top, allows narrowing or sub-setting the inventory list by:
@@ -1001,8 +1003,6 @@ The *Buttons panel* has all the functions of the ward inventory, the following c
 * *[.underline]##V##iew*: this button is used to show an existing ward inventory.
 * *[.underline]##D##elete*: this button is used to cancel an existing ward inventory.
 * *[.underline]##C##lose*: this button is used to close the window and return to the main menu.
-
-image:image262.png[Ward Inventory Browser]
 
 [#create-a-new-ward-inventory]
 ===== 4.5.2.1 Create a New ward Inventory ([.underline]##N##ew)
