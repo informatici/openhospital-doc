@@ -18,10 +18,10 @@ pass:[<br>][.small]#Policies is made available under a https://creativecommons.o
 == 1 Introduction
 
 OH - Open Hospital (https://www.open-hospital.org/) is a free and open-source Electronic Health Record (EHR) software application.
-Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
+Open Hospital is deployed as a desktop application that can be used in a stand alone, single user mode (PORTABLE mode)
 or in a client / server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
 
-Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an internet connection.
+Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an Internet connection.
 
 Open Hospital is the first of a set of software applications that ISFfootnote:[Informatici Senza Frontiere - https://www.informaticisenzafrontiere.org] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for administrative operations (like registering patients, and managing laboratory analysis and pharmaceutical stocks) and for the production of detailed statistics and reports.
 It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
@@ -51,19 +51,19 @@ In general, records can be created, edited, or deleted from the database. Certai
 * **Soft Deletion (Mark as Deleted):** Soft deletion is the practice of marking a record as deleted without actually removing it from the database. The record remains stored but is typically hidden from standard operations and searches. The purpose of soft deletion is to:
 - Retain historical or auditing data.
 - Avoid irreversible data loss.
-- Allow for potential recovery or undeleting.
+- Allow for potential recovery or un-deleting.
 +
-These records are generally **hidden** from standard users and workflows to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
-- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflows and cannot be referenced for new medicals.__
+These records are generally **hidden** from standard users and workflow to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
+- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflow and cannot be referenced for new medicals.__
 - <<groups,12.12.1 Groups>>: __User Groups that are marked as deleted cannot be referenced for new users. A unique code is required for new groups.__
 - <<users,12.12.2 Users>>: __Users that are marked as deleted cannot be used anymore. A unique name is required for new users.__
 
-* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflows, albeit restricted in functionality. The purpose of disabling is to:
+* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflow, albeit restricted in functionality. The purpose of disabling is to:
 - Temporarily suspend a record's usage.
 - Allow for reactivation if needed.
 +
 Disabled records are often still **visible** to standard users but clearly marked as "inactive" or "disabled." This provides transparency and maintains awareness of the record's existence. A common use case is __temporarily deactivating user accounts (e.g., suspending a subscription)__. Examples include:
-- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflows.__
+- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflow.__
 
 * **Statuses:** Statuses represent a record's inclusion in a process workflow without necessarily removing or disabling it. For example:
 - <<delete-a-bill,6.2.3 Delete a Bill>>: __Bills that have been moved to a deleted status will continue to appear in the list but will not be counted in the reports.__
