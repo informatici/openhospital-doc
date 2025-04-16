@@ -828,6 +828,7 @@ image:image251.png[success]
 
 NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
 
+[#inventory-main]
 === 4.4 Inventory ([.underline]##I##nventory)
 
 The Inventory feature enables users to manage stock levels within the hospital's Main Store and wards. This functionality allows for the accurate tracking and adjustment of inventory, ensuring that stock levels are correctly maintained and recorded.
@@ -835,7 +836,7 @@ The Inventory feature enables users to manage stock levels within the hospital's
 The application supports two types of inventory management:
 
 - *Main Store Inventory*: this is the primary inventory management system for the hospital's central storage area. The details of this system are covered in this chapter.
-- *Ward Inventory*: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in chapter 4.5.
+- *Ward Inventory*: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in <<inventory-ward,Ward Inventory>>.
 
 [#inventory-main-characteristics]
 ==== 4.4.1 Main Characteristics
@@ -896,9 +897,9 @@ The data shown in the *Inventory panel* area are:
 +
 NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
-* *Charge Type*: the charge movement type used for the charge movement (when theoretical qty < real qty).
+* *Charge Type*: the charge movement type used for the charge movement (when theoretical quantity < real quantity).
 * *Supplier*: the supplier used for the charge movement.
-* *Discharge Type*: the discharge movement type used for discharge movement (when theoretical qty > real qty).
+* *Discharge Type*: the discharge movement type used for discharge movement (when theoretical quantity > real quantity).
 * *Destination*: the ward used for the discharge movement.
 * *Status* (e.g., 'DRAFT'): the status of the inventory. This value is set automatically by the system.
 * *Add a medical*: this field is used to add a single product by typing its code or name.
@@ -934,17 +935,17 @@ NOTE: The *Confirm* button is enabled once the inventory is validated, until the
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
 
-====== 4.4.2.1.1 Insert Inventory Row By Using TextField
+====== 4.4.2.1.1 Insert Inventory Row By Using The Code Or Description
  
 To insert an inventory row for a medical, type into the *Add medical* field the code or the description of the pharmaceutical and press ENTER. This will open the _Choose a Medical_ window.
 
-image:image254.png[Choose a medical]
+image:image254.png[Add a medical]
 
 Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to back to the *_Inventory Browser_* window.
 
-====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
+====== 4.4.2.1.2 Insert Inventory Rows By Type And Usage
 
-To insert an inventory row for a set of medicals, useful for rotational inventories, click the SELECT button. This will open the *_Lot Information_* window.
+To insert an inventory row for a set of medicals, useful for rotational inventories, click the *Add medicals by* button. This will open the *_Lot Information_* window.
 
 image:image255.png[Lot Information]
 
@@ -1021,11 +1022,11 @@ image:image259.png[Print Inventory]
 
 Click on *[.underline]##Y##es* button, which results in the JasperViewer® showing the generated report without real quantities as follows:
 
-image:image260.png[Report output without real qty]
+image:image260.png[Report output without real quantity]
 
 If the *[.underline]##N##o* button is selected, the JasperViewer® shows the generated report with real quantities as follows:
 
-image:image261.png[Report output with real qty]
+image:image261.png[Report output with real quantity]
 
 ===== 4.4.2.4 Delete Inventory ([.underline]##D##elete)
 
@@ -1033,6 +1034,7 @@ The delete button is used to cancel an inventory. Select the inventory in the *_
 
 image:image257.png[Delete Inventory]
 
+[#inventory-ward]
 === 4.5 Ward Inventory ([.underline]##W##ard Inventory)
 
 ==== 4.5.1 Main Characteristics
@@ -1158,11 +1160,11 @@ image:image259.png[Print Ward Inventory]
 
 Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
 
-image:image269.png[Report output without real qty]
+image:image269.png[Report output without real quantity]
 
 Click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
 
-image:image270.png[Report output with real qty]
+image:image270.png[Report output with real quantity]
 
 ===== 4.5.2.4 Delete Ward Inventory ([.underline]##D##elete)
 
