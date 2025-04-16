@@ -830,11 +830,12 @@ NOTE: This button can be enabled or disabled to control movements deletions. Ask
 
 === 4.4 Inventory ([.underline]##I##nventory)
 
-The Inventory feature in the Open Hospital application enables users to manage stock levels within the hospital's Main Store. This functionality allows for the accurate tracking and adjustment of inventory, ensuring that stock levels are correctly maintained and recorded.
+The Inventory feature enables users to manage stock levels within the hospital's Main Store and wards. This functionality allows for the accurate tracking and adjustment of inventory, ensuring that stock levels are correctly maintained and recorded.
 
 The application supports two types of inventory management:
-- Main Store Inventory: this is the primary inventory management system for the hospital's central storage area. The details of this system are covered in this chapter.
-- Ward Inventory: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in chapter 4.5.
+
+- *Main Store Inventory*: this is the primary inventory management system for the hospital's central storage area. The details of this system are covered in this chapter.
+- *Ward Inventory*: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in chapter 4.5.
 
 ==== 4.4.1 Main Characteristics
 
@@ -844,7 +845,7 @@ The Inventory features is used to manage stock levels in the *_Main Store_* as t
 
 To access the functions of inventory, click on *[.underline]##I##nventory* on the Pharmacy menu.
 
-image:image22.png[Phamacy Menu,width=220,height=182]
+image:image22.png[Phamacy Menu]
 
 Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period.
 
