@@ -909,8 +909,8 @@ NOTE: The Destination, Charge Type, Discharge Type and Supplier can be defined b
 
 The data shown in the *Inventory row table* area are:
 
-* *CODE*: the code of the phamaceutical.
-* *MEDICAL*: the description of the phamaceutical.
+* *CODE*: the code of the pharmaceutical.
+* *MEDICAL*: the description of the pharmaceutical.
 * *NEW LOT*: indicates if the inventory row is for a new lot or not.
 * *LOT's CODE*: the lot code of the pharmaceutical.
 * *DUE DATE*: the due date of the lot.
@@ -1102,8 +1102,8 @@ The data shown in the *Upper panel* area are:
 
 The data shown in the *Center panel* area represents an inventory row. The data are:
 
-* *CODE*: the code of the phamaceutical.
-* *MEDICAL*: the description of the phamaceutical.
+* *CODE*: the code of the pharmaceutical.
+* *MEDICAL*: the description of the pharmaceutical.
 * *NEW LOT*: indicates if the inventory row is for a new lot or not.
 * *LOT's CODE.*: the lot code of the pharmaceutical.
 * *DUE DATE*: the due date of the lot.
