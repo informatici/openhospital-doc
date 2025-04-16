@@ -859,7 +859,7 @@ Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access
 
 image:image252.png[Inventory Browser]
 
-The *_Inventory Browser_* window is composed of three areas: the *Search panel* at the top, the *Inventory list* in the center and the *Buttons panel* on the bottom. See the image above.
+The *_Inventory Browser_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image above.
 
 The *Search panel* at the top, allows narrowing or sub-setting the inventory list by:
 
@@ -869,7 +869,7 @@ The *Search panel* at the top, allows narrowing or sub-setting the inventory lis
 The *Inventory table* in the center identifies the inventory by:
 
 * *REFERENCE*: indicates the reference of the inventory.
-* *DATE*: indicates the date with which the inventory was entered into the system.
+* *DATE*: indicates the date the inventory was entered into the system.
 * *STATUS*: indicates the status of the inventory.
 * *USER*: indicates the user who entered the inventory.
 
@@ -894,13 +894,13 @@ The data shown in the *Inventory panel* area are:
 
 * *Date*: the date and time when the physical check for this inventory has been done in the main store.
 +
-NOTE: this will affect the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
+NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
 * *Charge Type*: the charge movement type used for the charge movement (when theoretical qty < real qty).
 * *Supplier*: the supplier used for the charge movement.
 * *Discharge Type*: the discharge movement type used for discharge movement (when theoretical qty > real qty).
 * *Destination*: the ward used for the discharge movement.
-* *Status* (e.g., 'DRAFT'): the status of the inventory. This value of status is set automatically.
+* *Status* (e.g., 'DRAFT'): the status of the inventory. This value is set automatically by the system.
 * *Add a medical*: this field is used to add a single product by typing its code or name.
 * *Add medicals by*: This button is used to add a set of medicals, by type, quantities or actual usage. 
 +
@@ -921,9 +921,9 @@ The data shown in the *Inventory row table* area are:
 The *Buttons panel* is used to perform some action:
 
 * *[.underline]##S##ave*: this button is used to save the inventory.
-* *[.underline]##L##ot*: this button is used to link new lot to a new specific product (the inventory row that column *New Lot* as value *N*). to perform that, first select the product/lot in the list and then click on this button.
+* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* has value *N*). To perform that, first select the product/lot in the list and then click on this button.
 +
-NOTE: This button is enabled just for the product/lot whose column *New Lot* has value *N*, otherwise the button is disabled.
+NOTE: This button is enabled only for products/lots where the column *New Lot* has value *N*.
 
 * *[.underline]##D##elete*: used to remove one or more products/lots from the list.
 * *Clean [.underline]##T##able*: used to remove all the inventory rows.
@@ -944,15 +944,15 @@ Select the desired pharmaceutical or search the pharmaceutical by code or descri
 
 ====== 4.4.2.1.2 Insert Inventory Row Product By using SELECT Button
 
-To insert an inventory row for a set of medicals, useful for rotational inventories, click on the SELECT button. This will open the Lot Information window.
+To insert an inventory row for a set of medicals, useful for rotational inventories, click the SELECT button. This will open the *_Lot Information_* window.
 
 image:image255.png[Lot Information]
 
-Specify the Medical Type on the combo box (All = all medical types) and choose:
+Specify the Medical Type in the combo box (All = all medical types) and choose:
 
 * *All*: if all the pharmaceuticals for the selected Medical Type are needed.
-* *Only non zero quantity*: if only the pharmaceuticals for the selected Medical Type with non zero theoretical quantity are needed.
-* *with movement only*: if only the pharmaceuticals for the selected Medical Type which have been used at least once are needed.
+* *Only non-zero quantity*: if only the pharmaceuticals for the selected Medical Type with non-zero theoretical quantity are needed.
+* *With movement only*: if only the pharmaceuticals for the selected Medical Type which have been used at least once are needed.
 
 Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that match the choice as the inventory(ies) row(s) in the *Inventory row table*.
 
@@ -964,22 +964,22 @@ NOTE: only inventories in DRAFT and VALIDATED states can be edited.
 
 image:image256.png[Edit Inventory]
 
-During modification it is possible to validate the inventory by clicking on the *[.underline]##V##alidate* button. This may results in the following dialog:
+During modification it is possible to validate the inventory by clicking on the *[.underline]##V##alidate* button. This may result in the following dialog:
 
 image:image271.png[Error]
 
-If the inventory has not been saved yet since last changes.
+If the inventory has unsaved changes.
 
 image:image266.png[Validate Inventory]
 
-This Information window asks wheter to check for any medicals on the stock or just the ones that are in the list?
+This Information window asks whether to check for any medicals on the stock or just the ones that are in the list?
 
 - *Yes, all medicals*: the system will check if new movements are made on the main store for any medical and eventually show the changes in a new dialog. See below.
 - *No, only the medicals in the list*: the system will check if new movement are made on the main store for the specific medicals that are in the list. E.g. see the image below. 
 
 image:image272.png[Validate]
 
-Click on the *[.underline]##O##k* button to continue. The system may also show another information message that inform the date of the inventory will be updated as a new more recent movement has been found:
+Click on the *[.underline]##O##k* button to continue. The system may also show another information message that specifies the date of the inventory will be updated as a new more recent movement has been found:
 
 image:image273.png[Inventory date update]
 
@@ -989,13 +989,13 @@ Click on the *[.underline]##O##k* button to continue. If new movements have been
 
 image:image274.png[Question]
 
-By clicking the *[.underline]##Y##es* button the system will actualize the inventory by adding new inventory row(s) and by updating also its date/time and its status, see the picture below:
+By clicking the *[.underline]##Y##es* button the system will actualize the inventory by adding new inventory row(s) and updating its date/time and status, see the picture below:
 
 image:image275.png[validate Inventory]
 
 Otherwise, by clicking the *[.underline]##N##o* button, nothing will be changed, but the inventory will remain (or go back) to DRAFT state.
 
-During modification, and only once fully validated, it is possible to Confirm the inventory by clicking on *[.underline]##C##onfirm* button. This will results in the following dialog:
+During modification, and only once fully validated, it is possible to confirm the inventory by clicking on *[.underline]##C##onfirm* button. This will result in the following dialog:
 
 image:image267.png[Confirm Inventory]
 
@@ -1095,8 +1095,8 @@ The data shown in the *Upper panel* area are:
 * *Select ward*: the ward that is associated with this inventory.
 * *Date*: the date of the inventory.
 * *Inventory's reference*: the reference associated to the inventory.
-* *Add a medical*: this field is use to Add inventory row for a medical.
-* *Add medicals by*: This button is use to Add inventory row for a set of medicals.
+* *Add a medical*: this field is used to add inventory row for a medical.
+* *Add medicals by*: This button is used to add inventory row for a set of medicals.
 
 The data shown in the *Center panel* area represents an inventory row. The data are:
 
@@ -1148,9 +1148,9 @@ To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory
 
 image:image265.png[View Ward Inventory]
 
-This function is used to view all the data for the inventory including inventory(ies) row(s) of the inventory. There is a;sp the option to *[.underline]##P##rint* the data.
+This function is used to view all the data for the inventory including inventory(ies) row(s) of the inventory. There is an option to *[.underline]##P##rint* the data.
 
-NOTE: While in view mode it is not possible to chage anything.
+NOTE: While in view mode it is not possible to change anything.
 
 To print the inventory, click the *[.underline]##P##rint* button shown the image below:
 
