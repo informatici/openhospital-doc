@@ -897,15 +897,15 @@ The data shown in the *Inventory panel* area are:
 +
 NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
-* *Charge Type*: the charge movement type used for the charge movement (when theoretical quantity < real quantity).
-* *Supplier*: the supplier used for the charge movement.
-* *Discharge Type*: the discharge movement type used for discharge movement (when theoretical quantity > real quantity).
-* *Destination*: the ward used for the discharge movement.
+* *Charge Type*: (e.g. Inventory+) the charge movement type used for the charge movement (when theoretical quantity < real quantity).
+* *Supplier*: (e.g. INVENTORY) the supplier used for the charge movement.
+* *Discharge Type*: (e.g. Inventory-) the discharge movement type used for discharge movement (when theoretical quantity > real quantity).
+* *Destination*: (e.g. INVENTORY) the ward used for the discharge movement.
++
+NOTE: The *Charge Type*, *Supplier*, *Discharge Type* and *Destination* can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
 * *Status* (e.g., 'DRAFT'): the status of the inventory. This value is set automatically by the system.
 * *Add a medical*: this field is used to add a single product by typing its code or name.
 * *Add medicals by*: This button is used to add a set of medicals, by type, quantities or actual usage. 
-+
-NOTE: The *Charge Type*, *Supplier*, *Discharge Type* and *Destination* can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 The data shown in the *Inventory row table* area are:
 
