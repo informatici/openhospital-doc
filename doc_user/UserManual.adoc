@@ -856,7 +856,7 @@ To access the functions of inventory, click on *[.underline]##I##nventory* on th
 
 image:image22.png[Phamacy Menu]
 
-Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period. . If "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
+Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period. If "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
 
 image:image252.png[Inventory Browser]
 
