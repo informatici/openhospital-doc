@@ -905,7 +905,7 @@ NOTE: This affects the _validation_ step, when the system will check all further
 * *Add a medical*: this field is used to add a single product by typing its code or name.
 * *Add medicals by*: This button is used to add a set of medicals, by type, quantities or actual usage. 
 +
-NOTE: The Destination, Charge Type, Discharge Type and Supplier can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
+NOTE: The *Charge Type*, *Supplier*, *Discharge Type* and *Destination* can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
 
 The data shown in the *Inventory row table* area are:
 
@@ -916,6 +916,7 @@ The data shown in the *Inventory row table* area are:
 * *DUE DATE*: the due date of the lot.
 * *THEORETICAL*: the theoretical (according to the records) quantity of the lot of the pharmaceutical.
 * *REAL QUANTITY*: the real (physical count) quantity of the lot of the pharmaceutical.
+* *DIFFERENCE*: the difference between real and theoretical quantities, if any.
 * *UNIT COST*: the unit cost of the pharmaceutical
 * *TOTAL COST*: the total cost that represents the real value of the lot.
 
@@ -1009,6 +1010,12 @@ By clicking the *[.underline]##y##es* button, the system will finally convert al
 image:image276.png[Information]
 
 NOTE: Every confirmation has an implicit validation, means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation, to make sure that the inventory is fully validated before confirmation.
+
+image:image258.png[Inventory Done]
+
+Every difference is reflected either as a charge or a discharge Stock Movement:
+
+image:image258b.png[Stock Movement from Inventory]
 
 ===== 4.4.2.5 View Inventory ([.underline]##V##iew)
 
@@ -1115,6 +1122,7 @@ The data shown in the *Center panel* area represents an inventory row. The data 
 * *DUE DATE*: the due date of the lot.
 * *THEORETICAL*: the theoretic quantity of the lot of the pharmaceutical.
 * *REAL QUANTITY*: the real(physical) quantity of the lot of the pharmaceutical.
+* *DIFFERENCE*: the difference between real and theoretical quantities, if any.
 * *UNIT COST*: the unit cost of the pharmaceutical.
 * *TOTAL COST*: the total cost or real value of the lot.
 
