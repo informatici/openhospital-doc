@@ -965,6 +965,8 @@ NOTE: only inventories in DRAFT and VALIDATED states can be edited.
 
 image:image256.png[Edit Inventory]
 
+===== 4.4.2.3 Validate Inventory ([.underline]##V##alidate)
+
 During modification it is possible to validate the inventory by clicking on the *[.underline]##V##alidate* button. This may result in the following dialog:
 
 image:image271.png[Error]
@@ -996,6 +998,8 @@ image:image275.png[validate Inventory]
 
 Otherwise, by clicking the *[.underline]##N##o* button, nothing will be changed, but the inventory will remain (or go back) to DRAFT state.
 
+===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm
+
 During modification, and only once fully validated, it is possible to confirm the inventory by clicking on *[.underline]##C##onfirm* button. This will result in the following dialog:
 
 image:image267.png[Confirm Inventory]
@@ -1006,7 +1010,7 @@ image:image276.png[Information]
 
 NOTE: Every confirmation has an implicit validation, means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation, to make sure that the inventory is fully validated before confirmation.
 
-===== 4.4.2.3 View Inventory ([.underline]##V##iew)
+===== 4.4.2.5 View Inventory ([.underline]##V##iew)
 
 To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory is highlighted, click on the *[.underline]##V##iew* button to enter the *_View Browser_* window. 
 
@@ -1015,6 +1019,8 @@ image:image258.png[View Inventory]
 This function allows viewing all the data for the inventory including inventory(ies) row(s) of the inventory. There is also an option to *[.underline]##P##rint* the data.
 
 NOTE: On view mode it is not possible to change anything.
+
+===== 4.4.2.6 Print Inventory ([.underline]##P##rint)
 
 To print the inventory, click on the *[.underline]##P##rint* button, See the resulting image below:
 
@@ -1028,7 +1034,7 @@ If the *[.underline]##N##o* button is selected, the JasperViewer® shows the gen
 
 image:image261.png[Report output with real quantity]
 
-===== 4.4.2.4 Delete Inventory ([.underline]##D##elete)
+===== 4.4.2.7 Delete Inventory ([.underline]##D##elete)
 
 The delete button is used to cancel an inventory. Select the inventory in the *_Inventory Browser_* window, when the inventory is highlighted click on *[.underline]##D##elete* button. A confirmation window is shown:
 
@@ -1136,15 +1142,19 @@ To modify a ward inventory, select the inventory in the *_Manage Ward Inventory_
 
 image:image268.png[Edit ward Inventory]
 
+===== 4.4.2.3 Validate Inventory ([.underline]##V##alidate)
+
 During modification it is possible to validate the inventory by clicking on *[.underline]##V##alidate* button. This results in a dialog like the one below:
 
 image:image266.png[Validate Inventory]
+
+===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm)
 
 During modification it is possible to Confirm the inventory by clicking the *[.underline]##C##onfirm* button. The action results in the dialog shown below:
 
 image:image267.png[Confirm Inventory]
 
-===== 4.5.2.3 View Ward Inventory ([.underline]##V##iew)
+===== 4.5.2.5 View Ward Inventory ([.underline]##V##iew)
 
 To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click on *[.underline]##V##iew* button to enter on the *_View Inventory_* window. 
 
@@ -1153,6 +1163,8 @@ image:image265.png[View Ward Inventory]
 This function is used to view all the data for the inventory including inventory(ies) row(s) of the inventory. There is an option to *[.underline]##P##rint* the data.
 
 NOTE: While in view mode it is not possible to change anything.
+
+===== 4.5.2.6 Print Ward Inventory ([.underline]##P##rint)
 
 To print the inventory, click the *[.underline]##P##rint* button shown the image below:
 
@@ -1166,7 +1178,7 @@ Click on *[.underline]##N##o* button, after some time the JasperViewer® will sh
 
 image:image270.png[Report output with real quantity]
 
-===== 4.5.2.4 Delete Ward Inventory ([.underline]##D##elete)
+===== 4.5.2.7 Delete Ward Inventory ([.underline]##D##elete)
 
 The delete button is used to cancel an inventory. First, highlight the inventory in the *_Inventory Browser_* window, when the inventory is highlighted, click the *[.underline]##D##elete* button in the *Buttons panel*. A confirmation window is shown:
 
