@@ -1109,6 +1109,8 @@ The data shown in the *Upper panel* area are:
 
 * *Select ward*: the ward that is associated with this inventory.
 * *Date*: the date of the inventory.
++
+NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
 * *Add a medical*: this field is used to add inventory row for a medical.
 * *Add medicals by*: This button is used to add inventory row for a set of medicals.
@@ -1156,11 +1158,21 @@ During modification it is possible to validate the inventory by clicking on *[.u
 
 image:image266.png[Validate Inventory]
 
+image:image266b.png[Validated Inventory]
+
 ===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm)
 
 During modification it is possible to Confirm the inventory by clicking the *[.underline]##C##onfirm* button. The action results in the dialog shown below:
 
 image:image267.png[Confirm Inventory]
+
+NOTE: Every confirmation has an implicit validation, means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation, to make sure that the inventory is fully validated before confirmation.
+
+image:image267b.png[Confirmed Inventory]
+
+Every difference is reflected either as a charge or a discharge Ward Stock Movement for the same ward:
+
+image:image267c.png[Ward stock movements]
 
 ===== 4.5.2.5 View Ward Inventory ([.underline]##V##iew)
 
