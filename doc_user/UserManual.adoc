@@ -937,6 +937,7 @@ NOTE: The *Confirm* button is enabled once the inventory is validated, until the
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
 
+[#insert-inventory-row]
 ====== 4.4.2.1.1 Insert Inventory Row By Using The Code Or Description
  
 To insert an inventory row for a medical, type into the *Add medical* field the code or the description of the pharmaceutical and press ENTER. This will open the _Choose a Medical_ window.
@@ -1166,6 +1167,12 @@ NOTE: The Confirm button is enabled only if the inventory is validated, otherwis
 * *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
 
 NOTE: It is possible to insert inventory row(s) either for specific products or for a set of products.
+
+====== 4.5.2.1.1 Insert Inventory Row By Using The Code Or Description
+====== 4.5.2.1.2 Insert Inventory Rows By Type And Usage
+====== 4.5.2.1.3 Insert Inventory Row With New Lot
+
+See <<insert-inventory-row,4.4.2.1.x Insert Inventory Row for Main Inventory>> chapters.
 
 ===== 4.5.2.2 Edit Ward Inventory ([.underline]##E##dit)
 
