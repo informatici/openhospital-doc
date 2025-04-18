@@ -572,6 +572,7 @@ After the filtering criteria are chosen, press the *[.underline]##F##ilter* butt
 
 By pressing the *Rese[.underline]##t##* button, all criteria reset to default values.
 
+[#insert-stock-charging-movement]
 ===== 4.2.2.2 Insert Stock Charging Movement ([.underline]##C##harge)
 
 To insert charging movements, press *[.underline]##C##harge* in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
@@ -911,7 +912,7 @@ The data shown in the *Inventory row table* area are:
 
 * *CODE*: the code of the pharmaceutical.
 * *MEDICAL*: the description of the pharmaceutical.
-* *NEW LOT*: indicates if the inventory row is for a new lot or not.
+* *NEW LOT*: indicates if the inventory row introduces a new lot (never recorded before) for the system.
 * *LOT's CODE*: the lot code of the pharmaceutical.
 * *DUE DATE*: the due date of the lot.
 * *THEORETICAL*: the theoretical (according to the records) quantity of the lot of the pharmaceutical.
@@ -957,6 +958,26 @@ Specify the Medical Type in the combo box (All = all medical types) and choose:
 * *With movement only*: if only the pharmaceuticals for the selected Medical Type which have been used at least once are needed.
 
 Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that match the choice as the inventory(ies) row(s) in the *Inventory row table*.
+
+====== 4.4.2.1.3 Insert Inventory Row With New Lot
+
+If the pharmaceutical is already in the Inventory with its all possible lots, the system asks if to add it anyway:
+
+image:image255b.png[Add a medical]
+
+Click on *[.underline]##Y##es* button, the pharmaceutical will be then added to the list with a *N* flag:
+
+image:image255c.png[New lot flag]
+
+This means that the lot has to be defined within the inventory and this can be achieved by selecting the inventory row and by clicking on the *[.underline]##L##ot* button:
+
+image:image255d.png[Define a lot]
+
+The procedure is pretty much the same as defined in chapter <<insert-stock-charging-movement,4.2.2.2 Insert Stock Charging Movement>>.
+
+Once the lot is defined, a real quantity greater than zero must be specified, otherwise validation will fail:
+
+image:image255e.png[Validation fail]
 
 ===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
 
@@ -1119,7 +1140,7 @@ The data shown in the *Center panel* area represents an inventory row. The data 
 
 * *CODE*: the code of the pharmaceutical.
 * *MEDICAL*: the description of the pharmaceutical.
-* *NEW LOT*: indicates if the inventory row is for a new lot or not.
+* *NEW LOT*: indicates if the inventory row introduces a new lot (never recorded before) for the system.
 * *LOT's CODE.*: the lot code of the pharmaceutical.
 * *DUE DATE*: the due date of the lot.
 * *THEORETICAL*: the theoretic quantity of the lot of the pharmaceutical.
