@@ -965,7 +965,7 @@ If the pharmaceutical is already in the Inventory with its all possible lots, th
 
 image:image255b.png[Add a medical]
 
-Click on *[.underline]##Y##es* button, the pharmaceutical will be then added to the list with a *N* flag:
+By clicking on the *[.underline]##Y##es* button, the pharmaceutical will be then added to the list with a *N* flag:
 
 image:image255c.png[New lot flag]
 
