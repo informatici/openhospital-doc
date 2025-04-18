@@ -2,7 +2,7 @@
 :icons: font
 :stem:
 :toc: left
-:toclevels: 4
+:toclevels: 5
 :url-docs: https://asciidoctor.org/docs
 :url-gem: https://rubygems.org/gems/asciidoctor
 :imagesdir: media/
