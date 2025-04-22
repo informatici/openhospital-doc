@@ -857,13 +857,13 @@ To access the functions of inventory, click on *[.underline]##I##nventory* on th
 
 image:image22.png[Phamacy Menu]
 
-Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period. If "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
+Click on the *[.underline]##I##nventory* button in the *Pharmacy* menu to access the *_Inventory Browser_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
 
 image:image252.png[Inventory Browser]
 
 The *_Inventory Browser_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image above.
 
-The *Search panel* at the top, allows narrowing or sub-setting the inventory list by:
+The *Search panel* at the top allows for narrowing or sub-setting the inventory list by:
 
 * *Date From* and *Date To*: dates selectors used to select a period.
 * *Status* selector (e.g., 'All'): inventory status filter.
@@ -875,7 +875,7 @@ The *Inventory table* in the center identifies the inventory by:
 * *STATUS*: indicates the status of the inventory.
 * *USER*: indicates the user who entered the inventory.
 
-The *Buttons panel* has all the functions of the main inventory, the following choices are available:
+The *Buttons panel* has the following inventory operations available:
 
 * *[.underline]##N##ew*: create a new inventory.
 * *[.underline]##E##dit*: modify an existing inventory.
@@ -894,7 +894,7 @@ image:image253.png[New Inventory]
 
 The data shown in the *Inventory panel* area are:
 
-* *Date*: the date and time when the physical check for this inventory has been done in the main store.
+* *Date*: the date and time when the physical check for this inventory was completed in the main store.
 +
 NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
@@ -924,16 +924,16 @@ The data shown in the *Inventory row table* area are:
 The *Buttons panel* is used to perform some action:
 
 * *[.underline]##S##ave*: this button is used to save the inventory.
-* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* has value *N*). To perform that, first select the product/lot in the list and then click on this button.
+* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* has the value *N*). To perform the operation, first select the product/lot in the list and then click on this button.
 +
-NOTE: This button is enabled only for products/lots where the column *New Lot* has value *N*.
+NOTE: This button is enabled only for products/lots where the column *New Lot* has the value *N*.
 
 * *[.underline]##D##elete*: used to remove one or more products/lots from the list.
 * *Clean [.underline]##T##able*: used to remove all the inventory rows.
 * *[.underline]##V##alidate*: used to validate the inventory.
 * *[.underline]##C##onfirm*: used to confirm the inventory.
 +
-NOTE: The *Confirm* button is enabled once the inventory is validated, until then the button is disabled. See <<inventory-main-characteristics,Main Characteristics>> chapter.
+NOTE: The *Confirm* button is enabled only after the inventory is validated. See <<inventory-main-characteristics,Main Characteristics>> chapter.
 
 * *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
 
@@ -944,7 +944,7 @@ To insert an inventory row for a medical, type into the *Add medical* field the 
 
 image:image254.png[Add a medical]
 
-Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to back to the *_Inventory Browser_* window.
+Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to return to the *_Inventory Browser_* window.
 
 ====== 4.4.2.1.2 Insert Inventory Rows By Type And Usage
 
