@@ -928,14 +928,14 @@ The *Buttons panel* is used to perform some action:
 +
 NOTE: This button is enabled only for products/lots where the column *New Lot* has the value *N*.
 
-* *[.underline]##D##elete*: used to remove one or more products/lots from the list.
-* *Clean [.underline]##T##able*: used to remove all the inventory rows.
-* *[.underline]##V##alidate*: used to validate the inventory.
-* *[.underline]##C##onfirm*: used to confirm the inventory.
+* *[.underline]##D##elete*: this button is used to remove one or more products/lots from the list.
+* *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
+* *[.underline]##V##alidate*: this button is used to validate the inventory.
+* *[.underline]##C##onfirm*: this button is used to confirm the inventory.
 +
 NOTE: The *Confirm* button is enabled only after the inventory is validated. See <<inventory-main-characteristics,Main Characteristics>> chapter.
 
-* *[.underline]##C##lose*: used to return to the *_Inventory Browser_* window.
+* *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
 
 [#insert-inventory-row]
 ====== 4.4.2.1.1 Insert Inventory Row By Using The Code Or Description
