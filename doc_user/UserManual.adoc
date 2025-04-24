@@ -709,7 +709,7 @@ The Pharmaceutical Stock Ward feature allows the management of the pharmacy at t
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical Stock [.underline]##W##ard* on the Pharmacy menu shown below.
 
-image:image22.png[Phamacy Menu,width=220,height=182]
+image:image22.png[Pharmacy Menu,width=220,height=182]
 
 The window *_Ward Pharmacy_*, shown below, will be opened. All functions available under Pharmaceutical Stock are accessible from the *_Ward Pharmacy_* window by selecting one *WARD* on the top left of the window.
 
@@ -855,7 +855,7 @@ The Inventory feature is used to manage stock levels in the *_Main Store_* as th
 
 To access the functions of inventory, click on *[.underline]##I##nventory* on the Pharmacy menu.
 
-image:image22.png[Phamacy Menu]
+image:image22.png[Pharmacy Menu]
 
 The *_Inventory Browser_* window, shown below, will be opened. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
 
@@ -1086,7 +1086,7 @@ The _Ward Inventory_ feature is used to manage the stock levels in a *_Ward_*. T
 
 To access the Ward Inventory feature, click on *[.underline]##W##ard Inventory* on the Pharmacy menu.
 
-image:image22.png[Phamacy Menu]
+image:image22.png[Pharmacy Menu]
 
 All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
 
