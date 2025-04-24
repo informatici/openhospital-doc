@@ -940,15 +940,15 @@ NOTE: The *Confirm* button is enabled only after the inventory is validated. See
 [#insert-inventory-row]
 ====== 4.4.2.1.1 Insert Inventory Row By Using The Code Or Description
  
-To insert an inventory row for a medical, type into the *Add medical* field the code or the description of the pharmaceutical and press ENTER. This will open the _Choose a Medical_ window.
+To insert an inventory row for a medical, type into the *Add medical* field the code or the description of the pharmaceutical and press ENTER. This opens the _Choose a Medical_ window:
 
 image:image254.png[Add a medical]
 
-Select the desired pharmaceutical or search the pharmaceutical by code or description using the search field and select the pharmaceutical to highlight it, then click on *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click on *[.underline]##C##ancel* to return to the *_Inventory Browser_* window.
+Select the desired pharmaceutical or search for the pharmaceutical by code or description using the search field and then select the pharmaceutical by highlighting it. Next click the *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click the *[.underline]##C##ancel* to return to the *_Inventory Browser_* window.
 
 ====== 4.4.2.1.2 Insert Inventory Rows By Type And Usage
 
-To insert an inventory row for a set of medicals, useful for rotational inventories, click the *Add medicals by* button. This will open the *_Lot Information_* window.
+To insert an inventory row for a set of medicals; which is useful for rotational inventories; click the *Add medicals by* button. This opens the *_Lot Information_* window.
 
 image:image255.png[Lot Information]
 
@@ -962,11 +962,11 @@ Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that
 
 ====== 4.4.2.1.3 Insert Inventory Row With New Lot
 
-If the pharmaceutical is already in the Inventory with its all possible lots, the system asks if to add it anyway:
+If the pharmaceutical is already in the Inventory with all of its possible lots, the system asks if to add it anyway:
 
 image:image255b.png[Add a medical]
 
-By clicking on the *[.underline]##Y##es* button, the pharmaceutical will be then added to the list with a *N* flag:
+By clicking the *[.underline]##Y##es* button, the pharmaceutical is added to the list with a *N* flag:
 
 image:image255c.png[New lot flag]
 
@@ -974,15 +974,15 @@ This means that the lot has to be defined within the inventory and this can be a
 
 image:image255d.png[Define a lot]
 
-The procedure is pretty much the same as defined in chapter <<insert-stock-charging-movement,4.2.2.2 Insert Stock Charging Movement>>.
+The procedure is similar as that defined in the chapter <<insert-stock-charging-movement,4.2.2.2 Insert Stock Charging Movement>>.
 
-Once the lot is defined, a real quantity greater than zero must be specified, otherwise validation will fail:
+Once the lot is defined, a real quantity greater than zero must be specified, otherwise validation fails:
 
 image:image255e.png[Validation fail]
 
 ===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
 
-To modify an inventory, select the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click on *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. Now the record is available for changes. This function allows editing all the data of the inventory including inventory(ies) row(s) of the inventory.
+To modify an inventory, select the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click the *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. The record is available for the editing of all the data of the inventory including inventory(ies) row(s) of the inventory.
 
 NOTE: only inventories in DRAFT and VALIDATED states can be edited.
 
@@ -998,10 +998,10 @@ If the inventory has unsaved changes.
 
 image:image266.png[Validate Inventory]
 
-This Information window asks whether to check for any medicals on the stock or just the ones that are in the list?
+This Information window asks whether to check for any medicals on the stock or just the ones that are in the list:
 
-- *Yes, all medicals*: the system will check if new movements are made on the main store for any medical and eventually show the changes in a new dialog. See below.
-- *No, only the medicals in the list*: the system will check if new movement are made on the main store for the specific medicals that are in the list. E.g. see the image below. 
+- *Yes, all medicals*: the system checks if new movements are made on the main store for any medical and will show the changes in a new dialog. See below.
+- *No, only the medicals in the list*: the system checks if new movements are made on the main store for the specific medicals that are in the list. E.g., see the image below. 
 
 image:image272.png[Validate]
 
@@ -1009,9 +1009,9 @@ Click on the *[.underline]##O##k* button to continue. The system may also show a
 
 image:image273.png[Inventory date update]
 
-NOTE: Since the inventory will result in a number of charges/discharges in <<pharmaceutical-stock,Pharmaceutical Stock>> to align the stock levels to the real quantities (physical count), its date cannot be prior an already existing movement, so the system will always check if the current inventory is the latest operation to be recorded.
+NOTE: Since the inventory results in a number of charges/discharges actions in <<pharmaceutical-stock,Pharmaceutical Stock>> to align the stock levels to the real quantities (physical count), so the date cannot be prior an already existing movement. The system always checks if the current inventory is the latest operation to be recorded.
 
-Click on the *[.underline]##O##k* button to continue. If new movements have been found, the system will show the following dialog in order to update the current inventory:
+Click on the *[.underline]##O##k* button to continue. If new movements are found, the system shows the following dialog in order to update the current inventory:
 
 image:image274.png[Question]
 
@@ -1019,19 +1019,19 @@ By clicking the *[.underline]##Y##es* button the system will actualize the inven
 
 image:image275.png[validate Inventory]
 
-Otherwise, by clicking the *[.underline]##N##o* button, nothing will be changed, but the inventory will remain (or go back) to DRAFT state.
+Otherwise, by clicking the *[.underline]##N##o* button, nothing is changed and the inventory remains (or goes back) to DRAFT state.
 
 ===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm
 
-During modification, and only once fully validated, it is possible to confirm the inventory by clicking on *[.underline]##C##onfirm* button. This will result in the following dialog:
+During modification only after validation is performed it is possible to confirm the inventory by clicking on *[.underline]##C##onfirm* button. The following dialog is generated:
 
 image:image267.png[Confirm Inventory]
 
-By clicking the *[.underline]##y##es* button, the system will finally convert all differences between real and theoretical quantities into charge/discharge movements and will inform the process has been completed with the following information message:
+By clicking the *[.underline]##y##es* button, the system will convert all differences between real and theoretical quantities into charge/discharge movements and signals the process is completed with the following information message:
 
 image:image276.png[Information]
 
-NOTE: Every confirmation has an implicit validation, means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation, to make sure that the inventory is fully validated before confirmation.
+NOTE: Every confirmation has an implicit validation, which means that every time the Confirm button is clicked, the Validation is performed to ensure that the inventory is fully validated before confirmation.
 
 image:image258.png[Inventory Done]
 
@@ -1041,17 +1041,17 @@ image:image258b.png[Stock Movement from Inventory]
 
 ===== 4.4.2.5 View Inventory ([.underline]##V##iew)
 
-To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory is highlighted, click on the *[.underline]##V##iew* button to enter the *_View Browser_* window. 
+To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory is highlighted, click the *[.underline]##V##iew* button to enter the *_View Browser_* window. 
 
 image:image258.png[View Inventory]
 
 This function allows viewing all the data for the inventory including inventory(ies) row(s) of the inventory. There is also an option to *[.underline]##P##rint* the data.
 
-NOTE: On view mode it is not possible to change anything.
+NOTE: In view mode it is not possible to change anything.
 
 ===== 4.4.2.6 Print Inventory ([.underline]##P##rint)
 
-To print the inventory, click on the *[.underline]##P##rint* button, See the resulting image below:
+To print the inventory, click the *[.underline]##P##rint* button, See the resulting image below:
 
 image:image259.png[Print Inventory]
 
@@ -1065,7 +1065,7 @@ image:image261.png[Report output with real quantity]
 
 ===== 4.4.2.7 Delete Inventory ([.underline]##D##elete)
 
-The delete button is used to cancel an inventory. Select the inventory in the *_Inventory Browser_* window, when the inventory is highlighted click on *[.underline]##D##elete* button. A confirmation window is shown:
+The delete button is used to cancel an inventory. Select the inventory in the *_Inventory Browser_* window, when the inventory is highlighted click the *[.underline]##D##elete* button. A confirmation window is shown:
 
 image:image257.png[Delete Inventory]
 
@@ -1088,7 +1088,7 @@ To access the Ward Inventory feature, click on *[.underline]##W##ard Inventory* 
 
 image:image22.png[Phamacy Menu]
 
-All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
+All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
 
 image:image262.png[Ward Inventory Browser]
 
@@ -1132,10 +1132,10 @@ The data shown in the *Upper panel* area are:
 * *Select ward*: the ward that is associated with this inventory.
 * *Date*: the date of the inventory.
 +
-NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
+NOTE: This affects the _validation_ step, when the system checks all further charges and/or discharges recorded after this date and which potentially affects the theoretical and real quantities in the current inventory.
 * *Inventory's reference*: the reference associated to the inventory.
-* *Add a medical*: this field is used to add inventory row for a medical.
-* *Add medicals by*: This button is used to add inventory row for a set of medicals.
+* *Add a medical*: this field is used to add an inventory row for a medical.
+* *Add medicals by*: This button is used to add an inventory row for a set of medicals.
 
 The data shown in the *Center panel* area represents an inventory row. The data are:
 
@@ -1153,16 +1153,16 @@ The data shown in the *Center panel* area represents an inventory row. The data 
 The *Buttons panel* is used to perform some action:
 
 * *[.underline]##S##ave*: this button is used to save the inventory.
-* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* as value *N*). To perform the operation, first highlighted the product and click this button.
+* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* as value *N*). To perform the operation, first highlighted the product and then click this button.
 
-NOTE: This button is enabled only for the inventory row where the column *New Lot* has value the value *N*, otherwise the button is disabled.
+NOTE: This button is enabled only for the inventory row where the column *New Lot* has value *N*.
 
 * *[.underline]##D##elete*: this button is used to remove one or a set of inventory rows.
 * *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
 * *[.underline]##V##alidate*: this button is used to validate the inventory.
 * *[.underline]##C##onfirm*: this button is used to confirm the inventory.
 
-NOTE: The Confirm button is enabled only if the inventory is validated, otherwise the button is disabled. See 
+NOTE: The Confirm button is enabled only if the inventory is validated. 
 
 * *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
 
@@ -1176,7 +1176,7 @@ See <<insert-inventory-row,4.4.2.1.x Insert Inventory Row for Main Inventory>> c
 
 ===== 4.5.2.2 Edit Ward Inventory ([.underline]##E##dit)
 
-To modify a ward inventory, select the inventory in the *_Manage Ward Inventory_* window. Once the inventory is highlighted, click the *[.underline]##E##dit* button to use the *return* key in the *_Edit Inventory_* window. Now the record is available for changes. This function permits editing all the data for the inventory, including inventory(ies) row(s).
+To modify a ward inventory, select the inventory in the *_Manage Ward Inventory_* window. Once the inventory is highlighted, click the *[.underline]##E##dit* button or use the *return* key in the *_Edit Inventory_* window. Now the record is available for changes. This function permits editing all the data for the inventory, including inventory(ies) row(s).
 
 image:image268.png[Edit ward Inventory]
 
@@ -1194,7 +1194,7 @@ During modification it is possible to Confirm the inventory by clicking the *[.u
 
 image:image267.png[Confirm Inventory]
 
-NOTE: Every confirmation has an implicit validation, means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation, to make sure that the inventory is fully validated before confirmation.
+NOTE: Every confirmation has an implicit validation, which means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation. This ensures that the inventory is fully validated before confirmation.
 
 image:image267b.png[Confirmed Inventory]
 
@@ -1204,7 +1204,7 @@ image:image267c.png[Ward stock movements]
 
 ===== 4.5.2.5 View Ward Inventory ([.underline]##V##iew)
 
-To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click on *[.underline]##V##iew* button to enter on the *_View Inventory_* window. 
+To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click the *[.underline]##V##iew* button which will then show the *_View Inventory_* window. 
 
 image:image265.png[View Ward Inventory]
 
@@ -1218,11 +1218,11 @@ To print the inventory, click the *[.underline]##P##rint* button shown the image
 
 image:image259.png[Print Ward Inventory]
 
-Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantity as follows:
+Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantities as follows:
 
 image:image269.png[Report output without real quantity]
 
-Click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantity as follows:
+Click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantities as follows:
 
 image:image270.png[Report output with real quantity]
 
