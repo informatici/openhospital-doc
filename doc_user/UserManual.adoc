@@ -1154,18 +1154,18 @@ The *Buttons panel* is used to perform some action:
 
 * *[.underline]##S##ave*: this button is used to save the inventory.
 * *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* as value *N*). To perform the operation, first highlighted the product and then click this button.
-
++
 NOTE: This button is enabled only for the inventory row where the column *New Lot* has value *N*.
 
 * *[.underline]##D##elete*: this button is used to remove one or a set of inventory rows.
 * *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
 * *[.underline]##V##alidate*: this button is used to validate the inventory.
 * *[.underline]##C##onfirm*: this button is used to confirm the inventory.
-
++
 NOTE: The Confirm button is enabled only if the inventory is validated. 
 
 * *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
-
++
 NOTE: It is possible to insert inventory row(s) either for specific products or for a set of products.
 
 ====== 4.5.2.1.1 Insert Inventory Row By Using The Code Or Description
