@@ -970,7 +970,7 @@ By clicking the *[.underline]##Y##es* button, the pharmaceutical is added to the
 
 image:image255c.png[New lot flag]
 
-This means that the lot has to be defined within the inventory and this can be achieved by selecting the inventory row and by clicking on the *[.underline]##L##ot* button:
+This means that the lot must be defined within the inventory. This can be achieved by selecting the inventory row and then clicking  the *[.underline]##L##ot* button:
 
 image:image255d.png[Define a lot]
 
