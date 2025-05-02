@@ -1000,7 +1000,7 @@ image:image266.png[Validate Inventory]
 
 This Information window asks whether to check for any medicals on the stock or just the ones that are in the list:
 
-- *Yes, all medicals*: the system checks if new movements are made on the main store for any medical and will show the changes in a new dialog. See below.
+- *Yes, all medicals*: the system checks if new movements are made on the main store for any medical and shows the changes in a new dialog. See below.
 - *No, only the medicals in the list*: the system checks if new movements are made on the main store for the specific medicals that are in the list. E.g., see the image below. 
 
 image:image272.png[Validate]
@@ -1027,7 +1027,7 @@ During modification only after validation is performed it is possible to confirm
 
 image:image267.png[Confirm Inventory]
 
-By clicking the *[.underline]##y##es* button, the system will convert all differences between real and theoretical quantities into charge/discharge movements and signals the process is completed with the following information message:
+By clicking the *[.underline]##y##es* button, the system converts all differences between real and theoretical quantities into charge/discharge movements and signals the process is completed with the following information message:
 
 image:image276.png[Information]
 
@@ -1088,7 +1088,7 @@ To access the Ward Inventory feature, click on *[.underline]##W##ard Inventory* 
 
 image:image22.png[Pharmacy Menu]
 
-All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
+All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window shows "open" (draft, validated) inventories regardless the date range:
 
 image:image262.png[Ward Inventory Browser]
 
@@ -1204,7 +1204,7 @@ image:image267c.png[Ward stock movements]
 
 ===== 4.5.2.5 View Ward Inventory ([.underline]##V##iew)
 
-To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click the *[.underline]##V##iew* button which will then show the *_View Inventory_* window. 
+To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click the *[.underline]##V##iew* button to show the *_View Inventory_* window. 
 
 image:image265.png[View Ward Inventory]
 
