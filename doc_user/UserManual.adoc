@@ -2,7 +2,7 @@
 :icons: font
 :stem:
 :toc: left
-:toclevels: 4
+:toclevels: 5
 :url-docs: https://asciidoctor.org/docs
 :url-gem: https://rubygems.org/gems/asciidoctor
 :imagesdir: media/
@@ -18,10 +18,10 @@ pass:[<br>][.small]#Policies is made available under a https://creativecommons.o
 == 1 Introduction
 
 OH - Open Hospital (https://www.open-hospital.org/) is a free and open-source Electronic Health Record (EHR) software application.
-Open Hospital is deployed as a desktop application that can be used in a standalone, single user mode (PORTABLE mode)
+Open Hospital is deployed as a desktop application that can be used in a stand alone, single user mode (PORTABLE mode)
 or in a client / server network configuration (CLIENT mode), where multiple clients and users connect to the same database server.
 
-Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an internet connection.
+Open Hospital is developed in Java and it is based on open-source tools and libraries; it runs on any computer, requires low resources and is designed to work without an Internet connection.
 
 Open Hospital is the first of a set of software applications that ISFfootnote:[Informatici Senza Frontiere - https://www.informaticisenzafrontiere.org] has developed to support the information management and the activities of hospitals and health centers in the simplest manner possible, by providing tools for administrative operations (like registering patients, and managing laboratory analysis and pharmaceutical stocks) and for the production of detailed statistics and reports.
 It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it is now used in dozens of different locations around the world.
@@ -51,19 +51,19 @@ In general, records can be created, edited, or deleted from the database. Certai
 * **Soft Deletion (Mark as Deleted):** Soft deletion is the practice of marking a record as deleted without actually removing it from the database. The record remains stored but is typically hidden from standard operations and searches. The purpose of soft deletion is to:
 - Retain historical or auditing data.
 - Avoid irreversible data loss.
-- Allow for potential recovery or undeleting.
+- Allow for potential recovery or un-deleting.
 +
-These records are generally **hidden** from standard users and workflows to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
-- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflows and cannot be referenced for new medicals.__
+These records are generally **hidden** from standard users and workflow to avoid cluttering the interface with irrelevant or obsolete data. A common use case is __deleting user accounts while retaining their activity logs__. Examples include:
+- <<medicals-types,12.2.8 Medicals Types>>: __Medical Types that are marked as deleted will no longer appear in standard searches or operational workflow and cannot be referenced for new medicals.__
 - <<groups,12.12.1 Groups>>: __User Groups that are marked as deleted cannot be referenced for new users. A unique code is required for new groups.__
 - <<users,12.12.2 Users>>: __Users that are marked as deleted cannot be used anymore. A unique name is required for new users.__
 
-* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflows, albeit restricted in functionality. The purpose of disabling is to:
+* **Disabling Records:** Disabling a record makes it inactive or unavailable for use, but it is still visible and accessible in some contexts. Unlike soft deletion, disabled records are often still part of workflow, albeit restricted in functionality. The purpose of disabling is to:
 - Temporarily suspend a record's usage.
 - Allow for reactivation if needed.
 +
 Disabled records are often still **visible** to standard users but clearly marked as "inactive" or "disabled." This provides transparency and maintains awareness of the record's existence. A common use case is __temporarily deactivating user accounts (e.g., suspending a subscription)__. Examples include:
-- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflows.__
+- <<insert-a-new-pharmaceutical,4.1.2.1 Insert a New Pharmaceutical>>: __Medicals that are marked as disabled (or inactive) will no longer appear in standard searches or operational workflow.__
 
 * **Statuses:** Statuses represent a record's inclusion in a process workflow without necessarily removing or disabling it. For example:
 - <<delete-a-bill,6.2.3 Delete a Bill>>: __Bills that have been moved to a deleted status will continue to appear in the list but will not be counted in the reports.__
@@ -310,7 +310,7 @@ The OPD Extended module affords the following additional features:
  with previously. For an issue or disease previously dealt with but not completely addressed (that
  is, completely cured or healed), *Re-Attendance* is
  selected and records are created for the patient in regard to the
- follow-up care and instructions for recovery.  Any other follow-up visits
+ follow-up care and instructions for recovery. Any other follow-up visits
  for the same issue are also marked as *Re-Attendance*.
 
  Example: A patient comes to the ambulatory because they report a cut; this
@@ -572,6 +572,7 @@ After the filtering criteria are chosen, press the *[.underline]##F##ilter* butt
 
 By pressing the *Rese[.underline]##t##* button, all criteria reset to default values.
 
+[#insert-stock-charging-movement]
 ===== 4.2.2.2 Insert Stock Charging Movement ([.underline]##C##harge)
 
 To insert charging movements, press *[.underline]##C##harge* in the *_Stock Movement Browser_* window. The *_Stock Movement_* window is shown:
@@ -708,7 +709,7 @@ The Pharmaceutical Stock Ward feature allows the management of the pharmacy at t
 
 To access the functions of Pharmaceuticals, press *Pharmaceutical Stock [.underline]##W##ard* on the Pharmacy menu shown below.
 
-image:image22.png[Phamacy Menu,width=220,height=182]
+image:image22.png[Pharmacy Menu,width=220,height=182]
 
 The window *_Ward Pharmacy_*, shown below, will be opened. All functions available under Pharmaceutical Stock are accessible from the *_Ward Pharmacy_* window by selecting one *WARD* on the top left of the window.
 
@@ -827,6 +828,409 @@ Otherwise the selected movement is deleted and the *_Success_* window is shown:
 image:image251.png[success]
 
 NOTE: This button can be enabled or disabled to control movements deletions. Ask the Administrator or check the Administrator's Guide for more information.
+
+[#inventory-main]
+=== 4.4 Inventory ([.underline]##I##nventory)
+
+The Inventory feature enables users to manage stock levels within the hospital's Main Store and wards. This functionality allows for the accurate tracking and adjustment of inventory, ensuring that stock levels are correctly maintained and recorded.
+
+The application supports two types of inventory management:
+
+- *Main Store Inventory*: this is the primary inventory management system for the hospital's central storage area. The details of this system are covered in this chapter.
+- *Ward Inventory*: this feature is used to manage stock levels within individual wards of the hospital. The specifics of Ward Inventory management are explained in the chapter <<inventory-ward,4.5 Ward Inventory>>.
+
+[#inventory-main-characteristics]
+==== 4.4.1 Main Characteristics
+
+The Inventory feature is used to manage stock levels in the *_Main Store_* as the hospital's central storage area. These are the main features:
+
+- Theoretical and real quantity evidence
+- Print working paper to hand write real quantities
+- Rotational (partial) inventories
+- In line lots creation and editing
+- Status workflow: (Save) DRAFT -> (Validate) VALIDATED -> (Confirm) DONE
+- Full control on charge/discharge types and supplier/destination selection (to be defined by the Administrator)
+
+==== 4.4.2 Functions of Inventory
+
+To access the functions of inventory, click on *[.underline]##I##nventory* on the Pharmacy menu.
+
+image:image22.png[Pharmacy Menu]
+
+The *_Inventory Browser_* window, shown below, will be opened. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window will show "open" (draft, validated) inventories regardless the date range:
+
+image:image252.png[Inventory Browser]
+
+The *_Inventory Browser_* window is composed of three areas: the *Search panel* at the top, the *Inventory table* in the center and the *Buttons panel* on the bottom. See the image above.
+
+The *Search panel* at the top allows for narrowing or sub-setting the inventory list by:
+
+* *Date From* and *Date To*: dates selectors used to select a period.
+* *Status* selector (e.g., 'All'): inventory status filter.
+
+The *Inventory table* in the center identifies the inventory by:
+
+* *REFERENCE*: indicates the reference of the inventory.
+* *DATE*: indicates the date the inventory was entered into the system.
+* *STATUS*: indicates the status of the inventory.
+* *USER*: indicates the user who entered the inventory.
+
+The *Buttons panel* has the following inventory operations available:
+
+* *[.underline]##N##ew*: create a new inventory.
+* *[.underline]##E##dit*: modify an existing inventory.
+* *[.underline]##V##iew*: show an existing inventory.
+* *[.underline]##D##elete*: cancel an existing inventory.
+* *[.underline]##C##lose*: close the window and return to the main menu.
+
+[#create-a-new-inventory]
+===== 4.4.2.1 Create a New Inventory ([.underline]##N##ew Inventory)
+
+The *New Inventory* function is used to create a new inventory on the main store. Click on *[.underline]##N##ew* button in the *_Inventory Browser_* window to access the *_New Inventory_* window.
+
+The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom. See the image below.
+
+image:image253.png[New Inventory]
+
+The data shown in the *Inventory panel* area are:
+
+* *Date*: the date and time when the physical check for this inventory was completed in the main store.
++
+NOTE: This affects the _validation_ step, when the system will check all further charges and/or discharges recorded after this date and so potentially affecting the theoretical and real quantities in the current inventory.
+* *Inventory's reference*: the reference associated to the inventory.
+* *Charge Type*: (e.g. Inventory+) the charge movement type used for the charge movement (when theoretical quantity < real quantity).
+* *Supplier*: (e.g. INVENTORY) the supplier used for the charge movement.
+* *Discharge Type*: (e.g. Inventory-) the discharge movement type used for discharge movement (when theoretical quantity > real quantity).
+* *Destination*: (e.g. INVENTORY) the ward used for the discharge movement.
++
+NOTE: The *Charge Type*, *Supplier*, *Discharge Type* and *Destination* can be defined by the Administrator. For instance, it is advisable to use dedicated charge and discharge types for inventories, as well as a virtual supplier and a virtual ward that will be used as origin and destination of the inventory rectifications. Ask the Administrator or check the <<settings,Settings>> chapter.
+* *Status* (e.g., 'DRAFT'): the status of the inventory. This value is set automatically by the system.
+* *Add a medical*: this field is used to add a single product by typing its code or name.
+* *Add medicals by*: This button is used to add a set of medicals, by type, quantities or actual usage. 
+
+The data shown in the *Inventory row table* area are:
+
+* *CODE*: the code of the pharmaceutical.
+* *MEDICAL*: the description of the pharmaceutical.
+* *NEW LOT*: indicates if the inventory row introduces a new lot (never recorded before) for the system.
+* *LOT's CODE*: the lot code of the pharmaceutical.
+* *DUE DATE*: the due date of the lot.
+* *THEORETICAL*: the theoretical (according to the records) quantity of the lot of the pharmaceutical.
+* *REAL QUANTITY*: the real (physical count) quantity of the lot of the pharmaceutical.
+* *DIFFERENCE*: the difference between real and theoretical quantities, if any.
+* *UNIT COST*: the unit cost of the pharmaceutical
+* *TOTAL COST*: the total cost that represents the real value of the lot.
+
+The *Buttons panel* is used to perform some action:
+
+* *[.underline]##S##ave*: this button is used to save the inventory.
+* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* has the value *N*). To perform the operation, first select the product/lot in the list and then click on this button.
++
+NOTE: This button is enabled only for products/lots where the column *New Lot* has the value *N*.
+
+* *[.underline]##D##elete*: this button is used to remove one or more products/lots from the list.
+* *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
+* *[.underline]##V##alidate*: this button is used to validate the inventory.
+* *[.underline]##C##onfirm*: this button is used to confirm the inventory.
++
+NOTE: The *Confirm* button is enabled only after the inventory is validated. See <<inventory-main-characteristics,Main Characteristics>> chapter.
+
+* *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
+
+[#insert-inventory-row]
+====== 4.4.2.1.1 Insert Inventory Row By Using The Code Or Description
+ 
+To insert an inventory row for a medical, type into the *Add medical* field the code or the description of the pharmaceutical and press ENTER. This opens the _Choose a Medical_ window:
+
+image:image254.png[Add a medical]
+
+Select the desired pharmaceutical or search for the pharmaceutical by code or description using the search field and then select the pharmaceutical by highlighting it. Next click the *[.underline]##S##elect* button to add the pharmaceutical as inventory row or click the *[.underline]##C##ancel* to return to the *_Inventory Browser_* window.
+
+====== 4.4.2.1.2 Insert Inventory Rows By Type And Usage
+
+To insert an inventory row for a set of medicals; which is useful for rotational inventories; click the *Add medicals by* button. This opens the *_Lot Information_* window.
+
+image:image255.png[Lot Information]
+
+Specify the Medical Type in the combo box (All = all medical types) and choose:
+
+* *All*: if all the pharmaceuticals for the selected Medical Type are needed.
+* *Only non-zero quantity*: if only the pharmaceuticals for the selected Medical Type with non-zero theoretical quantity are needed.
+* *With movement only*: if only the pharmaceuticals for the selected Medical Type which have been used at least once are needed.
+
+Then click on *[.underline]##O##k* button to insert all the pharmaceuticals that match the choice as the inventory(ies) row(s) in the *Inventory row table*.
+
+====== 4.4.2.1.3 Insert Inventory Row With New Lot
+
+If the pharmaceutical is already in the Inventory with all of its possible lots, the system asks if to add it anyway:
+
+image:image255b.png[Add a medical]
+
+By clicking the *[.underline]##Y##es* button, the pharmaceutical is added to the list with a *N* flag:
+
+image:image255c.png[New lot flag]
+
+This means that the lot must be defined within the inventory. This can be achieved by selecting the inventory row and then clicking  the *[.underline]##L##ot* button:
+
+image:image255d.png[Define a lot]
+
+The procedure is similar as that defined in the chapter <<insert-stock-charging-movement,4.2.2.2 Insert Stock Charging Movement>>.
+
+Once the lot is defined, a real quantity greater than zero must be specified, otherwise validation fails:
+
+image:image255e.png[Validation fail]
+
+===== 4.4.2.2 Edit Inventory ([.underline]##E##dit Inventory)
+
+To modify an inventory, select the inventory in the *_Inventory Browser_* window. Once the inventory has been highlighted, click the *[.underline]##E##dit* button to enter on the *_Edit Inventory_* window. The record is available for the editing of all the data of the inventory including inventory(ies) row(s) of the inventory.
+
+NOTE: only inventories in DRAFT and VALIDATED states can be edited.
+
+image:image256.png[Edit Inventory]
+
+===== 4.4.2.3 Validate Inventory ([.underline]##V##alidate)
+
+During modification it is possible to validate the inventory by clicking on the *[.underline]##V##alidate* button. This may result in the following dialog:
+
+image:image271.png[Error]
+
+If the inventory has unsaved changes.
+
+image:image266.png[Validate Inventory]
+
+This Information window asks whether to check for any medicals on the stock or just the ones that are in the list:
+
+- *Yes, all medicals*: the system checks if new movements are made on the main store for any medical and shows the changes in a new dialog. See below.
+- *No, only the medicals in the list*: the system checks if new movements are made on the main store for the specific medicals that are in the list. E.g., see the image below. 
+
+image:image272.png[Validate]
+
+Click on the *[.underline]##O##k* button to continue. The system may also show another information message that specifies the date of the inventory will be updated as a new more recent movement has been found:
+
+image:image273.png[Inventory date update]
+
+NOTE: Since the inventory results in a number of charges/discharges actions in <<pharmaceutical-stock,Pharmaceutical Stock>> to align the stock levels to the real quantities (physical count), so the date cannot be prior an already existing movement. The system always checks if the current inventory is the latest operation to be recorded.
+
+Click on the *[.underline]##O##k* button to continue. If new movements are found, the system shows the following dialog in order to update the current inventory:
+
+image:image274.png[Question]
+
+By clicking the *[.underline]##Y##es* button the system will actualize the inventory by adding new inventory row(s) and updating its date/time and status, see the picture below:
+
+image:image275.png[validate Inventory]
+
+Otherwise, by clicking the *[.underline]##N##o* button, nothing is changed and the inventory remains (or goes back) to DRAFT state.
+
+===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm
+
+During modification only after validation is performed it is possible to confirm the inventory by clicking on *[.underline]##C##onfirm* button. The following dialog is generated:
+
+image:image267.png[Confirm Inventory]
+
+By clicking the *[.underline]##y##es* button, the system converts all differences between real and theoretical quantities into charge/discharge movements and signals the process is completed with the following information message:
+
+image:image276.png[Information]
+
+NOTE: Every confirmation has an implicit validation, which means that every time the Confirm button is clicked, the Validation is performed to ensure that the inventory is fully validated before confirmation.
+
+image:image258.png[Inventory Done]
+
+Every difference is reflected either as a charge or a discharge Stock Movement:
+
+image:image258b.png[Stock Movement from Inventory]
+
+===== 4.4.2.5 View Inventory ([.underline]##V##iew)
+
+To view an inventory, highlight the inventory in the *_Inventory Browser_* window. Once the inventory is highlighted, click the *[.underline]##V##iew* button to enter the *_View Browser_* window. 
+
+image:image258.png[View Inventory]
+
+This function allows viewing all the data for the inventory including inventory(ies) row(s) of the inventory. There is also an option to *[.underline]##P##rint* the data.
+
+NOTE: In view mode it is not possible to change anything.
+
+===== 4.4.2.6 Print Inventory ([.underline]##P##rint)
+
+To print the inventory, click the *[.underline]##P##rint* button, See the resulting image below:
+
+image:image259.png[Print Inventory]
+
+Click on *[.underline]##Y##es* button, which results in the JasperViewer® showing the generated report without real quantities as follows:
+
+image:image260.png[Report output without real quantity]
+
+If the *[.underline]##N##o* button is selected, the JasperViewer® shows the generated report with real quantities as follows:
+
+image:image261.png[Report output with real quantity]
+
+===== 4.4.2.7 Delete Inventory ([.underline]##D##elete)
+
+The delete button is used to cancel an inventory. Select the inventory in the *_Inventory Browser_* window, when the inventory is highlighted click the *[.underline]##D##elete* button. A confirmation window is shown:
+
+image:image257.png[Delete Inventory]
+
+[#inventory-ward]
+=== 4.5 Ward Inventory ([.underline]##W##ard Inventory)
+
+==== 4.5.1 Main Characteristics
+
+The _Ward Inventory_ feature is used to manage the stock levels in a *_Ward_*. These are the main features:
+
+- Theoretical and real quantity evidence
+- Print working paper to hand write real quantities
+- Rotational (partial) inventories
+- In line lots creation and editing
+- Status workflow: (Save) DRAFT -> (Validate) VALIDATED -> (Confirm) DONE
+
+==== 4.5.2 Functions of Ward Inventory
+
+To access the Ward Inventory feature, click on *[.underline]##W##ard Inventory* on the Pharmacy menu.
+
+image:image22.png[Pharmacy Menu]
+
+All the features available under *[.underline]##W##ard Inventory* are accessible from the *_Manage Ward Inventory_* window. By default, the system shows all the inventories recorded in the period. If the "All" filter for Status is selected, the window shows "open" (draft, validated) inventories regardless the date range:
+
+image:image262.png[Ward Inventory Browser]
+
+The *_Manage Ward Inventory_* window is composed of three areas: the *Search panel* at the top, the *Ward Inventory table* in the center and the *Buttons panel* on the bottom. See the image below.
+
+The *Search panel* at the top, allows narrowing or sub-setting the inventory list by:
+
+* *Date From* and *Date To*: dates selectors used to select a period.
+* *Status* selector (e.g., 'All'): the status used to filter inventory.
+
+The *Inventory table* in the center identifies the inventory by:
+
+* *REFERENCE*: indicates the reference of the ward inventory.
+* *WARD*: indicates the ward related to the inventory.
+* *DATE*: indicates the date with which the ward inventory was entered into the system.
+* *STATUS*: indicates the status of the ward inventory.
+* *USER*: indicates the user who entered the ward inventory.
+
+The *Buttons panel* has all the functions of the ward inventory, the following choices are available:
+
+* *[.underline]##N##ew*: this button is used to create a new ward inventory.
+* *[.underline]##E##dit*: this button is used to modify an existing ward inventory.
+* *[.underline]##V##iew*: this button is used to show an existing ward inventory.
+* *[.underline]##D##elete*: this button is used to cancel an existing ward inventory.
+* *[.underline]##C##lose*: this button is used to close the window and return to the main menu.
+
+===== 4.5.2.1 Create a New ward Inventory ([.underline]##N##ew)
+
+The *New Inventory* function is used to create a new inventory for a ward. Click on *[.underline]##N##ew* button in the *_Manage Ward Inventory_* window to access the *_New Inventory_* window.
+
+image:image263.png[New ward Inventory]
+
+After the selection of the ward (FEMALE WARD in this example), the *_New Inventory_* window is shown, allowing for the management of the FEMALE WARD inventory:
+
+image:image264.png[New ward Inventory]
+
+The *_New Inventory_* window is composed of three areas: the *Inventory panel* at the top, the *Inventory row table* in the center and the *Buttons panel* on the bottom.
+
+The data shown in the *Upper panel* area are:
+
+* *Select ward*: the ward that is associated with this inventory.
+* *Date*: the date of the inventory.
++
+NOTE: This affects the _validation_ step, when the system checks all further charges and/or discharges recorded after this date and which potentially affects the theoretical and real quantities in the current inventory.
+* *Inventory's reference*: the reference associated to the inventory.
+* *Add a medical*: this field is used to add an inventory row for a medical.
+* *Add medicals by*: This button is used to add an inventory row for a set of medicals.
+
+The data shown in the *Center panel* area represents an inventory row. The data are:
+
+* *CODE*: the code of the pharmaceutical.
+* *MEDICAL*: the description of the pharmaceutical.
+* *NEW LOT*: indicates if the inventory row introduces a new lot (never recorded before) for the system.
+* *LOT's CODE.*: the lot code of the pharmaceutical.
+* *DUE DATE*: the due date of the lot.
+* *THEORETICAL*: the theoretic quantity of the lot of the pharmaceutical.
+* *REAL QUANTITY*: the real(physical) quantity of the lot of the pharmaceutical.
+* *DIFFERENCE*: the difference between real and theoretical quantities, if any.
+* *UNIT COST*: the unit cost of the pharmaceutical.
+* *TOTAL COST*: the total cost or real value of the lot.
+
+The *Buttons panel* is used to perform some action:
+
+* *[.underline]##S##ave*: this button is used to save the inventory.
+* *[.underline]##L##ot*: this button is used to link a new lot to a new specific product (the inventory row that column *New Lot* as value *N*). To perform the operation, first highlighted the product and then click this button.
++
+NOTE: This button is enabled only for the inventory row where the column *New Lot* has value *N*.
+
+* *[.underline]##D##elete*: this button is used to remove one or a set of inventory rows.
+* *Clean [.underline]##T##able*: this button is used to remove all the inventory rows.
+* *[.underline]##V##alidate*: this button is used to validate the inventory.
+* *[.underline]##C##onfirm*: this button is used to confirm the inventory.
++
+NOTE: The Confirm button is enabled only if the inventory is validated. 
+
+* *[.underline]##C##lose*: this button is used to return to the *_Inventory Browser_* window.
++
+NOTE: It is possible to insert inventory row(s) either for specific products or for a set of products.
+
+====== 4.5.2.1.1 Insert Inventory Row By Using The Code Or Description
+====== 4.5.2.1.2 Insert Inventory Rows By Type And Usage
+====== 4.5.2.1.3 Insert Inventory Row With New Lot
+
+See <<insert-inventory-row,4.4.2.1.x Insert Inventory Row for Main Inventory>> chapters.
+
+===== 4.5.2.2 Edit Ward Inventory ([.underline]##E##dit)
+
+To modify a ward inventory, select the inventory in the *_Manage Ward Inventory_* window. Once the inventory is highlighted, click the *[.underline]##E##dit* button or use the *return* key in the *_Edit Inventory_* window. Now the record is available for changes. This function permits editing all the data for the inventory, including inventory(ies) row(s).
+
+image:image268.png[Edit ward Inventory]
+
+===== 4.4.2.3 Validate Inventory ([.underline]##V##alidate)
+
+During modification it is possible to validate the inventory by clicking on *[.underline]##V##alidate* button. This results in a dialog like the one below:
+
+image:image266.png[Validate Inventory]
+
+image:image266b.png[Validated Inventory]
+
+===== 4.4.2.4 Confirm Inventory ([.underline]##C##onfirm)
+
+During modification it is possible to Confirm the inventory by clicking the *[.underline]##C##onfirm* button. The action results in the dialog shown below:
+
+image:image267.png[Confirm Inventory]
+
+NOTE: Every confirmation has an implicit validation, which means that every time the Confirm button is clicked, the Validation is automatically clicked too before confirmation. This ensures that the inventory is fully validated before confirmation.
+
+image:image267b.png[Confirmed Inventory]
+
+Every difference is reflected either as a charge or a discharge Ward Stock Movement for the same ward:
+
+image:image267c.png[Ward stock movements]
+
+===== 4.5.2.5 View Ward Inventory ([.underline]##V##iew)
+
+To view a ward inventory, highlight the inventory in the *_Manage Ward Inventory_* window. Once the inventory is  highlighted, click the *[.underline]##V##iew* button to show the *_View Inventory_* window. 
+
+image:image265.png[View Ward Inventory]
+
+This function is used to view all the data for the inventory including inventory(ies) row(s) of the inventory. There is an option to *[.underline]##P##rint* the data.
+
+NOTE: While in view mode it is not possible to change anything.
+
+===== 4.5.2.6 Print Ward Inventory ([.underline]##P##rint)
+
+To print the inventory, click the *[.underline]##P##rint* button shown the image below:
+
+image:image259.png[Print Ward Inventory]
+
+Click on *[.underline]##Y##es* button, after some time the JasperViewer® will show the generated report without real quantities as follows:
+
+image:image269.png[Report output without real quantity]
+
+Click on *[.underline]##N##o* button, after some time the JasperViewer® will show the generated report with real quantities as follows:
+
+image:image270.png[Report output with real quantity]
+
+===== 4.5.2.7 Delete Ward Inventory ([.underline]##D##elete)
+
+The delete button is used to cancel an inventory. First, highlight the inventory in the *_Inventory Browser_* window, when the inventory is highlighted, click the *[.underline]##D##elete* button in the *Buttons panel*. A confirmation window is shown:
+
+image:image257.png[Delete ward Inventory]
 
 <<<
 
@@ -1679,7 +2083,7 @@ NOTE: If the camera does not function, then change the flag to DEBUG in the conf
 diagnostic information. Ask the Administrator or refer to the _Administrator’s Guide_.
 
 ==== 8.4.4 Anamnesis
-The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions either of the patient or of other people who know the person and can give suitable information.  The aim is to obtain information useful in formulating a diagnosis and providing medical care to the patient.
+The medical history, case history, or anamnesis of a patient is information gained by a physician by asking specific questions either of the patient or of other people who know the person and can give suitable information. The aim is to obtain information useful in formulating a diagnosis and providing medical care to the patient.
 
 To modify the anamnesis data of a patient, select the patient in the *_Patient Browser_* window and then press the *[.underline]##E##dit* button. When the *_Edit Patient_* window is shown, click on the *_Anamnesis_* button and the record is available for changes. All the data can be changed.
 
@@ -2667,8 +3071,7 @@ Examples are:
 
 Operational movements will be used to calculate effective consumptions in some reports, like the *Average Monthly Consumption* report (see <<pharmaceuticals,Pharmaceuticals>>). 
 
-The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see
-<<insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
+The Medical Stock Movement Types defined are used in the Pharmaceutical Stock function (see <<insert-stock-discharging-movement,Insert Stock Discharging Movement>> in this document).
 
 [#medicals-types]
 ==== 12.2.8 Medicals Types ([.underline]##M##edicals Type)
