@@ -5,10 +5,10 @@
 .2+|*OH version* .2+|*MariaDB* / MySQL (community version) .2+|*JAVA* JRE version (*) .2+|O.S. .2+|O.S. arch .2+|JAVA/MariaDB arch 3+|Special Features
 |Imaging - DICOM (*) |SMS (gsm) |Webcam
 
-.4+|*1.15.0* .2+| *10.6.14* / n.a. .2+|*zulu17.46.19* |*Ubuntu 22.10* | *x64* | *64bit* |✔|n/t|✔
+.4+|*1.15.0* .2+| *10.6.23* / n.a. .2+|*zulu17.60.17* |*Ubuntu 22.10* | *x64* | *64bit* |✔|n/t|✔
 |*Windows 10/11* (**) | *x64* | *64bit* |✔|✔|✔
-|10.5.21 |zulu17.46.19 |_Linux32_ | _i686_ | _32bit_ |n/t|n/t|n/t
-|10.6.5 |zulu17.46.19|_Windows 7/10 (**)_ | _i386_ | _32bit_ |✔|✔|✔
+|10.5.27 |zulu17.60.17 |_Linux32_ | _i686_ | _32bit_ |n/t|n/t|n/t
+|10.6.23 |zulu17.60.17|_Windows 7/10 (**)_ | _i386_ | _32bit_ |✔|✔|✔
 
 .4+|*1.14.2* .2+| *10.6.14* / n.a. .2+|*zulu17.46.19* |*Ubuntu 22.10* | *x64* | *64bit* |✔|n/t|✔
 |*Windows 10/11* (**) | *x64* | *64bit* |✔|✔|✔
