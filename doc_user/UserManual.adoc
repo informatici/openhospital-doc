@@ -1,4 +1,4 @@
-= Open Hospital 1.14.2 - User's Guide
+= Open Hospital 1.15.0 - User's Guide
 :icons: font
 :stem:
 :toc: left
@@ -30,7 +30,7 @@ It was first deployed in 2006 at the St. Luke Hospital in Angal (Uganda) and it 
 
 OH - Open Hospital features include:
 
-* Pharmacy management
+* Pharmacy management with Inventory
 * Laboratory management
 * OPD management
 * Patient admission and discharge management
