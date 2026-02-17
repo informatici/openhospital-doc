@@ -2294,11 +2294,11 @@ To define a new report it is possible to start from scratch or modify an existin
 
 * open Jaspersoft® Studio 
 * open the original jrxml file
-* edit it to modify the report as desired
-* save the jrxml file with a new file name
-* re-compile the jrxml file in jasper format (generate the .jasper file)
+* modify the report as desired
+* save the .jrxml file with a new name
+* re-compile the .jrxml file in jasper format (generate the .jasper file)
 * place the .jasper file in the report folder used by the Open Hospital application (rpt_extra/)
-* the OH application will show the custom reports in the Statistics menu.
+* Open Hospital will show the custom reports in the Statistics menu.
 
 
 <<<
