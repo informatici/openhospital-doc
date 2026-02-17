@@ -2287,15 +2287,17 @@ Each report consists of two files:
 * a .*jrxml* file: JasperReport XML file, that can be modified with a specific editor
 * a .*jasper* file: Jasper file, which is the compiled version of the jrxml report, suitable to be run in Open Hospital
 
-NOTE: some reports could also have more than one *.properties* file; this means that the report has been translated into different languages (the default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name of the report visualized in the Open Hospital application, otherwise the application will not show it (this can be useful for subreports).
+NOTE: Some reports could also have more than one *.properties* file; this means that the report has been translated into different languages (the default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name of the report visualized in the Open Hospital application, otherwise the application will not show it (this can be useful for subreports).
 
 In order to create / modify a report, it is possibile to use a free application, https://community.jaspersoft.com/download-jaspersoft/community-edition/[TIBCO Jaspersoft® Studio] version 6.14.0 or later.
-To define a new report with Jaspersoft® Studio it is possible to start from scratch or modify an existing Open Hospital report:
+To define a new report it is possible to start from scratch or modify an existing Open Hospital report:
 
-* open the jrxml file
-* edit it
+* open Jaspersoft® Studio 
+* open the original jrxml file
+* edit it to modify the report as desired
+* save the jrxml file with a new file name
 * re-compile the jrxml file in jasper format (generate the .jasper file)
-* place the jasper report file in the report folder and used by the Open Hospital application (rpt_extra/)
+* place the .jasper file in the report folder used by the Open Hospital application (rpt_extra/)
 * the OH application will show the custom reports in the Statistics menu.
 
 
