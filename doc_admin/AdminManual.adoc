@@ -2284,7 +2284,7 @@ Open Hospital reports are placed into three different folders (see <<folders,Fol
     
 Each report consists of two files:
 
-* a .*jrxml* file: JasperReport XML file, that can be modified with a specific editor
+* a .*jrxml* file: JasperReport XML file, that can be modified with Jaspersoft® Studio (see below)
 * a .*jasper* file: Jasper file, which is the compiled version of the jrxml report, suitable to be run in Open Hospital
 
 NOTE: Some reports could also have more than one *.properties* file; this means that the report has been translated into different languages (the default is English). At least the default *.properties* file should contain the *jTitle* property that defines the name of the report visualized in the Open Hospital application, otherwise the application will not show it (this can be useful for subreports).
