@@ -2437,6 +2437,12 @@ Next, the following data to be used for the image is prompted for (or the multi-
 
 image:image243.png[Image information,width=282,height=200]
 
+If the patient already has one or more image series, a window is then shown to choose where to load the file: either into a *New series* or into one of the existing series. The series currently selected in the thumbnails (if any) is preselected.
+
+image:image243b.png[Select series,width=300,height=150]
+
+Choosing an existing series adds the image to that series instead of creating a new one.
+
 *[.underline]#N.B.#* There is no *Edit Image*, so if a mistake is made, delete the image file (*Delete Image*) and then reload it (*Load Image*) again.
 
 Find the image file and click the *Open Image* button to load the file into the *_Imaging viewer_*.
