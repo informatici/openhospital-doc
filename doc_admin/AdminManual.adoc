@@ -2414,6 +2414,8 @@ _sql/update_ folder (e.g.):
 | 1.13 | 1.14 | _update_1_13-1_14.sql_
 |===
 
+NOTE: From this release each admission stores a snapshot of the patient's sex and age at admission time (`OH_ADMISSION.ADM_SEX` / `ADM_AGE`). This allows aggregate statistics (e.g. admissions by disease, sex and age) to be produced without joining the patient table, i.e. without exposing personal data. The update script adds the two columns and back-fills them for existing admissions (age is computed at the admission date); admissions whose patient has no birth date get a `NULL` age.
+
 To perform the database update process follow these steps:
 
 . Close the program if it is still running
