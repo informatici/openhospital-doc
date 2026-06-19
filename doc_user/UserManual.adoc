@@ -585,7 +585,7 @@ The *Panel* contains the following fields:
 
 * *Date*: the date of the movement
 * *Charge Type*: the charge type
-* *Supplier*: the origin of the pharmaceutical
+* *Supplier*: the origin of the pharmaceutical. Suppliers flagged as _virtual_ (e.g. INVENTORY, LOST, BROKEN, EXPIRED) are listed with a _(virtual)_ suffix and can be selected to record charges that do not come from a real supplier
 * *Reference No.*: the reference of the operation
 
 The *Grid* is filled with the pharmaceuticals involved in the charging movement. To fill the grid, use the field above the grid to select a pharmaceutical. Enter into the field the code or the description of the pharmaceutical to move, and
@@ -638,7 +638,7 @@ The *Panel* contains the following fields:
 
 * *Date*: the date of the movement
 * *Discharge Type*: the discharge type
-* *Destination*: the ward where the discharged medical will be affected
+* *Destination*: the ward where the discharged medical will be affected. Wards flagged as _virtual_ (e.g. INVENTORY, LOST, BROKEN, EXPIRED) are listed with a _(virtual)_ suffix and can be selected as the destination of discharges that do not target a physical ward
 * *Reference No.*: the reference number of the operation
 
 The *Grid* is filled in with pharmaceuticals involved in the discharging movement. To fill the grid, enter into the field above the grid the description of the pharmaceutical to discharge, and
@@ -3266,6 +3266,7 @@ To insert a new ward, provide the following required inputs:
 * *Ward with pharmacy*: it is used in Pharmaceuticals Stock; if checked, it means that the ward can be a destination for discharging movements; otherwise it will be not shown in the list
 * *Male Ward*: if it is a male Ward
 * *Female Ward*: if it is a female Ward
+* *Virtual Ward*: if checked, the ward represents a virtual destination (e.g. INVENTORY, LOST, BROKEN, EXPIRED) rather than a physical ward. Virtual wards are shown with a _(virtual)_ suffix when selected as a destination for Main Store discharging movements.
 
 NOTE: Maternity (M) and OPD (OPD) wards are _built-in_ wards and cannot be deleted, although they can be modified as needed.
 
@@ -3522,6 +3523,7 @@ The information associated with a new supplier is:
 * *Fax number*: is the supplier's FAX number.
 * *E-mail*: is the supplier's email address.
 * *Note*: Additional notes about the supplier.
+* *Virtual Supplier*: if checked, the supplier represents a virtual origin (e.g. INVENTORY, LOST, BROKEN, EXPIRED) rather than a real supplier. Virtual suppliers are shown with a _(virtual)_ suffix when selected as the origin of a Main Store charging movement.
 
 When the data is entered, click the *[.underline]##O##K* button to save the new supplier.
 
