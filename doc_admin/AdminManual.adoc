@@ -827,6 +827,8 @@ be required on other clients, with the same defined user and group.
 
 WARNING: Data security must never be left solely to the application but it must include proper network architecture and a rigid configuration of the clients.
 
+NOTE: To avoid information disclosure, Open Hospital masks internal errors: users and API clients only receive generic, user-facing error messages and never see stack traces, SQL statements, or internal exception class names. The full technical details of every error are written only to the application log files, where administrators can inspect them.
+
 
 ==== 3.1.3 AUTOMATICLOT
 
