@@ -2043,7 +2043,7 @@ image:image87a.png[Age by Age,width=187,height=74]
 
 * *BloodType*: valid values are 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: valid values are Single, Married, Divorced, and Widowed. If left empty, the default is Unknown
-* *Profession*: valid values are Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering. If left empty, the default is Unknown
+* *Profession*: the available values are defined by the Administrator as a configurable list (no longer hard-coded). A set of default professions is provided (Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering) and can be edited under the <<settings,Settings>> chapter (see <<profession,Profession>>). If left empty, the default is Unknown
 * *Father's Name*: specify the name of the patient's father and if he is still alive
 * *Mother's Name*: specify the name of the patient's mother and if she is still alive
 * *Parents Together*: specify if the parents are still together
@@ -2887,6 +2887,7 @@ Pressing the *[.underline]##S##ettings* button main menu provides access to the 
 * *[.underline]##V##accine*: define which vaccines are given in the hospital
 * *[.underline]##P##rices lists*: define unitary costs of the services provided by the hospital
 * *[.underline]##S##upplier*: manage medicals suppliers
+* *[.underline]##P##rofession*: define the selectable list of patient professions
 * *S[.underline]##M##S Manager*: send an SMS or schedule an SMS sending
 * *[.underline]##U##sers & Groups*: manage information about various users and groups
 
@@ -3532,8 +3533,29 @@ After performing the necessary modifications, click the *[.underline]##O##K* but
 To delete a supplier, in the *_Supplier Browser_* highlight the supplier and
 click on the *[.underline]##D##elete* button to remove the selected Supplier.
 
+[#profession]
+=== 12.11 Profession ([.underline]##P##rofession)
+
+Once the *[.underline]##P##rofession* button in the *_Settings_* menu is pressed, the *_Profession Browser_* window is shown.
+
+Professions are no longer hard-coded: the list shown in the patient's *Profession* combo box (see <<insert-a-new-patient-extended,Insert a New Patient Extended>>) is now fully configurable from this window. A set of default professions is installed with the application and can be freely extended or modified.
+
+The functions available in this window are:
+
+* *[.underline]##N##ew*: insert a new profession (cannot use an existing code).
+* *[.underline]##E##dit*: edit an existing profession (the code cannot be changed).
+* *[.underline]##D##elete*: delete a profession (cannot be deleted if still used somewhere in the application).
+* *[.underline]##C##lose*: close the window.
+
+To add a profession, click the *[.underline]##N##ew* button to access the *_New Profession_* window. The information associated with a new profession is:
+
+* *Code*: the profession code (it must be unique).
+* *Description*: the description shown in the patient's *Profession* combo box.
+
+When the data is entered, click the *[.underline]##O##K* button to save the new profession.
+
 [#sms-manager]
-=== 12.11 SMS Manager (S[.underline]##M##S Manager)
+=== 12.12 SMS Manager (S[.underline]##M##S Manager)
 
 WARNING: SMS pricing is set and collected by the SMS Provider (GSM or HTTP) and is related to or controlled by this software.
 
@@ -3566,7 +3588,7 @@ Then click *[.underline]##O##K* to save the new SMS. If the scheduled date and t
 To delete an SMS, highlight the SMS and click the *[.underline]##D##elete* button to delete the SMS.
 
 [#users-groups]
-=== 12.12 Users & Groups ([.underline]##U##sers & Groups)
+=== 12.13 Users & Groups ([.underline]##U##sers & Groups)
 
 The User Menu can be enabled or disabled by changing the _SINGLEUSER_ flag in the configuration file**.** Ask the Administrator to enable/disable this function or refer to the _Administrator’s Guide_.
 
