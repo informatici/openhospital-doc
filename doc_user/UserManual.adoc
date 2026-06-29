@@ -1451,7 +1451,7 @@ The following [.underline]##filter options## are available at the *Upper panel* 
 * *Date From* and *Date To*: dates selectors used to select a period
 * *[Month]* selector (e.g. 'December'): to quickly select one month in *Date From* and *Date To* field
 * *[year]* selector (e.g. '2022'): to quickly select a year in *Date From* and *Date To* field
-* *[Patient]* selector: to filter bills for a patient within the specified *Date From* and *Date To* period
+* *Find Patient* button: to filter bills for a patient within the specified *Date From* and *Date To* period
 
 The following [.underline]##functions## are accessible from the *Buttons panel* of the *_Patient Bills Management_* window:
 
