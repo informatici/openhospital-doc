@@ -720,6 +720,7 @@ AUTOMATICLOT_IN=no
 AUTOMATICLOT_OUT=no
 AUTOMATICLOTWARD_TOWARD=no
 LOTWITHCOST=yes
+LOTCOSTVARIANCEPERCENT=50
 PHARMACEUTICALORDER=PharmaceuticalOrder
 PHARMACEUTICALSTOCK=PharmaceuticalStock_ver4
 PHARMACEUTICALSTOCKLOT=PharmaceuticalStock_ver5
@@ -870,10 +871,13 @@ The following table shows the default value and the allowed ones:
 |===
 |Key |Default Value |Valid Values
 |LOTWITHCOST |yes |yes, no
+|LOTCOSTVARIANCEPERCENT |50 |0 (disabled) or any positive integer
 |===
 
 Open Hospital allows for managing the cost of medicals in the main pharmacy
 (see link:https://github.com/informatici/openhospital-doc/blob/develop/doc_user/UserManual.adoc#4-2-2-2-insert-stock-charging-movement-charge[4.2.2.2 Insert stock charging movement] in the User's Guide).
+
+When *LOTWITHCOST = yes*, *LOTCOSTVARIANCEPERCENT* sets the maximum allowed percentage deviation between the cost entered for a new lot and the average cost of the previous lots of the same medical. When the entered cost exceeds this deviation, the application asks the user to confirm before accepting it, helping to catch data-entry errors. Setting it to *0* disables the check.
 
 NOTE: An application restart is required to apply the modified setting.
 
