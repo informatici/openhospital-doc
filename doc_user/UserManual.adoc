@@ -619,6 +619,8 @@ Then click *[.underline]##O##K* to insert the medical information as a line in t
 
 Finally, click the *[.underline]##S##ave* button to save the charge movement.
 
+If the movement cannot be completed in one session, click the *Save Draf[.underline]##t##* button instead: the content of the window (header fields and grid rows) is stored as a draft and the window closes. No stock movement is generated and stock quantities are not affected. The draft can be resumed and completed later (see <<draft-stock-movements,4.2.2.5 Draft Stock Movements>>).
+
 NOTE: The Lot definition can be set as automatic by changing the AUTOMATICLOT_IN flag in the configuration
 file, so every new charging movement automatically creates a new lot. Regardless of the setting,
 the Expiring Date must always be provided. Ask the Administrator or refer to the _Administrator’s Guide_.
@@ -660,6 +662,8 @@ Select the existing lot and click *[.underline]##O##K* to insert the medical dis
 
 Click the *[.underline]##S##ave* button to save the discharge movement.
 
+If the movement cannot be completed in one session, click the *Save Draf[.underline]##t##* button instead: the content of the window (header fields and grid rows) is stored as a draft and the window closes. No stock movement is generated and stock quantities are not affected. The draft can be resumed and completed later (see <<draft-stock-movements,4.2.2.5 Draft Stock Movements>>).
+
 NOTE: The Lot definition can be set as automatic by changing the flag AUTOMATICLOT_OUT in the configuration
 file, so every new discharging movement will automatically select a suitable lot for the operation according
 to the expiring date. If the first selected lot does not contain a high enough quantity to serve the discharging
@@ -695,6 +699,33 @@ Otherwise the selected movement is deleted and the *_Success_* window is shown:
 image:image251.png[success]
 
 NOTE: This button can be enabled/disabled to allow/not allow movements deletion. Ask the Administrator or check the Administrator's Guide for more information.
+
+[#draft-stock-movements]
+===== 4.2.2.5 Draft Stock Movements (Save Draf[.underline]##t##)
+
+Charging and discharging movements that involve many pharmaceuticals may require long typing and double checking, and sometimes the work must be paused and resumed later. For this purpose, both the *_Stock Movement_* windows (charge and discharge) provide a *Save Draf[.underline]##t##* button, located next to the *[.underline]##S##ave* button.
+
+Clicking *Save Draf[.underline]##t##* stores the current content of the window — the *Panel* fields (date, movement type, supplier or destination, reference number) and every row of the *Grid*, exactly as typed — as a draft, and closes the window. A draft:
+
+* does *not* generate any stock movement and does *not* affect stock quantities;
+* may be incomplete: fields that are still empty (for example the supplier, the reference number, or lot details) are saved as they are and can be filled in later;
+* can be resumed, edited and saved as a draft again as many times as needed.
+
+// TODO (follow-up): screenshot of the Stock Movement window showing the Save Draft button (to be captured on Linux/Metal, see project convention).
+
+When *[.underline]##C##harge* or *Discha[.underline]##r##ge* is pressed in the *_Stock Movement Browser_* window and one or more drafts exist for that kind of movement, the *_Draft Stock Movements_* window is shown first. It lists the available drafts with their last modification date, the user who created them, the reference number, the movement type, the supplier or destination, and the number of rows. The following functions are available:
+
+* *[.underline]##R##esume Draft*: open the *_Stock Movement_* window pre-filled with the selected draft, ready to be edited or completed.
+* *De[.underline]##l##ete Draft*: permanently delete the selected draft after confirmation. No stock quantity is affected, since a draft never generates movements.
+* *Start [.underline]##N##ew*: ignore the drafts and open an empty *_Stock Movement_* window.
+
+// TODO (follow-up): screenshot of the Draft Stock Movements window (draft chooser dialog; capture on Linux/Metal).
+
+Drafts are shared: any user allowed to record charge (or discharge) movements can see, resume and delete the drafts of that kind; the list shows who created each draft.
+
+To finalize a draft, resume it and press the normal *[.underline]##S##ave* button: the movement is validated and recorded exactly as if it had been typed in a single session, and the draft is deleted automatically once the movement is saved successfully. Because a draft may stay saved for a while, all the usual checks are performed at that moment — for example the movement date, the reference number and, for discharging movements, the available stock quantities.
+
+NOTE: When a draft is resumed, rows that can no longer be restored — for example because the pharmaceutical or the lot has been deleted in the meantime, or the remaining stock is no longer sufficient for a discharging row — are removed from the window and a warning lists them. The draft itself is not modified until it is saved again, or deleted after a successful movement.
 
 [#pharmaceutical-stock-ward]
 === 4.3 Pharmaceuticals Stock Ward (Pharmaceuticals Stock [.underline]##W##ard)
