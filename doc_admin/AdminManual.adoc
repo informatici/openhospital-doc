@@ -2513,3 +2513,106 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
+
+<<<
+
+== 9 GDPR - Data Portability (Art. 20)
+
+=== 9.1 Legal basis
+
+Article 20 of the EU General Data Protection Regulation (GDPR) grants data subjects the right to receive the personal data
+concerning them, which they have provided to a controller, in a structured, commonly used and machine-readable format.
+To support this right, Open Hospital can export, for a single patient, the patient record together with all the clinical
+and administrative records connected to it, in an open format (JSON, or CSV via the REST API).
+
+=== 9.2 The patient.export permission
+
+The export function is protected by a dedicated permission named *patient.export*.
+It applies to all channels: the GUI button, the REST API endpoint and the Web UI button are only available to users
+belonging to a group that holds this permission.
+
+A fresh installation (or a demo database) grants *patient.export* to the *admin* group only.
+
+To grant the permission to another user group, use the permission editor in the Web UI (_Settings_ -> _User Groups_),
+or run the following SQL statement on the database (example for the group `doctor`):
+
+[source,shell]
+----
+MariaDB> INSERT INTO oh_grouppermission (GP_ID, GP_UG_ID_A, GP_P_ID_A, GP_ACTIVE)
+	 SELECT (SELECT MAX(g.GP_ID) + 1 FROM oh_grouppermission g), 'doctor', p.P_ID_A, '1'
+	 FROM oh_permissions p WHERE p.P_NAME = 'patient.export';
+----
+
+NOTE: The statement looks the permission up by name instead of using a hard-coded numeric ID, so it works regardless
+of the actual `P_ID_A` value assigned on your installation.
+
+=== 9.3 Export procedure
+
+The export can be triggered from three channels; all of them require the *patient.export* permission.
+
+*Desktop GUI (Java client)*
+
+. Open the *_Patient Browser_* window and select the patient;
+. press the *Export Patient Data* button;
+. choose the destination file in the save dialog (the proposed name is `patient_<code>_export.json`);
+. the complete patient data set is written to the selected file as UTF-8 encoded JSON.
+
+*REST API*
+
+The API exposes a dedicated endpoint:
+
+[source,shell]
+----
+GET /patients/{code}/export
+----
+
+* with `Accept: application/json` (or no `Accept` header) the aggregate is returned as JSON;
+* with `Accept: text/csv` the aggregate is returned as CSV, with a `Content-Disposition` attachment header
+(`patient_<code>_export.csv`);
+* the authenticated user must hold the *patient.export* permission, otherwise the request is rejected with HTTP 403;
+* if no patient exists with the given code, the endpoint returns HTTP 404.
+
+*Web UI*
+
+In the patient details view, users with the *patient.export* permission see an *Export patient data* button that
+downloads the JSON document through the browser.
+
+=== 9.4 Export format
+
+The JSON document contains the following groups (empty groups are exported as empty lists, never omitted):
+
+* `patient` - the patient master record;
+* `admissions` - admission/discharge history;
+* `opds` - OPD (outpatient department) visits;
+* `laboratories` - laboratory exams;
+* `therapies` - therapy rows;
+* `operations` - surgical operation rows;
+* `vaccines` - administered vaccines;
+* `examinations` - patient examinations (vital signs, height/weight, etc.);
+* `bills` - bills headers;
+* `billItems` - bill line items (each item carries the ID of the bill it belongs to);
+* `billPayments` - bill payments (each payment carries the ID of the bill it belongs to).
+
+The CSV variant (REST API only) contains one section per group: a `# <group>` marker line, followed by a header row and
+the data rows, with a blank line between sections. Fields are quoted and escaped according to RFC 4180 and the file is
+UTF-8 encoded.
+
+NOTE: Because of the per-group marker lines, the CSV file is a multi-table container rather than a single flat CSV
+table: split it on the `# <group>` markers before feeding the individual sections to a standard CSV parser.
+
+NOTE: The JSON produced by the desktop GUI is serialized from the internal data model, while the REST API serializes
+its data-transfer objects: the two documents contain the same information but some field names differ slightly between
+the two channels.
+
+=== 9.5 Data not included
+
+The export covers the groups listed above. The following patient-linked data are currently *not* included and, if
+requested, must be extracted separately:
+
+* the patient profile photo (excluded from the JSON body in both channels);
+* pharmaceutical stock ward movements (drugs given to the patient from ward stock);
+* visits/appointments;
+* malnutrition control records;
+* patient consensus records;
+* anamnesis (patient history);
+* DICOM images.

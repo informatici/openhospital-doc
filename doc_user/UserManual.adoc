@@ -2660,6 +2660,20 @@ If two patients with a different sex are merged, the operation is not allowed, w
 
 image:image122.png[Patient merge sex]
 
+=== 8.12 Export Patient Data (GDPR)
+
+Open Hospital can export all the data recorded for a single patient (personal record, admissions, OPD visits,
+laboratory exams, therapies, operations, vaccines, examinations and bills) into a single file in JSON format, to
+support the right to data portability established by Article 20 of the GDPR.
+
+To export a patient's data, highlight the patient in the *_Patient Browser_* window and press the
+*Export Patient Data* button; choose the destination file in the dialog and the data is saved as a JSON document.
+The same export is also available from the patient details view of the Web UI.
+
+NOTE: The *Export Patient Data* button is visible only to users whose group has been granted the *patient.export*
+permission (see the _Administrator's Guide_, chapter _GDPR - Data Portability_). By default only the *admin* group
+holds it.
+
 <<<
 
 [#statistics]
