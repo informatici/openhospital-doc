@@ -3495,7 +3495,9 @@ By pressing the *[.underline]##E##dit* button, the *_Edit List_* window is shown
 
 image:image181.png[Edit List]
 
-In editing mode, any of the data related to the list can be changed.
+In editing mode, any of the data related to the list can be changed, except the *Currency*.
+
+NOTE: The *Currency* is no longer entered manually: all price lists share the hospital's global currency (defined in the Hospital information). The field is shown read-only for reference.
 
 The lists defined are used in the Accounting module (see
 <<insert-a-new-bill,Insert a new bill>> in this document).
