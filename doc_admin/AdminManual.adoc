@@ -1647,25 +1647,6 @@ To disable this check set PASSWORDIDLE to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
-[#passwordlease]
-==== 3.1.41 PASSWORDLEASE
-
-The following table shows the default value and the allowed ones:
-
-[cols=",,",options="header",]
-|===
-|Key |Default Value | Allowed Values
-|PASSWORDLEASE | 0 | a positive integer value greater than or equal to 0; the unit of time is days
-|===
-
-The value of PASSWORDLEASE specifies the maximum number of days a password remains valid (the password lease). When the lease expires, the user is required to change the password at the next login, before being granted access to the application, both in the desktop GUI and in the web UI. To disable the password lease set PASSWORDLEASE to 0 (the default).
-
-In addition, a password assigned by an administrator (when creating a user or resetting another user's password) must be changed by the user at the first login, regardless of the PASSWORDLEASE value.
-
-NOTE: For production environments a value of 90 days is recommended.
-
-NOTE: An application restart is required to apply the modified setting.
-
 ==== 3.1.41 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
@@ -1761,6 +1742,25 @@ image:image69.png[image,width=847,height=522]
 This is the URL of the online configuration/parameters file.
 
 NOTE: This setting is not meant to be modified by the user.
+
+[#passwordlease]
+==== 3.1.47 PASSWORDLEASE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDLEASE | 0 | a positive integer value greater than or equal to 0; the unit of time is days
+|===
+
+The value of PASSWORDLEASE specifies the maximum number of days a password remains valid (the password lease). When the lease expires, the user is required to change the password at the next login, before being granted access to the application, both in the desktop GUI and in the web UI. To disable the password lease set PASSWORDLEASE to 0 (the default).
+
+In addition, a password assigned by an administrator (when creating a user or resetting another user's password) must be changed by the user at the first login, regardless of the PASSWORDLEASE value.
+
+NOTE: For production environments a value of 90 days is recommended.
+
+NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 === 3.2 database.properties
