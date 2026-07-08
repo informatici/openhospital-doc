@@ -2414,7 +2414,7 @@ _sql/update_ folder (e.g.):
 | 1.13 | 1.14 | _update_1_13-1_14.sql_
 |===
 
-NOTE: From this release the user-related tables enforce additional uniqueness at the database level: a permission name (`OH_PERMISSIONS.P_NAME`) and each (user group, permission) pair (`OH_GROUPPERMISSION`) must be unique. Duplicate (user group, permission) rows are removed automatically by the update script, but duplicate permission names are NOT (a permission may be referenced elsewhere): if any exist the update fails fast without changing data, so resolve the duplicates reported by the pre-flight queries and then re-run.
+NOTE: The user-related tables enforce uniqueness at the database level: a permission name (`OH_PERMISSIONS.P_NAME`) and each (user group, permission) pair (`OH_GROUPPERMISSION`) must be unique. When running the database update, duplicate (user group, permission) rows are removed automatically by the update script, but duplicate permission names are NOT (a permission may be referenced elsewhere): if any exist the update fails fast without changing data, so resolve the duplicates reported by the pre-flight queries and then re-run.
 
 To perform the database update process follow these steps:
 
