@@ -2043,7 +2043,7 @@ image:image87a.png[Age by Age,width=187,height=74]
 
 * *BloodType*: valid values are 0+, A+, B+, AB+, 0-, A-, B-
 * *Marital Status*: valid values are Single, Married, Divorced, and Widowed. If left empty, the default is Unknown
-* *Profession*: the available values are defined by the Administrator as a configurable list (no longer hard-coded). A set of default professions is provided (Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering) and can be edited under the <<settings,Settings>> chapter (see <<profession,Profession>>). If left empty, the default is Unknown
+* *Profession*: the available values are defined by the Administrator as a configurable list. A set of default professions is provided (Other, Farming, Construction, Medicine, Food/Hospitality, Homemaker, Mechanic, Business, Janitorial Services, Mining, and Engineering) and can be edited under the <<settings,Settings>> chapter (see <<profession,Profession>>). If left empty, the default is Unknown
 * *Father's Name*: specify the name of the patient's father and if he is still alive
 * *Mother's Name*: specify the name of the patient's mother and if she is still alive
 * *Parents Together*: specify if the parents are still together
@@ -3538,7 +3538,7 @@ click on the *[.underline]##D##elete* button to remove the selected Supplier.
 
 Once the *[.underline]##P##rofession* button in the *_Settings_* menu is pressed, the *_Profession Browser_* window is shown.
 
-Professions are no longer hard-coded: the list shown in the patient's *Profession* combo box (see <<insert-a-new-patient-extended,Insert a New Patient Extended>>) is now fully configurable from this window. A set of default professions is installed with the application and can be freely extended or modified.
+The list shown in the patient's *Profession* combo box (see <<insert-a-new-patient-extended,Insert a New Patient Extended>>) is fully configurable from this window. A set of default professions is installed with the application and can be freely extended or modified.
 
 The functions available in this window are:
 
