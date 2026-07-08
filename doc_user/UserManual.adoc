@@ -680,11 +680,11 @@ If it is not the last movement the following  *_Error_* message is shown:
 
 image:image250.png[Not last movement error]
 
-But if the row selected is the last movement this *_Question_* message is presented:
+But if the row selected is the last movement, the following dialog is presented, where a *reason* for the deletion must be entered (it is kept in the audit log of deleted movements):
 
-image:image248.png[Question]
+image:image248.png[Delete movement]
 
-Click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After clicking the *[.underline]##Y##es* button, the system checks if the product involved in the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_* (see <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
+Type a reason (it is required and cannot be left empty) and click *[.underline]##Y##es* to confirm the deletion of the last movement, otherwise click *[.underline]##N##o* to cancel the operation. After confirming, the system checks if the product involved in the selected movement has not been used itself in the *_Pharmaceuticals Stock [.underline]##W##ard_* (see <<pharmaceutical-stock-ward,Pharmaceuticals Stock Ward>> in this document).
 
 If the product has been already used in a Ward, then the *_Error_* message is shown.
 
