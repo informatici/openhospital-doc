@@ -2513,3 +2513,81 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
 pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
+
+<<<
+
+== 9 GDPR - Right to Erasure (Art. 17)
+
+=== 9.1 Legal basis
+
+Article 17 of the EU General Data Protection Regulation (GDPR) grants data subjects the right to obtain the erasure of
+their personal data. When clinical data that is not directly identifying must nevertheless be kept for statistical or
+epidemiological use, Open Hospital satisfies this right by *anonymizing* the patient: the personal identification data is
+irreversibly overwritten, while the clinical records are preserved in an anonymous form.
+
+WARNING: Anonymization is irreversible. Once a patient is anonymized the personal data cannot be recovered.
+
+=== 9.2 Permissions
+
+Anonymization is protected on two independent channels, both restricted to the *admin* group on a fresh installation
+(or a demo database):
+
+* the REST API endpoint is guarded by the *patient.anonymize* permission (`OH_PERMISSIONS`);
+* the desktop GUI button is guarded by the *btnpatientanonymize* menu grant (`OH_GROUPMENU`), because the Java client
+reads the user's menu grants rather than the API permissions.
+
+To grant the API permission to another user group, use the permission editor in the Web UI (_Settings_ -> _User Groups_),
+or run the following SQL statement (example for the group `doctor`):
+
+[source,shell]
+----
+MariaDB> INSERT INTO OH_GROUPPERMISSION (GP_UG_ID_A, GP_P_ID_A, GP_ACTIVE)
+	 SELECT 'doctor', p.P_ID_A, 1 FROM OH_PERMISSIONS p WHERE p.P_NAME = 'patient.anonymize';
+----
+
+To make the GUI button available to another group, grant it the *btnpatientanonymize* menu item from the User Groups
+editor (or the equivalent `OH_GROUPMENU` row).
+
+NOTE: The statements look the grant up by name instead of using a hard-coded numeric ID, so they work regardless of the
+values assigned on your installation.
+
+=== 9.3 Anonymization procedure
+
+*Desktop GUI (Java client)*
+
+. Open the *_Admission/Patient_* window and select the patient;
+. press the *Anonymize* button (visible only with the *btnpatientanonymize* grant);
+. confirm the irreversible-action dialog.
+
+The personal fields of the record are then displayed with placeholder values and become read-only.
+
+*REST API*
+
+The API exposes a dedicated endpoint:
+
+[source,shell]
+----
+DELETE /patients/{code}/personal-data
+----
+
+* the authenticated user must hold the *patient.anonymize* permission, otherwise the request is rejected with HTTP 403;
+* if no patient exists with the given code, the endpoint returns HTTP 404.
+
+=== 9.4 What is anonymized
+
+The following personal fields are overwritten with sentinel values:
+
+* first name, last name, mother's name and father's name -> `ANONYMIZED`;
+* address, city and telephone -> empty;
+* tax code -> `DELETED`;
+* the patient profile photo and every linked DICOM series are removed.
+
+The record is flagged as anonymized (`PAT_ANONYMIZED`), which makes the personal fields read-only in the client.
+
+=== 9.5 What is preserved
+
+Everything that is not directly identifying is kept, so the record remains usable for aggregate statistics:
+
+* the patient code, birth date and sex;
+* all clinical and administrative records (admissions, diagnoses, laboratory exams, OPD visits, therapies, vaccinations,
+operations and bills).
