@@ -2588,6 +2588,6 @@ The record is flagged as anonymized (`PAT_ANONYMIZED`), which makes the personal
 
 Everything that is not directly identifying is kept, so the record remains usable for aggregate statistics:
 
-* the patient code, birth date and sex;
+* the patient code, birth year (the exact day and month are dropped) and sex;
 * all clinical and administrative records (admissions, diagnoses, laboratory exams, OPD visits, therapies, vaccinations,
 operations and bills).
