@@ -2208,7 +2208,10 @@ To modify an operation, select its line in the table by clicking on it: the form
 WARNING: Clicking on the button *[.underline]##A##dd* (or *[.underline]##U##pdate*) just adds the operation to the table; it is not yet permanently recorded.
 
 To delete a line from the table, select the line to delete by clicking on it (it automatically highlights),
-then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
+then click on the button *[.underline]##D##elete* and confirm the deletion. Deleting a line just added to the table only removes it from the table;
+deleting an already saved operation takes effect immediately after the confirmation.
+
+When finished, click on the button *[.underline]##S##ave* below the table to permanently record the added or updated lines.
 
 NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter.
