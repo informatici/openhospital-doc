@@ -1242,6 +1242,7 @@ The _Lot Management_ feature provides a standalone view to inspect and edit the 
 - Selection of a pharmaceutical to list all of its lots
 - Editing of the preparation date, expiring (due) date and unit cost of a lot
 - Read-only display of the lot id and of the current quantity of each lot (main store, wards and overall)
+- Detail view of the distribution of a lot within the hospital (main store and wards)
 - Lots listed in their order of creation
 
 ==== 4.6.2 Functions of Lot Management
@@ -1268,6 +1269,7 @@ The *Lot table* identifies each lot by:
 The *Buttons panel* has the following choices:
 
 * *[.underline]##E##dit*: this button is used to edit the selected lot.
+* *[.underline]##D##istribution*: this button is used to show how the selected lot is distributed within the hospital.
 * *[.underline]##C##lose*: this button is used to close the window.
 
 ===== 4.6.2.1 Edit Lot ([.underline]##E##dit)
@@ -1277,6 +1279,14 @@ To edit a lot, highlight it in the *Lot table* and click the *[.underline]##E##d
 image:image278.png[Edit Lot]
 
 The pharmaceutical, the lot id and the overall quantity are read-only. The *Prep Date*, the *Due Date* and the *Cost* can be modified. Click the *[.underline]##O##K* button to save the changes: the due date cannot be before the preparation date, and the cost cannot be negative.
+
+===== 4.6.2.2 Lot Distribution ([.underline]##D##istribution)
+
+To see how the remaining quantity of a lot is distributed within the hospital, highlight the lot in the *Lot table* and click the *[.underline]##D##istribution* button in the *Buttons panel*. The *_Lot Distribution_* window is shown:
+
+image:image279.png[Lot Distribution]
+
+The window lists, for the selected lot, the remaining quantity in the main store and in each ward holding the lot, with the overall total in the last row.
 
 <<<
 
