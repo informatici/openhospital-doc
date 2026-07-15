@@ -1251,6 +1251,8 @@ To access the Lot Management feature, click on *[.underline]##L##ot Management* 
 
 Select a pharmaceutical from the *Pharmaceutical* drop-down at the top of the *_Lot Management_* window: the table lists all the lots of the selected medical.
 
+The search field next to the drop-down filters the pharmaceuticals by code or description; when the typed text is an existing lot id, pressing Enter (or the search button) selects the lot's pharmaceutical and highlights the lot in the table.
+
 image:image277.png[Lot Management Browser]
 
 The *_Lot Management_* window is composed of the *Pharmaceutical selector* at the top, the *Lot table* in the center and the *Buttons panel* at the bottom.
