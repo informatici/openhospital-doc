@@ -745,6 +745,7 @@ USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
 PASSWORDIDLE=365
+PASSWORDLEASE=0
 
 # telemetry
 TELEMETRYENABLED=yes
@@ -1631,7 +1632,7 @@ the PASSWORDTRIES variable described above.
 NOTE: An application restart is required to apply the modified setting.
 
 [#passwordidle]
-==== 3.1.40 PASSWORDIDLE
+==== 3.1.41 PASSWORDIDLE
 
 The following table shows the default value and the allowed ones:
 
@@ -1646,7 +1647,7 @@ To disable this check set PASSWORDIDLE to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.41 PATIENTPHOTOSTORAGE
+==== 3.1.42 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -1668,7 +1669,7 @@ By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.42 SESSIONTIMEOUT
+==== 3.1.43 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1681,7 +1682,7 @@ The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyon
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.43 EXAMINATIONCHART
+==== 3.1.44 EXAMINATIONCHART
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1698,7 +1699,7 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.44 VISITSHEET
+==== 3.1.45 VISITSHEET
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1713,7 +1714,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to apply the modified setting.
 
 [#telemetryenabled]
-==== 3.1.45 TELEMETRYENABLED
+==== 3.1.46 TELEMETRYENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1736,11 +1737,30 @@ image:image68.png[image,width=831,height=378]
 image:image69.png[image,width=847,height=522]
 
 [#paramsurl]
-==== 3.1.46 PARAMSURL
+==== 3.1.47 PARAMSURL
 
 This is the URL of the online configuration/parameters file.
 
 NOTE: This setting is not meant to be modified by the user.
+
+[#passwordlease]
+==== 3.1.48 PASSWORDLEASE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDLEASE | 0 | a positive integer value greater than or equal to 0; the unit of time is days
+|===
+
+The value of PASSWORDLEASE specifies the maximum number of days a password remains valid (the password lease). When the lease expires, the user is required to change the password at the next login, before being granted access to the application, both in the desktop GUI and in the web UI. To disable the password lease set PASSWORDLEASE to 0 (the default).
+
+In addition, a password assigned by an administrator (when creating a user or resetting another user's password) must be changed by the user at the first login, regardless of the PASSWORDLEASE value.
+
+NOTE: For production environments a value of 90 days is recommended.
+
+NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 === 3.2 database.properties
