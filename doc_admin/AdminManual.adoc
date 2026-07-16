@@ -1632,7 +1632,7 @@ the PASSWORDTRIES variable described above.
 NOTE: An application restart is required to apply the modified setting.
 
 [#passwordidle]
-==== 3.1.40 PASSWORDIDLE
+==== 3.1.41 PASSWORDIDLE
 
 The following table shows the default value and the allowed ones:
 
@@ -1647,7 +1647,7 @@ To disable this check set PASSWORDIDLE to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.41 PATIENTPHOTOSTORAGE
+==== 3.1.42 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -1669,7 +1669,7 @@ By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.42 SESSIONTIMEOUT
+==== 3.1.43 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1682,7 +1682,7 @@ The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyon
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.43 EXAMINATIONCHART
+==== 3.1.44 EXAMINATIONCHART
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1699,7 +1699,7 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.44 VISITSHEET
+==== 3.1.45 VISITSHEET
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1714,7 +1714,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to apply the modified setting.
 
 [#telemetryenabled]
-==== 3.1.45 TELEMETRYENABLED
+==== 3.1.46 TELEMETRYENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1737,14 +1737,14 @@ image:image68.png[image,width=831,height=378]
 image:image69.png[image,width=847,height=522]
 
 [#paramsurl]
-==== 3.1.46 PARAMSURL
+==== 3.1.47 PARAMSURL
 
 This is the URL of the online configuration/parameters file.
 
 NOTE: This setting is not meant to be modified by the user.
 
 [#passwordlease]
-==== 3.1.47 PASSWORDLEASE
+==== 3.1.48 PASSWORDLEASE
 
 The following table shows the default value and the allowed ones:
 
