@@ -15,7 +15,7 @@
 image:OH-splash.png[OH splash,width=316,height=237]
 
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2026 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
 
 == Open Hospital
@@ -2521,7 +2521,55 @@ To migrate a portable installation to a full client/server configuration, keepin
 
 If needed, start the PORTABLE instance in SERVER mode, connect to the local running database and apply the required SQL scripts.
 
-== 7 Support
+<<<
+
+[#production-hardening]
+== 7 Production hardening
+
+The default Open Hospital configuration favours ease of setup, not a hardened production deployment. This section collects deployment-level recommendations for installations that are exposed beyond a fully trusted network. They complement the application-level information-disclosure settings in <<settings-properties,settings.properties>> and the API's `application.properties`. These are recommendations, not a turnkey configuration, and should be reviewed against your own environment and threat model.
+
+WARNING: These measures are not a substitute for a full security assessment. The local network should not be treated as a trusted boundary: compromised endpoints, insider access, shared Wi‑Fi or VPN access can all give an attacker internal reachability.
+
+=== 7.1 Web server (reverse proxy)
+
+When the React web UI and the REST API are served through a web server or reverse proxy (for example nginx), harden that layer:
+
+* *Transport security* — serve only over HTTPS with TLS 1.2+ (prefer TLS 1.3), a modern cipher suite and HSTS. The https://ssl-config.mozilla.org/[Mozilla SSL Configuration Generator] produces a suitable configuration for the common web servers.
+* *Protocol* — disable obsolete protocols (HTTP/1.0) and, where supported, prefer HTTP/2.
+* *Server banner* — suppress the server name and version (`server_tokens off;` in nginx); the API already drops its own version banner (see OP-890).
+* *Security response headers* — set at least `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `X-Frame-Options` (or a `Content-Security-Policy` `frame-ancestors` directive), `Referrer-Policy` and a restrictive `Permissions-Policy`.
+* *File-serving constraints* — deny access to dot-files and sensitive artefacts (`.git`, `.env`, `*.sql`, backups) so they cannot be downloaded.
+* *Rate limiting and request limits* — apply request rate limiting and a sensible maximum request/body size to reduce brute-force and abuse.
+
+Illustrative nginx snippet (adapt to your certificates and paths):
+
+[source,nginx]
+----
+server_tokens off;
+add_header Strict-Transport-Security "max-age=63072000" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header Referrer-Policy "no-referrer" always;
+
+# do not serve dot-files (except ACME challenges) or database dumps
+location ~ /\.(?!well-known) { deny all; }
+location ~* \.(sql|env|bak)$ { deny all; }
+----
+
+For a complete reference, follow an established guide such as the https://owasp.org/www-project-secure-headers/[OWASP Secure Headers Project] and your web server's own hardening documentation.
+
+=== 7.2 Database
+
+Review the database configuration for a production install:
+
+* *Least privilege* — the application database user should hold only the privileges it needs on the Open Hospital schema; avoid wildcard hosts (`user@'%'`) and administrative grants for the application account.
+* *Network exposure* — bind the database to `localhost` (or a private network only) so the port is not reachable from outside the host, and never expose the database port to the internet.
+* *Credentials* — change every default password (the database root, the application user and the demo `admin` account) before going to production, and keep the credentials out of shared or version-controlled files.
+* *Connection security* — where the database runs on a separate host, use an encrypted connection.
+
+<<<
+
+== 8 Support
 
 For support, or questions about updating, migrating, or maintaining an Open Hospital installation, please check our website at https://www.open-hospital.org.
 You can contact us at: https://www.open-hospital.org/contact and specify:
@@ -2535,8 +2583,8 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 
 <<<
 
-== 8 License
+== 9 License
 
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2026 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
