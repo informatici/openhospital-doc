@@ -1257,13 +1257,12 @@ image:image277.png[Lot Management Browser]
 
 The *_Lot Management_* window is composed of the *Pharmaceutical selector* at the top, the *Lot table* in the center and the *Buttons panel* at the bottom.
 
-The *Lot table* identifies each lot by:
+The *Lot table* lists the lots newest first and identifies each lot by:
 
-* *CREATION ORDER*: the progressive position of the lot in its order of creation.
 * *LOT ID*: the identifier of the lot; it is read-only.
 * *PREP DATE*: the preparation date of the lot.
 * *DUE DATE*: the expiring date of the lot.
-* *COST*: the unit cost of the lot.
+* *UNIT COST*: the unit cost of the lot.
 * *MAIN STORE QTY*: the remaining quantity of the lot in the main store.
 * *WARDS QTY*: the remaining quantity of the lot in the wards.
 * *OVERALL QTY*: the total remaining quantity of the lot in the hospital.
@@ -1280,7 +1279,7 @@ To edit a lot, highlight it in the *Lot table* and click the *[.underline]##E##d
 
 image:image278.png[Edit Lot]
 
-The pharmaceutical, the lot id and the overall quantity are read-only. The *Prep Date*, the *Due Date* and the *Cost* can be modified. Click the *[.underline]##O##K* button to save the changes: the due date cannot be before the preparation date, and the cost cannot be negative.
+The pharmaceutical, the lot id and the overall quantity are read-only. The *Prep Date*, the *Due Date* and the *Unit cost* can be modified. Click the *[.underline]##O##K* button to save the changes: the due date cannot be before the preparation date, and the cost cannot be negative.
 
 ===== 4.6.2.2 Lot Distribution ([.underline]##D##istribution)
 
@@ -1288,7 +1287,7 @@ To see how the remaining quantity of a lot is distributed within the hospital, h
 
 image:image279.png[Lot Distribution]
 
-The window lists, for the selected lot, the remaining quantity in the main store and in each ward holding the lot, with the overall total in the last row.
+The window lists, for the selected lot, the remaining quantity in the main store and in each ward holding the lot, with the overall total shown below the table.
 
 <<<
 
