@@ -15,7 +15,7 @@
 image:OH-splash.png[OH splash,width=316,height=237]
 
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2026 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
 
 == Open Hospital
@@ -736,6 +736,7 @@ EXAMINATIONCHART=patient_examination
 OPDCHART=patient_opd_chart
 PATIENTSHEET=patient_clinical_sheet_ver3
 VISITSHEET=WardVisits
+AUTOCOMPILEJRXML=no
 
 # security
 SESSIONTIMEOUT=5
@@ -1762,6 +1763,26 @@ NOTE: For production environments a value of 90 days is recommended.
 
 NOTE: An application restart is required to apply the modified setting.
 
+==== 3.1.49 AUTOCOMPILEJRXML
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value |Valid Values
+|AUTOCOMPILEJRXML |no |yes, no
+|===
+
+Open Hospital ships precompiled _.jasper_ reports and loads them at report time. When a report template (_.jrxml_) is edited on disk but its _.jasper_ is not regenerated, report generation fails with a stale or missing compiled report.
+
+With *AUTOCOMPILEJRXML = yes* the application scans the report folders (see <<reports,Reports>>) at startup and (re)compiles every _.jrxml_ whose _.jasper_ is missing or older than the template, so that keeping the _.jrxml_ up to date is enough. A template that fails to compile is logged and skipped, without stopping the others. By default, AUTOCOMPILEJRXML is set to no.
+
+WARNING: JRXML templates can contain executable expressions. Only enable this option when the report files are trusted, that is, not writable by untrusted users.
+
+NOTE: The compiler expects the templates in the JasperReports 7 format; legacy JasperReports 6 templates must be migrated first (for example with Jaspersoft Studio).
+
+NOTE: An application restart is required to apply the modified setting.
+
 [#database-properties]
 === 3.2 database.properties
 
@@ -2538,5 +2559,5 @@ You can contact us at: https://www.open-hospital.org/contact and specify:
 == 8 License
 
 image:by-sa.png[bysa,width=88,height=31,link="https://creativecommons.org/licenses/by-sa/4.0/"] [.small]#Informatici Senza Frontiere Onlus, 2022#
-pass:[<br>][.small]#Administrator’s Guide, &#169; 2023 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
+pass:[<br>][.small]#Administrator’s Guide, &#169; 2026 by https://www.informaticisenzafrontiere.org/[Informatici Senza Frontiere Onlus]#
 pass:[<br>][.small]#Policies is made available under a https://creativecommons.org/licenses/by-sa/4.0//[Creative Commons Attribution-ShareAlike 4.0] International License: https://creativecommons.org/licenses/by-sa/4.0//.#
