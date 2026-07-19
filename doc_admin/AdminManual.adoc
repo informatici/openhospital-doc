@@ -2298,6 +2298,27 @@ Then edit the Arabic bundle file and set the LANGUAGE parameter to *ar* to start
 
 <<<
 
+=== 3.12 application.properties (REST API) - security hardening
+
+The REST API server (_rsc/application.properties_) ships with settings that prevent technical and version information from being disclosed in HTTP responses (STRIDE I03 - Information Disclosure):
+
+[source,properties]
+----
+# Do not leak messages, stack traces or exception class names in error responses
+server.error.include-message=never
+server.error.include-stacktrace=never
+server.error.include-exception=false
+server.error.include-binding-errors=never
+# Return a clean 404 for unknown paths
+spring.mvc.throw-exception-if-no-handler-found=true
+# Suppress the server identification (version) header
+server.server-header=
+----
+
+Keep these settings enabled in production. The Spring Boot Actuator is not bundled, so management endpoints (e.g. _/actuator_) already returns _404_, while the Swagger UI stays available. When the API is published behind a reverse proxy (nginx/Apache), strip the proxy's own `Server` and `X-Powered-By` headers there as well (e.g. `server_tokens off;` in nginx).
+
+<<<
+
 [#reports]
 == 4 Reports
 
