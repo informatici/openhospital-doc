@@ -1279,7 +1279,7 @@ To edit a lot, highlight it in the *Lot table* and click the *[.underline]##E##d
 
 image:image278.png[Edit Lot]
 
-The pharmaceutical, the lot id and the overall quantity are read-only. The *Prep Date*, the *Due Date* and the *Unit cost* can be modified. Click the *[.underline]##O##K* button to save the changes: the due date cannot be before the preparation date, and the cost cannot be negative.
+The pharmaceutical, the lot ID and the overall quantity are read-only. The *Prep Date*, the *Due Date* and the *Unit Cost* can be modified. Click the *[.underline]##O##K* button to save the changes: the due date cannot be before the preparation date, and the cost cannot be negative.
 
 ===== 4.6.2.2 Lot Distribution ([.underline]##D##istribution)
 
