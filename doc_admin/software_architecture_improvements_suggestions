@@ -1,0 +1,70 @@
+OpenHospital currently uses these software architecture elements:
+
+Layered Architecture : 
+User Interface (GUI): Layer facilitates user interaction with the system.
+Business Logic Layer: Contains business rules and application logic, provided by the Open Hospital Core library.
+Data Access Layer: This layer manages database operations and interaction. The system is configured to work with databases like MySQL or MariaDB.
+
+Client-Server Architecture:
+Open Hospital is designed to operate in both single-user and multi-user environments.
+Single-User Mode: Can run on a single computer without installation.
+Multi-User Mode: Supports a client-server structure where multiple users can access the same database.
+
+Modular Architecture:
+Core Component: business logic and data access layers.
+GUI Component: Provides the user interface.
+API Component: Enables integration with other applications.
+Documentation Component: Contains user and administrator documentation.
+
+Multitier Architecture:
+Presentation Layer: Contains the user interface.
+Application Layer: Hosts the business logic.
+Data Layer: Manages database operations.
+
+This architectural style might cause issues:
+The business logic, user interface, and data layers are tightly coupled.
+Adding new features might require changes across all layers.
+
+Disadvantages of the Previous System:
+High Coupling: There are tight dependencies between layers.  
+Lack of Flexibility: Adding new features or modifying existing components is complex because all layers are affected.
+Code Duplication: Similar functionalities may be implemented across multiple layers.
+Testing Difficulties: Tight interdependencies might make it hard to test individual components.
+
+Proposal: Transaction to Microkernel Architecture:
+
+Core: Provides essential functionalities.
+Plugins: New features are developed as independent modules.
+
+Possible Advantages:
+High Cohesion: Each plugin will only focus on its task. The core will contain only fundamental functions.
+Low Coupling: Plugins will be independent and communicate only with the core.
+Dynamic Extensibility: New features can be added without impacting the existing system.
+
+Proposed Changes:
+Core Definition: Define and implement the core system functionalities.
+Plugin API: Develop an API to enable seamless interaction between the core and plugins.
+Patient management plugin: Encapsulates all patient-related functions.
+Dynamic Loading: Support for runtime loading and unloading of plugins.
+
+Outcome: The system will become dynamically extensible and more modular. Cohesion will increase, and coupling will decrease.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
