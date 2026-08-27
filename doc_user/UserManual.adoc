@@ -2725,6 +2725,22 @@ image:image122.png[Patient merge sex]
 
 <<<
 
+=== 8.12 Anonymize Patient (GDPR)
+
+Open Hospital can irreversibly anonymize a patient to satisfy the right to erasure established by Article 17 of the GDPR:
+the personal data is overwritten while the clinical records are kept, so the anonymized record can still be used for
+aggregate statistics.
+
+To anonymize a patient, highlight the patient in the *_Admission/Patient_* window and press the *Anonymize* button, then
+confirm the irreversible-action dialog. The personal fields then show placeholder values and can no longer be edited.
+
+NOTE: The *Anonymize* button is visible only to users whose group has been granted the *btnpatientanonymize* menu item
+(see the _Administrator's Guide_, chapter _GDPR - Right to Erasure_). By default only the *admin* group holds it.
+
+WARNING: Anonymization cannot be undone.
+
+<<<
+
 [#statistics]
 == 9 Statistics (S[.underline]##t##atistics)
 
