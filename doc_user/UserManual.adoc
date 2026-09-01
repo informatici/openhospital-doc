@@ -2152,6 +2152,12 @@ Consent from a patient is needed regardless of the procedure, whether it's a phy
 - Consent to treatment: consent to treatment means a person must give permission before they receive any type of medical treatment, test or examination. This field is mandatory.
 - Consent to additional services - consent to additional services means that the person consents to the use of the registered data for additional services, such as communications, mails, calls, follow ups reminders, digital services, etc. This field is NOT mandatory, but one hospital may decide to introduce it in its paper forms.
 
+The same panel also carries the administrative flag, which is not a consent. It marks a patient whose administrative position has to be solved before they are served again, for example missing paperwork, an unpaid bill or an insurance still to be verified. While the flag is set the block is bordered in red, and a reason can be written below it so that the front desk knows what has to be fixed. The reason is optional, and it is cleared when the flag is removed.
+
+image:OH-patient_consensus_administrative.png[Administrative flag]
+
+Whenever a flagged patient is selected to start a service - an admission, an OPD registration, a laboratory exam, a bill, a therapy or an examination - a warning is shown, together with the reason when one was written. The warning is only a signal: it never prevents the operation, and any user allowed to edit a patient can set or clear the flag.
+
 === 8.5 Admission Functions ([.underline]##A##dmission)
 
 The admission functions include the managing of patient admission, including surgery, delivery, and discharge.
