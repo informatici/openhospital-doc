@@ -745,6 +745,7 @@ USERSLISTLOGIN=no
 PASSWORDTRIES=5
 PASSWORDLOCKTIME=60
 PASSWORDIDLE=365
+PASSWORDLEASE=0
 
 # telemetry
 TELEMETRYENABLED=yes
@@ -1631,7 +1632,7 @@ the PASSWORDTRIES variable described above.
 NOTE: An application restart is required to apply the modified setting.
 
 [#passwordidle]
-==== 3.1.40 PASSWORDIDLE
+==== 3.1.41 PASSWORDIDLE
 
 The following table shows the default value and the allowed ones:
 
@@ -1646,7 +1647,7 @@ To disable this check set PASSWORDIDLE to 0.
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.41 PATIENTPHOTOSTORAGE
+==== 3.1.42 PATIENTPHOTOSTORAGE
 
 The following table shows the default value and the allowed ones:
 
@@ -1668,7 +1669,7 @@ By default, PATIENTPHOTOSTORAGE is set to "DB".
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.42 SESSIONTIMEOUT
+==== 3.1.43 SESSIONTIMEOUT
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1681,7 +1682,7 @@ The value SESSIONTIMEOUT represents the time in minutes of user inactivity beyon
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.43 EXAMINATIONCHART
+==== 3.1.44 EXAMINATIONCHART
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1698,7 +1699,7 @@ It is possible to use a different report by installing it in the report folder (
 
 NOTE: An application restart is required to apply the modified setting.
 
-==== 3.1.44 VISITSHEET
+==== 3.1.45 VISITSHEET
 The following table shows the default value and the allowed ones:
 
 [cols=",,",options="header",]
@@ -1713,7 +1714,7 @@ It is possible to use a different report by installing it in the report folder (
 NOTE: An application restart is required to apply the modified setting.
 
 [#telemetryenabled]
-==== 3.1.45 TELEMETRYENABLED
+==== 3.1.46 TELEMETRYENABLED
 
 The following table shows the default value and the allowed ones:
 
@@ -1736,11 +1737,30 @@ image:image68.png[image,width=831,height=378]
 image:image69.png[image,width=847,height=522]
 
 [#paramsurl]
-==== 3.1.46 PARAMSURL
+==== 3.1.47 PARAMSURL
 
 This is the URL of the online configuration/parameters file.
 
 NOTE: This setting is not meant to be modified by the user.
+
+[#passwordlease]
+==== 3.1.48 PASSWORDLEASE
+
+The following table shows the default value and the allowed ones:
+
+[cols=",,",options="header",]
+|===
+|Key |Default Value | Allowed Values
+|PASSWORDLEASE | 0 | a positive integer value greater than or equal to 0; the unit of time is days
+|===
+
+The value of PASSWORDLEASE specifies the maximum number of days a password remains valid (the password lease). When the lease expires, the user is required to change the password at the next login, before being granted access to the application, both in the desktop GUI and in the web UI. To disable the password lease set PASSWORDLEASE to 0 (the default).
+
+In addition, a password assigned by an administrator (when creating a user or resetting another user's password) must be changed by the user at the first login, regardless of the PASSWORDLEASE value.
+
+NOTE: For production environments a value of 90 days is recommended.
+
+NOTE: An application restart is required to apply the modified setting.
 
 [#database-properties]
 === 3.2 database.properties
@@ -2301,6 +2321,27 @@ Then edit the Arabic bundle file and set the LANGUAGE parameter to *ar* to start
 
 <<<
 
+=== 3.12 application.properties (REST API) - security hardening
+
+The REST API server (_rsc/application.properties_) ships with settings that prevent technical and version information from being disclosed in HTTP responses (STRIDE I03 - Information Disclosure):
+
+[source,properties]
+----
+# Do not leak messages, stack traces or exception class names in error responses
+server.error.include-message=never
+server.error.include-stacktrace=never
+server.error.include-exception=false
+server.error.include-binding-errors=never
+# Return a clean 404 for unknown paths
+spring.mvc.throw-exception-if-no-handler-found=true
+# Suppress the server identification (version) header
+server.server-header=
+----
+
+Keep these settings enabled in production. The Spring Boot Actuator is not bundled, so management endpoints (e.g. _/actuator_) already returns _404_, while the Swagger UI stays available. When the API is published behind a reverse proxy (nginx/Apache), strip the proxy's own `Server` and `X-Powered-By` headers there as well (e.g. `server_tokens off;` in nginx).
+
+<<<
+
 [#reports]
 == 4 Reports
 
@@ -2440,7 +2481,10 @@ _sql/update_ folder (e.g.):
 | 1.11 | 1.12 | _update_1_11-1_12.sql_
 | 1.12 | 1.13 | _update_1_12-1_13.sql_
 | 1.13 | 1.14 | _update_1_13-1_14.sql_
+| 1.14 | 1.15 | _update_1_14-1_15.sql_
 |===
+
+NOTE: The user-related tables enforce uniqueness at the database level: a permission name (`OH_PERMISSIONS.P_NAME`) and each (user group, permission) pair (`OH_GROUPPERMISSION`) must be unique. When running the database update, duplicate (user group, permission) rows are removed automatically by the update script, but duplicate permission names are NOT (a permission may be referenced elsewhere): if any exist the update fails fast without changing data, so resolve the duplicates reported by the pre-flight queries and then re-run.
 
 To perform the database update process follow these steps:
 
