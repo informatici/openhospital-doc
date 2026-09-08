@@ -1,4 +1,4 @@
-= Open Hospital 1.15.0 - Administrator’s Guide
+= Open Hospital 1.15.1 - Administrator’s Guide
 <<<
 :icons: font
 :stem:
@@ -2150,12 +2150,26 @@ A default configuration file for this module is available in the _txtPrinter.pro
 ----
 # This file contains text printing information
 # MODE = TXT, PDF or ZPL
+
+# TXT_CHAR_HEIGHT: height of a text row used by JRTextExporter to convert the
+# JRXML layout into a text grid. It should match (or be proportional to)
+# the height of the fields in the jrxml report (e.g. 18 in our templates).
+
+# TXT_CHAR_WIDTH: width of a text column used by JRTextExporter. It depends on
+# the printable width of the report and determines how many characters fit
+# on one line (typically around 42–48 columns for 80mm receipts).
+
+# TXT_FEED_LINES: number of blank lines sent before finishing the print
+# TXT_CUTTER: enable/disable the ESC/POS cut command
+
 USE_DEFAULT_PRINTER=yes
 PRINT_AS_PAID=no
 PRINT_WITHOUT_ASK=no
 MODE=PDF
-#TXT_CHAR_HEIGHT=10
-#TXT_CHAR_WIDTH=10
+TXT_CHAR_HEIGHT=18
+TXT_CHAR_WIDTH=12
+TXT_FEED_LINES=3
+TXT_CUTTER=yes
 ZPL_FONT_TYPE=0
 ZPL_ROW_HEIGHT=25
 ----
@@ -2174,17 +2188,26 @@ image:image42.png[image,width=291,height=245]
  ** If it is set to _yes_, Open Hospital will try to print a receipt just after a Bill is set to PAID +
  *** A confirmation window will appear (see below), otherwise, it must be done after, by pressing the *[.underline]##E##dit Bill* button on the already closed (“C”) bill
 
-image:image43.png[Accountin_print_as_paid]
+image:image43.png[Accounting_print_as_paid]
 
 * *PRINT_WITHOUT_ASK*: if set to yes Open Hospital will try to print the receipt without the confirmation window
 * *MODE*: the MODE can take three values:
-** *TXT*: the bill is printed as pure text (no graphics)
+** *TXT*: the bill is printed as pure text using a monospaced text layout suitable for thermal POS printers
 ** *PDF*: the bill will be printed as a PDF
 ** *ZPL*: the text printer connected to the system works with ZPL language (an EPL evolution for Zebra Label Printer)
+* *TXT_CHAR_HEIGHT*: controls the text row height used by the JasperReports TXT exporter. +
+This value must be consistent with the JRXML layout to obtain proper line spacing and alignment.
+* *TXT_CHAR_WIDTH*: controls the text column width used by the JasperReports TXT exporter. +
+This value affects the number of printable characters per line and should be adjusted according to the paper width and font size.
+* *TXT_FEED_LINES*: number of empty lines appended at the end of the receipt before closing the print job. +
+Useful to improve paper feeding on thermal POS printers.
+* *TXT_CUTTER*: if set to _yes_, Open Hospital sends the ESC/POS cutting command after printing. +
+If set to _no_, the printer will not attempt automatic cutting. +
+Useful for printers without an automatic cutter.
 * *ZPL_FONT_TYPE*: a 0 (zero) value stands for a standard character; the value can be changed to “A”, “B”, “C”, etc. according to the device datasheet, to obtain a better look
 * *ZPL_FONT_SIZE*: an integer value to adjust the character size to obtain a better look
 
-The best way to set these parameters for the device is to set them one by one and check the different results until the best fit is reached.
+NOTE: The best way to configure TXT and ZPL parameters is to adjust them incrementally and print test receipts until the best alignment and readability are achieved for the target printer.
 
 NOTE: An application restart is required to apply the modified setting.
 
