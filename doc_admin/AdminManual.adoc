@@ -1726,7 +1726,9 @@ The following table shows the default value and the allowed ones:
 
 By default, the value of TELEMETRYENABLED is the set to `yes` indicating that the Telemetry module is enabled.
 
-When the Telemetry module is enabled, users are presented with the option to participate in anonymous data collection on the software's usage during the initial application launch. This process is designed to gather information that contributes to the ongoing improvement of software quality. User-selected data collection preferences, customizable at any time, will be applied automatically during subsequent launches.
+When the Telemetry module is enabled, users are presented with the option to participate in anonymous data collection on the software's usage during the initial application launch. This process is designed to gather information that contributes to the ongoing improvement of software quality.
+
+On the first telemetry configuration, all data categories are selected by default. The mandatory identification category cannot be deselected; users can deselect any optional category before opting in. Preselected categories do not enable telemetry or send data: users must accept the telemetry agreement and explicitly confirm the data before it is sent. When the configuration is reopened, the saved category choices are restored, including categories previously deselected. Disabling telemetry preserves these choices for later review.
 
 The collected data is transmitted to a server managed by ISF, solely for the purpose of optimizing the application and generating usage statistics. ISF ensures that this data is treated anonymously and with utmost respect for user privacy.
 
