@@ -2250,20 +2250,25 @@ Operations data that can be managed are:
 
 * *Operation*: the operation type
 * *Date*: the operation date (must be at least older than, or equal to the admission date and at most, more recent than, or equal to the discharge date)
-* *Result*: the result of the operation
+* *Result*: the result of the operation; it is mandatory and no value is preselected
 * *Trans Unit*: (not mandatory) the number of transfusion units of blood used
 * *Remarks*: (not mandatory) comments about the operation
 
 image:image95.png[Patient's operation,width=642,height=345]
 
-It is possible to record several operations at once. The buttons *[.underline]##N##ew*, *[.underline]##S##ave* and *[.underline]##D##elete* at the top right of the table allow the manipulation of the items of the table.
+It is possible to record several operations at once. The buttons *[.underline]##A##dd*, *C[.underline]##l##ear* and *[.underline]##D##elete* at the top right of the table allow the manipulation of the items of the table.
 
-To add a new operation, click on the button *[.underline]##N##ew* and enter the data as mentioned above, and then click on *[.underline]##S##ave*.
+To add a new operation, enter the data as mentioned above and click on the button *[.underline]##A##dd*.
 
-WARNING: Clicking on the button *[.underline]##S##ave* just adds the operation to the table; it is not yet permanently recorded.
+To modify an operation, select its line in the table by clicking on it: the form is filled with the data of the selected line and the *[.underline]##A##dd* button changes to *[.underline]##U##pdate*. Modify the data and click on the button *[.underline]##U##pdate*. The button *C[.underline]##l##ear* empties the form and restores the *[.underline]##A##dd* button.
+
+WARNING: Clicking on the button *[.underline]##A##dd* (or *[.underline]##U##pdate*) just adds the operation to the table; it is not yet permanently recorded.
 
 To delete a line from the table, select the line to delete by clicking on it (it automatically highlights),
-then click on the button *[.underline]##D##elete*. When finished, click on the button *[.underline]##S##ave* below the table to save the changes.
+then click on the button *[.underline]##D##elete* and confirm the deletion. Deleting a line just added to the table only removes it from the table;
+deleting an already saved operation takes effect immediately after the confirmation.
+
+When finished, click on the button *[.underline]##S##ave* below the table to permanently record the added or updated lines.
 
 NOTE: Operation Type and Operations can be defined by the Administrator. Ask the Administrator or check the
 <<settings,Settings>> chapter.
