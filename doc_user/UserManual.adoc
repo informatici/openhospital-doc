@@ -384,13 +384,18 @@ The following functions are accessible from the *Buttons panel* of the *_Pharmac
 * *[.underline]##N##ew*: register a new pharmaceutical.
 * *[.underline]##E##dit*: modify a registered pharmaceutical.
 * *[.underline]##D##elete*: delete a pharmaceutical.
-* *E[.underline]##x##port*: export the pharmaceuticals to a CSV file (Excel).
+* *E[.underline]##x##port*: export the pharmaceuticals to a file (open *CSV* format or *Excel*).
 * *[.underline]##S##tock*: show the report of stock quantities.
 * *Stoc[.underline]##k##Card*: show the history of the movement of a certain pharmaceutical (must be selected in the list first).
 * *[.underline]##O##rder*: show the list of pharmaceuticals that have to be ordered.
 * *Ex[.underline]##p##iring*: show the list of pharmaceuticals that are going to expire (today, next month, within two months, within three months, or within another month to be specified).
 * *A[.underline]##M##C*: show the AMC (average monthly consumption) of pharmaceuticals.
 * *[.underline]##C##lose*: exit from the *Pharmaceuticals Browser*.
+
+[NOTE]
+====
+Whenever data is exported to a file, the *Save* dialog lets you choose the output format. An open, interoperable *CSV* format (UTF-8, RFC 4180) is offered and selected by default, in line with GDPR recommendations on exporting personal data in open file formats; the proprietary *Excel* formats (`.xlsx` and `.xls`) remain available. Generating reports (PDF/printing) is not affected.
+====
 
 At the bottom left of the window, there are an "Active Only" and a "Select type" selectors. Based on the values selected, the table either displays a pharmaceutical of a specific type
 or all pharmaceuticals if the default value of "All" is used. Similarly, the "Active Only" shows only the active pharmaceuticals; other options are "Disabled Only" and "All".
@@ -724,7 +729,7 @@ The available functions are:
 * *[.underline]##N##ew*: create a new discharging movement for the patient.
 * *[.underline]##R##ectify*: rectify the quantity lying in stock (see 4.3.2.1 Rectify).
 * *Re[.underline]##p##ort*: print the ward medical inventory report.
-* *[.underline]##E##xcel*: export the data in a format to import into Excel.
+* *[.underline]##E##xcel*: export the data to a file (open *CSV* format or *Excel*).
 * *[.underline]##D##elete*: delete the last movement.
 * *Stoc[.underline]##k##Card*: show the history of the movement for a certain pharmaceutical (can be directly selected by the list otherwise will be requested).
 * *Stock [.underline]##L##edger*: show the history of the movement for all pharmaceuticals within a selected date range.
