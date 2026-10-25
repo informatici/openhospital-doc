@@ -2211,9 +2211,11 @@ There are two ways to access the module. In the *_Patient Browser_* window, high
 and click *E[.underline]##x##amination.* Or in the *_New Admission_* or *_Edit Admission Record_* window,
 click the *E[.underline]##x##amination* button. The following window is shown:
 
-image:image94.png[Patioent examination,width=642,height=310]
+image:image94.png[Patient examination,width=642,height=470]
 
-The window is divided into two areas: The panel on the left is where new information is entered and the area where the examination history is displayed is on the right.
+The name of the patient is shown at the top of the window.
+
+The window is divided into two areas: the upper panel is where new information is entered and the lower table displays the examination history.
 
 Enter the following information:
 
