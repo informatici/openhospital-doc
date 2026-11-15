@@ -1999,6 +1999,8 @@ Patient selection can be accomplished by specifying a specific value for the fie
 ** *Male*
 ** *Female*
 
+* *Administrative issues.* Tick *Only patients with open issues* to list only the patients with an open administrative issue (see 8.4.6 Administrative Issues)
+
 * *Search Key* Any character string entered is matched against the patient's name and address.
 A complete string or only some characters can be entered, and the system will show all the patients matching the string. For example, entering, “isabe”, will result in all patients who have “isabe” in their name being selected and displayed; so both "Glennis Isabelle" and "Isaiah Isabelle" are shown.
 
@@ -2157,9 +2159,13 @@ The *_Administrative issues_* panel of the patient form lists the issues the adm
 
 image:OH-patient_administrative_issues.png[Administrative issues]
 
-Press *Open issue* and write the reason to raise a new issue; select an issue and press *Resolve issue* once it has been sorted out. Several issues can be open at the same time, and resolving one does not affect the others. The changes are saved together with the patient. Resolved issues are kept on record with the date they were closed, so that the history of the patient's issues can be traced.
+Press *Open issue* and write the reason to raise a new issue; select an issue and press *Resolve issue* once it has been sorted out. A reason too long for the panel is cut: select the issue and press *See details* to read it in full. Several issues can be open at the same time, and resolving one does not affect the others. The changes are saved together with the patient. Resolved issues are kept on record with the date they were closed, so that the history of the patient's issues can be traced.
 
-Whenever a patient with open issues is selected to start a service - an admission, an OPD registration, a laboratory exam, a bill, a therapy or an examination - a warning lists the reasons. The warning is only a signal: it never prevents the operation, and any user allowed to edit a patient's record can open or resolve an issue.
+Whenever a patient with open issues is selected to start a service - an admission, an OPD registration, a laboratory exam, a bill, a therapy or an examination - a warning lists the reasons and asks whether to go on: *Cancel* gives up the operation, *Continue anyway* carries on with it. The warning is only a signal: it never prevents the operation, and any user allowed to edit a patient's record can open or resolve an issue.
+
+In the *_Patient Browser_* window the patients with open issues are shown in red, and the *Only patients with open issues* filter lists them alone.
+
+image:OH-patient_administrative_issues_list.png[Patients with open administrative issues,width=600,height=268]
 
 The panel is meant for what the system cannot tell by itself. An outstanding balance, for instance, is already visible from the patient's bills and does not need an issue.
 
